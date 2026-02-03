@@ -105,7 +105,7 @@ page 8068 "Customer Contract Line Subp."
                     Caption = 'Primary Attribute';
                     Editable = false;
                     Visible = false;
-                    ToolTip = 'Displays the primary attribute of the related Subscription.';
+                    ToolTip = 'Specifies the primary attribute of the related Subscription.';
                 }
                 field("Service Object Customer Reference"; ServiceObject."Customer Reference")
                 {
@@ -118,14 +118,21 @@ page 8068 "Customer Contract Line Subp."
                 {
                     ToolTip = 'Specifies the description of the Subscription Line.';
                 }
-                field("Service Object Quantity"; ServiceCommitment.Quantity)
+                field("Service Object Quantity"; ContractLineQty)
                 {
                     Caption = 'Quantity';
                     ToolTip = 'Specifies the number of units of Subscription.';
+                    AutoFormatType = 0;
 
                     trigger OnValidate()
                     begin
+                        ServiceCommitment.Quantity := ContractLineQty;
                         UpdateServiceCommitmentOnPage(ServiceCommitment.FieldNo(Quantity));
+                    end;
+
+                    trigger OnAssistEdit()
+                    begin
+                        Rec.OpenServiceObjectCard();
                     end;
                 }
                 field("Calculation Base Amount"; ServiceCommitment."Calculation Base Amount")
@@ -321,6 +328,16 @@ page 8068 "Customer Contract Line Subp."
                         UpdateServiceCommitmentOnPage(ServiceCommitment.FieldNo("Term Until"));
                     end;
                 }
+                field("Notice Period"; ServiceCommitment."Notice Period")
+                {
+                    Caption = 'Notice Period';
+                    ToolTip = 'Specifies a date formula for the lead time that a notice must have before the subscription line ends. The rhythm of the update of "Notice possible to" and "Term until" is determined using the extension term. For example, with an extension period of 1M, the notice period is repeatedly postponed by one month.';
+                    Visible = false;
+                    trigger OnValidate()
+                    begin
+                        UpdateServiceCommitmentOnPage(ServiceCommitment.FieldNo("Notice Period"));
+                    end;
+                }
                 field("Initial Term"; ServiceCommitment."Initial Term")
                 {
                     Caption = 'Initial Term';
@@ -362,6 +379,14 @@ page 8068 "Customer Contract Line Subp."
                     Editable = false;
                     ToolTip = 'Specifies whether the Subscription Line is used as a basis for periodic invoicing or discounts.';
                 }
+                field("Create Contract Deferrals"; ServiceCommitment."Create Contract Deferrals")
+                {
+                    ToolTip = 'Specifies whether this Subscription Line should generate contract deferrals. If it is set to No, no deferrals are generated and the invoices are posted directly to profit or loss.';
+                    trigger OnValidate()
+                    begin
+                        UpdateServiceCommitmentOnPage(ServiceCommitment.FieldNo("Create Contract Deferrals"));
+                    end;
+                }
                 field("Price Binding Period"; ServiceCommitment."Price Binding Period")
                 {
                     Visible = false;
@@ -374,7 +399,7 @@ page 8068 "Customer Contract Line Subp."
                 field("Period Calculation"; ServiceCommitment."Period Calculation")
                 {
                     Visible = false;
-                    ToolTip = 'The Period Calculation controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).';
+                    ToolTip = 'Specifies the Period Calculation, which controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).';
                     trigger OnValidate()
                     begin
                         UpdateServiceCommitmentOnPage(ServiceCommitment.FieldNo("Period Calculation"));
@@ -523,6 +548,7 @@ page 8068 "Customer Contract Line Subp."
         InitializePageVariables();
         SetNextBillingDateStyle();
         Rec.LoadServiceCommitmentForContractLine(ServiceCommitment);
+        LoadQuantityForContractLine();
     end;
 
     trigger OnAfterGetCurrRecord()
@@ -542,6 +568,7 @@ page 8068 "Customer Contract Line Subp."
     var
         ContractsGeneralMgt: Codeunit "Sub. Contracts General Mgt.";
         NextBillingDateStyleExpr: Text;
+        ContractLineQty: Decimal;
         IsDiscountLine: Boolean;
         IsCommentLineEditable: Boolean;
         UsageDataEnabled: Boolean;
@@ -567,11 +594,28 @@ page 8068 "Customer Contract Line Subp."
     begin
         if (Today() > ServiceCommitment."Subscription Line End Date") and (ServiceCommitment."Next Billing Date" > ServiceCommitment."Subscription Line End Date") and (ServiceCommitment."Subscription Line End Date" <> 0D) then
             NextBillingDateStyleExpr := 'Ambiguous';
+        OnAfterSetNextBillingDateStyle(Rec, ServiceCommitment, NextBillingDateStyleExpr);
     end;
 
     local procedure UpdateEditableOnRow()
     begin
         IsCommentLineEditable := Rec.IsCommentLine();
         IsDiscountLine := ServiceCommitment.Discount;
+    end;
+
+    local procedure LoadQuantityForContractLine()
+    begin
+        ContractLineQty := ServiceObject.Quantity;
+        OnAfterLoadQuantityForContractLine(Rec, ServiceObject, ContractLineQty);
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterSetNextBillingDateStyle(CustSubContractLine: Record "Cust. Sub. Contract Line"; SubscriptionLine: Record "Subscription Line"; var NextBillingDateStyleExpr: Text)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterLoadQuantityForContractLine(CustSubContractLine: Record "Cust. Sub. Contract Line"; SubscriptionHeader: Record "Subscription Header"; var ContractLineQty: Decimal)
+    begin
     end;
 }

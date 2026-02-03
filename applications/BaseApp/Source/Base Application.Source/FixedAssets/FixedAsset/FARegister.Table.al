@@ -80,13 +80,8 @@ table 5617 "FA Register"
         field(13; "Creation Time"; Time)
         {
             Caption = 'Creation Time';
-#if CLEAN24
             ObsoleteState = Removed;
             ObsoleteTag = '27.0';
-#else
-            ObsoleteState = Pending;
-            ObsoleteTag = '24.0';
-#endif
             ObsoleteReason = 'Use the system audit field "System Created at" instead.';
         }
 #endif
@@ -98,26 +93,16 @@ table 5617 "FA Register"
         {
             Clustered = true;
         }
-#if not CLEAN24
-        key(Key2; "Creation Date")
-        {
-        }
-#endif
-#if not CLEAN24
-        key(Key3; "Source Code", "Journal Batch Name", "Creation Date")
-        {
-        }
-#else
         key(Key3; "Source Code", "Journal Batch Name")
         {
         }
-#endif
     }
 
     fieldgroups
     {
     }
 
+    [InherentPermissions(PermissionObjectType::TableData, Database::"FA Register", 'r')]
     procedure GetLastEntryNo(): Integer;
     var
         FindRecordManagement: Codeunit "Find Record Management";
@@ -125,6 +110,7 @@ table 5617 "FA Register"
         exit(FindRecordManagement.GetLastEntryIntFieldValue(Rec, FieldNo("No.")))
     end;
 
+    [InherentPermissions(PermissionObjectType::TableData, Database::"FA Register", 'r')]
     procedure GetLastGLRegisterNo(): Integer;
     var
         FindRecordManagement: Codeunit "Find Record Management";
@@ -133,4 +119,3 @@ table 5617 "FA Register"
     end;
 
 }
-

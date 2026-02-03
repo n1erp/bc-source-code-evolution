@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Sales.Setup;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Sales.Setup;
 
 using Microsoft.CRM.BusinessRelation;
 using Microsoft.Foundation.Reporting;
@@ -56,6 +60,11 @@ page 9657 "Customer Report Selections"
                 {
                     ApplicationArea = Basic, Suite;
                     Caption = 'Report ID';
+
+                    trigger OnValidate()
+                    begin
+                        CurrPage.SaveRecord();
+                    end;
                 }
                 field(ReportCaption; Rec."Report Caption")
                 {
@@ -153,6 +162,10 @@ page 9657 "Customer Report Selections"
                         ReportManagementCodeunit: Codeunit ReportManagement;
                         IsReportLayoutSelected: Boolean;
                     begin
+                        if Rec.Sequence = 0 then begin
+                            Rec.Insert(true);
+                            Commit();
+                        end;
                         ReportLayoutListSelection.SetRange("Report ID", Rec."Report ID");
                         ReportManagementCodeunit.OnSelectReportLayout(ReportLayoutListSelection, IsReportLayoutSelected);
                         if IsReportLayoutSelected then begin

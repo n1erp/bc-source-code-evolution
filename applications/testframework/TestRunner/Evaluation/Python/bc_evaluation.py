@@ -6,6 +6,8 @@ from datetime import datetime
 import tempfile
 import json
 import sys
+import threading
+import asyncio
 
 import evaluators as bc_evaluators
 import bc_utils
@@ -15,12 +17,17 @@ from azure.ai.evaluation._evaluators._common import RaiServiceEvaluatorBase
 from azure.identity import DefaultAzureCredential
 
 class Evaluation():
-    def __init__(self, name, evaluators, custom_evaluators, data, column_mapping, azure_ai_project, model_config):
+    def __init__(self, id, name, evaluators, custom_evaluators, data, column_mapping, azure_ai_project, model_config):
+        self.id = id
         self.name = name
         self.data = data
         self.column_mapping = column_mapping
         self.azure_ai_project = azure_ai_project
         self.model_config = model_config
+        self.status = "Pending"
+        self.result = None
+        self.error = None
+        self.thread = None
         self.evaluators = self._instantiate_evaluators(evaluators + custom_evaluators)
 
     def _instantiate_evaluators(self, evaluators):
@@ -44,44 +51,69 @@ class Evaluation():
         snake_case_name = ''.join(['_' + i.lower() if i.isupper() else i for i in base_name]).lstrip('_')
     
         return snake_case_name    
-    
+
     def run(self):
-        start_time = datetime.now()
+        """Run the evaluation synchronously."""
+        try:
+            self.status = "Running"
+            start_time = datetime.now()
 
-        if isinstance(self.data, str):
-            data_file = self.data
-        else:
-            with tempfile.NamedTemporaryFile(delete=False) as temp_file:
-                for line in self.data:
-                    temp_file.write((json.dumps(line) + '\n').encode('utf-8'))
-                temp_file.flush()
-                data_file = temp_file.name
+            if isinstance(self.data, str):
+                data_file = self.data
+            else:
+                with tempfile.NamedTemporaryFile(delete=False) as temp_file:
+                    for line in self.data:
+                        temp_file.write((json.dumps(line) + '\n').encode('utf-8'))
+                    temp_file.flush()
+                    data_file = temp_file.name
 
-        evaluator_params = {
-            "evaluation_name": self.name,
-            "evaluators": self.evaluators,
-            "data": data_file,
-        }
-        if self.column_mapping != None:
-            evaluator_params["evaluator_config"] = {
-                "default": {
-                    "column_mapping": json.loads(self.column_mapping)
+            evaluator_params = {
+                "evaluation_name": self.name,
+                "evaluators": self.evaluators,
+                "data": data_file,
+            }
+            if self.column_mapping != None:
+                evaluator_params["evaluator_config"] = {
+                    "default": {
+                        "column_mapping": json.loads(self.column_mapping)
+                    }
                 }
+
+            result = evaluation.evaluate(
+                **evaluator_params,
+                azure_ai_project=self.azure_ai_project)
+
+            result["evaluation"] = { 
+                "name": self.name,
+                "start_time": start_time,
+                "end_time": datetime.now(),
+                "data_file": data_file,
             }
 
-        result = evaluation.evaluate(
-            **evaluator_params,
-            azure_ai_project=self.azure_ai_project)
+            self.result = result
+            self.status = "Success"
+        except Exception as e:
+            self.error = str(e)        
+            self.status = "Failure"
+            print(e)
 
-        result["evaluation"] = { 
+    def run_async(self):
+        """Run the evaluation asynchronously in a separate thread."""
+        def async_runner():
+            self.run()
+
+        self.thread = threading.Thread(target=async_runner)
+        self.thread.start()
+
+    def to_dict(self):
+        return {
+            "id": self.id,
             "name": self.name,
-            "start_time": start_time,
-            "end_time": datetime.now(),
-            "data_file": data_file,
+            "status": self.status,
+            "error": self.error,
+            "result": self.result,
         }
-
-        return result
-
+    
 if __name__ == "__main__":
     arguments = json.loads(sys.argv[1])
     name = arguments["name"]
@@ -96,6 +128,7 @@ if __name__ == "__main__":
     model_config = bc_utils.get_model_config()
     
     evaluation_run = Evaluation(
+        0,
         name,
         evaluators,
         custom_evaluators,
@@ -104,6 +137,7 @@ if __name__ == "__main__":
         azure_ai_project,
         model_config)
 
-    result = evaluation_run.run()
+    evaluation_run.run()
+    result = evaluation_run.result
     with open(out_file, 'w') as f:
         json.dump(result, f, default=bc_utils.handle_json_serialization)

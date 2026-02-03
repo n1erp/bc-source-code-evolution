@@ -13,7 +13,6 @@ using Microsoft.Inventory.Planning;
 using Microsoft.Inventory.Requisition;
 using Microsoft.Inventory.Tracking;
 using Microsoft.Inventory.Transfer;
-using Microsoft.Manufacturing.Document;
 using Microsoft.Projects.Project.Planning;
 using Microsoft.Purchases.Document;
 using Microsoft.Sales.Document;
@@ -25,8 +24,10 @@ codeunit 5790 "Available to Promise"
                   tabledata "Item Ledger Entry" = r,
                   tabledata "Job Planning Line" = r,
                   tabledata "Planning Component" = r,
-                  tabledata "Prod. Order Component" = r,
-                  tabledata "Prod. Order Line" = r,
+#if not CLEAN27
+                  tabledata Microsoft.Manufacturing.Document."Prod. Order Component" = r,
+                  tabledata Microsoft.Manufacturing.Document."Prod. Order Line" = r,
+#endif
                   tabledata "Purchase Line" = r,
                   tabledata "Requisition Line" = r,
                   tabledata "Reservation Entry" = r,
@@ -99,14 +100,16 @@ codeunit 5790 "Available to Promise"
 
     procedure CalcGrossRequirement(var Item: Record Item) GrossRequirement: Decimal
     var
+        QtyOnComponentLines: Decimal;
         IsHandled: Boolean;
     begin
         CalcAllItemFields(Item);
         IsHandled := false;
         OnBeforeCalcGrossRequirement(Item, GrossRequirement, IsHandled);
-        if not IsHandled then
+        if not IsHandled then begin
+            QtyOnComponentLines := Item.CalcQtyOnComponentLines();
             GrossRequirement :=
-                Item."Qty. on Component Lines" +
+                QtyOnComponentLines +
                 Item."Planning Issues (Qty.)" +
                 Item."Planning Transfer Ship. (Qty)." +
                 Item."Qty. on Sales Order" +
@@ -114,6 +117,7 @@ codeunit 5790 "Available to Promise"
                 Item."Trans. Ord. Shipment (Qty.)" +
                 Item."Qty. on Asm. Component" +
                 Item."Qty. on Purch. Return";
+        end;
 
         OnAfterCalcGrossRequirement(Item, GrossRequirement);
         exit(GrossRequirement);
@@ -128,7 +132,7 @@ codeunit 5790 "Available to Promise"
         OnBeforeCalcReservedRequirement(Item, ReservedRequirement, IsHandled);
         if not IsHandled then
             ReservedRequirement :=
-                Item."Res. Qty. on Prod. Order Comp." +
+                Item.CalcResQtyonProdOrderComp() +
                 Item."Reserved Qty. on Sales Orders" +
                 Item."Res. Qty. on Job Order" +
                 Item."Res. Qty. on Outbound Transfer" +
@@ -148,8 +152,8 @@ codeunit 5790 "Available to Promise"
         OnBeforeCalcScheduledReceipt(Item, ScheduledReceipt, IsHandled);
         if not IsHandled then
             ScheduledReceipt :=
-                Item."Scheduled Receipt (Qty.)" +
-                Item."Planned Order Receipt (Qty.)" +
+                Item.CalcScheduledReceiptQty() +
+                Item.CalcPlannedOrderReceiptQty() +
                 Item."Qty. on Purch. Order" +
                 Item."Trans. Ord. Receipt (Qty.)" +
                 Item."Qty. in Transit" +
@@ -169,7 +173,7 @@ codeunit 5790 "Available to Promise"
         OnBeforeCalcReservedReceipt(Item, ReservedReceipt, IsHandled);
         if not IsHandled then
             ReservedReceipt :=
-                Item."Reserved Qty. on Prod. Order" +
+                Item.CalcReservedQtyOnProdOrder() +
                 Item."Reserved Qty. on Purch. Orders" +
                 Item."Res. Qty. on Inbound Transfer" +
                 Item."Res. Qty. on Assembly Order" +
@@ -205,7 +209,7 @@ codeunit 5790 "Available to Promise"
         CalculateAvailabilityByPeriod(TempAvailabilityAtDate, PeriodType);
 
         IsHandled := false;
-        OnCalcEarliestAvailabilityDateOnBeforeFilterDate(Item, NeededQty, StartDate, AvailableQty, PeriodType, LookaheadDateFormula, TempAvailabilityAtDate, AvailableDate, IsHandled);
+        OnCalcEarliestAvailabilityDateOnBeforeFilterDate(Item, NeededQty, StartDate, AvailableQty, PeriodType, LookaheadDateFormula, TempAvailabilityAtDate, AvailableDate, IsHandled, ExcludeOnDate);
         if IsHandled then
             exit(AvailableDate);
 
@@ -220,8 +224,10 @@ codeunit 5790 "Available to Promise"
                         PeriodStart := TempAvailabilityAtDate."Period Start";
                     ScheduledReceipt += TempAvailabilityAtDate."Scheduled Receipt";
                     GrossRequirement += TempAvailabilityAtDate."Gross Requirement";
+                    OnCalcEarliestAvailabilityDateOnBeforeNextTempAvailabilityAtDate(TempAvailabilityAtDate);
                 until TempAvailabilityAtDate.Next() = 0;
             AvailableQty := Item.Inventory - Item."Reserved Qty. on Inventory" + ScheduledReceipt - GrossRequirement;
+            OnCalcEarliestAvailabilityDateOnAfterCalculateAvailableQty(AvailableQty, Item, ScheduledReceipt, GrossRequirement);
             if AvailableQty >= NeededQty then begin
                 QtyIsAvailable := true;
                 AvailableDate := Date."Period End";
@@ -381,6 +387,8 @@ codeunit 5790 "Available to Promise"
         AvailabilityAtDate."Scheduled Receipt" += ScheduledReceipt;
         AvailabilityAtDate."Gross Requirement" += GrossRequirement;
 
+        OnUpdateAvailabilityOnBeforeInsertModify(AvailabilityAtDate, Date, ScheduledReceipt, GrossRequirement);
+
         if RecordExists then
             AvailabilityAtDate.Modify()
         else
@@ -410,6 +418,7 @@ codeunit 5790 "Available to Promise"
                     repeat
                         AvailabilityInPeriod."Scheduled Receipt" += AvailabilityAtDate."Scheduled Receipt";
                         AvailabilityInPeriod."Gross Requirement" += AvailabilityAtDate."Gross Requirement";
+                        OnCalculateAvailabilityByPeriodOnBeforeDeleteAvailabilityAtDate(AvailabilityInPeriod, AvailabilityAtDate);
                         AvailabilityAtDate.Delete();
                     until AvailabilityAtDate.Next() = 0;
                     AvailabilityAtDate.SetRange("Period Start");
@@ -496,7 +505,6 @@ codeunit 5790 "Available to Promise"
         OnCalcAllItemFieldsOnBeforeItemCalcFields(Item);
         Item.CalcFields(
           Inventory, "Reserved Qty. on Inventory",
-          "Qty. on Component Lines",
           "Planning Issues (Qty.)",
           "Planning Transfer Ship. (Qty).",
           "Qty. on Sales Order",
@@ -504,7 +512,6 @@ codeunit 5790 "Available to Promise"
           "Trans. Ord. Shipment (Qty.)",
           "Qty. on Asm. Component",
           "Qty. on Purch. Return",
-          "Res. Qty. on Prod. Order Comp.",
           "Reserved Qty. on Sales Orders",
           "Res. Qty. on Job Order",
           "Res. Qty. on Outbound Transfer",
@@ -513,8 +520,6 @@ codeunit 5790 "Available to Promise"
 
         // Max function parameters is 20, hence split in 2
         Item.CalcFields(
-          "Scheduled Receipt (Qty.)",
-          "Planned Order Receipt (Qty.)",
           "Qty. on Purch. Order",
           "Trans. Ord. Receipt (Qty.)",
           "Qty. in Transit",
@@ -523,8 +528,7 @@ codeunit 5790 "Available to Promise"
           "Reserved Qty. on Purch. Orders",
           "Res. Qty. on Inbound Transfer",
           "Res. Qty. on Assembly Order",
-          "Res. Qty. on Sales Returns",
-          "Reserved Qty. on Prod. Order");
+          "Res. Qty. on Sales Returns");
 
         OnCalcAllItemFieldsOnAfterItemCalcFields(Item);
 
@@ -655,7 +659,7 @@ codeunit 5790 "Available to Promise"
         IsHandled: Boolean;
     begin
         IsHandled := false;
-        OnBeforeUpdateAsmCompAvail(AvailabilityAtDate, Item, IsHandled);
+        OnBeforeUpdateAsmCompAvail(AvailabilityAtDate, Item, IsHandled, ChangedAssemblyLine);
         if IsHandled then
             exit;
 
@@ -802,7 +806,7 @@ codeunit 5790 "Available to Promise"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnCalcEarliestAvailabilityDateOnBeforeFilterDate(var Item: Record Item; NeededQty: Decimal; StartDate: Date; var AvailableQty: Decimal; PeriodType: Enum "Analysis Period Type"; LookaheadDateFormula: DateFormula; var AvailabilityAtDate: Record "Availability at Date"; var AvailableDate: Date; var IsHandled: Boolean)
+    local procedure OnCalcEarliestAvailabilityDateOnBeforeFilterDate(var Item: Record Item; NeededQty: Decimal; StartDate: Date; var AvailableQty: Decimal; PeriodType: Enum "Analysis Period Type"; LookaheadDateFormula: DateFormula; var AvailabilityAtDate: Record "Availability at Date"; var AvailableDate: Date; var IsHandled: Boolean; ExcludeOnDate: Date)
     begin
     end;
 
@@ -889,12 +893,32 @@ codeunit 5790 "Available to Promise"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnBeforeUpdateAsmCompAvail(var AvailabilityAtDate: Record "Availability at Date"; var Item: Record Item; var IsHandled: Boolean)
+    local procedure OnBeforeUpdateAsmCompAvail(var AvailabilityAtDate: Record "Availability at Date"; var Item: Record Item; var IsHandled: Boolean; var ChangedAssemblyLine: Record "Assembly Line")
     begin
     end;
 
     [IntegrationEvent(true, false)]
     local procedure OnCalcEarliestAvailabilityDateOnAfterUpdateScheduledReceipt(var TempAvailabilityAtDate: Record "Availability at Date" temporary)
+    begin
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnUpdateAvailabilityOnBeforeInsertModify(var AvailabilityAtDate: Record "Availability at Date"; Date: Date; var ScheduledReceipt: Decimal; var GrossRequirement: Decimal)
+    begin
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnCalculateAvailabilityByPeriodOnBeforeDeleteAvailabilityAtDate(var AvailabilityInPeriod: Record "Availability at Date"; AvailabilityAtDate: Record "Availability at Date")
+    begin
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnCalcEarliestAvailabilityDateOnBeforeNextTempAvailabilityAtDate(var AvailabilityAtDate: Record "Availability at Date")
+    begin
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnCalcEarliestAvailabilityDateOnAfterCalculateAvailableQty(var AvailableQty: decimal; var Item: Record "Item"; ScheduledReceipt: decimal; GrossRequirement: decimal)
     begin
     end;
 }

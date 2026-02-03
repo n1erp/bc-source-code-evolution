@@ -98,6 +98,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit VAT Group Retr. From Sub Test - NamedType SuggestLinesBeforeErr</note>
         </trans-unit>
+        <trans-unit id="Codeunit 348572906 - NamedType 784362104" size-unit="char" translate="yes" xml:space="preserve">
+          <source>testkey</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit VAT Group Setup Page Test - NamedType ClientIdTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 348572906 - NamedType 874908385" size-unit="char" translate="yes" xml:space="preserve">
+          <source>testuser</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit VAT Group Setup Page Test - NamedType ClientSecretTxt</note>
+        </trans-unit>
         <trans-unit id="Codeunit 348572906 - NamedType 62347337" size-unit="char" translate="yes" xml:space="preserve">
           <source>Control should be visible.</source>
           <note from="Developer" annotates="general" priority="2"></note>

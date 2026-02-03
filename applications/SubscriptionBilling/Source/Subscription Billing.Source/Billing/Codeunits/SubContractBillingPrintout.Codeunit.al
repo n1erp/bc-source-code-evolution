@@ -6,7 +6,6 @@ using Microsoft.Finance.Currency;
 
 codeunit 8064 "Sub. Contract Billing Printout"
 {
-    Access = Internal;
     procedure FillContractBillingDetailsBufferFromSalesInvoice(SalesInvoiceHeader: Record "Sales Invoice Header"; var TempJobLedgerEntryBuffer: Record "Job Ledger Entry"; var ColumnHeaders: array[5] of Text)
     var
         BillingLineArchive: Record "Billing Line Archive";

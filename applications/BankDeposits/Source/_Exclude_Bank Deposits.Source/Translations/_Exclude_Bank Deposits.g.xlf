@@ -408,6 +408,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Posted Bank Deposit Line - Field Shortcut Dimension 2 Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3915934517 - NamedType 4124043160" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1-%2</source>
+          <note from="Developer" annotates="general" priority="2">%1 - Bank Deposit No., %2 - Line No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Bank Deposit-Post - NamedType AppliesToIDTxt</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3915934517 - NamedType 483457420" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bank Deposit Line  #2########\</source>
           <note from="Developer" annotates="general" priority="2">#2- a number (progress indicator)</note>
@@ -1967,26 +1972,6 @@
           <source>Specifies bank deposits that are ready to be posted.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension AccountManagerActivitiesExt - Control Bank Deposits to Post - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 452174617 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2316595260">
-          <source>Activities</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension AccReceivableActivitiesExt - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 452174617 - Control 3343348623 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2316595260">
-          <source>Bank Deposits</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension AccReceivableActivitiesExt - Control BankDeposits - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 452174617 - Control 2674480274 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2316595260">
-          <source>Specifies the bank deposits that will be posted.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension AccReceivableActivitiesExt - Control Bank Deposits to Post - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 452174617 - Control 2674480274 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2316595260">
-          <source>Bank Deposits to Post</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension AccReceivableActivitiesExt - Control Bank Deposits to Post - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 532280814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
           <source>Bank Account Card</source>

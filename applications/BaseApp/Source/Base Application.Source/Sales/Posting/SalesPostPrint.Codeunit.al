@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Sales.Posting;
 
 using Microsoft.Finance.ReceivablesPayables;
@@ -52,7 +56,10 @@ codeunit 82 "Sales-Post + Print"
             if not ConfirmPost(SalesHeader, DefaultOption) then
                 exit;
 
-        OnAfterConfirmPost(SalesHeader);
+        IsHandled := false;
+        OnAfterConfirmPost(SalesHeader, IsHandled);
+        if IsHandled then
+            exit;
 
         SalesSetup.Get();
         if SalesSetup."Post & Print with Job Queue" and not SendReportAsEmail then
@@ -221,7 +228,7 @@ codeunit 82 "Sales-Post + Print"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnAfterConfirmPost(var SalesHeader: Record "Sales Header")
+    local procedure OnAfterConfirmPost(var SalesHeader: Record "Sales Header"; var IsHandled: Boolean)
     begin
     end;
 

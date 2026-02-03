@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Inventory.Tracking;
 
 using Microsoft.Sales.Document;
@@ -148,6 +152,7 @@ codeunit 99000839 "Sales Get Demand To Reserve"
         RemainingQty, RemainingQtyBase : Decimal;
         AvailableQtyBase, InventoryQtyBase, ReservedQtyBase, WarehouseQtyBase : Decimal;
         LineNo: Integer;
+        DoInsertReservationWkshLine: Boolean;
     begin
         GetDemandToReserve.GetSalesOrderLines(TempSalesLine);
         if TempSalesLine.IsEmpty() then
@@ -206,15 +211,22 @@ codeunit 99000839 "Sales Get Demand To Reserve"
             ReservationWkshLine.Validate("Qty. Reserv. in Stock (Base)", ReservedQtyBase);
             ReservationWkshLine.Validate("Qty. in Whse. Handling (Base)", WarehouseQtyBase);
 
-            if (ReservationWkshLine."Remaining Qty. to Reserve" > 0) and
-               (ReservationWkshLine."Available Qty. to Reserve" > 0)
-            then
+            DoInsertReservationWkshLine := (ReservationWkshLine."Remaining Qty. to Reserve" > 0) and (ReservationWkshLine."Available Qty. to Reserve" > 0);
+            OnSyncSalesOrderLinesOnBeforeInsertReservationWkshLine(ReservationWkshLine, TempSalesLine, DoInsertReservationWkshLine);
+            if DoInsertReservationWkshLine then
                 ReservationWkshLine.Insert(true);
         until TempSalesLine.Next() = 0;
     end;
 
+#if not CLEAN27
+    [Obsolete('This event is never raised.', '27.0')]
     [IntegrationEvent(false, false)]
     local procedure OnGetDemandOnBeforeSetTempSalesLine(var SalesLine: Record "Sales Line"; var IsHandled: Boolean)
+    begin
+    end;
+#endif
+    [IntegrationEvent(false, false)]
+    local procedure OnSyncSalesOrderLinesOnBeforeInsertReservationWkshLine(var ReservationWkshLine: Record "Reservation Wksh. Line"; var TempSalesLine: Record "Sales Line" temporary; var DoInsertReservationWkshLine: Boolean)
     begin
     end;
 }

@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Sales.Posting;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Sales.Posting;
 
 using Microsoft.Finance.Deferral;
 using Microsoft.Finance.GeneralLedger.Journal;
@@ -621,6 +625,16 @@ codeunit 825 "Sales Post Invoice Events"
 
     [IntegrationEvent(false, false)]
     local procedure OnBeforeUpdateInvoicePostingBuffer(var TempInvoicePostingBuffer: Record "Invoice Posting Buffer" temporary; InvoicePostingBuffer: Record "Invoice Posting Buffer"; ForceGLAccountType: Boolean; var InvDefLineNo: Integer; var DeferralLineNo: Integer; var FALineNo: Integer; SalesLine: Record "Sales Line"; var IsHandled: Boolean)
+    begin
+    end;
+
+    internal procedure RunOnPostLinesOnAfterPostJobSalesLines(var SalesHeader: Record "Sales Header"; var TempInvoicePostingBuffer: Record "Invoice Posting Buffer" temporary; var TotalSalesLine: Record "Sales Line"; var TotalSalesLineLCY: Record "Sales Line"; var GLEntryNo: Integer; var InvoicePostingParameters: Record "Invoice Posting Parameters")
+    begin
+        OnPostLinesOnAfterPostJobSalesLines(SalesHeader, TempInvoicePostingBuffer, TotalSalesLine, TotalSalesLineLCY, GLEntryNo, InvoicePostingParameters);
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnPostLinesOnAfterPostJobSalesLines(var SalesHeader: Record "Sales Header"; var TempInvoicePostingBuffer: Record "Invoice Posting Buffer" temporary; var TotalSalesLine: Record "Sales Line"; var TotalSalesLineLCY: Record "Sales Line"; var GLEntryNo: Integer; var InvoicePostingParameters: Record "Invoice Posting Parameters")
     begin
     end;
 }

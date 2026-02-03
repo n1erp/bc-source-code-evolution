@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Sales.Archive;
 
 using Microsoft.CRM.Contact;
@@ -47,6 +51,12 @@ page 5159 "Sales Order Archive"
                         ApplicationArea = Suite;
                         Caption = 'Name';
                     }
+                    field("Sell-to Customer Name 2"; Rec."Sell-to Customer Name 2")
+                    {
+                        ApplicationArea = Suite;
+                        Caption = 'Name 2';
+                        Visible = false;
+                    }
                     field("Sell-to Address"; Rec."Sell-to Address")
                     {
                         ApplicationArea = Suite;
@@ -69,7 +79,7 @@ page 5159 "Sales Order Archive"
                         field("Sell-to County"; Rec."Sell-to County")
                         {
                             ApplicationArea = Suite;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Sell-to Country/Region Code";
                         }
                     }
                     field("Sell-to Post Code"; Rec."Sell-to Post Code")
@@ -200,6 +210,12 @@ page 5159 "Sales Order Archive"
                         ApplicationArea = Suite;
                         Caption = 'Name';
                     }
+                    field("Bill-to Name 2"; Rec."Bill-to Name 2")
+                    {
+                        ApplicationArea = Suite;
+                        Caption = 'Name 2';
+                        Visible = false;
+                    }
                     field("Bill-to Address"; Rec."Bill-to Address")
                     {
                         ApplicationArea = Suite;
@@ -222,7 +238,7 @@ page 5159 "Sales Order Archive"
                         field("Bill-to County"; Rec."Bill-to County")
                         {
                             ApplicationArea = Suite;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Bill-to Country/Region Code";
                         }
                     }
                     field("Bill-to Post Code"; Rec."Bill-to Post Code")
@@ -353,7 +369,7 @@ page 5159 "Sales Order Archive"
                         field("Ship-to County"; Rec."Ship-to County")
                         {
                             ApplicationArea = Suite;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Ship-to Country/Region Code";
                         }
                     }
                     field("Ship-to Post Code"; Rec."Ship-to Post Code")

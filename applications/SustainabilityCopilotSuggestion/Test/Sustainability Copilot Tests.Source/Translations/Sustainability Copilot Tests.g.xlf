@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Sustainability Copilot Tests">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 957148332 - NamedType 411834270" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Value %1 is not in the list of expected values: %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = actual value, %2 = expected values</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Library Sustainability Copilot - NamedType IncorrectFormulaErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1583337873 - NamedType 4012720532" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Incorrect emission factor. Expected between %1 and %2. Actual %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = minExpectedResult, %2 = maxExpectedResult, %3 = actualEmissionFactor</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Copilot Emiss. Tests - NamedType IncorrectEmissionFactorErr</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

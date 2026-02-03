@@ -105,6 +105,7 @@ table 5050 Contact
         field(3; "Search Name"; Code[100])
         {
             Caption = 'Search Name';
+            OptimizeForTextSearch = true;
         }
         field(4; "Name 2"; Text[50])
         {
@@ -340,26 +341,18 @@ table 5050 Contact
                 SetSearchEmail();
             end;
         }
-#if not CLEAN24
-        field(103; "Home Page"; Text[80])
-        {
-            Caption = 'Home Page';
-            OptimizeForTextSearch = true;
-            ExtendedDatatype = URL;
-            ObsoleteReason = 'Field length will be increased to 255.';
-            ObsoleteState = Pending;
-            ObsoleteTag = '24.0';
-        }
-#else
+#if not CLEAN27
 #pragma warning disable AS0086
+#endif
         field(103; "Home Page"; Text[255])
-        {
-            Caption = 'Home Page';
-            OptimizeForTextSearch = true;
-            ExtendedDatatype = URL;
-        }
+#if not CLEAN27
 #pragma warning restore AS0086
 #endif
+        {
+            Caption = 'Home Page';
+            OptimizeForTextSearch = true;
+            ExtendedDatatype = URL;
+        }
         field(107; "No. Series"; Code[20])
         {
             Caption = 'No. Series';
@@ -566,7 +559,7 @@ table 5050 Contact
             CalcFormula = min("To-do".Date where("Contact Company No." = field("Company No."),
                                                   "Contact No." = field(filter("Lookup Contact No.")),
                                                   Closed = const(false),
-                                                  "System To-do Type" = const("Contact Attendee")));
+                                                  "System To-do Type" = filter(Organizer | "Contact Attendee")));
             Caption = 'Next Task Date';
             Editable = false;
             FieldClass = FlowField;
@@ -636,6 +629,7 @@ table 5050 Contact
         }
         field(5076; "Cost (LCY)"; Decimal)
         {
+            AutoFormatExpression = '';
             AutoFormatType = 1;
             CalcFormula = sum("Interaction Log Entry"."Cost (LCY)" where("Contact Company No." = field("Company No."),
                                                                           Canceled = const(false),
@@ -648,6 +642,7 @@ table 5050 Contact
         }
         field(5077; "Duration (Min.)"; Decimal)
         {
+            AutoFormatType = 0;
             CalcFormula = sum("Interaction Log Entry"."Duration (Min.)" where("Contact Company No." = field("Company No."),
                                                                                Canceled = const(false),
                                                                                "Contact No." = field(filter("Lookup Contact No.")),
@@ -671,6 +666,7 @@ table 5050 Contact
         }
         field(5079; "Estimated Value (LCY)"; Decimal)
         {
+            AutoFormatExpression = '';
             AutoFormatType = 1;
             CalcFormula = sum("Opportunity Entry"."Estimated Value (LCY)" where(Active = const(true),
                                                                                  "Contact Company No." = field("Company No."),
@@ -683,6 +679,7 @@ table 5050 Contact
         }
         field(5080; "Calcd. Current Value (LCY)"; Decimal)
         {
+            AutoFormatExpression = '';
             AutoFormatType = 1;
             CalcFormula = sum("Opportunity Entry"."Calcd. Current Value (LCY)" where(Active = const(true),
                                                                                       "Contact Company No." = field("Company No."),
@@ -767,6 +764,7 @@ table 5050 Contact
         }
         field(5090; "Probability % Filter"; Decimal)
         {
+            AutoFormatType = 0;
             Caption = 'Probability % Filter';
             DecimalPlaces = 1 : 1;
             FieldClass = FlowFilter;
@@ -775,6 +773,7 @@ table 5050 Contact
         }
         field(5091; "Completed % Filter"; Decimal)
         {
+            AutoFormatType = 0;
             Caption = 'Completed % Filter';
             DecimalPlaces = 1 : 1;
             FieldClass = FlowFilter;
@@ -783,18 +782,21 @@ table 5050 Contact
         }
         field(5092; "Estimated Value Filter"; Decimal)
         {
+            AutoFormatExpression = '';
             AutoFormatType = 1;
             Caption = 'Estimated Value Filter';
             FieldClass = FlowFilter;
         }
         field(5093; "Calcd. Current Value Filter"; Decimal)
         {
+            AutoFormatExpression = '';
             AutoFormatType = 1;
             Caption = 'Calcd. Current Value Filter';
             FieldClass = FlowFilter;
         }
         field(5094; "Chances of Success % Filter"; Decimal)
         {
+            AutoFormatType = 0;
             Caption = 'Chances of Success % Filter';
             DecimalPlaces = 0 : 0;
             FieldClass = FlowFilter;
@@ -923,6 +925,9 @@ table 5050 Contact
         {
         }
         key(Key15; "Contact Business Relation")
+        {
+        }
+        key(Key16; "E-Mail")
         {
         }
     }
@@ -1098,9 +1103,6 @@ table 5050 Contact
     trigger OnInsert()
     var
         Contact: Record Contact;
-#if not CLEAN24
-        NoSeriesManagement: Codeunit NoSeriesManagement;
-#endif
         IsHandled: Boolean;
     begin
         IsHandled := false;
@@ -1112,31 +1114,15 @@ table 5050 Contact
 
         if "No." = '' then begin
             RMSetup.TestField("Contact Nos.");
-#if not CLEAN24
-            NoSeriesManagement.RaiseObsoleteOnBeforeInitSeries(RMSetup."Contact Nos.", xRec."No. Series", 0D, "No.", "No. Series", IsHandled);
-            if not IsHandled then begin
-                if NoSeries.AreRelated(RMSetup."Contact Nos.", xRec."No. Series") then
-                    "No. Series" := xRec."No. Series"
-                else
-                    "No. Series" := RMSetup."Contact Nos.";
-                "No." := NoSeries.GetNextNo("No. Series");
-                Contact.ReadIsolation(IsolationLevel::ReadUncommitted);
-                Contact.SetLoadFields("No.");
-                while Contact.Get("No.") do
-                    "No." := NoSeries.GetNextNo("No. Series");
-                NoSeriesManagement.RaiseObsoleteOnAfterInitSeries("No. Series", RMSetup."Contact Nos.", 0D, "No.");
-            end;
-#else
-			if NoSeries.AreRelated(RMSetup."Contact Nos.", xRec."No. Series") then
-				"No. Series" := xRec."No. Series"
-			else
-				"No. Series" := RMSetup."Contact Nos.";
+            if NoSeries.AreRelated(RMSetup."Contact Nos.", xRec."No. Series") then
+                "No. Series" := xRec."No. Series"
+            else
+                "No. Series" := RMSetup."Contact Nos.";
             "No." := NoSeries.GetNextNo("No. Series");
             Contact.ReadIsolation(IsolationLevel::ReadUncommitted);
             Contact.SetLoadFields("No.");
             while Contact.Get("No.") do
                 "No." := NoSeries.GetNextNo("No. Series");
-#endif
         end;
 
         if not SkipDefaults then begin
@@ -1207,6 +1193,7 @@ table 5050 Contact
         RelatedRecordIsCreatedMsg: Label 'The %1 record has been created.', Comment = 'The Customer record has been created.';
 #pragma warning restore AA0470
         RMSetup: Record "Marketing Setup";
+        MarketingSetup: Record "Marketing Setup";
         Salesperson: Record "Salesperson/Purchaser";
         PostCode: Record "Post Code";
         DuplMgt: Codeunit DuplicateManagement;
@@ -1970,29 +1957,33 @@ table 5050 Contact
         PAGE.Run(PAGE::"Contact Business Relations", ContactBusinessRelation);
     end;
 
-    local procedure GetBusinessRelation() ContactBusinessRelation: Enum "Contact Business Relation";
+    local procedure GetBusinessRelation() ResultContactBusinessRelation: Enum "Contact Business Relation";
     var
-        ContBusRel: Record "Contact Business Relation";
-        AllCount: Integer;
+        ContactBusinessRelation: Record "Contact Business Relation";
+        AllBusinessRelationCount, SelectedBusinessRelationCodeCount : Integer;
     begin
-        FilterBusinessRelations(ContBusRel, Enum::"Contact Business Relation Link To Table"::" ", true);
-        if ContBusRel.IsEmpty() then
-            exit(ContactBusinessRelation::None);
-        AllCount := ContBusRel.Count();
-        ContBusRel.SetFilter("Business Relation Code", GetSelectedRelationCodes());
-        ContBusRel.SetFilter("No.", '<>''''');
-        if ContBusRel.IsEmpty() then begin
-            ContBusRel.SetRange("Business Relation Code");
-            ContBusRel.SetRange("No.");
-            if ContBusRel.Count() = 1 then
-                exit(ContactBusinessRelation::Other);
-            exit(ContactBusinessRelation::Multiple);
-        end else
-            if (ContBusRel.Count() = 1) and (AllCount = 1) then begin
-                ContBusRel.FindFirst();
-                exit(ContBusRel."Link to Table");
-            end;
-        exit(ContactBusinessRelation::Multiple);
+        FilterBusinessRelations(ContactBusinessRelation, Enum::"Contact Business Relation Link To Table"::" ", true);
+        AllBusinessRelationCount := ContactBusinessRelation.Count();
+        if AllBusinessRelationCount = 0 then
+            exit(ResultContactBusinessRelation::None);
+
+        ContactBusinessRelation.SetFilter("Business Relation Code", GetSelectedRelationCodes());
+        ContactBusinessRelation.SetFilter("No.", '<>''''');
+        SelectedBusinessRelationCodeCount := ContactBusinessRelation.Count();
+        if SelectedBusinessRelationCodeCount = 0 then begin
+            if AllBusinessRelationCount = 1 then
+                exit(ResultContactBusinessRelation::Other);
+
+            exit(ResultContactBusinessRelation::Multiple);
+        end;
+
+        if (AllBusinessRelationCount = 1) and (SelectedBusinessRelationCodeCount = 1) then begin
+            ContactBusinessRelation.SetLoadFields("Link to Table");
+            ContactBusinessRelation.FindFirst();
+            exit(ContactBusinessRelation."Link to Table");
+        end;
+
+        exit(ResultContactBusinessRelation::Multiple);
     end;
 
     procedure UpdateBusinessRelation(): Boolean;
@@ -2005,12 +1996,10 @@ table 5050 Contact
     end;
 
     local procedure GetSelectedRelationCodes() CodeFilter: Text;
-    var
-        MarketingSetup: Record "Marketing Setup";
     begin
         if SelectedBusRelationCodes <> '' then
             exit(SelectedBusRelationCodes);
-        MarketingSetup.Get();
+        MarketingSetup.GetRecordOnce();
         AppendFilter(CodeFilter, '|', MarketingSetup."Bus. Rel. Code for Customers");
         AppendFilter(CodeFilter, '|', MarketingSetup."Bus. Rel. Code for Vendors");
         AppendFilter(CodeFilter, '|', MarketingSetup."Bus. Rel. Code for Bank Accs.");
@@ -2039,10 +2028,9 @@ table 5050 Contact
     procedure HasBusinessRelations(var RelatedCustomerEnabled: Boolean; var RelatedVendorEnabled: Boolean; var RelatedBankEnabled: Boolean; var RelatedEmployeeEnabled: Boolean)
     var
         Contact: Record Contact;
-        MarketingSetup: Record "Marketing Setup";
     begin
         Contact.Copy(Rec);
-        MarketingSetup.Get();
+        MarketingSetup.GetRecordOnce();
         RelatedCustomerEnabled :=
             Contact.HasBusinessRelation(
                 Enum::"Contact Business Relation Link To Table"::Customer, MarketingSetup."Bus. Rel. Code for Customers");
@@ -2057,17 +2045,19 @@ table 5050 Contact
                 Enum::"Contact Business Relation Link To Table"::Employee, MarketingSetup."Bus. Rel. Code for Employees");
     end;
 
-    local procedure FilterBusinessRelations(var ContBusRel: Record "Contact Business Relation"; LinkToTable: Enum "Contact Business Relation Link To Table"; All: Boolean)
+    local procedure FilterBusinessRelations(var ContactBusinessRelation: Record "Contact Business Relation"; ContactBusinessRelationLinkToTable: Enum "Contact Business Relation Link To Table"; All: Boolean)
     begin
-        ContBusRel.Reset();
+        ContactBusinessRelation.Reset();
         if ("Company No." = '') or ("Company No." = "No.") then
-            ContBusRel.SetRange("Contact No.", "No.")
+            ContactBusinessRelation.SetRange("Contact No.", "No.")
         else
-            ContBusRel.SetFilter("Contact No.", '%1|%2', "No.", "Company No.");
+            ContactBusinessRelation.SetFilter("Contact No.", '%1|%2', "No.", "Company No.");
+
         if not All then
-            ContBusRel.SetFilter("No.", '<>''''');
-        if LinkToTable <> LinkToTable::" " then
-            ContBusRel.SetRange("Link to Table", LinkToTable);
+            ContactBusinessRelation.SetFilter("No.", '<>''''');
+
+        if ContactBusinessRelationLinkToTable <> ContactBusinessRelationLinkToTable::" " then
+            ContactBusinessRelation.SetRange("Link to Table", ContactBusinessRelationLinkToTable);
     end;
 
     local procedure NameBreakdown()
@@ -2314,79 +2304,85 @@ table 5050 Contact
         OppEntry: Record "Opportunity Entry";
         SalesHeader: Record "Sales Header";
         Task: Record "To-do";
+        ContactCompanyNo: Code[20];
+        NewCompanyNo: Code[20];
         IsHandled: Boolean;
+        SkipModifyOpportunity: Boolean;
+        SkipModifyOpportunityEntry: Boolean;
+        SkipModifyInteractionLogEntry: Boolean;
+        SkipModifySalesHeader: Boolean;
+        SkipModifyTask: Boolean;
     begin
         IsHandled := false;
-        OnBeforeUpdateCompanyNo(Rec, xRec, IsHandled);
+        OnBeforeUpdateCompanyNo(Rec, xRec, IsHandled, SkipModifyOpportunity, SkipModifyOpportunityEntry, SkipModifyTask, SkipModifyInteractionLogEntry, SkipModifySalesHeader);
         if IsHandled then
             exit;
 
         if Cont.Get("No.") then begin
-            if xRec."Company No." <> '' then begin
+            ContactCompanyNo := xRec."Company No.";
+            if xRec."Company No." <> '' then
+                NewCompanyNo := xRec."Company No."
+            else
+                NewCompanyNo := Rec."Company No.";
+
+
+            if not SkipModifyOpportunity then begin
                 Opp.SetCurrentKey("Contact Company No.", "Contact No.");
-                Opp.SetRange("Contact Company No.", xRec."Company No.");
+                Opp.SetRange("Contact Company No.", ContactCompanyNo);
                 Opp.SetRange("Contact No.", "No.");
                 if not Opp.IsEmpty() then
-                    Opp.ModifyAll("Contact No.", xRec."Company No.");
-                OppEntry.SetCurrentKey("Contact Company No.", "Contact No.");
-                OppEntry.SetRange("Contact Company No.", xRec."Company No.");
-                OppEntry.SetRange("Contact No.", "No.");
-                if not OppEntry.IsEmpty() then
-                    OppEntry.ModifyAll("Contact No.", xRec."Company No.");
-                Task.SetCurrentKey("Contact Company No.", "Contact No.");
-                Task.SetRange("Contact Company No.", xRec."Company No.");
-                Task.SetRange("Contact No.", "No.");
-                if not Task.IsEmpty() then
-                    Task.ModifyAll("Contact No.", xRec."Company No.");
-                InteractLogEntry.SetCurrentKey("Contact Company No.", "Contact No.");
-                InteractLogEntry.SetRange("Contact Company No.", xRec."Company No.");
-                InteractLogEntry.SetRange("Contact No.", "No.");
-                if not InteractLogEntry.IsEmpty() then
-                    InteractLogEntry.ModifyAll("Contact No.", xRec."Company No.");
-                ContBusRel.Reset();
-                ContBusRel.SetCurrentKey("Link to Table", "Contact No.");
-                ContBusRel.SetRange("Link to Table", ContBusRel."Link to Table"::Customer);
-                ContBusRel.SetRange("Contact No.", xRec."Company No.");
-                SalesHeader.SetCurrentKey("Sell-to Customer No.", "External Document No.");
-                SalesHeader.SetRange("Sell-to Contact No.", "No.");
-                if ContBusRel.FindFirst() then
-                    SalesHeader.SetRange("Sell-to Customer No.", ContBusRel."No.")
-                else
-                    SalesHeader.SetRange("Sell-to Customer No.", '');
-                if SalesHeader.Find('-') then
-                    repeat
-                        SalesHeader."Sell-to Contact No." := xRec."Company No.";
-                        if SalesHeader."Sell-to Contact No." = SalesHeader."Bill-to Contact No." then
-                            SalesHeader."Bill-to Contact No." := xRec."Company No.";
-                        SalesHeader.Modify();
-                    until SalesHeader.Next() = 0;
-                SalesHeader.Reset();
-                SalesHeader.SetCurrentKey("Bill-to Contact No.");
-                SalesHeader.SetRange("Bill-to Contact No.", "No.");
-                if not SalesHeader.IsEmpty() then
-                    SalesHeader.ModifyAll("Bill-to Contact No.", xRec."Company No.");
-            end else begin
-                Opp.SetCurrentKey("Contact Company No.", "Contact No.");
-                Opp.SetRange("Contact Company No.", '');
-                Opp.SetRange("Contact No.", "No.");
-                if not Opp.IsEmpty() then
-                    Opp.ModifyAll("Contact Company No.", "Company No.");
-                OppEntry.SetCurrentKey("Contact Company No.", "Contact No.");
-                OppEntry.SetRange("Contact Company No.", '');
-                OppEntry.SetRange("Contact No.", "No.");
-                if not OppEntry.IsEmpty() then
-                    OppEntry.ModifyAll("Contact Company No.", "Company No.");
-                Task.SetCurrentKey("Contact Company No.", "Contact No.");
-                Task.SetRange("Contact Company No.", '');
-                Task.SetRange("Contact No.", "No.");
-                if not Task.IsEmpty() then
-                    Task.ModifyAll("Contact Company No.", "Company No.");
-                InteractLogEntry.SetCurrentKey("Contact Company No.", "Contact No.");
-                InteractLogEntry.SetRange("Contact Company No.", '');
-                InteractLogEntry.SetRange("Contact No.", "No.");
-                if not InteractLogEntry.IsEmpty() then
-                    InteractLogEntry.ModifyAll("Contact Company No.", "Company No.");
+                    Opp.ModifyAll("Contact No.", NewCompanyNo);
             end;
+
+            if not SkipModifyOpportunityEntry then begin
+                OppEntry.SetCurrentKey("Contact Company No.", "Contact No.");
+                OppEntry.SetRange("Contact Company No.", ContactCompanyNo);
+                OppEntry.SetRange("Contact No.", "No.");
+                if not OppEntry.IsEmpty() then
+                    OppEntry.ModifyAll("Contact No.", NewCompanyNo);
+            end;
+
+            if not SkipModifyTask then begin
+                Task.SetCurrentKey("Contact Company No.", "Contact No.");
+                Task.SetRange("Contact Company No.", ContactCompanyNo);
+                Task.SetRange("Contact No.", "No.");
+                if not Task.IsEmpty() then
+                    Task.ModifyAll("Contact No.", NewCompanyNo);
+            end;
+
+            if not SkipModifyInteractionLogEntry then begin
+                InteractLogEntry.SetCurrentKey("Contact Company No.", "Contact No.");
+                InteractLogEntry.SetRange("Contact Company No.", ContactCompanyNo);
+                InteractLogEntry.SetRange("Contact No.", "No.");
+                if not InteractLogEntry.IsEmpty() then
+                    InteractLogEntry.ModifyAll("Contact No.", NewCompanyNo);
+            end;
+
+            if ContactCompanyNo <> '' then
+                if not SkipModifySalesHeader then begin
+                    ContBusRel.Reset();
+                    ContBusRel.SetCurrentKey("Link to Table", "Contact No.");
+                    ContBusRel.SetRange("Link to Table", ContBusRel."Link to Table"::Customer);
+                    ContBusRel.SetRange("Contact No.", ContactCompanyNo);
+                    SalesHeader.SetCurrentKey("Sell-to Customer No.", "External Document No.");
+                    SalesHeader.SetRange("Sell-to Contact No.", "No.");
+                    if ContBusRel.FindFirst() then
+                        SalesHeader.SetRange("Sell-to Customer No.", ContBusRel."No.")
+                    else
+                        SalesHeader.SetRange("Sell-to Customer No.", '');
+                    if SalesHeader.Find('-') then
+                        repeat
+                            SalesHeader."Sell-to Contact No." := NewCompanyNo;
+                            if SalesHeader."Sell-to Contact No." = SalesHeader."Bill-to Contact No." then
+                                SalesHeader."Bill-to Contact No." := NewCompanyNo;
+                            SalesHeader.Modify();
+                        until SalesHeader.Next() = 0;
+                    SalesHeader.Reset();
+                    SalesHeader.SetCurrentKey("Bill-to Contact No.");
+                    SalesHeader.SetRange("Bill-to Contact No.", "No.");
+                    if not SalesHeader.IsEmpty() then
+                        SalesHeader.ModifyAll("Bill-to Contact No.", NewCompanyNo);
+                end;
 
             if CurrFieldNo <> 0 then
                 Modify();
@@ -2937,6 +2933,25 @@ table 5050 Contact
                   Contact.TableCaption(), "Company No.", ContBusRel.TableCaption(), ContBusRel."Link to Table", ContBusRel."No.");
     end;
 
+    procedure FindCustomer(var Customer: Record Customer): Boolean
+    var
+        ContactBusinessRelation: Record "Contact Business Relation";
+        ContactBusinessRelationFound: Boolean;
+    begin
+        Clear(Customer);
+
+        if Rec.Type = Rec.Type::Person then
+            ContactBusinessRelationFound := ContactBusinessRelation.FindByContact(ContactBusinessRelation."Link to Table"::Customer, Rec."No.");
+
+        if not ContactBusinessRelationFound then
+            ContactBusinessRelationFound := ContactBusinessRelation.FindByContact(ContactBusinessRelation."Link to Table"::Customer, Rec."Company No.");
+
+        if not ContactBusinessRelationFound then
+            exit(false);
+
+        exit(Customer.Get(ContactBusinessRelation."No."));
+    end;
+
     procedure SetLastDateTimeModified()
     var
         UtcNow: DateTime;
@@ -3313,12 +3328,11 @@ table 5050 Contact
     procedure CreateEmployeeLink()
     var
         ContBusRel: Record "Contact Business Relation";
-        MarketingSetup: Record "Marketing Setup";
     begin
         CheckContactType(Type::Person);
         CheckIfPrivacyBlockedGeneric();
 
-        MarketingSetup.Get();
+        MarketingSetup.GetRecordOnce();
         MarketingSetup.TestField("Bus. Rel. Code for Employees");
         CreateLink(Page::"Employee Link", MarketingSetup."Bus. Rel. Code for Employees", ContBusRel."Link to Table"::Employee);
     end;
@@ -3708,7 +3722,7 @@ table 5050 Contact
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnBeforeUpdateCompanyNo(var Contact: Record Contact; xContact: Record Contact; var IsHandled: Boolean)
+    local procedure OnBeforeUpdateCompanyNo(var Contact: Record Contact; xContact: Record Contact; var IsHandled: Boolean; var SkipModifyOpportunity: Boolean; var SkipModifyOpportunityEntry: Boolean; var SkipModifyTask: Boolean; var SkipModifyInteractionLogEntry: Boolean; var SkipModifySalesHeader: Boolean)
     begin
     end;
 

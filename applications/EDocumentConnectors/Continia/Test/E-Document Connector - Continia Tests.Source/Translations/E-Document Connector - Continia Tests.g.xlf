@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="E-Document Connector - Continia Tests">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 4079883188 - NamedType 2996603465" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wrong value</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Continia Api Comm. Unit Tests - NamedType IncorrectValueErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4079883188 - NamedType 163429794" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Continia Delivery Network API returned the following error: Error Code Bad Request - Missing parameter</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Continia Api Comm. Unit Tests - NamedType Response400ErrorMessageLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4079883188 - NamedType 2682463425" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Continia Delivery Network API returned the following error: Error Code Not Authenticated - Login failed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Continia Api Comm. Unit Tests - NamedType Response401ErrorMessageLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4079883188 - NamedType 1809729894" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Continia Delivery Network API returned the following error: Error Code Not Found - Not Found</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Continia Api Comm. Unit Tests - NamedType Response404ErrorMessageLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4079883188 - NamedType 3202042953" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Continia Delivery Network API returned the following error: Error Code Conflict - Conflict</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Continia Api Comm. Unit Tests - NamedType Response409ErrorMessageLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4079883188 - NamedType 4128083794" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Continia Delivery Network API returned the following error: Error Code string - string</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Continia Api Comm. Unit Tests - NamedType Response422ErrorMessageLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4079883188 - NamedType 1557150673" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Continia Delivery Network API returned the following system error: Error Code Internal Server - Unhandled system error</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Continia Api Comm. Unit Tests - NamedType Response500ErrorMessageLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1455298473 - NamedType 2996603465" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wrong value</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Continia Doc. Integr. Tests - NamedType IncorrectValueErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 843468273 - NamedType 2996603465" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wrong value</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Continia Reg. Integr. Tests - NamedType IncorrectValueErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 843468273 - NamedType 1809729894" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Continia Delivery Network API returned the following error: Error Code Not Found - Not Found</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Continia Reg. Integr. Tests - NamedType Response404ErrorMessageLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 843468273 - Method 2359319702 - NamedType 2902611984" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There is already a registration in Peppol network with the identifier type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Continia Reg. Integr. Tests - Method Registration_AdvancedFlow - NamedType ParticipationAlreadyRegisteredPeppolErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 843468273 - Method 203495607 - NamedType 2085114167" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unexpected Activated Network Profile %1 was found</source>
+          <note from="Developer" annotates="general" priority="2">%1 - Network Profile Id</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Continia Reg. Integr. Tests - Method TestActivatedNetworkProfiles - NamedType UnexpectedProfileFoundErr</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2213242278 - Action 4110281078 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2213242278">
+          <source>Delete Profile. Used for automated testing only</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Continia Profile Selection - Action DeleteProfile - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2213242278 - Action 4110281078 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2213242278">
+          <source>DeleteProfile</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Continia Profile Selection - Action DeleteProfile - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

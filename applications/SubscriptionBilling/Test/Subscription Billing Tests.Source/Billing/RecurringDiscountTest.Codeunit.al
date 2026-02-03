@@ -8,9 +8,11 @@ using Microsoft.Purchases.Vendor;
 using Microsoft.Purchases.Document;
 using Microsoft.Purchases.History;
 
+#pragma warning disable AA0210
 codeunit 139689 "Recurring Discount Test"
 {
     Subtype = Test;
+    TestType = Uncategorized;
     TestPermissions = Disabled;
     Access = Internal;
 
@@ -45,6 +47,7 @@ codeunit 139689 "Recurring Discount Test"
         LibraryRandom: Codeunit "Library - Random";
         LibrarySales: Codeunit "Library - Sales";
         LibraryUtility: Codeunit "Library - Utility";
+        LibraryTestInitialize: Codeunit "Library - Test Initialize";
         PostedDocumentNo: Code[20];
         DiscountDeferralAmountSignErr: Label 'Discount Deferral line must have %1 Amount.', Locked = true;
         DiscountDeferralDeferralBaseAmountSignErr: Label 'Discount Deferral line must have %1 Deferral Base Amount.', Locked = true;
@@ -438,6 +441,7 @@ codeunit 139689 "Recurring Discount Test"
         ServiceCommitmentTemplate.Modify(false);
 
         ContractTestLibrary.CreateServiceCommitmentPackageWithLine(ServiceCommitmentTemplate.Code, ServiceCommitmentPackage, ServiceCommPackageLine);
+        ContractTestLibrary.UpdateServiceCommitmentPackageLineWithInvoicingItem(ServiceCommPackageLine, '');
         ContractTestLibrary.AssignItemToServiceCommitmentPackage(Item, ServiceCommitmentPackage.Code);
 
         LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Order, '');
@@ -610,6 +614,7 @@ codeunit 139689 "Recurring Discount Test"
 
     local procedure Initialize()
     begin
+        LibraryTestInitialize.OnTestInitialize(Codeunit::"Recurring Discount Test");
         ClearAll();
         ContractTestLibrary.InitContractsApp();
         LibraryERMCountryData.UpdateSalesReceivablesSetup();
@@ -788,3 +793,4 @@ codeunit 139689 "Recurring Discount Test"
 
     #endregion Handlers
 }
+#pragma warning restore AA0210

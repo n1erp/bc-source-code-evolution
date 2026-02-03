@@ -3,22 +3,238 @@
   <file datatype="xml" source-language="en-US" target-language="cs-CZ" original="External File Storage - SharePoint Connector">
     <body>
       <group id="body">
-        <trans-unit id="Table 153473473 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1805637975 - NamedType 1293915263" maxwidth="250" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use SharePoint to store and retrieve files.</source>
+          <target state="translated">Použijte službu SharePoint k ukládání a načítání souborů.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - NamedType ConnectorDescriptionTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1805637975 - NamedType 1482857067" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>We could not find the account. Typically, this is because the account has been deleted.</source>
+          <target state="translated">Účet se nám nepodařilo najít. Obvykle je to proto, že účet byl odstraněn.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - NamedType NotRegisteredAccountErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1805637975 - Method 1700570109 - NamedType 541854896" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>An error occured.\%1</source>
+          <target state="translated">Došlo k chybě.\%1</target>
+          <note from="Developer" annotates="general" priority="2">%1 - Error message from sharepoint(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - Method ShowError - NamedType ErrorOccuredErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1805637975 - Method 782160614 - NamedType 1957616760" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The account "%1" is disabled.</source>
+          <target state="translated">Účet „%1“ je zakázán.</target>
+          <note from="Developer" annotates="general" priority="2">%1 - Account Name(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - Method InitSharePointClient - NamedType AccountDisabledErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2450500354 - EnumValue 1846567327 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate</source>
+          <target state="translated">Certifikát</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=System.ExternalFileStorage)(LookupHint=Enum Ext. SharePoint Auth Type - EnumValue Certificate - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2450500354 - EnumValue 2529110793 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <target state="translated">Tajný klíč klienta</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=System.ExternalFileStorage)(LookupHint=Enum Ext. SharePoint Auth Type - EnumValue Client Secret - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="EnumExtension 2160742183 - EnumValue 2366980715 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint</source>
+          <target state="translated">SharePoint</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (ObjectTarget=Enum 534202269)(Namespace=System.ExternalFileStorage)(LookupHint=EnumExtension Ext. SharePoint Connector - EnumValue SharePoint - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Action 1235620153 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Move to next step.</source>
+          <target state="translated">Přejít na další krok.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Next - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Action 1235620153 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <target state="translated">Další</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Next - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Action 742034285 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Move to previous step.</source>
+          <target state="translated">Přejít na předchozí krok.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Back - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Action 742034285 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <target state="translated">Zpět</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Back - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 1697509288 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Client Secret value from the App Registration in Microsoft Entra ID. This value is used to authenticate the connection to SharePoint.</source>
+          <target state="translated">Určuje hodnotu tajného klíče klienta z registrace aplikace v Microsoft Entra ID. Tato hodnota se používá k ověření připojení ke službě SharePoint.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control SecretField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 1697509288 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <target state="translated">Tajný klíč klienta</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control SecretField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 2740551636 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the password used to protect the private key in the certificate. Leave empty if the certificate is not password-protected.</source>
+          <target state="translated">Určuje heslo používané k ochraně privátního klíče v certifikátu. Pokud certifikát není chráněn heslem, ponechte pole prázdné.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control CertificatePasswordField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 2740551636 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Password</source>
+          <target state="translated">Heslo certifikátu</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control CertificatePasswordField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 349922534 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the certificate file used for authentication. Click here to upload a new certificate file (.pfx, .cer, or .crt).</source>
+          <target state="translated">Určuje soubor certifikátu používaný pro ověřování. Kliknutím sem nahrajete nový soubor certifikátu (.pfx, .cer nebo .crt).</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control CertificateUploadStatus - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 349922534 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate</source>
+          <target state="translated">Certifikát</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control CertificateUploadStatus - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 4229622380 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credentials</source>
+          <target state="translated">Přihlašovací údaje</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control Credentials - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 1459871223 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a descriptive name for this SharePoint storage account connection.</source>
+          <target state="translated">Určuje popisný název pro toto připojení účtu úložiště SharePoint.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control NameField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 1459871223 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <target state="translated">Název účtu</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control NameField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 1916394943 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Client Secret value from the App Registration in Microsoft Entra ID. This value is used to authenticate the connection to SharePoint.</source>
+          <target state="translated">Určuje hodnotu tajného klíče klienta z registrace aplikace v Microsoft Entra ID. Tato hodnota se používá k ověření připojení ke službě SharePoint.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control ClientSecretField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 1916394943 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <target state="translated">Tajný klíč klienta</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control ClientSecretField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 2740551636 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the password used to protect the private key in the certificate. Leave empty if the certificate is not password-protected.</source>
+          <target state="translated">Určuje heslo používané k ochraně privátního klíče v certifikátu. Pokud certifikát není chráněn heslem, ponechte pole prázdné.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control CertificatePasswordField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 2740551636 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Password</source>
+          <target state="translated">Heslo certifikátu</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control CertificatePasswordField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 2906998308 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the authentication flow used for this SharePoint account. Client Secret uses User grant flow, which means that the user must sign in when using this account. Certificate uses Client credentials flow, which means that the user does not need to sign in when using this account.</source>
+          <target state="translated">Určuje tok ověřování použitý pro tento účet SharePoint. Tajný klíč klienta používá tok udělení uživatele, což znamená, že se uživatel musí při používání tohoto účtu přihlásit. Certifikát používá tok přihlašovacích údajů klienta, což znamená, že se uživatel při používání tohoto účtu nemusí přihlašovat.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control Authentication Type - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 349922534 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the certificate file used for authentication. Click here to upload a certificate file (.pfx, .cer, or .crt).</source>
+          <target state="translated">Určuje soubor certifikátu používaný pro ověřování. Kliknutím sem nahrajete soubor certifikátu (.pfx, .cer nebo .crt).</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control CertificateUploadStatus - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 349922534 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate</source>
+          <target state="translated">Certifikát</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control CertificateUploadStatus - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 3879241928 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Client ID (Application ID) of the App Registration in Microsoft Entra ID.</source>
+          <target state="translated">Určuje ID klienta (ID aplikace) registrace aplikace v Microsoft Entra ID.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control Client Id - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 588430355 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Microsoft Entra ID Tenant ID (Directory ID) where your SharePoint site and app registration are located.</source>
+          <target state="translated">Určuje ID klienta Microsoft Entra ID (ID adresáře), kde se nachází vaše registrace webu SharePoint a aplikace.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control Tenant Id - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 92775614 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint Name</source>
+          <target state="translated">Název ve službě SharePoint</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control SharePoint Url - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Method 2555594772 - NamedType 2553944727" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate uploaded (click to change)</source>
+          <target state="translated">Certifikát byl nahrán (kliknutím změníte)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Method UpdateCertificateStatus - NamedType CertificateUploadedLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Method 2555594772 - NamedType 76040314" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No certificate (click to upload)</source>
+          <target state="translated">Žádný certifikát (kliknutím nahrajete)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Method UpdateCertificateStatus - NamedType NoCertificateLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Method 2555594772 - NamedType 1236401456" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Click to upload certificate file...</source>
+          <target state="translated">Kliknutím nahrajete soubor certifikátu…</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Method UpdateCertificateStatus - NamedType NoCertificateUploadedLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Method 2555594772 - NamedType 2553944727" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate uploaded (click to change)</source>
+          <target state="translated">Certifikát byl nahrán (kliknutím změníte)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Method UpdateCertificateStatus - NamedType CertificateUploadedLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>SharePoint Account</source>
           <target state="translated">Účet služby SharePoint</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Property Caption)</note>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Table 153473473 - NamedType 1723178096" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unable to get SharePoint Account Client Secret.</source>
-          <target state="translated">Nelze získat tajný klíč klienta účtu SharePoint.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToGetClientMsg)</note>
+        <trans-unit id="Page 4098062784 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Setup SharePoint Account</source>
+          <target state="translated">Nastavení účtu SharePoint</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Table 153473473 - NamedType 366485914" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unable to set SharePoint Client Secret.</source>
-          <target state="translated">Nelze nastavit tajný klíč klienta SharePoint.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToSetClientSecretMsg)</note>
+        <trans-unit id="PermissionSet 1217000447 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint - Objects</source>
+          <target state="translated">SharePoint – Objekty</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. SharePoint - Objects - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 1768104129 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint - Edit</source>
+          <target state="translated">SharePoint – Úprava</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. SharePoint - Edit - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 3164621731 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint - Read</source>
+          <target state="translated">SharePoint – Čtení</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. SharePoint - Read - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Table 153473473 - Field 1562360606 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -33,9 +249,57 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Base Relative Folder Path - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
+        <trans-unit id="Table 153473473 - Field 1864907812 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the account is disabled. Accounts are automatically disabled when a sandbox environment is created from production.</source>
+          <target state="translated">Určuje, zda je účet zakázán. Účty se automaticky zakážou při vytvoření sandboxového prostředí z produkčního prostředí.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Disabled - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 1864907812 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disabled</source>
+          <target state="translated">Zakázaný</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Disabled - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2906998308 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the authentication flow used for this SharePoint account. Client Secret uses User grant flow, which means that the user must sign in when using this account. Certificate uses Client credentials flow, which means that the user does not need to sign in when using this account.</source>
+          <target state="translated">Určuje tok ověřování použitý pro tento účet SharePoint. Tajný klíč klienta používá tok udělení uživatele, což znamená, že se uživatel musí při používání tohoto účtu přihlásit. Certifikát používá tok přihlašovacích údajů klienta, což znamená, že se uživatel při používání tohoto účtu nemusí přihlašovat.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Authentication Type - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2906998308 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authentication Type</source>
+          <target state="translated">Typ ověřování</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Authentication Type - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2961552353 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a descriptive name for this SharePoint storage account connection.</source>
+          <target state="translated">Určuje popisný název pro toto připojení účtu úložiště SharePoint.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2961552353 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <target state="translated">Název účtu</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2971556863 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Password Key</source>
+          <target state="translated">Klíč hesla certifikátu</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Certificate Password Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 3302236422 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Key</source>
+          <target state="translated">Klíč certifikátu</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Certificate Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
         <trans-unit id="Table 153473473 - Field 3879241928 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the the Client Id of the App Registration.</source>
-          <target state="translated">Určuje ID klienta registrace aplikace.</target>
+          <source>Specifies the Client ID (Application ID) of the App Registration in Microsoft Entra ID.</source>
+          <target state="translated">Určuje ID klienta (ID aplikace) registrace aplikace v Microsoft Entra ID.</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Client Id - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
@@ -51,51 +315,15 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Client Secret Key - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Table 153473473 - Field 1864907812 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies if the account is disabled. This happens automatically when a sandbox is created.</source>
-          <target state="translated">Určuje, zda je účet zakázán. K tomu dojde automaticky při vytvoření sandboxu.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Disabled - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 153473473 - Field 1864907812 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Disabled</source>
-          <target state="translated">Zakázaný</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Disabled - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
         <trans-unit id="Table 153473473 - Field 415504711 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Primary Key</source>
           <target state="translated">Primary Key</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Id - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Table 153473473 - Field 2961552353 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the name of the storage account connection.</source>
-          <target state="translated">Určuje název připojení účtu úložiště.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Name - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 153473473 - Field 2961552353 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Account Name</source>
-          <target state="translated">Název účtu</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Name - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 153473473 - Field 92775614 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the the url to your SharePoint site.</source>
-          <target state="translated">Určuje adresu URL vašeho webu SharePoint.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field SharePoint Url - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 153473473 - Field 92775614 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SharePoint Url</source>
-          <target state="translated">Adresa URL pro SharePoint</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field SharePoint Url - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
         <trans-unit id="Table 153473473 - Field 588430355 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Tenant Id of the App Registration.</source>
-          <target state="translated">Určuje ID nájemce registrace aplikace.</target>
+          <source>Specifies the Microsoft Entra ID Tenant ID (Directory ID) where your SharePoint site and app registration are located.</source>
+          <target state="translated">Určuje ID klienta Microsoft Entra ID (ID adresáře), kde se nachází vaše registrace webu SharePoint a aplikace.</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Tenant Id - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
@@ -105,137 +333,70 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Tenant Id - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 1805637975 - NamedType 1293915263" maxwidth="250" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Use SharePoint to store and retrieve files.</source>
-          <target state="translated">Použijte službu SharePoint k ukládání a načítání souborů.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - NamedType ConnectorDescriptionTxt)</note>
+        <trans-unit id="Table 153473473 - Field 92775614 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the complete URL to your SharePoint site (e.g., https://mysharepoint.sharepoint.com/sites/ProjectX). This is the site URL where your documents will be stored.</source>
+          <target state="translated">Určuje úplnou adresu URL vašeho webu SharePoint (např. https://mysharepoint.sharepoint.com/sites/ProjectX). Toto je adresa URL webu, kde budou uloženy vaše dokumenty. </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field SharePoint Url - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 1805637975 - NamedType 1482857067" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>We could not find the account. Typically, this is because the account has been deleted.</source>
-          <target state="translated">Účet se nám nepodařilo najít. Obvykle je to proto, že účet byl odstraněn.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - NamedType NotRegisteredAccountErr)</note>
+        <trans-unit id="Table 153473473 - Field 92775614 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint Url</source>
+          <target state="translated">Adresa URL pro SharePoint</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field SharePoint Url - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 1805637975 - Method 782160614 - NamedType 1957616760" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The account "%1" is disabled.</source>
-          <target state="translated">Účet „%1“ je zakázán.</target>
-          <note from="Developer" annotates="general" priority="2">%1 - Account Name(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - Method InitSharePointClient - NamedType AccountDisabledErr)</note>
+        <trans-unit id="Table 153473473 - NamedType 1723178096" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to get SharePoint Account Client Secret.</source>
+          <target state="translated">Nelze získat tajný klíč klienta účtu SharePoint.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToGetClientMsg)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 1805637975 - Method 1700570109 - NamedType 541854896" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>An error occured.\%1</source>
-          <target state="translated">Došlo k chybě.\%1</target>
-          <note from="Developer" annotates="general" priority="2">%1 - Error message from sharepoint(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - Method ShowError - NamedType ErrorOccuredErr)</note>
+        <trans-unit id="Table 153473473 - NamedType 1998288797" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to set SharePoint Certificate Password.</source>
+          <target state="translated">Nelze nastavit heslo certifikátu SharePoint.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToSetCertificatePasswordMsg)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 153473473 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 153473473 - NamedType 2689045865" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to get SharePoint Account Certificate Password.</source>
+          <target state="translated">Nelze získat heslo certifikátu účtu SharePoint.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToGetCertificatePasswordMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - NamedType 366485914" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to set SharePoint Client Secret.</source>
+          <target state="translated">Nelze nastavit tajný klíč klienta SharePoint.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToSetClientSecretMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - NamedType 4038086976" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to set SharePoint Certificate.</source>
+          <target state="translated">Nelze nastavit certifikát SharePoint.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToSetCertificateMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - NamedType 504935412" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to get SharePoint Account Certificate.</source>
+          <target state="translated">Nelze získat certifikát účtu SharePoint.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToGetCertificateMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Method 3780574772 - NamedType 2313763999" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Files (*.pfx;*.p12)|*.pfx;*.p12|All Files (*.*)|*.*</source>
+          <target state="translated">Soubory certifikátů (*.pfx;*.p12)|*.pfx;*.p12|Všechny soubory (*.*)|*.*</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Method UploadCertificateFile - NamedType CertificateFilterTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Method 3780574772 - NamedType 3077000456" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate file was not uploaded.</source>
+          <target state="translated">Soubor certifikátu nebyl nahrán.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Method UploadCertificateFile - NamedType FileNotUploadedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>SharePoint Account</source>
           <target state="translated">Účet služby SharePoint</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 153473473 - Control 1697509288 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the the Client Secret of the App Registration.</source>
-          <target state="translated">Určuje tajný klíč klienta registrace aplikace.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control SecretField - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 153473473 - Control 1697509288 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Password</source>
-          <target state="translated">Heslo</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control SecretField - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Setup SharePoint Account</source>
-          <target state="translated">Nastavení účtu SharePoint</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 1916394943 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Client Secret of the App Registration.</source>
-          <target state="translated">Určuje tajný klíč klienta registrace aplikace.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control ClientSecretField - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 1916394943 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Client Secret</source>
-          <target state="translated">Tajný klíč klienta</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control ClientSecretField - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 1459871223 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the name of the Azure SharePoint account.</source>
-          <target state="translated">Určuje název účtu Azure SharePoint.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control NameField - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 1459871223 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Account Name</source>
-          <target state="translated">Název účtu</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control NameField - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 92775614 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the SharePoint to use of the storage account.</source>
-          <target state="translated">Určuje službu SharePoint pro použití účtu úložiště.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control SharePoint Url - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 92775614 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SharePoint Name</source>
-          <target state="translated">Název ve službě SharePoint</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control SharePoint Url - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Action 742034285 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Move to previous step.</source>
-          <target state="translated">Přejít na předchozí krok.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Back - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Action 742034285 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Back</source>
-          <target state="translated">Zpět</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Back - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Action 1235620153 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Move to next step.</source>
-          <target state="translated">Přejít na další krok.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Next - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Action 1235620153 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Next</source>
-          <target state="translated">Další</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Next - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="EnumExtension 2160742183 - EnumValue 2366980715 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SharePoint</source>
-          <target state="translated">SharePoint</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-          <note from="ObjectTarget" annotates="general" priority="5">Enum 534202269</note>
-        </trans-unit>
-        <trans-unit id="PermissionSet 1768104129 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SharePoint - Edit</source>
-          <target state="translated">SharePoint – Úprava</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. SharePoint - Edit - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="PermissionSet 1217000447 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SharePoint - Objects</source>
-          <target state="translated">SharePoint – Objekty</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. SharePoint - Objects - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="PermissionSet 3164621731 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SharePoint - Read</source>
-          <target state="translated">SharePoint – Čtení</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. SharePoint - Read - Property Caption)</note>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
       </group>

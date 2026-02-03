@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Warehouse.Activity;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Warehouse.Activity;
 
 using Microsoft.Inventory.Availability;
 using Microsoft.Inventory.Location;
@@ -514,6 +518,7 @@ page 7378 "Invt. Pick Subform"
 
         if ExpDate <> 0D then
             Rec."Expiration Date" := ExpDate;
+        OnAfterSerialNoOnAfterValidate(Rec, ExpDate, EntriesExist);
     end;
 
     protected procedure LotNoOnAfterValidate()
@@ -527,6 +532,7 @@ page 7378 "Invt. Pick Subform"
 
         if ExpDate <> 0D then
             Rec."Expiration Date" := ExpDate;
+        OnAfterLotNoOnAfterValidate(Rec, ExpDate, EntriesExist);
     end;
 
     protected procedure BinCodeOnAfterValidate()
@@ -546,6 +552,16 @@ page 7378 "Invt. Pick Subform"
 
     [IntegrationEvent(false, false)]
     local procedure OnPostAndPrintOnBeforeRunWhseActivPostYesNo(var WhseActivLine: Record "Warehouse Activity Line"; var WarehouseActivityLine: Record "Warehouse Activity Line")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterSerialNoOnAfterValidate(var Rec: Record "Warehouse Activity Line"; ExpDate: Date; EntriesExist: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterLotNoOnAfterValidate(var Rec: Record "Warehouse Activity Line"; ExpDate: Date; EntriesExist: Boolean)
     begin
     end;
 }

@@ -178,6 +178,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sust. Purchase - NamedType SustainabilityYourReferenceLbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 616111641 - NamedType 2410739155" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production Center</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sust. Responsibility - NamedType ProductionLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 616111641 - NamedType 819980705" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Warehouse Center</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sust. Responsibility - NamedType WarehouseLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 765358689 - NamedType 486887296" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Main Goal</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -303,6 +313,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Jnl. Setup - NamedType Scope3RecurringBatchTok</note>
         </trans-unit>
+        <trans-unit id="Codeunit 4167256840 - NamedType 761518003" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Water and Waste Journal Batch</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Jnl. Setup - NamedType WaterWasteBatchDescriptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4167256840 - NamedType 1045814823" maxwidth="10" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WAT/WAS</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Jnl. Setup - NamedType WaterWasteBatchTok</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3828797985 - NamedType 246050575" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
           <source>SJ99999</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -312,6 +332,26 @@
           <source>SJ00001</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. No Series - NamedType JournalStartingNoLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3828797985 - NamedType 3667637294" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ESG99999</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. No Series - NamedType PostedESGReportingEndingNoLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3828797985 - NamedType 1056381063" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted ESG Reporting</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. No Series - NamedType PostedESGReportingNoLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3828797985 - NamedType 3906343681" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ESG</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. No Series - NamedType PostedESGReportingNoTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3828797985 - NamedType 4289019463" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ESG00001</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. No Series - NamedType PostedESGReportingStartingNoLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3828797985 - NamedType 2892482672" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
           <source>SRJ99999</source>
@@ -482,6 +522,16 @@
           <source>CREDIT</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType CreditTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 355832001" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discharged Water</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType DischargedWaterLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 2016315927" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WAT-DISCH</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType DischargedWaterTok</note>
         </trans-unit>
         <trans-unit id="Codeunit 2564497867 - NamedType 1419314448" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Electricity supplier - coal</source>
@@ -773,6 +823,26 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType UrbanTruckTok</note>
         </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 2608149783" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Waste Compostable</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WasteCompostableLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 3140541105" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WASTE COMP</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WasteCompostableTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 874746736" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Waste Food</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WasteFoodLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 2175862410" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WASTE FOOD</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WasteFoodTok</note>
+        </trans-unit>
         <trans-unit id="Codeunit 2564497867 - NamedType 1153793251" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Landfill Organic Waste</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -793,6 +863,26 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WasteLandfillPlasticTok</note>
         </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 3264696658" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Waste Plastic</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WastePlasticLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 4147014504" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WASTE PLAST</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WastePlasticTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 2433976458" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Waste Recyclable</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WasteRecyclableLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 511901984" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WASTE RECYC</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WasteRecyclableTok</note>
+        </trans-unit>
         <trans-unit id="Codeunit 2564497867 - NamedType 435751263" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Recycled Waste</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -802,6 +892,56 @@
           <source>WASTE-RC</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WasteRecycledTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 1648785215" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Waste Steel</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WasteSteelLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 1559987481" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WASTE STEEL</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WasteSteelTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 2874185223" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Waste Wood</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WasteWoodLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 1429180545" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WASTE WOOD</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WasteWoodTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 2445650739" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Water Blue</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WaterBlueLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 29387053" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WATER BLUE</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WaterBlueTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 3435207024" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Water Green</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WaterGreenLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 441355402" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WATER GREEN</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WaterGreenTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 361048010" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Water Grey</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WaterGreyLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2564497867 - NamedType 2733940832" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WATER GREY</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustain. Subcategory - NamedType WaterGreyTok</note>
         </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 3330493180" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Air-Condition Equipments 24,000 BTU</source>
@@ -837,6 +977,11 @@
           <source>Air Intercontinental - Premium Economy</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType AirIntercontinentalPremiumEconomyLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 3880896419" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blue Water Footprint - extracted from groundwater or surface water</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType BlueWaterLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 2662707202" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Boilers</source>
@@ -883,6 +1028,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType CompanyCarPremiumSizeLbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 2680991823" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Compostable waste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType CompostableWasteLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 245249809" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Consumed Water</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType ConsumedWaterLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 3184538211" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contoso Hotel - 3 stars</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -903,6 +1058,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType ContosoRentalCarLbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 3411943762" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discharged water include wastewater</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType DischargedWater1Lbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 355832001" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discharged Water</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType DischargedWaterLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 2078910353" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>DownStream Activities</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -918,6 +1083,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType ExternalTransportationLbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 1895106976" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Food Waste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType FoodWasteLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 4269534997" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fugitive Emissions</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -927,6 +1097,16 @@
           <source>Gas Emissions</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType GasEmissionsLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 4064606704" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Green Water Footprint - consumed during the production process</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType GreenWaterLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 996776786" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Grey Water Footprint - freshwater required to assimilate the contaminants</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType GreyWaterLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 3529635061" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Heaters 36kW</source>
@@ -947,6 +1127,11 @@
           <source>Heating - Fabrikam, Inc.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType HeatingFabrikamIncLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 103473114" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manufacturing Waste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType ManufacturingWasteLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 3616386877" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Mobile Combustion</source>
@@ -982,6 +1167,16 @@
           <source>OnRoad Vehicles (Trucks: urban)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType OnRoadVehiclesUrbanLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 867815827" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Organic Waste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType OrganicWasteLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 292371730" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Plastic waste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType PlasticWasteLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 2393525000" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Processing of Sold Products</source>
@@ -1033,6 +1228,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType RailLbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 4080221866" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Recyclable waste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType RecyclableWasteLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 590820788" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Recycled Waste Generated in Operation</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1042,6 +1242,11 @@
           <source>Refrigerators</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType RefrigeratorsLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 1425764359" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reusable Waste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType ReusableWasteLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 1774896960" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Scope 1 - Direct Emission</source>
@@ -1068,6 +1273,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType SteamFabrikamIncLbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 524789943" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Steel waste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType SteelWasteLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 1052713480" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Thermal Oxidizers</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1082,6 +1292,16 @@
           <source>TOTAL - CARBON CREDITS</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType TotalCarbonCreditsLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 3486077031" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total - Consumed Water</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType TotalConsumedWaterLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 3639964007" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total - Discharged Water</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType TotalDischargedWaterLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 2291902919" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total, Downstream Activities</source>
@@ -1098,10 +1318,25 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType TotalGasEmissionsLbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 1048810224" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total - Manufacturing Waste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType TotalManufacturingWasteLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 3926017955" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total, Mobile Combustion</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType TotalMobileCombustionLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 2555563645" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total - Organic Waste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType TotalOrganicWasteLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 1419262753" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total - Reusable Waste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType TotalReusableWasteLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 2457500393" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>TOTAL SCOPE 1 - DIRECT EMISSION</source>
@@ -1128,6 +1363,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType TotalUpstreamActivitiesLbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 1945345376" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Waste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType TotalWasteLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 32281191" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TOTAL WATER</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType TotalWaterLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 3661690404" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Transportation with Own Trucks</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1148,6 +1393,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType UtilitiesExpensePowerPlantLbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 2230392506" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Waste Management</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType WasteLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1074751012 - NamedType 1986647344" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Waste (organic) Generated in Operation</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1157,6 +1407,16 @@
           <source>Waste (plastic) Generated in Operation</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType WastePlasticGeneratedInOperationLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 2158849537" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Water Management</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType WaterLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1074751012 - NamedType 3542685567" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wood waste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Account - NamedType WoodWasteLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3400611003 - NamedType 3600209759" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Company Cars</source>
@@ -1197,6 +1457,16 @@
           <source>CREDIT3</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Category - NamedType Credit3Tok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3400611003 - NamedType 355832001" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discharged Water</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Category - NamedType DischargedWaterLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3400611003 - NamedType 2016315927" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WAT-DISCH</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Category - NamedType DischargedWaterTok</note>
         </trans-unit>
         <trans-unit id="Codeunit 3400611003 - NamedType 142389593" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>External Transport - Distance Calculation</source>
@@ -1353,10 +1623,25 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Category - NamedType WasteLbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3400611003 - NamedType 3213766595" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WASTEM</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Category - NamedType WasteMTok</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3400611003 - NamedType 1055749488" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
           <source>WASTE</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Category - NamedType WasteTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3400611003 - NamedType 2158849537" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Water Generated</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Category - NamedType WaterLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3400611003 - NamedType 266696791" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WATER</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Category - NamedType WaterTok</note>
         </trans-unit>
         <trans-unit id="Codeunit 735846082 - NamedType 371115405" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sustainability Emissions</source>
@@ -1367,6 +1652,11 @@
           <source>SUSTAIN</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sustainability Setup - NamedType SustainabilityTok</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 736434133 - EnumValue 1944435073 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2207723152">
+          <source>Sustainability</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Sust. Contoso Demo Data Module - EnumValue Sustainability Module - Property Caption</note>
         </trans-unit>
       </group>
     </body>

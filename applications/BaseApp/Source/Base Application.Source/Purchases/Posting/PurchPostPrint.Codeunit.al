@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Purchases.Posting;
 
 using Microsoft.Finance.ReceivablesPayables;
@@ -38,7 +42,10 @@ codeunit 92 "Purch.-Post + Print"
             if not ConfirmPost(PurchHeader, DefaultOption) then
                 exit;
 
-        OnAfterConfirmPost(PurchHeader);
+        IsHandled := false;
+        OnAfterConfirmPost(PurchHeader, IsHandled);
+        if IsHandled then
+            exit;
 
         PurchSetup.Get();
         if PurchSetup."Post & Print with Job Queue" then
@@ -219,7 +226,7 @@ codeunit 92 "Purch.-Post + Print"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnAfterConfirmPost(PurchaseHeader: Record "Purchase Header")
+    local procedure OnAfterConfirmPost(PurchaseHeader: Record "Purchase Header"; var IsHandled: Boolean)
     begin
     end;
 

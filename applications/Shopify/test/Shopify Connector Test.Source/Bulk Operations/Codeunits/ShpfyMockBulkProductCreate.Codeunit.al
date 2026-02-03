@@ -1,3 +1,12 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+
+namespace Microsoft.Integration.Shopify.Test;
+
+using Microsoft.Integration.Shopify;
+
 codeunit 139634 "Shpfy Mock Bulk ProductCreate" implements "Shpfy IBulk Operation"
 {
     Access = Internal;
@@ -23,5 +32,15 @@ codeunit 139634 "Shpfy Mock Bulk ProductCreate" implements "Shpfy IBulk Operatio
     procedure GetType(): Text
     begin
         exit('mutation');
+    end;
+
+    procedure RevertFailedRequests(var BulkOperation: Record "Shpfy Bulk Operation")
+    begin
+        exit;
+    end;
+
+    procedure RevertAllRequests(var BulkOperation: Record "Shpfy Bulk Operation")
+    begin
+        exit;
     end;
 }

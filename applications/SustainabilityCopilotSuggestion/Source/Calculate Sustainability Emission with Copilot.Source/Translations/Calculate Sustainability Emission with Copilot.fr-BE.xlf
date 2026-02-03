@@ -1,0 +1,1294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="fr-BE" original="Calculate Sustainability Emission with Copilot">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 1492366767 - NamedType 1434420370" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Input: I am based in the %1 and used %2 %3 working used capacity %4 %5 with annual leak rate %6% and used for %7% of a time.</source>
+          <target state="translated">Entrée : Je suis basé dans le %1 et j’ai utilisé %2 %3 capacité de travail utilisée %4 %5 avec le taux de fuite annuel de %6 % et j’ai utilisé pendant %7 % d’un temps.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Country, %2 = category name, %3 = account name, %4 = unit spent, %5 = unit of measure name, %6 = leak rate, %7 = time used(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sustainability AI - NamedType LeakageInputTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1492366767 - NamedType 2176989144" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Input: I am based in the %1, and I travel by the %2 %3 for %4 %5</source>
+          <target state="translated">Entrée : Je suis basé dans le %1, et je voyage par le %2 %3 pour %4 %5</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Country, %2 = category name, %3 = account name, %4 = unit of measure name, %5 = unit spent(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sustainability AI - NamedType DistanceUserInputTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1492366767 - NamedType 2545529863" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unsupported Calculation Foundation</source>
+          <target state="translated">Base de calcul non prise en charge</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sustainability AI - NamedType UnsupportedCalculationFoundationLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1492366767 - NamedType 3244521573" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Input: I am based in the %1, used the %2 %3, consuming %4 %5 as an energy.</source>
+          <target state="translated">Entrée : Je suis basé dans le %1, j’ai utilisé le %2 %3, consommant %4 %5 comme énergie.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Country, %2 = category name, %3 = account name, %4 = unit of measure name, %5 = unit spent(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sustainability AI - NamedType FuelElectricityInputTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1492366767 - NamedType 821875448" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Input: I used %1 %2 for %3 %4</source>
+          <target state="translated">Entrée : J’ai utilisé %1 %2 pour %3 %4</target>
+          <note from="Developer" annotates="general" priority="2">%1 = category name, %2 = account name, %3 = unit spent, %4 = unit of measure name(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sustainability AI - NamedType CustomUserInputTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3125337778 - NamedType 1978230865" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fuel/Electricity is not provided</source>
+          <target state="translated">Le carburant/l’électricité n’est pas fourni</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sust. Emiss.Suggestion Warning - NamedType FuelElectricityIsNotProvidedLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3125337778 - NamedType 2775692166" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Time Factor is not provided</source>
+          <target state="translated">Le facteur temps n’est pas fourni</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sust. Emiss.Suggestion Warning - NamedType TimeFactorIsNotProvidedLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3125337778 - NamedType 28707191" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Custom Amount is not provided</source>
+          <target state="translated">Le montant personnalisé n’est pas fourni</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sust. Emiss.Suggestion Warning - NamedType CustomAmountIsNotProvidedLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3125337778 - NamedType 3564791219" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distance is not provided</source>
+          <target state="translated">La distance n’est pas fournie</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sust. Emiss.Suggestion Warning - NamedType DistanceIsNotProvidedLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3264308171 - NamedType 1035103961" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are no suggestions for this description. Please rephrase it.</source>
+          <target state="translated">Il n’y a aucune suggestion pour cette description. Veuillez la reformuler.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sust. Emis. Suggestion Impl. - NamedType NoSuggestionsMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 935347533 - NamedType 1416453329" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Public information</source>
+          <target state="translated">Informations publiques</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sustainability Formula - NamedType PublicInformationLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3125337778 - Method 458093827 - NamedType 2780940913" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure is not provided</source>
+          <target state="translated">L’unité n’est pas fournie</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sust. Emiss.Suggestion Warning - Method CheckUnitOfMeasure - NamedType UnitOfMeasureWarningLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3125337778 - Method 842990741 - NamedType 120554599" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Country/Region Code is not provided</source>
+          <target state="translated">Le code pays/région n’est pas fourni</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sust. Emiss.Suggestion Warning - Method CheckCountryCode - NamedType CountryRegionCodeNotProvidedLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 935347533 - Method 3099735596 - NamedType 1443005359" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are more than one source, please choose one of the options. If you don't choose any, the line won't be kept and transferred to the journal.</source>
+          <target state="translated">Il y a plus d’une source, veuillez choisir l’une des options. Si vous n’en choisissez pas, la ligne ne sera pas conservée et transférée dans la feuille.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sustainability Formula - Method UseSourceCO2EmissionInFormula - NamedType ChooseOptionsWarningLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 935347533 - Method 3099735596 - NamedType 2791177704" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Choose one of options!</source>
+          <target state="translated">Choisissez l’une des options !</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sustainability Formula - Method UseSourceCO2EmissionInFormula - NamedType ChooseOptionsSourceDescriptionLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 935347533 - Method 3099735596 - NamedType 3933613889" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Too many options to offer. Please refine the description.</source>
+          <target state="translated">Trop d’options à offrir. Veuillez affiner la description.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Codeunit Sustainability Formula - Method UseSourceCO2EmissionInFormula - NamedType TooManyOptionsWarningLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 4270668210 - EnumValue 3116416530 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>High</source>
+          <target state="translated">Haute</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Enum Source CO2 Emission Confidence - EnumValue High - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 4270668210 - EnumValue 3371220206 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <target state="translated">Aucune</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Enum Source CO2 Emission Confidence - EnumValue None - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 4270668210 - EnumValue 3592530208 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Low</source>
+          <target state="translated">Faible</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Enum Source CO2 Emission Confidence - EnumValue Low - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 4270668210 - EnumValue 432767615 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Medium</source>
+          <target state="translated">Moyenne</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Enum Source CO2 Emission Confidence - EnumValue Medium - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="EnumExtension 2564381732 - EnumValue 2281145812 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sustainability Emission Suggestion</source>
+          <target state="translated">Suggestion émissions durabilité</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (ObjectTarget=Enum 3058546390)(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=EnumExtension Sustainability Copilot Capab. - EnumValue Sustainability Emission Suggestion - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2616289029 - Action 1044252129 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Upload a new file</source>
+          <target state="translated">Charger un nouveau fichier</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Emission Source Setup - Action AddFile - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2616289029 - Action 1044252129 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Upload File</source>
+          <target state="translated">Charger le fichier</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Emission Source Setup - Action AddFile - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2616289029 - Action 2477294019 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete the file.</source>
+          <target state="translated">Supprimez le fichier.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Emission Source Setup - Action Delete - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2616289029 - Action 2477294019 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete File</source>
+          <target state="translated">Supprimer un fichier</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Emission Source Setup - Action Delete - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2616289029 - Action 3374690962 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File</source>
+          <target state="translated">Fichier</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Emission Source Setup - Action File - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2616289029 - Action 3383493608 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process</source>
+          <target state="translated">Traitement</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Emission Source Setup - Action Category_Process - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2616289029 - Action 593408208 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Download the selected file.</source>
+          <target state="translated">Téléchargez le fichier sélectionné.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Emission Source Setup - Action Download - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2616289029 - Action 593408208 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Download File</source>
+          <target state="translated">Télécharger le fichier</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Emission Source Setup - Action Download - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Action 2079045816 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Save sustainability line matching proposed by Copilot.</source>
+          <target state="translated">Enregistrez le rapprochement de ligne durabilité proposé par Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Action OK - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Action 2079045816 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep it</source>
+          <target state="translated">Conserver</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Action OK - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Action 2388911040 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Regenerate a suggestion based on the input prompt</source>
+          <target state="translated">Régénérer une suggestion basée sur la requête de saisie</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Action Regenerate - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Action 2388911040 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Regenerate</source>
+          <target state="translated">Régénérer</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Action Regenerate - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Action 2626368477 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate a suggestion based on the input prompt</source>
+          <target state="translated">Générer une suggestion basée sur la requête de saisie</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Action Generate - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Action 2626368477 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate</source>
+          <target state="translated">Générer</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Action Generate - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Action 788258546 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard sustainability line matching proposed by Copilot.</source>
+          <target state="translated">Ignorez le rapprochement de ligne durabilité proposé par Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Action Cancel - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Action 788258546 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard it</source>
+          <target state="translated">Ignorer</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Action Cancel - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1268807303 - Control 1668829291 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the explanation of the emission calculation</source>
+          <target state="translated">Spécifie l’explication du calcul d’émissions</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sust. Emis. Suggestion List - Control Emission Calc. Explanation - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1268807303 - Control 642593488 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission Factor Calculation Explanation</source>
+          <target state="translated">Explication du calcul du facteur d’émission</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sust. Emis. Suggestion List - Control Control30 - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Control 1200582643 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of suggested lines proposed by Copilot</source>
+          <target state="translated">Spécifie le nombre de lignes suggérées proposées par Copilot</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Control Lines suggested by Copilot - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Control 1200582643 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot suggested</source>
+          <target state="translated">Suggéré par Copilot</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Control Lines suggested by Copilot - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Control 1699088827 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the matching summary</source>
+          <target state="translated">Spécifie le résumé de rapprochement</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Control Summary Text - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Control 1699088827 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Control Summary Text - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Control 295831477 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of sustainability lines excluded from suggestions based on sustainability account category</source>
+          <target state="translated">Spécifie le nombre de lignes de durabilité exclues des suggestions basées sur la catégorie compte de durabilité</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Control Excluded from Suggestions - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Control 295831477 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Excluded from suggestions</source>
+          <target state="translated">Exclu des suggestions</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Control Excluded from Suggestions - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Control 308226769 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies confidence calculated based on warnings. If there is no warning in the line this is 100% confidence and using lower confidence amount if we have warning</source>
+          <target state="translated">Spécifie la confiance calculée en fonction des alertes. S’il n’y a aucune alerte dans la ligne, il s’agit d’un niveau de confiance à 100 % et de l’utilisation d’un niveau de confiance inférieur si nous avons une alerte</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Control Total Journal Confidence - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Control 308226769 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Journal Confidence</source>
+          <target state="translated">Fiabilité totale de la feuille</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Control Total Journal Confidence - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Control 594483951 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of suggested lines proposed automatically</source>
+          <target state="translated">Spécifie le nombre de lignes suggérées proposées automatiquement</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Control Lines suggested Automatically - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Control 594483951 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Auto-suggested</source>
+          <target state="translated">Suggéré automatiquement</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Control Lines suggested Automatically - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Control 849450156 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Match proposals</source>
+          <target state="translated">Propositions de correspondance</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Control SustEmisSuggestionSubpage - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1268807303 - NamedType 2165939213" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to change the value of the field %1? The new value will be transferred to the journal if you keep this line and regenerate action will be executed automatically.</source>
+          <target state="translated">Voulez-vous vraiment modifier la valeur du champ %1 ? La nouvelle valeur sera transférée dans la feuille si vous conservez cette ligne et l’action de régénération sera exécutée automatiquement.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Field name(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sust. Emis. Suggestion List - NamedType ChangeValueQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2616289029 - Action 2477294019 - Method 1377591017 - NamedType 2367821945" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Go ahead and delete the file?</source>
+          <target state="translated">Voulez-vous supprimer le fichier ?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Emission Source Setup - Action Delete - Method OnAction - NamedType DeleteQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2616289029 - Action 2477294019 - Method 1377591017 - NamedType 3578138118" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No file to delete</source>
+          <target state="translated">Aucun fichier à supprimer</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Emission Source Setup - Action Delete - Method OnAction - NamedType NoFileErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Method 4158274946 - NamedType 1785070007" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1%</source>
+          <target state="translated">%1 %</target>
+          <note from="Developer" annotates="general" priority="2">%1 - a decimal between 0 and 100(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Method UpdateHeaderData - NamedType TotalJournalConfidenceLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Method 4158274946 - NamedType 2053918396" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1% of lines are matched. Review match proposals.</source>
+          <target state="translated">%1 % des lignes sont mises en correspondance. Vérifiez les propositions de correspondance.</target>
+          <note from="Developer" annotates="general" priority="2">%1 - a decimal between 0 and 100(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Method UpdateHeaderData - NamedType SubsetOfLinesMatchedTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Method 4158274946 - NamedType 2157519906" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>All lines (100%) are matched. Review match proposals.</source>
+          <target state="translated">Toutes les lignes (100 %) sont mises en correspondance. Vérifiez les propositions de correspondance.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Method UpdateHeaderData - NamedType AllLinesMatchedTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Method 4158274946 - NamedType 2575164999" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 of %2 lines (%3%)</source>
+          <target state="translated">%1 lignes sur %2 (%3 %)</target>
+          <note from="Developer" annotates="general" priority="2">%1 - an integer; %2 - an integer; %3 a decimal between 0 and 100(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Method UpdateHeaderData - NamedType AutoSuggestedLinesLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1268807303 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines proposed by Copilot</source>
+          <target state="translated">Lignes proposées par Copilot</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sust. Emis. Suggestion List - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2616289029 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission Source Setup</source>
+          <target state="translated">Configuration de source d’émission</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Emission Source Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3784884956 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source CO2 Emission List</source>
+          <target state="translated">Liste d’émissions de CO2 source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Source CO2 Emission List - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4114649544 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sustainability Emission Suggestion</source>
+          <target state="translated">Suggestion émissions durabilité</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sustain. Emission Suggestion - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4234749244 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines proposed by Copilot</source>
+          <target state="translated">Lignes proposées par Copilot</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Page Sust. Emis. Suggestion Subpage - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PageExtension 3036080760 - Action 2263511086 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest CO2 emissions of the journal lines using Copilot.</source>
+          <target state="translated">Suggérez les émissions de CO2 des lignes feuille à l’aide de Copilot.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3036080760</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3036080760 - Action 2263511086 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculate CO2</source>
+          <target state="translated">Calculer CO2</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3036080760</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 1361816885 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sust. Copilot Objects</source>
+          <target state="translated">Objets Copilot de dura.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=PermissionSet Sust. Copilot Objects - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 1616663654 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sust. Copilot Admin</source>
+          <target state="translated">Administrateur Copilot de dura.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=PermissionSet Sust. Copilot Admin - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 1785232641 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sust. Copilot Read</source>
+          <target state="translated">Lire Copilot de dura.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=PermissionSet Sust. Copilot Read - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 4218249795 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sust. Copilot Edit</source>
+          <target state="translated">Modifier Copilot de dura.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=PermissionSet Sust. Copilot Edit - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 1641668171 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission Source ID</source>
+          <target state="translated">ID source d’émission</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Emission Source ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 2672570806 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the emission factor CO2</source>
+          <target state="translated">Spécifie le facteur d’émission CO2</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Emission Factor CO2 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 2672570806 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission Factor CO2</source>
+          <target state="translated">Facteur d’émission de CO2</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Emission Factor CO2 - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 2780708273 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the confidence value of the CO2 emission factor</source>
+          <target state="translated">Spécifie la valeur de fiabilité du facteur d’émission de CO2</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Confidence Value - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 2780708273 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confidence Value</source>
+          <target state="translated">Valeur de fiabilité</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Confidence Value - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 2806903993 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source CO2 Emission Id</source>
+          <target state="translated">ID émission CO2 source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Source CO2 Emission Id - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 284764054 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the country/region code</source>
+          <target state="translated">Spécifie le code pays/région</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Country/Region Code - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 284764054 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Country/Region Code</source>
+          <target state="translated">Code pays/région</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Country/Region Code - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 3320823955 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the sustainability journal line number</source>
+          <target state="translated">Spécifie le numéro de la ligne feuille durabilité</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Line No. - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 3320823955 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target state="translated">Numéro de ligne</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Line No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 3461834954 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the account category</source>
+          <target state="translated">Spécifie la désignation de la catégorie de compte</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Description - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 3461834954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Désignation</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Description - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 3865998304 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the confidence level of the CO2 emission factor</source>
+          <target state="translated">Spécifie le niveau de fiabilité du facteur d’émission de CO2</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Confidence - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 3865998304 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confidence</source>
+          <target state="translated">Fiabilité</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Confidence - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 451473693 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the source description</source>
+          <target state="translated">Spécifie la désignation source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Source Description - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 451473693 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Description</source>
+          <target state="translated">Désignation source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Source Description - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 807907343 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the conversion factor between user input and CO2 emission from file</source>
+          <target state="translated">Spécifie le facteur de conversion entre l’entrée utilisateur et les émissions de CO2 du fichier</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Conversion Factor - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Field 807907343 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Conversion Factor</source>
+          <target state="translated">Facteur de conversion</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Field Conversion Factor - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Field 284764054 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the country/region code</source>
+          <target state="translated">Spécifie le code pays/région</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Field Country/Region Code - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Field 284764054 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Country/Region Code</source>
+          <target state="translated">Code pays/région</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Field Country/Region Code - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Field 3461834954 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the source description</source>
+          <target state="translated">Spécifie la désignation source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Field Description - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Field 3461834954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Description</source>
+          <target state="translated">Désignation source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Field Description - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Field 3740247633 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the country name</source>
+          <target state="translated">Spécifie le nom du pays</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Field Country Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Field 3740247633 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Country Name</source>
+          <target state="translated">Nom pays</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Field Country Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Field 415504711 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target state="translated">ID</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Field Id - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Field 458406397 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the ending date for the emission source</source>
+          <target state="translated">Spécifie la date de fin de la source d’émission</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Field Ending Date - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Field 458406397 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ending Date</source>
+          <target state="translated">Date de fin</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Field Ending Date - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Field 460889064 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the starting date for the emission source</source>
+          <target state="translated">Spécifie la date de début de la source d’émission</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Field Starting Date - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Field 460889064 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date</source>
+          <target state="translated">Date de début</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Field Starting Date - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Field 488031821 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the source file</source>
+          <target state="translated">Spécifie le fichier source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Field Source File - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Field 488031821 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source File</source>
+          <target state="translated">Fichier source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Field Source File - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3018015619 - Field 1163036328 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the formula of the expression</source>
+          <target state="translated">Spécifie la formule de l’expression</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sust. Formula Buffer - Field Expression Formula - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3018015619 - Field 1163036328 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Expression Formula</source>
+          <target state="translated">Formule d’expression</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sust. Formula Buffer - Field Expression Formula - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3018015619 - Field 146219450 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the sequence of the expression</source>
+          <target state="translated">Spécifie la séquence de l’expression</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sust. Formula Buffer - Field Order - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3018015619 - Field 146219450 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order</source>
+          <target state="translated">Commande</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sust. Formula Buffer - Field Order - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3018015619 - Field 3321454595 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the expression</source>
+          <target state="translated">Spécifie la valeur de l’expression</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sust. Formula Buffer - Field Expression Value - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3018015619 - Field 3321454595 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Expression Value</source>
+          <target state="translated">Valeur d’expression</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sust. Formula Buffer - Field Expression Value - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3018015619 - Field 368720903 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the expression</source>
+          <target state="translated">Spécifie le nom de l’expression</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sust. Formula Buffer - Field Expression Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3018015619 - Field 368720903 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Expression Name</source>
+          <target state="translated">Nom de l’expression</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sust. Formula Buffer - Field Expression Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 1641668171 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission Source ID</source>
+          <target state="translated">ID source d’émission</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Emission Source ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 1826442273 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the CO2 emission</source>
+          <target state="translated">Spécifie l’émission de CO2</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Emission CO2 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 1826442273 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission CO2</source>
+          <target state="translated">Émission CO2</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Emission CO2 - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 2672570806 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the emission factor CO2</source>
+          <target state="translated">Spécifie le facteur d’émission CO2</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Emission Factor CO2 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 2672570806 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission Factor CO2</source>
+          <target state="translated">Facteur d’émission de CO2</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Emission Factor CO2 - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 284764054 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the country/region code</source>
+          <target state="translated">Spécifie le code pays/région</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Country/Region Code - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 284764054 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Country/Region Code</source>
+          <target state="translated">Code pays/région</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Country/Region Code - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 3320823955 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the sustainability journal line number</source>
+          <target state="translated">Spécifie le numéro de la ligne feuille durabilité</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Line No. - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 3320823955 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target state="translated">Numéro de ligne</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Line No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 3461834954 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the account category</source>
+          <target state="translated">Spécifie la désignation de la catégorie de compte</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Description - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 3461834954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Désignation</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Description - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 3740247633 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the country name</source>
+          <target state="translated">Spécifie le nom du pays</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Country Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 3740247633 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Country Name</source>
+          <target state="translated">Nom pays</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Country Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 415504711 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target state="translated">ID</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Id - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 451473693 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the source description</source>
+          <target state="translated">Spécifie la désignation source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Source Description - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 451473693 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Description</source>
+          <target state="translated">Désignation source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Source Description - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 458406397 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the ending date for the emission source</source>
+          <target state="translated">Spécifie la date de fin de la source d’émission</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Ending Date - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 458406397 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ending Date</source>
+          <target state="translated">Date de fin</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Ending Date - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 460889064 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the starting date for the emission source</source>
+          <target state="translated">Spécifie la date de début de la source d’émission</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Starting Date - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Field 460889064 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date</source>
+          <target state="translated">Date de début</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Field Starting Date - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 1067155991 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the sustainability account subcategory</source>
+          <target state="translated">Spécifie la sous-catégorie du compte de durabilité</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Account Subcategory - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 1067155991 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Subcategory</source>
+          <target state="translated">Sous-catégorie du compte</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Account Subcategory - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 1133388601 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the custom amount of the journal line</source>
+          <target state="translated">Spécifie le montant personnalisé de la ligne feuille</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Custom Amount - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 1133388601 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Custom Amount</source>
+          <target state="translated">Montant personnalisé</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Custom Amount - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 1622979514 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the sustainability account number</source>
+          <target state="translated">Spécifie le numéro du compte de durabilité</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Account No. - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 1622979514 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account No.</source>
+          <target state="translated">N° compte</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Account No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 1668829291 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the explanation of the emission calculation</source>
+          <target state="translated">Spécifie l’explication du calcul d’émissions</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Emission Calc. Explanation - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 1668829291 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission Calculation Explanation</source>
+          <target state="translated">Explication du calcul d’émission</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Emission Calc. Explanation - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 1768692339 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the sustainability account category</source>
+          <target state="translated">Spécifie la catégorie du compte de durabilité</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Account Category - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 1768692339 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Category</source>
+          <target state="translated">Catégorie du compte</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Account Category - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 1826442273 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the CO2 emission of the journal line</source>
+          <target state="translated">Spécifie l’émission CO2 de la ligne feuille</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Emission CO2 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 1826442273 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission CO2</source>
+          <target state="translated">Émission CO2</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Emission CO2 - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 1920046521 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unit of measure of the journal line.</source>
+          <target state="translated">Spécifie l’unité de la ligne feuille.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Unit of Measure - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 1920046521 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <target state="translated">Unité</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Unit of Measure - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2082624157 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the emission factor is taken from the source</source>
+          <target state="translated">Spécifie si le facteur d’émission provient de la source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Factor Taken From Source - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2082624157 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Factor Taken From Source</source>
+          <target state="translated">Facteur extrait de la source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Factor Taken From Source - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 23517385 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the json of the formula</source>
+          <target state="translated">Spécifie le json la formule</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Emission Formula Json - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 23517385 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission Formula</source>
+          <target state="translated">Formule d’émission</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Emission Formula Json - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2410217497 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the installation multiplier of the journal line</source>
+          <target state="translated">Spécifie le multiplicateur d’installation de la ligne feuille</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Installation Multiplier - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2410217497 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Installation Multiplier</source>
+          <target state="translated">Multiplicateur d’installation</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Installation Multiplier - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2471410948 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the time factor of the journal line</source>
+          <target state="translated">Spécifie le facteur temps de la ligne feuille</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Time Factor - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2471410948 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Time Factor</source>
+          <target state="translated">Facteur temps</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Time Factor - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2480343566 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the raw formula retrieved by Copilot.</source>
+          <target state="translated">Spécifie la formule brute récupérée par Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Raw Formula - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2480343566 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Raw Formula</source>
+          <target state="translated">Formule brute</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Raw Formula - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2588032914 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the sustainability account name</source>
+          <target state="translated">Spécifie le nom du compte de durabilité</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Account Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2588032914 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <target state="translated">Nom du compte</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Account Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2672570806 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the CO2 emission factor</source>
+          <target state="translated">Spécifie le facteur d’émission CO2</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Emission Factor CO2 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2672570806 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission Factor CO2</source>
+          <target state="translated">Facteur d’émission de CO2</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Emission Factor CO2 - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2684020054 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the emission suggestion should be excluded from user message</source>
+          <target state="translated">Spécifie si la suggestion d’émission doit être exclue du message de l’utilisateur</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Exclude From User Message - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2684020054 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exclude From User Message</source>
+          <target state="translated">Exclure du message utilisateur</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Exclude From User Message - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2704330142 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the journal batch</source>
+          <target state="translated">Spécifie le nom de la feuille</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Journal Batch Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2704330142 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Batch Name</source>
+          <target state="translated">Nom de la feuille</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Journal Batch Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2723638070 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the amount of fuel or electricity used in the journal line</source>
+          <target state="translated">Spécifie la quantité de carburant ou d’électricité utilisée dans la ligne feuille</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Fuel/Electricity - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2723638070 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fuel/Electricity</source>
+          <target state="translated">Carburant/électricité</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Fuel/Electricity - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2726838817 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the warning text</source>
+          <target state="translated">Spécifie le texte d’alerte</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Warning Text - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2726838817 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Warning Text</source>
+          <target state="translated">Texte d’alerte</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Warning Text - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2743730633 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of warnings</source>
+          <target state="translated">Spécifie le nombre d’alertes</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field No. of Warnings - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 2743730633 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Warnings</source>
+          <target state="translated">Nbre d’alertes</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field No. of Warnings - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 284764054 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the country/region code of the journal line</source>
+          <target state="translated">Spécifie le code pays/région de la ligne feuille</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Country/Region Code - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 284764054 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Country/Region Code</source>
+          <target state="translated">Code pays/région</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Country/Region Code - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 3320823955 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line number of the journal line</source>
+          <target state="translated">Spécifie le numéro de la ligne feuille</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Line No. - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 3320823955 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target state="translated">Numéro de ligne</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Line No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 3461834954 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the journal line</source>
+          <target state="translated">Spécifie la désignation de la ligne feuille</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Description - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 3461834954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Désignation</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Description - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 3684440170 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the journal template</source>
+          <target state="translated">Spécifie le nom du modèle feuille</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Journal Template Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 3684440170 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Template Name</source>
+          <target state="translated">Nom modèle feuille</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Journal Template Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 3811782419 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the source of the emission factor</source>
+          <target state="translated">Spécifie la source du facteur d’émission</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Emission Factor Source - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 3811782419 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source</source>
+          <target state="translated">Source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Emission Factor Source - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 4118635363 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the emission factor is calculated by Copilot</source>
+          <target state="translated">Spécifie si le facteur d’émission est calculé par Copilot</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Calculated by Copilot - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 4118635363 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculated by Copilot</source>
+          <target state="translated">Calculé par Copilot</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Calculated by Copilot - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 4180450162 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the confidence based on the warnings</source>
+          <target state="translated">Spécifie le niveau de fiabilité basé sur les alertes</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Warning Confidence - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 4180450162 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Warning Confidence</source>
+          <target state="translated">Fiabilité alerte</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Warning Confidence - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 436847974 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the account category should be excluded from Copilot suggestions.</source>
+          <target state="translated">Indique si la catégorie de compte doit être exclue des suggestions Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Exclude From Copilot - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 436847974 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exclude From Copilot</source>
+          <target state="translated">Exclure de Copilot</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Exclude From Copilot - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 473605269 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the distance of the journal line</source>
+          <target state="translated">Spécifie la distance de la ligne feuille</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Distance - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 473605269 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distance</source>
+          <target state="translated">Distance</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Distance - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 608680808 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the emission factor is accepted and will be updated on sustainability account subcategory</source>
+          <target state="translated">Spécifie si le facteur d’émission est accepté et sera mis à jour sur la sous-catégorie de compte de durabilité</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Accept Emission Factor - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Field 608680808 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accept Emission Factor</source>
+          <target state="translated">Accepter facteur d’émission</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Field Accept Emission Factor - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - NamedType 2862409609" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You cannot change the %1 after the file has been uploaded. Please delete the file before changes.</source>
+          <target state="translated">Vous ne pouvez pas modifier le %1 après le chargement du fichier. Veuillez supprimer le fichier avant de le modifier.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = field caption(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - NamedType UploadedDataErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - NamedType 3827270101" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The description %1 already exist for country %2 for this period. Check the content of the file or adjust the starting and ending dates.</source>
+          <target state="translated">La description %1 existe déjà pour le pays %2 pour cette période. Vérifiez le contenu du fichier ou ajustez les dates de début et de fin.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = description, %2 = country(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - NamedType DuplicateDescriptionLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3018015619 - NamedType 4274839196" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The %1 exceeds the maximum length of %2</source>
+          <target state="translated">La %1 dépasse la longueur maximale de %2</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption, %2 = Max Length(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sust. Formula Buffer - NamedType IncorrectLengthErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Method 1067276487 - NamedType 1118750221" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Upload file to selected country</source>
+          <target state="translated">Télécharger le fichier vers le pays sélectionné</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Method UploadFileToBlob - NamedType AddeFileMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Method 1067276487 - NamedType 4085040011" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The existing file will be replaced. Do you want to continue?</source>
+          <target state="translated">Le fichier existant sera remplacé. Voulez-vous continuer ?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Method UploadFileToBlob - NamedType AddFileQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Method 2787516006 - NamedType 3415447349" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1.xlsx</source>
+          <target state="translated">%1.xlsx</target>
+          <note from="Developer" annotates="general" priority="2">%1 = File name(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Method DownloadFile - NamedType FileNameLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Method 2787516006 - NamedType 3578138118" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No file to download</source>
+          <target state="translated">Aucun fichier à télécharger</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Method DownloadFile - NamedType NoFileErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Method 2787516006 - NamedType 3990227845" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to download the file?</source>
+          <target state="translated">Souhaitez-vous télécharger le fichier ?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Method DownloadFile - NamedType DownloadFileMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Method 3344690916 - NamedType 2493121984" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The starting date must be specified.</source>
+          <target state="translated">La date de début doit être spécifiée.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Method HandleStartingEndingDateUpdate - NamedType StartingDateEmptyErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Method 3344690916 - NamedType 824496000" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The starting date cannot be later than the ending date.</source>
+          <target state="translated">La date de début ne peut pas être postérieure à la date de fin.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Method HandleStartingEndingDateUpdate - NamedType StartingDateLaterEndingDateErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2296802126 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source CO2 Emission Buffer</source>
+          <target state="translated">Tampon d’émissions de CO2 source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission Buffer - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2616289029 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission Source Setup</source>
+          <target state="translated">Configuration de source d’émission</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Emission Source Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3018015619 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sust. Formula Buffer</source>
+          <target state="translated">Tampon de formule de dura.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sust. Formula Buffer - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3629035550 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source CO2 Emission</source>
+          <target state="translated">Émission CO2 source</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Source CO2 Emission - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4114649544 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sustainability Emission Suggestion</source>
+          <target state="translated">Suggestion émissions durabilité</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sustainability.Copilot)(LookupHint=Table Sustain. Emission Suggestion - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="TableExtension 1044032392 - Field 3811782419 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the source of the emission factor</source>
+          <target state="translated">Spécifie la source du facteur d’émission</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 1044032392</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1044032392 - Field 3811782419 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source</source>
+          <target state="translated">Source</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 1044032392</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1044032392 - Field 4118635363 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the emission has been calculated by Copilot or not.</source>
+          <target state="translated">Spécifie si l’émission a été calculée ou non par Copilot.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 1044032392</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1044032392 - Field 4118635363 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculated by Copilot</source>
+          <target state="translated">Calculé par Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 1044032392</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1580690750 - Field 4118635363 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the emission has been calculated by Copilot or not.</source>
+          <target state="translated">Spécifie si l’émission a été calculée ou non par Copilot.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 1327319879</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1580690750 - Field 4118635363 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculated by Copilot</source>
+          <target state="translated">Calculé par Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 1327319879</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3306842760 - Field 4118635363 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the emission has been calculated by Copilot or not.</source>
+          <target state="translated">Spécifie si l’émission a été calculée ou non par Copilot.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 3306842760</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3306842760 - Field 4118635363 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculated by Copilot</source>
+          <target state="translated">Calculé par Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 3306842760</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4023632924 - Field 4282229657 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the emission factor should be calculated for the account category.</source>
+          <target state="translated">Spécifie si le facteur d’émission doit être calculé pour la catégorie de compte.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 4023632924</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4023632924 - Field 4282229657 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do Not Calc. Emiss. Factor</source>
+          <target state="translated">Ne pas calculer facteur émission</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 4023632924</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4023632924 - Field 436847974 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the account category should be excluded from Copilot suggestions.</source>
+          <target state="translated">Indique si la catégorie de compte doit être exclue des suggestions Copilot.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 4023632924</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4023632924 - Field 436847974 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exclude From Copilot</source>
+          <target state="translated">Exclure de Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 4023632924</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

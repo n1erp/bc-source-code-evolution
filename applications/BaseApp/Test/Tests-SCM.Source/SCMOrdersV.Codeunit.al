@@ -4057,13 +4057,13 @@ codeunit 137158 "SCM Orders V"
 
     local procedure CreateAndPostSalesOrderWithQtyToAssembleToOrder(var SalesHeader: Record "Sales Header"; CustomerNo: Code[20]; ItemNo: Code[20]; Quantity: Decimal; LocationCode: Code[10]; Quantity2: Decimal)
     var
-        MfgSetup: Record "Manufacturing Setup";
+        InventorySetup: Record "Inventory Setup";
         SalesLine: Record "Sales Line";
     begin
-        MfgSetup.Get();
+        InventorySetup.Get();
         LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Order, CustomerNo);
         CreateSalesLine(SalesHeader, SalesLine, ItemNo, Quantity, LocationCode);
-        SalesLine.Validate("Shipment Date", CalcDate(MfgSetup."Default Safety Lead Time", WorkDate())); // To avoid Due Date Before Work Date message.
+        SalesLine.Validate("Shipment Date", CalcDate(InventorySetup."Default Safety Lead Time", WorkDate())); // To avoid Due Date Before Work Date message.
         SalesLine.Validate("Qty. to Assemble to Order", Quantity2);
         SalesLine.Modify(true);
         LibrarySales.PostSalesDocument(SalesHeader, true, true);
@@ -5715,6 +5715,7 @@ codeunit 137158 "SCM Orders V"
         ItemRegister.SetFilter("From Entry No.", '>0');
         ItemRegister.FindLast();
         ItemLedgerEntry.SetRange("Entry No.", ItemRegister."From Entry No.", ItemRegister."To Entry No.");
+        ItemLedgerEntry.SetFilter("Item Register No.", '0|%1', ItemRegister."No.");
         Assert.RecordCount(ItemLedgerEntry, 2);
         VerifyItemApplicationEntry(ItemRegister."From Entry No.", ItemRegister."From Entry No.", 0, Quantity);
         VerifyItemApplicationEntry(ItemRegister."To Entry No.", ItemRegister."From Entry No.", ItemRegister."To Entry No.", -Quantity);

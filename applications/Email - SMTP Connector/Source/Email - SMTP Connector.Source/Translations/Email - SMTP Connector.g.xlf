@@ -58,8 +58,13 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SMTP Account - Field Sender Type - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4170592685 - Field 892320855 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the address of the SMTP server. For example, smtp.office365.com.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SMTP Account - Field Server - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Table 4170592685 - Field 892320855 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Server</source>
+          <source>Server Address</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SMTP Account - Field Server - Property Caption</note>
         </trans-unit>
@@ -253,16 +258,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page SMTP Account - Control ServerPort - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 4170592685 - Control 2502982218 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the URL of the SMTP server.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SMTP Account - Control ServerUrl - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 4170592685 - Control 2502982218 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Server URL</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SMTP Account - Control ServerUrl - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 4170592685 - Control 3549826426 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the user account to use when authenticating to the SMTP server.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -397,16 +392,6 @@
           <source>Server Port</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page SMTP Account Wizard - Control ServerPort - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 707219180 - Control 2502982218 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the name of the SMTP server.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SMTP Account Wizard - Control ServerUrl - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 707219180 - Control 2502982218 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Server Url</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SMTP Account Wizard - Control ServerUrl - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 707219180 - Control 2141615146 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>

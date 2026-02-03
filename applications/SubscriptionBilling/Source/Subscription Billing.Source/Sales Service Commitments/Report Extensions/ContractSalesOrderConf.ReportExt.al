@@ -24,7 +24,7 @@ reportextension 8010 "Contract Sales Order Conf." extends "Standard Sales - Orde
                 SalesReportPrintoutMgmt.ExcludeItemFromTotals(Line, TotalSubTotal, TotalInvDiscAmount, TotalAmount, TotalAmountVAT, TotalAmountInclVAT);
             end;
         }
-        addbefore(AssemblyLine)
+        addlast(AssemblyLine)
         {
             dataitem(ServiceCommitmentHeaderForSalesLine; "Integer")
             {
@@ -147,12 +147,12 @@ reportextension 8010 "Contract Sales Order Conf." extends "Standard Sales - Orde
         SalesReportPrintoutMgmt.FillServiceCommitmentsGroups(Header, ServiceCommitmentsGroupPerPeriod, ServiceCommitmentsGroup);
     end;
 
-    [InternalEvent(false, false)]
+    [IntegrationEvent(false, false)]
     local procedure OnBeforeFillSubscriptionLinesForLine(Header: Record "Sales Header"; var SubscriptionLineForLine: Record "Sales Line"; var SubscriptionLineForLineCaption: Record "Name/Value Buffer")
     begin
     end;
 
-    [InternalEvent(false, false)]
+    [IntegrationEvent(false, false)]
     local procedure OnBeforeFillSubscriptionLinesGroupPerPeriod(Header: Record "Sales Header"; var SubscriptionLinesGroupPerPeriod: Record "Name/Value Buffer")
     begin
     end;

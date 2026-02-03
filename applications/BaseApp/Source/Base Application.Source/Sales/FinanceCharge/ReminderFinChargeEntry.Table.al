@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Sales.FinanceCharge;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Sales.FinanceCharge;
 
 using Microsoft.Finance.GeneralLedger.Journal;
 using Microsoft.Foundation.Navigate;
@@ -150,6 +154,7 @@ table 300 "Reminder/Fin. Charge Entry"
         exit('');
     end;
 
+    [InherentPermissions(PermissionObjectType::TableData, Database::"Reminder/Fin. Charge Entry", 'r')]
     procedure GetLastEntryNo(): Integer;
     var
         FindRecordManagement: Codeunit "Find Record Management";

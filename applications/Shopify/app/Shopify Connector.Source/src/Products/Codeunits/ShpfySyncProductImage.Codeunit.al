@@ -1,3 +1,8 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+
 namespace Microsoft.Integration.Shopify;
 
 using Microsoft.Inventory.Item;
@@ -37,6 +42,7 @@ codeunit 30184 "Shpfy Sync Product Image"
         BulkOperationMgt: Codeunit "Shpfy Bulk Operation Mgt.";
         BulkOperationType: Enum "Shpfy Bulk Operation Type";
         BulkOperationInput: TextBuilder;
+        JRequestData: JsonArray;
         ParametersList: List of [Dictionary of [Text, Text]];
         Parameters: Dictionary of [Text, Text];
     begin
@@ -50,11 +56,13 @@ codeunit 30184 "Shpfy Sync Product Image"
                 if ProductImageExport.Run(ShopifyProduct) then;
             until ShopifyProduct.Next() = 0;
         BulkOperationInput := ProductImageExport.GetBulkOperationInput();
+        JRequestData := ProductImageExport.GetRequestData();
         if BulkOperationInput.Length > 0 then
-            if not BulkOperationMgt.SendBulkMutation(Shop, BulkOperationType::UpdateProductImage, BulkOperationInput.ToText()) then begin
+            if not BulkOperationMgt.SendBulkMutation(Shop, BulkOperationType::UpdateProductImage, BulkOperationInput.ToText(), JRequestData) then begin
                 ParametersList := ProductImageExport.GetParametersList();
                 foreach Parameters in ParametersList do
-                    ProductAPI.UpdateProductImage(Parameters);
+                    if not ProductAPI.UpdateProductImage(Parameters) then
+                        RevertImageChanges(Parameters.Get('ProductId'), JRequestData);
             end;
     end;
 
@@ -151,5 +159,23 @@ codeunit 30184 "Shpfy Sync Product Image"
     internal procedure SetProductFilter(FilterText: Text)
     begin
         ProductFilter := FilterText;
+    end;
+
+    local procedure RevertImageChanges(ProductId: Text; JRequestData: JsonArray)
+    var
+        Product: Record "Shpfy Product";
+        JRequest: JsonToken;
+        JProduct: JsonObject;
+    begin
+        foreach JRequest in JRequestData do begin
+            JProduct := JRequest.AsObject();
+            if Format(JProduct.GetBigInteger('id')) = ProductId then begin
+                if Product.Get(JProduct.GetBigInteger('id')) then begin
+                    Product."Image Hash" := JProduct.GetInteger('imageHash');
+                    Product.Modify();
+                end;
+                exit;
+            end;
+        end;
     end;
 }

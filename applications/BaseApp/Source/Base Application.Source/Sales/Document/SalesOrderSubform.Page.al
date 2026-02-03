@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Sales.Document;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Sales.Document;
 
 using Microsoft.Assembly.Document;
 using Microsoft.Finance.AllocationAccount;
@@ -1768,14 +1772,14 @@ page 46 "Sales Order Subform"
     var
         SalesLineReserve: Codeunit "Sales Line-Reserve";
     begin
-        if (Rec.Quantity <> 0) and Rec.ItemExists(Rec."No.") then begin
-            Commit();
-            if not SalesLineReserve.DeleteLineConfirm(Rec) then
-                exit(false);
+        if Rec.Quantity <> 0 then
+            if Rec.ItemExists(Rec."No.") then begin
+                if not SalesLineReserve.DeleteLineConfirm(Rec) then
+                    exit(false);
 
-            OnBeforeDeleteReservationEntries(Rec);
-            SalesLineReserve.DeleteLine(Rec);
-        end;
+                OnBeforeDeleteReservationEntries(Rec);
+                SalesLineReserve.DeleteLine(Rec);
+            end;
         DocumentTotals.SalesDocTotalsNotUpToDate();
     end;
 
@@ -1880,10 +1884,11 @@ page 46 "Sales Order Subform"
 
     local procedure SetOpenPage()
     var
+        [SecurityFiltering(SecurityFilter::Filtered)]
+        Location: Record Location;
         ServerSetting: Codeunit "Server Setting";
         PriceCalculationMgt: Codeunit "Price Calculation Mgt.";
         DocumentErrorsMgt: Codeunit "Document Errors Mgt.";
-        Location: Record Location;
     begin
         OnBeforeSetOpenPage();
 
@@ -1913,6 +1918,8 @@ page 46 "Sales Order Subform"
             exit;
 
         SalesHeader.Get(Rec."Document Type", Rec."Document No.");
+        if SalesHeader.Status = SalesHeader.Status::"Pending Approval" then
+            SalesHeader.FieldError(SalesHeader.Status);
         if SalesHeader.InvoicedLineExists() then
             if not ConfirmManagement.GetResponseOrDefault(UpdateInvDiscountQst, true) then
                 exit;
@@ -2199,7 +2206,7 @@ page 46 "Sales Order Subform"
         IsHandled: Boolean;
     begin
         IsHandled := false;
-        OnBeforeCalculateTotals(Rec, IsHandled, DocumentTotals);
+        OnBeforeCalculateTotals(Rec, IsHandled, DocumentTotals, SuppressTotals);
         if IsHandled then
             exit;
 
@@ -2420,7 +2427,7 @@ page 46 "Sales Order Subform"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnBeforeCalculateTotals(var SalesLine: Record "Sales Line"; var IsHandled: Boolean; var DocumentTotals: Codeunit "Document Totals")
+    local procedure OnBeforeCalculateTotals(var SalesLine: Record "Sales Line"; var IsHandled: Boolean; var DocumentTotals: Codeunit "Document Totals"; var SuppressTotals: Boolean)
     begin
     end;
 

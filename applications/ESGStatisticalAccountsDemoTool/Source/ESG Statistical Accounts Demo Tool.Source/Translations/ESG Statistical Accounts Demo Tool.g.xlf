@@ -98,6 +98,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Journal - NamedType DivGenMaleLbl</note>
         </trans-unit>
+        <trans-unit id="EnumExtension 3610996284 - EnumValue 2694284627 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2207723152">
+          <source>Statistical Account</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Stat. Contoso Demo Data Module - EnumValue Statistical Module - Property Caption</note>
+        </trans-unit>
       </group>
     </body>
   </file>

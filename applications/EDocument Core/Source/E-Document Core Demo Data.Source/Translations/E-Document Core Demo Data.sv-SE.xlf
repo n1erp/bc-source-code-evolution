@@ -3,35 +3,17 @@
   <file datatype="xml" source-language="en-US" target-language="sv-SE" original="E-Document Core Demo Data">
     <body>
       <group id="body">
-        <trans-unit id="Table 922888270 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>E-Document Module Setup</source>
-          <target state="translated">Konfiguration av e-dokumentmodul</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table E-Document Module Setup - Property Caption</note>
+        <trans-unit id="Codeunit 2182587674 - NamedType 2903728378" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No data found in the blob.</source>
+          <target state="translated">Inga data hittades i bloben.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.eServices.EDocument.Format)(LookupHint=Codeunit E-Doc ADI Handler Mock - NamedType NoDataFoundInBlobErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Table 922888270 - Field 1663593181 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Primary Key</source>
-          <target state="translated">Primärnyckel</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table E-Document Module Setup - Field Primary Key - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 922888270 - Field 2775140830 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor 1 No.</source>
-          <target state="translated">Leverantörsnummer 1</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table E-Document Module Setup - Field Vendor No. 1 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 922888270 - Field 862050979 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor 2 No.</source>
-          <target state="translated">Leverantörsnummer 2</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table E-Document Module Setup - Field Vendor No. 2 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 922888270 - Field 1499747596 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor 3 No.</source>
-          <target state="translated">Leverantörsnummer 3</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table E-Document Module Setup - Field Vendor No. 3 - Property Caption</note>
+        <trans-unit id="Codeunit 2182587674 - NamedType 3222530480" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No subscriber to OnBeforeGetADIJsonInStream event.</source>
+          <target state="translated">Ingen prenumerant på händelsen OnBeforeGetADIJsonInStream.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.eServices.EDocument.Format)(LookupHint=Codeunit E-Doc ADI Handler Mock - NamedType NoSubscriberToOnBeforeGetADIJsonInStreamErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Codeunit 4262458361 - NamedType 1351810307" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Beans</source>
@@ -51,11 +33,53 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create E-Document Setup - NamedType ServiceCodeLbl</note>
         </trans-unit>
-        <trans-unit id="Page 922888270 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>E-Document Module Setup</source>
-          <target state="translated">Konfiguration av e-dokumentmodul</target>
+        <trans-unit id="Codeunit 2363101040 - Method 1066425862 - NamedType 1558777102" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No subscriber to OnGetListOfPDFResources event.</source>
+          <target state="translated">Ingen prenumerant på händelsen OnGetListOfPDFResources.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page E-Document Module Setup - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit E-Doc. From Resource Helper - Method CreateEDocumentsFromResources - NamedType NoSubscribertoOnGetListOfPDFResourcesErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2363101040 - Method 1066425862 - NamedType 2258732533" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No pfd files found in the .resources\PDFs folder.</source>
+          <target state="translated">Inga PDF-filer hittades i mappen .resources\PDFs.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit E-Doc. From Resource Helper - Method CreateEDocumentsFromResources - NamedType NoPDFFilesInResourcesFolderErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2363101040 - Method 1796859230 - NamedType 1101315447" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No subscriber to OnGetResourceInStreamWhenImportDocument event.</source>
+          <target state="translated">Ingen prenumerant på händelsen OnGetResourceInStreamWhenImportDocument.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit E-Doc. From Resource Helper - Method ImportDocument - NamedType NoSubscriberToOnGetResourceInStreamWhenImportDocumentErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2363101040 - Method 2461689013 - NamedType 2675554205" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No subscriber to OnBeforeCreteEDocFromResourceMappings event.</source>
+          <target state="translated">Ingen prenumerant på händelsen OnBeforeCreteEDocFromResourceMappings.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit E-Doc. From Resource Helper - Method CreteEDocFromResourceMappings - NamedType NMoSubscriberToOnBeforeCreteEDocFromResourceMappingsErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2363101040 - Method 676698991 - NamedType 1664725989" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Header not found for E-Document with ID %1. Possible reason: %2</source>
+          <target state="translated">Inköpshuvudet hittades inte för e-dokumentet med ID %1. Möjlig orsak: %2</target>
+          <note from="Developer" annotates="general" priority="2">%1 = E-Document ID, %2 = Last error text</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit E-Doc. From Resource Helper - Method PostPurchInvoice - NamedType PurchHeaderNotFoundForEdocErr</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1245530528 - EnumValue 2839207506 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADI Mock</source>
+          <target state="translated">ADI-test</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (ObjectTarget=Enum 3462895808)(Namespace=Microsoft.eServices.EDocument.Processing.Import)(LookupHint=EnumExtension ADI Mock Struct Receive E-Doc. - EnumValue ADI Mock - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="EnumExtension 970181988 - EnumValue 970181988 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>E-Document</source>
+          <target state="translated">E-dokument</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (ObjectTarget=Enum 2207723152)(LookupHint=EnumExtension E-Document Contoso Module - EnumValue E-Document Contoso Module - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 922888270 - Control 1499747596 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies vendor 3 number to use for the scenarios.</source>
+          <target state="translated">Anger leverantörsnumret 3 som ska användas i scenarierna.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page E-Document Module Setup - Control Vendor No. 3 - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 922888270 - Control 2775140830 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies vendor 1 number to use for the scenarios.</source>
@@ -69,18 +93,119 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page E-Document Module Setup - Control Vendor No. 2 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 922888270 - Control 1499747596 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies vendor 3 number to use for the scenarios.</source>
-          <target state="translated">Anger leverantörsnumret 3 som ska användas i scenarierna.</target>
+        <trans-unit id="Page 922888270 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>E-Document Module Setup</source>
+          <target state="translated">Konfiguration av e-dokumentmodul</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page E-Document Module Setup - Control Vendor No. 3 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page E-Document Module Setup - Property Caption</note>
         </trans-unit>
-        <trans-unit id="EnumExtension 970181988 - EnumValue 970181988 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>E-Document</source>
-          <target state="translated">E-dokument</target>
+        <trans-unit id="Table 1738354404 - Field 1878130204 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of entity that will be posted for this purchase line, such as Item, Resource, or G/L Account.</source>
+          <target state="translated">Anger enhetstypen som ska bokföras för den här inköpsraden, till exempel Artikel, Resurs eller Redovisningskonto.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-          <note from="ObjectTarget" annotates="general" priority="5">Enum 2207723152</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 1878130204 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target state="translated">Typ</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 1920046521 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unit of measure for the item in the purchase line.</source>
+          <target state="translated">Anger måttenheten för artikeln på inköpsraden.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Unit of Measure - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 1920046521 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <target state="translated">Måttenhet</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Unit of Measure - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 3265714202 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the product code for the item in the purchase line.</source>
+          <target state="translated">Anger produktkoden för artikeln på inköpsraden.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Product Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 3265714202 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product Code</source>
+          <target state="translated">Produktkod</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Product Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 3461834954 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the purchase line to use the mapping for.</source>
+          <target state="translated">Anger beskrivningen av inköpsraden som mappningen ska användas för.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 3461834954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Beskrivning</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 3641927271 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unique identifier for the mapping.</source>
+          <target state="translated">Anger mappningens unika identifierare.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 3641927271 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target state="translated">ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 4200184881 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies what you're selling. The options vary, depending on what you choose in the Type field.</source>
+          <target state="translated">Anger vad du säljer. Alternativen varierar beroende på vad du väljer i fältet Typ.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 4200184881 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="translated">Nummer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 922888270 - Field 1499747596 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor 3 No.</source>
+          <target state="translated">Leverantörsnummer 3</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Document Module Setup - Field Vendor No. 3 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 922888270 - Field 1663593181 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <target state="translated">Primärnyckel</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Document Module Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 922888270 - Field 2775140830 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor 1 No.</source>
+          <target state="translated">Leverantörsnummer 1</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Document Module Setup - Field Vendor No. 1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 922888270 - Field 862050979 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor 2 No.</source>
+          <target state="translated">Leverantörsnummer 2</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Document Module Setup - Field Vendor No. 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>E-Doc From Resource Mapping</source>
+          <target state="translated">E-dokument från resursmappning</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 922888270 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>E-Document Module Setup</source>
+          <target state="translated">Konfiguration av e-dokumentmodul</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Document Module Setup - Property Caption</note>
         </trans-unit>
       </group>
     </body>

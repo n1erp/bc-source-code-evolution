@@ -57,6 +57,16 @@ codeunit 827 "Service Post Invoice Events"
     begin
     end;
 
+    procedure RunOnBeforePostLines(ServiceHeader: Record "Service Header"; var TempInvoicePostingBuffer: Record "Invoice Posting Buffer" temporary)
+    begin
+        OnBeforePostLines(ServiceHeader, TempInvoicePostingBuffer);
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforePostLines(ServiceHeader: Record "Service Header"; var TempInvoicePostingBuffer: Record "Invoice Posting Buffer" temporary)
+    begin
+    end;
+
     procedure RunOnBeforeCalcInvoiceDiscountPosting(ServiceHeader: Record "Service Header"; ServiceLine: Record "Service Line"; ServiceLineACY: Record "Service Line"; var InvoicePostingBuffer: Record "Invoice Posting Buffer"; var IsHandled: Boolean)
     begin
         OnBeforeCalcInvoiceDiscountPosting(ServiceHeader, ServiceLine, ServiceLineACY, InvoicePostingBuffer, IsHandled);
@@ -99,13 +109,23 @@ codeunit 827 "Service Post Invoice Events"
 
     // Prepare Line
 
-    procedure RunOnPrepareLineOnAfterFillInvoicePostingBuffer(var InvoicePostingBuffer: Record "Invoice Posting Buffer"; ServiceLine: Record "Service Line"; ServiceLineACY: Record "Service Line"; SuppressCommit: Boolean)
+    procedure RunOnPrepareLineOnAfterFillInvoicePostingBuffer(var InvoicePostingBuffer: Record "Invoice Posting Buffer"; ServiceLine: Record "Service Line"; ServiceLineACY: Record "Service Line"; SuppressCommit: Boolean; var TempInvoicePostingBuffer: Record "Invoice Posting Buffer" temporary)
     begin
-        OnPrepareLineOnAfterFillInvoicePostingBuffer(InvoicePostingBuffer, ServiceLine, ServiceLineACY, SuppressCommit);
+        OnPrepareLineOnAfterFillInvoicePostingBuffer(InvoicePostingBuffer, ServiceLine, ServiceLineACY, SuppressCommit, TempInvoicePostingBuffer);
     end;
 
+#if not CLEAN27
+    [Obsolete('Replaced by same procedure with parameter TempInvoicePostingBuffer', '27.0')]
+    procedure RunOnPrepareLineOnAfterFillInvoicePostingBuffer(var InvoicePostingBuffer: Record "Invoice Posting Buffer"; ServiceLine: Record "Service Line"; ServiceLineACY: Record "Service Line"; SuppressCommit: Boolean)
+    var
+        TempDummyInvoicePostingBuffer: Record "Invoice Posting Buffer" temporary;
+    begin
+        OnPrepareLineOnAfterFillInvoicePostingBuffer(InvoicePostingBuffer, ServiceLine, ServiceLineACY, SuppressCommit, TempDummyInvoicePostingBuffer);
+    end;
+#endif
+
     [IntegrationEvent(false, false)]
-    local procedure OnPrepareLineOnAfterFillInvoicePostingBuffer(var InvoicePostingBuffer: Record "Invoice Posting Buffer"; ServiceLine: Record "Service Line"; ServiceLineACY: Record "Service Line"; SuppressCommit: Boolean)
+    local procedure OnPrepareLineOnAfterFillInvoicePostingBuffer(var InvoicePostingBuffer: Record "Invoice Posting Buffer"; ServiceLine: Record "Service Line"; ServiceLineACY: Record "Service Line"; SuppressCommit: Boolean; var TempInvoicePostingBuffer: Record "Invoice Posting Buffer" temporary)
     begin
     end;
 

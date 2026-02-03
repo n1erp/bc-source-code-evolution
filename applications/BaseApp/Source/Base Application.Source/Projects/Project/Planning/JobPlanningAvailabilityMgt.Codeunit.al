@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Projects.Project.Planning;
 
 using Microsoft.Inventory.Availability;
@@ -44,6 +48,7 @@ codeunit 99000871 "Job Planning Availability Mgt."
         JobPlanningLine.SetRange(Status, Job.Status);
         JobPlanningLine.SetRange(Type, JobPlanningLine.Type::Item);
         JobPlanningLine.SetFilter("Remaining Qty.", '>0');
+        OnSetJobOnAfterFilterJobPlanningLine(JobPlanningLine, Job);
         if JobPlanningLine.Find('-') then
             repeat
                 if JobPlanningLineIsInventoryItem(JobPlanningLine."No.") then begin
@@ -647,6 +652,11 @@ codeunit 99000871 "Job Planning Availability Mgt."
 
     [IntegrationEvent(false, false)]
     local procedure OnBeforeShowItemAvailabilityFromJobPlanningLines(var Item: Record Item; var JobPlanningLine: Record "Job Planning Line"; AvailabilityType: Enum "Item Availability Type")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnSetJobOnAfterFilterJobPlanningLine(var JobPlanningLine: Record "Job Planning Line"; var Job: Record Job)
     begin
     end;
 }

@@ -28,6 +28,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Digital Vouchers Tests - NamedType DoYouWantTPostPmtQst</note>
         </trans-unit>
+        <trans-unit id="Codeunit 4070772112 - NamedType 203848375" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The journal lines were successfully posted.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Digital Vouchers Tests - NamedType LinesPostedMsg</note>
+        </trans-unit>
         <trans-unit id="Codeunit 4070772112 - NamedType 2032039542" size-unit="char" translate="yes" xml:space="preserve">
           <source>Not possible to post without attaching the digital voucher.</source>
           <note from="Developer" annotates="general" priority="2"></note>

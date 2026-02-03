@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Sales.Document;
 
 using Microsoft.Inventory.Availability;
@@ -45,6 +49,7 @@ codeunit 99000872 "Sales Availability Mgt."
         SalesLine.SetRange("Document No.", SalesHeader."No.");
         SalesLine.SetRange(Type, SalesLine.Type::Item);
         SalesLine.SetFilter("Outstanding Quantity", '>0');
+        OnSetSalesHeaderOnAfterFilterSalesLine(SalesLine, SalesHeader);
         if SalesLine.FindSet() then
             repeat
                 if SalesLine.IsInventoriableItem() then begin
@@ -72,6 +77,9 @@ codeunit 99000872 "Sales Availability Mgt."
                 begin
                     Clear(OrderPromisingLine."Earliest Shipment Date");
                     Clear(OrderPromisingLine."Planned Delivery Date");
+
+                    OnAfterClearDatesCalcCTP(OrderPromisingLine, SalesLine);
+
                     SalesLine.Get(OrderPromisingLine."Source Subtype", OrderPromisingLine."Source ID", OrderPromisingLine."Source Line No.");
                     SalesLine.CalcFields("Reserved Quantity");
                     QtyReservedTotal := SalesLine."Reserved Quantity";
@@ -809,6 +817,16 @@ codeunit 99000872 "Sales Availability Mgt."
 
     [IntegrationEvent(false, false)]
     local procedure OnOpenPageOnSetSourceOnAfterSetShouldExit(CrntSourceType: Enum "Order Promising Line Source Type"; var ShouldExit: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterClearDatesCalcCTP(var OrderPromisingLine: Record "Order Promising Line"; var SalesLine: Record "Sales Line")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnSetSalesHeaderOnAfterFilterSalesLine(var SalesLine: Record "Sales Line"; var SalesHeader: Record "Sales Header")
     begin
     end;
 }

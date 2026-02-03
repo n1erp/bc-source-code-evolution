@@ -190,7 +190,7 @@ codeunit 5856 "TransferOrder-Post Transfer"
         Window.Close();
 
         TransferHeader2 := TransHeader;
-        OnAfterTransferOrderPostTransfer(TransferHeader2, SuppressCommit, DirectTransHeader, InvtPickPutAway);
+        OnAfterTransferOrderPostTransfer(TransferHeader2, SuppressCommit, PreviewMode, DirectTransHeader, InvtPickPutAway);
 
         UpdateAnalysisView.UpdateAll(0, true);
         UpdateItemAnalysisView.UpdateAll(0, true);
@@ -220,6 +220,7 @@ codeunit 5856 "TransferOrder-Post Transfer"
         WhsePostShipment: Codeunit "Whse.-Post Shipment";
         WhseJnlRegisterLine: Codeunit "Whse. Jnl.-Register Line";
         PostponedValueEntries: List of [Integer];
+        ItemsToAdjust: List of [Code[20]];
         SourceCode: Code[10];
         HideValidationDialog: Boolean;
         InvtPickPutaway: Boolean;
@@ -258,7 +259,7 @@ codeunit 5856 "TransferOrder-Post Transfer"
             ReserveTransLine.TransferTransferToItemJnlLine(TransLine3,
               ItemJnlLine, ItemJnlLine."Quantity (Base)", Enum::"Transfer Direction"::Inbound, true);
 
-        OnPostItemJnlLineBeforeItemJnlPostLineRunWithCheck(ItemJnlLine, Transline3, DirectTransHeader2, DirectTransLine2, SuppressCommit);
+        OnPostItemJnlLineBeforeItemJnlPostLineRunWithCheck(ItemJnlLine, Transline3, DirectTransHeader2, DirectTransLine2, SuppressCommit, PreviewMode);
 
         ItemJnlPostLine.RunWithCheck(ItemJnlLine);
 
@@ -594,8 +595,7 @@ codeunit 5856 "TransferOrder-Post Transfer"
     var
         InvtAdjmtHandler: Codeunit "Inventory Adjustment Handler";
     begin
-        if InventorySetup.AutomaticCostAdjmtRequired() then
-            InvtAdjmtHandler.MakeInventoryAdjustment(true, InventorySetup."Automatic Cost Posting");
+        InvtAdjmtHandler.MakeAutomaticInventoryAdjustment(ItemsToAdjust);
     end;
 
     [EventSubscriber(ObjectType::Table, Database::"Warehouse Shipment Line", 'OnAfterValidateQtyToShip', '', false, false)]
@@ -621,6 +621,16 @@ codeunit 5856 "TransferOrder-Post Transfer"
             exit;
         PostponedValueEntries.Add(ValueEntry."Entry No.");
         IsHandled := true;
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Item Jnl.-Post Line", 'OnSetItemAdjmtPropertiesOnBeforeCheckModifyItem', '', false, false)]
+    local procedure OnSetItemAdjmtPropertiesOnBeforeCheckModifyItem(var Item2: Record Item)
+    begin
+        if InventorySetup.UseLegacyPosting() then
+            exit;
+
+        if not ItemsToAdjust.Contains(Item2."No.") then
+            ItemsToAdjust.Add(Item2."No.");
     end;
 
     [IntegrationEvent(false, false)]
@@ -699,7 +709,7 @@ codeunit 5856 "TransferOrder-Post Transfer"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnAfterTransferOrderPostTransfer(var TransferHeader: Record "Transfer Header"; var SuppressCommit: Boolean; var DirectTransHeader: Record "Direct Trans. Header"; InvtPickPutAway: Boolean)
+    local procedure OnAfterTransferOrderPostTransfer(var TransferHeader: Record "Transfer Header"; var SuppressCommit: Boolean; PreviewMode: Boolean; var DirectTransHeader: Record "Direct Trans. Header"; InvtPickPutAway: Boolean)
     begin
     end;
 
@@ -709,7 +719,7 @@ codeunit 5856 "TransferOrder-Post Transfer"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnPostItemJnlLineBeforeItemJnlPostLineRunWithCheck(var ItemJournalLine: Record "Item Journal Line"; TransferLine: Record "Transfer Line"; DirectTransHeader: Record "Direct Trans. Header"; DirectTransLine: Record "Direct Trans. Line"; CommitIsSuppressed: Boolean)
+    local procedure OnPostItemJnlLineBeforeItemJnlPostLineRunWithCheck(var ItemJournalLine: Record "Item Journal Line"; TransferLine: Record "Transfer Line"; DirectTransHeader: Record "Direct Trans. Header"; DirectTransLine: Record "Direct Trans. Line"; CommitIsSuppressed: Boolean; PreviewMode: Boolean)
     begin
     end;
 
@@ -738,4 +748,3 @@ codeunit 5856 "TransferOrder-Post Transfer"
     begin
     end;
 }
-

@@ -3953,10 +3953,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit FS Int. Table Subscriber - NamedType ShowFSConnectionSetupLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1307247712 - Method 3092507980 - NamedType 4225786462" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1307247712 - Method 3640787447 - NamedType 4225786462" size-unit="char" translate="yes" xml:space="preserve">
           <source>"%1" must be included in the filter. If you need this behavior, please contact your partner for assistance.</source>
           <note from="Developer" annotates="general" priority="2">%1 = a field caption</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit FS Int. Table Subscriber - Method IntegrationTableMappingOnBeforeModifyEvent - NamedType MandatoryFilterErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit FS Int. Table Subscriber - Method IntegrationTableMappingOnAfterModifyEvent - NamedType MandatoryFilterErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 1307247712 - Method 731342817 - NamedType 3442490713" size-unit="char" translate="yes" xml:space="preserve">
           <source>Service Order Incident</source>
@@ -5008,15 +5008,30 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension FS Job Project Manager RC - Action GroupFS - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3875668215 - Action 2612668268 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4109301636">
+          <source>View and manage bookable resources in Dynamics 365 Field Service.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension FS Job Project Manager RC - Action Bookable Resources - Field Service - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3875668215 - Action 2612668268 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4109301636">
           <source>Bookable Resources - Dynamics 365 Field Service</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension FS Job Project Manager RC - Action Bookable Resources - Field Service - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3875668215 - Action 4083284415 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4109301636">
+          <source>View and manage customer assets in Dynamics 365 Field Service.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension FS Job Project Manager RC - Action Customer Assets -Field Service - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3875668215 - Action 4083284415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4109301636">
           <source>Customer Assets - Dynamics 365 Field Service</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension FS Job Project Manager RC - Action Customer Assets -Field Service - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3875668215 - Action 2651728440 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4109301636">
+          <source>View records that were skipped during synchronization with Dynamics 365 Field Service.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension FS Job Project Manager RC - Action Records Skipped For Synch. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3875668215 - Action 2651728440 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4109301636">
           <source>Coupled Data Synchronization Errors</source>
@@ -5718,15 +5733,30 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension FS Service Manager RC - Action GroupFS - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3697212902 - Action 2612668268 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1696917291">
+          <source>View and manage bookable resources in Dynamics 365 Field Service.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension FS Service Manager RC - Action Bookable Resources - Field Service - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3697212902 - Action 2612668268 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1696917291">
           <source>Bookable Resources - Dynamics 365 Field Service</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension FS Service Manager RC - Action Bookable Resources - Field Service - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3697212902 - Action 4220797863 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1696917291">
+          <source>View and manage customer assets in Dynamics 365 Field Service.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension FS Service Manager RC - Action Customer Assets - Field Service - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3697212902 - Action 4220797863 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1696917291">
           <source>Customer Assets - Dynamics 365 Field Service</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension FS Service Manager RC - Action Customer Assets - Field Service - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3697212902 - Action 2651728440 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1696917291">
+          <source>View records that were skipped during synchronization with Dynamics 365 Field Service.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension FS Service Manager RC - Action Records Skipped For Synch. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3697212902 - Action 2651728440 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1696917291">
           <source>Coupled Data Synchronization Errors</source>

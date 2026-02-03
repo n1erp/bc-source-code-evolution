@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Sales.Document;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Sales.Document;
 
 using Microsoft.Assembly.Document;
 using Microsoft.Bank.Setup;
@@ -43,6 +47,7 @@ using System.Environment.Configuration;
 using System.Privacy;
 using System.Security.User;
 using System.Utilities;
+using System.Threading;
 
 page 42 "Sales Order"
 {
@@ -66,6 +71,7 @@ page 42 "Sales Order"
                 field("No."; Rec."No.")
                 {
                     ApplicationArea = All;
+                    Importance = Standard;
                     ToolTip = 'Specifies the number of the involved entry or record, according to the specified number series.';
                     Visible = DocNoVisible;
 
@@ -85,8 +91,8 @@ page 42 "Sales Order"
 
                     trigger OnValidate()
                     begin
-                        IsSalesLinesEditable := Rec.SalesLinesEditable();
                         Rec.SelltoCustomerNoOnAfterValidate(Rec, xRec);
+                        IsSalesLinesEditable := Rec.SalesLinesEditable();
                         CurrPage.Update();
                     end;
                 }
@@ -100,16 +106,32 @@ page 42 "Sales Order"
                     AboutTitle = 'Who are you selling to?';
                     AboutText = 'You can choose existing customers, or add new customers when you create orders. Orders can automatically choose special prices and discounts that you have set for each customer.';
 
+                    trigger OnAfterLookup(Selected: RecordRef)
+                    var
+                        Customer: Record Customer;
+                    begin
+                        Selected.SetTable(Customer);
+                        if Rec."Sell-to Customer No." <> Customer."No." then begin
+                            Rec.Validate("Sell-to Customer No.", Customer."No.");
+                            if Rec."Sell-to Customer No." <> Customer."No." then
+                                error('');
+                            IsSalesLinesEditable := Rec.SalesLinesEditable();
+                            CurrPage.Update();
+                        end;
+                    end;
+
                     trigger OnValidate()
                     begin
                         Rec.SelltoCustomerNoOnAfterValidate(Rec, xRec);
                         CurrPage.Update();
                     end;
-
-                    trigger OnLookup(var Text: Text): Boolean
-                    begin
-                        exit(Rec.LookupSellToCustomerName(Text));
-                    end;
+                }
+                field("Sell-to Customer Name 2"; Rec."Sell-to Customer Name 2")
+                {
+                    ApplicationArea = Basic, Suite;
+                    Caption = 'Customer Name 2';
+                    QuickEntry = false;
+                    Visible = false;
                 }
                 group(Control114)
                 {
@@ -161,7 +183,7 @@ page 42 "Sales Order"
                         field("Sell-to County"; Rec."Sell-to County")
                         {
                             ApplicationArea = Basic, Suite;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Sell-to Country/Region Code";
                             Importance = Additional;
                             QuickEntry = false;
                             ToolTip = 'Specifies the state, province or county of the address.';
@@ -243,6 +265,23 @@ page 42 "Sales Order"
                     Caption = 'Contact';
                     Editable = Rec."Sell-to Customer No." <> '';
                     ToolTip = 'Specifies the name of the person to contact at the customer.';
+
+                    trigger OnLookup(var Text: Text): Boolean
+                    var
+                        Contact: Record Contact;
+                    begin
+                        Contact.FilterGroup(2);
+                        Rec.LookupContact(Rec."Sell-to Customer No.", Rec."Sell-to Contact No.", Contact);
+                        if Page.RunModal(0, Contact) = ACTION::LookupOK then
+                            Rec.Validate("Sell-to Contact No.", Contact."No.");
+
+                        if ShipToOptions = ShipToOptions::"Default (Sell-to Address)" then
+                            Rec.Validate("Ship-to Contact", Rec."Sell-to Contact");
+                        Contact.FilterGroup(0);
+
+                        Text := Rec."Sell-to Contact";
+                        CurrPage.Update();
+                    end;
                 }
                 field("No. of Archived Versions"; Rec."No. of Archived Versions")
                 {
@@ -368,6 +407,15 @@ page 42 "Sales Order"
                     Importance = Additional;
                     ToolTip = 'Specifies the status of a job queue entry or task that handles the posting of sales orders.';
                     Visible = JobQueuesUsed;
+
+                    trigger OnDrillDown()
+                    var
+                        JobQueueEntry: Record "Job Queue Entry";
+                    begin
+                        if Rec."Job Queue Status" = Rec."Job Queue Status"::" " then
+                            exit;
+                        JobQueueEntry.ShowStatusMsg(Rec."Job Queue Entry ID");
+                    end;
                 }
                 field(Status; Rec.Status)
                 {
@@ -696,7 +744,7 @@ page 42 "Sales Order"
                                 field("Ship-to County"; Rec."Ship-to County")
                                 {
                                     ApplicationArea = Basic, Suite;
-                                    Caption = 'County';
+                                    CaptionClass = '5,1,' + Rec."Ship-to Country/Region Code";
                                     Editable = ShipToOptions = ShipToOptions::"Custom Address";
                                     QuickEntry = false;
                                     ToolTip = 'Specifies the state, province or county of the address.';
@@ -802,16 +850,34 @@ page 42 "Sales Order"
                             Importance = Promoted;
                             ToolTip = 'Specifies the customer to whom you will send the sales invoice, when different from the customer that you are selling to.';
 
-                            trigger OnValidate()
+                            trigger OnAfterLookup(Selected: RecordRef)
+                            var
+                                Customer: Record Customer;
                             begin
-                                if not ((BillToOptions = BillToOptions::"Custom Address") and not ShouldSearchForCustByName) then begin
-                                    if Rec.GetFilter("Bill-to Customer No.") = xRec."Bill-to Customer No." then
-                                        if Rec."Bill-to Customer No." <> xRec."Bill-to Customer No." then
-                                            Rec.SetRange("Bill-to Customer No.");
+                                Selected.SetTable(Customer);
+                                if Rec."Bill-to Customer No." <> Customer."No." then begin
+                                    Rec.Validate("Bill-to Customer No.", Customer."No.");
+                                    if Rec."Bill-to Customer No." <> Customer."No." then  // User responded 'no' to change
+                                        error('');
+
+                                    if not ((BillToOptions = BillToOptions::"Custom Address") and not ShouldSearchForCustByName) then
+                                        if Rec.GetFilter("Bill-to Customer No.") = xRec."Bill-to Customer No." then
+                                            if Rec."Bill-to Customer No." <> xRec."Bill-to Customer No." then
+                                                Rec.SetRange("Bill-to Customer No.");
 
                                     CurrPage.Update();
                                 end;
                             end;
+                        }
+                        field("Bill-to Name 2"; Rec."Bill-to Name 2")
+                        {
+                            ApplicationArea = Basic, Suite;
+                            Caption = 'Name 2';
+                            Editable = (BillToOptions = BillToOptions::"Another Customer");
+                            Enabled = (BillToOptions = BillToOptions::"Another Customer");
+                            Importance = Additional;
+                            QuickEntry = false;
+                            Visible = false;
                         }
                         field("Bill-to Address"; Rec."Bill-to Address")
                         {
@@ -850,7 +916,7 @@ page 42 "Sales Order"
                             field("Bill-to County"; Rec."Bill-to County")
                             {
                                 ApplicationArea = Basic, Suite;
-                                Caption = 'County';
+                                CaptionClass = '5,1,' + Rec."Bill-to Country/Region Code";
                                 Editable = (BillToOptions = BillToOptions::"Custom Address") or (Rec."Bill-to Customer No." <> Rec."Sell-to Customer No.");
                                 Enabled = (BillToOptions = BillToOptions::"Custom Address") or (Rec."Bill-to Customer No." <> Rec."Sell-to Customer No.");
                                 Importance = Additional;
@@ -2603,7 +2669,7 @@ page 42 "Sales Order"
     begin
         JobQueuesUsed := SalesSetup.JobQueueActive();
         SetExtDocNoMandatoryCondition();
-        IsPowerAutomatePrivacyNoticeApproved := PrivacyNotice.GetPrivacyNoticeApprovalState(PrivacyNoticeRegistrations.GetPowerAutomatePrivacyNoticeId()) = "Privacy Notice Approval State"::Agreed;
+        IsPowerAutomatePrivacyNoticeApproved := PrivacyNotice.GetPrivacyNoticeApprovalState(FlowServiceManagement.GetPowerAutomatePrivacyNoticeId()) = "Privacy Notice Approval State"::Agreed;
     end;
 
     trigger OnInsertRecord(BelowxRec: Boolean): Boolean
@@ -2699,7 +2765,7 @@ page 42 "Sales Order"
         CustomerMgt: Codeunit "Customer Mgt.";
         FormatAddress: Codeunit "Format Address";
         PrivacyNotice: Codeunit "Privacy Notice";
-        PrivacyNoticeRegistrations: Codeunit "Privacy Notice Registrations";
+        FlowServiceManagement: Codeunit "Flow Service Management";
         ChangeExchangeRate: Page "Change Exchange Rate";
         Usage: Option "Order Confirmation","Work Order","Pick Instruction";
         JobQueueVisible: Boolean;
@@ -2725,7 +2791,6 @@ page 42 "Sales Order"
         OpenPostedSalesOrderQst: Label 'The order is posted as number %1 and moved to the Posted Sales Invoices window.\\Do you want to open the posted invoice?', Comment = '%1 = posted document number';
         PaymentServiceVisible: Boolean;
         PaymentServiceEnabled: Boolean;
-        IsPostingGroupEditable: Boolean;
         EmptyShipToCodeErr: Label 'The Code field can only be empty if you select Custom Address in the Ship-to field.';
         SureToRejectMsg: Label 'Rejecting this order will remove it from your company and send it back to the partner company.\\Do you want to continue?';
         CanRequestApprovalForFlow: Boolean;
@@ -2753,6 +2818,7 @@ page 42 "Sales Order"
         CallNotificationCheck: Boolean;
         DocumentIsPosted: Boolean;
         ShowQuoteNo: Boolean;
+        IsPostingGroupEditable: Boolean;
 
     local procedure ActivateFields()
     begin
@@ -2814,6 +2880,7 @@ page 42 "Sales Order"
 
     local procedure ApproveCalcInvDisc()
     begin
+        Rec.TestStatusOpen();
         CurrPage.SalesLines.PAGE.ApproveCalcInvDisc();
     end;
 

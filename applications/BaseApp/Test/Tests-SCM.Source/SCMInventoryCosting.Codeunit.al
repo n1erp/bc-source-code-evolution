@@ -39,6 +39,7 @@ codeunit 137007 "SCM Inventory Costing"
         RolledUpCapacityDoNotMatchErr: Label 'Rolled-Up Capacity values must match.';
         MinutesLbl: Label 'MINUTES';
         PCSLbl: Label 'PCS';
+        ItemCardErr: Label 'Item Card must be enabled.';
 
     [Test]
     [Scope('OnPrem')]
@@ -133,7 +134,7 @@ codeunit 137007 "SCM Inventory Costing"
         UnitAmount := CreateAndPostItemJournalLine(ChildItem."No.", ProductionOrder.Quantity, '');
 
         // Exercise: Run Update Unit Cost batch Report.
-        LibraryCosting.UpdateUnitCost(ProductionOrder, CalcMethod::"One Level", false);
+        LibraryManufacturing.UpdateUnitCost(ProductionOrder, CalcMethod::"One Level", false);
 
         // Verify: Verify that Unit Cost on Prod. Order Line is updated from Child Item Unit Amount.
         VerifyUnitCostInProductionOrderLine(ProductionOrder, UnitAmount);
@@ -1492,6 +1493,36 @@ codeunit 137007 "SCM Inventory Costing"
         Assert.AreEqual(ExpectedValue, ActualValue, RolledUpCapacityDoNotMatchErr);
     end;
 
+    [Test]
+    procedure NewActionToOpenSelectedItemCardInItemAvailabilityByBOMLevel()
+    var
+        Item: Record Item;
+        ChildItem: Record Item;
+        ProductionOrder: Record "Production Order";
+        ProdOrderLine: Record "Prod. Order Line";
+        ItemAvailabilityByBOMLevel: TestPage "Item Availability by BOM Level";
+    begin
+        // [SCENARIO 574240] New action to Open Selected Item Card in Item Availability by BOM Level.
+        Initialize();
+
+        // [GIVEN] Create Item Setup with Parent Item and Child Item.
+        CreateItemsSetup(Item, ChildItem);
+
+        // [GIVEN] Create and Refresh Released Production Order
+        CreateAndRefreshReleasedProductionOrder(ProductionOrder, Item."No.");
+
+        // [GIVEN] Find Production Line.
+        ProdOrderLine.SetRange("Prod. Order No.", ProductionOrder."No.");
+        ProdOrderLine.FindFirst();
+
+        // [WHEN] Open Item Availability By BOM Level page.
+        ItemAvailabilityByBOMLevel.OpenEdit();
+        ItemAvailabilityByBOMLevel.Filter.SetFilter("No.", ProdOrderLine."Item No.");
+
+        // [THEN] Item Action should be enabled.
+        Assert.IsTrue(ItemAvailabilityByBOMLevel."Item Card".Enabled(), ItemCardErr);
+    end;
+
     local procedure Initialize()
     var
         LibraryERMCountryData: Codeunit "Library - ERM Country Data";
@@ -2123,11 +2154,10 @@ codeunit 137007 "SCM Inventory Costing"
     var
         BOMBuffer: Record "BOM Buffer";
         CalculateBOMTree: Codeunit "Calculate BOM Tree";
-        TreeType: Option " ",Availability,Cost;
     begin
         Item.SetRange("Date Filter", 0D, WorkDate());
         CalculateBOMTree.SetShowTotalAvailability(true);
-        CalculateBOMTree.GenerateTreeForItems(Item, BOMBuffer, TreeType::Availability);
+        CalculateBOMTree.GenerateTreeForManyItems(Item, BOMBuffer, "BOM Tree Type"::Availability);
     end;
 
     local procedure RunBOMStructurePage(var Item: Record Item)

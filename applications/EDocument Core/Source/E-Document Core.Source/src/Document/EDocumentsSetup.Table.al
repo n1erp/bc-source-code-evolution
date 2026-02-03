@@ -3,14 +3,16 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 namespace Microsoft.eServices.EDocument;
+
 using System.Environment;
 using System.Azure.Identity;
 
 table 6107 "E-Documents Setup"
 {
     Access = Internal;
-    InherentEntitlements = X;
-    InherentPermissions = R;
+    InherentEntitlements = RIX;
+    InherentPermissions = RX;
+    ReplicateData = false;
 
     fields
     {
@@ -35,25 +37,55 @@ table 6107 "E-Documents Setup"
     procedure IsNewEDocumentExperienceActive(): Boolean
     var
         EnvironmentInformation: Codeunit "Environment Information";
-        AzureADTenant: Codeunit "Azure AD Tenant";
+        TenantId: Text;
     begin
         Clear(Rec);
         if Rec.FindFirst() then
             if Rec."New E-Document Experience" then
                 exit(true);
-        if AzureADTenant.GetAadTenantId() in [
+
+        if TryGetAadTenantId(TenantId) then
+            if TenantId in [
+                '7bfacc13-5977-43eb-ae75-63e4cbf78029',
+                '5d02776e-8cf2-4fae-8cac-a52cfdfbe90f',
+                'f0ac72d1-c1b3-4c2a-a196-8fb82cac5934',
+                '4cde9473-edc6-464d-98c9-921bb36bab03',
+                '1fe0f01e-1d4a-4e55-86d7-c45a5b9bf1a6',
+                '62c3bd14-7298-4281-a12a-ec3a78c22957',
+                'e5afa896-1f57-4c74-b9cd-65638c0f77da'
+            ] then
+                exit(true);
+
+        if EnvironmentInformation.GetEnvironmentSetting('EnableNewEDocumentExperience') <> '' then
+            exit(true);
+
+        exit(EnvironmentInformation.GetApplicationFamily() in ['US', 'AU', 'NZ', 'GB', 'W1'])
+    end;
+
+    procedure IsEDocHistoricalMatchingWithLLMActive(): Boolean
+    var
+        EnvironmentInformation: Codeunit "Environment Information";
+        EnvironmentEnabledValueTok: Label 'true', Locked = true;
+        TenantId: Text;
+    begin
+        
+        if TryGetAadTenantId(TenantId) then
+            if TenantId in [
             '7bfacc13-5977-43eb-ae75-63e4cbf78029',
             '5d02776e-8cf2-4fae-8cac-a52cfdfbe90f',
-            'f0ac72d1-c1b3-4c2a-a196-8fb82cac5934',
-            '4cde9473-edc6-464d-98c9-921bb36bab03',
-            '1fe0f01e-1d4a-4e55-86d7-c45a5b9bf1a6',
-            '62c3bd14-7298-4281-a12a-ec3a78c22957',
-            'e5afa896-1f57-4c74-b9cd-65638c0f77da'
-        ] then
-            exit(true);
-        if not EnvironmentInformation.IsSandbox() then
-            exit(false);
-        exit(EnvironmentInformation.GetEnvironmentSetting('EnableNewEDocumentExperience') <> '');
+            'f0ac72d1-c1b3-4c2a-a196-8fb82cac5934'
+            ] then
+                exit(true);
+
+        exit(LowerCase(EnvironmentInformation.GetEnvironmentSetting('EnableEDocHistoricalMatchingWithLLM')) = EnvironmentEnabledValueTok);
+    end;
+
+    [TryFunction]
+    local procedure TryGetAadTenantId(var TenantId: Text)
+    var
+        AzureADTenant: Codeunit "Azure AD Tenant";
+    begin
+        TenantId := AzureADTenant.GetAadTenantId();
     end;
 
     [InherentPermissions(PermissionObjectType::TableData, Database::"E-Documents Setup", 'I')]

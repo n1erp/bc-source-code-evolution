@@ -71,6 +71,9 @@
         UnitPriceMustMatchErr: Label 'Unit Price must match.';
         PlannedShipmentDateErr: Label 'Planned Shipment Date must be %1 in %2.', Comment = '%1= Value ,%2=Table Name.';
         ServiceChargeLineExist: Label 'Service Charge Line exist';
+        CorrectPostedSalesInvoiceErr: Label 'Cancelled must be %1 for %2', Comment = '%1= Value ,%2=Table Name';
+        SalesLineQtyErr: Label 'Sales Line %1 must be equal to %2', Comment = '%1= Field ,%2= Value';
+        OptionString: Option PostedReturnReceipt,PostedInvoices,PostedShipments,PostedCrMemo;
 
     [Test]
     [Scope('OnPrem')]
@@ -2216,7 +2219,7 @@
         //[GIVEN] wharehouse location with pick and put-away true
         LibraryWarehouse.CreateLocationWMS(Location, false, true, true, false, false);
 
-        // [GIVEN] Non-Inventory Item and Regular Item with some inventory on location       
+        // [GIVEN] Non-Inventory Item and Regular Item with some inventory on location
         LibraryInventory.CreateNonInventoryTypeItem(NonInventoryItemItem);
         LibraryInventory.CreateItem(RegularItem);
         Qty := LibraryRandom.RandInt(1000);
@@ -3313,7 +3316,6 @@
         // [SCENARIO 215821] Sales Line's G/L Account validation can be done using partial-typed "No." value
         // [SCENARIO 252065]
         Initialize();
-        EnableFindRecordByNo();
         No := 'GLACC_TEST_GLACC';
         Description := 'Description(Test)Description';
 
@@ -3327,13 +3329,6 @@
         // [WHEN] Validate sales line's "Description" = "glacc"/"(desc)"/"glac"/"(des"/"acc"/"esc)"/"xesc)"
         // [THEN] Sales line's: "No." = "GLACC", "Description" = "(Desc)"
         VerifySalesLineFindRecordByNo(SalesLine, 'glacc_test_glacc', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'description(test)des', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'glacc_test', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'description(test', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'test_glacc', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'test)description', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'lacc_test_glac', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'ription(test)descrip', No, Description);
 
         // Tear down
         GLAccount.Get(No);
@@ -3354,7 +3349,6 @@
         // [SCENARIO 215821] Sales Line's Item validation can be done using partial-typed "No." value
         // [SCENARIO 252065]
         Initialize();
-        EnableFindRecordByNo();
         No := 'ITEM_TEST_ITEM';
         Description := 'Description(Test)Description';
 
@@ -3368,13 +3362,6 @@
         // [WHEN] Validate sales line's "Description" = "item"/"desc"/"ite"/"des"/"tem"/"esc"/"xesc"
         // [THEN] Sales line's: "No." = "ITEM", "Description" = "(Desc)"
         VerifySalesLineFindRecordByNo(SalesLine, 'item_test_item', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'description(test)des', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'item_test', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'description(test', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'test_item', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'test)description', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'tem_test_ite', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'ription(test)descrip', No, Description);
 
         // Tear down
         Item.Get(No);
@@ -3395,7 +3382,6 @@
         // [SCENARIO 215821] Sales Line's Item Charge validation can be done using partial-typed "No." value
         // [SCENARIO 252065]
         Initialize();
-        EnableFindRecordByNo();
         No := 'ITEMCH_TEST_ITEMCH';
         Description := 'Description(Test)Description';
 
@@ -3409,13 +3395,6 @@
         // [WHEN] Validate sales line's "Description" = "itemcharge"/"desc"/"itemch"/"des"/"charge"/"esc"/"xesc"
         // [THEN] Sales line's: "No." = "ITEMCHARGE", "Description" = "(Desc)"
         VerifySalesLineFindRecordByNo(SalesLine, 'itemch_test_itemch', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'description(test)des', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'itemch_test', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'description(test', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'test_itemch', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'test)description', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'emch_test_item', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'ription(test)descrip', No, Description);
 
         // Tear down
         ItemCharge.Get(No);
@@ -3436,7 +3415,6 @@
         // [SCENARIO 215821] Sales Line's Fixed Asset validation can be done using partial-typed "No." value
         // [SCENARIO 252065]
         Initialize();
-        EnableFindRecordByNo();
         No := 'FA_TEST_FA';
         Description := 'Description(Test)Description';
 
@@ -3450,13 +3428,6 @@
         // [WHEN] Validate sales line's "Description" = "fixedasset"/"desc"/"fixed"/"des"/"asset"/"esc"/"xesc"
         // [THEN] Sales line's: "No." = "FIXEDASSET", "Description" = "(Desc)"
         VerifySalesLineFindRecordByNo(SalesLine, 'fa_test_fa', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'description(test)des', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'fa_test', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'description(test', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'test_fa', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'test)description', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'a_test_f', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'ription(test)descrip', No, Description);
 
         // Tear down
         FixedAsset.Get(No);
@@ -3477,7 +3448,6 @@
         // [SCENARIO 215821] Sales Line's Resource validation can be done using partial-typed "No." value
         // [SCENARIO 252065]
         Initialize();
-        EnableFindRecordByNo();
         No := 'RES_TEST_RES';
         Description := 'Description(Test)Description';
 
@@ -3491,13 +3461,6 @@
         // [WHEN] Validate sales line's "Description" = "resource"/"desc"/"res"/"des"/"ource"/"esc"/"xesc"
         // [THEN] Sales line's: "No." = "RESOURCE", "Description" = "(Desc)"
         VerifySalesLineFindRecordByNo(SalesLine, 'res_test_res', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'description(test)des', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'res_test', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'description(test', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'test_res', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'test)description', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'es_test_re', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'ription(test)descrip', No, Description);
 
         // Tear down
         Resource.Get(No);
@@ -3518,7 +3481,6 @@
         // [SCENARIO 222522] Sales Line's Standard Text validation can be done using partial-typed "No." value
         // [SCENARIO 252065]
         Initialize();
-        EnableFindRecordByNo();
         No := 'STDTEXT_TEST_STDTEXT';
         Description := 'Description(Test)Description';
 
@@ -3531,12 +3493,6 @@
         // [WHEN] Validate sales line's "Description" = "stdtext"/"desc"/"stdte"/"des"/"tdtext"/"esc"/"xesc"
         // [THEN] Sales line's: "No." = "STDTEXT", "Description" = "(Desc)"
         VerifySalesLineFindRecordByNo(SalesLine, 'stdtext_test_stdtext', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'description(test)des', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'stdtext_test', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'test_stdtext', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'test)description', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'tdtext_test_stdtex', No, Description);
-        VerifySalesLineFindRecordByNo(SalesLine, 'ription(test)descrip', No, Description);
 
         // Tear down
         StandardText.Get(No);
@@ -4785,7 +4741,7 @@
         SalesOrderCard."No.".SetValue(SalesOrderNo);
         SalesOrderCard."Sell-to Customer No.".SetValue(LibrarySales.CreateCustomerNo());
 
-        // [GIVEN] Stan subscribes to OnBeforeSetDefaultType of page Sales Order Subform. 
+        // [GIVEN] Stan subscribes to OnBeforeSetDefaultType of page Sales Order Subform.
         // [GIVEN] Type is set to "Fixed Asset" inside subscriber when a new order line is created.
         BindSubscription(ERMSalesOrder);
 
@@ -4907,7 +4863,7 @@
         SalesLine2: Record "Sales Line";
         SalesLine3: Record "Sales Line";
     begin
-        // [SCENARIO] Create sales order with location for item and non-inventory items. 
+        // [SCENARIO] Create sales order with location for item and non-inventory items.
         // Bin code should only be possible to set for item.
         Initialize();
 
@@ -5117,7 +5073,7 @@
         // [GIVEN] Post Sales Order
         DocumentNo := LibrarySales.PostSalesDocument(SalesHeader, true, true);
 
-        // [GIVEN] Correct Posted Sales Invoice        
+        // [GIVEN] Correct Posted Sales Invoice
         SalesInvHeader.Get(DocumentNo);
         CorrectPostedSalesInvoice.CancelPostedInvoice(SalesInvHeader);
 
@@ -5168,7 +5124,7 @@
         // [GIVEN] Post Sales Order
         DocumentNo := LibrarySales.PostSalesDocument(SalesHeader, true, true);
 
-        // [GIVEN] Correct Posted Sales Invoice        
+        // [GIVEN] Correct Posted Sales Invoice
         SalesInvHeader.Get(DocumentNo);
         CorrectPostedSalesInvoice.CancelPostedInvoice(SalesInvHeader);
 
@@ -5212,7 +5168,7 @@
         LibrarySales.CreateSalesDocumentWithItem(SalesHeader, SalesLine, SalesHeader."Document Type"::Order,
           Customer."No.", '', LibraryRandom.RandInt(10), '', 0D);
 
-        // [GIVEN] Update value of Dimension on Sales Header.        
+        // [GIVEN] Update value of Dimension on Sales Header.
         DimensionSetID := UpdateDimensionOnSalesHeader(SalesHeader);
 
         // [GIVEN] Open Sales Order
@@ -5222,7 +5178,7 @@
         // [WHEN] Update Ship-to Code on Sales Order
         SalesOrder.ShippingOptions.SetValue(ShipToOptions::"Alternate Shipping Address");
 
-        // [THEN] Verify Dimension Set ID is not changed        
+        // [THEN] Verify Dimension Set ID is not changed
         SalesHeader.Get(SalesHeader."Document Type"::Order, SalesHeader."No.");
         Assert.IsTrue(SalesHeader."Dimension Set ID" = DimensionSetID, DimensionSetIdHasChangedMsg);
     end;
@@ -5238,14 +5194,14 @@
         ServiceChargeAmt: array[2] of Decimal;
         BillToOptions: Option "Default (Customer)","Another Customer";
     begin
-        // [SCENARIO 461917] Verify Service Charge line is removed and new is created on update Bill-to Customer on Sales Order 
+        // [SCENARIO 461917] Verify Service Charge line is removed and new is created on update Bill-to Customer on Sales Order
         // [GIVEN] Initialize
         Initialize();
 
         // [GIVEN] Enable invoice discount calculation on "Sales & Receivables Setup".
         LibrarySales.SetCalcInvDiscount(true);
 
-        // [GIVEN] Create two Customers with Service Charge line 
+        // [GIVEN] Create two Customers with Service Charge line
         CreateCustomerWithServiceChargeAmount(CustomerNo[1], ServiceChargeAmt[1]);
         CreateCustomerWithServiceChargeAmount(CustomerNo[2], ServiceChargeAmt[2]);
 
@@ -5258,7 +5214,7 @@
         Assert.RecordCount(SalesLine, 1);
         SalesLine.TestField(Amount, ServiceChargeAmt[1]);
 
-        // [WHEN] Sales Order page is opened, and Bill-to Customer is picked        
+        // [WHEN] Sales Order page is opened, and Bill-to Customer is picked
         SalesOrder.OpenEdit();
         SalesOrder.Filter.SetFilter("No.", SalesHeader."No.");
         SalesOrder.BillToOptions.SetValue(BillToOptions::"Another Customer");
@@ -5284,7 +5240,7 @@
         SalesCreditMemo: TestPage "Sales Credit Memo";
         PostedSalesInvoices: TestPage "Posted Sales Invoices";
     begin
-        // [SCENARIO 474642] Verify Sales Order Quantities are updated back when using Cancel funtion in Sales Invoice 
+        // [SCENARIO 474642] Verify Sales Order Quantities are updated back when using Cancel funtion in Sales Invoice
         // If there is a workflow for Sales Credit Memo enabled.
         Initialize();
 
@@ -5323,7 +5279,7 @@
         SalesCreditMemo.SendApprovalRequest.Invoke();
         SalesCreditMemo.Post.Invoke();
 
-        // [WHEN] Find the Sales Order Line 
+        // [WHEN] Find the Sales Order Line
         SalesLine.SetRange("Document No.", SalesHeader."No.");
         SalesLine.FindFirst();
 
@@ -5495,11 +5451,11 @@
         CreateSalesLineWithUnitPrice(
           SalesLine, SalesHeader, SalesLine.Type::Item, CreateItem(), LibraryRandom.RandDecInDecimalRange(5, 10, 0), LibraryRandom.RandDecInRange(500, 100, 2));
 
-        // [GIVEN] Create Sales Line with Type Charge Item  
+        // [GIVEN] Create Sales Line with Type Charge Item
         CreateSalesLineWithUnitPrice(
           SalesLine1, SalesHeader, SalesLine1.Type::"Charge (Item)", CreateItemChargeWithVAT(SalesLine."VAT Prod. Posting Group"), 1, LibraryRandom.RandDecInRange(50, 100, 2));
 
-        // [GIVEN] Update the first Sales Line with Qty. to Ship as 1  
+        // [GIVEN] Update the first Sales Line with Qty. to Ship as 1
         SalesLine.Validate("Qty. to Ship", 1);
         SalesLine.Modify();
 
@@ -5532,7 +5488,7 @@
         SalesHeader: Record "Sales Header";
         SalesLine: Record "Sales Line";
     begin
-        // [SCENARIO 522444] When run Release action from a Sales Order having a Sales Line without 
+        // [SCENARIO 522444] When run Release action from a Sales Order having a Sales Line without
         // Unit of Measure Code, then it gives error and the document is not released.
         Initialize();
 
@@ -5645,14 +5601,14 @@
         CustomerNo: Code[20];
         ServiceChargeAmt: Decimal;
     begin
-        // [SCENARIO 557866]  Service Charge Line is not created automaticallly when user change posting date and        
+        // [SCENARIO 557866]  Service Charge Line is not created automaticallly when user change posting date and
         // Calc. Inv Discount is off in Sales & Receivables Setup.
         Initialize();
 
         // [GIVEN] Disable invoice discount calculation on "Sales & Receivables Setup".
         LibrarySales.SetCalcInvDiscount(false);
 
-        // [GIVEN] Create Customer with Service Charge Line. 
+        // [GIVEN] Create Customer with Service Charge Line.
         CreateCustomerWithServiceChargeAmount(CustomerNo, ServiceChargeAmt);
 
         // [GIVEN] Create Sales Order.
@@ -5664,6 +5620,291 @@
 
         // [THEN] Verify Service Charge Line is not created.
         Assert.IsFalse(FindSalesServiceChargeLineexist(SalesLine, SalesHeader), ServiceChargeLineExist);
+    end;
+
+    [Test]
+    procedure CorrectPostedSalesInvoiceWithItemHasDimensionMandatory()
+    var
+        DefaultDimension: Record "Default Dimension";
+        Dimension: Record Dimension;
+        DimensionValue: Record "Dimension Value";
+        ItemJournalLine: Record "Item Journal Line";
+        SalesHeader: Record "Sales Header";
+        SalesLine: array[2] of Record "Sales Line";
+        SalesInvHeader: Record "Sales Invoice Header";
+        Item: Record Item;
+        CorrectPostedSalesInvoice: Codeunit "Correct Posted Sales Invoice";
+        Quantity: Decimal;
+        DocumentNo: Code[20];
+    begin
+        // [SCENARIO 575341] Verify correct a Posted Invoice with an Item that has Dimension Code Mandatory
+        Initialize();
+        Quantity := LibraryRandom.RandDecInRange(5, 5, 2);
+
+        // [GIVEN] Create Dimension and Dimension Value.
+        LibraryDimension.CreateDimension(Dimension);
+        LibraryDimension.CreateDimensionValue(DimensionValue, Dimension.Code);
+
+        // [GIVEN] Create an Item with Dimension and Value Posting as Code Mandatory.
+        LibraryInventory.CreateItem(Item);
+        LibraryDimension.CreateDefaultDimensionItem(DefaultDimension, Item."No.", Dimension.Code, '');
+        DefaultDimension.Validate("Value Posting", DefaultDimension."Value Posting"::"Code Mandatory");
+        DefaultDimension.Modify(true);
+
+        // [GIVEN] Create Item Journal Line with Dimension Set ID.
+        LibraryInventory.CreateItemJournalLineInItemTemplate(ItemJournalLine, item."No.", '', '', LibraryRandom.RandDec(20, 2));
+        ItemJournalLine.Validate(
+          "Dimension Set ID",
+          LibraryDimension.CreateDimSet(ItemJournalLine."Dimension Set ID", DimensionValue."Dimension Code", DimensionValue.Code));
+        ItemJournalLine.Modify(true);
+
+        // [GIVEN] Post Item Joutnal Line.
+        LibraryInventory.PostItemJournalLine(ItemJournalLine."Journal Template Name", ItemJournalLine."Journal Batch Name");
+
+        // [GIVEN] Create Sales Header
+        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Order, CreateCustomer());
+
+        // [GIVEN] Create first Sales Line with Dimension Set ID.
+        LibrarySales.CreateSalesLine(SalesLine[1], SalesHeader, SalesLine[1].Type::Item, Item."No.", Quantity);
+        SalesLine[1].Validate("Unit Price", LibraryRandom.RandDec(100, 2));
+        SalesLine[1].Validate(
+        "Dimension Set ID",
+        LibraryDimension.CreateDimSet(SalesLine[1]."Dimension Set ID", DimensionValue."Dimension Code", DimensionValue.Code));
+        SalesLine[1].Modify(true);
+
+        // [GIVEN] Create Second Sales Line with Qty. to Ship, Qty. to Invoice as 0.
+        LibrarySales.CreateSalesLine(SalesLine[2], SalesHeader, SalesLine[2].Type::Item, Item."No.", Quantity);
+        SalesLine[2].Validate("Unit Price", LibraryRandom.RandDec(100, 2));
+        SalesLine[2].Validate("Qty. to Ship", 0);
+        SalesLine[2].Validate("Qty. to Invoice", 0);
+        SalesLine[2].Modify(true);
+
+        // [GIVEN] Post Sales Order
+        DocumentNo := LibrarySales.PostSalesDocument(SalesHeader, true, true);
+
+        // [WHEN] Correct Posted Sales Invoice
+        SalesInvHeader.Get(DocumentNo);
+        CorrectPostedSalesInvoice.CancelPostedInvoice(SalesInvHeader);
+
+        // [THEN] Verify Correction of Posted Sales Invoice done successfully.
+        SalesInvHeader.CalcFields(Cancelled);
+        Assert.IsTrue(SalesInvHeader.Cancelled,
+             StrSubstNo(
+                CorrectPostedSalesInvoiceErr,
+                'TRUE',
+                SalesInvHeader.TableCaption()));
+    end;
+
+    [Test]
+    [HandlerFunctions('ConfirmHandlerYes')]
+    procedure VerifySalesOrderUpdatedAfterPartialCorrectPostedSalesInvoice()
+    var
+        Item: Record Item;
+        SalesLine: Record "Sales Line";
+        SalesHeader: Record "Sales Header";
+        SalesHeader2: Record "Sales Header";
+        SalesLine2: Record "Sales Line";
+        SalesInvoiceHeader: Record "Sales Invoice Header";
+        CorrectPostedSalesInvoice: Codeunit "Correct Posted Sales Invoice";
+        SalesCreditMemo: TestPage "Sales Credit Memo";
+    begin
+        // [SCENARIO 578443] Verify quantity on posted Sales Order updated correctly after partial posting of Corrective Credit memo.
+        Initialize();
+
+        // [GIVEN] Create an Item.
+        LibraryInventory.CreateItem(Item);
+
+        // [GIVEN] Create Sales Header.
+        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Order, CreateCustomer());
+
+        // [GIVEN] Create Sales Line with Quanity as 10.
+        CreateSalesLine(SalesLine, SalesHeader, SalesLine.Type::Item, Item."No.", LibraryRandom.RandIntInRange(10, 10), LibraryRandom.RandDec(100, 2));
+
+        // [GIVEN] Update Qty To Ship in Sales Line.
+        SalesLine.Validate("Qty. to Ship", LibraryRandom.RandIntInRange(5, 5));
+        SalesLine.Modify(true);
+
+        // [GIVEN] Post the partial Sales order.
+        SalesInvoiceHeader.Get(LibrarySales.PostSalesDocument(SalesHeader, true, true));
+
+        // [GIVEN] Create Corrective Credit Memo.
+        CorrectPostedSalesInvoice.CreateCreditMemoCopyDocument(SalesInvoiceHeader, SalesHeader2);
+
+        // [GIVEN] Find Sales Line of created Sales Credit Memo.
+        SalesLine2.SetRange("Document Type", SalesHeader2."Document Type");
+        SalesLine2.SetRange("Document No.", SalesHeader2."No.");
+        SalesLine2.SetRange("No.", Item."No.");
+        SalesLine2.FindFirst();
+        SalesLine2.Validate(Quantity, LibraryRandom.RandIntInRange(2, 2));
+        SalesLine2.Modify(true);
+
+        // [WHEN] Post the Corrective Credit Memo
+        SalesCreditMemo.OpenView();
+        SalesCreditMemo.GotoRecord(Salesheader2);
+        SalesCreditMemo.Post.Invoke();
+
+        // [THEN] Verify Sales Order Qty. to Ship and Qty. to Invoice are updated as 7 in the sales line.
+        VerifySalesOrderAfterPartialPostCorrectiveCreditMemo(SalesHeader."No.", 7);
+    end;
+
+    [Test]
+    [HandlerFunctions('ConfirmHandlerYes')]
+    procedure VerifySalesOrderUpdatedAfterCorrectPostedSalesInvoiceDifferentQuantity()
+    var
+        Item: Record Item;
+        SalesLine: Record "Sales Line";
+        SalesLine2: Record "Sales Line";
+        SalesHeader: Record "Sales Header";
+        SalesHeader2: Record "Sales Header";
+        SalesInvoiceHeader: Record "Sales Invoice Header";
+        CorrectPostedSalesInvoice: Codeunit "Correct Posted Sales Invoice";
+        SalesCreditMemo: TestPage "Sales Credit Memo";
+    begin
+        // [SCENARIO 578443] Verify quantity on posted Sales Order updated correctly after partial posting of Corrective Credit memo.
+        Initialize();
+
+        // [GIVEN] Create an Item.
+        LibraryInventory.CreateItem(Item);
+
+        // [GIVEN] Create Sales Header.
+        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Order, CreateCustomer());
+
+        // [GIVEN] Create Sales Line with Quanity as 10.
+        CreateSalesLine(SalesLine, SalesHeader, SalesLine.Type::Item, Item."No.", LibraryRandom.RandIntInRange(10, 10), LibraryRandom.RandDec(100, 2));
+
+        // [GIVEN] Update Qty To Ship in Sales Line.
+        SalesLine.Validate("Qty. to Ship", LibraryRandom.RandIntInRange(3, 3));
+        SalesLine.Modify(true);
+
+        // [GIVEN] Ship the partial Sales order with Qty. to Ship as 3.
+        LibrarySales.PostSalesDocument(SalesHeader, true, false);
+
+        // [GIVEN] Update Qty To Ship in Sales Line as 2.
+        SalesLine2.Get(SalesLine."Document Type", SalesLine."Document No.", SalesLine."Line No.");
+        SalesLine2.Validate("Qty. to Ship", LibraryRandom.RandIntInRange(2, 2));
+        SalesLine2.Modify(true);
+
+        // [GIVEN] Ship the partial Sales order with Qty. to Ship as 2.
+        LibrarySales.PostSalesDocument(SalesHeader, true, false);
+
+        // [GIVEN] Update Qty. to Ship as 0 and Qty. to Invoice as 5 in Sales Line.
+        SalesLine2.Get(SalesLine."Document Type", SalesLine."Document No.", SalesLine."Line No.");
+        SalesLine2.Validate("Qty. to Ship", 0);
+        SalesLine2.Validate("Qty. to Invoice", 5);
+        SalesLine2.Modify(true);
+        SalesInvoiceHeader.Get(LibrarySales.PostSalesDocument(SalesHeader, false, true));
+
+        // [GIVEN] Create Corrective Credit Memo.
+        CorrectPostedSalesInvoice.CreateCreditMemoCopyDocument(SalesInvoiceHeader, SalesHeader2);
+
+        // [WHEN] Post the Corrective Credit Memo
+        SalesCreditMemo.OpenView();
+        SalesCreditMemo.GotoRecord(Salesheader2);
+        SalesCreditMemo.Post.Invoke();
+
+        // [THEN] Verify Sales Order Qty. to Ship and Qty. to Invoice are updated as 10 in the sales line.
+        VerifySalesOrderAfterPartialPostCorrectiveCreditMemo(SalesHeader."No.", 10);
+    end;
+
+    [Test]
+    [HandlerFunctions('ConfirmHandlerYes')]
+    procedure VerifySalesOrderUpdatedAfterCorrectPostedSalesInvoiceApplyEntries()
+    var
+        Item: Record Item;
+        SalesLine: Record "Sales Line";
+        SalesHeader: Record "Sales Header";
+        SalesHeader2: Record "Sales Header";
+        SalesInvoiceHeader: Record "Sales Invoice Header";
+        CustLedgEntry: Record "Cust. Ledger Entry";
+        CorrectPostedSalesInvoice: Codeunit "Correct Posted Sales Invoice";
+        SalesCreditMemo: TestPage "Sales Credit Memo";
+    begin
+        // [SCENARIO 578443] Verify quantity on posted Sales Order updated correctly after posting of Corrective Credit memo with Application.
+        Initialize();
+
+        // [GIVEN] Create an Item.
+        LibraryInventory.CreateItem(Item);
+
+        // [GIVEN] Create Sales Header.
+        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Order, CreateCustomer());
+
+        // [GIVEN] Create Sales Line with Quanity as 10.
+        CreateSalesLine(SalesLine, SalesHeader, SalesLine.Type::Item, Item."No.", LibraryRandom.RandIntInRange(10, 10), LibraryRandom.RandDec(100, 2));
+
+        // [GIVEN] Update Qty To Ship in Sales Line as 5.
+        SalesLine.Validate("Qty. to Ship", LibraryRandom.RandIntInRange(5, 5));
+        SalesLine.Modify(true);
+
+        // [GIVEN] Post the partial Sales order.
+        SalesInvoiceHeader.Get(LibrarySales.PostSalesDocument(SalesHeader, true, true));
+
+        // [GIVEN] Create Corrective Credit Memo.
+        CorrectPostedSalesInvoice.CreateCreditMemoCopyDocument(SalesInvoiceHeader, SalesHeader2);
+
+        // [GIVEN] Set Applied-to ID on Customer Ledger Entry.
+        CustLedgEntry.SetRange("Document No.", SalesInvoiceHeader."No.");
+        CustLedgEntry.SetRange(Open, true);
+        CustLedgEntry.FindFirst();
+        CustLedgEntry."Applies-to ID" := SalesHeader2."No.";
+        CustLedgEntry.CalcFields("Remaining Amount");
+        CustLedgEntry."Amount to Apply" := CustLedgEntry."Remaining Amount";
+
+        // [WHEN] Post the Corrective Credit Memo
+        SalesCreditMemo.OpenView();
+        SalesCreditMemo.GotoRecord(Salesheader2);
+        SalesCreditMemo.Post.Invoke();
+
+        // [THEN] Verify Sales Order Qty. to Ship and Qty. to Invoice are updated as 10 in the sales line.
+        VerifySalesOrderAfterPartialPostCorrectiveCreditMemo(SalesHeader."No.", 10);
+    end;
+
+    [Test]
+    [HandlerFunctions('ConfirmHandlerYes,PostedSalesDocumentLinesHandler')]
+    procedure VerifyManuallyCreatedSalesCrMemoUpdateExistingSalesOrder()
+    var
+        Customer: Record Customer;
+        Item: Record Item;
+        SalesLine: Record "Sales Line";
+        SalesHeader: Record "Sales Header";
+        SalesHeader2: Record "Sales Header";
+        SalesCreditMemo: TestPage "Sales Credit Memo";
+    begin
+        // [SCENARIO 578454] Verify manually created Sales Credit Memo with get posted document lines to reverse should update the existing Sales Order.
+        Initialize();
+
+        // [GIVEN] Create an Item.
+        LibraryInventory.CreateItem(Item);
+
+        // [GIVEN] Create customer.
+        LibrarySales.CreateCustomer(Customer);
+
+        // [GIVEN] Create Sales Header.
+        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Order, Customer."No.");
+
+        // [GIVEN] Create Sales Line with Quanity as 10.
+        LibrarySales.CreateSalesLine(SalesLine, SalesHeader, SalesLine.Type::Item, Item."No.", LibraryRandom.RandIntInRange(10, 10));
+
+        // [GIVEN] Update Qty To Ship in Sales Line.
+        SalesLine.Validate("Qty. to Ship", LibraryRandom.RandIntInRange(5, 5));
+        SalesLine.Modify(true);
+
+        // [GIVEN] Post the Sales Order.
+        LibrarySales.PostSalesDocument(SalesHeader, true, true);
+
+        // [GIVEN] Create Sales Credit Memo
+        LibrarySales.CreateSalesHeader(SalesHeader2, SalesHeader2."Document Type"::"Credit Memo", Customer."No.");
+
+        // [GIVEN] Run Get Document Lines to Reverse and copy from posted sales invoice
+        GetPostedDocumentLines(SalesHeader2."No.", OptionString::PostedInvoices);
+        FindSalesLine(SalesLine, SalesHeader2."Document Type", SalesHeader2."No.", SalesLine.Type::Item);
+
+        // [WHEN] Post the Credit Memo
+        SalesCreditMemo.OpenView();
+        SalesCreditMemo.GotoRecord(SalesHeader2);
+        SalesCreditMemo.Post.Invoke();
+
+        // [THEN] Verify Sales Order Qty. to Ship and Qty. to Invoice are updated as 10 in the sales line.
+        VerifySalesOrderQuantityforManualSalesCreditMemo(SalesHeader."No.", 10);
     end;
 
     local procedure Initialize()
@@ -6080,15 +6321,6 @@
         LibrarySales.PostSalesDocument(SalesHeader, true, false);
     end;
 
-    local procedure EnableFindRecordByNo()
-    var
-        SalesReceivablesSetup: Record "Sales & Receivables Setup";
-    begin
-        SalesReceivablesSetup.Get();
-        SalesReceivablesSetup."Create Item from Item No." := true;
-        SalesReceivablesSetup.Modify();
-    end;
-
     local procedure FindSalesShipmentHeader(var SalesShipmentHeader: Record "Sales Shipment Header"; OrderNo: Code[20])
     begin
         SalesShipmentHeader.SetRange("Order No.", OrderNo);
@@ -6435,7 +6667,7 @@
             SalesLine.Insert();
         until SalesLine2.Next() = 0;
     end;
-
+#if not CLEAN25
     local procedure TotalLineDiscountInGLEntry(var SalesLine: Record "Sales Line"; DocumentNo: Code[20]): Decimal
     var
         GLEntry: Record "G/L Entry";
@@ -6447,7 +6679,7 @@
         GLEntry.SetRange("G/L Account No.", GeneralPostingSetup."Sales Line Disc. Account");
         exit(TotalAmountInGLEntry(GLEntry));
     end;
-
+#endif
     local procedure TotalInvoiceDiscountInGLEntry(var SalesLine: Record "Sales Line"; DocumentNo: Code[20]): Decimal
     var
         GLEntry: Record "G/L Entry";
@@ -6639,7 +6871,7 @@
         SalesLine.Validate("Qty. to Invoice", QtyToInvoice);
         SalesLine.Modify(true);
     end;
-
+#if not CLEAN25
     local procedure SumLineDiscountAmount(var SalesLine: Record "Sales Line"; DocumentNo: Code[20]) LineDiscountAmount: Decimal
     begin
         SalesLine.SetRange("Document No.", DocumentNo);
@@ -6648,7 +6880,7 @@
             LineDiscountAmount += SalesLine."Line Discount Amount";
         until SalesLine.Next() = 0;
     end;
-
+#endif
     local procedure SumInvoiceDiscountAmount(var SalesLine: Record "Sales Line"; DocumentNo: Code[20]) InvoiceDiscountAmount: Decimal
     begin
         SalesLine.SetRange("Document No.", DocumentNo);
@@ -7099,7 +7331,7 @@
           InvoiceDiscountAmount, SalesLine."Inv. Discount Amount", GeneralLedgerSetup."Amount Rounding Precision",
           StrSubstNo(AmountErr, SalesLine.FieldCaption("Inv. Discount Amount"), InvoiceDiscountAmount, SalesLine.TableCaption()));
     end;
-
+#if not CLEAN25
     local procedure VerifyLineDiscountAmount(SalesLine: Record "Sales Line"; DocumentNo: Code[20]; LineDiscountAmount: Decimal)
     var
         GeneralLedgerSetup: Record "General Ledger Setup";
@@ -7118,7 +7350,7 @@
           LineDiscountAmount, SalesLine."Line Discount Amount", GeneralLedgerSetup."Amount Rounding Precision",
           StrSubstNo(AmountErr, SalesLine.FieldCaption("Line Discount Amount"), LineDiscountAmount, SalesLine.TableCaption()));
     end;
-
+#endif
     local procedure VerifyPostedSalesInvoice(DocumentNo: Code[20]; LineDiscountAmount: Decimal)
     var
         GeneralLedgerSetup: Record "General Ledger Setup";
@@ -7260,7 +7492,7 @@
               StrSubstNo(VATAmountErr, VATAmountSalesLine, SalesLine.TableCaption()));
         until SalesLine.Next() = 0;
     end;
-
+#if not CLEAN25
     local procedure VerifyLineDiscountOnInvoice(SalesLine: Record "Sales Line")
     var
         GeneralLedgerSetup: Record "General Ledger Setup";
@@ -7275,7 +7507,7 @@
               StrSubstNo(AmountErr, SalesLine.FieldCaption("Line Discount Amount"), LineDiscountAmount, SalesLine.TableCaption()));
         until SalesLine.Next() = 0;
     end;
-
+#endif
     local procedure VerifyInvoiceDiscountOnInvoice(SalesLine: Record "Sales Line"; CustInvoiceDisc: Record "Cust. Invoice Disc.")
     var
         GeneralLedgerSetup: Record "General Ledger Setup";
@@ -7849,6 +8081,54 @@
             exit(true);
     end;
 
+    local procedure VerifySalesOrderAfterPartialPostCorrectiveCreditMemo(SalesHeaderNo: Code[20]; ExpectedQuantity: Decimal)
+    var
+        SalesLine: Record "Sales Line";
+    begin
+        SalesLine.SetRange("Document No.", SalesHeaderNo);
+        SalesLine.SetRange("Document Type", SalesLine."Document Type"::Order);
+        SalesLine.FindSet();
+        repeat
+            Assert.AreEqual(ExpectedQuantity, SalesLine."Qty. to Ship", StrSubstNo(
+                SalesLineQtyErr, SalesLine.FieldName("Qty. to Ship"), ExpectedQuantity));
+            Assert.AreEqual(ExpectedQuantity, SalesLine."Qty. to Invoice", StrSubstNo(
+                SalesLineQtyErr, SalesLine.FieldName("Qty. to Invoice"), ExpectedQuantity));
+        until SalesLine.Next() = 0;
+    end;
+
+    local procedure GetPostedDocumentLines(No: Code[20]; OptionString: Option)
+    var
+        SalesCreditMemo: TestPage "Sales Credit Memo";
+    begin
+        LibraryVariableStorage.Enqueue(OptionString);
+        SalesCreditMemo.OpenEdit();
+        SalesCreditMemo.FILTER.SetFilter("No.", No);
+        SalesCreditMemo.GetPostedDocumentLinesToReverse.Invoke();
+    end;
+
+    local procedure FindSalesLine(var SalesLine: Record "Sales Line"; DocumentType: Enum "Sales Document Type"; DocumentNo: Code[20]; Type: Enum "Sales Line Type")
+    begin
+        SalesLine.SetRange("Document Type", DocumentType);
+        SalesLine.SetRange("Document No.", DocumentNo);
+        SalesLine.SetRange(Type, Type);
+        SalesLine.FindFirst();
+    end;
+
+    local procedure VerifySalesOrderQuantityforManualSalesCreditMemo(SalesHeaderNo: Code[20]; ExpectedQuantity: Decimal)
+    var
+        SalesLine: Record "Sales Line";
+    begin
+        SalesLine.SetRange("Document No.", SalesHeaderNo);
+        SalesLine.SetRange("Document Type", SalesLine."Document Type"::Order);
+        SalesLine.FindSet();
+        repeat
+            Assert.AreEqual(ExpectedQuantity, SalesLine."Qty. to Ship", StrSubstNo(
+                SalesLineQtyErr, SalesLine.FieldName("Qty. to Ship"), ExpectedQuantity));
+            Assert.AreEqual(ExpectedQuantity, SalesLine."Qty. to Invoice", StrSubstNo(
+                SalesLineQtyErr, SalesLine.FieldName("Qty. to Invoice"), ExpectedQuantity));
+        until SalesLine.Next() = 0;
+    end;
+
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnBeforePostUpdateOrderLineModifyTempLine', '', false, false)]
     local procedure OnBeforePostUpdateOrderLineModifyTempLineHandler(var TempSalesLine: Record "Sales Line" temporary; WhseShip: Boolean; WhseReceive: Boolean; CommitIsSuppressed: Boolean)
     var
@@ -8025,5 +8305,23 @@
     procedure ItemSubstitutionEntriesOKModalPageHandler(var ItemSubstitution: TestPage "Item Substitution Entries")
     begin
         ItemSubstitution.OK().Invoke();
+    end;
+
+    [ModalPageHandler]
+    procedure PostedSalesDocumentLinesHandler(var PostedSalesDocumentLines: TestPage "Posted Sales Document Lines")
+    var
+        DocumentType: Option "Posted Shipments","Posted Invoices","Posted Return Receipts","Posted Cr. Memos";
+    begin
+        case LibraryVariableStorage.DequeueInteger() of
+            OptionString::PostedReturnReceipt:
+                PostedSalesDocumentLines.PostedShipmentsBtn.SetValue(Format(DocumentType::"Posted Return Receipts"));
+            OptionString::PostedInvoices:
+                PostedSalesDocumentLines.PostedShipmentsBtn.SetValue(Format(DocumentType::"Posted Invoices"));
+            OptionString::PostedShipments:
+                PostedSalesDocumentLines.PostedShipmentsBtn.SetValue(Format(DocumentType::"Posted Shipments"));
+            OptionString::PostedCrMemo:
+                PostedSalesDocumentLines.PostedShipmentsBtn.SetValue(Format(DocumentType::"Posted Cr. Memos"));
+        end;
+        PostedSalesDocumentLines.OK().Invoke();
     end;
 }

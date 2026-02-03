@@ -396,7 +396,7 @@ table 32 "Item Ledger Entry"
         }
         field(5806; "Cost Amount (Expected) (ACY)"; Decimal)
         {
-            AutoFormatExpression = GetCurrencyCode();
+            AutoFormatExpression = GetAdditionalReportingCurrencyCode();
             AutoFormatType = 1;
             CalcFormula = sum("Value Entry"."Cost Amount (Expected) (ACY)" where("Item Ledger Entry No." = field("Entry No.")));
             Caption = 'Cost Amount (Expected) (ACY)';
@@ -405,7 +405,7 @@ table 32 "Item Ledger Entry"
         }
         field(5807; "Cost Amount (Actual) (ACY)"; Decimal)
         {
-            AutoFormatExpression = GetCurrencyCode();
+            AutoFormatExpression = GetAdditionalReportingCurrencyCode();
             AutoFormatType = 1;
             CalcFormula = sum("Value Entry"."Cost Amount (Actual) (ACY)" where("Item Ledger Entry No." = field("Entry No.")));
             Caption = 'Cost Amount (Actual) (ACY)';
@@ -414,7 +414,7 @@ table 32 "Item Ledger Entry"
         }
         field(5808; "Cost Amount (Non-Invtbl.)(ACY)"; Decimal)
         {
-            AutoFormatExpression = GetCurrencyCode();
+            AutoFormatExpression = GetAdditionalReportingCurrencyCode();
             AutoFormatType = 1;
             CalcFormula = sum("Value Entry"."Cost Amount (Non-Invtbl.)(ACY)" where("Item Ledger Entry No." = field("Entry No.")));
             Caption = 'Cost Amount (Non-Invtbl.)(ACY)';
@@ -521,6 +521,13 @@ table 32 "Item Ledger Entry"
             Caption = 'Return Reason Code';
             TableRelation = "Return Reason";
         }
+        field(6603; "Item Description"; Text[100])
+        {
+            CalcFormula = lookup(Item.Description where("No." = field("Item No.")));
+            Caption = 'Item Description';
+            Editable = false;
+            FieldClass = FlowField;
+        }
     }
 
     keys
@@ -567,9 +574,9 @@ table 32 "Item Ledger Entry"
         key(Key14; "Item No.", Positive, "Location Code", "Variant Code")
         {
         }
-#pragma warning disable AS0009        
+#pragma warning disable AS0009
         key(Key17; "Item No.", Open, "Variant Code", Positive, "Lot No.", "Serial No.", "Package No.")
-#pragma warning restore AS0009        
+#pragma warning restore AS0009
         {
             IncludedFields = "Remaining Quantity";
         }
@@ -627,7 +634,15 @@ table 32 "Item Ledger Entry"
         exit(FindRecordManagement.GetLastEntryIntFieldValue(Rec, FieldNo("Entry No.")))
     end;
 
+#if not CLEAN27
+    [Obsolete('Please use GetAdditionalReportingCurrencyCode instead.', '27.0')]
     procedure GetCurrencyCode(): Code[10]
+    begin
+        exit(GetAdditionalReportingCurrencyCode())
+    end;
+
+#endif
+    procedure GetAdditionalReportingCurrencyCode(): Code[10]
     begin
         if not GLSetupRead then begin
             GLSetup.Get();
@@ -693,17 +708,6 @@ table 32 "Item Ledger Entry"
         end;
     end;
 
-#if not CLEAN24
-    [Obsolete('Unused', '24.0')]
-    procedure AppliedEntryToAdjustExists(ItemNo: Code[20]): Boolean
-    begin
-        Reset();
-        SetCurrentKey("Item No.", "Applied Entry to Adjust");
-        SetRange("Item No.", ItemNo);
-        SetRange("Applied Entry to Adjust", true);
-        exit(Find('-'));
-    end;
-#endif
 
     procedure IsOutbndConsump(): Boolean
     begin
@@ -872,34 +876,46 @@ table 32 "Item Ledger Entry"
           CalculateRemInventoryValue(ItemLedgEntryNo, ItemLedgEntryQty, RemQty, IncludeExpectedCost, 0D, PostingDate));
     end;
 
-    procedure CalculateRemInventoryValue(ItemLedgEntryNo: Integer; ItemLedgEntryQty: Decimal; RemQty: Decimal; IncludeExpectedCost: Boolean; ValuationDate: Date; PostingDate: Date): Decimal
+    procedure CalculateRemInventoryValue(ItemLedgEntryNo: Integer; ItemLedgEntryQty: Decimal; RemQty: Decimal; IncludeExpectedCost: Boolean; ValuationDate: Date; PostingDate: Date) AdjustedCost: Decimal
     var
         ValueEntry: Record "Value Entry";
-        AdjustedCost: Decimal;
-        TotalQty: Decimal;
     begin
-        ValueEntry.SetCurrentKey("Item Ledger Entry No.");
         ValueEntry.SetRange("Item Ledger Entry No.", ItemLedgEntryNo);
         if ValuationDate <> 0D then
             ValueEntry.SetRange("Valuation Date", 0D, ValuationDate);
         if PostingDate <> 0D then
             ValueEntry.SetRange("Posting Date", 0D, PostingDate);
-        ValueEntry.SetFilter("Entry Type", '<>%1', ValueEntry."Entry Type"::Rounding);
         if not IncludeExpectedCost then
             ValueEntry.SetRange("Expected Cost", false);
-        if ValueEntry.FindSet() then
-            repeat
-                if ValueEntry."Entry Type" = ValueEntry."Entry Type"::Revaluation then
-                    TotalQty := ValueEntry."Valued Quantity"
-                else
-                    TotalQty := ItemLedgEntryQty;
-                if IncludeExpectedCost then
-                    AdjustedCost += RemQty / TotalQty * (ValueEntry."Cost Amount (Actual)" + ValueEntry."Cost Amount (Expected)")
-                else
-                    AdjustedCost += RemQty / TotalQty * ValueEntry."Cost Amount (Actual)";
-            until ValueEntry.Next() = 0;
 
-        exit(AdjustedCost);
+        FilterCostEntryTypeExceptRevaluationAndRounding(ValueEntry);
+        if IncludeExpectedCost then begin
+            ValueEntry.CalcSums("Cost Amount (Actual)", "Cost Amount (Expected)");
+            AdjustedCost += RemQty / ItemLedgEntryQty * (ValueEntry."Cost Amount (Actual)" + ValueEntry."Cost Amount (Expected)");
+        end else begin
+            ValueEntry.CalcSums("Cost Amount (Actual)");
+            AdjustedCost += RemQty / ItemLedgEntryQty * ValueEntry."Cost Amount (Actual)";
+        end;
+
+        ValueEntry.SetRange("Entry Type", ValueEntry."Entry Type"::Revaluation);
+        if IncludeExpectedCost then begin
+            ValueEntry.SetLoadFields("Valued Quantity", "Cost Amount (Actual)", "Cost Amount (Expected)");
+            if ValueEntry.FindSet() then
+                repeat
+                    AdjustedCost += RemQty / ValueEntry."Valued Quantity" * (ValueEntry."Cost Amount (Actual)" + ValueEntry."Cost Amount (Expected)");
+                until ValueEntry.Next() = 0;
+        end else begin
+            ValueEntry.SetLoadFields("Valued Quantity", "Cost Amount (Actual)");
+            if ValueEntry.FindSet() then
+                repeat
+                    AdjustedCost += RemQty / ValueEntry."Valued Quantity" * ValueEntry."Cost Amount (Actual)";
+                until ValueEntry.Next() = 0;
+        end;
+    end;
+
+    local procedure FilterCostEntryTypeExceptRevaluationAndRounding(var ValueEntry: Record "Value Entry")
+    begin
+        ValueEntry.SetFilter("Entry Type", '%1|%2|%3|%4|%5', ValueEntry."Entry Type"::"Direct Cost", ValueEntry."Entry Type"::"Indirect Cost", ValueEntry."Entry Type"::"Variance", ValueEntry."Entry Type"::Total, ValueEntry."Entry Type"::"Direct Cost - Non Inventory");
     end;
 
     procedure TrackingExists() IsTrackingExist: Boolean
@@ -965,7 +981,6 @@ table 32 "Item Ledger Entry"
         if "Serial No." = '' then
             CalcFields("Reserved Quantity")
         else begin
-            ReservationEntry.SetCurrentKey("Serial No.", "Source ID", "Source Ref. No.", "Source Type", "Source Subtype", "Source Batch Name", "Source Prod. Order Line");
             ReservationEntry.SetRange("Serial No.", "Serial No.");
             ReservationEntry.SetRange("Source ID", '');
             ReservationEntry.SetRange("Source Ref. No.", "Entry No.");

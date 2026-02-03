@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Finance.Dimension.Correction;
 
 using System.Threading;
@@ -93,6 +97,8 @@ page 2593 "Dim Correction Schedule"
 
         if NewPageCaption <> '' then
             CurrPage.Caption(NewPageCaption);
+
+        OnAfterOnOpenPage(RunImmediately);
     end;
 
 
@@ -139,4 +145,9 @@ page 2593 "Dim Correction Schedule"
         NewPageCaption: Text;
         AdvancedSettingsLbl: Label 'Advanced Settings';
         ScheduleAfterBusinessHoursMsg: Label 'If you are correcting dimensions for a large number of entries, such as more than 1000, we recommend that you schedule the update to happen after business hours. This helps avoid performance issues.';
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterOnOpenPage(var RunImmediately: boolean)
+    begin
+    end;
 }

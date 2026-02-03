@@ -4,8 +4,6 @@
 // ------------------------------------------------------------------------------------------------
 namespace Microsoft.Inventory.Tracking;
 
-using Microsoft.Assembly.Document;
-using Microsoft.Assembly.History;
 using Microsoft.FixedAssets.FixedAsset;
 using Microsoft.HumanResources.Employee;
 using Microsoft.Inventory.Item;
@@ -14,7 +12,6 @@ using Microsoft.Inventory.Ledger;
 using Microsoft.Inventory.Planning;
 using Microsoft.Inventory.Requisition;
 using Microsoft.Inventory.Transfer;
-using Microsoft.Manufacturing.Document;
 using Microsoft.Projects.Project.Ledger;
 using Microsoft.Purchases.Document;
 using Microsoft.Purchases.History;
@@ -55,10 +52,6 @@ codeunit 6529 "Item Tracking Navigate Mgt."
         TempPostedWhseShptLine: Record "Posted Whse. Shipment Line" temporary;
         TempPurchRcptHeader: Record "Purch. Rcpt. Header" temporary;
         TempPurchInvHeader: Record "Purch. Inv. Header" temporary;
-        TempAssemblyLine: Record "Assembly Line" temporary;
-        TempAssemblyHeader: Record "Assembly Header" temporary;
-        TempPostedAssemblyLine: Record "Posted Assembly Line" temporary;
-        TempPostedAssemblyHeader: Record "Posted Assembly Header" temporary;
         TempPurchCrMemoHeader: Record "Purch. Cr. Memo Hdr." temporary;
         TempSalesShptHeader: Record "Sales Shipment Header" temporary;
         TempSalesInvHeader: Record "Sales Invoice Header" temporary;
@@ -67,13 +60,10 @@ codeunit 6529 "Item Tracking Navigate Mgt."
         TempReturnRcptHeader: Record "Return Receipt Header" temporary;
         TempTransShipHeader: Record "Transfer Shipment Header" temporary;
         TempTransRcptHeader: Record "Transfer Receipt Header" temporary;
-        TempProdOrder: Record "Production Order" temporary;
         TempSalesLine: Record "Sales Line" temporary;
         TempReqLine: Record "Requisition Line" temporary;
         TempPurchLine: Record "Purchase Line" temporary;
         TempItemJnlLine: Record "Item Journal Line" temporary;
-        TempProdOrderLine: Record "Prod. Order Line" temporary;
-        TempProdOrderComp: Record "Prod. Order Component" temporary;
         TempPlanningComponent: Record "Planning Component" temporary;
         TempTransLine: Record "Transfer Line" temporary;
         TempRecordBuffer: Record "Record Buffer" temporary;
@@ -82,17 +72,6 @@ codeunit 6529 "Item Tracking Navigate Mgt."
         RecRef: RecordRef;
         LastEntryNo: Integer;
 
-#if not CLEAN24
-    [Obsolete('Replaced by same procedure with PackageNoFilter parameter', '24.0')]
-    procedure FindTrackingRecords(SerialNoFilter: Text; LotNoFilter: Text; ItemNoFilter: Text; VariantFilter: Text)
-    begin
-        GlobalItemFilters.SetFilter("No.", ItemNoFilter);
-        GlobalItemFilters.SetFilter("Variant Filter", VariantFilter);
-        GlobalItemFilters.SetFilter("Serial No. Filter", SerialNoFilter);
-        GlobalItemFilters.SetFilter("Lot No. Filter", LotNoFilter);
-        FindTrackingRecords(GlobalItemFilters);
-    end;
-#endif
 
     procedure FindTrackingRecords(SerialNoFilter: Text; LotNoFilter: Text; PackageNoFilter: Text; ItemNoFilter: Text; VariantFilter: Text)
     begin
@@ -112,6 +91,8 @@ codeunit 6529 "Item Tracking Navigate Mgt."
         OnFindTrackingRecordsOnAfterCalcFiltersAreEmpty(ItemFilters, FiltersAreEmpty);
         if FiltersAreEmpty then
             exit;
+
+        OnFindTrackingRecordsOnBeforeFind();
 
         FindItemLedgerEntry(ItemFilters);
         FindReservEntry(ItemFilters);
@@ -381,66 +362,6 @@ codeunit 6529 "Item Tracking Navigate Mgt."
         end;
     end;
 
-    local procedure FindAssemblyHeaders()
-    var
-        AssemblyHeader: Record "Assembly Header";
-    begin
-        if not AssemblyHeader.ReadPermission then
-            exit;
-
-        if AssemblyHeader.Get(ReservEntry."Source Subtype", ReservEntry."Source ID") then begin
-            RecRef.GetTable(AssemblyHeader);
-            InsertBufferRecFromReservEntry();
-            TempAssemblyHeader := AssemblyHeader;
-            if TempAssemblyHeader.Insert() then;
-        end;
-    end;
-
-    local procedure FindAssemblyLines()
-    var
-        AssemblyLine: Record "Assembly Line";
-    begin
-        if not AssemblyLine.ReadPermission then
-            exit;
-
-        if AssemblyLine.Get(ReservEntry."Source Subtype", ReservEntry."Source ID", ReservEntry."Source Ref. No.") then begin
-            RecRef.GetTable(AssemblyLine);
-            InsertBufferRecFromReservEntry();
-            TempAssemblyLine := AssemblyLine;
-            if TempAssemblyLine.Insert() then;
-        end;
-    end;
-
-    local procedure FindProdOrderLines()
-    var
-        ProdOrderLine: Record "Prod. Order Line";
-    begin
-        if not ProdOrderLine.ReadPermission then
-            exit;
-
-        if ProdOrderLine.Get(ReservEntry."Source Subtype", ReservEntry."Source ID", ReservEntry."Source Prod. Order Line") then begin
-            RecRef.GetTable(ProdOrderLine);
-            InsertBufferRecFromReservEntry();
-            TempProdOrderLine := ProdOrderLine;
-            if TempProdOrderLine.Insert() then;
-        end;
-    end;
-
-    local procedure FindProdOrderComponents()
-    var
-        ProdOrderComp: Record "Prod. Order Component";
-    begin
-        if not ProdOrderComp.ReadPermission then
-            exit;
-
-        if ProdOrderComp.Get(ReservEntry."Source Subtype", ReservEntry."Source ID", ReservEntry."Source Prod. Order Line", ReservEntry."Source Ref. No.") then begin
-            RecRef.GetTable(ProdOrderComp);
-            InsertBufferRecFromReservEntry();
-            TempProdOrderComp := ProdOrderComp;
-            if TempProdOrderComp.Insert() then;
-        end;
-    end;
-
     local procedure FindTransferLines()
     var
         TransLine: Record "Transfer Line";
@@ -501,21 +422,6 @@ codeunit 6529 "Item Tracking Navigate Mgt."
             FindPostedWhseRcptLine();
             // Find Invoice if it exists
             SearchValueEntries();
-        end;
-    end;
-
-    local procedure FindPostedAssembly(DocumentNo: Code[20])
-    var
-        PostedAssemblyHeader: Record "Posted Assembly Header";
-    begin
-        if not PostedAssemblyHeader.ReadPermission then
-            exit;
-
-        if PostedAssemblyHeader.Get(DocumentNo) then begin
-            RecRef.GetTable(PostedAssemblyHeader);
-            InsertBufferRecFromItemLedgEntry();
-            TempPostedAssemblyHeader := PostedAssemblyHeader;
-            if TempPostedAssemblyHeader.Insert() then;
         end;
     end;
 
@@ -580,6 +486,7 @@ codeunit 6529 "Item Tracking Navigate Mgt."
         PostedInvtPickLine.SetFilter("Package No.", ItemFilters.GetFilter("Package No. Filter"));
         PostedInvtPickLine.SetFilter("Item No.", ItemFilters.GetFilter("No."));
         PostedInvtPickLine.SetFilter("Variant Code", ItemFilters.GetFilter("Variant Filter"));
+        OnFindPostedInvtPickLineOnAfterSetFilters(PostedInvtPickLine, ItemFilters);
         if PostedInvtPickLine.FindSet() then
             repeat
                 RecRef.GetTable(PostedInvtPickLine);
@@ -606,6 +513,7 @@ codeunit 6529 "Item Tracking Navigate Mgt."
         PostedInvtPutAwayLine.SetFilter("Package No.", ItemFilters.GetFilter("Package No. Filter"));
         PostedInvtPutAwayLine.SetFilter("Item No.", ItemFilters.GetFilter("No."));
         PostedInvtPutAwayLine.SetFilter("Variant Code", ItemFilters.GetFilter("Variant Filter"));
+        OnFindPostedInvtPutAwayLineOnAfterSetFilters(PostedInvtPutAwayLine, ItemFilters);
         if PostedInvtPutAwayLine.FindSet() then
             repeat
                 RecRef.GetTable(PostedInvtPutAwayLine);
@@ -613,23 +521,6 @@ codeunit 6529 "Item Tracking Navigate Mgt."
                 ItemTrackingSetup.CopyTrackingFromPostedInvtPutAwayLine(PostedInvtPutAwayLine);
                 InsertBufferRec(RecRef, ItemTrackingSetup, PostedInvtPutAwayLine."Item No.", PostedInvtPutAwayLine."Variant Code");
             until PostedInvtPutAwayLine.Next() = 0;
-    end;
-
-    local procedure FindProductionOrder(DocumentNo: Code[20])
-    var
-        ProdOrder: Record "Production Order";
-    begin
-        if not ProdOrder.ReadPermission then
-            exit;
-
-        ProdOrder.SetRange(Status, ProdOrder.Status::Released, ProdOrder.Status::Finished);
-        ProdOrder.SetRange("No.", DocumentNo);
-        if ProdOrder.FindFirst() then begin
-            RecRef.GetTable(ProdOrder);
-            InsertBufferRecFromItemLedgEntry();
-            TempProdOrder := ProdOrder;
-            if TempProdOrder.Insert() then;
-        end;
     end;
 
     local procedure FindRegWhseActivLine(var ItemFilters: Record Item)
@@ -649,6 +540,7 @@ codeunit 6529 "Item Tracking Navigate Mgt."
         RgstrdWhseActivLine.SetFilter("Package No.", ItemFilters.GetFilter("Package No. Filter"));
         RgstrdWhseActivLine.SetFilter("Item No.", ItemFilters.GetFilter("No."));
         RgstrdWhseActivLine.SetFilter("Variant Code", ItemFilters.GetFilter("Variant Filter"));
+        OnFindRegWhseActivLineOnAfterSetFilters(RgstrdWhseActivLine, ItemFilters);
         if RgstrdWhseActivLine.FindSet() then
             repeat
                 RecRef.GetTable(RgstrdWhseActivLine);
@@ -677,6 +569,7 @@ codeunit 6529 "Item Tracking Navigate Mgt."
         ItemLedgEntry.SetFilter("Package No.", ItemFilters.GetFilter("Package No. Filter"));
         ItemLedgEntry.SetFilter("Item No.", ItemFilters.GetFilter("No."));
         ItemLedgEntry.SetFilter("Variant Code", ItemFilters.GetFilter("Variant Filter"));
+        OnFindItemLedgerEntryOnAfterSetFilters(ItemLedgEntry, ItemFilters);
         if ItemLedgEntry.FindSet() then
             repeat
                 RecRef.GetTable(ItemLedgEntry);
@@ -707,11 +600,8 @@ codeunit 6529 "Item Tracking Navigate Mgt."
                             FindTransShptHeader(ItemLedgEntry."Document No.");
                         ItemLedgEntry."Document Type"::"Transfer Receipt":
                             FindTransRcptHeader(ItemLedgEntry."Document No.");
-                        ItemLedgEntry."Document Type"::"Posted Assembly":
-                            FindPostedAssembly(ItemLedgEntry."Document No.");
                         else
-                            if ItemLedgEntry."Entry Type" in [ItemLedgEntry."Entry Type"::Consumption, ItemLedgEntry."Entry Type"::Output] then
-                                FindProductionOrder(ItemLedgEntry."Document No.");
+                            OnFindLedgerEntryByDocumentType(ItemLedgEntry, RecRef);
                     end;
                 OnFindTrackingRecordsForItemLedgerEntry(ItemLedgEntry);
             until ItemLedgEntry.Next() = 0;
@@ -838,6 +728,7 @@ codeunit 6529 "Item Tracking Navigate Mgt."
         ReservEntry.SetFilter("Package No.", ItemFilters.GetFilter("Package No. Filter"));
         ReservEntry.SetFilter("Item No.", ItemFilters.GetFilter("No."));
         ReservEntry.SetFilter("Variant Code", ItemFilters.GetFilter("Variant Filter"));
+        OnFindReservEntryOnAfterSetFilters(ReservEntry, ItemFilters);
         if ReservEntry.FindSet() then
             repeat
                 RecRef.GetTable(ReservEntry);
@@ -858,14 +749,6 @@ codeunit 6529 "Item Tracking Navigate Mgt."
                             FindPlanningComponent();
                         Database::"Item Journal Line":
                             FindItemJournalLines();
-                        Database::"Assembly Line":
-                            FindAssemblyLines();
-                        Database::"Assembly Header":
-                            FindAssemblyHeaders();
-                        Database::"Prod. Order Line":
-                            FindProdOrderLines();
-                        Database::"Prod. Order Component":
-                            FindProdOrderComponents();
                         Database::"Transfer Line":
                             FindTransferLines();
                     end;
@@ -889,6 +772,7 @@ codeunit 6529 "Item Tracking Navigate Mgt."
         WhseActivLine.SetFilter("Package No.", ItemFilters.GetFilter("Package No. Filter"));
         WhseActivLine.SetFilter("Item No.", ItemFilters.GetFilter("No."));
         WhseActivLine.SetFilter("Variant Code", ItemFilters.GetFilter("Variant Filter"));
+        OnFindWhseActivLineOnAfterSetFilters(WhseActivLine, ItemFilters);
         if WhseActivLine.FindSet() then
             repeat
                 RecRef.GetTable(WhseActivLine);
@@ -915,6 +799,7 @@ codeunit 6529 "Item Tracking Navigate Mgt."
         WhseEntry.SetFilter("Package No.", ItemFilters.GetFilter("Package No. Filter"));
         WhseEntry.SetFilter("Item No.", ItemFilters.GetFilter("No."));
         WhseEntry.SetFilter("Variant Code", ItemFilters.GetFilter("Variant Filter"));
+        OnFindWhseEntryOnAfterSetFilters(WhseEntry, ItemFilters);
         if WhseEntry.FindSet() then
             repeat
                 RecRef.GetTable(WhseEntry);
@@ -975,8 +860,6 @@ codeunit 6529 "Item Tracking Navigate Mgt."
                 PAGE.Run(0, TempReturnRcptHeader);
             Database::"Transfer Receipt Header":
                 PAGE.Run(0, TempTransRcptHeader);
-            Database::"Production Order":
-                PAGE.Run(0, TempProdOrder);
             Database::"Sales Line":
                 PAGE.Run(0, TempSalesLine);
             Database::"Purchase Line":
@@ -985,24 +868,12 @@ codeunit 6529 "Item Tracking Navigate Mgt."
                 PAGE.Run(0, TempReqLine);
             Database::"Item Journal Line":
                 PAGE.Run(0, TempItemJnlLine);
-            Database::"Prod. Order Line":
-                PAGE.Run(0, TempProdOrderLine);
-            Database::"Prod. Order Component":
-                PAGE.Run(0, TempProdOrderComp);
             Database::"Planning Component":
                 PAGE.Run(0, TempPlanningComponent);
             Database::"Transfer Line":
                 PAGE.Run(0, TempTransLine);
             Database::"Job Ledger Entry":
                 PAGE.Run(0, TempJobLedgEntry);
-            Database::"Assembly Line":
-                PAGE.Run(0, TempAssemblyLine);
-            Database::"Assembly Header":
-                PAGE.Run(0, TempAssemblyHeader);
-            Database::"Posted Assembly Line":
-                PAGE.Run(0, TempPostedAssemblyLine);
-            Database::"Posted Assembly Header":
-                PAGE.Run(0, TempPostedAssemblyHeader);
             else
                 OnShowTable(TableNo, TempRecordBuffer);
         end;
@@ -1233,5 +1104,49 @@ codeunit 6529 "Item Tracking Navigate Mgt."
     local procedure OnShowTable(TableNo: Integer; var TempRecordBuffer: Record "Record Buffer" temporary)
     begin
     end;
-}
 
+    [IntegrationEvent(true, false)]
+    local procedure OnFindLedgerEntryByDocumentType(var ItemLedgerEntry: Record "Item Ledger Entry"; RecRef: RecordRef)
+    begin
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnFindTrackingRecordsOnBeforeFind()
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnFindItemLedgerEntryOnAfterSetFilters(var ItemLedgerEntry: Record "Item Ledger Entry"; var ItemFilters: Record Item)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnFindReservEntryOnAfterSetFilters(var ReservationEntry: Record "Reservation Entry"; var ItemFilters: Record Item)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnFindWhseActivLineOnAfterSetFilters(var WarehouseActivityLine: Record "Warehouse Activity Line"; var ItemFilters: Record Item)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnFindRegWhseActivLineOnAfterSetFilters(var RegisteredWhseActivityLine: Record "Registered Whse. Activity Line"; var ItemFilters: Record Item)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnFindWhseEntryOnAfterSetFilters(var WarehouseEntry: Record "Warehouse Entry"; var ItemFilters: Record Item)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnFindPostedInvtPutAwayLineOnAfterSetFilters(var PostedInvtPutawayLine: Record "Posted Invt. Put-away Line"; var ItemFilters: Record Item)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnFindPostedInvtPickLineOnAfterSetFilters(var PostedInvtPickLine: Record "Posted Invt. Pick Line"; var ItemFilters: Record Item)
+    begin
+    end;
+}

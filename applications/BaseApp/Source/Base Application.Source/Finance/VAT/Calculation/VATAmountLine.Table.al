@@ -270,14 +270,16 @@ table 290 "VAT Amount Line"
     var
         VATAmountLine: Record "VAT Amount Line";
         IsHandled: Boolean;
+        SkipZeroVatAmounts: Boolean;
     begin
         IsHandled := false;
         Result := true;
-        OnInsertLine(Rec, IsHandled, Result);
+        SkipZeroVatAmounts := true;
+        OnInsertLine(Rec, IsHandled, Result, SkipZeroVatAmounts);
         if IsHandled then
             exit(Result);
 
-        if not (("VAT Base" <> 0) or ("Amount Including VAT" <> 0)) then
+        if (("VAT Base" = 0) or ("Amount Including VAT" = 0)) and SkipZeroVatAmounts then
             exit(false);
 
         Validate(Positive, "Line Amount" >= 0);
@@ -669,7 +671,7 @@ table 290 "VAT Amount Line"
                         "VAT Calculation Type"::"Reverse Charge VAT":
                             begin
                                 "VAT Base" :=
-                                  Round(CalcLineAmount() / (1 + "VAT %" / 100), Currency."Amount Rounding Precision") - "VAT Difference";
+                                  CalcLineAmount() / (1 + "VAT %" / 100) - "VAT Difference";
                                 OnUpdateLinesOnAfterCalcVATBase(Rec, Currency, PricesIncludingVAT);
                                 "VAT Amount" :=
                                   "VAT Difference" +
@@ -678,6 +680,10 @@ table 290 "VAT Amount Line"
                                     (CalcLineAmount() - "VAT Base" - "VAT Difference") *
                                     (1 - VATBaseDiscountPerc / 100),
                                     Currency."Amount Rounding Precision", Currency.VATRoundingDirection());
+                                if VATBaseDiscountPerc <> 0 then
+                                    "VAT Base" := Round("VAT Base", Currency."Amount Rounding Precision")
+                                else
+                                    "VAT Base" := CalcLineAmount() - "VAT Amount";
                                 OnUpdateLinesOnAfterCalcVATAmount(Rec, PrevVATAmountLine, Currency, VATBaseDiscountPerc, PricesIncludingVAT);
                                 "Amount Including VAT" := "VAT Base" + "VAT Amount";
                                 OnUpdateLinesOnAfterCalcAmountIncludingVATNormalVAT(Rec, PrevVATAmountLine, Currency, VATBaseDiscountPerc, PricesIncludingVAT);
@@ -742,6 +748,7 @@ table 290 "VAT Amount Line"
                                         PrevVATAmountLine := Rec;
                                         PrevVATAmountLine."VAT Amount" :=
                                           "VAT Base" * "VAT %" / 100 * (1 - VATBaseDiscountPerc / 100);
+                                        OnUpdateLinesOnAfterCalcPreVATAmountline(Rec, PrevVATAmountLine, Currency, VATBaseDiscountPerc);
                                         PrevVATAmountLine."VAT Amount" :=
                                           PrevVATAmountLine."VAT Amount" -
                                           Round(PrevVATAmountLine."VAT Amount", Currency."Amount Rounding Precision", Currency.VATRoundingDirection());
@@ -1036,7 +1043,7 @@ table 290 "VAT Amount Line"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnInsertLine(var VATAmountLine: Record "VAT Amount Line"; var IsHandled: Boolean; var Result: Boolean)
+    local procedure OnInsertLine(var VATAmountLine: Record "VAT Amount Line"; var IsHandled: Boolean; var Result: Boolean; var SkipZeroVatAmounts: Boolean)
     begin
     end;
 
@@ -1107,6 +1114,11 @@ table 290 "VAT Amount Line"
 
     [IntegrationEvent(false, false)]
     procedure OnBeforeUpdateLines(var VATAmountLine: Record "VAT Amount Line"; var TotalVATAmount: Decimal; Currency: Record Currency; CurrencyFactor: Decimal; PricesIncludingVAT: Boolean; VATBaseDiscountPercHeader: Decimal; TaxAreaCode: Code[20]; TaxLiable: Boolean; PostingDate: Date; var IsHandled: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnUpdateLinesOnAfterCalcPreVATAmountline(var VATAmountLine: Record "VAT Amount Line"; var PreVATAmountLine: Record "VAT Amount Line"; var Currency: Record Currency; VATBaseDiscountPerc: Decimal)
     begin
     end;
 }

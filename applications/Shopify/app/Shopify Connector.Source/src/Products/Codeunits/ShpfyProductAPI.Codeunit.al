@@ -1,3 +1,8 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+
 namespace Microsoft.Integration.Shopify;
 
 using Microsoft.Inventory.Item;
@@ -188,6 +193,7 @@ codeunit 30176 "Shpfy Product API"
         exit(Product."Image Id");
     end;
 
+    [TryFunction]
     internal procedure UpdateProductImage(Parameters: Dictionary of [Text, Text])
     begin
         CommunicationMgt.ExecuteGraphQL("Shpfy GraphQL Type"::UpdateProductImage, Parameters);

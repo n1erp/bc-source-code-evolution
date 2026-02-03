@@ -125,6 +125,7 @@ table 454 "Approval Entry"
         field(20; "Available Credit Limit (LCY)"; Decimal)
         {
             Caption = 'Available Credit Limit (LCY)';
+            AutoFormatType = 1;
         }
         field(21; "Pending Approvals"; Integer)
         {
@@ -245,6 +246,7 @@ table 454 "Approval Entry"
         WorkflowEventQueue.DeleteAll();
     end;
 
+    [InherentPermissions(PermissionObjectType::TableData, Database::"Approval Entry", 'r')]
     procedure GetLastEntryNo(): Integer;
     var
         FindRecordManagement: Codeunit "Find Record Management";
@@ -473,4 +475,3 @@ table 454 "Approval Entry"
     begin
     end;
 }
-

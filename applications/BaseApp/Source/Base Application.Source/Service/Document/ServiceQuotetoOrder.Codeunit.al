@@ -124,9 +124,6 @@ codeunit 5923 "Service-Quote to Order"
         ApprovalsMgmt: Codeunit "Approvals Mgmt.";
         RecordLinkManagement: Codeunit "Record Link Management";
         NoSeries: Codeunit "No. Series";
-#if not CLEAN24
-        NoSeriesManagement: Codeunit NoSeriesManagement;
-#endif
         SkipDelete: Boolean;
         IsHandled: Boolean;
     begin
@@ -146,21 +143,14 @@ codeunit 5923 "Service-Quote to Order"
         ServOrderHeader."Starting Time" := 0T;
         ServOrderHeader."Finishing Date" := 0D;
         ServOrderHeader."Finishing Time" := 0T;
+        ServOrderHeader."Posting Date" := 0D;
 
         IsHandled := false;
         OnMakeOrderOnBeforeTestNoSeries(ServOrderHeader, IsHandled);
         if not IsHandled then begin
             TestNoSeries();
             ServOrderHeader."No. Series" := GetNoSeriesCode();
-#if not CLEAN24
-            NoSeriesManagement.RaiseObsoleteOnBeforeInitSeries(ServOrderHeader."No. Series", '', 0D, ServOrderHeader."No.", ServOrderHeader."No. Series", IsHandled);
-            if not IsHandled then begin
-#endif
-                ServOrderHeader."No." := NoSeries.GetNextNo(ServOrderHeader."No. Series");
-#if not CLEAN24
-                NoSeriesManagement.RaiseObsoleteOnAfterInitSeries(ServOrderHeader."No. Series", ServMgtSetup."Service Order Nos.", 0D, ServOrderHeader."No.");
-            end;
-#endif
+            ServOrderHeader."No." := NoSeries.GetNextNo(ServOrderHeader."No. Series");
 
             ServOrderHeader."Quote No." := ServiceHeader."No.";
         end;

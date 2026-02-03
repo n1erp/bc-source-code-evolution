@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Warehouse.Structure;
 
 using Microsoft.Foundation.UOM;
@@ -300,6 +304,7 @@ report 5756 "Create Warehouse Location"
 
         TempWhseJnlLine."User ID" := CopyStr(UserId(), 1, MaxStrLen(TempWhseJnlLine."User ID"));
         TempWhseJnlLine."Registering Date" := WorkDate();
+        OnCreateWhseJnlLineOnBeforeTempWhseJnlLineInsert(TempWhseJnlLine);
         TempWhseJnlLine.Insert();
     end;
 
@@ -359,6 +364,11 @@ report 5756 "Create Warehouse Location"
 
     [IntegrationEvent(false, false)]
     local procedure OnPostReportOnBeforeLocationModify(var Location: Record Location)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnCreateWhseJnlLineOnBeforeTempWhseJnlLineInsert(var WarehouseJournalLine: Record "Warehouse Journal Line")
     begin
     end;
 }

@@ -265,6 +265,15 @@ codeunit 7237 "Master Data Mgt. Subscribers"
             end;
         end;
 
+        if SourceFieldRef.Value() <> DestinationFieldRef.Value() then begin
+            DestinationRecordRef := DestinationFieldRef.Record();
+            DestinationRecCreatedAt := DestinationRecordRef.Field(DestinationRecordRef.SystemCreatedAtNo()).Value();
+            DestinationRecModifiedAt := DestinationRecordRef.Field(DestinationRecordRef.SystemModifiedAtNo()).Value();
+            if DestinationRecModifiedAt > DestinationRecCreatedAt then
+                if MasterDataMgtCoupling.FindRowFromRecordRef(DestinationRecordRef, MasterDataMgtCoupling) then
+                    ValueWillBeOverwritten := TypeHelper.CompareDateTime(DestinationRecModifiedAt, MasterDataMgtCoupling."Last Synch. Modified On") > 0;
+        end;
+
         if SourceFieldRef.Type = SourceFieldRef.Type::Media then
             if UpdateMedia(SourceFieldRef, DestinationFieldRef, DestinationFieldValue) then begin
                 NewValue := DestinationFieldValue;
@@ -275,15 +284,6 @@ codeunit 7237 "Master Data Mgt. Subscribers"
                 IsValueFound := true;
                 NeedsConversion := false;
             end;
-
-        if SourceFieldRef.Value() <> DestinationFieldRef.Value() then begin
-            DestinationRecordRef := DestinationFieldRef.Record();
-            DestinationRecCreatedAt := DestinationRecordRef.Field(DestinationRecordRef.SystemCreatedAtNo()).Value();
-            DestinationRecModifiedAt := DestinationRecordRef.Field(DestinationRecordRef.SystemModifiedAtNo()).Value();
-            if DestinationRecModifiedAt > DestinationRecCreatedAt then
-                if MasterDataMgtCoupling.FindRowFromRecordRef(DestinationRecordRef, MasterDataMgtCoupling) then
-                    ValueWillBeOverwritten := TypeHelper.CompareDateTime(DestinationRecModifiedAt, MasterDataMgtCoupling."Last Synch. Modified On") > 0;
-        end;
 
         if ValueWillBeOverwritten then begin
             MasterDataManagement.OnLocalRecordChangeOverwrite(SourceFieldRef, DestinationFieldRef, ThrowError, IsHandled);
@@ -436,6 +436,44 @@ codeunit 7237 "Master Data Mgt. Subscribers"
                 FixPrimaryContactNo(SourceRecordRef, DestinationRecordRef);
             'G/L Account-G/L Account':
                 ValidateGlobalDimensionCodes(SourceRecordRef, DestinationRecordRef);
+        end;
+        if (SourceRecordRef.Number() = Database::"Ship-to Address") and (DestinationRecordRef.Number() = Database::"Ship-to Address") then
+            SetShipToAddressNameFromSource(SourceRecordRef, DestinationRecordRef);
+    end;
+
+    local procedure SetShipToAddressNameFromSource(var SourceRecordRef: RecordRef; var DestinationRecordRef: RecordRef)
+    var
+        MasterDataManagementSetup: Record "Master Data Management Setup";
+        IntegrationTableMapping: Record "Integration Table Mapping";
+        IntegrationFieldMapping: Record "Integration Field Mapping";
+        SourceShipToAddress: Record "Ship-to Address";
+    begin
+        if not MasterDataManagementSetup.Get() then
+            exit;
+
+        if not MasterDataManagementSetup."Is Enabled" then
+            exit;
+
+        // do nothing if the Name field synchronization is not enabled
+        IntegrationTableMapping.SetRange(Type, IntegrationTableMapping.Type::"Master Data Management");
+        IntegrationTableMapping.SetRange("Delete After Synchronization", false);
+        IntegrationTableMapping.SetRange("Table ID", Database::"Ship-to Address");
+        if not IntegrationTableMapping.FindFirst() then
+            exit;
+        IntegrationFieldMapping.SetRange("Integration Table Mapping Name", IntegrationTableMapping.Name);
+        IntegrationFieldMapping.SetRange("Field No.", SourceShipToAddress.FieldNo(Name));
+        IntegrationFieldMapping.SetRange(Status, IntegrationFieldMapping.Status::Enabled);
+        if IntegrationFieldMapping.IsEmpty() then
+            exit;
+
+        // Ship-to Address table has a OnInsert trigger such that it always sets its name to Customer's name OnInsert
+        // for Ship-to Address synchronized from source, this needs to be corrected to have the Name value identical to the one in source
+        DestinationRecordRef.Find();
+        SourceRecordRef.SetTable(SourceShipToAddress);
+        SourceShipToAddress.ChangeCompany(MasterDataManagementSetup."Company Name");
+        if Format(DestinationRecordRef.Field(SourceShipToAddress.FieldNo(Name)).Value()) <> SourceShipToAddress.Name then begin
+            DestinationRecordRef.Field(SourceShipToAddress.FieldNo(Name)).Value(SourceShipToAddress.Name);
+            DestinationRecordRef.Modify();
         end;
     end;
 

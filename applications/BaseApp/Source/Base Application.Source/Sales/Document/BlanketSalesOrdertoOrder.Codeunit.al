@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Sales.Document;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Sales.Document;
 
 using Microsoft.Assembly.Document;
 using Microsoft.Finance.ReceivablesPayables;
@@ -162,8 +166,6 @@ codeunit 87 "Blanket Sales Order to Order"
                 ResetQuantityFields(SalesLineOrder);
                 SalesLineOrder."Document Type" := SalesHeaderOrder."Document Type";
                 SalesLineOrder."Document No." := SalesHeaderOrder."No.";
-                NextLineNo += 10000;
-                SalesLineOrder."Line No." := NextLineNo;
                 SalesLineOrder."Blanket Order No." := SalesHeaderBlanketOrder."No.";
                 SalesLineOrder."Blanket Order Line No." := SalesLineBlanketOrder."Line No.";
                 if (SalesLineOrder."No." <> '') and (SalesLineOrder.Type <> SalesLineOrder.Type::" ") then begin
@@ -449,6 +451,7 @@ codeunit 87 "Blanket Sales Order to Order"
     begin
         if not SalesOrderLine.IsExtendedText() then
             exit(true);
+
         exit(
           AttachedToSalesLine.Get(
             SalesOrderLine."Document Type", SalesOrderLine."Document No.", SalesOrderLine."Attached to Line No."));

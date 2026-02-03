@@ -16,9 +16,11 @@ using Microsoft.Pricing.Source;
 using Microsoft.Pricing.Asset;
 using Microsoft.Pricing.PriceList;
 
+#pragma warning disable AA0210
 codeunit 148157 "Service Object Test"
 {
     Subtype = Test;
+    TestType = Uncategorized;
     Access = Internal;
 
     var
@@ -32,9 +34,84 @@ codeunit 148157 "Service Object Test"
         LibraryTestInitialize: Codeunit "Library - Test Initialize";
         LibraryVariableStorage: Codeunit "Library - Variable Storage";
         NoStartDateErr: Label 'Start Date is not entered.', Locked = true;
+        NaturalNumberRatioErr: Label 'The ratio of ''%1'' and ''%2'' or vice versa must give a natural number.', Comment = '%1=Field Caption, %2=Field Caption';
+        CurrentPeriodErr: Label 'Current Period cannot be used for The Date Formula.';
+        ComplexFormulaErr: Label 'The Date Formula cannot be complex.';
         IsInitialized: Boolean;
 
     #region Tests
+    [Test]
+    procedure BillToCustomerPriceGroupIsTakenIntoAccountWhenChangingEndUserCustomer()
+    var
+        Item: Record Item;
+        SubscriptionHeader: Record "Subscription Header";
+        ServiceCommitmentTemplate: Record "Sub. Package Line Template";
+        SubscriptionPackage: Record "Subscription Package";
+        SubscriptionPackageLine: Record "Subscription Package Line";
+        ItemSubscriptionPackage: Record "Item Subscription Package";
+        BillToCustomers: array[2] of Record Customer;
+        Customers: array[2] of Record Customer;
+        SalesHeader: Record "Sales Header";
+        SalesLine: Record "Sales Line";
+        PriceGroups: array[3] of Record "Customer Price Group";
+        Index: Integer;
+    begin
+        // [SCENARIO] When changing End-User Customer, the Customer Price Group from new Customer "Bill-to Customer No." should be taken into account
+        ClearAll();
+
+        // [GIVEN] Two CustomerPriceGroups and two BillToCustomers, each has assigned specific CustomerPriceGroup
+        for Index := 1 to ArrayLen(BillToCustomers) do begin
+            LibrarySales.CreateCustomer(BillToCustomers[Index]);
+            LibrarySales.CreateCustomerPriceGroup(PriceGroups[Index]);
+            BillToCustomers[Index].Validate("Customer Price Group", PriceGroups[Index].Code);
+            BillToCustomers[Index].Modify(false);
+        end;
+
+        // [GIVEN] Customer1 and Customer2 with changed "Billing-to Customer No." to BillToCustomer1 and BillToCustomer2 respectively
+        for Index := 1 to ArrayLen(Customers) do begin
+            LibrarySales.CreateCustomer(Customers[Index]);
+            Customers[Index].Validate("Bill-to Customer No.", BillToCustomers[Index]."No.");
+            Customers[Index].Modify(false);
+        end;
+
+        // [GIVEN] Item with "Sales with Service Commitment" option, assigned to Service Commitment Package with CustomerPriceGroup3 and set as Standard
+        ContractTestLibrary.CreateServiceCommitmentTemplateSetup(ServiceCommitmentTemplate, '<12M>', Enum::"Invoicing Via"::Sales);
+        ContractTestLibrary.CreateServiceCommitmentPackageWithLine(ServiceCommitmentTemplate.Code, SubscriptionPackage, SubscriptionPackageLine);
+        ContractTestLibrary.SetupSalesServiceCommitmentItemAndAssignToServiceCommitmentPackage(Item, Enum::"Item Service Commitment Type"::"Sales with Service Commitment", SubscriptionPackage.Code);
+        LibrarySales.CreateCustomerPriceGroup(PriceGroups[3]);
+        SubscriptionPackage.Validate("Price Group", PriceGroups[3].Code);
+        SubscriptionPackage.Modify(false);
+
+        ItemSubscriptionPackage.Get(Item."No.", SubscriptionPackage.Code);
+        ItemSubscriptionPackage.Validate(Standard, true);
+        ItemSubscriptionPackage.Modify(false);
+
+        // [GIVEN] SalesOrder created and posted for Customer1 and Item
+        LibrarySales.CreateSalesHeader(SalesHeader, Enum::"Sales Document Type"::Order, Customers[1]."No.");
+        LibrarySales.CreateSalesLine(SalesLine, SalesHeader, Enum::"Sales Line Type"::Item, Item."No.", 1);
+        LibrarySales.PostSalesDocument(SalesHeader, true, true);
+
+        // [WHEN] Find Service Object created from posting SalesOrder
+        SubscriptionHeader.SetRange("End-User Customer No.", Customers[1]."No.");
+        SubscriptionHeader.SetRange(Type, Enum::"Service Object Type"::Item);
+        SubscriptionHeader.SetRange("Source No.", Item."No.");
+        SubscriptionHeader.FindFirst();
+        SubscriptionHeader.SetRange("End-User Customer No.");
+        SubscriptionHeader.SetRange(Type, Enum::"Service Object Type"::Item);
+        SubscriptionHeader.SetRange("Source No.", Item."No.");
+        SubscriptionHeader.SetRecFilter();
+        SubscriptionHeader.SetHideValidationDialog(true);
+
+        // [THEN] Make sure Customer Price Group = PriceGroup1 for both Service Object and Service Commitment
+        VerifyPriceGroupInServiceObjectAndServiceCommitment(SubscriptionHeader."No.", SubscriptionHeader."Customer Price Group", PriceGroups[1].Code, PriceGroups[1].Code);
+
+        // [WHEN] Change End-User Customer to Customer2
+        SubscriptionHeader.Validate("End-User Customer No.", Customers[2]."No.");
+        SubscriptionHeader.Modify(true);
+
+        // [THEN] Make sure Customer Price Group = PriceGroup2 for Service Object and PriceGroup3 for Service Commitment (taken from standard Service Commitment Package)
+        VerifyPriceGroupInServiceObjectAndServiceCommitment(SubscriptionHeader."No.", SubscriptionHeader."Customer Price Group", PriceGroups[2].Code, PriceGroups[3].Code);
+    end;
 
     [Test]
     procedure CheckArchivedServCommAmounts()
@@ -110,127 +187,6 @@ codeunit 148157 "Service Object Test"
     end;
 
     [Test]
-    procedure CheckCalculationBaseAmountAssignment()
-    var
-        Customer: Record Customer;
-        Item: Record Item;
-        PriceListLine: Record "Price List Line";
-        ServiceCommitment: Record "Subscription Line";
-        ServiceCommitmentPackage: Record "Subscription Package";
-        ServiceObject: Record "Subscription Header";
-        EndingDate: Date;
-        FutureReferenceDate: Date;
-        CustomerPrice: array[4] of Decimal;
-    begin
-        Initialize();
-
-        // Create Subscription and Subscription Lines - Unit Price from Item should be taken as Calculation Base Amount
-        SetupServiceObjectWithServiceCommitment(Item, ServiceObject, false, false);
-        FindServiceCommitment(ServiceCommitment, ServiceObject."No.");
-
-        ServiceCommitment.TestField("Calculation Base Amount", Item."Unit Price");
-        ServiceCommitmentPackage.SetRange(Code, ServiceCommitment."Subscription Package Code");
-        ServiceCommitment.DeleteAll(false);
-
-        // Assign End-User Customer No. Subscription with and create Subscription Lines - Unit Price from Item should be taken as Calculation Base Amount
-        ContractTestLibrary.CreateCustomer(Customer);
-        ServiceObject.SetHideValidationDialog(true);
-        ServiceObject.InsertServiceCommitmentsFromServCommPackage(WorkDate(), ServiceCommitmentPackage);
-        ServiceCommitment.TestField("Calculation Base Amount", Item."Unit Price");
-        ServiceCommitment.DeleteAll(false);
-        ServiceObject.Validate("End-User Customer No.", Customer."No.");
-        ServiceObject.Modify(false);
-
-        // Create different Sales Prices for Customer
-        CustomerPrice[1] := LibraryRandom.RandDec(100, 2); // normal price
-        CustomerPrice[2] := Round(CustomerPrice[1] * 0.9, 2); // discounted price for Qty = 10
-        CustomerPrice[3] := LibraryRandom.RandDecInRange(101, 200, 2); // price used in future
-        CustomerPrice[4] := Round(CustomerPrice[3] * 0.9, 2); // price used in future + discounted price for Qty = 10
-        FutureReferenceDate := CalcDate('<1M>', WorkDate());
-        EndingDate := CalcDate('<-1D>', FutureReferenceDate);
-        CreateCustomerSalesPrice(Item, Customer, WorkDate(), 0, CustomerPrice[1], EndingDate);
-        CreateCustomerSalesPrice(Item, Customer, WorkDate(), 10, CustomerPrice[2], EndingDate);
-        CreateCustomerSalesPrice(Item, Customer, FutureReferenceDate, 0, CustomerPrice[3], PriceListLine);
-        CreateCustomerSalesPrice(Item, Customer, FutureReferenceDate, 10, CustomerPrice[4], PriceListLine);
-        // test - normal price
-        TestCalculationBaseAmount(1, WorkDate(), CustomerPrice[1], ServiceObject, ServiceCommitmentPackage);
-        // test - discounted price for Qty = 10
-        TestCalculationBaseAmount(10, WorkDate(), CustomerPrice[2], ServiceObject, ServiceCommitmentPackage);
-        // test - price used in future
-        TestCalculationBaseAmount(1, FutureReferenceDate, CustomerPrice[3], ServiceObject, ServiceCommitmentPackage);
-        // test - price used in future + discounted price for Qty = 10
-        TestCalculationBaseAmount(10, FutureReferenceDate, CustomerPrice[4], ServiceObject, ServiceCommitmentPackage);
-    end;
-
-    [Test]
-    procedure CheckCalculationBaseAmountAssignmentForCustomerWithBillToCustomer()
-    var
-        Customer: Record Customer;
-        Customer2: Record Customer;
-        Item: Record Item;
-        PriceListLine: Record "Price List Line";
-        ServiceCommitment: Record "Subscription Line";
-        ServiceCommitmentPackage: Record "Subscription Package";
-        ServiceObject: Record "Subscription Header";
-        EndingDate: Date;
-        FutureReferenceDate: Date;
-        Customer2Price: array[4] of Decimal;
-        CustomerPrice: array[4] of Decimal;
-    begin
-        Initialize();
-
-        // Create Subscription and Subscription Lines - Unit Price from Item should be taken as Calculation Base Amount
-        SetupServiceObjectWithServiceCommitment(Item, ServiceObject, false, false);
-        FindServiceCommitment(ServiceCommitment, ServiceObject."No.");
-
-        ServiceCommitment.TestField("Calculation Base Amount", Item."Unit Price");
-        ServiceCommitmentPackage.SetRange(Code, ServiceCommitment."Subscription Package Code");
-        ServiceCommitment.DeleteAll(false);
-
-        // Create Customer and Customer2 and assign Customer2 as "Bill-to Customer No."" to Customer
-        ContractTestLibrary.CreateCustomer(Customer);
-        ContractTestLibrary.CreateCustomer(Customer2);
-        Customer.Validate("Bill-to Customer No.", Customer2."No.");
-        Customer.Modify(false);
-
-        // Assign End-User Customer No. to Subscription and create Subscription Lines - Unit Price from Item should be taken as Calculation Base Amount
-        ServiceObject.InsertServiceCommitmentsFromServCommPackage(WorkDate(), ServiceCommitmentPackage);
-        ServiceCommitment.TestField("Calculation Base Amount", Item."Unit Price");
-        ServiceCommitment.DeleteAll(false);
-        ServiceObject.Validate("End-User Customer No.", Customer."No.");
-        ServiceObject.Modify(false);
-
-        // Create different Sales Prices for Customer
-        CustomerPrice[1] := LibraryRandom.RandDec(100, 2); // normal price
-        CustomerPrice[2] := Round(CustomerPrice[1] * 0.9, 2); // discounted price for Qty = 10
-        CustomerPrice[3] := LibraryRandom.RandDecInRange(101, 200, 2); // price used in future
-        CustomerPrice[4] := Round(CustomerPrice[3] * 0.9, 2); // price used in future + discounted price for Qty = 10
-        Customer2Price[1] := LibraryRandom.RandDec(100, 2); // normal price
-        Customer2Price[2] := Round(Customer2Price[1] * 0.9, 2); // discounted price for Qty = 10
-        Customer2Price[3] := LibraryRandom.RandDecInRange(101, 200, 2); // price used in future
-        Customer2Price[4] := Round(Customer2Price[3] * 0.9, 2); // price used in future + discounted price for Qty = 10
-        FutureReferenceDate := CalcDate('<1M>', WorkDate());
-        EndingDate := CalcDate('<-1D>', FutureReferenceDate);
-        CreateCustomerSalesPrice(Item, Customer2, WorkDate(), 0, Customer2Price[1], EndingDate);
-        CreateCustomerSalesPrice(Item, Customer2, WorkDate(), 10, Customer2Price[2], EndingDate);
-        CreateCustomerSalesPrice(Item, Customer2, FutureReferenceDate, 0, Customer2Price[3], PriceListLine);
-        CreateCustomerSalesPrice(Item, Customer2, FutureReferenceDate, 10, Customer2Price[4], PriceListLine);
-        CreateCustomerSalesPrice(Item, Customer, WorkDate(), 0, CustomerPrice[1], EndingDate);
-        CreateCustomerSalesPrice(Item, Customer, WorkDate(), 10, CustomerPrice[2], EndingDate);
-        CreateCustomerSalesPrice(Item, Customer, FutureReferenceDate, 0, CustomerPrice[3], PriceListLine);
-        CreateCustomerSalesPrice(Item, Customer, FutureReferenceDate, 10, CustomerPrice[4], PriceListLine);
-
-        // test - normal price
-        TestCalculationBaseAmount(1, WorkDate(), Customer2Price[1], ServiceObject, ServiceCommitmentPackage);
-        // test - discounted price for Qty = 10
-        TestCalculationBaseAmount(10, WorkDate(), Customer2Price[2], ServiceObject, ServiceCommitmentPackage);
-        // test - price used in future
-        TestCalculationBaseAmount(1, FutureReferenceDate, Customer2Price[3], ServiceObject, ServiceCommitmentPackage);
-        // test - price used in future + discounted price for Qty = 10
-        TestCalculationBaseAmount(10, FutureReferenceDate, Customer2Price[4], ServiceObject, ServiceCommitmentPackage);
-    end;
-
-    [Test]
     procedure CheckCalculationDateFormulaEntry()
     var
         Item: Record Item;
@@ -245,34 +201,27 @@ codeunit 148157 "Service Object Test"
         Commit();  // retain data after asserterror
 
         ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<5D>', '<20D>');
-        ServiceCommitment.Modify(true);
         ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<1W>', '<4W>');
-        ServiceCommitment.Modify(true);
         ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<1M>', '<6Q>');
-        ServiceCommitment.Modify(true);
         ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<1Q>', '<3Q>');
-        ServiceCommitment.Modify(true);
         ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<1Y>', '<2Y>');
-        ServiceCommitment.Modify(true);
         ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<3M>', '<1Y>');
-        ServiceCommitment.Modify(true);
         ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<6M>', '<1Q>');
-        ServiceCommitment.Modify(true);
 
-        ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<1D>', '<1M>');
-        asserterror ServiceCommitment.Modify(true);
-        ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<1W>', '<1M>');
-        asserterror ServiceCommitment.Modify(true);
-        ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<2M>', '<7M>');
-        asserterror ServiceCommitment.Modify(true);
-        ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<2Q>', '<5Q>');
-        asserterror ServiceCommitment.Modify(true);
-        ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<2Y>', '<3Y>');
-        asserterror ServiceCommitment.Modify(true);
-        ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<CM>', '<1Y>');
-        asserterror ServiceCommitment.Modify(true);
-        ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<1M + 1Q>', '<1Y>');
-        asserterror ServiceCommitment.Modify(true);
+        asserterror ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<1D>', '<1M>');
+        Assert.ExpectedError(StrSubstNo(NaturalNumberRatioErr, ServiceCommitment.FieldCaption("Billing Base Period"), ServiceCommitment.FieldCaption("Billing Rhythm")));
+        asserterror ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<1W>', '<1M>');
+        Assert.ExpectedError(StrSubstNo(NaturalNumberRatioErr, ServiceCommitment.FieldCaption("Billing Base Period"), ServiceCommitment.FieldCaption("Billing Rhythm")));
+        asserterror ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<2M>', '<7M>');
+        Assert.ExpectedError(StrSubstNo(NaturalNumberRatioErr, ServiceCommitment.FieldCaption("Billing Base Period"), ServiceCommitment.FieldCaption("Billing Rhythm")));
+        asserterror ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<2Q>', '<5Q>');
+        Assert.ExpectedError(StrSubstNo(NaturalNumberRatioErr, ServiceCommitment.FieldCaption("Billing Base Period"), ServiceCommitment.FieldCaption("Billing Rhythm")));
+        asserterror ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<2Y>', '<3Y>');
+        Assert.ExpectedError(StrSubstNo(NaturalNumberRatioErr, ServiceCommitment.FieldCaption("Billing Base Period"), ServiceCommitment.FieldCaption("Billing Rhythm")));
+        asserterror ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<CM>', '<1Y>');
+        Assert.ExpectedError(StrSubstNo(CurrentPeriodErr));
+        asserterror ContractTestLibrary.ValidateBillingBasePeriodAndBillingRhythmOnServiceCommitment(ServiceCommitment, '<1M + 1Q>', '<1Y>');
+        Assert.ExpectedError(StrSubstNo(ComplexFormulaErr));
     end;
 
     [Test]
@@ -885,6 +834,7 @@ codeunit 148157 "Service Object Test"
         ServiceCommitment.TestField(Discount, false);
         ServiceCommitment.TestField("Price Binding Period", ServiceCommPackageLine."Price Binding Period");
         ServiceCommitment.TestField("Next Price Update", CalcDate(ServiceCommPackageLine."Price Binding Period", ServiceCommitment."Subscription Line Start Date"));
+        ServiceCommitment.TestField("Create Contract Deferrals", ServiceCommPackageLine."Create Contract Deferrals");
     end;
 
     [Test]
@@ -1560,6 +1510,44 @@ codeunit 148157 "Service Object Test"
         Assert.AreEqual(ItemTranslation.Description, ServiceObject.Description, 'Item description should be translated in Service Object');
     end;
 
+    [Test]
+    procedure UT_UpdateServiceDatesDoesNotCalculateCancellationPossibleUntilAndTermUntilWhenNoticePeriodIsEmpty()
+    var
+        Item: Record Item;
+        SubscriptionHeader: Record "Subscription Header";
+        SubscriptionLine: Record "Subscription Line";
+    begin
+        // [SCENARIO] When "Notice Period" is empty, the action "Update Service Dates" does not calculate "Cancellation possible until" and "Term until"
+
+        // [GIVEN] Create Service Object with Service Commitment. Make sure that the "Notice Period" is empty.
+        ClearAll();
+        SetupServiceObjectWithServiceCommitment(Item, SubscriptionHeader, false, false);
+        SubscriptionLine.SetRange("Subscription Header No.", SubscriptionHeader."No.");
+        SubscriptionLine.FindFirst();
+        SubscriptionLine.Validate("Subscription Line Start Date", CalcDate('<-CY>', Today()));
+        SubscriptionLine.Validate("Cancellation possible until", CalcDate('<+1D>', SubscriptionLine."Subscription Line Start Date"));
+        Evaluate(SubscriptionLine."Extension Term", '<1Y>');
+        SubscriptionLine.Modify(false);
+
+        // [WHEN] Run action Update Services Dates from Service Object when "Notice Period" is empty
+        SubscriptionHeader.UpdateServicesDates();
+
+        // [THEN] "Cancellation possible until" and "Term until" are not recalculated
+        Assert.AreEqual(SubscriptionLine."Cancellation possible until", SubscriptionLine."Cancellation possible until", 'Cancellation possible until should not be recalculated.');
+        Assert.AreEqual(SubscriptionLine."Term until", SubscriptionLine."Term until", 'Term until should not be recalculated.');
+
+        // [WHEN] Run action Update Service Dates from Service Object when "Notice Period" is not empty
+        Evaluate(SubscriptionLine."Notice Period", '<1M>');
+        SubscriptionLine.Validate(SubscriptionLine."Notice Period");
+        SubscriptionLine.Modify(false);
+        SubscriptionHeader.UpdateServicesDates();
+        SubscriptionLine.Get(SubscriptionLine."Entry No.");
+
+        // [THEN] "Cancellation possible until" and "Term until" are recalculated
+        Assert.AreEqual(CalcDate('-' + Format(SubscriptionLine."Notice Period"), SubscriptionLine."Term until"), SubscriptionLine."Cancellation possible until", 'Cancellation possible until should be recalculated.');
+        Assert.AreEqual(CalcDate(SubscriptionLine."Extension Term", SubscriptionLine."Subscription Line Start Date"), SubscriptionLine."Term until", 'Term until should be recalculated.');
+    end;
+
     #endregion Tests
 
     #region Procedures
@@ -1585,36 +1573,6 @@ codeunit 148157 "Service Object Test"
     begin
         ContractTestLibrary.CreateServiceCommitmentPackageLine(ServiceCommitmentPackageCode, ServiceCommitmentTemplateCode, ServiceCommPackageLine);
         ModifyCurrentServiceCommPackageLine(InitialTermDateFormulaText, ExtensionTermDateFormulaText, NoticePeriodDateFormulaText, ServiceCommPackageLine);
-    end;
-
-    local procedure CreateCustomerSalesPrice(SourceItem: Record Item; SourceCustomer: Record Customer; StartingDate: Date; Quantity: Decimal; CustomerPrice: Decimal; var PriceListLine: Record "Price List Line")
-    var
-        PriceListHeader: Record "Price List Header";
-    begin
-        LibraryPriceCalculation.CreatePriceHeader(PriceListHeader, "Price Type"::Sale, "Price Source Type"::Customer, SourceCustomer."No.");
-        PriceListHeader.Status := "Price Status"::Active;
-        PriceListHeader."Allow Updating Defaults" := true;
-        PriceListHeader."Currency Code" := '';
-        PriceListHeader.Modify(true);
-
-        LibraryPriceCalculation.CreatePriceListLine(PriceListLine, PriceListHeader, "Price Amount Type"::Price, "Price Asset Type"::Item, SourceItem."No.");
-        PriceListLine.Validate("Starting Date", StartingDate);
-        PriceListLine.Validate("Minimum Quantity", Quantity);
-        PriceListLine."Currency Code" := '';
-        PriceListLine.Validate("Unit Price", CustomerPrice);
-        PriceListLine.Status := "Price Status"::Active;
-        PriceListLine.Modify(true);
-    end;
-
-    local procedure CreateCustomerSalesPrice(SourceItem: Record Item; SourceCustomer: Record Customer; StartingDate: Date; Quantity: Decimal; CustomerPrice: Decimal; EndingDate: Date)
-    var
-        PriceListLine: Record "Price List Line";
-    begin
-        CreateCustomerSalesPrice(SourceItem, SourceCustomer, StartingDate, Quantity, CustomerPrice, PriceListLine);
-        PriceListLine.Status := "Price Status"::Draft;
-        PriceListLine.Validate("Ending Date", EndingDate);
-        PriceListLine.Status := "Price Status"::Active;
-        PriceListLine.Modify(true);
     end;
 
     local procedure CreateCustomerSalesPriceWithVariantCode(SourceItem: Record Item; SourceCustomer: Record Customer; StartingDate: Date; Quantity: Decimal; CustomerPrice: Decimal; EndingDate: Date; VariantCode: Code[10])
@@ -1773,19 +1731,6 @@ codeunit 148157 "Service Object Test"
         ServiceObject.SetHideValidationDialog(true);
     end;
 
-    local procedure TestCalculationBaseAmount(ServiceObjectQuantity: Decimal; ReferenceDate: Date; ExpectedPrice: Decimal; var ServiceObject: Record "Subscription Header"; var ServiceCommitmentPackage: Record "Subscription Package")
-    var
-        ServiceCommitment: Record "Subscription Line";
-    begin
-        ServiceObject.Validate(Quantity, ServiceObjectQuantity);
-        ServiceObject.Modify(false);
-        ServiceObject.InsertServiceCommitmentsFromServCommPackage(ReferenceDate, ServiceCommitmentPackage);
-        FindServiceCommitment(ServiceCommitment, ServiceObject."No.");
-        ServiceCommitment.FindFirst();
-        ServiceCommitment.TestField("Calculation Base Amount", ExpectedPrice);
-        ServiceCommitment.DeleteAll(false);
-    end;
-
     local procedure TestServiceCommitmentTerminationDates(ServiceAndCalculationStartDate: Date; SourceServiceCommitment: Record "Subscription Line")
     var
         ExpectedDate: Date;
@@ -1821,6 +1766,15 @@ codeunit 148157 "Service Object Test"
         ServiceCommitment."Subscription Line End Date" := EndDate;
         ServiceCommitment."Next Billing Date" := NextCalcDate;
         ServiceCommitment.Validate("Subscription Line End Date");
+    end;
+
+    local procedure VerifyPriceGroupInServiceObjectAndServiceCommitment(ServiceObjectCode: Code[20]; ServiceObjectPriceGroup: Code[10]; ExpectedPriceGroupServiceObject: Code[10]; ExpectedPriceGroupServiceCommitment: Code[10])
+    var
+        SubscriptionLine: Record "Subscription Line";
+    begin
+        Assert.AreEqual(ExpectedPriceGroupServiceObject, ServiceObjectPriceGroup, 'Unexpected Customer Price Group in Service Object');
+        FindServiceCommitment(SubscriptionLine, ServiceObjectCode);
+        Assert.AreEqual(ExpectedPriceGroupServiceCommitment, SubscriptionLine."Customer Price Group", 'Unexpected Customer Price Group in Service Commitment');
     end;
 
     #endregion Procedures
@@ -1865,3 +1819,4 @@ codeunit 148157 "Service Object Test"
 
     #endregion Handlers
 }
+#pragma warning restore AA0210

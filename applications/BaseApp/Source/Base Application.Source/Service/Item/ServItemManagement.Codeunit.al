@@ -216,9 +216,6 @@ codeunit 5920 ServItemManagement
     procedure CreateServItemOnSalesLineShpt(SalesHeader: Record "Sales Header"; SalesLine: Record "Sales Line"; SalesShipmentLine: Record "Sales Shipment Line")
     var
         NoSeries: Codeunit "No. Series";
-#if not CLEAN24
-        NoSeriesMgt: Codeunit NoSeriesManagement;
-#endif
         Item: Record Item;
         ServItemGr: Record "Service Item Group";
         TrackingLinesExist: Boolean;
@@ -268,16 +265,8 @@ codeunit 5920 ServItemManagement
                 OnCreateServItemOnSalesLineShptOnAfterCalcShouldCreateServiceItem(SalesLine, SalesShipmentLine, TempReservEntry."Serial No.", ServItem, ServItemWithSerialNoExist, ShouldCreateServiceItem);
                 if ShouldCreateServiceItem then begin
                     ServItem.Init();
-#if not CLEAN24
-                    NoSeriesMgt.RaiseObsoleteOnBeforeInitSeries(ServMgtSetup."Service Item Nos.", '', 0D, ServItem."No.", ServItem."No. Series", IsHandled);
-                    if not IsHandled then begin
-#endif
-                        ServItem."No. Series" := ServMgtSetup."Service Item Nos.";
-                        ServItem."No." := NoSeries.GetNextNo(ServItem."No. Series");
-#if not CLEAN24
-                        NoSeriesMgt.RaiseObsoleteOnAfterInitSeries(ServItem."No. Series", ServMgtSetup."Service Item Nos.", 0D, ServItem."No.");
-                    end;
-#endif
+                    ServItem."No. Series" := ServMgtSetup."Service Item Nos.";
+                    ServItem."No." := NoSeries.GetNextNo(ServItem."No. Series");
                     ServItem.Insert();
                 end;
 
@@ -428,9 +417,6 @@ codeunit 5920 ServItemManagement
     var
         ConfirmManagement: Codeunit "Confirm Management";
         NoSeries: Codeunit "No. Series";
-#if not CLEAN24
-        NoSeriesMgt: Codeunit NoSeriesManagement;
-#endif
         IsHandled: Boolean;
     begin
         OnBeforeCreateServItemOnServItemLine(ServItemLine);
@@ -444,16 +430,8 @@ codeunit 5920 ServItemManagement
         ServItem.Init();
         ServMgtSetup.Get();
         ServMgtSetup.TestField("Service Item Nos.");
-#if not CLEAN24
-        NoSeriesMgt.RaiseObsoleteOnBeforeInitSeries(ServMgtSetup."Service Item Nos.", '', 0D, ServItem."No.", ServItem."No. Series", IsHandled);
-        if not IsHandled then begin
-#endif
-            ServItem."No. Series" := ServMgtSetup."Service Item Nos.";
-            ServItem."No." := NoSeries.GetNextNo(ServItem."No. Series");
-#if not CLEAN24
-            NoSeriesMgt.RaiseObsoleteOnAfterInitSeries(ServItem."No. Series", ServMgtSetup."Service Item Nos.", 0D, ServItem."No.");
-        end;
-#endif
+        ServItem."No. Series" := ServMgtSetup."Service Item Nos.";
+        ServItem."No." := NoSeries.GetNextNo(ServItem."No. Series");
         OnCreateServItemOnServItemLineOnBeforeServiceItemInsert(ServItem, ServItemLine);
         ServItem.Insert();
         ServItem.Validate(Description, ServItemLine.Description);
@@ -666,6 +644,8 @@ codeunit 5920 ServItemManagement
     local procedure CopyReservationEntryLine(var SalesLine: Record "Sales Line")
     var
         ReservEntry: Record "Reservation Entry";
+        Item: Record Item;
+        ItemTrackingCode: Record "Item Tracking Code";
         IsHandled: Boolean;
     begin
         IsHandled := false;
@@ -683,6 +663,9 @@ codeunit 5920 ServItemManagement
         ReservEntry.SetRange("Source Ref. No.", SalesLine."Line No.");
         ReservEntry.SetRange("Source Batch Name", '');
         ReservEntry.SetRange("Source Prod. Order Line", 0);
+        if Item.Get(SalesLine."No.") then
+            if (Item."Item Tracking Code" <> '') and ItemTrackingCode.Get(Item."Item Tracking Code") and ItemTrackingCode."SN Specific Tracking" then
+                ReservEntry.SetFilter("Serial No.", '<>%1', '');
         ReservEntry.SetFilter("Qty. to Handle (Base)", '<>%1', 0);
 
         OnCopyReservationEntryLineOnBeforeReservationEntryFindSet(SalesLine, ReservEntry);

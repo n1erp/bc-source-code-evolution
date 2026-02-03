@@ -15,7 +15,6 @@ using Microsoft.Manufacturing.MachineCenter;
 using Microsoft.Manufacturing.ProductionBOM;
 using Microsoft.Manufacturing.Routing;
 using Microsoft.Manufacturing.Setup;
-using Microsoft.Manufacturing.StandardCost;
 using Microsoft.Manufacturing.WorkCenter;
 using Microsoft.Purchases.Document;
 
@@ -31,31 +30,25 @@ codeunit 99000758 "Mfg. Cost Calculation Mgt."
 
     [EventSubscriber(ObjectType::Table, Database::Item, OnBeforeValidateStandardCost, '', false, false)]
     local procedure OnBeforeValidateStandardCost(var Item: Record Item; xItem: Record Item)
-    var
-        CalculateStandardCost: Codeunit "Calculate Standard Cost";
     begin
-        if CanIncNonInvCostIntoProductionItem() then begin
-            if Item."Costing Method" = Item."Costing Method"::Standard then
+        if CanIncNonInvCostIntoProductionItem() then
+            if Item."Costing Method" = Item."Costing Method"::Standard then begin
                 Item."Single-Lvl Mat. Non-Invt. Cost" := 0;
-
-            if Item."Standard Cost" <> xItem."Standard Cost" then
-                CalculateStandardCost.CalcItemForNonInventoryValue(Item);
-        end;
+                Item."Rolled-up Mat. Non-Invt. Cost" := 0;
+            end;
     end;
 
     [EventSubscriber(ObjectType::Table, Database::"Stockkeeping Unit", OnBeforeValidateStandardCost, '', false, false)]
     local procedure OnBeforeValidateSKUStandardCost(var StockkeepingUnit: Record "Stockkeeping Unit"; xStockkeepingUnit: Record "Stockkeeping Unit")
     var
         Item: Record Item;
-        CalculateStandardCost: Codeunit "Calculate Standard Cost";
     begin
         if CanIncNonInvCostIntoProductionItem() then begin
             Item.Get(StockkeepingUnit."Item No.");
-            if Item."Costing Method" = Item."Costing Method"::Standard then
+            if Item."Costing Method" = Item."Costing Method"::Standard then begin
                 StockkeepingUnit."Single-Lvl Mat. Non-Invt. Cost" := 0;
-
-            if StockkeepingUnit."Standard Cost" <> xStockkeepingUnit."Standard Cost" then
-                CalculateStandardCost.CalcSKUForNonInventoryValue(StockkeepingUnit);
+                StockkeepingUnit."Rolled-up Mat. Non-Invt. Cost" := 0;
+            end;
         end;
     end;
 
@@ -871,8 +864,15 @@ codeunit 99000758 "Mfg. Cost Calculation Mgt."
 
     procedure CanIncNonInvCostIntoProductionItem(): Boolean
     begin
-        ManufacturingSetup.GetRecordOnce();
+        ManufacturingSetup.Get();
         exit(ManufacturingSetup."Inc. Non. Inv. Cost To Prod");
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Cost Calculation Management", 'OnCanIncNonInvCostIntoProductionItem', '', true, true)]
+    local procedure OnCanIncNonInvCostIntoProductionItem(var Result: Boolean)
+    begin
+        ManufacturingSetup.Get();
+        Result := ManufacturingSetup."Inc. Non. Inv. Cost To Prod";
     end;
 
     [IntegrationEvent(false, false)]

@@ -195,6 +195,8 @@ report 5055 "Contact - Cover Sheet"
 
     requestpage
     {
+        AboutTitle = 'About Contact - Cover Sheet';
+        AboutText = 'Get cover sheets to send to one or more of your contacts.';
         SaveValues = false;
 
         layout
@@ -348,11 +350,6 @@ report 5055 "Contact - Cover Sheet"
         }
 
         trigger OnInit()
-        begin
-            LogInteractionEnable := true;
-        end;
-
-        trigger OnOpenPage()
         begin
             LogInteraction := SegManagement.FindInteractionTemplateCode(Enum::"Interaction Log Entry Document Type"::"Cover Sheet") <> '';
             LogInteractionEnable := LogInteraction;

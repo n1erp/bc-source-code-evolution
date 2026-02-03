@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Sales.History;
 
 using Microsoft.Bank.Setup;
@@ -57,6 +61,13 @@ page 132 "Posted Sales Invoice"
                     TableRelation = Customer.Name;
                     ToolTip = 'Specifies the name of the customer that you shipped the items on the invoice to.';
                 }
+                field("Sell-to Customer Name 2"; Rec."Sell-to Customer Name 2")
+                {
+                    ApplicationArea = Basic, Suite;
+                    Caption = 'Customer Name 2';
+                    Editable = false;
+                    Visible = false;
+                }
                 field("VAT Registration No."; Rec."VAT Registration No.")
                 {
                     ApplicationArea = VAT;
@@ -99,7 +110,7 @@ page 132 "Posted Sales Invoice"
                         field("Sell-to County"; Rec."Sell-to County")
                         {
                             ApplicationArea = Basic, Suite;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Sell-to Country/Region Code";
                             Editable = false;
                             Importance = Additional;
                             ToolTip = 'Specifies the state, province or county as a part of the address.';
@@ -559,7 +570,7 @@ page 132 "Posted Sales Invoice"
                     field("Ship-to County"; Rec."Ship-to County")
                     {
                         ApplicationArea = Basic, Suite;
-                        Caption = 'County';
+                        CaptionClass = '5,1,' + Rec."Ship-to Country/Region Code";
                         Editable = false;
                         ToolTip = 'Specifies the state, province or county as a part of the address.';
                     }
@@ -603,6 +614,14 @@ page 132 "Posted Sales Invoice"
                         Importance = Promoted;
                         ToolTip = 'Specifies the name of the customer that the invoice was sent to.';
                     }
+                    field("Bill-to Name 2"; Rec."Bill-to Name 2")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        Caption = 'Name 2';
+                        Editable = false;
+                        Importance = Additional;
+                        Visible = false;
+                    }
                     field("Bill-to Address"; Rec."Bill-to Address")
                     {
                         ApplicationArea = Basic, Suite;
@@ -634,7 +653,7 @@ page 132 "Posted Sales Invoice"
                         field("Bill-to County"; Rec."Bill-to County")
                         {
                             ApplicationArea = Basic, Suite;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Bill-to Country/Region Code";
                             Editable = false;
                             Importance = Additional;
                             ToolTip = 'Specifies the state, province or county as a part of the address.';

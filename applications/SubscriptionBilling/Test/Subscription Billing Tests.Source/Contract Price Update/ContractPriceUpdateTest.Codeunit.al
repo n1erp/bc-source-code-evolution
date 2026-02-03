@@ -7,6 +7,7 @@ using Microsoft.Purchases.Vendor;
 codeunit 139691 "Contract Price Update Test"
 {
     Subtype = Test;
+    TestType = Uncategorized;
     TestPermissions = Disabled;
     Access = Internal;
 
@@ -25,6 +26,7 @@ codeunit 139691 "Contract Price Update Test"
         VendorContract: Record "Vendor Subscription Contract";
         ContractTestLibrary: Codeunit "Contract Test Library";
         LibraryRandom: Codeunit "Library - Random";
+        LibraryTestInitialize: Codeunit "Library - Test Initialize";
         Confirm: Boolean;
 
     #region Tests
@@ -32,6 +34,7 @@ codeunit 139691 "Contract Price Update Test"
     [Test]
     procedure ExpectErrorIfUpdateValueNotZeroInCaseOfRecentItemPrices()
     begin
+        Initialize();
         ContractTestLibrary.CreatePriceUpdateTemplate(PriceUpdateTemplate, "Service Partner"::Customer, "Price Update Method"::"Price by %", LibraryRandom.RandDec(100, 2), '12M', '12M', '12M');
         asserterror PriceUpdateTemplate.Validate("Price Update Method", "Price Update Method"::"Recent Item Prices");
     end;
@@ -40,7 +43,7 @@ codeunit 139691 "Contract Price Update Test"
     [HandlerFunctions('ExchangeRateSelectionModalPageHandler,MessageHandler,ConfirmHandler')]
     procedure TestExcludeFromPriceUpdateInCustomerServiceCommitments()
     begin
-        ClearAll();
+        Initialize();
         ContractTestLibrary.DeleteAllContractRecords();
         SetupServiceObjectWithServiceCommitment(false);
         ContractTestLibrary.CreateCustomerContractAndCreateContractLinesForItems(CustomerContract, ServiceObject, Customer."No."); // ExchangeRateSelectionModalPageHandler, MessageHandler
@@ -71,7 +74,7 @@ codeunit 139691 "Contract Price Update Test"
     [HandlerFunctions('ExchangeRateSelectionModalPageHandler,MessageHandler,ConfirmHandler')]
     procedure TestExcludeFromPriceUpdateInVendorServiceCommitments()
     begin
-        ClearAll();
+        Initialize();
         ContractTestLibrary.DeleteAllContractRecords();
         SetupServiceObjectWithServiceCommitment(false);
         ContractTestLibrary.CreateVendorContractAndCreateContractLinesForItems(VendorContract, ServiceObject, Vendor."No.", true);        // ExchangeRateSelectionModalPageHandler, MessageHandler
@@ -101,6 +104,12 @@ codeunit 139691 "Contract Price Update Test"
     #endregion Tests
 
     #region Procedures
+
+    local procedure Initialize()
+    begin
+        LibraryTestInitialize.OnTestInitialize(Codeunit::"Contract Price Update Test");
+        ClearAll();
+    end;
 
     local procedure SetupServiceObjectWithServiceCommitment(SNSpecificTracking: Boolean)
     begin

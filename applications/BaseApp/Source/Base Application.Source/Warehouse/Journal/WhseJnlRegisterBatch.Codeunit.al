@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Warehouse.Journal;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Warehouse.Journal;
 
 using Microsoft.Foundation.NoSeries;
 using Microsoft.Foundation.UOM;
@@ -70,6 +74,7 @@ codeunit 7304 "Whse. Jnl.-Register Batch"
         TempWhseJnlLine2: Record "Warehouse Journal Line" temporary;
         WhseJnlRegisterLine: Codeunit "Whse. Jnl.-Register Line";
         PhysInvtCountMgt: Codeunit "Phys. Invt. Count.-Management";
+        SequenceNoMgt: Codeunit "Sequence No. Mgt.";
         HideDialog: Boolean;
         IsHandled: Boolean;
     begin
@@ -104,6 +109,7 @@ codeunit 7304 "Whse. Jnl.-Register Batch"
         CheckItemAvailability(WhseJnlLine);
 
         CheckLines(TempHandlingSpecification, HideDialog);
+        SequenceNoMgt.AllocateSeqNoBuffer(Database::"Warehouse Entry", NoOfRecords);
 
         PhysInvtCount := false;
         // Register lines
@@ -556,8 +562,6 @@ codeunit 7304 "Whse. Jnl.-Register Batch"
     var
         WarehouseEntry: Record "Warehouse Entry";
     begin
-        WarehouseEntry.Reset();
-        WarehouseEntry.SetCurrentKey("Item No.", "Location Code", "Variant Code", "Bin Type Code", "Unit of Measure Code", "Lot No.", "Serial No.");
         WarehouseEntry.SetRange("Item No.", ItemNo);
         WarehouseEntry.SetRange("Location Code", LocationCode);
         WarehouseEntry.SetRange("Variant Code", VariantCode);

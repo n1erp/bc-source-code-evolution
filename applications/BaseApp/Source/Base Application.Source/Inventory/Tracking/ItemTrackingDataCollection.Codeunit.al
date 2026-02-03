@@ -618,7 +618,8 @@ codeunit 6501 "Item Tracking Data Collection"
             if TempReservEntry."Reservation Status" = TempReservEntry."Reservation Status"::Reservation then
                 TempGlobalEntrySummary."Total Reserved Quantity" += TempReservEntry."Quantity (Base)";
         end else begin
-            TempGlobalEntrySummary."Total Requested Quantity" -= TempReservEntry."Quantity (Base)";
+            if TempReservEntry."Qty. to Handle (Base)" <> 0 then
+                TempGlobalEntrySummary."Total Requested Quantity" -= TempReservEntry."Quantity (Base)";
             if TempReservEntry.HasSamePointerWithSpec(TempTrackingSpecification) then begin
                 if TempReservEntry."Reservation Status" = TempReservEntry."Reservation Status"::Reservation then
                     TempGlobalEntrySummary."Current Reserved Quantity" -= TempReservEntry."Quantity (Base)";
@@ -1243,20 +1244,7 @@ codeunit 6501 "Item Tracking Data Collection"
     begin
         ItemJnlLine.TestField("Order Type", ItemJnlLine."Order Type"::Production);
         TempTrackingSpecification.Reset();
-        case ItemJnlLine."Entry Type" of
-            ItemJnlLine."Entry Type"::Consumption:
-                begin
-                    if ItemJnlLine."Prod. Order Comp. Line No." = 0 then
-                        exit;
-                    TempTrackingSpecification.SetSourceFilter(5407, 3, ItemJnlLine."Order No.", ItemJnlLine."Prod. Order Comp. Line No.", false); // Database::"Prod. Order Component"
-                    TempTrackingSpecification.SetSourceFilter('', ItemJnlLine."Order Line No.");
-                end;
-            ItemJnlLine."Entry Type"::Output:
-                begin
-                    TempTrackingSpecification.SetSourceFilter(5406, 3, ItemJnlLine."Order No.", -1, false); // Database::"Prod. Order Line"
-                    TempTrackingSpecification.SetSourceFilter('', ItemJnlLine."Order Line No.");
-                end;
-        end;
+        OnFindRelatedParentTrkgSpecOnSetSourceFilters(ItemJnlLine, TempTrackingSpecification);
         TempTrackingSpecification.SetTrackingFilterFromItemTrackingSetup(ItemTrackingSetup);
         OnFindRelatedParentTrkgSpecOnAfterSetFilters(TempTrackingSpecification, ItemJnlLine);
         exit(TempTrackingSpecification.FindFirst());
@@ -1787,6 +1775,11 @@ codeunit 6501 "Item Tracking Data Collection"
 
     [IntegrationEvent(false, false)]
     local procedure OnAfterSetTempGlobalEntrySummaryExpirationDate(TempGlobalEntrySummary: Record "Entry Summary" temporary; TempReservEntry: Record "Reservation Entry" temporary)
+    begin
+    end;
+
+    [InternalEvent(false)]
+    local procedure OnFindRelatedParentTrkgSpecOnSetSourceFilters(ItemJnlLine: Record "Item Journal Line"; var TempTrackingSpecification: Record "Tracking Specification" temporary)
     begin
     end;
 }

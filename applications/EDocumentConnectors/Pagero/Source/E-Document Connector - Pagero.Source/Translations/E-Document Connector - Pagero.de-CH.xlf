@@ -3,108 +3,6 @@
   <file datatype="xml" source-language="en-US" target-language="de-CH" original="E-Document Connector - Pagero">
     <body>
       <group id="body">
-        <trans-unit id="Table 331661604 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>E-Doc. Ext. Connection Setup</source>
-          <target state="translated">Externe Verbindungseinrichtung für E-Beleg</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 331661604 - Field 3242117461 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Authentication URL</source>
-          <target state="translated">Authentifizierungs-URL</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field Authentication URL - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 331661604 - Field 652819368 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Client ID</source>
-          <target state="translated">Client-ID</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field Client ID - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 331661604 - Field 2529110793 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Client Secret</source>
-          <target state="translated">Geheimer Clientschlüssel</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field Client Secret - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 331661604 - Field 613381766 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Company ID</source>
-          <target state="translated">Mandanten-ID</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field Company Id - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 331661604 - Field 1914619800 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>DocumentAPI URL</source>
-          <target state="translated">Beleg-API-URL</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field DocumentAPI URL - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 331661604 - Field 4102148806 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>E-Document Service</source>
-          <target state="translated">E-Belegdienst</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field E-Document Service - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 331661604 - Field 4243455615 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>FileAPI URL</source>
-          <target state="translated">Datei-API-URL</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field FileAPI URL - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 331661604 - Field 2206183795 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Fileparts URL</source>
-          <target state="translated">Fileparts-URL</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field Fileparts URL - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 331661604 - Field 3490282128 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>OAuth 2.0 Code</source>
-          <target state="translated">OAuth 2.0-Code</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field OAuth Feature GUID - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 331661604 - Field 970416965 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>PK</source>
-          <target state="translated">Primärschlüssel</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field PK - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 331661604 - Field 618784563 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Redirect URL</source>
-          <target state="translated">Umleitungs-URL</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field Redirect URL - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 331661604 - Field 2325619241 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Send Mode</source>
-          <target state="translated">Sendemodus</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field Send Mode - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2903450976 - NamedType 4090211762" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You must set up service integration in the E-Document service card.</source>
-          <target state="translated">Sie müssen die Serviceintegration auf der Karte des E-Belegdiensts einrichten.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero API Requests - NamedType MissingSetupErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2749164124 - NamedType 3535051250" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Authentication failed, check your credentials in the E-Document service card.</source>
-          <target state="translated">Wenn die Authentifizierung fehlgeschlagen ist, überprüfen Sie Ihre Anmeldeinformationen auf der Karte des E-Belegdiensts.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Auth. - NamedType AuthenticationFailedErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2749164124 - NamedType 2248862561" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Authorization successful.</source>
-          <target state="translated">Autorisierung erfolgreich.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Auth. - NamedType AuthorizationSuccessfulTxt)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2749164124 - NamedType 1230847611" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You must set up authentication to the service integration in the E-Document service card.</source>
-          <target state="translated">Sie müssen die Authentifizierung für die Serviceintegration auf der Karte des E-Belegdiensts einrichten.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Auth. - NamedType MissingAuthErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
         <trans-unit id="Codeunit 1208857380 - NamedType 3949230830" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>The request to send documents has been blocked. To resolve the problem, enable outgoing HTTP requests for the E-Document apps on the Extension Management page.</source>
           <target state="translated">Die Anforderung zum Senden von Belegen wurde blockiert. Um das Problem zu beheben, aktivieren Sie ausgehende HTTP-Anforderungen für die E-Beleg-Apps auf der Seite „Erweiterungsverwaltung“.</target>
@@ -123,16 +21,34 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Connection - NamedType UnsuccessfulResponseParseErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
+        <trans-unit id="Codeunit 2749164124 - NamedType 1230847611" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must set up authentication to the service integration in the E-Document service card.</source>
+          <target state="translated">Sie müssen die Authentifizierung für die Serviceintegration auf der Karte des E-Belegdiensts einrichten.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Auth. - NamedType MissingAuthErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2749164124 - NamedType 2248862561" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authorization successful.</source>
+          <target state="translated">Autorisierung erfolgreich.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Auth. - NamedType AuthorizationSuccessfulTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2749164124 - NamedType 3535051250" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authentication failed, check your credentials in the E-Document service card.</source>
+          <target state="translated">Wenn die Authentifizierung fehlgeschlagen ist, überprüfen Sie Ihre Anmeldeinformationen auf der Karte des E-Belegdiensts.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Auth. - NamedType AuthenticationFailedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2903450976 - NamedType 4090211762" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must set up service integration in the E-Document service card.</source>
+          <target state="translated">Sie müssen die Serviceintegration auf der Karte des E-Belegdiensts einrichten.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero API Requests - NamedType MissingSetupErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
         <trans-unit id="Codeunit 3162180671 - NamedType 1088184363" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>You cannot ask for cancel with the E-Document in this current status %1. You can request for cancel when E-document status is 'Cancel Error' or 'Sending Error'.</source>
           <target state="translated">Sie können den E-Beleg nicht stornieren, wenn er sich im aktuellen Status %1 befindet. Sie können eine Stornierung beantragen, wenn der Status des E-Belegs „Stornierungsfehler“ oder „Sendefehler“ lautet.</target>
           <note from="Developer" annotates="general" priority="2">%1 - Status(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Processing - NamedType CancelCheckStatusErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3162180671 - NamedType 2180008893" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Failed to delete purchase document %1 as it is currently linked to another E-Document %2</source>
-          <target state="translated">Der Einkaufsbeleg %1 konnte nicht gelöscht werden, da er derzeit mit einem anderen E-Beleg %2 verknüpft ist</target>
-          <note from="Developer" annotates="general" priority="2">%1 - Purchase header Document No., %2 - E-Document Entry No.(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Processing - NamedType CannotRejectErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Codeunit 3162180671 - NamedType 1855753092" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -141,10 +57,10 @@
           <note from="Developer" annotates="general" priority="2">%1 - Document ID(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Processing - NamedType CouldNotRetrieveDocumentErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 3162180671 - NamedType 3695462186" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You cannot ask for approval with the E-Document in this current status %1. You can request for approval when E-document status is Sent.</source>
-          <target state="translated">Mit dem E-Beleg im aktuellen Status %1 können Sie keine Genehmigung beantragen. Sie können eine Genehmigung beantragen, wenn der Status des E-Belegs „Gesendet“ lautet.</target>
-          <note from="Developer" annotates="general" priority="2">%1 - Status(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Processing - NamedType GetApprovalCheckStatusErr)</note>
+        <trans-unit id="Codeunit 3162180671 - NamedType 2180008893" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed to delete purchase document %1 as it is currently linked to another E-Document %2</source>
+          <target state="translated">Der Einkaufsbeleg %1 konnte nicht gelöscht werden, da er derzeit mit einem anderen E-Beleg %2 verknüpft ist</target>
+          <note from="Developer" annotates="general" priority="2">%1 - Purchase header Document No., %2 - E-Document Entry No.(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Processing - NamedType CannotRejectErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Codeunit 3162180671 - NamedType 2373604540" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -159,10 +75,70 @@
           <note from="Developer" annotates="general" priority="2">%1 - Action response, %2 - Status(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Processing - NamedType SendApproveRejectCheckStatusErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 771339827 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Pagero Connection Setup</source>
-          <target state="translated">Pagero-Verbindungseinrichtung</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Property Caption)</note>
+        <trans-unit id="Codeunit 3162180671 - NamedType 3695462186" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You cannot ask for approval with the E-Document in this current status %1. You can request for approval when E-document status is Sent.</source>
+          <target state="translated">Mit dem E-Beleg im aktuellen Status %1 können Sie keine Genehmigung beantragen. Sie können eine Genehmigung beantragen, wenn der Status des E-Belegs „Gesendet“ lautet.</target>
+          <note from="Developer" annotates="general" priority="2">%1 - Status(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Processing - NamedType GetApprovalCheckStatusErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3162180671 - NamedType 3925281429" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Received application response for wrong document %1</source>
+          <target state="translated">Erhaltene Anwendungsantwort für falschen Beleg %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 - Document ID(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Codeunit Pagero Processing - NamedType ReceivedApplicationResponseErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2614690178 - EnumValue 1065337893 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production</source>
+          <target state="translated">Produktion</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Enum E-Doc. Ext. Send Mode - EnumValue Production - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2614690178 - EnumValue 2391601916 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certification</source>
+          <target state="translated">Zertifizierung</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Enum E-Doc. Ext. Send Mode - EnumValue Certification - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2614690178 - EnumValue 3732224266 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test</source>
+          <target state="translated">Prüfen</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Enum E-Doc. Ext. Send Mode - EnumValue Test - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 771339827 - Action 2402477966 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resets the Pagero setup.</source>
+          <target state="translated">Setzt die Pagero-Einrichtung zurück.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Action ResetSetup - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 771339827 - Action 2402477966 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reset Setup</source>
+          <target state="translated">Einrichtung zurücksetzen</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Action ResetSetup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 771339827 - Action 2823348192 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens the OAuth 2.0 setup for the current user.</source>
+          <target state="translated">Öffnet die OAuth 2.0-Einrichtung für den aktuellen Benutzer.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Action OpenOAuthSetup - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 771339827 - Action 2823348192 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open OAuth 2.0 setup</source>
+          <target state="translated">OAuth 2.0-Einrichtung öffnen</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Action OpenOAuthSetup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 771339827 - Control 2206183795 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the fileparts URL.</source>
+          <target state="translated">Gibt die Fileparts-URL an.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Control Fileparts URL - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 771339827 - Control 2325619241 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the send mode.</source>
+          <target state="translated">Gibt den Sendemodus an.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Control Send Mode - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Page 771339827 - Control 3242117461 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -195,28 +171,16 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Control ClientSecret - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 771339827 - Control 613381766 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the company ID.</source>
-          <target state="translated">Gibt die Mandanten-ID an.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Control Company Id - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 771339827 - Control 753283736 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the document API URL.</source>
-          <target state="translated">Gibt die URL der Beleg-API an.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Control DocumentAPI Url - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
         <trans-unit id="Page 771339827 - Control 4243455615 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the file API URL.</source>
           <target state="translated">Gibt die Datei-API-URL an.</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Control FileAPI URL - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 771339827 - Control 2206183795 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the fileparts URL.</source>
-          <target state="translated">Gibt die Fileparts-URL an.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Control Fileparts URL - Property ToolTip)</note>
+        <trans-unit id="Page 771339827 - Control 613381766 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the company ID.</source>
+          <target state="translated">Gibt die Mandanten-ID an.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Control Company Id - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Page 771339827 - Control 618784563 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -225,37 +189,23 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Control Redirect URL - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 771339827 - Control 2325619241 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the send mode.</source>
-          <target state="translated">Gibt den Sendemodus an.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Control Send Mode - Property ToolTip)</note>
+        <trans-unit id="Page 771339827 - Control 753283736 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the document API URL.</source>
+          <target state="translated">Gibt die URL der Beleg-API an.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Control DocumentAPI Url - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 771339827 - Action 2823348192 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Opens the OAuth 2.0 setup for the current user.</source>
-          <target state="translated">Öffnet die OAuth 2.0-Einrichtung für den aktuellen Benutzer.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Action OpenOAuthSetup - Property ToolTip)</note>
+        <trans-unit id="Page 771339827 - NamedType 1516037821" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to reset the Pagero setup?</source>
+          <target state="translated">Möchten Sie die Pagero-Einrichtung wirklich zurücksetzen?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - NamedType ResetQst)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 771339827 - Action 2823348192 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Open OAuth 2.0 setup</source>
-          <target state="translated">OAuth 2.0-Einrichtung öffnen</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Action OpenOAuthSetup - Property Caption)</note>
+        <trans-unit id="Page 771339827 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pagero Connection Setup</source>
+          <target state="translated">Pagero-Verbindungseinrichtung</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Page EDoc Ext Connection Setup Card - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="PageExtension 3766969997 - Action 803889193 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Approve related document.</source>
-          <target state="translated">Genehmigen Sie den zugehörigen Beleg.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-          <note from="ObjectTarget" annotates="general" priority="5">Page 4128474945</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 3766969997 - Action 803889193 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Approve</source>
-          <target state="translated">Genehmigen</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-          <note from="ObjectTarget" annotates="general" priority="5">Page 4128474945</note>
         </trans-unit>
         <trans-unit id="PageExtension 3766969997 - Action 113888489 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reject related document.</source>
@@ -271,16 +221,108 @@
           <note from="Xliff Generator" annotates="general" priority="3" />
           <note from="ObjectTarget" annotates="general" priority="5">Page 4128474945</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3766969997 - Field 2326231102 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Document Id</source>
-          <target state="translated">Beleg-ID</target>
+        <trans-unit id="PageExtension 3766969997 - Action 803889193 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Approve related document.</source>
+          <target state="translated">Genehmigen Sie den zugehörigen Beleg.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3" />
-          <note from="ObjectTarget" annotates="general" priority="5">Table 4128474945</note>
+          <note from="ObjectTarget" annotates="general" priority="5">Page 4128474945</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3766969997 - Action 803889193 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Approve</source>
+          <target state="translated">Genehmigen</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 4128474945</note>
+        </trans-unit>
+        <trans-unit id="Table 331661604 - Field 1914619800 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DocumentAPI URL</source>
+          <target state="translated">Beleg-API-URL</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field DocumentAPI URL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 331661604 - Field 2206183795 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fileparts URL</source>
+          <target state="translated">Fileparts-URL</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field Fileparts URL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 331661604 - Field 2325619241 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Send Mode</source>
+          <target state="translated">Sendemodus</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field Send Mode - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 331661604 - Field 2529110793 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <target state="translated">Geheimer Clientschlüssel</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field Client Secret - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 331661604 - Field 3242117461 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authentication URL</source>
+          <target state="translated">Authentifizierungs-URL</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field Authentication URL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 331661604 - Field 3490282128 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OAuth 2.0 Code</source>
+          <target state="translated">OAuth 2.0-Code</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field OAuth Feature GUID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 331661604 - Field 4102148806 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>E-Document Service</source>
+          <target state="translated">E-Belegdienst</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field E-Document Service - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 331661604 - Field 4243455615 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>FileAPI URL</source>
+          <target state="translated">Datei-API-URL</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field FileAPI URL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 331661604 - Field 613381766 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company ID</source>
+          <target state="translated">Mandanten-ID</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field Company Id - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 331661604 - Field 618784563 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Redirect URL</source>
+          <target state="translated">Umleitungs-URL</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field Redirect URL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 331661604 - Field 652819368 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client ID</source>
+          <target state="translated">Client-ID</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field Client ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 331661604 - Field 970416965 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PK</source>
+          <target state="translated">Primärschlüssel</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Field PK - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 331661604 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>E-Doc. Ext. Connection Setup</source>
+          <target state="translated">Externe Verbindungseinrichtung für E-Beleg</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Table E-Doc. Ext. Connection Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="TableExtension 3766969997 - Field 151161733 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>File Id</source>
           <target state="translated">Datei-ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 4128474945</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3766969997 - Field 2326231102 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Id</source>
+          <target state="translated">Beleg-ID</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3" />
           <note from="ObjectTarget" annotates="general" priority="5">Table 4128474945</note>
@@ -291,24 +333,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3" />
           <note from="ObjectTarget" annotates="general" priority="5">Table 4128474945</note>
-        </trans-unit>
-        <trans-unit id="Enum 2614690178 - EnumValue 2391601916 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Certification</source>
-          <target state="translated">Zertifizierung</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Enum E-Doc. Ext. Send Mode - EnumValue Certification - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Enum 2614690178 - EnumValue 1065337893 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Production</source>
-          <target state="translated">Produktion</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Enum E-Doc. Ext. Send Mode - EnumValue Production - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Enum 2614690178 - EnumValue 3732224266 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Test</source>
-          <target state="translated">Prüfen</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector)(LookupHint=Enum E-Doc. Ext. Send Mode - EnumValue Test - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
       </group>
     </body>

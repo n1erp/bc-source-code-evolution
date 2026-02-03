@@ -24,7 +24,7 @@ codeunit 437 "IC Navigation"
     begin
         if HandledICInboxTrans.IsEmpty() then
             exit;
-        NavigateToDocument(HandledICInboxTrans."Document No.", Enum::"IC Direction Type"::Incoming, HandledICInboxTrans."IC Partner Code", HandledICInboxTrans."Document Type", HandledICInboxTrans."Source Type");
+        NavigateToDocument(HandledICInboxTrans."Document No.", Enum::"IC Direction Type"::Incoming, HandledICInboxTrans."IC Partner Code", HandledICInboxTrans."Document Type", HandledICInboxTrans."IC Source Type");
     end;
 
     procedure NavigateToDocument(ICOutboxTransaction: Record "IC Outbox Transaction")
@@ -38,7 +38,7 @@ codeunit 437 "IC Navigation"
     begin
         if HandledICOutboxTrans.IsEmpty() then
             exit;
-        NavigateToDocument(HandledICOutboxTrans."Document No.", Enum::"IC Direction Type"::Outgoing, HandledICOutboxTrans."IC Partner Code", HandledICOutboxTrans."Document Type", HandledICOutboxTrans."Source Type");
+        NavigateToDocument(HandledICOutboxTrans."Document No.", Enum::"IC Direction Type"::Outgoing, HandledICOutboxTrans."IC Partner Code", HandledICOutboxTrans."Document Type", HandledICOutboxTrans."IC Source Type");
     end;
 
 
@@ -53,6 +53,20 @@ codeunit 437 "IC Navigation"
         // The related document is a Posted Sales Invoice.
         PostedSalesInvoice.SetRecord(SalesInvoiceHeader);
         PostedSalesInvoice.Run();
+        exit(true);
+    end;
+
+    local procedure NavigateToSalesCreditMemo(DocumentNo: Code[20]): Boolean
+    var
+        SalesCrMemoHeader: Record "Sales Cr.Memo Header";
+        PostedSalesCreditMemo: Page "Posted Sales Credit Memo";
+    begin
+        // An IC Transaction of type Sales Credit Memo can only be sent when posted.
+        if not SalesCrMemoHeader.Get(DocumentNo) then
+            exit(false);
+        // The related document is a Posted Sales Credit Memo.
+        PostedSalesCreditMemo.SetRecord(SalesCrMemoHeader);
+        PostedSalesCreditMemo.Run();
         exit(true);
     end;
 
@@ -120,6 +134,8 @@ codeunit 437 "IC Navigation"
                 exit(NavigateToSalesOrderDocument(DocumentNo, ICDirectionType, ICPartnerCode));
             DocumentType::Invoice:
                 exit(NavigateToSalesInvoice(DocumentNo));
+            DocumentType::"Credit Memo":
+                exit(NavigateToSalesCreditMemo(DocumentNo));
             else begin
                 ShouldNavigateToDoc := false;
                 OnNavigateToSalesDocumentOnAfterCheckDocumentType(DocumentNo, ICDirectionType, ICPartnerCode, DocumentType, ShouldNavigateToDoc);

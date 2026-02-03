@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Sales.Document;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Sales.Document;
 
 using Microsoft.Assembly.Document;
 using Microsoft.Bank.BankAccount;
@@ -1023,16 +1027,11 @@ report 1305 "Standard Sales - Order Conf."
 
         trigger OnInit()
         begin
-            LogInteractionEnable := true;
+            InitLogInteraction();
+            LogInteractionEnable := LogInteraction;
             ArchiveDocument := SalesSetup."Archive Orders";
 
             OnAfterOnInit(Header);
-        end;
-
-        trigger OnOpenPage()
-        begin
-            InitLogInteraction();
-            LogInteractionEnable := LogInteraction;
         end;
     }
 
@@ -1115,15 +1114,11 @@ report 1305 "Standard Sales - Order Conf."
         if Header.GetFilters = '' then
             Error(NoFilterSetErr);
 
-        if not CurrReport.UseRequestPage then
-            InitLogInteraction();
-
         CompanyLogoPosition := SalesSetup."Logo Position on Documents";
     end;
 
     var
         GLSetup: Record "General Ledger Setup";
-        CompanyBankAccount: Record "Bank Account";
         DummyCompanyInfo: Record "Company Information";
         SalesSetup: Record "Sales & Receivables Setup";
         Cust: Record Customer;
@@ -1177,7 +1172,7 @@ report 1305 "Standard Sales - Order Conf."
         VATIdentifierLbl: Label 'VAT Identifier';
         VATPercentageLbl: Label 'VAT %';
         ExchangeRateTxt: Label 'Exchange rate: %1/%2', Comment = '%1 and %2 are both amounts.';
-        NoFilterSetErr: Label 'You must specify one or more filters to avoid accidently printing all documents.';
+        NoFilterSetErr: Label 'You must specify one or more filters to avoid accidentally printing all documents.';
         GreetingLbl: Label 'Hello';
         ClosingLbl: Label 'Sincerely';
         PmtDiscTxt: Label 'If we receive the payment before %1, you are eligible for a %2% payment discount.', Comment = '%1 Discount Due Date %2 = value of Payment Discount % ';
@@ -1197,6 +1192,7 @@ report 1305 "Standard Sales - Order Conf."
         PaymentMethod: Record "Payment Method";
         SalespersonPurchaser: Record "Salesperson/Purchaser";
         ShipmentMethod: Record "Shipment Method";
+        CompanyBankAccount: Record "Bank Account";
         VATClause: Record "VAT Clause";
         CustAddr: array[8] of Text[100];
         ShipToAddr: array[8] of Text[100];

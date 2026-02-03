@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Finance.GeneralLedger.Journal;
 
 using Microsoft.Finance.AllocationAccount;
@@ -665,6 +669,10 @@ table 221 "Gen. Jnl. Allocation"
     begin
         Rec.Validate("Account No.", AllocAccountDistribution."Destination Account Number");
         Rec.Validate("Allocation %", AllocAccountDistribution.Percent);
+        Rec.Validate("Shortcut Dimension 1 Code", AllocAccountDistribution."Global Dimension 1 Code");
+        Rec.Validate("Shortcut Dimension 2 Code", AllocAccountDistribution."Global Dimension 2 Code");
+        Rec.Validate("Dimension Set ID", AllocAccountDistribution."Dimension Set ID");
+        Rec.Modify(true);
     end;
 
     local procedure CheckGLAccount(var GLAccount: Record "G/L Account")

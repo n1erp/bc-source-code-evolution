@@ -397,6 +397,8 @@ report 5970 "Service Contract"
 
     requestpage
     {
+        AboutTitle = 'About Service Contract';
+        AboutText = 'Get an overview of all your service contracts.';
         SaveValues = true;
 
         layout
@@ -434,11 +436,6 @@ report 5970 "Service Contract"
         }
 
         trigger OnInit()
-        begin
-            LogInteractionEnable := true;
-        end;
-
-        trigger OnOpenPage()
         begin
             LogInteraction := SegManagement.FindInteractionTemplateCode(Enum::"Interaction Log Entry Document Type"::"Service Contract") <> '';
             LogInteractionEnable := LogInteraction;

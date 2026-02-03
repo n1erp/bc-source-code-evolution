@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Sales.FinanceCharge;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Sales.FinanceCharge;
 
 using Microsoft.Bank.BankAccount;
 using Microsoft.CRM.Contact;
@@ -651,11 +655,6 @@ report 118 "Finance Charge Memo"
 
         trigger OnInit()
         begin
-            LogInteractionEnable := true;
-        end;
-
-        trigger OnOpenPage()
-        begin
             InitLogInteraction();
             LogInteractionEnable := LogInteraction;
         end;
@@ -700,12 +699,6 @@ report 118 "Finance Charge Memo"
                       "Issued Fin. Charge Memo Header"."Customer No.", '', '', "Issued Fin. Charge Memo Header"."Posting Description", '');
 
                 until "Issued Fin. Charge Memo Header".Next() = 0;
-    end;
-
-    trigger OnPreReport()
-    begin
-        if not CurrReport.UseRequestPage then
-            InitLogInteraction();
     end;
 
     var

@@ -8,7 +8,6 @@ using Microsoft.CRM.Contact;
 using Microsoft.Finance.Dimension;
 using Microsoft.Foundation.Address;
 using Microsoft.Projects.Project.Ledger;
-using Microsoft.Sales.History;
 using Microsoft.Service.Comment;
 using Microsoft.Service.Document;
 using Microsoft.Service.Email;
@@ -66,6 +65,12 @@ page 5975 "Posted Service Shipment"
                         ApplicationArea = Service;
                         Editable = false;
                         ToolTip = 'Specifies the name of the customer.';
+                    }
+                    field("Name 2"; Rec."Name 2")
+                    {
+                        ApplicationArea = Service;
+                        Editable = false;
+                        Visible = false;
                     }
                     field(Address; Rec.Address)
                     {
@@ -267,6 +272,13 @@ page 5975 "Posted Service Shipment"
                         Editable = false;
                         ToolTip = 'Specifies the name of the customer that you send or sent the invoice or credit memo to.';
                     }
+                    field("Bill-to Name 2"; Rec."Bill-to Name 2")
+                    {
+                        ApplicationArea = Service;
+                        Caption = 'Name 2';
+                        Editable = false;
+                        Visible = false;
+                    }
                     field("Bill-to Address"; Rec."Bill-to Address")
                     {
                         ApplicationArea = Service;
@@ -295,7 +307,7 @@ page 5975 "Posted Service Shipment"
                         field("Bill-to County"; Rec."Bill-to County")
                         {
                             ApplicationArea = Service;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Bill-to Country/Region Code";
                             Editable = false;
                             ToolTip = 'Specifies the state, province or county for the customer that the invoice is sent to.';
                         }
@@ -443,7 +455,7 @@ page 5975 "Posted Service Shipment"
                         field("Ship-to County"; Rec."Ship-to County")
                         {
                             ApplicationArea = Service;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Ship-to Country/Region Code";
                             Editable = false;
                         }
                     }
@@ -687,6 +699,7 @@ page 5975 "Posted Service Shipment"
                     RunPageView = sorting(Status, "Document Type", "Document No.", "Service Item Line No.", "Allocation Date", "Starting Time", Posted);
                     ToolTip = 'View allocation of resources, such as technicians, to service items in service orders.';
                 }
+#if not CLEAN27
                 action("S&tatistics")
                 {
                     ApplicationArea = Service;
@@ -694,11 +707,30 @@ page 5975 "Posted Service Shipment"
                     Image = Statistics;
                     ShortCutKey = 'F7';
                     ToolTip = 'View information about the physical contents of the shipment, such as quantity of the shipped items, resource hours or costs, and weight and volume of the shipped items.';
+                    ObsoleteReason = 'The statistics action will be replaced with the ServiceStatistics action. The new action uses RunObject and does not run the action trigger. Use a page extension to modify the behaviour.';
+                    ObsoleteState = Pending;
+                    ObsoleteTag = '27.0';
 
                     trigger OnAction()
                     begin
                         Rec.OpenStatistics();
                     end;
+                }
+#endif
+                action("ServiceS&tatistics")
+                {
+                    ApplicationArea = Service;
+                    Caption = 'S&tatistics';
+                    Image = Statistics;
+                    ShortCutKey = 'F7';
+                    ToolTip = 'View information about the physical contents of the shipment, such as quantity of the shipped items, resource hours or costs, and weight and volume of the shipped items.';
+#if CLEAN27
+                    Visible = true;
+#else
+                    Visible = false;
+#endif
+                    RunObject = Page "Service Shipment Statistics";
+                    RunPageOnRec = true;
                 }
                 action("Co&mments")
                 {
@@ -800,6 +832,7 @@ page 5975 "Posted Service Shipment"
 
                 trigger OnAction()
                 begin
+                    ServShptHeader := Rec;
                     CurrPage.SetSelectionFilter(ServShptHeader);
                     ServShptHeader.PrintRecords(true);
                 end;
@@ -817,6 +850,22 @@ page 5975 "Posted Service Shipment"
                     Rec.Navigate();
                 end;
             }
+            action("Update Document")
+            {
+                ApplicationArea = Service;
+                Caption = 'Update Document';
+                Image = Edit;
+                ToolTip = 'Add new information that is relevant to the document. You can only edit a few fields because the document has already been posted.';
+
+                trigger OnAction()
+                var
+                    PostedServiceShptUpdate: Page "Posted Service Ship. - Update";
+                begin
+                    PostedServiceShptUpdate.LookupMode := true;
+                    PostedServiceShptUpdate.SetRec(Rec);
+                    PostedServiceShptUpdate.RunModal();
+                end;
+            }
         }
         area(Promoted)
         {
@@ -824,6 +873,9 @@ page 5975 "Posted Service Shipment"
             {
                 Caption = 'Process';
 
+                actionref("Update Document_Promoted"; "Update Document")
+                {
+                }
                 actionref("&Print_Promoted"; "&Print")
                 {
                 }
@@ -838,9 +890,18 @@ page 5975 "Posted Service Shipment"
                 actionref(Dimensions_Promoted; Dimensions)
                 {
                 }
+#if not CLEAN27
                 actionref("S&tatistics_Promoted"; "S&tatistics")
                 {
+                    ObsoleteReason = 'The statistics action will be replaced with the ServiceStatistics action. The new action uses RunObject and does not run the action trigger. Use a page extension to modify the behaviour.';
+                    ObsoleteState = Pending;
+                    ObsoleteTag = '27.0';
                 }
+#else
+                actionref("ServiceStatistics_Promoted"; "ServiceS&tatistics")
+                {
+                }
+#endif
                 actionref("Co&mments_Promoted"; "Co&mments")
                 {
                 }
@@ -872,7 +933,7 @@ page 5975 "Posted Service Shipment"
 
     trigger OnModifyRecord(): Boolean
     begin
-        CODEUNIT.Run(CODEUNIT::"Shipment Header - Edit", Rec);
+        CODEUNIT.Run(CODEUNIT::"Service Shipment Header - Edit", Rec);
         exit(false);
     end;
 
@@ -905,4 +966,3 @@ page 5975 "Posted Service Shipment"
         IsBillToCountyVisible := FormatAddress.UseCounty(Rec."Bill-to Country/Region Code");
     end;
 }
-

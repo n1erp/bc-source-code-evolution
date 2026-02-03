@@ -1,3 +1,8 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+#pragma warning disable AA0247
 page 1310 "O365 Activities"
 {
     Caption = 'Activities';
@@ -457,14 +462,23 @@ page 1310 "O365 Activities"
         HideWizardForDevices: Boolean;
         IsAddInReady: Boolean;
         IsPageReady: Boolean;
+        RecordForUpdateCachedCueValuesIsLocked: Boolean;
         TaskIdCalculateCue: Integer;
-        PBTTelemetryCategoryLbl: Label 'PBT', Locked = true;
-        PBTTelemetryMsgTxt: Label 'PBT errored with code %1 and text %2. The call stack is as follows %3.', Locked = true;
         IntegrationErrorsCue: Text;
         CoupledErrorsCue: Text;
         PBTList: Dictionary of [Integer, Text];
+        CachedCueValuesCalculationStartDateTime: DateTime;
+        PBTTelemetryCategoryLbl: Label 'PBT', Locked = true;
+        PBTTelemetryMsgTxt: Label 'PBT errored with code %1 and text %2. The call stack is as follows %3.', Locked = true;
 
     procedure CalculateCueFieldValues()
+    begin
+        ClearExistingPageBackgroundTasks();
+        CalculateNonCachedCueFieldValues();
+        CalculateCachedCueFieldValues();
+    end;
+
+    local procedure ClearExistingPageBackgroundTasks()
     var
         TaskId: Integer;
     begin
@@ -473,10 +487,23 @@ page 1310 "O365 Activities"
                 CurrPage.CancelBackgroundTask(TaskId);
                 PBTList.Remove(TaskId);
             end;
+    end;
+
+    local procedure CalculateNonCachedCueFieldValues()
+    begin
+        SchedulePBT(Rec.FieldName("Sales This Month"), Rec.FieldCaption("Sales This Month"));
+    end;
+
+    local procedure CalculateCachedCueFieldValues()
+    begin
+        CachedCueValuesCalculationStartDateTime := CurrentDateTime();
+        if not ActivitiesMgt.IsCachedCueDataExpired(Rec, CachedCueValuesCalculationStartDateTime) then begin
+            Clear(CachedCueValuesCalculationStartDateTime);
+            exit;
+        end;
 
         SchedulePBT(Rec.FieldName("Overdue Sales Invoice Amount"), Rec.FieldCaption("Overdue Sales Invoice Amount"));
         SchedulePBT(Rec.FieldName("Overdue Purch. Invoice Amount"), Rec.FieldCaption("Overdue Purch. Invoice Amount"));
-        SchedulePBT(Rec.FieldName("Sales This Month"), Rec.FieldCaption("Sales This Month"));
         SchedulePBT(Rec.FieldName("Average Collection Days"), Rec.FieldCaption("Average Collection Days"));
         SchedulePBT(Rec.FieldName("S. Ord. - Reserved From Stock"), Rec.FieldCaption("S. Ord. - Reserved From Stock"));
     end;
@@ -510,18 +537,38 @@ page 1310 "O365 Activities"
     begin
         // As PBT runs synchronously when running in test, the task is called even before PBTList is updated.
         // So, we use (TaskIdCalculateCue = TaskId) to check if the task is the one we are interested in.
-        if PBTList.ContainsKey(TaskId) or (TaskIdCalculateCue = TaskId) then begin
-            Rec.LockTable(true);
-            Rec.Get();
+        if PBTList.ContainsKey(TaskId) then begin
+            if not RecordForUpdateCachedCueValuesIsLocked then begin
+                Rec.LockTable(true);
+                Rec.Get();
+                RecordForUpdateCachedCueValuesIsLocked := true;
+            end;
             O365ActivitiesDictionary.FillActivitiesCue(Results, Rec);
             if PBTList.ContainsKey(TaskId) then begin
                 PBTList.Remove(TaskId);
-                if PBTList.Count() = 0 then
-                    Rec."Last Date/Time Modified" := CurrentDateTime;
+                if PBTList.Count() = 0 then begin
+                    RecordForUpdateCachedCueValuesIsLocked := false;
+                    if CachedCueValuesCalculationStartDateTime <> 0DT then
+                        Rec."Last Date/Time Modified" := CachedCueValuesCalculationStartDateTime;
+                    Rec.Modify(true);
+                    Commit();
+                end;
             end;
+            exit;
+        end;
+
+        // If task is finished before PBTList is updated.
+        if TaskIdCalculateCue = TaskId then begin
+            Rec.LockTable(true);
+            Rec.Get();
+            O365ActivitiesDictionary.FillActivitiesCue(Results, Rec);
+            // Set new date/time if this is the last PBT task.
+            if Results.ContainsKey(Rec.FieldName("S. Ord. - Reserved From Stock")) then
+                Rec."Last Date/Time Modified" := CachedCueValuesCalculationStartDateTime;
             Rec.Modify(true);
             Commit();
-        end
+            TaskIdCalculateCue := 0;
+        end;
     end;
 
     local procedure SchedulePBT(FieldName: Text; FieldCaption: Text)
@@ -534,7 +581,8 @@ page 1310 "O365 Activities"
         Clear(Input);
         Input.Add(FieldName, '');
         CurrPage.EnqueueBackgroundTask(TaskIdCalculateCue, Codeunit::"O365 Activities Dictionary", Input, TimeoutInMs);
-        PBTList.Add(TaskIdCalculateCue, FieldCaption);
+        if TaskIdCalculateCue <> 0 then
+            PBTList.Add(TaskIdCalculateCue, FieldCaption);
     end;
 
     local procedure SetActivityGroupVisibility()

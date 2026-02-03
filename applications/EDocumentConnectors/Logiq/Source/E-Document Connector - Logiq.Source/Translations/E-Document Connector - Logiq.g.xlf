@@ -38,6 +38,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Logiq Connection Setup - Field Client ID - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 302923447 - Field 1317552199 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the environment to connect.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Logiq Connection Setup - Field Environment - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 302923447 - Field 1317552199 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Environment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Logiq Connection Setup - Field Environment - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 302923447 - Field 374975153 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Endpoint to list available files.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -322,6 +332,16 @@
           <source>Engine 3</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum Logiq API Engine - EnumValue Engine 3 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2347315875 - EnumValue 2991376722 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Logiq Environment - EnumValue Pilot - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2347315875 - EnumValue 1065337893 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Logiq Environment - EnumValue Production - Property Caption</note>
         </trans-unit>
         <trans-unit id="EnumExtension 3057856441 - EnumValue 3844037488 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1694972421">
           <source>Logiq</source>

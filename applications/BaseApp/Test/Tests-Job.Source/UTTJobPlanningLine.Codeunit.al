@@ -41,6 +41,7 @@ codeunit 136353 "UT T Job Planning Line"
         NoJobPlanningLineErr: Label '%1 must be %2 in %3', Comment = '%1 = "No." field of Job Planning Line, %2 = Value of "No." field of Item, %3 = Job Planning Line';
         UnitCostLCYErr: Label '%1 must be %2 in %3', Comment = '%1 = Unit Cost (LCY), %2 = Unit Cost of Item, %3 = Job Planning Line';
         UnitCostErr: Label '%1 must be %2 in %3', Comment = '%1 = Unit Cost, %2 = UnitCost variable value, %3 = Job Planning Line';
+        ProjectPlanningLinesShouldShowLinesErr: Label 'Project Planning Lines should show lines for the selected job';
 
     [Test]
     [Scope('OnPrem')]
@@ -593,7 +594,8 @@ codeunit 136353 "UT T Job Planning Line"
         SecondJobNo: Code[20];
     begin
         // [FEATURE] [UI]
-        // [SCENARIO 381083] Filter for "Job No." is set changeless when "Job Planning Lines" page opened from Job Task Lines.
+        // [SCENARIO 381083] Filter for "Job No." is set when "Job Planning Lines" page opened from Job Task Lines.
+        // [SCENARIO 578676] User can change "Job No." filter on "Job Planning Lines" page opened from Job Task Lines.
         Initialize();
 
         // [GIVEN] Job "J", Job Task "JT", where "Job No." = "J"
@@ -603,15 +605,15 @@ codeunit 136353 "UT T Job Planning Line"
 
         // [GIVEN]  "Job Planning Lines" page opened from "Job Task Lines" page filtered on "J1" Job
         JobTaskLines.OpenEdit();
-        JobTaskLines.FILTER.SetFilter("Job No.", SecondJobNo);
+        JobTaskLines.Filter.SetFilter("Job No.", SecondJobNo);
         JobPlanningLines.Trap();
         JobTaskLines.JobPlanningLines.Invoke();
 
         // [WHEN] Set JobPlanningLines "Job No." filter to "J"
-        JobPlanningLines.FILTER.SetFilter("Job No.", JobNo);
+        JobPlanningLines.Filter.SetFilter("Job No.", JobNo);
 
-        // [THEN] Page JobPlanningLines is empty
-        Assert.IsFalse(JobPlanningLines.First(), RecordExistErr);
+        // [THEN] Page JobPlanningLines is filtered on "J" Job, and not empty.
+        Assert.IsTrue(JobPlanningLines.First(), ProjectPlanningLinesShouldShowLinesErr);
         JobPlanningLines.Close();
         JobTaskLines.Close();
     end;
@@ -626,7 +628,8 @@ codeunit 136353 "UT T Job Planning Line"
         SecondJobNo: Code[20];
     begin
         // [FEATURE] [UI]
-        // [SCENARIO 381083] Filter for "Job No." is set changeless when "Job Planning Lines" page opened from Job Card.
+        // [SCENARIO 381083] Filter for "Job No." is set when "Job Planning Lines" page opened from Job Card.
+        // [SCENARIO 578676] User can change "Job No." filter on "Job Planning Lines" page opened from Job Card.
 
         // [GIVEN] Job "J", Job Task "JT", where "Job No." = "J"
         // [GIVEN] Job Planning Line "JPL", where "Job No." = "J", "Job Task No." = "JT"
@@ -635,15 +638,15 @@ codeunit 136353 "UT T Job Planning Line"
 
         // [GIVEN]  "Job Planning Lines" page opened from "Job Card" page filtered on "J1" Job
         JobCard.OpenEdit();
-        JobCard.FILTER.SetFilter("No.", SecondJobNo);
+        JobCard.Filter.SetFilter("No.", SecondJobNo);
         JobPlanningLines.Trap();
         JobCard.JobPlanningLines.Invoke();
 
         // [WHEN] Set JobPlanningLines "Job No." filter to "J"
-        JobPlanningLines.FILTER.SetFilter("Job No.", JobNo);
+        JobPlanningLines.Filter.SetFilter("Job No.", JobNo);
 
-        // [THEN] Page JobPlanningLines is empty
-        Assert.IsFalse(JobPlanningLines.First(), RecordExistErr);
+        // [THEN] Page JobPlanningLines is filtered on "J" Job, and not empty.
+        Assert.IsTrue(JobPlanningLines.First(), ProjectPlanningLinesShouldShowLinesErr);
         JobPlanningLines.Close();
         JobCard.Close();
     end;
@@ -1551,13 +1554,13 @@ codeunit 136353 "UT T Job Planning Line"
         PriceListLine: Record "Price List Line";
 #endif
         JobPlanningLine: Record "Job Planning Line";
-#if CLEAN25        
+#if CLEAN25
         LibraryPriceCalculation: Codeunit "Library - Price Calculation";
 #endif
         CostFactor: Decimal;
         UnitPrice: Decimal;
     begin
-        // [SCENARIO 405107] Quantity modification updates "Unit Price calculated by "Cost Factor" 
+        // [SCENARIO 405107] Quantity modification updates "Unit Price calculated by "Cost Factor"
         Initialize();
         // [GIVEN] A job with a job task
         LibraryJob.CreateJob(Job);
@@ -1609,7 +1612,7 @@ codeunit 136353 "UT T Job Planning Line"
         JobJournalLine2: Record "Job Journal Line";
         JobTransferLine: Codeunit "Job Transfer Line";
     begin
-        // [SCENARIO] Job planning lines for non-inventory items with location set. 
+        // [SCENARIO] Job planning lines for non-inventory items with location set.
         // Location should be transfered to job journal lines.
         Initialize();
 
@@ -1857,7 +1860,7 @@ codeunit 136353 "UT T Job Planning Line"
         Job: Record Job;
         JobTask: Record "Job Task";
     begin
-        // [SCENARIO 480325] Verify Description on Job Planning Line for Variant with Item Translation 
+        // [SCENARIO 480325] Verify Description on Job Planning Line for Variant with Item Translation
         Initialize();
 
         // [GIVEN] Create Item
@@ -1882,7 +1885,7 @@ codeunit 136353 "UT T Job Planning Line"
             JobPlanningLine.Type::Item, JobTask, JobPlanningLine);
         JobPlanningLine.Validate("No.", Item."No.");
 
-        // [WHEN] Validate Variant on Job Planning Line        
+        // [WHEN] Validate Variant on Job Planning Line
         JobPlanningLine.Validate("Variant Code", ItemVariant.Code);
 
         // [THEN] Verify Description on Job Planning Line
@@ -1897,7 +1900,7 @@ codeunit 136353 "UT T Job Planning Line"
         JobTask: Record "Job Task";
         JobPlanningLine: Record "Job Planning Line";
     begin
-        // [SCENARIO 547563] When Stan enters the Description of an Item in "No." field of 
+        // [SCENARIO 547563] When Stan enters the Description of an Item in "No." field of
         // Job Planning Line having Type selected as Item, then "No." field of Job Planning Line
         // Is updated with the value of "No." field of the Item without any error.
         Initialize();
@@ -2144,6 +2147,316 @@ codeunit 136353 "UT T Job Planning Line"
                 UnitCostErr,
                 JobPlanningLine.FieldCaption("Unit Cost"),
                 UnitCost,
+                JobPlanningLine.TableCaption()));
+    end;
+
+    [Test]
+    procedure UnitCostIsNotChangedWhenUnitPriceIsChangedInJobPlanningLineHavingFIFOCostingMethodItem()
+    var
+        Item: Record Item;
+        Job: Record Job;
+        JobTask: Record "Job Task";
+        JobPlanningLine: Record "Job Planning Line";
+        JobPlanningLines: TestPage "Job Planning Lines";
+        UnitCost: Decimal;
+    begin
+        // [SCENARIO 561139] Unit Cost and Unit Cost (LCY) in Job Planning Line is not changed when Unit Price is changed.
+        Initialize();
+
+        // [GIVEN] Create an Item and Validate Costing Method and Unit Cost.
+        LibraryInventory.CreateItem(Item);
+        Item.Validate("Costing Method", Item."Costing Method"::FIFO);
+        Item.Validate("Unit Cost", LibraryRandom.RandInt(100));
+        Item.Modify(true);
+
+        // [GIVEN] Create a Job and a Job task.
+        CreateJobAndJobTask(Job, JobTask, false, '');
+
+        // [GIVEN] Create a Job Planning Line and Validate Type and No.
+        CreateSimpleJobPlanningLine(JobPlanningLine, JobTask);
+        JobPlanningLine.Validate(Type, JobPlanningLine.Type::Item);
+        JobPlanningLine.Validate("No.", Item."No.");
+        JobPlanningLine.Modify(true);
+
+        // [GIVEN] Generate and save Unit Cost in a Variable.
+        UnitCost := LibraryRandom.RandInt(50);
+
+        // [GIVEN] Open Job Planning Lines page and set value in Unit Cost.
+        JobPlanningLines.OpenEdit();
+        JobPlanningLines.GoToRecord(JobPlanningLine);
+        JobPlanningLines."Unit Cost".SetValue(UnitCost);
+        JobPlanningLines.Close();
+
+        // [GIVEN] Find Job Planning Line.
+        JobPlanningLine.Get(
+            JobPlanningLine."Job No.",
+            JobPlanningLine."Job Task No.",
+            JobPlanningLine."Line No.");
+
+        // [GIVEN] Open Job Planning Lines page and set value in Unit Price.
+        JobPlanningLines.OpenEdit();
+        JobPlanningLines.GoToRecord(JobPlanningLine);
+        JobPlanningLines."Unit Price".SetValue(LibraryRandom.RandInt(100));
+        JobPlanningLines.Close();
+
+        // [WHEN] Find Job Planning Line.
+        JobPlanningLine.Get(
+            JobPlanningLine."Job No.",
+            JobPlanningLine."Job Task No.",
+            JobPlanningLine."Line No.");
+
+        // [THEN] Unit Cost of Job Planning Line is equal to UnitCost.
+        Assert.AreEqual(
+            UnitCost,
+            JobPlanningLine."Unit Cost",
+            StrSubstNo(
+                UnitCostErr,
+                JobPlanningLine.FieldCaption("Unit Cost"),
+                UnitCost,
+                JobPlanningLine.TableCaption()));
+
+        // [THEN] Unit Cost (LCY) of Job Planning Line is equal to UnitCost.
+        Assert.AreEqual(
+            UnitCost,
+            JobPlanningLine."Unit Cost (LCY)",
+            StrSubstNo(
+                UnitCostErr,
+                JobPlanningLine.FieldCaption("Unit Cost (LCY)"),
+                UnitCost,
+                JobPlanningLine.TableCaption()));
+    end;
+
+    [Test]
+    procedure UnitCostIsNotUpdatedWhenUnitPriceIsChangedInJobPlanningLine()
+    var
+        Item: Record Item;
+        Job: Record Job;
+        JobTask: Record "Job Task";
+        JobPlanningLine: Record "Job Planning Line";
+        JobPlanningLines: TestPage "Job Planning Lines";
+        UnitCost: Decimal;
+        UnitCostLCY: Decimal;
+    begin
+        // [SCENARIO 561139] Unit Cost in Job Planning Line is not changed when Unit Price is changed.
+        Initialize();
+
+        // [GIVEN] Create an Item and Validate Costing Method and Unit Cost.
+        LibraryInventory.CreateItem(Item);
+        Item.Validate("Costing Method", Item."Costing Method"::Standard);
+        Item.Validate("Unit Cost", LibraryRandom.RandInt(100));
+        Item.Modify(true);
+
+        // [GIVEN] Create a Job and a Job task.
+        CreateJobAndJobTask(Job, JobTask, false, CreateCurrency());
+
+        // [GIVEN] Generate and save Unit Cost in a Variable.
+        UnitCost := LibraryRandom.RandInt(50);
+
+        // [GIVEN] Create a Job Planning Line and Validate Type and No.
+        CreateSimpleJobPlanningLine(JobPlanningLine, JobTask);
+        JobPlanningLine.Validate(Type, JobPlanningLine.Type::Item);
+        JobPlanningLine.Validate("No.", Item."No.");
+        JobPlanningLine.Validate("Unit Cost", UnitCost);
+        JobPlanningLine.Modify(true);
+
+        // [GIVEN] Save value in variable
+        UnitCostLCY := JobPlanningLine."Unit Cost (LCY)";
+
+        // [GIVEN] Find Job Planning Line.
+        JobPlanningLine.Get(
+            JobPlanningLine."Job No.",
+            JobPlanningLine."Job Task No.",
+            JobPlanningLine."Line No.");
+
+        // [GIVEN] Open Job Planning Lines page and set value in Unit Price.
+        JobPlanningLines.OpenEdit();
+        JobPlanningLines.GoToRecord(JobPlanningLine);
+        JobPlanningLines."Unit Price".SetValue(LibraryRandom.RandInt(100));
+        JobPlanningLines.Close();
+
+        // [WHEN] Find Job Planning Line.
+        JobPlanningLine.Get(
+            JobPlanningLine."Job No.",
+            JobPlanningLine."Job Task No.",
+            JobPlanningLine."Line No.");
+
+        // [THEN] Unit Cost of Job Planning Line is equal to UnitCost.
+        Assert.AreEqual(
+            UnitCost,
+            JobPlanningLine."Unit Cost",
+            StrSubstNo(
+                UnitCostErr,
+                JobPlanningLine.FieldCaption("Unit Cost"),
+                UnitCost,
+                JobPlanningLine.TableCaption()));
+
+        // [THEN] Unit Cost (LCY) of Job Planning Line is equal to Unit Cost of Item.
+        Assert.AreEqual(
+            UnitCostLCY,
+            JobPlanningLine."Unit Cost (LCY)",
+            StrSubstNo(
+                UnitCostLCYErr,
+                JobPlanningLine.FieldCaption("Unit Cost (LCY)"),
+                UnitCostLCY,
+                JobPlanningLine.TableCaption()));
+    end;
+
+    [Test]
+    procedure RenameItemUpdateJobPlanningLine()
+    var
+        Item: Record Item;
+        Job: Record Job;
+        JobTask: Record "Job Task";
+        JobPlanningLine: Record "Job Planning Line";
+        NewItemNo: Code[20];
+    begin
+        // [SCENARIO 574025] When Renaming an Item, the Job Planning Line is updated with the new Item No.
+        Initialize();
+
+        // [GIVEN] Create Item
+        LibraryInventory.CreateItem(Item);
+
+        // [GIVEN] Create Job and Job Task
+        CreateJobAndJobTask(Job, JobTask, false, '');
+
+        // [GIVEN] Create Job Planning Line and Validate No.
+        LibraryJob.CreateJobPlanningLine(JobPlanningLine."Line Type"::Budget,
+            JobPlanningLine.Type::Item, JobTask, JobPlanningLine);
+        JobPlanningLine.Validate("No.", Item."No.");
+        JobPlanningLine.Modify(true);
+
+        // [WHEN] Rename Item No.
+        RenameItem(Item."No.", NewItemNo);
+
+        // [THEN] Find Job Planning Line and validate No.
+        FindJobPlanningLine(JobPlanningLine, JobTask, Job, JobPlanningLine.Type::Item);
+        Assert.AreEqual(
+            NewItemNo,
+            JobPlanningLine."No.",
+            StrSubstNo(
+                NoJobPlanningLineErr,
+                JobPlanningLine.FieldCaption("No."),
+                NewItemNo,
+                JobPlanningLine.TableCaption()));
+    end;
+
+    [Test]
+    procedure RenameResourceUpdateJobPlanningLine()
+    var
+        Resource: Record Resource;
+        VATPostingSetup: Record "VAT Posting Setup";
+        Job: Record Job;
+        JobTask: Record "Job Task";
+        JobPlanningLine: Record "Job Planning Line";
+        NewResourceNo: Code[20];
+    begin
+        // [SCENARIO 574025] Renaming a Resource updates the Job Planning Line with the new Resource No.
+        Initialize();
+
+        // [GIVEN] Create Resource
+        LibraryERM.FindVATPostingSetup(VATPostingSetup, VATPostingSetup."VAT Calculation Type"::"Normal VAT");
+        LibraryResource.CreateResource(Resource, VATPostingSetup."VAT Bus. Posting Group");
+
+        // [GIVEN] Create Job and Job Task
+        CreateJobAndJobTask(Job, JobTask, false, '');
+
+        // [GIVEN] Create Job Planning Line and Validate No.
+        LibraryJob.CreateJobPlanningLine(JobPlanningLine."Line Type"::Budget,
+            JobPlanningLine.Type::Resource, JobTask, JobPlanningLine);
+        JobPlanningLine.Validate("No.", Resource."No.");
+        JobPlanningLine.Modify(true);
+
+        // [WHEN] Rename Resource No.
+        RenameResource(Resource."No.", NewResourceNo);
+
+        // [THEN] Find Job Planning Line and validate No.
+        FindJobPlanningLine(JobPlanningLine, JobTask, Job, JobPlanningLine.Type::Resource);
+        Assert.AreEqual(
+            NewResourceNo,
+            JobPlanningLine."No.",
+            StrSubstNo(
+                NoJobPlanningLineErr,
+                JobPlanningLine.FieldCaption("No."),
+                NewResourceNo,
+                JobPlanningLine.TableCaption()));
+    end;
+
+    [Test]
+    procedure RenameGLAccountUpdateJobPlanningLine()
+    var
+        GLAccount: Record "G/L Account";
+        Job: Record Job;
+        JobTask: Record "Job Task";
+        JobPlanningLine: Record "Job Planning Line";
+        NewGLAccountNo: Code[20];
+    begin
+        // [SCENARIO 574025] Renaming a GLAccount updates the Job Planning Line with the new GLAccount No.
+        Initialize();
+
+        // [GIVEN] Create GLAccount
+        NewGLAccountNo := LibraryERM.CreateGLAccountWithSalesSetup();
+        GLAccount.Get(NewGLAccountNo);
+
+        // [GIVEN] Create Job and Job Task
+        CreateJobAndJobTask(Job, JobTask, false, '');
+
+        // [GIVEN] Create Job Planning Line and Validate No.
+        LibraryJob.CreateJobPlanningLine(JobPlanningLine."Line Type"::Budget,
+            JobPlanningLine.Type::"G/L Account", JobTask, JobPlanningLine);
+        JobPlanningLine.Validate("No.", GLAccount."No.");
+        JobPlanningLine.Modify(true);
+
+        // [WHEN] Rename GLAccount No.
+        RenameGLAccount(GLAccount."No.", NewGLAccountNo);
+
+        // [THEN] Find Job Planning Line and validate No.
+        FindJobPlanningLine(JobPlanningLine, JobTask, Job, JobPlanningLine.Type::"G/L Account");
+        Assert.AreEqual(
+            NewGLAccountNo,
+            JobPlanningLine."No.",
+            StrSubstNo(
+                NoJobPlanningLineErr,
+                JobPlanningLine.FieldCaption("No."),
+                NewGLAccountNo,
+                JobPlanningLine.TableCaption()));
+    end;
+
+    [Test]
+    procedure RenameStandardTextUpdateJobPlanningLine()
+    var
+        StandardText: Record "Standard Text";
+        Job: Record Job;
+        JobTask: Record "Job Task";
+        JobPlanningLine: Record "Job Planning Line";
+        NewStandardTextNo: Code[20];
+    begin
+        // [SCENARIO 574025] Renaming a StandardText updates the Job Planning Line with the new StandardText No.
+        Initialize();
+
+        // [GIVEN] Create ResStandardTextource
+        LibrarySales.CreateStandardText(StandardText);
+
+        // [GIVEN] Create Job and Job Task
+        CreateJobAndJobTask(Job, JobTask, false, '');
+
+        // [GIVEN] Create Job Planning Line and Validate No.
+        LibraryJob.CreateJobPlanningLine(JobPlanningLine."Line Type"::Budget,
+            JobPlanningLine.Type::Text, JobTask, JobPlanningLine);
+        JobPlanningLine.Validate("No.", StandardText.Code);
+        JobPlanningLine.Modify(true);
+
+        // [WHEN] Rename Resource No.
+        RenameStandardText(StandardText.Code, NewStandardTextNo);
+
+        // [THEN] Find Job Planning Line and validate No.
+        FindJobPlanningLine(JobPlanningLine, JobTask, Job, JobPlanningLine.Type::Text);
+        Assert.AreEqual(
+            NewStandardTextNo,
+            JobPlanningLine."No.",
+            StrSubstNo(
+                NoJobPlanningLineErr,
+                JobPlanningLine.FieldCaption("No."),
+                NewStandardTextNo,
                 JobPlanningLine.TableCaption()));
     end;
 
@@ -2405,7 +2718,7 @@ codeunit 136353 "UT T Job Planning Line"
         JobLedgEntry."Entry Type" := JLEntryType;
         JobLedgEntry.Insert();
     end;
-
+#if not CLEAN25
     local procedure SetAllowLineDiscOfCustPostGroup(var Job: Record Job; AllowLineDisc: Boolean): Code[10]
     var
         CustomerPriceGroup: Record "Customer Price Group";
@@ -2417,7 +2730,7 @@ codeunit 136353 "UT T Job Planning Line"
         Job.Modify(true);
         exit(CustomerPriceGroup.Code);
     end;
-
+#endif
     local procedure OpenOrderPromissingPage(var JobPlanningLine: Record "Job Planning Line")
     var
         JobPlanningLines: TestPage "Job Planning Lines";
@@ -2482,6 +2795,42 @@ codeunit 136353 "UT T Job Planning Line"
         ExtendedTextHeader.Modify(true);
     end;
 
+    local procedure RenameItem(ItemCode: Code[20]; var NewKey: Code[20])
+    var
+        Item: Record Item;
+    begin
+        Item.Get(ItemCode);
+        NewKey := CopyStr(LibraryRandom.RandText(20), 1, 20);
+        Item.Rename(NewKey);
+    end;
+
+    local procedure RenameResource(ResourceCode: Code[20]; var NewKey: Code[20])
+    var
+        Resource: Record Resource;
+    begin
+        Resource.Get(ResourceCode);
+        NewKey := CopyStr(LibraryRandom.RandText(20), 1, 20);
+        Resource.Rename(NewKey);
+    end;
+
+    local procedure RenameGLAccount(GLAccountCode: Code[20]; var NewKey: Code[20])
+    var
+        GLAccount: Record "G/L Account";
+    begin
+        GLAccount.Get(GLAccountCode);
+        NewKey := CopyStr(LibraryRandom.RandText(20), 1, 20);
+        GLAccount.Rename(NewKey);
+    end;
+
+    local procedure RenameStandardText(StandardTextCode: Code[20]; var NewKey: Code[20])
+    var
+        StandardText: Record "Standard Text";
+    begin
+        StandardText.Get(StandardTextCode);
+        NewKey := CopyStr(LibraryRandom.RandText(20), 1, 20);
+        StandardText.Rename(NewKey);
+    end;
+
     [ModalPageHandler]
     [Scope('OnPrem')]
     procedure OrderPromisingModalPagehandler(var OrderPromisingLines: TestPage "Order Promising Lines")
@@ -2542,4 +2891,3 @@ codeunit 136353 "UT T Job Planning Line"
         ItemList.OK().Invoke();
     end;
 }
-

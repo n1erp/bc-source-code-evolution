@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Warehouse.Posting;
 
 using Microsoft.Assembly.Document;
@@ -163,6 +167,7 @@ codeunit 5746 "Sales Whse. Post Shipment"
         if SalesLine.Find('-') then
             repeat
                 WhseShptLine.SetRange(WhseShptLine."Source Line No.", SalesLine."Line No.");
+                OnHandleSalesLineOnFilterWhseShptLine(SalesLine, WhseShptLine);
                 if WhseShptLine.Find('-') then begin
                     OnAfterFindWhseShptLineForSalesLine(WhseShptLine, SalesLine);
 #if not CLEAN25
@@ -669,6 +674,11 @@ codeunit 5746 "Sales Whse. Post Shipment"
 
     [IntegrationEvent(false, false)]
     local procedure OnUpdateAttachedLineOnBeforeModifyLine(var SalesLine: Record "Sales Line"; var WarehouseShipmentLine: Record "Warehouse Shipment Line"; var ModifyLine: Boolean; var QtyToHandle: Decimal)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnHandleSalesLineOnFilterWhseShptLine(var SalesLine: Record "Sales Line"; var WarehouseShipmentLine: Record "Warehouse Shipment Line")
     begin
     end;
 }

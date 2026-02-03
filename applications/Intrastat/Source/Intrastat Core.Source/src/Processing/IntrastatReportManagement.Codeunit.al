@@ -1,3 +1,4 @@
+#pragma warning disable AA0247
 codeunit 4810 IntrastatReportManagement
 {
     Permissions = TableData "Intrastat Report Header" = imd,
@@ -705,7 +706,7 @@ codeunit 4810 IntrastatReportManagement
                     Error(MaximumLinesErr, DataExch.TableCaption(), DataExchMappingCard.Caption());
             end;
 
-            if DataExchMapping."Key Index" <> 1 then begin
+            if DataExchMapping."Key Index" <> 0 then begin
                 RecordRefSrc.GetTable(IntrastatReportLine);
                 RecordRefSrc.CurrentKeyIndex(DataExchMapping."Key Index");
                 RecordRefSrc.SetTable(IntrastatReportLine);

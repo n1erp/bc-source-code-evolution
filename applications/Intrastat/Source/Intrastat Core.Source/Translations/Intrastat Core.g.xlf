@@ -1348,16 +1348,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Intrastat Report Get Lines - Control Additional - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Report 3076093313 - Control 4202100993 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies if you want to show direct costs that your company has assigned and posted as item charges.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report Intrastat Report Get Lines - Control ShowingItemCharges - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Report 3076093313 - Control 4202100993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Show Item Charge Entries</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report Intrastat Report Get Lines - Control ShowingItemCharges - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Report 3076093313 - Control 1956400827 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies if item ledger entries that are shipped or received but not yet invoiced must be excluded from the process.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1437,6 +1427,11 @@
           <source>Intrastat</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Rep. Cust. Tem. Card - Control Intrastat - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3791285062 - Control 2506657454 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 72501842">
+          <source>Intrastat</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Rep. Vend. Tem. Card - Control Intrastat - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4090736040 - Action 3354820289 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3470244815">
           <source>Summarize the value of your purchases and sales with business partners in the EU for statistical purposes and prepare to send it to the relevant authority.</source>
@@ -1717,6 +1712,36 @@
           <source>Default Trans. Type - Returns</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Vendor - Field Default Trans. Type - Return - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 62755234 - Field 447700159 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4020539926">
+          <source>Specifies the default transport method, for the purpose of reporting to Intrastat.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Vendor Templ. - Field Def. Transport Method - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 62755234 - Field 447700159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4020539926">
+          <source>Default Transport Method</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Vendor Templ. - Field Def. Transport Method - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 62755234 - Field 830567041 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4020539926">
+          <source>Specifies the default transaction type for regular purchase receipts.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Vendor Templ. - Field Default Trans. Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 62755234 - Field 830567041 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4020539926">
+          <source>Default Trans. Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Vendor Templ. - Field Default Trans. Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 62755234 - Field 1663358532 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4020539926">
+          <source>Specifies the default transaction type for purchase returns.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Vendor Templ. - Field Default Trans. Type - Return - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 62755234 - Field 1663358532 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4020539926">
+          <source>Default Trans. Type - Returns</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Vendor Templ. - Field Default Trans. Type - Return - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 3899154770 - EnumValue 3325106067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bill-to Customer</source>

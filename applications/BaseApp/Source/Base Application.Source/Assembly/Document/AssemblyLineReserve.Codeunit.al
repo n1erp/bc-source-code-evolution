@@ -11,6 +11,7 @@ using Microsoft.Inventory.Requisition;
 using Microsoft.Inventory.Tracking;
 using Microsoft.Inventory.Ledger;
 using Microsoft.Foundation.Navigate;
+using Microsoft.Purchases.Document;
 
 codeunit 926 "Assembly Line-Reserve"
 {
@@ -145,6 +146,7 @@ codeunit 926 "Assembly Line-Reserve"
         ReservationManagement.SetReservSource(AssemblyLine);
         if DeleteItemTracking then
             ReservationManagement.SetItemTrackingHandling(1); // Allow Deletion
+        OnDeleteLineOnBeforeDeleteReservationEntries(AssemblyLine);
         ReservationManagement.DeleteReservEntries(true, 0);
         ReservationManagement.ClearActionMessageReferences();
         AssemblyLine.CalcFields("Reserved Qty. (Base)");
@@ -291,6 +293,7 @@ codeunit 926 "Assembly Line-Reserve"
         ReservationManagement.SetReservSource(NewAssemblyLine);
         if NewAssemblyLine."Qty. per Unit of Measure" <> OldAssemblyLine."Qty. per Unit of Measure" then
             ReservationManagement.ModifyUnitOfMeasure();
+        OnVerifyQuantityOnBeforeDeleteReservationEntries(NewAssemblyLine);
         ReservationManagement.DeleteReservEntries(false, NewAssemblyLine."Remaining Quantity (Base)");
         ReservationManagement.ClearSurplus();
         ReservationManagement.AutoTrack(NewAssemblyLine."Remaining Quantity (Base)");
@@ -409,6 +412,7 @@ codeunit 926 "Assembly Line-Reserve"
                     OldReservationEntry.TestField("Variant Code", OldAssemblyLine."Variant Code");
                     OldReservationEntry.TestField("Location Code", OldAssemblyLine."Location Code");
 
+                    OnTransferAsmLineToAsmLineOnBeforeTransferReservationEntry(OldAssemblyLine, NewAssemblyLine, OldReservationEntry);
                     TransferQty :=
                         CreateReservEntry.TransferReservEntry(
                             Database::"Assembly Line", NewAssemblyLine."Document Type".AsInteger(), NewAssemblyLine."Document No.", '', 0,
@@ -819,11 +823,13 @@ codeunit 926 "Assembly Line-Reserve"
     begin
     end;
 
+#if not CLEAN27
+    [Obsolete('This event is never raised.', '27.0')]
     [IntegrationEvent(false, false)]
     local procedure OnSetSourceForReservationOnBeforeUpdateReservation(var ReservEntry: Record "Reservation Entry"; AssemblyLine: Record "Assembly Line")
     begin
     end;
-
+#endif
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Reservation Management", 'OnAutoReserveOnBeforeStopReservation', '', false, false)]
     local procedure OnAutoReserveOnBeforeStopReservation(var CalcReservEntry: Record "Reservation Entry"; var StopReservation: Boolean);
     begin
@@ -1043,5 +1049,42 @@ codeunit 926 "Assembly Line-Reserve"
                 end;
         end;
     end;
-}
 
+    [IntegrationEvent(false, false)]
+    local procedure OnDeleteLineOnBeforeDeleteReservationEntries(AssemblyLine: Record "Assembly Line")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnVerifyQuantityOnBeforeDeleteReservationEntries(var NewAssemblyLine: Record "Assembly Line")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnTransferAsmLineToAsmLineOnBeforeTransferReservationEntry(var OldAssemblyLine: Record "Assembly Line"; var NewAssemblyLine: Record "Assembly Line"; var OldReservationEntry: Record "Reservation Entry")
+    begin
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Req. Wksh.-Make Order", 'OnReserveBindingOrderToPurch', '', false, false)]
+    local procedure OnReserveBindingOrderToPurch(var RequisitionLine: Record "Requisition Line"; var PurchaseLine: Record "Purchase Line"; ReservQty: Decimal; ReservQtyBase: Decimal)
+    var
+        AssemblyLine: Record "Assembly Line";
+        TrackingSpecification: Record "Tracking Specification";
+    begin
+        case RequisitionLine."Demand Type" of
+            Database::"Assembly Line":
+                begin
+                    AssemblyLine.Get(RequisitionLine."Demand Subtype", RequisitionLine."Demand Order No.", RequisitionLine."Demand Line No.");
+                    TrackingSpecification.InitTrackingSpecification(
+                        Database::"Purchase Line", PurchaseLine."Document Type".AsInteger(), PurchaseLine."Document No.", '', 0, PurchaseLine."Line No.",
+                        PurchaseLine."Variant Code", PurchaseLine."Location Code", PurchaseLine."Qty. per Unit of Measure");
+                    BindToTracking(
+                        AssemblyLine, TrackingSpecification, PurchaseLine.Description, PurchaseLine."Expected Receipt Date", ReservQty, ReservQtyBase);
+                    if AssemblyLine.Reserve = AssemblyLine.Reserve::Never then begin
+                        AssemblyLine.Reserve := AssemblyLine.Reserve::Optional;
+                        AssemblyLine.Modify();
+                    end;
+                end;
+        end;
+    end;
+}

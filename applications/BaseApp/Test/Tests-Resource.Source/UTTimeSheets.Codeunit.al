@@ -869,6 +869,83 @@ codeunit 136500 "UT Time Sheets"
         TimeSheetLine.TestField("Job Task No.", '');
     end;
 
+    [Test]
+    procedure ResourceNameIsNotShowingUpOnTheManagerTimeSheetsByProjectPage()
+    var
+        Job: Record Job;
+        JobTask: Record "Job Task";
+        ResourceSetup: Record "Resources Setup";
+        TimeSheetHeader: Record "Time Sheet Header";
+        TimeSheetLine: Record "Time Sheet Line";
+        UserSetup: Record "User Setup";
+        TimeSheetApprovalManagement: Codeunit "Time Sheet Approval Management";
+    begin
+        // [SCENARIO 571456] Resource Name is not showing up on the "Manager Time Sheets by Project" page when the "Resource Name" field is added via Personalization
+        Initialize();
+
+        // [GIVEN] Set "Time Sheet Submission Policy" = "Empty Lines Not Submitted"
+        ResourceSetup.Get();
+        ResourceSetup."Time Sheet Submission Policy" := ResourceSetup."Time Sheet Submission Policy"::"Empty Lines Not Submitted";
+        ResourceSetup.Modify();
+
+        // [GIVEN] Create UserSetup
+        LibraryTimeSheet.CreateUserSetup(UserSetup, true);
+        UserSetup."Allow Posting From" := WorkDate();
+        UserSetup."Allow Posting To" := WorkDate();
+        UserSetup."Time Sheet Admin." := true;
+        UserSetup.Modify();
+
+        // [GIVEN] Create Job with Job task
+        LibraryJob.CreateJob(Job);
+        LibraryJob.CreateJobTask(Job, JobTask);
+
+        // [GIVEN] Create Time Sheet with Lines of type Project
+        LibraryTimeSheet.CreateTimeSheet(TimeSheetHeader, true);
+        TimeSheetHeader.CalcFields("Resource Name");
+        CreateTimeSheetLineWithTimeAllocaiton(TimeSheetLine, TimeSheetHeader, "Time Sheet Line Type"::Job, Job."No.", JobTask."Job Task No.");
+
+        // [GIVEN] Submit Time Sheet Line
+        TimeSheetLine.Reset();
+        TimeSheetLine.SetRange("Time Sheet No.", TimeSheetHeader."No.");
+        TimeSheetApprovalManagement.Submit(TimeSheetLine);
+
+        //[THEN] Check Resource Name is not blank
+        TimeSheetHeader.TestField("Resource Name");
+    end;
+
+    [Test]
+    procedure TimeSheetStatusFactboxIsNotUpdatedWhenACommentIsAdded()
+    var
+        Resource: Record Resource;
+        TimeSheetHeader: Record "Time Sheet Header";
+        TimeSheetCommentSheet: TestPage "Time Sheet Comment Sheet";
+        TimeSheetCard: TestPage "Time Sheet Card";
+    begin
+        // [SCENARIO 591266] Times Sheet Status Factbox Is Not Updated When A Comment Is Added
+        Initialize();
+
+        // [GIVEN] Create Resource
+        CreateTimeSheetResource(Resource, true);
+
+        // [GIVEN] Create Time Sheet
+        LibraryTimeSheet.CreateTimeSheet(TimeSheetHeader, true);
+
+        // [GIVEN] Open Time Sheet card 
+        TimeSheetCard.OpenEdit();
+        TimeSheetCard.Filter.SetFilter("No.", TimeSheetHeader."No.");
+        TimeSheetCard.TimeSheetComments.Invoke();
+        TimeSheetHeader.CalcFields(Comment);
+
+        //[WHEN] Add Comment on Time sheet Comment sheet Page
+        TimeSheetCommentSheet.OpenEdit();
+        TimeSheetCommentSheet.Filter.SetFilter("No.", TimeSheetHeader."No.");
+        TimeSheetCommentSheet.New();
+        TimeSheetCommentSheet.Comment.SetValue('Test');
+        TimeSheetCommentSheet.Close();
+
+        // [THEN] Check Comment Should be updated on the Factbox without refresh the page after adding comment
+    end;
+
     local procedure Initialize()
     var
         UserSetup: Record "User Setup";
@@ -1169,42 +1246,6 @@ codeunit 136500 "UT Time Sheets"
         LibraryTimeSheet.CreateTimeSheetDetail(TimeSheetLine, TimeSheetLine."Time Sheet Starting Date", Qty);
     end;
 
-    local procedure CreateTSJobLineWithDetail(TimeSheetHeader: Record "Time Sheet Header"; var TimeSheetLine: Record "Time Sheet Line"; Qty: Decimal)
-    var
-        Resource: Record Resource;
-        Job: Record Job;
-        JobTask: Record "Job Task";
-    begin
-        LibraryTimeSheet.FindJob(Job);
-        LibraryTimeSheet.FindJobTask(Job."No.", JobTask);
-        // job's responsible person (resource) must have Owner ID filled in
-        Resource.SetRange("No.", TimeSheetHeader."Resource No.");
-        Resource.FindFirst();
-        Resource.Get(Job."Person Responsible");
-        Resource."Time Sheet Owner User ID" := UserId;
-        Resource.Modify();
-        LibraryTimeSheet.CreateTimeSheetLine(TimeSheetHeader, TimeSheetLine, TimeSheetLine.Type::Job, Job."No.",
-          JobTask."Job Task No.", '', '');
-        LibraryTimeSheet.CreateTimeSheetDetail(TimeSheetLine, TimeSheetLine."Time Sheet Starting Date", Qty);
-    end;
-
-    local procedure CreateTSAbsenceLineWithDetail(TimeSheetHeader: Record "Time Sheet Header"; var TimeSheetLine: Record "Time Sheet Line"; Qty: Decimal)
-    var
-        Employee: Record Employee;
-        CauseOfAbsence: Record "Cause of Absence";
-    begin
-        LibraryHumanResource.CreateEmployee(Employee);
-        Employee."Resource No." := TimeSheetHeader."Resource No.";
-        Employee.Modify();
-
-        LibraryTimeSheet.FindCauseOfAbsence(CauseOfAbsence);
-        LibraryTimeSheet.CreateTimeSheetLine(TimeSheetHeader, TimeSheetLine, TimeSheetLine.Type::Absence, '', '', '',
-          CauseOfAbsence.Code);
-        TimeSheetLine.Chargeable := false;
-        TimeSheetLine.Modify();
-        LibraryTimeSheet.CreateTimeSheetDetail(TimeSheetLine, TimeSheetLine."Time Sheet Starting Date", Qty);
-    end;
-
     local procedure AddTimeSheetLineWithStatus(TimeSheetHeader: Record "Time Sheet Header"; TimeSheetLineStatus: Enum "Time Sheet Status")
     var
         TimeSheetLine: Record "Time Sheet Line";
@@ -1221,6 +1262,16 @@ codeunit 136500 "UT Time Sheets"
         TimeSheetChartSetup."Show by" := ShowBy;
         TimeSheetChartSetup.Modify();
         TimeSheetChartMgt.UpdateData(BusChartBuf);
+    end;
+
+    local procedure CreateTimeSheetLineWithTimeAllocaiton(var TimeSheetLine: Record "Time Sheet Line"; TimeSheetHeader: Record "Time Sheet Header"; LineType: Enum "Time Sheet Line Type"; JobNo: Code[20]; JobTaskNo: Code[20])
+    var
+        i: Integer;
+    begin
+        LibraryTimeSheet.CreateTimeSheetLine(TimeSheetHeader, TimeSheetLine, LineType, JobNo, JobTaskNo, '', '');
+        for i := 1 to 5 do
+            LibraryTimeSheet.CreateTimeSheetDetail(
+                TimeSheetLine, TimeSheetHeader."Starting Date" + i - 1, LibraryRandom.RandDecInRange(5, 15, 2));
     end;
 
     [ModalPageHandler]
@@ -1451,7 +1502,7 @@ codeunit 136500 "UT Time Sheets"
     local procedure VerifyTeamMemberTimeSheetStatuses(OpenExists: Integer; SubmittedExists: Integer; TimesheetsToApproveExists: Integer; RejectedExists: Integer; ApprovedExists: Integer)
     var
         TeamMemberCue: Record "Team Member Cue";
-		UserFilterOption: Option Owner,Approver;
+        UserFilterOption: Option Owner,Approver;
     begin
         TeamMemberCue."User ID Filter" := UserId();
 
@@ -1465,53 +1516,6 @@ codeunit 136500 "UT Time Sheets"
           StrSubstNo('Time Sheet field %1 value is incorrect.', 'Rejected Time Sheets'));
         Assert.AreEqual(ApprovedExists, TeamMemberCue.CountTimeSheetsInStatus(UserFilterOption::Owner, "Time Sheet Status"::Approved),
           StrSubstNo('Time Sheet field %1 value is incorrect.', 'Approved Time Sheets'));
-    end;
-
-    local procedure CreateApprovalEntry(var ApprovalEntry: Record "Approval Entry"; RecId: RecordID; ApproverId: Code[50]; WorkflowInstanceId: Guid)
-    var
-        RecRef: RecordRef;
-    begin
-        RecRef.Get(RecId);
-
-        ApprovalEntry.Init();
-        ApprovalEntry."Table ID" := RecRef.Number;
-        ApprovalEntry.Status := ApprovalEntry.Status::Open;
-        ApprovalEntry."Approver ID" := ApproverId;
-        ApprovalEntry."Sender ID" := UserId;
-        ApprovalEntry."Record ID to Approve" := RecId;
-        ApprovalEntry."Workflow Step Instance ID" := WorkflowInstanceId;
-        ApprovalEntry.Insert();
-    end;
-
-    local procedure CreateRecordChange(var WorkflowRecordChange: Record "Workflow - Record Change"; RecId: RecordID; FieldNo: Integer; OldValue: Text[250]; WorkflowInstanceId: Guid)
-    var
-        RecRef: RecordRef;
-        FieldRef: FieldRef;
-    begin
-        RecRef.Get(RecId);
-        Clear(WorkflowRecordChange);
-        WorkflowRecordChange.Init();
-        WorkflowRecordChange."Field No." := FieldNo;
-        WorkflowRecordChange."Table No." := RecRef.Number;
-        WorkflowRecordChange.CalcFields("Field Caption");
-        WorkflowRecordChange."Old Value" := OldValue;
-        FieldRef := RecRef.Field(FieldNo);
-        WorkflowRecordChange."New Value" := Format(FieldRef.Value, 0, 9);
-        WorkflowRecordChange."Record ID" := RecId;
-        WorkflowRecordChange."Workflow Step Instance ID" := WorkflowInstanceId;
-        WorkflowRecordChange.Insert();
-    end;
-
-    local procedure CreateApprovalComment(var ApprovalCommentLine: Record "Approval Comment Line"; ApprovalEntry: Record "Approval Entry"; Comment: Text[80])
-    begin
-        ApprovalCommentLine.Init();
-        ApprovalCommentLine."Table ID" := ApprovalEntry."Table ID";
-        ApprovalCommentLine."Workflow Step Instance ID" := ApprovalEntry."Workflow Step Instance ID";
-        ApprovalCommentLine.Comment := Comment;
-        ApprovalCommentLine."Record ID to Approve" := ApprovalEntry."Record ID to Approve";
-        ApprovalCommentLine."User ID" := UserId;
-        ApprovalCommentLine."Entry No." := ApprovalEntry."Entry No.";
-        ApprovalCommentLine.Insert();
     end;
 
     local procedure CreateTimeSheetHeaderSimple(var TimeSheetHeader: Record "Time Sheet Header"; No: Code[20])
@@ -1566,4 +1570,3 @@ codeunit 136500 "UT Time Sheets"
         TimeSheetList.Close();
     end;
 }
-

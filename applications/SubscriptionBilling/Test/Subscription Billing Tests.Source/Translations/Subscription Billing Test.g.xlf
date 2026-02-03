@@ -3,6 +3,11 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Subscription Billing Test">
     <body>
       <group id="body">
+        <trans-unit id="Codeunit 1775220250 - NamedType 3198757034" size-unit="char" translate="yes" xml:space="preserve">
+          <source>If you change Quantity, only the Amount for existing service commitments will be recalculated.\\Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">%1= Changed Field Name.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Customer Deferrals Test - NamedType ConfirmQuestionLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 32521736 - NamedType 4144059976" size-unit="char" translate="yes" xml:space="preserve">
           <source>Items that are marked as Invoicing Item may not be used here. Please choose another item.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -33,10 +38,35 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Recurring Billing Test - NamedType BillingProposalNotCreatedErr</note>
         </trans-unit>
+        <trans-unit id="Codeunit 2178075116 - NamedType 407376554" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The ratio of '%1' and '%2' or vice versa must give a natural number.</source>
+          <note from="Developer" annotates="general" priority="2">%1=Field Caption, %2=Field Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Service Commitment Test - NamedType NaturalNumberRatioErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 2178075116 - NamedType 1751174665" size-unit="char" translate="yes" xml:space="preserve">
           <source>Subscription Lines are not created properly.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Service Commitment Test - NamedType NotCreatedProperlyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 540279428 - NamedType 407376554" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The ratio of '%1' and '%2' or vice versa must give a natural number.</source>
+          <note from="Developer" annotates="general" priority="2">%1=Field Caption, %2=Field Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Service Commitment Test - NamedType NaturalNumberRatioErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3509312930 - NamedType 3793200221" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Date Formula cannot be complex.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Service Object Test - NamedType ComplexFormulaErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3509312930 - NamedType 2214669859" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Current Period cannot be used for The Date Formula.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Service Object Test - NamedType CurrentPeriodErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3509312930 - NamedType 407376554" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The ratio of '%1' and '%2' or vice versa must give a natural number.</source>
+          <note from="Developer" annotates="general" priority="2">%1=Field Caption, %2=Field Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Service Object Test - NamedType NaturalNumberRatioErr</note>
         </trans-unit>
       </group>
     </body>

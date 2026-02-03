@@ -1308,7 +1308,7 @@ codeunit 136305 "Job Journal"
         UpdateJobPlanningLineCostAndPrice(JobPlanningLine);
         Commit();  // Using Commit to prevent Test Failure.
 
-        // [GIVEN] Create Sales Invoice from Job Planning Line 
+        // [GIVEN] Create Sales Invoice from Job Planning Line
         JobPlanningLine.Reset();
         JobPlanningLine.SetRange("Job No.", JobTask."Job No.");
         JobPlanningLine.SetRange("Job Task No.", JobTask."Job Task No.");
@@ -1366,7 +1366,7 @@ codeunit 136305 "Job Journal"
         CreateJobWithJobTask(JobTask);
         CreatePurchaseOrderWithTwoGlAccountLinesLinkedWithJobTask(PurchaseHeader, GLAccountNo, JobTask);
 
-        // [GIVEN] Post receipt and invoice from purchase order. 
+        // [GIVEN] Post receipt and invoice from purchase order.
         DocumentNo := LibraryPurchase.PostPurchaseDocument(PurchaseHeader, true, true);
 
         // [THEN] Verify Job Ledger Entries have different G/L entry no.
@@ -2768,7 +2768,7 @@ codeunit 136305 "Job Journal"
         JobJournalLine.Validate("Posting Date", WorkDate());
         JobJournalLine.Validate("No.", ResourceNo);
 
-        // [THEN] Validate the posting date for changing the Exch. rate on Job Journal line. 
+        // [THEN] Validate the posting date for changing the Exch. rate on Job Journal line.
         JobJournalLine.Validate("Posting Date", WorkDate() + 1);
         JobJournalLine.Modify();
         JobJournalLine."Unit Cost (LCY)" := Round(JobJournalLine."Unit Cost (LCY)", 0.001);
@@ -2829,11 +2829,11 @@ codeunit 136305 "Job Journal"
         LibraryJob: Codeunit "Library - Job";
         JobCreateInvoice: Codeunit "Job Create-Invoice";
     begin
-        // [FEATURE] [Sales] [Campaign]        
+        // [FEATURE] [Sales] [Campaign]
         // [SCENARIO 465382] Campaign No. can not be set when sales invoice is created from Job Planning
         Initialize();
 
-        // [GIVEN] Create campaign   
+        // [GIVEN] Create campaign
         LibraryMarketing.CreateCampaign(Campaign);
 
         // [GIVEN] A Job Planning Line for a new Job, Create Sales Invoice from Job Planning Line and find the created Sales Invoice.
@@ -2936,6 +2936,35 @@ codeunit 136305 "Job Journal"
 
         // [THEN] Project Total Cost (LCY) must be updated.
         Assert.AreNotEqual(GenJournalLine."Job Total Cost (LCY)", PreviousProjectTotalCostLCY, ProjectTotalCostErr);
+    end;
+
+    [Test]
+    [HandlerFunctions('ConfirmHandlerTrue,MessageHandler')]
+    procedure CheckUnitCostAndPriceNotZeroInRecurringJobJnlAfterPosting()
+    var
+        Job: Record Job;
+        JobTask: Record "Job Task";
+        Resource: Record Resource;
+        RecurringJobJnl: TestPage "Recurring Job Jnl.";
+    begin
+        // [SCENARIO 575092] Verify that the Unit Price and Unit Cost are not 0 in the recurring job journal after posting.
+        Initialize();
+
+        // [GIVEN] Create a Resource.
+        FindResource(Resource);
+
+        // [GIVEN] Create Job, job task & multiple Job planning line.
+        CreateFullJob(Job, JobTask, Resource);
+
+        // [GIVEN] Create Recurring Job Journal.
+        OpenRecurringJobJnl(RecurringJobJnl, JobTask, Resource."No.");
+
+        // [WHEN] Post Recurring Job Journal.
+        PostRecurringJobJnl(RecurringJobJnl);
+
+        // [THEN] Verify that the Unit Price and Unit Cost are not zero in the recurring job journal after posting.
+        RecurringJobJnl."Unit Price".AssertEquals(Resource."Unit Price");
+        RecurringJobJnl."Unit Cost".AssertEquals(Resource."Unit Cost");
     end;
 
     local procedure Initialize()
@@ -3094,11 +3123,12 @@ codeunit 136305 "Job Journal"
         ItemJournalLine.Modify(true);
     end;
 
+#if not CLEAN25
     local procedure CreateItemWithTwoUnitOfMeasures(var ItemUnitOfMeasure: Record "Item Unit of Measure")
     begin
         LibraryInventory.CreateItemUnitOfMeasureCode(ItemUnitOfMeasure, CreateItem(), 1 + LibraryUtility.GenerateRandomFraction());
     end;
-
+#endif
     local procedure CreateCustomerInvoiceDiscount(var CustInvoiceDisc: Record "Cust. Invoice Disc.")
     begin
         CustInvoiceDisc.Init();
@@ -3545,6 +3575,7 @@ codeunit 136305 "Job Journal"
         PurchasesPayablesSetup.Modify();
     end;
 
+#if not CLEAN25
     local procedure UpdateJobPlanningLine(var JobPlanningLine: Record "Job Planning Line"; JobTask: Record "Job Task"; AccountNo: Code[20])
     var
         GenProductPostingGroup: Record "Gen. Product Posting Group";
@@ -3559,14 +3590,12 @@ codeunit 136305 "Job Journal"
         JobPlanningLine.Modify(true);
     end;
 
-#if not CLEAN25
     local procedure UpdateLineDiscountPctOnJobGLAccountPrice(var JobGLAccountPrice: Record "Job G/L Account Price")
     begin
         JobGLAccountPrice.Validate("Line Discount %", LibraryRandom.RandDec(10, 2));  // Taking Random value for Line Discount Percent.
         JobGLAccountPrice.Modify(true);
     end;
 #endif
-
     local procedure UpdateQuantityAndDiscountOnPlanningLine(JobPlanningLine: Record "Job Planning Line"; LineDiscountAmount: Decimal)
     begin
         JobPlanningLine.Validate(Quantity, -JobPlanningLine.Quantity);
@@ -3602,7 +3631,6 @@ codeunit 136305 "Job Journal"
         JobGLAccountPrice.Validate("Unit Price", LibraryRandom.RandDec(10, 2));  // Taking Random value for Unit Price.
         JobGLAccountPrice.Modify(true);
     end;
-#endif
 
     local procedure UpdateUnitCostOnJobJournalLine(var JobJournalLine: Record "Job Journal Line"; JobTask: Record "Job Task"; No: Code[20]; UnitCost: Decimal)
     begin
@@ -3612,7 +3640,7 @@ codeunit 136305 "Job Journal"
         JobJournalLine.Validate("Unit Cost", UnitCost);
         JobJournalLine.Modify(true);
     end;
-
+#endif
     local procedure UpdateContactInfo(var Contact: Record Contact; PhoneNo: Text[30]; MobilePhoneNo: Text[30]; Email: Text[80])
     begin
         Contact.Validate("Phone No.", PhoneNo);
@@ -3692,13 +3720,14 @@ codeunit 136305 "Job Journal"
         GLEntry.TestField(Amount, Amount);
     end;
 
+#if not CLEAN25
     local procedure VerifyJobGLJournalLine(GenJournalLine: Record "Gen. Journal Line"; JobUnitCost: Decimal; JobUnitPrice: Decimal)
     begin
         GenJournalLine.Get(GenJournalLine."Journal Template Name", GenJournalLine."Journal Batch Name", GenJournalLine."Line No.");
         GenJournalLine.TestField("Job Unit Cost", JobUnitCost);
         GenJournalLine.TestField("Job Unit Price", JobUnitPrice);
     end;
-
+#endif
     local procedure VerifyJobJournalLine(JobJournalLine: Record "Job Journal Line"; Resource: Record Resource; UnitOfMeasureCode: Code[10]; QtyPerUnitOfMeasure: Decimal)
     begin
         JobJournalLine.TestField("Unit Cost (LCY)", Resource."Unit Cost" * QtyPerUnitOfMeasure);
@@ -3917,6 +3946,51 @@ codeunit 136305 "Job Journal"
         JobJnlLine.TestField("Reserved Qty. (Base)", 0);
     end;
 
+    local procedure FindResource(var Resource: Record Resource)
+    begin
+        Resource.Get(LibraryJob.CreateConsumable("Job Planning Line Type"::Resource));
+        Resource.Validate(Type, Resource.Type::Person);
+        Resource.Validate("Unit Cost", LibraryRandom.RandIntInRange(100, 200));
+        Resource.Validate("Unit Price", LibraryRandom.RandIntInRange(300, 500));
+        Resource.Modify(true);
+    end;
+
+    local procedure CreateFullJob(var Job: Record Job; var JobTask: Record "Job Task"; Resource: Record Resource)
+    var
+        JobPlanningLine: Record "Job Planning Line";
+    begin
+        LibraryJob.CreateJob(Job);
+        LibraryJob.CreateJobTask(Job, JobTask);
+
+        LibraryJob.CreateJobPlanningLine(
+            JobTask, JobPlanningLine."Line Type"::"Both Budget and Billable",
+            JobPlanningLine.Type::Resource, Resource."No.", LibraryRandom.RandInt(10), JobPlanningLine);
+    end;
+
+    local procedure OpenRecurringJobJnl(var RecurringJobJnl: TestPage "Recurring Job Jnl."; JobTask: Record "Job Task"; ResourceNo: Code[20])
+    var
+        JobJournalLineType: Enum "Job Journal Line Type";
+        RecurringMethod: Option ,Fixed,Variable;
+    begin
+        RecurringJobJnl.OpenEdit();
+        RecurringJobJnl."Recurring Method".SetValue(Format(RecurringMethod::Variable));
+        RecurringJobJnl."Recurring Frequency".SetValue('10D');
+        RecurringJobJnl."Document No.".SetValue(JobTask."Job No.");
+        RecurringJobJnl."Job No.".SetValue(JobTask."Job No.");
+        RecurringJobJnl."Job Task No.".SetValue(JobTask."Job Task No.");
+        RecurringJobJnl.Type.SetValue(Format(JobJournalLineType::Resource));
+        RecurringJobJnl."No.".SetValue(ResourceNo);
+        RecurringJobJnl.Quantity.SetValue(Format(LibraryRandom.RandInt(5)));
+        RecurringJobJnl.Close();
+    end;
+
+    local procedure PostRecurringJobJnl(var RecurringJobJnl: TestPage "Recurring Job Jnl.")
+    begin
+        RecurringJobJnl.OpenEdit();
+        RecurringJobJnl."P&ost".Invoke();
+        Commit();
+    end;
+
     [ModalPageHandler]
     [Scope('OnPrem')]
     procedure ContactListPageHandler(var ContactList: TestPage "Contact List")
@@ -3925,4 +3999,3 @@ codeunit 136305 "Job Journal"
         ContactList.OK().Invoke();
     end;
 }
-

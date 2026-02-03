@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Inventory.Item;
 
 using Microsoft.Manufacturing.Routing;
@@ -27,7 +31,7 @@ pageextension 99000758 "Mfg. ItemReplenishmentFactBox" extends "Item Replenishme
                     var
                         RoutingHeader: Record "Routing Header";
                     begin
-                        if RoutingHeader."No." <> '' then
+                        if Rec."Routing No." <> '' then
                             RoutingHeader.SetRange("No.", Rec."Routing No.");
                         Page.Run(Page::Routing, RoutingHeader);
                     end;
@@ -42,7 +46,7 @@ pageextension 99000758 "Mfg. ItemReplenishmentFactBox" extends "Item Replenishme
                     var
                         ProductionBOMHeader: Record "Production BOM Header";
                     begin
-                        if ProductionBOMHeader."No." <> '' then
+                        if Rec."Production BOM No." <> '' then
                             ProductionBOMHeader.SetRange("No.", Rec."Production BOM No.");
                         Page.Run(Page::"Production BOM", ProductionBOMHeader);
                     end;

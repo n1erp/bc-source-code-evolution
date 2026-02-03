@@ -219,21 +219,21 @@ table 5802 "Value Entry"
         }
         field(68; "Cost Amount (Actual) (ACY)"; Decimal)
         {
-            AutoFormatExpression = GetCurrencyCode();
+            AutoFormatExpression = GetAdditionalReportingCurrencyCode();
             AutoFormatType = 1;
             Caption = 'Cost Amount (Actual) (ACY)';
         }
         field(70; "Cost Posted to G/L (ACY)"; Decimal)
         {
             AccessByPermission = TableData Currency = R;
-            AutoFormatExpression = GetCurrencyCode();
+            AutoFormatExpression = GetAdditionalReportingCurrencyCode();
             AutoFormatType = 1;
             Caption = 'Cost Posted to G/L (ACY)';
         }
         field(72; "Cost per Unit (ACY)"; Decimal)
         {
             AccessByPermission = TableData Currency = R;
-            AutoFormatExpression = GetCurrencyCode();
+            AutoFormatExpression = GetAdditionalReportingCurrencyCode();
             AutoFormatType = 2;
             Caption = 'Cost per Unit (ACY)';
         }
@@ -329,14 +329,14 @@ table 5802 "Value Entry"
         }
         field(156; "Cost Amount (Expected) (ACY)"; Decimal)
         {
-            AutoFormatExpression = GetCurrencyCode();
+            AutoFormatExpression = GetAdditionalReportingCurrencyCode();
             AutoFormatType = 1;
             Caption = 'Cost Amount (Expected) (ACY)';
         }
         field(157; "Cost Amount (Non-Invtbl.)(ACY)"; Decimal)
         {
             AccessByPermission = TableData "Item Charge" = R;
-            AutoFormatExpression = GetCurrencyCode();
+            AutoFormatExpression = GetAdditionalReportingCurrencyCode();
             AutoFormatType = 1;
             Caption = 'Cost Amount (Non-Invtbl.)(ACY)';
         }
@@ -347,6 +347,7 @@ table 5802 "Value Entry"
         }
         field(159; "Exp. Cost Posted to G/L (ACY)"; Decimal)
         {
+            AutoFormatExpression = GetAdditionalReportingCurrencyCode();
             AutoFormatType = 1;
             Caption = 'Exp. Cost Posted to G/L (ACY)';
         }
@@ -464,6 +465,13 @@ table 5802 "Value Entry"
             Caption = 'Return Reason Code';
             TableRelation = "Return Reason";
         }
+        field(6603; "Item Description"; Text[100])
+        {
+            CalcFormula = lookup(Item.Description where("No." = field("Item No.")));
+            Caption = 'Item Description';
+            Editable = false;
+            FieldClass = FlowField;
+        }
     }
 
     keys
@@ -474,7 +482,7 @@ table 5802 "Value Entry"
         }
         key(Key2; "Item Ledger Entry No.", "Entry Type")
         {
-            IncludedFields = "Invoiced Quantity", "Sales Amount (Expected)", "Sales Amount (Actual)", "Cost Amount (Expected)", "Cost Amount (Actual)", "Cost Amount (Non-Invtbl.)", "Cost Amount (Expected) (ACY)", "Cost Amount (Actual) (ACY)", "Cost Amount (Non-Invtbl.)(ACY)", "Purchase Amount (Actual)", "Purchase Amount (Expected)", "Discount Amount", "Item Charge No.", "Variance Type", "Applies-to Entry";
+            IncludedFields = "Invoiced Quantity", "Sales Amount (Expected)", "Sales Amount (Actual)", "Cost Amount (Expected)", "Cost Amount (Actual)", "Cost Amount (Non-Invtbl.)", "Cost Amount (Expected) (ACY)", "Cost Amount (Actual) (ACY)", "Cost Amount (Non-Invtbl.)(ACY)", "Purchase Amount (Actual)", "Purchase Amount (Expected)", "Discount Amount", "Item Charge No.", "Variance Type", "Applies-to Entry", Inventoriable;
         }
         key(Key3; "Item Ledger Entry No.", "Document No.", "Document Line No.")
         {
@@ -516,7 +524,7 @@ table 5802 "Value Entry"
         }
         key(Key15; "Item Ledger Entry No.", "Valuation Date", "Posting Date")
         {
-            IncludedFields = "Cost Amount (Expected)", "Cost Amount (Actual)", "Cost Amount (Expected) (ACY)", "Cost Amount (Actual) (ACY)";
+            IncludedFields = "Cost Amount (Expected)", "Cost Amount (Actual)", "Cost Amount (Expected) (ACY)", "Cost Amount (Actual) (ACY)", "Valued Quantity", "Expected Cost", "Entry Type";
         }
         key(Key16; "Location Code", "Inventory Posting Group")
         {
@@ -558,6 +566,7 @@ table 5802 "Value Entry"
         exit(SequenceNoMgt.GetNextSeqNo(DATABASE::"Value Entry"));
     end;
 
+    [InherentPermissions(PermissionObjectType::TableData, Database::"Value Entry", 'r')]
     procedure GetLastEntryNo(): Integer;
     var
         FindRecordManagement: Codeunit "Find Record Management";
@@ -565,7 +574,7 @@ table 5802 "Value Entry"
         exit(FindRecordManagement.GetLastEntryIntFieldValue(Rec, FieldNo("Entry No.")))
     end;
 
-    local procedure GetCurrencyCode(): Code[10]
+    local procedure GetAdditionalReportingCurrencyCode(): Code[10]
     begin
         if not GLSetupRead then begin
             GLSetup.Get();
@@ -727,7 +736,7 @@ table 5802 "Value Entry"
 
         if QtyFactor = 0 then
             exit(QtyFactor);
-            
+
         ValueEntry2.SetRange("Location Code");
         ValueEntry2.SetRange("Variant Code");
         ValueEntry2.CalcSums("Item Ledger Entry Quantity");
@@ -903,4 +912,3 @@ table 5802 "Value Entry"
     begin
     end;
 }
-

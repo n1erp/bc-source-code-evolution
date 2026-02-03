@@ -26,9 +26,11 @@ codeunit 134762 "Test Purchase Preview"
         ExpectedCost: Decimal;
         ExpectedQuantity: Decimal;
         PurchHeaderPostingNo: Code[20];
+        DocumentNos: Dictionary of [Text, Text];
         NoRecordsErr: Label 'There are no preview records to show.';
         RecordRestrictedTxt: Label 'You cannot use %1 for this action.', Comment = 'You cannot use Customer 10000 for this action.';
         PostingPreviewNoTok: Label '***', Locked = true;
+        CheckTotalAmountPurchLinesErr: Label '%1 (%2) is not equal to total of lines (%3)', Comment = '%1 = FieldCaption of Doc. Amount Incl. VAT; %2 - Doc. Amount Incl. VAT; %3 - Amount Including VAT ';
         IsInitialized: Boolean;
 
     [Test]
@@ -41,6 +43,7 @@ codeunit 134762 "Test Purchase Preview"
     begin
         // [SCENARIO] Posting preview of Purchase Invoice opens G/L Posting Preview with the navigatable entries to be posted.
         Initialize();
+        SetCheckDocTotalAmounts(false);
         LibraryERM.SetEnableDataCheck(false);
 
         // Initialize purchase header
@@ -110,6 +113,7 @@ codeunit 134762 "Test Purchase Preview"
     begin
         // [SCENARIO] Posting preview of Purchase Credit Memo opens G/L Posting Preview with the navigatable entries to be posted.
         Initialize();
+        SetCheckDocTotalAmounts(false);
         // Initialize purchase header
         ExpectedCost := LibraryRandom.RandInt(100);
         ExpectedQuantity := LibraryRandom.RandInt(10);
@@ -275,6 +279,7 @@ codeunit 134762 "Test Purchase Preview"
         // [SCENARIO] Posting preview of Purchase Invoice List Order opens G/L Posting Preview with the navigatable entries to be posted.
         // Initialize the purchase header
         Initialize();
+        SetCheckDocTotalAmounts(false);
         ExpectedCost := LibraryRandom.RandInt(100);
         ExpectedQuantity := LibraryRandom.RandInt(10);
         CreatePurchaseHeader(PurchaseHeader, PurchaseHeader."Document Type"::Invoice, ExpectedCost, ExpectedQuantity);
@@ -336,6 +341,7 @@ codeunit 134762 "Test Purchase Preview"
     begin
         // [SCENARIO] Posting preview of Purchase Credit Memo List Order opens G/L Posting Preview with the navigatable entries to be posted.
         Initialize();
+        SetCheckDocTotalAmounts(false);
         // Initialize purchase header
         ExpectedCost := LibraryRandom.RandInt(100);
         ExpectedQuantity := LibraryRandom.RandInt(10);
@@ -653,7 +659,7 @@ codeunit 134762 "Test Purchase Preview"
     end;
 
     [Test]
-    [HandlerFunctions('GLPostingPreviewPageHandler')]
+    [HandlerFunctions('GLPostingPreviewPageHandler,ConfirmHandler')]
     [Scope('OnPrem')]
     procedure PmtDiscToleranceConsidersOnPostingPreview()
     var
@@ -668,6 +674,7 @@ codeunit 134762 "Test Purchase Preview"
         // [SCENARIO 277573] Payment Discount Tolerance considers when preview application of payment to invoice
 
         Initialize();
+        if Confirm('') then; // test instability caused by the confirmation dialog's reliance on the working date.
 
         // [GIVEN] Posted payment and invoice with possible payment discount tolerance
         LibraryPmtDiscSetup.SetPmtDiscGracePeriodByText(Format(LibraryRandom.RandIntInRange(3, 10)) + 'D');
@@ -739,6 +746,7 @@ codeunit 134762 "Test Purchase Preview"
         // [SCENARIO 379797] Stan can preview posting of Purchase Invoice when invoice discount is specified for the invoice
         Initialize();
 
+        SetCheckDocTotalAmounts(false);
         LibraryPurchase.CreatePurchaseDocumentWithItem(
           PurchaseHeader, PurchaseLine, PurchaseHeader."Document Type"::Invoice,
           '', '', LibraryRandom.RandIntInRange(5, 10), '', WorkDate());
@@ -772,6 +780,7 @@ codeunit 134762 "Test Purchase Preview"
     begin
         // [SCENARIO 354973] "Extended G/L Posting Preview" page shows Vendor related entries
         Initialize();
+        SetCheckDocTotalAmounts(false);
 
         // [GIVEN] Set GLSetup."Posting Preview Type" = Extended
         UpdateGLSetupPostingPreviewType("Posting Preview Type"::Extended);
@@ -858,6 +867,384 @@ codeunit 134762 "Test Purchase Preview"
 
         // [THEN] Purch Header "Posting No." = "***"
         Assert.AreEqual(PostingPreviewNoTok, TestPurchPostPreview.GetPurchHeaderPostingNo(), 'Invalid Posting No.');
+    end;
+
+    [Test]
+    [HandlerFunctions('GLPostingPreviewHandler')]
+    procedure PurchaseInvoiceTotalDocumentAmountWorksProperlyDuringPreviewPosting()
+    var
+        PurchaseHeader: Record "Purchase Header";
+        ErrorMessages: TestPage "Error Messages";
+        PurchaseInvoice: TestPage "Purchase Invoice";
+    begin
+        // [SCENARIO 579030] Verify that the 'Check Document Amount' functionality on the Purchase Invoice works correctly with Preview Posting. 
+        Initialize();
+
+        // [GIVEN] Set 'Doc. Total Amounts' to true in the Purchases & Payables Setup.
+        SetCheckDocTotalAmounts(true);
+
+        // [GIVEN] Create a Purchase Invoice.
+        CreatePurchaseHeader(
+            PurchaseHeader, PurchaseHeader."Document Type"::Invoice,
+            LibraryRandom.RandIntInRange(100, 200), LibraryRandom.RandIntInRange(10, 20));
+        PurchaseHeader.CalcFields("Amount Including VAT");
+        ErrorMessages.Trap();
+
+        // [GIVEN] Open Purchase Invoice Page.
+        OpenPurchaseInvoicePage(PurchaseInvoice, PurchaseHeader);
+
+        // [WHEN] 'Set Doc. Amount Incl. VAT' field in the Purchase Invoice was set to 0, and the 'Preview Posting' action was executed..
+        PurchaseInvoice.Preview.Invoke();
+
+        // [THEN] Verify an error message was displayed: 'Document Amount should match with Amount Including VAT' when the 'Preview Posting' action was invoked.
+        ErrorMessages.Description.AssertEquals(
+            StrSubstNo(
+                CheckTotalAmountPurchLinesErr,
+                PurchaseHeader.FieldCaption("Doc. Amount Incl. VAT"),
+                PurchaseHeader."Doc. Amount Incl. VAT", PurchaseHeader."Amount Including VAT"));
+        PurchaseInvoice.Close();
+
+        // [GIVEN] Set the value of the 'Doc. Amount Incl. VAT' field in Purchase Invoice.
+        PurchaseHeader.Validate("Doc. Amount Incl. VAT", PurchaseHeader."Amount Including VAT");
+        PurchaseHeader.Modify(true);
+
+        // [WHEN] Open Purchase Invoice Page & Invoke the Preview Posting.
+        OpenPurchaseInvoicePage(PurchaseInvoice, PurchaseHeader);
+        PurchaseInvoice.Preview.Invoke();
+        PurchaseInvoice.Close();
+
+        // [THEN] The system did not display any error message.
+    end;
+
+    [Test]
+    procedure ReceivingNoOnPurchaseOrderIsNotAssignedOnPostingPreview()
+    var
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+        PurchPostYesNo: Codeunit "Purch.-Post (Yes/No)";
+        TestPurchasePreview: Codeunit "Test Purchase Preview";
+        GLPostingPreview: TestPage "G/L Posting Preview";
+    begin
+        // [SCENARIO] Receiving No. on Purchase Order is not assigned during Posting Preview.
+        Initialize();
+
+        BindSubscription(TestPurchasePreview);
+
+        // [GIVEN] Purchase Order with Receiving No. = ''.
+        LibraryPurchase.CreatePurchaseDocumentWithItem(
+          PurchaseHeader, PurchaseLine, PurchaseHeader."Document Type"::Order, '',
+          LibraryInventory.CreateItemNo(), LibraryRandom.RandInt(10), '', WorkDate());
+        PurchaseHeader.Validate("Receiving No.", '');
+        PurchaseHeader.Modify(true);
+        Commit();
+
+        // [WHEN] Run posting preview.
+        GLPostingPreview.Trap();
+        asserterror PurchPostYesNo.Preview(PurchaseHeader);
+        GLPostingPreview.Close();
+
+        // [THEN] Purchase Header "Receiving No." remains ''.
+        Assert.AreEqual('', TestPurchasePreview.GetDocumentNos().Get('Receiving No.'), '');
+
+        UnBindSubscription(TestPurchasePreview);
+    end;
+
+    [Test]
+    procedure PostingNoOnPurchaseOrderIsNotAssignedOnPostingPreview()
+    var
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+        PurchPostYesNo: Codeunit "Purch.-Post (Yes/No)";
+        TestPurchasePreview: Codeunit "Test Purchase Preview";
+        GLPostingPreview: TestPage "G/L Posting Preview";
+    begin
+        // [SCENARIO] Posting No. on Purchase Order is not assigned during Posting Preview.
+        Initialize();
+
+        BindSubscription(TestPurchasePreview);
+
+        // [GIVEN] Purchase Order with Posting No. = ''.
+        LibraryPurchase.CreatePurchaseDocumentWithItem(
+          PurchaseHeader, PurchaseLine, PurchaseHeader."Document Type"::Order, '',
+          LibraryInventory.CreateItemNo(), LibraryRandom.RandInt(10), '', WorkDate());
+        PurchaseHeader.Validate("Posting No.", '');
+        PurchaseHeader.Modify(true);
+        Commit();
+
+        // [WHEN] Run posting preview.
+        GLPostingPreview.Trap();
+        asserterror PurchPostYesNo.Preview(PurchaseHeader);
+        GLPostingPreview.Close();
+
+        // [THEN] Purchase Header "Posting No." = ''.
+        Assert.AreEqual('', TestPurchasePreview.GetDocumentNos().Get('Posting No.'), '');
+
+        UnBindSubscription(TestPurchasePreview);
+    end;
+
+    [Test]
+    procedure PostingNoOnPurchaseInvoiceIsNotAssignedOnPostingPreview()
+    var
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+        PurchPostYesNo: Codeunit "Purch.-Post (Yes/No)";
+        TestPurchasePreview: Codeunit "Test Purchase Preview";
+        GLPostingPreview: TestPage "G/L Posting Preview";
+    begin
+        // [SCENARIO] Posting No. on Purchase Invoice is not assigned during Posting Preview.
+        Initialize();
+
+        BindSubscription(TestPurchasePreview);
+
+        // [GIVEN] Purchase Invoice with Posting No. = ''.
+        LibraryPurchase.CreatePurchaseDocumentWithItem(
+          PurchaseHeader, PurchaseLine, PurchaseHeader."Document Type"::Invoice, '',
+          LibraryInventory.CreateItemNo(), LibraryRandom.RandInt(10), '', WorkDate());
+        PurchaseHeader.Validate("Posting No.", '');
+        PurchaseHeader.Modify(true);
+        Commit();
+
+        // [WHEN] Run posting preview.
+        GLPostingPreview.Trap();
+        asserterror PurchPostYesNo.Preview(PurchaseHeader);
+        GLPostingPreview.Close();
+
+        // [THEN] Purchase Header "Posting No." = ''.
+        Assert.AreEqual('', TestPurchasePreview.GetDocumentNos().Get('Posting No.'), '');
+
+        UnBindSubscription(TestPurchasePreview);
+    end;
+
+    [Test]
+    procedure PostingNoOnPurchaseCreditMemoIsNotAssignedOnPostingPreview()
+    var
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+        PurchPostYesNo: Codeunit "Purch.-Post (Yes/No)";
+        TestPurchasePreview: Codeunit "Test Purchase Preview";
+        GLPostingPreview: TestPage "G/L Posting Preview";
+    begin
+        // [SCENARIO] Posting No. on Purchase Credit Memo is not assigned during Posting Preview.
+        Initialize();
+
+        BindSubscription(TestPurchasePreview);
+
+        // [GIVEN] Purchase Credit Memo with Posting No. = ''.
+        LibraryPurchase.CreatePurchaseDocumentWithItem(
+          PurchaseHeader, PurchaseLine, PurchaseHeader."Document Type"::"Credit Memo", '',
+          LibraryInventory.CreateItemNo(), LibraryRandom.RandInt(10), '', WorkDate());
+        PurchaseHeader.Validate("Posting No.", '');
+        PurchaseHeader.Modify(true);
+        Commit();
+
+        // [WHEN] Run posting preview.
+        GLPostingPreview.Trap();
+        asserterror PurchPostYesNo.Preview(PurchaseHeader);
+        GLPostingPreview.Close();
+
+        // [THEN] Purchase Header "Posting No." = ''.
+        Assert.AreEqual('', TestPurchasePreview.GetDocumentNos().Get('Posting No.'), '');
+
+        UnBindSubscription(TestPurchasePreview);
+    end;
+
+    [Test]
+    procedure ReturnShipmentNoOnPurchaseReturnOrderIsNotAssignedOnPostingPreview()
+    var
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+        PurchPostYesNo: Codeunit "Purch.-Post (Yes/No)";
+        TestPurchasePreview: Codeunit "Test Purchase Preview";
+        GLPostingPreview: TestPage "G/L Posting Preview";
+    begin
+        // [SCENARIO] Return Shipment No. on Purchase Return Order is not assigned during Posting Preview.
+        Initialize();
+
+        BindSubscription(TestPurchasePreview);
+
+        // [GIVEN] Purchase Return Order with Return Shipment No. = ''.
+        LibraryPurchase.CreatePurchaseDocumentWithItem(
+          PurchaseHeader, PurchaseLine, PurchaseHeader."Document Type"::"Return Order", '',
+          LibraryInventory.CreateItemNo(), LibraryRandom.RandInt(10), '', WorkDate());
+        PurchaseHeader.Validate("Return Shipment No.", '');
+        PurchaseHeader.Modify(true);
+        Commit();
+
+        // [WHEN] Run posting preview.
+        GLPostingPreview.Trap();
+        asserterror PurchPostYesNo.Preview(PurchaseHeader);
+        GLPostingPreview.Close();
+
+        // [THEN] Purchase Header "Return Shipment No." = ''.
+        Assert.AreEqual('', TestPurchasePreview.GetDocumentNos().Get('Return Shipment No.'), '');
+
+        UnBindSubscription(TestPurchasePreview);
+    end;
+
+    [Test]
+    procedure PostedReceiptNoStartsWithAsterisksOnPostingPreview()
+    var
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+        PurchPostYesNo: Codeunit "Purch.-Post (Yes/No)";
+        TestPurchasePreview: Codeunit "Test Purchase Preview";
+        GLPostingPreview: TestPage "G/L Posting Preview";
+    begin
+        // [SCENARIO] Posted Receipt No. starts with '***' during Posting Preview.
+        Initialize();
+
+        BindSubscription(TestPurchasePreview);
+
+        // [GIVEN] Purchase Order.
+        LibraryPurchase.CreatePurchaseDocumentWithItem(
+          PurchaseHeader, PurchaseLine, PurchaseHeader."Document Type"::Order, '',
+          LibraryInventory.CreateItemNo(), LibraryRandom.RandInt(10), '', WorkDate());
+        Commit();
+
+        // [WHEN] Run posting preview.
+        GLPostingPreview.Trap();
+        asserterror PurchPostYesNo.Preview(PurchaseHeader);
+        GLPostingPreview.Close();
+
+        // [THEN] Posted Receipt No. starts with '***'.
+        Assert.IsTrue(TestPurchasePreview.GetDocumentNos().Get('Posted Receipt No.').StartsWith('***'), '');
+
+        UnBindSubscription(TestPurchasePreview);
+    end;
+
+    [Test]
+    procedure PostedInvoiceNoStartsWithAsterisksOnPurchasePostingPreview()
+    var
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+        PurchPostYesNo: Codeunit "Purch.-Post (Yes/No)";
+        TestPurchasePreview: Codeunit "Test Purchase Preview";
+        GLPostingPreview: TestPage "G/L Posting Preview";
+    begin
+        // [SCENARIO] Posted Invoice No. starts with '***' during Posting Preview.
+        Initialize();
+
+        BindSubscription(TestPurchasePreview);
+
+        // [GIVEN] Purchase Invoice.
+        LibraryPurchase.CreatePurchaseDocumentWithItem(
+          PurchaseHeader, PurchaseLine, PurchaseHeader."Document Type"::Invoice, '',
+          LibraryInventory.CreateItemNo(), LibraryRandom.RandInt(10), '', WorkDate());
+        Commit();
+
+        // [WHEN] Run posting preview.
+        GLPostingPreview.Trap();
+        asserterror PurchPostYesNo.Preview(PurchaseHeader);
+        GLPostingPreview.Close();
+
+        // [THEN] Posted Invoice No. starts with '***'.
+        Assert.IsTrue(TestPurchasePreview.GetDocumentNos().Get('Posted Invoice No.').StartsWith('***'), '');
+
+        UnBindSubscription(TestPurchasePreview);
+    end;
+
+    [Test]
+    procedure PostedCrMemoNoStartsWithAsterisksOnPurchasePostingPreview()
+    var
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+        PurchPostYesNo: Codeunit "Purch.-Post (Yes/No)";
+        TestPurchasePreview: Codeunit "Test Purchase Preview";
+        GLPostingPreview: TestPage "G/L Posting Preview";
+    begin
+        // [SCENARIO] Posted Cr.Memo No. starts with '***' during Posting Preview.
+        Initialize();
+
+        BindSubscription(TestPurchasePreview);
+
+        // [GIVEN] Purchase Credit Memo.
+        LibraryPurchase.CreatePurchaseDocumentWithItem(
+          PurchaseHeader, PurchaseLine, PurchaseHeader."Document Type"::"Credit Memo", '',
+          LibraryInventory.CreateItemNo(), LibraryRandom.RandInt(10), '', WorkDate());
+        Commit();
+
+        // [WHEN] Run posting preview.
+        GLPostingPreview.Trap();
+        asserterror PurchPostYesNo.Preview(PurchaseHeader);
+        GLPostingPreview.Close();
+
+        // [THEN] Posted Cr.Memo No. starts with '***'.
+        Assert.IsTrue(TestPurchasePreview.GetDocumentNos().Get('Posted Cr.Memo No.').StartsWith('***'), '');
+
+        UnBindSubscription(TestPurchasePreview);
+    end;
+
+    [Test]
+    procedure PostedReturnShipmentNoStartsWithAsterisksOnPostingPreview()
+    var
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+        PurchPostYesNo: Codeunit "Purch.-Post (Yes/No)";
+        TestPurchasePreview: Codeunit "Test Purchase Preview";
+        GLPostingPreview: TestPage "G/L Posting Preview";
+    begin
+        // [SCENARIO] Posted Return Shipment No. starts with '***' during Posting Preview.
+        Initialize();
+
+        BindSubscription(TestPurchasePreview);
+
+        // [GIVEN] Purchase Return Order.
+        LibraryPurchase.CreatePurchaseDocumentWithItem(
+          PurchaseHeader, PurchaseLine, PurchaseHeader."Document Type"::"Return Order", '',
+          LibraryInventory.CreateItemNo(), LibraryRandom.RandInt(10), '', WorkDate());
+        Commit();
+
+        // [WHEN] Run posting preview.
+        GLPostingPreview.Trap();
+        asserterror PurchPostYesNo.Preview(PurchaseHeader);
+        GLPostingPreview.Close();
+
+        // [THEN] Posted Return Shipment No. starts with '***'.
+        Assert.IsTrue(TestPurchasePreview.GetDocumentNos().Get('Posted Return Shipment No.').StartsWith('***'), '');
+
+        UnBindSubscription(TestPurchasePreview);
+    end;
+
+    [Test]
+    procedure PreviewPostingTokInPurchasePostingNoFieldsIsReset()
+    var
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+        PurchPostYesNo: Codeunit "Purch.-Post (Yes/No)";
+        TestPurchasePreview: Codeunit "Test Purchase Preview";
+        GLPostingPreview: TestPage "G/L Posting Preview";
+    begin
+        // [SCENARIO] Preview Posting Token in Receiving No., Posting No., Return Shipment No. fields is reset and not transferred to Last Receiving No., Last Posting No., and Last Return Shipment No. during Posting Preview.
+        Initialize();
+
+        BindSubscription(TestPurchasePreview);
+
+        // [GIVEN] Purchase Order.
+        LibraryPurchase.CreatePurchaseDocumentWithItem(
+          PurchaseHeader, PurchaseLine, PurchaseHeader."Document Type"::Order, '',
+          LibraryInventory.CreateItemNo(), LibraryRandom.RandInt(10), '', WorkDate());
+        PurchaseHeader."Receiving No." := '***123456';
+        PurchaseHeader."Posting No." := '***234567';
+        PurchaseHeader."Return Shipment No." := '***345678';
+        PurchaseHeader.Modify(true);
+        Commit();
+
+        // [WHEN] Run posting preview.
+        GLPostingPreview.Trap();
+        asserterror PurchPostYesNo.Preview(PurchaseHeader);
+        GLPostingPreview.Close();
+
+        // [THEN] Preview Posting Token in fields is reset.
+        Assert.AreEqual('', TestPurchasePreview.GetDocumentNos().Get('Receiving No.'), '');
+        Assert.AreEqual('', TestPurchasePreview.GetDocumentNos().Get('Posting No.'), '');
+        Assert.AreEqual('', TestPurchasePreview.GetDocumentNos().Get('Return Shipment No.'), '');
+
+        // [AND] Last Receiving No., Last Posting No., and Last Return Shipment No. are not set.
+        Assert.AreEqual('', TestPurchasePreview.GetDocumentNos().Get('Last Receiving No.'), '');
+        Assert.AreEqual('', TestPurchasePreview.GetDocumentNos().Get('Last Posting No.'), '');
+        Assert.AreEqual('', TestPurchasePreview.GetDocumentNos().Get('Last Return Shipment No.'), '');
+
+        UnBindSubscription(TestPurchasePreview);
     end;
 
     local procedure Initialize()
@@ -1063,10 +1450,35 @@ codeunit 134762 "Test Purchase Preview"
         exit(PurchHeaderPostingNo);
     end;
 
+    procedure GetDocumentNos(): Dictionary of [Text, Text]
+    begin
+        exit(DocumentNos);
+    end;
+
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", 'OnAfterUpdatePostingNos', '', false, false)]
     local procedure OnAfterUpdatePostingNos(var PurchaseHeader: Record "Purchase Header"; CommitIsSupressed: Boolean)
     begin
         PurchHeaderPostingNo := PurchaseHeader."Posting No.";
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", 'OnAfterFinalizePostingOnBeforeCommit', '', false, false)]
+    local procedure CheckPurchaseDocumentsBeforeCommit(var PurchHeader: Record "Purchase Header";
+                                                       var PurchRcptHeader: Record "Purch. Rcpt. Header";
+                                                       var PurchInvHeader: Record "Purch. Inv. Header";
+                                                       var PurchCrMemoHdr: Record "Purch. Cr. Memo Hdr.";
+                                                       var ReturnShptHeader: Record "Return Shipment Header")
+    begin
+        Clear(DocumentNos);
+        DocumentNos.Add('Receiving No.', PurchHeader."Receiving No.");
+        DocumentNos.Add('Posting No.', PurchHeader."Posting No.");
+        DocumentNos.Add('Return Shipment No.', PurchHeader."Return Shipment No.");
+        DocumentNos.Add('Last Receiving No.', PurchHeader."Last Receiving No.");
+        DocumentNos.Add('Last Posting No.', PurchHeader."Last Posting No.");
+        DocumentNos.Add('Last Return Shipment No.', PurchHeader."Last Return Shipment No.");
+        DocumentNos.Add('Posted Receipt No.', PurchRcptHeader."No.");
+        DocumentNos.Add('Posted Invoice No.', PurchInvHeader."No.");
+        DocumentNos.Add('Posted Cr.Memo No.', PurchCrMemoHdr."No.");
+        DocumentNos.Add('Posted Return Shipment No.', ReturnShptHeader."No.");
     end;
 
     [ModalPageHandler]
@@ -1130,6 +1542,22 @@ codeunit 134762 "Test Purchase Preview"
         ExtendedGLPostingPreview.VATEntriesPreviewHierarchical.Base.AssertEquals(TotalBaseAmount[2]);
     end;
 
+    local procedure SetCheckDocTotalAmounts(CheckTotals: Boolean)
+    var
+        PurchasesPayablesSetup: Record "Purchases & Payables Setup";
+    begin
+        PurchasesPayablesSetup.Get();
+        PurchasesPayablesSetup.Validate("Check Doc. Total Amounts", CheckTotals);
+        PurchasesPayablesSetup.Modify(true);
+    end;
+
+    local procedure OpenPurchaseInvoicePage(var PurchaseInvoice: TestPage "Purchase Invoice"; PurchaseHeader: Record "Purchase Header")
+    begin
+        PurchaseInvoice.OpenEdit();
+        PurchaseInvoice.Filter.SetFilter("No.", PurchaseHeader."No.");
+        Commit();
+    end;
+
     [ConfirmHandler]
     [Scope('OnPrem')]
     procedure ConfirmHandler(Question: Text[1024]; var Reply: Boolean)
@@ -1158,6 +1586,11 @@ codeunit 134762 "Test Purchase Preview"
         DetailedVendEntriesPreview.Next();
         Assert.IsTrue(
           DetailedVendEntriesPreview.Amount.AsDecimal() <> 0, 'Application does not exist');
+    end;
+
+    [PageHandler]
+    procedure GLPostingPreviewHandler(var GLPostingPreview: TestPage "G/L Posting Preview")
+    begin
     end;
 }
 

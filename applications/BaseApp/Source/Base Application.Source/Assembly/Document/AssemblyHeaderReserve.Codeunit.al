@@ -10,6 +10,7 @@ using Microsoft.Inventory.Location;
 using Microsoft.Inventory.Planning;
 using Microsoft.Inventory.Tracking;
 using Microsoft.Foundation.Navigate;
+using Microsoft.Inventory.Requisition;
 
 codeunit 925 "Assembly Header-Reserve"
 {
@@ -235,8 +236,10 @@ codeunit 925 "Assembly Header-Reserve"
         ReservationManagement.SetReservSource(NewAssemblyHeader);
         if NewAssemblyHeader."Qty. per Unit of Measure" <> OldAssemblyHeader."Qty. per Unit of Measure" then
             ReservationManagement.ModifyUnitOfMeasure();
+        OnVerifyQuantityOnBeforeDeleteReservationEntries(NewAssemblyHeader, OldAssemblyHeader);
         ReservationManagement.DeleteReservEntries(false, NewAssemblyHeader."Remaining Quantity (Base)");
         ReservationManagement.ClearSurplus();
+        OnVerifyQuantityOnBeforeAutoTrack(NewAssemblyHeader);
         ReservationManagement.AutoTrack(NewAssemblyHeader."Remaining Quantity (Base)");
         AssignForPlanning(NewAssemblyHeader);
     end;
@@ -322,6 +325,8 @@ codeunit 925 "Assembly Header-Reserve"
                         OldReservationEntry."Qty. to Invoice (Base)" := Abs(OldReservationEntry2."Qty. to Invoice (Base)");
                     end;
                 end;
+
+                OnTransferAsmHeaderToItemJnlLineOnBeforeTransferReservationEntry(AssemblyHeader, ItemJournalLine, OldReservationEntry);
 
                 TransferQty := CreateReservEntry.TransferReservEntry(
                     Database::"Item Journal Line",
@@ -800,5 +805,57 @@ codeunit 925 "Assembly Header-Reserve"
     [IntegrationEvent(false, false)]
     local procedure OnSetAssemblyHeaderOnBeforeUpdateReservation(var ReservEntry: Record "Reservation Entry"; AssemblyHeader: Record "Assembly Header")
     begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnVerifyQuantityOnBeforeDeleteReservationEntries(var NewAssemblyHeader: Record "Assembly Header"; OldAssemblyHeader: Record "Assembly Header")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnVerifyQuantityOnBeforeAutoTrack(var NewAssemblyHeader: Record "Assembly Header")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnTransferAsmHeaderToItemJnlLineOnBeforeTransferReservationEntry(var AssemblyHeader: Record "Assembly Header"; var ItemJournalLine: Record "Item Journal Line"; var OldReservationEntry: Record "Reservation Entry")
+    begin
+    end;
+
+    procedure TransferPlanningLineToAsmHdr(var OldRequisitionLine: Record "Requisition Line"; var NewAssemblyHeader: Record "Assembly Header"; TransferQty: Decimal; TransferAll: Boolean)
+    var
+        OldReservationEntry: Record "Reservation Entry";
+        ReqLineReserve: Codeunit "Req. Line-Reserve";
+    begin
+        if not ReqLineReserve.FindReservEntry(OldRequisitionLine, OldReservationEntry) then
+            exit;
+
+        NewAssemblyHeader.TestField("Item No.", OldRequisitionLine."No.");
+        NewAssemblyHeader.TestField("Variant Code", OldRequisitionLine."Variant Code");
+        NewAssemblyHeader.TestField("Location Code", OldRequisitionLine."Location Code");
+
+        OnTransferReqLineToAsmHdrOnBeforeTransfer(OldReservationEntry, OldRequisitionLine, NewAssemblyHeader);
+#if not CLEAN27
+        ReqLineReserve.RunOnTransferReqLineToAsmHdrOnBeforeTransfer(OldReservationEntry, OldRequisitionLine, NewAssemblyHeader);
+#endif
+
+        OldReservationEntry.TransferReservations(
+            OldReservationEntry, OldRequisitionLine."No.", OldRequisitionLine."Variant Code", OldRequisitionLine."Location Code",
+            TransferAll, TransferQty, NewAssemblyHeader."Qty. per Unit of Measure",
+            Database::"Assembly Header", NewAssemblyHeader."Document Type".AsInteger(), NewAssemblyHeader."No.", '', 0, 0);
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnTransferReqLineToAsmHdrOnBeforeTransfer(var OldReservEntry: Record "Reservation Entry"; var OldReqLine: Record "Requisition Line"; var AssemblyHeader: Record Microsoft.Assembly.Document."Assembly Header")
+    begin
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Req. Line-Reserve", 'OnSetReservationSourceFilterByRefOrderType', '', false, false)]
+    local procedure OnSetReservationSourceFilterByRefOrderType(var RequisitionLine: Record "Requisition Line"; var ReservationEntry: Record "Reservation Entry")
+    begin
+        case RequisitionLine."Ref. Order Type" of
+            RequisitionLine."Ref. Order Type"::Assembly:
+                ReservationEntry.SetSourceFilter(Database::"Assembly Header", 1, RequisitionLine."Ref. Order No.", 0, true);
+        end;
     end;
 }

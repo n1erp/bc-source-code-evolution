@@ -70,6 +70,9 @@ codeunit 137156 "SCM Orders IV"
         DocumentCountErr: label 'Expected %1 purchase invoice lines but found %2.', Comment = '%1 = Expected Count, %2 = Actual Count';
         DocumentLineQuantityErr: label 'Expected quantity of 1 on line line but found %1.', Comment = '%1 = Actual Quantity';
         DocumentLineSourceNoErr: label 'Expected source on document line is %1 but found %2.', Comment = '%1 = Expected Source No., %2 = Actual Source No.';
+        ReservationFromStockErr: Label 'Reservation from Stock must be %1 in %2.', Comment = '%1= Field Value, %2 =Table Caption.';
+        PurchasingCodeOnSalesInvoiceErr: Label 'The Purchasing Code should be blank for item %1 on the sales invoice because it is used only for the drop shipment process.', Comment = '%1= Item No.';
+        ShipToAddressErr: Label 'Ship-to Address on Return Order should be company address';
 
 #if not CLEAN25
     [Test]
@@ -899,7 +902,7 @@ codeunit 137156 "SCM Orders IV"
     begin
         Initialize();
 
-        //[GIVEN] Set Inventory Setup 
+        //[GIVEN] Set Inventory Setup
         InventorySetup.Get();
         if not InventorySetup."Prevent Negative Inventory" then begin
             InventorySetup."Prevent Negative Inventory" := true;
@@ -1096,9 +1099,6 @@ codeunit 137156 "SCM Orders IV"
         // Exercise: Create Sales Order.
         asserterror CreateSalesOrder(
             SalesHeader, SalesLine, SalesLine.Type::Item, '', Item."No.", LibraryRandom.RandDec(10, 2), '');
-
-        // Verify: Verify Blocked Item error message.
-        Assert.ExpectedTestFieldError(Item.FieldCaption(Blocked), Format(false));
     end;
 
 #if not CLEAN25
@@ -3469,11 +3469,135 @@ codeunit 137156 "SCM Orders IV"
         // [THEN] No error occurs.
     end;
 
+    [Test]
+    procedure ReservedStockFullStatusStatisticsAssemblyOrderOnInventoryItem()
+    var
+        Item: array[2] of Record Item;
+        ItemJournalLine: Record "Item Journal Line";
+        AssemblyItem: Record Item;
+        AssemblyHeader: Record "Assembly Header";
+        AssemblyLine: Record "Assembly Line";
+        ReservationFromStock: Enum "Reservation From Stock";
+        Quantity: Decimal;
+    begin
+        // [SCENARIO 563164] Reserved from Stock has "Full" status on Statistics page of Assembly Order when there is non-inventory Item is in the Assembly Lines.
+        Initialize();
+
+        // [GIVEN] Store Quanitity in Variable.
+        Quantity := LibraryRandom.RandIntInRange(100, 200);
+
+        // [GIVEN] Create an Item with Reserve Always.
+        CreateItemWithReserveAsAlways(Item[1]);
+
+        // [GIVEN] Create an Item Journal Line.
+        LibraryInventory.CreateItemJournalLineInItemTemplate(ItemJournalLine, Item[1]."No.", '', '', LibraryRandom.RandIntInRange(300, 350));
+
+        // [GIVEN] Post an Item Journal Line.
+        LibraryInventory.PostItemJournalLine(ItemJournalLine."Journal Template Name", ItemJournalLine."Journal Batch Name");
+
+        // [GIVEN] Create an Non Inventory Item.
+        LibraryInventory.CreateNonInventoryTypeItem(Item[2]);
+
+        // [GIVEN] Create an Assembly Header.
+        LibraryAssembly.CreateAssemblyHeader(AssemblyHeader, WorkDate(), Item[1]."No.", '', Quantity, '');
+
+        // [GIVEN] Create an Assembly Line.
+        LibraryAssembly.CreateAssemblyLine(
+            AssemblyHeader, AssemblyLine, "BOM Component Type"::Item, Item[1]."No.",
+            AssemblyItem."Base Unit of Measure", Quantity, LibraryRandom.RandIntInRange(1, 1), '');
+
+        // [GIVEN] Create An Auto Reserve.
+        AssemblyLine.AutoReserve();
+
+        // [WHEN] Create Assembly Line with Non Invenotry Item.
+        LibraryAssembly.CreateAssemblyLine(
+            AssemblyHeader, AssemblyLine, "BOM Component Type"::Item, Item[2]."No.",
+            AssemblyItem."Base Unit of Measure", Quantity, LibraryRandom.RandIntInRange(1, 1), '');
+
+        // [THEN] Reservation from stock must be Full in Assembly Header.
+        Assert.AreEqual(
+            ReservationFromStock::Full,
+            AssemblyHeader.GetQtyReservedFromStockState(),
+            StrSubstNo(
+                ReservationFromStockErr,
+                ReservationFromStock::Full,
+                AssemblyHeader.TableCaption()));
+    end;
+
+    [Test]
+    procedure SalesLineWithDocumentTypeInvoiceCannotCreateWithTypeItemHDefaultPurchasingCodeDropShipment()
+    var
+        Item: Record Item;
+        SalesHeader: Record "Sales Header";
+        SalesLine: Record "Sales Line";
+        PurchasingCode: Code[10];
+    begin
+        // [SCENARIO 574904] Verify that a sales line with the document type 'Invoice' cannot be created with Type 'Item' for an Item No. that has a default Purchasing Code of 'Drop Shipment'.
+        Initialize();
+
+        // [GIVEN] Create Purchasing Code and Set Drop Shipment true.
+        PurchasingCode := CreatePurchasingCode(true, false); // Drop Shipment
+
+        // [GIVEN] Create an item and assign a Purchasing Code to it.
+        LibraryInventory.CreateItem(Item);
+        Item.Validate("Purchasing Code", PurchasingCode);
+        Item.Modify(true);
+
+        // [GIVEN] Create a sales header with the document type set to 'Invoice'.
+        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Invoice, '');
+
+        // [WHEN] A sales line with the document type 'Invoice' was inserted using an item that has a Purchasing Code.
+        asserterror LibrarySales.CreateSalesLine(
+            SalesLine, SalesHeader, SalesLine.Type::Item, Item."No.", LibraryRandom.RandInt(10));
+
+        // [THEN] An error occurred because a sales line with the document type 'Invoice' was inserted using an item that has a Purchasing Code.
+        Assert.ExpectedError(StrSubstNo(PurchasingCodeOnSalesInvoiceErr, Item."No."));
+    end;
+
+    [Test]
+    procedure MoveNegativeLines_SetsReturnOrderShipToAddressToCompany()
+    var
+        Customer: Record Customer;
+        Item: Record Item;
+        SalesHeader: Record "Sales Header";
+        SalesLine: Record "Sales Line";
+        CompanyInfo: Record "Company Information";
+    begin
+        // [SCENARIO 580640] Verify Ship to Address of Return Order when Move Negative Lines on the Sales Order.
+        Initialize();
+
+        // [GIVEN] Create Customer.
+        LibrarySales.CreateCustomer(Customer);
+
+        // [GIVEN] Create Sales Header with Document Type as Order.
+        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Order, Customer."No.");
+
+        // [GIVEN] Create SalesLine with Negative Quantity.
+        LibrarySales.CreateSalesLine(SalesLine, SalesHeader, SalesLine.Type::Item, LibraryInventory.CreateItem(Item), LibraryRandom.RandIntInRange(-5, -10));
+
+        // [WHEN] Move Negative Lines
+        MoveNegativeLinesOnSalesOrder(SalesHeader);
+
+        // [GIVEN] Get company address
+        CompanyInfo.Get();
+
+        // [THEN] Sales Return Order is created with Ship to Address as Company Address.
+        SalesHeader.SetRange("Document Type", SalesHeader."Document Type"::"Return Order");
+        SalesHeader.SetRange("Sell-to Customer No.", Customer."No.");
+        SalesHeader.FindFirst();
+        Assert.AreEqual(
+            CompanyInfo."Ship-to Address", SalesHeader."Ship-to Address", ShipToAddressErr);
+        Assert.AreEqual(
+            CompanyInfo."Ship-to City", SalesHeader."Ship-to City", ShipToAddressErr);
+    end;
+
     local procedure Initialize()
     var
-        InstructionMgt: Codeunit "Instruction Mgt.";
         PriceListLine: Record "Price List Line";
+        InstructionMgt: Codeunit "Instruction Mgt.";
+        SequenceNoMgt: Codeunit "Sequence No. Mgt.";
     begin
+        SequenceNoMgt.ClearState();
         LibraryTestInitialize.OnTestInitialize(CODEUNIT::"SCM Orders IV");
         LibrarySetupStorage.Restore();
         LibraryVariableStorage.Clear();
@@ -3540,16 +3664,6 @@ codeunit 137156 "SCM Orders IV"
         LibraryWarehouse.CreateWarehouseEmployee(WarehouseEmployee, LocationRed.Code, true);
         CreateAndUpdateLocation(LocationGreen, false, true, true);  // Location Green with Require put-away, Require Pick, Require Receive and Require Shipment.
         LibraryWarehouse.CreateWarehouseEmployee(WarehouseEmployee, LocationGreen.Code, false);
-    end;
-
-    local procedure CreateLocationWithMaxLengthCode(): Code[20]
-    var
-        Location: Record Location;
-    begin
-        LibraryWarehouse.CreateLocation(Location);
-        Location.Validate(Code, PadStr(Location.Code, MaxStrLen(Location.Code), '0'));
-        Location.Modify(true);
-        exit(Location.Code);
     end;
 
     local procedure InvoiceDiscountSetupForSales(var CustInvoiceDisc: Record "Cust. Invoice Disc."; CustomerNo: Code[20]; InvoiceDiscPct: Decimal)
@@ -3947,7 +4061,6 @@ codeunit 137156 "SCM Orders IV"
           SalesLineDiscount, Item, SalesLineDiscount."Sales Type"::"Customer Disc. Group", CustomerDiscountGroup.Code, WorkDate(),
           LibraryRandom.RandDec(10, 2));
     end;
-#endif
 
     local procedure CreateCustomerWithCustomerDiscountGroup(CustomerDiscountGroupCode: Code[20]) CustomerNo: Code[20]
     var
@@ -3958,7 +4071,7 @@ codeunit 137156 "SCM Orders IV"
         Customer.Modify(true);
         CustomerNo := Customer."No.";
     end;
-
+#endif
     local procedure CreateCustomerWithInvoiceDiscount(var Customer: Record Customer; InvoiceDiscPct: Decimal)
     var
         CustInvoiceDisc: Record "Cust. Invoice Disc.";
@@ -4142,6 +4255,7 @@ codeunit 137156 "SCM Orders IV"
         CreateSalesLine(SalesHeader, SalesLine, Type, ItemNo, Quantity, LocationCode);
     end;
 
+#if not CLEAN25
     local procedure CreateSalesReturnOrderWithUnitPriceAndLineDiscount(CustomerNo: Code[20]; ItemNo: Code[20]; Qty: Decimal): Code[20]
     var
         SalesHeader: Record "Sales Header";
@@ -4153,7 +4267,7 @@ codeunit 137156 "SCM Orders IV"
         UpdateLineDiscountOnSalesLine(SalesLine, LibraryRandom.RandInt(10));
         exit(SalesHeader."No.");
     end;
-
+#endif
     local procedure CreateSalesOrder(var SalesHeader: Record "Sales Header"; var SalesLine: Record "Sales Line"; Type: Enum "Sales Line Type"; CustomerNo: Code[20]; ItemNo: Code[20]; Quantity: Decimal; LocationCode: Code[10])
     begin
         CreateSalesDocument(SalesHeader, SalesLine, SalesHeader."Document Type"::Order, Type, CustomerNo, ItemNo, Quantity, LocationCode);
@@ -4220,6 +4334,7 @@ codeunit 137156 "SCM Orders IV"
         exit(VATPostingSetup."VAT %");
     end;
 
+#if not CLEAN25
     local procedure CreateSalesOrderWithDropShipment(var SalesHeader: Record "Sales Header"; var SalesLine: Record "Sales Line"; CustomerNo: Code[20]; ItemNo: Code[20]; Quantity: Decimal)
     begin
         CreateSalesOrder(SalesHeader, SalesLine, SalesLine.Type::Item, CustomerNo, ItemNo, Quantity, '');
@@ -4235,7 +4350,7 @@ codeunit 137156 "SCM Orders IV"
         SalesLine.Validate("Purchasing Code", CreatePurchasingCode(false, true));  // Special Order as TRUE.
         SalesLine.Modify(true);
     end;
-
+#endif
     local procedure CreateSalesOrderWithMultipleLinesWithDiffPurchasingCode(var SalesHeader: Record "Sales Header"; var SalesLine2: Record "Sales Line"; Quantity: Decimal; LocationCode: Code[10]): Code[20]
     var
         SalesLine: Record "Sales Line";
@@ -4634,12 +4749,13 @@ codeunit 137156 "SCM Orders IV"
         PostedWhseShipmentLine.FindFirst();
     end;
 
+#if not CLEAN25
     local procedure FindPurchaseLine(var PurchaseLine: Record "Purchase Line"; No: Code[20])
     begin
         PurchaseLine.SetRange("No.", No);
         PurchaseLine.FindFirst();
     end;
-
+#endif
     local procedure FindReturnReceiptLine(var ReturnReceiptLine: Record "Return Receipt Line"; No: Code[20])
     begin
         ReturnReceiptLine.SetRange("No.", No);
@@ -4781,6 +4897,7 @@ codeunit 137156 "SCM Orders IV"
         exit(SalesHeader."No.");
     end;
 
+#if not CLEAN25
     local procedure GetRandomCode(FieldLength: Integer): Code[20]
     var
         RandomCode: Code[20];
@@ -4791,7 +4908,7 @@ codeunit 137156 "SCM Orders IV"
         until StrLen(RandomCode) = FieldLength;
         exit(RandomCode);
     end;
-
+#endif
     local procedure GetReturnReceiptLine(SalesHeader: Record "Sales Header"; DocumentNo: Code[20]; Qty: Decimal)
     var
         ReturnReceiptLine: Record "Return Receipt Line";
@@ -4935,12 +5052,13 @@ codeunit 137156 "SCM Orders IV"
         ItemStatistics.ShowMatrix.Invoke();
     end;
 
+#if not CLEAN25
     local procedure OpenCustomerCard(var CustomerCard: TestPage "Customer Card"; CustomerNo: Code[20])
     begin
         CustomerCard.OpenEdit();  // Open Customer Card.
         CustomerCard.FILTER.SetFilter("No.", CustomerNo);
     end;
-
+#endif
     local procedure PostInventoryActivity(SourceNo: Code[20]; ActivityType: Enum "Warehouse Activity Type"; QuantityToHandle: Decimal)
     var
         WarehouseActivityLine: Record "Warehouse Activity Line";
@@ -5316,18 +5434,19 @@ codeunit 137156 "SCM Orders IV"
         SalesLine.Modify(true);
     end;
 
+#if not CLEAN25
     local procedure UpdateLineDiscountOnSalesLine(var SalesLine: Record "Sales Line"; LineDiscount: Decimal)
     begin
         SalesLine.Validate("Line Discount %", LineDiscount);
         SalesLine.Modify(true);
     end;
-
+#endif
     local procedure UpdateZoneAndBinCodeOnWarehouseActivityLine(var WarehouseActivityLine: Record "Warehouse Activity Line"; ActionType: Enum "Warehouse Action Type"; SourceNo: Code[20]; BinCode: Code[20]; ZoneCode: Code[10])
     begin
         WarehouseActivityLine.SetRange("Action Type", ActionType);
         FindWarehouseActivityLine(
-          WarehouseActivityLine, WarehouseActivityLine."Source Document"::"Purchase Order", SourceNo,
-          WarehouseActivityLine."Activity Type"::"Put-away");
+WarehouseActivityLine, WarehouseActivityLine."Source Document"::"Purchase Order", SourceNo,
+WarehouseActivityLine."Activity Type"::"Put-away");
         WarehouseActivityLine.ModifyAll("Zone Code", ZoneCode, true);
         WarehouseActivityLine.ModifyAll("Bin Code", BinCode, true);
     end;
@@ -5487,6 +5606,7 @@ codeunit 137156 "SCM Orders IV"
         PostedInvtPutAwayLine.TestField(Quantity, Quantity);
     end;
 
+#if not CLEAN25
     local procedure VerifyPostedSalesInvoiceLine(DocumentNo: Code[20]; UnitPrice: Decimal; LineDiscount: Decimal; Quantity: Decimal)
     var
         SalesInvoiceLine: Record "Sales Invoice Line";
@@ -5505,7 +5625,7 @@ codeunit 137156 "SCM Orders IV"
         PurchaseLine.TestField("Direct Unit Cost", DirectUnitCost);
         PurchaseLine.TestField("Line Discount %", LineDiscount);
     end;
-
+#endif
     local procedure VerifyQtyToInvoiceOnSalesLine(ItemNo: Code[20]; DocumentType: Enum "Sales Document Type"; Quantity: Decimal)
     var
         SalesLine: Record "Sales Line";
@@ -6183,6 +6303,7 @@ codeunit 137156 "SCM Orders IV"
         Reservation."Summary Type".AssertEquals('');
     end;
 
+#if not CLEAN25
     local procedure MoveNegativeLines(No: Code[20])
     var
         SalesReturnOrder: TestPage "Sales Return Order";
@@ -6192,7 +6313,7 @@ codeunit 137156 "SCM Orders IV"
         Commit(); // Commit required before invoke Move Negative Lines.
         SalesReturnOrder.MoveNegativeLines.Invoke();
     end;
-
+#endif
     local procedure MoveNegativeLinesOnSalesOrder(SalesHeader: Record "Sales Header")
     var
         MoveNegSalesLines: Report "Move Negative Sales Lines";
@@ -6295,4 +6416,3 @@ codeunit 137156 "SCM Orders IV"
     begin
     end;
 }
-

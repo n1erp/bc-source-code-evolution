@@ -75,6 +75,7 @@ table 5990 "Service Shipment Header"
         field(6; "Bill-to Name 2"; Text[50])
         {
             Caption = 'Bill-to Name 2';
+            ToolTip = 'Specifies an additional part of the name of the customer that you send or sent the invoice or credit memo to.';
         }
         field(7; "Bill-to Address"; Text[100])
         {
@@ -266,6 +267,7 @@ table 5990 "Service Shipment Header"
                 CustLedgEntry.SetCurrentKey("Document No.");
                 CustLedgEntry.SetRange("Document Type", "Applies-to Doc. Type");
                 CustLedgEntry.SetRange("Document No.", "Applies-to Doc. No.");
+                OnLookupAppliestoDocNoOnAfterSetFilters(Rec, CustLedgEntry);
                 PAGE.Run(0, CustLedgEntry);
             end;
         }
@@ -316,6 +318,7 @@ table 5990 "Service Shipment Header"
         field(80; "Name 2"; Text[50])
         {
             Caption = 'Name 2';
+            ToolTip = 'Specifies an additional part of the name of the customer on the posted service shipment.';
         }
         field(81; Address; Text[100])
         {
@@ -888,6 +891,8 @@ table 5990 "Service Shipment Header"
         SetRange("Date Filter", 0D, WorkDate() - 1);
     end;
 
+#if not CLEAN27
+    [Obsolete('The statistics action will be replaced with the ServiceStatistics action. The new action uses RunObject and does not run the action trigger. Use a page extension to modify the behaviour.', '27.0')]
     procedure OpenStatistics()
     var
         StatPageID: Integer;
@@ -896,7 +901,7 @@ table 5990 "Service Shipment Header"
         OnOpenStatisticsOnAfterSetStatPageID(Rec, StatPageID);
         Page.RunModal(StatPageID, Rec);
     end;
-
+#endif
     [IntegrationEvent(false, false)]
     local procedure OnBeforeSetSecurityFilterOnRespCenter(var ServiceShipmentHeader: Record "Service Shipment Header"; var IsHandled: Boolean)
     begin
@@ -986,8 +991,15 @@ table 5990 "Service Shipment Header"
     end;
 
     [IntegrationEvent(false, false)]
+    local procedure OnLookupAppliestoDocNoOnAfterSetFilters(ServiceShipmentHeader: Record "Service Shipment Header"; var CustLedgerEntry: Record "Cust. Ledger Entry")
+    begin
+    end;
+
+#if not CLEAN27
+    [Obsolete('The statistics action will be replaced with the ServiceStatistics action. The new action uses RunObject and does not run the action trigger. Use a page extension to modify the behaviour.', '27.0')]
+    [IntegrationEvent(false, false)]
     local procedure OnOpenStatisticsOnAfterSetStatPageID(var ServiceShipmentHeader: Record "Service Shipment Header"; var StatPageID: Integer);
     begin
     end;
+#endif
 }
-

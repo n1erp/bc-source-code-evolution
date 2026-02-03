@@ -1,4 +1,4 @@
-﻿// ------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
@@ -61,7 +61,7 @@ codeunit 5802 "Inventory Posting To G/L"
         GenJnlPostLine: Codeunit "Gen. Jnl.-Post Line";
         GenJnlCheckLine: Codeunit "Gen. Jnl.-Check Line";
         DimMgt: Codeunit DimensionManagement;
-        MfgCostCalcMgt: Codeunit "Mfg. Cost Calculation Mgt.";
+        CostCalcMgt: Codeunit "Cost Calculation Management";
         COGSAmt: Decimal;
         InvtAdjmtAmt: Decimal;
         DirCostAmt: Decimal;
@@ -358,7 +358,7 @@ codeunit 5802 "Inventory Posting To G/L"
                 end;
             ValueEntry."Entry Type"::"Direct Cost - Non Inventory":
                 if (CostToPost <> 0) or (CostToPostACY <> 0) then
-                    if MfgCostCalcMgt.CanIncNonInvCostIntoProductionItem() then
+                    if CostCalcMgt.CanIncNonInvCostIntoProductionItem() then
                         InitInvtPostBuf(
                           ValueEntry,
                           TempGlobalInvtPostingBuffer."Account Type"::Inventory,
@@ -379,7 +379,7 @@ codeunit 5802 "Inventory Posting To G/L"
                           TempGlobalInvtPostingBuffer."Account Type"::"Material Variance",
                           CostToPost, CostToPostACY, false);
                     ValueEntry."Variance Type"::"Material - Non Inventory":
-                        if MfgCostCalcMgt.CanIncNonInvCostIntoProductionItem() then
+                        if CostCalcMgt.CanIncNonInvCostIntoProductionItem() then
                             InitInvtPostBuf(
                               ValueEntry,
                               TempGlobalInvtPostingBuffer."Account Type"::Inventory,
@@ -719,7 +719,7 @@ codeunit 5802 "Inventory Posting To G/L"
 
     procedure InitInvtPostBuf(ValueEntry: Record "Value Entry"; AccType: Enum "Invt. Posting Buffer Account Type"; BalAccType: Enum "Invt. Posting Buffer Account Type"; CostToPost: Decimal; CostToPostACY: Decimal; InterimAccount: Boolean)
     begin
-        OnBeforeInitInvtPostBuf(ValueEntry);
+        OnBeforeInitInvtPostBuf(ValueEntry, AccType, BalAccType);
 
         InitInvtPostBufPerAccount(ValueEntry, AccType, BalAccType, CostToPost, CostToPostACY, InterimAccount, false);
         InitInvtPostBufPerAccount(ValueEntry, AccType, BalAccType, CostToPost, CostToPostACY, InterimAccount, true);
@@ -1463,7 +1463,7 @@ codeunit 5802 "Inventory Posting To G/L"
     end;
 
     [IntegrationEvent(true, false)]
-    local procedure OnBeforeInitInvtPostBuf(var ValueEntry: Record "Value Entry")
+    local procedure OnBeforeInitInvtPostBuf(var ValueEntry: Record "Value Entry"; var AccType: Enum "Invt. Posting Buffer Account Type"; var BalAccType: Enum "Invt. Posting Buffer Account Type")
     begin
     end;
 
@@ -1650,6 +1650,6 @@ codeunit 5802 "Inventory Posting To G/L"
     [IntegrationEvent(false, false)]
     local procedure OnBeforeUpdateGlobalInvtPostBuf(ValueEntryNo: Integer; var TempInvtPostBuf: array[20] of Record "Invt. Posting Buffer" temporary; RunOnlyCheck: Boolean; CalledFromTestReport: Boolean; Result: Boolean; IsHandled: Boolean)
     begin
-    end;    
+    end;
 }
 

@@ -387,6 +387,7 @@ table 5092 Opportunity
         }
         field(18; "Estimated Value (LCY)"; Decimal)
         {
+            AutoFormatExpression = '';
             AutoFormatType = 1;
             CalcFormula = sum("Opportunity Entry"."Estimated Value (LCY)" where("Opportunity No." = field("No."),
                                                                                  Active = const(true)));
@@ -396,6 +397,7 @@ table 5092 Opportunity
         }
         field(19; "Probability %"; Decimal)
         {
+            AutoFormatType = 0;
             CalcFormula = lookup("Opportunity Entry"."Probability %" where("Opportunity No." = field("No."),
                                                                             Active = const(true)));
             Caption = 'Probability %';
@@ -405,6 +407,7 @@ table 5092 Opportunity
         }
         field(20; "Calcd. Current Value (LCY)"; Decimal)
         {
+            AutoFormatExpression = '';
             AutoFormatType = 1;
             CalcFormula = sum("Opportunity Entry"."Calcd. Current Value (LCY)" where("Opportunity No." = field("No."),
                                                                                       Active = const(true)));
@@ -414,6 +417,7 @@ table 5092 Opportunity
         }
         field(21; "Chances of Success %"; Decimal)
         {
+            AutoFormatType = 0;
             CalcFormula = lookup("Opportunity Entry"."Chances of Success %" where("Opportunity No." = field("No."),
                                                                                    Active = const(true)));
             Caption = 'Chances of Success %';
@@ -423,6 +427,7 @@ table 5092 Opportunity
         }
         field(22; "Completed %"; Decimal)
         {
+            AutoFormatType = 0;
             CalcFormula = lookup("Opportunity Entry"."Completed %" where("Opportunity No." = field("No."),
                                                                           Active = const(true)));
             Caption = 'Completed %';
@@ -542,11 +547,13 @@ table 5092 Opportunity
         }
         field(9504; "Wizard Estimated Value (LCY)"; Decimal)
         {
+            AutoFormatExpression = '';
             AutoFormatType = 1;
             Caption = 'Wizard Estimated Value (LCY)';
         }
         field(9505; "Wizard Chances of Success %"; Decimal)
         {
+            AutoFormatType = 0;
             Caption = 'Wizard Chances of Success %';
             DecimalPlaces = 0 : 0;
         }
@@ -617,32 +624,15 @@ table 5092 Opportunity
     end;
 
     trigger OnInsert()
-#if not CLEAN24
-    var
-        NoSeriesManagement: Codeunit NoSeriesManagement;
-        IsHandled: Boolean;
-#endif
     begin
         if "No." = '' then begin
             RMSetup.Get();
             RMSetup.TestField("Opportunity Nos.");
-#if not CLEAN24
-            NoSeriesManagement.RaiseObsoleteOnBeforeInitSeries(RMSetup."Opportunity Nos.", xRec."No. Series", 0D, "No.", "No. Series", IsHandled);
-            if not IsHandled then begin
-                if NoSeries.AreRelated(RMSetup."Opportunity Nos.", xRec."No. Series") then
-                    "No. Series" := xRec."No. Series"
-                else
-                    "No. Series" := RMSetup."Opportunity Nos.";
-                "No." := NoSeries.GetNextNo("No. Series");
-                NoSeriesManagement.RaiseObsoleteOnAfterInitSeries("No. Series", RMSetup."Opportunity Nos.", 0D, "No.");
-            end;
-#else
-			if NoSeries.AreRelated(RMSetup."Opportunity Nos.", xRec."No. Series") then
-				"No. Series" := xRec."No. Series"
-			else
-				"No. Series" := RMSetup."Opportunity Nos.";
+            if NoSeries.AreRelated(RMSetup."Opportunity Nos.", xRec."No. Series") then
+                "No. Series" := xRec."No. Series"
+            else
+                "No. Series" := RMSetup."Opportunity Nos.";
             "No." := NoSeries.GetNextNo("No. Series");
-#endif
         end;
 
         if "Salesperson Code" = '' then
@@ -741,12 +731,15 @@ table 5092 Opportunity
         SegmentHeader: Record "Segment Header";
         SegmentLine: Record "Segment Line";
         IsHandled: Boolean;
+        DoSetDefaultSalesCycle: Boolean;
     begin
         DeleteAll();
         Init();
-        OnCreateOppFromOppOnAfterInit(Opportunity);
+        DoSetDefaultSalesCycle := true;
+        OnCreateOppFromOppOnAfterInit(Opportunity, DoSetDefaultSalesCycle);
         "Creation Date" := WorkDate();
-        SetDefaultSalesCycle();
+        if DoSetDefaultSalesCycle then
+            SetDefaultSalesCycle();
         if Contact.Get(Opportunity.GetFilter("Contact Company No.")) then begin
             Validate("Contact No.", Contact."No.");
             "Salesperson Code" := Contact."Salesperson Code";
@@ -758,7 +751,7 @@ table 5092 Opportunity
             SetRange("Contact No.", "Contact No.");
         end;
         IsHandled := false;
-        OnCreateOppFromOppOnBeforeSetFilterSalesPersonCode(Rec, IsHandled);
+        OnCreateOppFromOppOnBeforeSetFilterSalesPersonCode(Rec, IsHandled, Opportunity);
         if not IsHandled then
             if SalespersonPurchaser.Get(Opportunity.GetFilter("Salesperson Code")) then begin
                 "Salesperson Code" := SalespersonPurchaser.Code;
@@ -840,6 +833,7 @@ table 5092 Opportunity
     var
         TempOppEntry: Record "Opportunity Entry" temporary;
     begin
+        OnBeforeUpdateOpportunity(Rec);
         if "No." <> '' then
             TempOppEntry.UpdateOppFromOpp(Rec);
     end;
@@ -1332,7 +1326,7 @@ table 5092 Opportunity
     end;
 
     [IntegrationEvent(true, false)]
-    local procedure OnCreateOppFromOppOnAfterInit(var Opportunity: Record Opportunity)
+    local procedure OnCreateOppFromOppOnAfterInit(var Opportunity: Record Opportunity; var DoSetDefaultSalesCycle: Boolean)
     begin
     end;
 
@@ -1377,7 +1371,7 @@ table 5092 Opportunity
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnCreateOppFromOppOnBeforeSetFilterSalesPersonCode(var Opportunity: Record Opportunity; var IsHandled: Boolean)
+    local procedure OnCreateOppFromOppOnBeforeSetFilterSalesPersonCode(var Opportunity: Record Opportunity; var IsHandled: Boolean; var FromOpportunity: Record Opportunity)
     begin
     end;
 
@@ -1400,5 +1394,9 @@ table 5092 Opportunity
     local procedure OnStartActivateFirstStageOnBeforeSalesCycleStageFind(var Opportunity: Record Opportunity; var SalesCycleStage: Record "Sales Cycle Stage")
     begin
     end;
-}
 
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeUpdateOpportunity(var Opportunity: Record Opportunity)
+    begin
+    end;
+}

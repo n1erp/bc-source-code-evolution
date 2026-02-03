@@ -64,6 +64,7 @@ page 99000902 "Item Availability Line List"
     begin
         AvailType := NewType;
         Item.Copy(NewItem);
+        OnAfterInit(NewItem, AvailType);
     end;
 
     local procedure MakeEntries()
@@ -87,17 +88,10 @@ page 99000902 "Item Availability Line List"
               "Qty. on Sales Order",
               "Qty. on Job Order",
               "Net Change",
-              "Scheduled Receipt (Qty.)",
-              "Qty. on Component Lines",
-              "Planned Order Receipt (Qty.)",
-              "FP Order Receipt (Qty.)",
-              "Rel. Order Receipt (Qty.)",
-              "Planned Order Release (Qty.)",
               "Purch. Req. Receipt (Qty.)",
               "Planning Issues (Qty.)",
               "Purch. Req. Release (Qty.)",
-              "Qty. in Transit");
-            Item.CalcFields(
+              "Qty. in Transit",
               "Trans. Ord. Shipment (Qty.)",
               "Trans. Ord. Receipt (Qty.)",
               "Qty. on Assembly Order",
@@ -168,13 +162,6 @@ page 99000902 "Item Availability Line List"
     end;
 #endif
 
-    local procedure AdjustWithQtyByUnitOfMeasure(Quantity: Decimal): Decimal
-    begin
-        if QtyByUnitOfMeasure <> 0 then
-            exit(Quantity / QtyByUnitOfMeasure);
-        exit(Quantity);
-    end;
-
     procedure SetQtyByUnitOfMeasure(NewQtyByUnitOfMeasure: Decimal);
     begin
         QtyByUnitOfMeasure := NewQtyByUnitOfMeasure;
@@ -218,6 +205,11 @@ page 99000902 "Item Availability Line List"
     begin
     end;
 
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterInit(var Item: Record Item; var AvailType: Option "Gross Requirement","Planned Order Receipt","Scheduled Order Receipt","Planned Order Release",All)
+    begin
+    end;
+
 #if not CLEAN25
     internal procedure RunOnLookupEntriesOnAfterPurchLineSetFilters(var Item: Record Item; var PurchLine: Record Microsoft.Purchases.Document."Purchase Line")
     begin
@@ -231,4 +223,3 @@ page 99000902 "Item Availability Line List"
     end;
 #endif
 }
-

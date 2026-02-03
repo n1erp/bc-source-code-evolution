@@ -8,21 +8,20 @@ using Microsoft.Inventory.Item;
 using Microsoft.Finance.Currency;
 codeunit 8073 "Sales Report Printout Mgmt."
 {
-    Access = Internal;
     SingleInstance = true;
 
     var
         ReportFormattingGlobal: Codeunit "Report Formatting";
-        RecurringServicesTotalLbl: Label 'Recurring Subscriptions (* Part of Recurring Billing)';
-        RecurringServicesPerLineLbl: Label 'Recurring Subscriptions*';
+        RecurringServicesTotalLbl: Label 'Subscriptions (* Part of Subscription Billing)';
+        RecurringServicesPerLineLbl: Label 'Subscriptions*';
         TotalTextTok: Label 'TotalText', Locked = true;
 
-    [InternalEvent(false, false)]
+    [IntegrationEvent(false, false)]
     local procedure OnBeforeFormatSalesLineExcludeLineInTotals(var SalesLine: Record "Sales Line"; var IncludeLineInTotals: Boolean; var IsHandled: Boolean)
     begin
     end;
 
-    internal procedure ExcludeItemFromTotals(var SalesLine: Record "Sales Line"; var TotalSubTotal: Decimal; var TotalInvDiscAmount: Decimal; var TotalAmount: Decimal; var TotalAmountVAT: Decimal; var TotalAmountInclVAT: Decimal)
+    procedure ExcludeItemFromTotals(var SalesLine: Record "Sales Line"; var TotalSubTotal: Decimal; var TotalInvDiscAmount: Decimal; var TotalAmount: Decimal; var TotalAmountVAT: Decimal; var TotalAmountInclVAT: Decimal)
     var
         Item: Record Item;
         ContractRenewalMgt: Codeunit "Sub. Contract Renewal Mgt.";
@@ -85,7 +84,7 @@ codeunit 8073 "Sales Report Printout Mgmt."
         end;
     end;
 
-    procedure FillServiceCommitmentsGroupPerPeriod(var SalesHeader: Record "Sales Header"; var GroupPerPeriod: Record "Name/Value Buffer")
+    local procedure FillServiceCommitmentsGroupPerPeriod(var SalesHeader: Record "Sales Header"; var GroupPerPeriod: Record "Name/Value Buffer")
     var
         SalesServiceCommitment: Record "Sales Subscription Line";
         TempSalesServiceCommitmentBuff: Record "Sales Service Commitment Buff." temporary;
@@ -108,8 +107,7 @@ codeunit 8073 "Sales Report Printout Mgmt."
         SalesServiceCommitment: Record "Sales Subscription Line";
         SalesLine: Record "Sales Line";
     begin
-        SalesServiceCommitment.SetRange("Document Type", SalesHeader."Document Type");
-        SalesServiceCommitment.SetRange("Document No.", SalesHeader."No.");
+        SalesServiceCommitment.FilterOnDocument(SalesHeader."Document Type", SalesHeader."No.");
         SalesServiceCommitment.SetRange(Partner, Enum::"Service Partner"::Customer);
         SalesServiceCommitment.SetRange("Invoicing via", SalesServiceCommitment."Invoicing via"::Contract);
         if SalesServiceCommitment.FindSet() then begin
@@ -173,16 +171,24 @@ codeunit 8073 "Sales Report Printout Mgmt."
         end;
     end;
 
-    [InternalEvent(false, false)]
+    [IntegrationEvent(false, false)]
     local procedure OnBeforeFillSubscriptionLinesGroupPerPeriod(SalesHeader: Record "Sales Header"; var TempSalesSubscriptionLineBuff: Record "Sales Service Commitment Buff." temporary; var GroupPerPeriod: Record "Name/Value Buffer"; var UniqueRhythmDictionary: Dictionary of [Code[20], Text]; TotalText: Text[50]; TotalInclVATText: Text[50]; TotalExclVATText: Text[50]; var IsHandled: Boolean)
     begin
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Format Document", OnAfterSetSalesLine, '', false, false)]
-    local procedure SalesLineAddMarkToFormattedLineAmount(var SalesLine: Record "Sales Line"; var FormattedLineAmount: Text)
+    local procedure SalesLineAddMarkToFormattedLineAmount(var SalesLine: Record "Sales Line"; var FormattedUnitPrice: Text; var FormattedLineAmount: Text)
+    var
+        SalesLine2: Record "Sales Line";
+        AutoFormat: Codeunit "Auto Format";
+        AutoFormatType: Enum "Auto Format";
     begin
         if CheckAppendAsteriskToFormattedLineAmount(SalesLine) then
-            AppendAsteriskToText(FormattedLineAmount);
+            if SalesLine2.Get(SalesLine."Document Type", SalesLine."Document No.", SalesLine."Line No.") then begin
+                FormattedUnitPrice := Format(SalesLine2."Unit Price", 0, AutoFormat.ResolveAutoFormat(AutoFormatType::UnitAmountFormat, SalesLine2."Currency Code"));
+                FormattedLineAmount := Format(SalesLine2."Line Amount", 0, AutoFormat.ResolveAutoFormat(AutoFormatType::AmountFormat, SalesLine2."Currency Code"));
+                AppendAsteriskToText(FormattedLineAmount);
+            end;
     end;
 
     local procedure CheckAppendAsteriskToFormattedLineAmount(SourceRecord: Variant): Boolean
@@ -195,7 +201,7 @@ codeunit 8073 "Sales Report Printout Mgmt."
         SalesLine: Record "Sales Line";
         DataTypeManagement: Codeunit "Data Type Management";
         RecRef: RecordRef;
-        SourceRecordNotDefinedForProcessingErr: Label 'Table %1 %2 has not been defined for processing.';
+        SourceRecordNotDefinedForProcessingErr: Label 'Table %1 %2 has not been defined for processing.', Comment = '%1 = Table ID, %2 = Table Name';
     begin
         DataTypeManagement.GetRecordRef(SourceRecord, RecRef);
         case RecRef.Number of

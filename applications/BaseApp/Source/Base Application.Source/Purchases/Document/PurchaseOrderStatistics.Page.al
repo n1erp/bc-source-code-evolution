@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Purchases.Document;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Purchases.Document;
 
 using Microsoft.Finance.Currency;
 using Microsoft.Finance.VAT.Calculation;
@@ -651,6 +655,7 @@ page 403 "Purchase Order Statistics"
         Clear(TotalPurchLineLCY);
 
         for i := 1 to 3 do begin
+            OnRefreshOnAfterGetRecordOnBeforeTempPurchLineDeleteAll(Rec, TempPurchLine, i);
             TempPurchLine.DeleteAll();
             Clear(TempPurchLine);
             Clear(PurchPost);
@@ -983,6 +988,11 @@ page 403 "Purchase Order Statistics"
 
     [IntegrationEvent(true, false)]
     local procedure OnAfterRefreshOnAfterGetRecord(var PurchaseHeader: Record "Purchase Header"; TotalAmount1: array[3] of Decimal; TotalAmount2: array[3] of Decimal)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnRefreshOnAfterGetRecordOnBeforeTempPurchLineDeleteAll(var PurchaseHeader: Record "Purchase Header"; var TempPurchLine: Record "Purchase Line" temporary; i: Integer)
     begin
     end;
 }

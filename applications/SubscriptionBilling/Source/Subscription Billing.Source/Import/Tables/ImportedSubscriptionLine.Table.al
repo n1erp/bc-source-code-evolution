@@ -8,7 +8,6 @@ table 8009 "Imported Subscription Line"
 {
     DataClassification = CustomerContent;
     Caption = 'Imported Subscription Line';
-    Access = Internal;
 
     fields
     {
@@ -83,7 +82,8 @@ table 8009 "Imported Subscription Line"
             Caption = 'Calculation Base Amount';
             MinValue = 0;
             BlankZero = true;
-            AutoFormatType = 2;
+            AutoFormatType = 1;
+            AutoFormatExpression = Rec."Currency Code";
         }
         field(16; "Calculation Base %"; Decimal)
         {
@@ -92,6 +92,7 @@ table 8009 "Imported Subscription Line"
             MaxValue = 100;
             BlankZero = true;
             DecimalPlaces = 0 : 5;
+            AutoFormatType = 0;
         }
         field(17; "Discount %"; Decimal)
         {
@@ -100,6 +101,7 @@ table 8009 "Imported Subscription Line"
             MaxValue = 100;
             BlankZero = true;
             DecimalPlaces = 0 : 5;
+            AutoFormatType = 0;
         }
         field(18; "Discount Amount"; Decimal)
         {
@@ -107,12 +109,14 @@ table 8009 "Imported Subscription Line"
             MinValue = 0;
             BlankZero = true;
             AutoFormatType = 1;
+            AutoFormatExpression = Rec."Currency Code";
         }
         field(19; Amount; Decimal)
         {
             Caption = 'Amount';
             BlankZero = true;
             AutoFormatType = 1;
+            AutoFormatExpression = Rec."Currency Code";
         }
         field(20; "Billing Base Period"; DateFormula)
         {
@@ -121,6 +125,14 @@ table 8009 "Imported Subscription Line"
         field(21; "Invoicing via"; Enum "Invoicing Via")
         {
             Caption = 'Invoicing via';
+            trigger OnValidate()
+            begin
+                if "Invoicing via" = "Invoicing via"::Sales then begin
+                    "Invoicing Item No." := '';
+                    "Create Contract Deferrals" := "Create Contract Deferrals"::No;
+                end else
+                    "Create Contract Deferrals" := "Create Contract Deferrals"::"Contract-dependent";
+            end;
         }
         field(22; "Invoicing Item No."; Code[20])
         {
@@ -150,6 +162,7 @@ table 8009 "Imported Subscription Line"
             MinValue = 0;
             BlankZero = true;
             AutoFormatType = 1;
+            AutoFormatExpression = '';
         }
         field(28; "Amount (LCY)"; Decimal)
         {
@@ -157,6 +170,7 @@ table 8009 "Imported Subscription Line"
             Editable = false;
             BlankZero = true;
             AutoFormatType = 1;
+            AutoFormatExpression = '';
         }
         field(29; "Currency Code"; Code[10])
         {
@@ -173,6 +187,7 @@ table 8009 "Imported Subscription Line"
             Caption = 'Currency Factor';
             DecimalPlaces = 0 : 15;
             MinValue = 0;
+            AutoFormatType = 0;
         }
         field(31; "Currency Factor Date"; Date)
         {
@@ -183,6 +198,7 @@ table 8009 "Imported Subscription Line"
             Caption = 'Calculation Base Amount (LCY)';
             BlankZero = true;
             AutoFormatType = 2;
+            AutoFormatExpression = '';
         }
         field(37; Quantity; Decimal)
         {
@@ -190,6 +206,7 @@ table 8009 "Imported Subscription Line"
             Editable = false;
             FieldClass = FlowField;
             CalcFormula = lookup("Subscription Header".Quantity where("No." = field("Subscription Header No.")));
+            AutoFormatType = 0;
         }
         field(39; "Next Price Update"; Date)
         {
@@ -198,6 +215,10 @@ table 8009 "Imported Subscription Line"
         field(40; "Exclude from Price Update"; Boolean)
         {
             Caption = 'Exclude from Price Update';
+        }
+        field(41; "Create Contract Deferrals"; Enum "Create Contract Deferrals")
+        {
+            Caption = 'Create Contract Deferrals';
         }
         field(100; "Subscription Line created"; Boolean)
         {
@@ -244,6 +265,7 @@ table 8009 "Imported Subscription Line"
             Caption = 'Pricing Unit Cost Surcharge %';
             DataClassification = CustomerContent;
             Editable = false;
+            AutoFormatType = 0;
         }
         field(8003; "Supplier Reference Entry No."; Integer)
         {
@@ -262,7 +284,7 @@ table 8009 "Imported Subscription Line"
         }
     }
 
-    internal procedure IsContractCommentLine(): Boolean
+    procedure IsContractCommentLine(): Boolean
     begin
         exit(Rec."Sub. Contract Line Type" = Rec."Sub. Contract Line Type"::Comment)
     end;

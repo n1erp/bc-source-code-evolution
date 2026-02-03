@@ -68,6 +68,11 @@ table 910 "Posted Assembly Header"
             Caption = 'Gen. Prod. Posting Group';
             TableRelation = "Gen. Product Posting Group";
         }
+        field(17; "Gen. Bus. Posting Group"; Code[20])
+        {
+            Caption = 'Gen. Bus. Posting Group';
+            TableRelation = "Gen. Business Posting Group";
+        }
         field(19; Comment; Boolean)
         {
             CalcFormula = exist("Assembly Comment Line" where("Document Type" = const("Posted Assembly"),
@@ -123,11 +128,13 @@ table 910 "Posted Assembly Header"
             Caption = 'Quantity';
             DecimalPlaces = 0 : 5;
             MinValue = 0;
+            AutoFormatType = 0;
         }
         field(41; "Quantity (Base)"; Decimal)
         {
             Caption = 'Quantity (Base)';
             DecimalPlaces = 0 : 5;
+            AutoFormatType = 0;
         }
         field(54; "Assemble to Order"; Boolean)
         {
@@ -140,11 +147,13 @@ table 910 "Posted Assembly Header"
         field(65; "Unit Cost"; Decimal)
         {
             AutoFormatType = 2;
+            AutoFormatExpression = '';
             Caption = 'Unit Cost';
         }
         field(67; "Cost Amount"; Decimal)
         {
             AutoFormatType = 1;
+            AutoFormatExpression = '';
             Caption = 'Cost Amount';
             Editable = false;
         }
@@ -152,11 +161,13 @@ table 910 "Posted Assembly Header"
         {
             Caption = 'Indirect Cost %';
             DecimalPlaces = 0 : 5;
+            AutoFormatType = 0;
         }
         field(76; "Overhead Rate"; Decimal)
         {
             Caption = 'Overhead Rate';
             DecimalPlaces = 0 : 5;
+            AutoFormatType = 0;
         }
         field(80; "Unit of Measure Code"; Code[10])
         {
@@ -168,6 +179,7 @@ table 910 "Posted Assembly Header"
             Caption = 'Qty. per Unit of Measure';
             DecimalPlaces = 0 : 5;
             Editable = false;
+            AutoFormatType = 0;
         }
         field(100; Reversed; Boolean)
         {
@@ -255,12 +267,14 @@ table 910 "Posted Assembly Header"
         DimMgt.ShowDimensionSet("Dimension Set ID", StrSubstNo('%1 %2', TableCaption(), "No."));
     end;
 
+#if not CLEAN27
+    [Obsolete('The statistics action is refactored to use the RunObject property instead.', '27.0')]
     procedure ShowStatistics()
     begin
         TestField("Item No.");
         PAGE.Run(PAGE::"Posted Asm. Order Statistics", Rec);
     end;
-
+#endif
     procedure PrintRecords(ShowRequestForm: Boolean)
     var
         ReportSelections: Record "Report Selections";
@@ -359,4 +373,3 @@ table 910 "Posted Assembly Header"
     begin
     end;
 }
-

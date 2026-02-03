@@ -10,39 +10,47 @@ using Microsoft.Sales.Document;
 using Microsoft.Warehouse.Activity;
 using Microsoft.Assembly.History;
 using Microsoft.Inventory.Item;
+using Microsoft.Sales.History;
 
 codeunit 935 "Asm. Item Tracking Mgt."
 {
     var
         ItemTrackingMgt: Codeunit "Item Tracking Management";
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Item Tracking Management", 'OnAfterGetItemTrackingSetup', '', false, false)]
-    local procedure OnAfterGetItemTrackingSetup(var ItemTrackingCode: Record "Item Tracking Code"; var ItemTrackingSetup: Record "Item Tracking Setup"; EntryType: Enum "Item Ledger Entry Type"; Inbound: Boolean)
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Item Tracking Management", 'OnGetItemTrackingSetupOnSetSerialNoRequired', '', false, false)]
+    local procedure OnGetItemTrackingSetupOnSetSerialNoRequired(var ItemTrackingSetup: Record "Item Tracking Setup"; ItemTrackingCode: Record "Item Tracking Code"; EntryType: Enum "Item Ledger Entry Type"; Inbound: Boolean)
     begin
-        if ItemTrackingCode."SN Specific Tracking" then
-            case EntryType of
-                EntryType::"Assembly Consumption", EntryType::"Assembly Output":
-                    if Inbound then
-                        ItemTrackingSetup."Serial No. Required" := ItemTrackingCode."SN Assembly Inbound Tracking"
-                    else
-                        ItemTrackingSetup."Serial No. Required" := ItemTrackingCode."SN Assembly Outbound Tracking";
-            end;
-        if ItemTrackingCode."Lot Specific Tracking" then
-            case EntryType of
-                EntryType::"Assembly Consumption", EntryType::"Assembly Output":
-                    if Inbound then
-                        ItemTrackingSetup."Lot No. Required" := ItemTrackingCode."Lot Assembly Inbound Tracking"
-                    else
-                        ItemTrackingSetup."Lot No. Required" := ItemTrackingCode."Lot Assembly Outbound Tracking";
-            end;
-        if ItemTrackingCode."Package Specific Tracking" then
-            case EntryType of
-                EntryType::"Assembly Consumption", EntryType::"Assembly Output":
-                    if Inbound then
-                        ItemTrackingSetup."Package No. Required" := ItemTrackingCode."Package Assembly Inb. Tracking"
-                    else
-                        ItemTrackingSetup."Package No. Required" := ItemTrackingCode."Package Assembly Out. Tracking";
-            end;
+        case EntryType of
+            EntryType::"Assembly Consumption", EntryType::"Assembly Output":
+                if Inbound then
+                    ItemTrackingSetup."Serial No. Required" := ItemTrackingCode."SN Assembly Inbound Tracking"
+                else
+                    ItemTrackingSetup."Serial No. Required" := ItemTrackingCode."SN Assembly Outbound Tracking";
+        end;
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Item Tracking Management", 'OnGetItemTrackingSetupOnSetLotNoRequired', '', false, false)]
+    local procedure OnGetItemTrackingSetupOnSetLotNoRequired(var ItemTrackingSetup: Record "Item Tracking Setup"; ItemTrackingCode: Record "Item Tracking Code"; EntryType: Enum "Item Ledger Entry Type"; Inbound: Boolean)
+    begin
+        case EntryType of
+            EntryType::"Assembly Consumption", EntryType::"Assembly Output":
+                if Inbound then
+                    ItemTrackingSetup."Lot No. Required" := ItemTrackingCode."Lot Assembly Inbound Tracking"
+                else
+                    ItemTrackingSetup."Lot No. Required" := ItemTrackingCode."Lot Assembly Outbound Tracking";
+        end;
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Item Tracking Management", 'OnGetItemTrackingSetupOnSetPackageNoRequired', '', false, false)]
+    local procedure OnGetItemTrackingSetupOnSetPackageNoRequired(var ItemTrackingSetup: Record "Item Tracking Setup"; ItemTrackingCode: Record "Item Tracking Code"; EntryType: Enum "Item Ledger Entry Type"; Inbound: Boolean)
+    begin
+        case EntryType of
+            EntryType::"Assembly Consumption", EntryType::"Assembly Output":
+                if Inbound then
+                    ItemTrackingSetup."Package No. Required" := ItemTrackingCode."Package Assembly Inb. Tracking"
+                else
+                    ItemTrackingSetup."Package No. Required" := ItemTrackingCode."Package Assembly Out. Tracking";
+        end;
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Item Tracking Management", 'OnAfterIsResEntryReservedAgainstInventory', '', false, false)]
@@ -213,8 +221,6 @@ codeunit 935 "Asm. Item Tracking Mgt."
                 TempTrackingSpecification."Qty. per Unit of Measure" := ItemLedgerEntry."Qty. per Unit of Measure";
                 TempTrackingSpecification.InitQtyToShip();
 
-                if TempTrackingSpecification."Quantity (Base)" * CurrentSignFactor > Abs(MaxQtyBase - CurrentQtyBase) then
-                    TempTrackingSpecification."Quantity (Base)" := MaxQtyBase - CurrentQtyBase;
                 CurrentQtyBase += TempTrackingSpecification."Quantity (Base)";
 
                 sender.RunOnBeforeCollectTempTrackingSpecificationInsert(TempTrackingSpecification, ItemLedgerEntry, TrackingSpecification);
@@ -232,5 +238,49 @@ codeunit 935 "Asm. Item Tracking Mgt."
                 Result := false;
             IsHandled := true;
         end;
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Item Tracking Doc. Management", 'OnRetrieveTrackingSalesShipmentForAssembly', '', false, false)]
+    local procedure OnRetrieveTrackingSalesShipmentForAssembly(SalesShipmentLine: Record "Sales Shipment Line"; var TempTrackingSpecBuffer: Record "Tracking Specification" temporary; sender: Codeunit "Item Tracking Doc. Management")
+    var
+        PostedAsmHeader: Record "Posted Assembly Header";
+        PostedAsmLine: Record "Posted Assembly Line";
+        Descr: Text[100];
+    begin
+        if SalesShipmentLine.AsmToShipmentExists(PostedAsmHeader) then begin
+            PostedAsmLine.SetRange("Document No.", PostedAsmHeader."No.");
+            if PostedAsmLine.FindSet() then
+                repeat
+                    Descr := PostedAsmLine.Description;
+                    sender.FindShptRcptEntries(
+                        TempTrackingSpecBuffer,
+                        Database::"Posted Assembly Line", 0, PostedAsmLine."Document No.", '', 0, PostedAsmLine."Line No.", Descr);
+                until PostedAsmLine.Next() = 0;
+        end;
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Item Tracking Doc. Management", 'OnAfterTableSignFactor', '', false, false)]
+    local procedure OnAfterTableSignFactor(TableNo: Integer; var Sign: Integer);
+    begin
+        if TableNo = Database::"Posted Assembly Line" then
+            Sign := -1;
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Inventory Profile Offsetting", OnCheckIsSNSpecificTracking, '', false, false)]
+    local procedure OnCheckIsSNSpecificTracking(ItemTrackingCode: Record "Item Tracking Code"; var SNSepecificTracking: Boolean)
+    begin
+        if SNSepecificTracking then
+            exit;
+
+        SNSepecificTracking := ItemTrackingCode."SN Assembly Inbound Tracking" or ItemTrackingCode."SN Assembly Outbound Tracking";
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Inventory Profile Offsetting", OnCheckIsLotSpecificTracking, '', false, false)]
+    local procedure OnCheckIsLotSpecificTracking(ItemTrackingCode: Record "Item Tracking Code"; var LotSepecificTracking: Boolean)
+    begin
+        if LotSepecificTracking then
+            exit;
+
+        LotSepecificTracking := ItemTrackingCode."Lot Assembly Inbound Tracking" or ItemTrackingCode."Lot Assembly Outbound Tracking";
     end;
 }

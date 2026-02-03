@@ -26,6 +26,7 @@ codeunit 134924 "ERM Cues"
         WrongValueErr: Label 'Wrong value of the field %1 in table %2.', Comment = '%1 = Field name, %2 = Table name';
         AverageDaysDelayedErr: Label 'Average Days Delayed is calculated incorrectly.';
         IsInitialized: Boolean;
+        InvtPutAwayFromProdErr: Label '%1 must be %2 in %3.', Comment = '%1= Field Caption, %2= Field Value ,%3= Table Caption.';
 
     [Test]
     [Scope('OnPrem')]
@@ -671,12 +672,17 @@ codeunit 134924 "ERM Cues"
         SalesOrderList: TestPage "Sales Order List";
         SalesHeaderNo: Code[20];
     begin
-        //avd
         // [SCENARIO 481603] Activities Cue "Completely Reserved from Stock" number corresponds to completely reserved sales orders.
         Initialize();
+
+        // [GIVEN] Initialize Activity Cue or reset "Last Date/Time Modified" field in order to recalculate reserved from stock value.
         if not ActivitiesCue.Get() then begin
             ActivitiesCue.Init();
             ActivitiesCue.Insert();
+        end else begin
+            ActivitiesCue."Last Date/Time Modified" := 0DT;
+            ActivitiesCue.Modify();
+            Commit();
         end;
 
         LibraryInventory.CreateItem(Item);
@@ -764,7 +770,7 @@ codeunit 134924 "ERM Cues"
         AccountReceivablesKPIs.OpenView();
 
         // [THEN] Verify the average collection days value is correct
-        Assert.AreEqual(ActivitiesMgt.CalcAverageCollectionDays(), AccountReceivablesKPIs."Average Collection Days".AsDecimal(), AverageCollectionDaysErr);
+        Assert.AreEqual(ActivitiesMgt.CalcAverageCollectionDays(false), AccountReceivablesKPIs."Average Collection Days".AsDecimal(), AverageCollectionDaysErr);
     end;
 
     [Test]
@@ -796,6 +802,91 @@ codeunit 134924 "ERM Cues"
 
         // [THEN] Verify A/R Accounts Balance is correct
         Assert.AreEqual(ActivitiesMgt.CalcARAccountsBalances(), AccountReceivablesKPIs."A/R Accounts Balance".AsDecimal(), ARAccountsBalanceErr);
+    end;
+
+    [Test]
+    procedure ReservedFromStockActivitiesCueWithNonInventoryItem()
+    var
+        Item: array[2] of Record Item;
+        ItemJournalLine: Record "Item Journal Line";
+        SalesHeader: Record "Sales Header";
+        SalesLine: Record "Sales Line";
+        ActivitiesCue: Record "Activities Cue";
+        O365Activities: TestPage "O365 Activities";
+    begin
+        // [SCENARIO 563164] Reserved from Stock has "Partial" status when there is non-inventory item is in the Sales Lines.
+        Initialize();
+
+        // [GIVEN] Initialize Activity Cue or reset "Last Date/Time Modified" field in order to recalculate reserved from stock value.
+        if not ActivitiesCue.Get() then begin
+            ActivitiesCue.Init();
+            ActivitiesCue.Insert();
+        end else begin
+            ActivitiesCue."Last Date/Time Modified" := 0DT;
+            ActivitiesCue.Modify();
+            Commit();
+        end;
+
+        // [GIVEN] Create an Inventory Item.
+        LibraryInventory.CreateItem(Item[1]);
+
+        // [GIVEN] Create a Non Inventory Item.
+        LibraryInventory.CreateNonInventoryTypeItem(Item[2]);
+
+        // [GIVEN] Create Item Journal Line Line with Inventory Item.
+        LibraryInventory.CreateItemJournalLineInItemTemplate(ItemJournalLine, Item[1]."No.", '', '', LibraryRandom.RandIntInRange(15, 20));
+
+        //  [GIVEN] Post Item Journal Line.
+        LibraryInventory.PostItemJournalLine(ItemJournalLine."Journal Template Name", ItemJournalLine."Journal Batch Name");
+
+        // [GIVEN] Create Sales Document with Inventory Item.
+        LibrarySales.CreateSalesDocumentWithItem(SalesHeader, SalesLine, SalesHeader."Document Type"::Order, '', Item[1]."No.", LibraryRandom.RandIntInRange(10, 10), '', WorkDate());
+
+        // [GIVEN] Auto Reserve Sales Line.
+        LibrarySales.AutoReserveSalesLine(SalesLine);
+
+        // [WHEN] Create Sales Line with Non Inventory Item.
+        LibrarySales.CreateSalesLine(SalesLine, SalesHeader, SalesLine.Type::Item, Item[2]."No.", LibraryRandom.RandInt(2));
+
+        // [THEN] Open Activities Cue and document with Reserved from Stock should be present.
+        O365Activities.OpenView();
+        O365Activities."S. Ord. - Reserved From Stock".AssertEquals(1);
+    end;
+
+    [Test]
+    procedure InventoryPickstoProductionManufacturingInManagerRole()
+    var
+        Location: Record Location;
+        ManufacturingCue: Record "Manufacturing Cue";
+        WarehouseActivityHeader: Record "Warehouse Activity Header";
+        WarehouseEmployee: Record "Warehouse Employee";
+    begin
+        // [SCENARIO 571594] The Invt. Picks to Production show correctly when using the Manufacturing Manager role.
+        Initialize();
+
+        // [GIVEN] Create a Warehouse Location.
+        LibraryWarehouse.CreateLocationWMS(Location, false, true, true, true, true);
+
+        // [GIVEN] Create a Warehouse Employee.
+        LibraryWarehouse.CreateWarehouseEmployee(WarehouseEmployee, Location.Code, true);
+
+        // [WHEN] Create Warehouse Activity Header of "Invt. Put-away" Type and "Prod. Output" Source Document.
+        WarehouseActivityHeader.Init();
+        WarehouseActivityHeader.Validate(Type, WarehouseActivityHeader.Type::"Invt. Put-away");
+        WarehouseActivityHeader.Validate("Location Code", WarehouseEmployee."Location Code");
+        WarehouseActivityHeader.Validate("Source Document", WarehouseActivityHeader."Source Document"::"Prod. Output");
+        WarehouseActivityHeader.Insert(true);
+
+        // [THEN] "Invt. Put-aways from Prod." must have a record.
+        ManufacturingCue.CalcFields("Invt. Put-aways from Prod.");
+        Assert.AreEqual(
+            1,
+            ManufacturingCue."Invt. Put-aways from Prod.",
+            StrSubstNo(
+                InvtPutAwayFromProdErr,
+                ManufacturingCue.FieldCaption("Invt. Put-aways from Prod."),
+                1,
+                ManufacturingCue.TableCaption()));
     end;
 
     local procedure Initialize()

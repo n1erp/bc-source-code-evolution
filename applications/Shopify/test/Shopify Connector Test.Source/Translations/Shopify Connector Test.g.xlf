@@ -78,6 +78,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field TimeField - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 2220166949 - NamedType 562056659" size-unit="char" translate="yes" xml:space="preserve">
+          <source>More than expected API calls to Shopify detected.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Company Locations Test - NamedType UnexpectedAPICallsErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 374630053 - NamedType 356023020" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Auto Create Unknown Item must be enabled and an Item Template must be selected for the shop.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Create Item API Test - NamedType AutoCreateUnknownItemsDisabledErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 374630053 - NamedType 562056659" size-unit="char" translate="yes" xml:space="preserve">
+          <source>More than expected API calls to Shopify detected.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Create Item API Test - NamedType UnexpectedAPICallsErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 81801014 - NamedType 661492798" size-unit="char" translate="yes" xml:space="preserve">
           <source>dummy@customer.com</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -148,10 +163,25 @@
           <note from="Developer" annotates="general" priority="2">%1 = Path, %2 = JsonToken</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Json Helper Test - Method UnitTestGetJsonValue - NamedType ValueFoundErr</note>
         </trans-unit>
+        <trans-unit id="Codeunit 2308262623 - NamedType 562056659" size-unit="char" translate="yes" xml:space="preserve">
+          <source>More than expected API calls to Shopify detected.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Market Catalog API Test - NamedType UnexpectedAPICallsErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1173827803 - NamedType 1981706351" size-unit="char" translate="yes" xml:space="preserve">
           <source>Product create</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Mock Bulk ProductCreate - NamedType NameLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 277977950 - Method 4205901951 - NamedType 185678121" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shopify Order No.: %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Order No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Order Refund Test - Method UnitTestCreateCrMemoWithOrderLine - NamedType ShopifyOrderNoLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4067729736 - Method 4188989720 - NamedType 1125944455" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2 already mapped to Shopify Staff Member %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Salesperson/Purchaser table caption, %2 = Salesperson/Purchaser code, %3 = Shopify Staff Member name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Staff Test - Method TestCannotAssignSameSalespersonToMultipleStaff - NamedType SalespersonPurchaserMappingErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 2109467660 - Method 430562072 - NamedType 1603380026" size-unit="char" translate="yes" xml:space="preserve">
           <source>The Shop is missing the Shopify URL.</source>

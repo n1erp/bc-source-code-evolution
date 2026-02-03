@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Warehouse.Worksheet;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Warehouse.Worksheet;
 
 using Microsoft.Assembly.Document;
 using Microsoft.Foundation.UOM;
@@ -417,7 +421,14 @@ codeunit 7311 "Whse. Worksheet-Create"
     end;
 
     procedure FindLastWhseWkshLine(var WhseWkshLine: Record "Whse. Worksheet Line"; WkshTemplateName: Code[10]; WkshName: Code[10]; LocationCode: Code[10])
+    var
+        IsHandled: Boolean;
     begin
+        IsHandled := false;
+        OnBeforeFindLastWhseWkshLine(WhseWkshLine, WkshTemplateName, WkshName, LocationCode, IsHandled);
+        if IsHandled then
+            exit;
+
         WhseWkshLine.Reset();
         WhseWkshLine."Worksheet Template Name" := WkshTemplateName;
         WhseWkshLine.Name := WkshName;
@@ -530,6 +541,11 @@ codeunit 7311 "Whse. Worksheet-Create"
 
     [IntegrationEvent(false, false)]
     local procedure OnAdjustQtyToHandleOnBeforeAssignQtyToHandle(var WhseWorksheetLine: Record "Whse. Worksheet Line"; var AvailQtyToPickBase: Decimal; var IsHandled: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeFindLastWhseWkshLine(var WhseWksheetLine: Record "Whse. Worksheet Line"; WorksheetTemplateName: Code[10]; WorksheetName: Code[10]; LocationCode: Code[10]; var IsHandled: Boolean)
     begin
     end;
 }

@@ -37,6 +37,8 @@ codeunit 136317 "Inv. Pick On Job Planning"
         ReInitializeJobSetup: Boolean;
         ItemReclassificationErr: Label '%1 Item must be in Reclassification Journal.', Comment = '%1=Item No.';
         LotNoErr: Label 'Lot No. must not be empty.';
+        TrackingOption: Option "Assign Lot No.","Assign Serial No.";
+        ReservationEntryNotFoundErr: Label 'Reservation Entry should be created for the Job Planning Line';
 
     [Test]
     [HandlerFunctions('MessageHandler,ConfirmHandlerTrue')]
@@ -430,7 +432,7 @@ codeunit 136317 "Inv. Pick On Job Planning"
         CreateJobWithJobTask(JobTask);
         Job.Get(JobTask."Job No.");
 
-        // [GIVEN] Create Multiple job tasks and a Job Planning Line for every job task with the common location and Bin Code 
+        // [GIVEN] Create Multiple job tasks and a Job Planning Line for every job task with the common location and Bin Code
         // [GIVEN] Job Planning Line for Job Task T1: Type = Item, Line Type = Both Budget and Billable
         CreateJobPlanningLineWithData(JobPlanningLine, JobTask, "Job Planning Line Line Type"::"Both Budget and Billable", JobPlanningLine.Type::Item, Item."No.", LocationWithRequirePickBinMandatory.Code, Bin1.Code, LibraryRandom.RandInt(10));
 
@@ -522,7 +524,7 @@ codeunit 136317 "Inv. Pick On Job Planning"
         CreateAndPostInvtAdjustmentWithUnitCost(Item."No.", LocationWithRequirePickBinMandatory.Code, Bin1.Code, QtyInventory, LibraryRandom.RandDec(10, 2));
         LibraryJob.CreateJob(Job, CreateCustomer(''));
 
-        // [GIVEN] Create job tasks and a Job Planning Line 
+        // [GIVEN] Create job tasks and a Job Planning Line
         // [GIVEN] Job Planning Line for Job Task T1: Type = Item, Line Type = Both Budget and Billable
         LibraryJob.CreateJobTask(Job, JobTask);
         CreateJobPlanningLineWithData(JobPlanningLine, JobTask, "Job Planning Line Line Type"::"Both Budget and Billable", JobPlanningLine.Type::Item, Item."No.", LocationWithRequirePickBinMandatory.Code, Bin1.Code, LibraryRandom.RandInt(10));
@@ -558,7 +560,7 @@ codeunit 136317 "Inv. Pick On Job Planning"
         CreateAndPostInvtAdjustmentWithUnitCost(Item."No.", LocationWithRequirePickBinMandatory.Code, Bin1.Code, QtyInventory, LibraryRandom.RandDec(10, 2));
         LibraryJob.CreateJob(Job, CreateCustomer(''));
 
-        // [GIVEN] Create job tasks and a Job Planning Line 
+        // [GIVEN] Create job tasks and a Job Planning Line
         // [GIVEN] Job Planning Line for Job Task T1: Type = Item, Line Type = Budget
         LibraryJob.CreateJobTask(Job, JobTask);
         CreateJobPlanningLineWithData(JobPlanningLine, JobTask, "Job Planning Line Line Type"::Budget, JobPlanningLine.Type::Item, Item."No.", LocationWithRequirePickBinMandatory.Code, Bin1.Code, LibraryRandom.RandInt(10));
@@ -598,7 +600,7 @@ codeunit 136317 "Inv. Pick On Job Planning"
         CreateAndPostInvtAdjustmentWithUnitCost(Item."No.", LocationWithRequirePickBinMandatory.Code, Bin1.Code, QtyInventory, LibraryRandom.RandDec(10, 2));
         LibraryJob.CreateJob(Job, CreateCustomer(''));
 
-        // [GIVEN] Create job tasks and a Job Planning Line 
+        // [GIVEN] Create job tasks and a Job Planning Line
         // [GIVEN] Job Planning Line for Job Task T1: Type = Item, Line Type = Budget
         LibraryJob.CreateJobTask(Job, JobTask);
         CreateJobPlanningLineWithData(JobPlanningLine, JobTask, "Job Planning Line Line Type"::Budget, JobPlanningLine.Type::Item, Item."No.", LocationWithRequirePickBinMandatory.Code, Bin1.Code, LibraryRandom.RandInt(10));
@@ -1099,7 +1101,7 @@ codeunit 136317 "Inv. Pick On Job Planning"
         CreateAndPostInvtAdjustmentWithUnitCost(Item."No.", LocationWithRequirePickBinMandatory.Code, Bin1.Code, QtyInventory, LibraryRandom.RandDec(10, 2));
         LibraryJob.CreateJob(Job, CreateCustomer(''));
 
-        // [GIVEN] Create job tasks and a Job Planning Line 
+        // [GIVEN] Create job tasks and a Job Planning Line
         // [GIVEN] Job Planning Line for Job Task T1: Type = Item, Line Type = Both Budget and Billable
         LibraryJob.CreateJobTask(Job, JobTask);
         CreateJobPlanningLineWithData(JobPlanningLine, JobTask, "Job Planning Line Line Type"::"Both Budget and Billable", JobPlanningLine.Type::Item, Item."No.", LocationWithRequirePickBinMandatory.Code, Bin1.Code, LibraryRandom.RandInt(10));
@@ -1142,7 +1144,7 @@ codeunit 136317 "Inv. Pick On Job Planning"
         Job.Validate("Apply Usage Link", true);
         Job.Modify(true);
 
-        // [GIVEN] Create job tasks and a Job Planning Line 
+        // [GIVEN] Create job tasks and a Job Planning Line
         // [GIVEN] Job Planning Line for Job Task T1: Type = Item, Line Type = Both Budget and Billable
         LibraryJob.CreateJobTask(Job, JobTask);
         CreateJobPlanningLineWithData(JobPlanningLine1, JobTask, "Job Planning Line Line Type"::"Both Budget and Billable", JobPlanningLine1.Type::Item, Item."No.", LocationWithRequirePickBinMandatory.Code, Bin1.Code, LibraryRandom.RandInt(10));
@@ -1168,11 +1170,11 @@ codeunit 136317 "Inv. Pick On Job Planning"
         // [GIVEN] Delete pick document without completing picks
         WarehouseActivityHeader.Delete(true);
 
-        // [WHEN] Create Inventory Pick action is invoked 
+        // [WHEN] Create Inventory Pick action is invoked
         JobPlanningLine2.Find();
         OpenJobAndCreateInventoryPick(Job);
 
-        // [THEN] It succeeds and new pick lines are created 
+        // [THEN] It succeeds and new pick lines are created
         VerifyWarehouseActivityLine(JobPlanningLine2);
     end;
 
@@ -1208,7 +1210,7 @@ codeunit 136317 "Inv. Pick On Job Planning"
         Job.Validate("Apply Usage Link", true);
         Job.Modify(true);
 
-        // [GIVEN] Create job tasks and a Job Planning Line 
+        // [GIVEN] Create job tasks and a Job Planning Line
         // [GIVEN] Job Planning Line for Job Task T1: Type = Item, Line Type = Budget, Bin Code = 3
         LibraryJob.CreateJobTask(Job, JobTask);
         CreateJobPlanningLineWithData(JobPlanningLine1, JobTask, "Job Planning Line Line Type"::Budget, JobPlanningLine1.Type::Item, Item."No.", LocationWithRequirePickBinMandatory.Code, Bin3.Code, LibraryRandom.RandInt(10));
@@ -1279,7 +1281,7 @@ codeunit 136317 "Inv. Pick On Job Planning"
         Job.Validate("Apply Usage Link", true);
         Job.Modify(true);
 
-        // [GIVEN] Create job tasks and a Job Planning Line 
+        // [GIVEN] Create job tasks and a Job Planning Line
         // [GIVEN] Job Planning Line for Job Task T1: Type = Item, Line Type = Budget
         // [GIVEN] Job Planning Line for Job Task T1: Type = SerialTrackedItem, Line Type = Budget
         LibraryJob.CreateJobTask(Job, JobTask);
@@ -1336,7 +1338,7 @@ codeunit 136317 "Inv. Pick On Job Planning"
         Job.Validate("Apply Usage Link", true);
         Job.Modify(true);
 
-        // [GIVEN] Create job tasks and a Job Planning Line 
+        // [GIVEN] Create job tasks and a Job Planning Line
         // [GIVEN] Job Planning Line for Job Task T1: Type = Item, Line Type = Budget
         // [GIVEN] Job Planning Line for Job Task T1: Type = SerialTrackedItem, Line Type = Budget
         LibraryJob.CreateJobTask(Job, JobTask);
@@ -1390,7 +1392,7 @@ codeunit 136317 "Inv. Pick On Job Planning"
         Job.Validate("Apply Usage Link", true);
         Job.Modify(true);
 
-        // [GIVEN] Create job tasks and a Job Planning Line 
+        // [GIVEN] Create job tasks and a Job Planning Line
         // [GIVEN] Job Planning Line for Job Task T1: Type = Item, Line Type = Budget
         // [GIVEN] Job Planning Line for Job Task T1: Type = SerialTrackedItem, Line Type = Budget
         LibraryJob.CreateJobTask(Job, JobTask);
@@ -1621,7 +1623,7 @@ codeunit 136317 "Inv. Pick On Job Planning"
         Job.Validate("Apply Usage Link", true);
         Job.Modify(true);
 
-        // [GIVEN] Create job tasks and a Job Planning Line 
+        // [GIVEN] Create job tasks and a Job Planning Line
         // [GIVEN] Job Planning Line for Job Task T1: Type = Item, Line Type = Budget
         LibraryJob.CreateJobTask(Job, JobTask);
         CreateJobPlanningLineWithData(JobPlanningLine, JobTask, "Job Planning Line Line Type"::Budget, JobPlanningLine.Type::Item, Item."No.", LocationWithRequirePickBinMandatory.Code, Bin1.Code, QtyPlanningLine);
@@ -1716,7 +1718,7 @@ codeunit 136317 "Inv. Pick On Job Planning"
         Job.Validate("Apply Usage Link", true);
         Job.Modify(true);
 
-        // [GIVEN] Create job tasks and a Job Planning Line 
+        // [GIVEN] Create job tasks and a Job Planning Line
         // [GIVEN] Job Planning Line for Job Task T1: Type = Item, Line Type = Budget
         LibraryJob.CreateJobTask(Job, JobTask);
         CreateJobPlanningLineWithData(JobPlanningLine, JobTask, "Job Planning Line Line Type"::Budget, JobPlanningLine.Type::Item, Item."No.", LocationWithRequirePickBinMandatory.Code, Bin1.Code, QtyPlanningLine);
@@ -2016,6 +2018,39 @@ codeunit 136317 "Inv. Pick On Job Planning"
         LibraryVariableStorage.AssertEmpty();
     end;
 
+    [Test]
+    [HandlerFunctions('ItemTrackingLinesAssignPageHandler,AssignSerialNoEnterQtyPageHandler,ConfirmHandlerTrue')]
+    procedure UpdateReservationAsSurplusWhenUpdateJobStatusAsOpen()
+    var
+        SNOnlyTrackedItem: Record Item;
+        Job: Record Job;
+        JobTask: Record "Job Task";
+        JobPlanningLine: Record "Job Planning Line";
+    begin
+        // [SCENARIO 564205] Check Reservation Entry when update Project Status from 'Quote' to 'Open' for SN tracked Item.
+        Initialize();
+
+        // [GIVEN] SN only tracked item
+        CreateSerialTrackedItem(SNOnlyTrackedItem, false);
+
+        // [GIVEN] A job with a task
+        CreateQuoteJobWithJobTask(JobTask, Job);
+
+        // [GIVEN] Create a job planning line.
+        CreateJobPlanningLineWithData(JobPlanningLine, JobTask, "Job Planning Line Line Type"::Budget, JobPlanningLine.Type::Item, SNOnlyTrackedItem."No.", LocationWithRequirePick.Code, '', 1);
+
+        // [GIVEN] Assign Serial No. to the Job Planning Line
+        LibraryVariableStorage.Enqueue(TrackingOption::"Assign Serial No.");
+        JobPlanningLine.OpenItemTrackingLines();
+
+        // [WHEN] Update Project Status from 'Quote' to 'Open'
+        Job.Validate(Status, Job."Status"::Open);
+        job.Modify(true);
+
+        // [THEN] Reservation Entry should be created for the Job Planning Line
+        Assert.IsTrue(FilterReserveationEntry(JobPlanningLine), ReservationEntryNotFoundErr);
+    end;
+
     local procedure CreateDefaultWarehouseEmployee(var NewDefaultLocation: Record Location)
     var
         WarehouseEmployee: Record "Warehouse Employee";
@@ -2183,14 +2218,6 @@ codeunit 136317 "Inv. Pick On Job Planning"
             until JobPlanningLine.Next() = 0;
     end;
 
-    local procedure FindWarehouseEntry(var WarehouseEntry: Record "Warehouse Entry"; ItemNo: Code[20]; SourceNo: Code[20]; SourceType: Integer)
-    begin
-        WarehouseEntry.SetRange("Item No.", ItemNo);
-        WarehouseEntry.SetRange("Source No.", SourceNo);
-        WarehouseEntry.SetRange("Source Type", SourceType);
-        WarehouseEntry.FindFirst();
-    end;
-
     local procedure VerifyWarehouseEntry(JobPlanningLine: Record "Job Planning Line")
     var
         WarehouseEntry: Record "Warehouse Entry";
@@ -2295,36 +2322,6 @@ codeunit 136317 "Inv. Pick On Job Planning"
         Customer.Validate("Currency Code", CurrencyCode);
         Customer.Modify(true);
         exit(Customer."No.");
-    end;
-
-    local procedure CreateItem(): Code[20]
-    var
-        Item: Record Item;
-    begin
-        LibraryInventory.CreateItem(Item);
-        Item.Validate("Unit Price", LibraryRandom.RandDec(50, 2));  // Use Random value for Unit Price.
-        Item.Modify(true);
-        exit(Item."No.");
-    end;
-
-    local procedure CreateJobJournalLine(LineType: Enum "Job Line Type"; ConsumableType: Enum "Job Planning Line Type"; var JobJournalLine: Record "Job Journal Line"; JobTask: Record "Job Task"; No: Code[20]; Quantity: Decimal; UnitCost: Decimal; UnitPrice: Decimal)
-    begin
-        LibraryJob.CreateJobJournalLineForType(LineType, ConsumableType, JobTask, JobJournalLine);
-        JobJournalLine.Validate("No.", No);
-        JobJournalLine.Validate(Quantity, Quantity);
-        JobJournalLine.Validate("Unit Cost", UnitCost);
-        JobJournalLine.Validate("Unit Price", UnitPrice);
-        JobJournalLine.Modify(true);
-    end;
-
-    local procedure CreateJobPlanningLine(var JobPlanningLine: Record "Job Planning Line"; LineType: Enum "Job Planning Line Line Type"; ConsumableType: Enum "Job Planning Line Type"; JobTask: Record "Job Task"; No: Code[20]; Quantity: Decimal; UnitCost: Decimal; UnitPrice: Decimal)
-    begin
-        LibraryJob.CreateJobPlanningLine(LineType, ConsumableType, JobTask, JobPlanningLine);
-        JobPlanningLine.Validate("No.", No);
-        JobPlanningLine.Validate(Quantity, Quantity);
-        JobPlanningLine.Validate("Unit Cost", UnitCost);
-        JobPlanningLine.Validate("Unit Price", UnitPrice);
-        JobPlanningLine.Modify(true);
     end;
 
     local procedure CreateJobWithJobTask(var JobTask: Record "Job Task")
@@ -2484,6 +2481,28 @@ codeunit 136317 "Inv. Pick On Job Planning"
         LibraryInventory.PostItemJournalLine(ItemJournalLine."Journal Template Name", ItemJournalLine."Journal Batch Name");
     end;
 
+    local procedure CreateQuoteJobWithJobTask(var JobTask: Record "Job Task"; var Job: Record Job)
+    begin
+        LibraryJob.CreateJob(Job, CreateCustomer(''));
+        Job.Validate(Status, Job."Status"::Quote);
+        job.Modify(true);
+        LibraryJob.CreateJobTask(Job, JobTask);
+    end;
+
+    local procedure FilterReserveationEntry(JobPlanningLine: Record "Job Planning Line"): Boolean
+    var
+        ReservationEntry: Record "Reservation Entry";
+    begin
+        ReservationEntry.SetCurrentKey("Source Type", "Source Subtype", "Source ID");
+        ReservationEntry.SetRange("Source Type", Database::"Job Planning Line");
+        ReservationEntry.SetRange("Source Subtype", 2);
+        ReservationEntry.SetRange("Source ID", JobPlanningLine."Job No.");
+        ReservationEntry.SetRange("Reservation Status", ReservationEntry."Reservation Status"::Surplus);
+        ReservationEntry.SetRange("Item No.", JobPlanningLine."No.");
+
+        exit(not ReservationEntry.IsEmpty());
+    end;
+
     [ModalPageHandler]
     [Scope('OnPrem')]
     procedure ItemTrackingLinesAssignPageHandler(var ItemTrackingLines: TestPage "Item Tracking Lines")
@@ -2561,4 +2580,3 @@ codeunit 136317 "Inv. Pick On Job Planning"
         ItemTrackingSummary.OK().Invoke();
     end;
 }
-

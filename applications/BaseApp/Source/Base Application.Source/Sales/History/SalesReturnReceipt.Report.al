@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Sales.History;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Sales.History;
 
 using Microsoft.CRM.Contact;
 using Microsoft.CRM.Interaction;
@@ -508,11 +512,6 @@ report 6646 "Sales - Return Receipt"
 
         trigger OnInit()
         begin
-            LogInteractionEnable := true;
-        end;
-
-        trigger OnOpenPage()
-        begin
             InitLogInteraction();
             LogInteractionEnable := LogInteraction;
         end;
@@ -562,8 +561,6 @@ report 6646 "Sales - Return Receipt"
 
     trigger OnPreReport()
     begin
-        if not CurrReport.UseRequestPage then
-            InitLogInteraction();
         OnAfterPreReport("Return Receipt Header", NoOfCopies, ShowCorrectionLines, LogInteraction, ShowInternalInfo);
     end;
 

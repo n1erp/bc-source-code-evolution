@@ -3,6 +3,16 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="PowerBI Reports Tests">
     <body>
       <group id="body">
+        <trans-unit id="Codeunit 1906876099 - NamedType 2239636051" size-unit="char" translate="yes" xml:space="preserve">
+          <source>'%1' field should be hidden.</source>
+          <note from="Developer" annotates="general" priority="2">%1 - field caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Core Test - NamedType FieldHiddenMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1906876099 - NamedType 3827439018" size-unit="char" translate="yes" xml:space="preserve">
+          <source>'%1' field should be shown.</source>
+          <note from="Developer" annotates="general" priority="2">%1 - field caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Core Test - NamedType FieldShownMsg</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1906876099 - NamedType 2421134277" size-unit="char" translate="yes" xml:space="preserve">
           <source>Response should not be empty.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -37,11 +47,6 @@
           <source>Response should not be empty.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Sales Test - NamedType ResponseEmptyErr</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 983294985 - NamedType 2421134277" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Response should not be empty.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Sustainability Test - NamedType ResponseEmptyErr</note>
         </trans-unit>
       </group>
     </body>

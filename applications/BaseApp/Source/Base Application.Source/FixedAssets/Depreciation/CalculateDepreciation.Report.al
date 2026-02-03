@@ -108,6 +108,7 @@ report 5692 "Calculate Depreciation"
                 if TempFAJnlLine.Find('-') then
                     repeat
                         FAJnlLine.Init();
+                        OnPostFixedAssetOnAfterFAJnlLineInit(TempFAJnlLine, FAJnlLine, DocumentNo, AutoDocumentNo);
                         FAJnlLine."Line No." := 0;
                         FAJnlSetup.SetFAJnlTrailCodes(FAJnlLine);
                         LineNo := LineNo + 1;
@@ -149,7 +150,7 @@ report 5692 "Calculate Depreciation"
                 if TempGenJnlLine.Find('-') then
                     repeat
                         GenJnlLine.Init();
-                        OnBeforeGenJnlLineCreate(TempGenJnlLine, GenJnlLine);
+                        OnBeforeGenJnlLineCreate(TempGenJnlLine, GenJnlLine, DocumentNo, AutoDocumentNo);
                         GenJnlLine."Line No." := 0;
                         FAJnlSetup.SetGenJnlTrailCodes(GenJnlLine);
                         LineNo := LineNo + 1;
@@ -528,7 +529,12 @@ report 5692 "Calculate Depreciation"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnBeforeGenJnlLineCreate(var TempGenJournalLine: Record "Gen. Journal Line" temporary; var GenJournalLine: Record "Gen. Journal Line")
+    local procedure OnBeforeGenJnlLineCreate(var TempGenJournalLine: Record "Gen. Journal Line" temporary; var GenJournalLine: Record "Gen. Journal Line"; DocumentNo: Code[20]; var AutoDocumentNo: Code[20])
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnPostFixedAssetOnAfterFAJnlLineInit(var TempFAJournalLine: Record "FA Journal Line" temporary; var FAJournalLine: Record "FA Journal Line"; DocumentNo: Code[20]; var AutoDocumentNo: Code[20])
     begin
     end;
 }

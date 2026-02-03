@@ -373,16 +373,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit APIV2 - Document Attach. E2E - NamedType AttachmentServiceNameTxt</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3302716707 - NamedType 1792205652" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The JSON should not be blank.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit APIV2 - Document Attach. E2E - NamedType EmptyJSONErr</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3302716707 - NamedType 2278183438" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Incorrect property value for %1.</source>
-          <note from="Developer" annotates="general" priority="2">%1=Property name</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit APIV2 - Document Attach. E2E - NamedType WrongPropertyValueErr</note>
-        </trans-unit>
         <trans-unit id="Codeunit 2928943942 - NamedType 1792205652" size-unit="char" translate="yes" xml:space="preserve">
           <source>The JSON should not be blank.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -622,6 +612,11 @@
           <source>salesInvoices</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit APIV2 - PDF Document E2E - NamedType InvoiceServiceNameTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1499788930 - NamedType 3931227680" size-unit="char" translate="yes" xml:space="preserve">
+          <source>salesOrders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit APIV2 - PDF Document E2E - NamedType OrderServiceNameTxt</note>
         </trans-unit>
         <trans-unit id="Codeunit 1499788930 - NamedType 2437311105" size-unit="char" translate="yes" xml:space="preserve">
           <source>pdfDocument</source>

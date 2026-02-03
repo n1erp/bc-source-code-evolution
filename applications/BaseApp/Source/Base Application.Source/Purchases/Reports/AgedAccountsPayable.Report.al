@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Purchases.Reports;
 
 using Microsoft.Finance.Currency;
@@ -212,10 +216,9 @@ report 322 "Aged Accounts Payable"
 
                 trigger OnPreDataItem()
                 begin
-                    if AgingBy = AgingBy::"Posting Date" then begin
+                    if AgingBy = AgingBy::"Posting Date" then
                         SetRange("Posting Date", 0D, EndingDate);
-                        SetRange("Date Filter", 0D, EndingDate);
-                    end;
+
                     CopyDimFiltersFromVendor(OpenVendorLedgEntry);
                     Vendor.CopyFilter("Currency Filter", "Currency Code");
                 end;

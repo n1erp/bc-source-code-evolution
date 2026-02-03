@@ -8,15 +8,55 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 153473473 - NamedType 504935412" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to get SharePoint Account Certificate.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - NamedType UnableToGetCertificateMsg</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - NamedType 2689045865" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to get SharePoint Account Certificate Password.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - NamedType UnableToGetCertificatePasswordMsg</note>
+        </trans-unit>
         <trans-unit id="Table 153473473 - NamedType 1723178096" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unable to get SharePoint Account Client Secret.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - NamedType UnableToGetClientMsg</note>
         </trans-unit>
+        <trans-unit id="Table 153473473 - NamedType 4038086976" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to set SharePoint Certificate.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - NamedType UnableToSetCertificateMsg</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - NamedType 1998288797" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to set SharePoint Certificate Password.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - NamedType UnableToSetCertificatePasswordMsg</note>
+        </trans-unit>
         <trans-unit id="Table 153473473 - NamedType 366485914" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unable to set SharePoint Client Secret.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - NamedType UnableToSetClientSecretMsg</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Method 3780574772 - NamedType 2313763999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Files (*.pfx;*.p12)|*.pfx;*.p12|All Files (*.*)|*.*</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Method UploadCertificateFile - NamedType CertificateFilterTxt</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Method 3780574772 - NamedType 3077000456" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate file was not uploaded.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Method UploadCertificateFile - NamedType FileNotUploadedErr</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2906998308 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the authentication flow used for this SharePoint account. Client Secret uses User grant flow, which means that the user must sign in when using this account. Certificate uses Client credentials flow, which means that the user does not need to sign in when using this account.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Authentication Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2906998308 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authentication Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Authentication Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 153473473 - Field 1562360606 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the folder path relative to the site collection. Start with the document library or folder name (e.g., Shared Documents/Reports). This path can be copied from the URL of the folder in SharePoint after the site collection (e.g., /Shared Documents/Reports from https://mysharepoint.sharepoint.com/sites/ProjectX/Shared%20Documents/Reports).</source>
@@ -28,8 +68,18 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Base Relative Folder Path - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 153473473 - Field 3302236422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Certificate Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2971556863 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Password Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Certificate Password Key - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 153473473 - Field 3879241928 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the the Client Id of the App Registration.</source>
+          <source>Specifies the Client ID (Application ID) of the App Registration in Microsoft Entra ID.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Client Id - Property ToolTip</note>
         </trans-unit>
@@ -44,7 +94,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Client Secret Key - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 153473473 - Field 1864907812 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies if the account is disabled. This happens automatically when a sandbox is created.</source>
+          <source>Specifies if the account is disabled. Accounts are automatically disabled when a sandbox environment is created from production.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Disabled - Property ToolTip</note>
         </trans-unit>
@@ -59,7 +109,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Id - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 153473473 - Field 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the name of the storage account connection.</source>
+          <source>Specifies a descriptive name for this SharePoint storage account connection.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Name - Property ToolTip</note>
         </trans-unit>
@@ -69,7 +119,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 153473473 - Field 92775614 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the the url to your SharePoint site.</source>
+          <source>Specifies the complete URL to your SharePoint site (e.g., https://mysharepoint.sharepoint.com/sites/ProjectX). This is the site URL where your documents will be stored.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field SharePoint Url - Property ToolTip</note>
         </trans-unit>
@@ -79,7 +129,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field SharePoint Url - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 153473473 - Field 588430355 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Tenant Id of the App Registration.</source>
+          <source>Specifies the Microsoft Entra ID Tenant ID (Directory ID) where your SharePoint site and app registration are located.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Tenant Id - Property ToolTip</note>
         </trans-unit>
@@ -113,13 +163,48 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 153473473 - Method 2555594772 - NamedType 76040314" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No certificate (click to upload)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account - Method UpdateCertificateStatus - NamedType NoCertificateLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Method 2555594772 - NamedType 2553944727" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate uploaded (click to change)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account - Method UpdateCertificateStatus - NamedType CertificateUploadedLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 4229622380 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credentials</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account - Control Credentials - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 2740551636 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the password used to protect the private key in the certificate. Leave empty if the certificate is not password-protected.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account - Control CertificatePasswordField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 2740551636 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Password</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account - Control CertificatePasswordField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 349922534 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the certificate file used for authentication. Click here to upload a new certificate file (.pfx, .cer, or .crt).</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account - Control CertificateUploadStatus - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 349922534 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account - Control CertificateUploadStatus - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 153473473 - Control 1697509288 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the the Client Secret of the App Registration.</source>
+          <source>Specifies the Client Secret value from the App Registration in Microsoft Entra ID. This value is used to authenticate the connection to SharePoint.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account - Control SecretField - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 153473473 - Control 1697509288 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Password</source>
+          <source>Client Secret</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account - Control SecretField - Property Caption</note>
         </trans-unit>
@@ -128,18 +213,28 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 1916394943 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Client Secret of the App Registration.</source>
+        <trans-unit id="Page 4098062784 - Method 2555594772 - NamedType 1236401456" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Click to upload certificate file...</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control ClientSecretField - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Method UpdateCertificateStatus - NamedType NoCertificateUploadedLbl</note>
         </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 1916394943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Client Secret</source>
+        <trans-unit id="Page 4098062784 - Method 2555594772 - NamedType 2553944727" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate uploaded (click to change)</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control ClientSecretField - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Method UpdateCertificateStatus - NamedType CertificateUploadedLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 2906998308 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the authentication flow used for this SharePoint account. Client Secret uses User grant flow, which means that the user must sign in when using this account. Certificate uses Client credentials flow, which means that the user does not need to sign in when using this account.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control Authentication Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 3879241928 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Client ID (Application ID) of the App Registration in Microsoft Entra ID.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control Client Id - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 4098062784 - Control 1459871223 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the name of the Azure SharePoint account.</source>
+          <source>Specifies a descriptive name for this SharePoint storage account connection.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control NameField - Property ToolTip</note>
         </trans-unit>
@@ -148,15 +243,45 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control NameField - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 92775614 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the SharePoint to use of the storage account.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control SharePoint Url - Property ToolTip</note>
-        </trans-unit>
         <trans-unit id="Page 4098062784 - Control 92775614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>SharePoint Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control SharePoint Url - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 2740551636 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the password used to protect the private key in the certificate. Leave empty if the certificate is not password-protected.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control CertificatePasswordField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 2740551636 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Password</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control CertificatePasswordField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 349922534 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the certificate file used for authentication. Click here to upload a certificate file (.pfx, .cer, or .crt).</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control CertificateUploadStatus - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 349922534 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control CertificateUploadStatus - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 1916394943 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Client Secret value from the App Registration in Microsoft Entra ID. This value is used to authenticate the connection to SharePoint.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control ClientSecretField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 1916394943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control ClientSecretField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 588430355 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Microsoft Entra ID Tenant ID (Directory ID) where your SharePoint site and app registration are located.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control Tenant Id - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 4098062784 - Action 742034285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Move to previous step.</source>
@@ -177,6 +302,16 @@
           <source>Next</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Action Next - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2450500354 - EnumValue 1846567327 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Ext. SharePoint Auth Type - EnumValue Certificate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2450500354 - EnumValue 2529110793 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Ext. SharePoint Auth Type - EnumValue Client Secret - Property Caption</note>
         </trans-unit>
         <trans-unit id="EnumExtension 2160742183 - EnumValue 2366980715 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 534202269">
           <source>SharePoint</source>

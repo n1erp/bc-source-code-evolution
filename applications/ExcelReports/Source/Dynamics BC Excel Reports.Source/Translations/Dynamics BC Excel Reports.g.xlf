@@ -29,7 +29,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRConsolidatedTrialBalance - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 573200894 - Action 346154772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3470244815">
-          <source>Consolidated Trial Balance</source>
+          <source>Consolidated Trial Balance (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRConsolidatedTrialBalance - Property Caption</note>
         </trans-unit>
@@ -39,7 +39,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRCustomerTopListExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 573200894 - Action 3179496975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3470244815">
-          <source>Customer - Top List</source>
+          <source>Customer - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRCustomerTopListExcel - Property Caption</note>
         </trans-unit>
@@ -49,7 +49,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRFixedAssetAnalysisExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 573200894 - Action 1871302856 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3470244815">
-          <source>Fixed Asset Analysis</source>
+          <source>Fixed Asset Analysis (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRFixedAssetAnalysisExcel - Property Caption</note>
         </trans-unit>
@@ -59,7 +59,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRFixedAssetDetailsExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 573200894 - Action 502688296 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3470244815">
-          <source>Fixed Asset Details</source>
+          <source>Fixed Asset Details (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRFixedAssetDetailsExcel - Property Caption</note>
         </trans-unit>
@@ -69,7 +69,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRFixedAssetProjected - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 573200894 - Action 3431284391 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3470244815">
-          <source>Fixed Asset Projected Value</source>
+          <source>Fixed Asset Projected Value (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRFixedAssetProjected - Property Caption</note>
         </trans-unit>
@@ -79,7 +79,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRTrialBalanceBudgetExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 573200894 - Action 3943235107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3470244815">
-          <source>Trial Balance/Budget</source>
+          <source>Trial Balance/Budget (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRTrialBalanceBudgetExcel - Property Caption</note>
         </trans-unit>
@@ -99,7 +99,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRTrialBalbyPeriodExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 573200894 - Action 3276863733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3470244815">
-          <source>Trial Balance by Period</source>
+          <source>Trial Balance by Period (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRTrialBalbyPeriodExcel - Property Caption</note>
         </trans-unit>
@@ -109,7 +109,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRTrialBalPrevYearExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 573200894 - Action 1318786165 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3470244815">
-          <source>Trial Balance/Previous Year</source>
+          <source>Trial Balance/Previous Year (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRTrialBalPrevYearExcel - Property Caption</note>
         </trans-unit>
@@ -119,7 +119,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRVendorTopList - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 573200894 - Action 2026640950 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3470244815">
-          <source>Vendor - Top List</source>
+          <source>Vendor - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXR Accountant Role Center - Action EXRVendorTopList - Property Caption</note>
         </trans-unit>
@@ -149,7 +149,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRConsolidatedTrialBalance - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3811239465 - Action 346154772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2458191494">
-          <source>Consolidated Trial Balance</source>
+          <source>Consolidated Trial Balance (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRConsolidatedTrialBalance - Property Caption</note>
         </trans-unit>
@@ -159,7 +159,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRCustomerTopListExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3811239465 - Action 3179496975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2458191494">
-          <source>Customer - Top List</source>
+          <source>Customer - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRCustomerTopListExcel - Property Caption</note>
         </trans-unit>
@@ -169,7 +169,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRFixedAssetAnalysisExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3811239465 - Action 1871302856 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2458191494">
-          <source>Fixed Asset Analysis</source>
+          <source>Fixed Asset Analysis (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRFixedAssetAnalysisExcel - Property Caption</note>
         </trans-unit>
@@ -179,7 +179,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRFixedAssetDetailsExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3811239465 - Action 502688296 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2458191494">
-          <source>Fixed Asset Details</source>
+          <source>Fixed Asset Details (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRFixedAssetDetailsExcel - Property Caption</note>
         </trans-unit>
@@ -189,7 +189,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRFixedAssetProjected - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3811239465 - Action 3431284391 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2458191494">
-          <source>Fixed Asset Projected Value</source>
+          <source>Fixed Asset Projected Value (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRFixedAssetProjected - Property Caption</note>
         </trans-unit>
@@ -199,7 +199,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRTrialBalanceBudgetExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3811239465 - Action 3943235107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2458191494">
-          <source>Trial Balance/Budget</source>
+          <source>Trial Balance/Budget (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRTrialBalanceBudgetExcel - Property Caption</note>
         </trans-unit>
@@ -219,7 +219,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRTrialBalbyPeriodExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3811239465 - Action 3276863733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2458191494">
-          <source>Trial Balance by Period</source>
+          <source>Trial Balance by Period (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRTrialBalbyPeriodExcel - Property Caption</note>
         </trans-unit>
@@ -229,7 +229,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRTrialBalPrevYearExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3811239465 - Action 1318786165 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2458191494">
-          <source>Trial Balance/Previous Year</source>
+          <source>Trial Balance/Previous Year (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRTrialBalPrevYearExcel - Property Caption</note>
         </trans-unit>
@@ -239,7 +239,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRVendorTopList - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3811239465 - Action 2026640950 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2458191494">
-          <source>Vendor - Top List</source>
+          <source>Vendor - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Bus. Manager Role Center - Action EXRVendorTopList - Property Caption</note>
         </trans-unit>
@@ -269,7 +269,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Company Detail - Action EXRCustomerTopListExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2637905681 - Action 3179496975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 167543418">
-          <source>Customer - Top List</source>
+          <source>Customer - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Company Detail - Action EXRCustomerTopListExcel - Property Caption</note>
         </trans-unit>
@@ -279,7 +279,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Company Detail - Action EXRTrialBalanceBudgetExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2637905681 - Action 3943235107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 167543418">
-          <source>Trial Balance/Budget</source>
+          <source>Trial Balance/Budget (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Company Detail - Action EXRTrialBalanceBudgetExcel - Property Caption</note>
         </trans-unit>
@@ -299,7 +299,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Company Detail - Action EXRTrialBalbyPeriodExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2637905681 - Action 3276863733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 167543418">
-          <source>Trial Balance by Period</source>
+          <source>Trial Balance by Period (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Company Detail - Action EXRTrialBalbyPeriodExcel - Property Caption</note>
         </trans-unit>
@@ -309,7 +309,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Company Detail - Action EXRTrialBalPrevYearExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2637905681 - Action 1318786165 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 167543418">
-          <source>Trial Balance/Previous Year</source>
+          <source>Trial Balance/Previous Year (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Company Detail - Action EXRTrialBalPrevYearExcel - Property Caption</note>
         </trans-unit>
@@ -319,7 +319,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Company Detail - Action EXRVendorTopList - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2637905681 - Action 2026640950 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 167543418">
-          <source>Vendor - Top List</source>
+          <source>Vendor - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXT Company Detail - Action EXRVendorTopList - Property Caption</note>
         </trans-unit>
@@ -678,13 +678,43 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EXR Trial Balance Buffer - Field Period Start - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 687396741 - Field 1188165242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Balance</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Trial Balance Buffer - Field Starting Balance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 687396741 - Field 795679232 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Balance</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Trial Balance Buffer - Field Starting Balance (ACY) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 687396741 - Field 614871246 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Balance (Credit)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Trial Balance Buffer - Field Starting Balance (Credit) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 687396741 - Field 720014828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Balance (Credit)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Trial Balance Buffer - Field Starting Balance (Credit)(ACY) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 687396741 - Field 3322376699 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Balance (Debit)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Trial Balance Buffer - Field Starting Balance (Debit) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 687396741 - Field 3114260885 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Balance (Debit)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EXR Trial Balance Buffer - Field Starting Balance (Debit) (ACY) - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Codeunit 4034378184 - NamedType 276437244" size-unit="char" translate="yes" xml:space="preserve">
           <source>(BLANK)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Trial Balance - NamedType BlankLbl</note>
         </trans-unit>
         <trans-unit id="Report 565153984 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Aged Accounts Payable Excel</source>
+          <source>Aged Accounts Payable (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Aged Acc Payable Excel - Property Caption</note>
         </trans-unit>
@@ -854,12 +884,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Aged Acc Payable Excel - ReportLabel UserLabel</note>
         </trans-unit>
         <trans-unit id="Report 565153984 - RequestPage 2516438534 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Aged Accounts Payable Excel</source>
+          <source>About Aged Accounts Payables (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Aged Acc Payable Excel - RequestPage RequestOptionsPage - Property AboutTitle</note>
         </trans-unit>
         <trans-unit id="Report 565153984 - RequestPage 2516438534 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This report contains aggregated aging data based on vendor ledger entries. The data is aggregated and bucketed according to the ‘Aged as of' and ‘period length' parameters in the reports request page. The aggregated data is summarized per the 2 global dimensions.</source>
+          <source>Analyze vendor balances at the end of each period: by period (LCY), by period (FCY), or with an overview Due by Currencies. Monitor unpaid invoices, and prioritize payments for overdue accounts.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Aged Acc Payable Excel - RequestPage RequestOptionsPage - Property AboutText</note>
         </trans-unit>
@@ -934,7 +964,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Aged Acc Payable Excel - ReportLayout AgedAccountsPayableExcel - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 2405914747 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Aged Accounts Receivable Excel</source>
+          <source>Aged Accounts Receivable (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Aged Accounts Rec Excel - Property Caption</note>
         </trans-unit>
@@ -1104,12 +1134,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Aged Accounts Rec Excel - ReportLabel UserLabel</note>
         </trans-unit>
         <trans-unit id="Report 2405914747 - RequestPage 2516438534 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Aged Accounts Receivable Excel</source>
+          <source>About Aged Accounts Receivable (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Aged Accounts Rec Excel - RequestPage RequestOptionsPage - Property AboutTitle</note>
         </trans-unit>
         <trans-unit id="Report 2405914747 - RequestPage 2516438534 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This report contains aggregated aging data based on customer ledger entries. The data is aggregated and bucketed according to the ‘Aged as of' and ‘period length' parameters in the reports request page. The aggregated data is summarized per the 2 global dimensions.</source>
+          <source>Analyze customer balances at the end of each period, either in local or in foreign currency. Use the data as a gauge to measure the reliability of debt collections for your customers. You can also use it to help reconcile the customer subledger against the receivables accounts in the general ledger, assuming that direct posting is disabled. You can see the balance in both your local currency (LCY) and foreign currency (FCY).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Aged Accounts Rec Excel - RequestPage RequestOptionsPage - Property AboutText</note>
         </trans-unit>
@@ -1184,7 +1214,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Aged Accounts Rec Excel - ReportLayout AgedAccountsReceivableExcel - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 3178109732 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Consolidated Trial Balance Excel</source>
+          <source>Consolidated Trial Balance (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Consolidated Trial Balance - Property Caption</note>
         </trans-unit>
@@ -1294,12 +1324,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Consolidated Trial Balance - ReportLabel UserLabel</note>
         </trans-unit>
         <trans-unit id="Report 3178109732 - RequestPage 2516438534 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Consolidated Trial Balance Excel</source>
+          <source>About Consolidated Trial Balance (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Consolidated Trial Balance - RequestPage RequestOptionsPage - Property AboutTitle</note>
         </trans-unit>
         <trans-unit id="Report 3178109732 - RequestPage 2516438534 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This report contains Net Change or Balance of the different G/L Accounts for the selected period, aggregated per business unit.</source>
+          <source>View a snapshot of your consolidated chart of accounts at a given point to check the debit and credit net change and closing balance. You can see the trial balance in both your local currency (LCY) and additional reporting currency (ACY).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Consolidated Trial Balance - RequestPage RequestOptionsPage - Property AboutText</note>
         </trans-unit>
@@ -1334,7 +1364,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Consolidated Trial Balance - ReportLayout ConsolidatedTrialBalanceExcel - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 968846184 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Fixed Asset Analysis Excel</source>
+          <source>Fixed Asset Analysis (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Analysis Excel - Property Caption</note>
         </trans-unit>
@@ -1489,12 +1519,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Analysis Excel - ReportLabel UserLabel</note>
         </trans-unit>
         <trans-unit id="Report 968846184 - RequestPage 2516438534 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Fixed Asset Analysis Excel</source>
+          <source>About Fixed Asset Analysis (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Analysis Excel - RequestPage RequestOptionsPage - Property AboutTitle</note>
         </trans-unit>
         <trans-unit id="Report 968846184 - RequestPage 2516438534 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This report shows different fixed asset details in the given time periods, such as book value, depreciation, and acquisitions. You can specify the starting and ending dates for the report, and whether you want to include only sold assets or include inactive fixed assets.</source>
+          <source>Get an overview of your fixed assets for a given period of time, including: book values, depreciation, and acquisitions. You can specify the starting and ending dates for the report, whether to include only sold assets, or whether to include inactive fixed assets.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Analysis Excel - RequestPage RequestOptionsPage - Property AboutText</note>
         </trans-unit>
@@ -1574,7 +1604,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Analysis Excel - ReportLayout FixedAssetAnalysisExcel - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 2165890536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Fixed Asset Details Excel</source>
+          <source>Fixed Asset Details (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Details Excel - Property Caption</note>
         </trans-unit>
@@ -1649,12 +1679,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Details Excel - ReportLabel UserLabel</note>
         </trans-unit>
         <trans-unit id="Report 2165890536 - RequestPage 2516438534 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Fixed Asset Details Excel</source>
+          <source>About Fixed Asset Details (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Details Excel - RequestPage RequestOptionsPage - Property AboutTitle</note>
         </trans-unit>
         <trans-unit id="Report 2165890536 - RequestPage 2516438534 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This report shows ledger entries for one or more fixed assets.</source>
+          <source>Get details about fixed assets transactions and reference data that can help you manage your fixed assets. You can choose to include reversed entries and inactive fixed assets.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Details Excel - RequestPage RequestOptionsPage - Property AboutText</note>
         </trans-unit>
@@ -1714,7 +1744,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Details Excel - ReportLayout FixedAssetDetailsExcel - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 3199654583 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Fixed Asset Projected Value Excel</source>
+          <source>Fixed Asset Projected Value (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Projected - Property Caption</note>
         </trans-unit>
@@ -1814,12 +1844,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Projected - ReportLabel UserLabel</note>
         </trans-unit>
         <trans-unit id="Report 3199654583 - RequestPage 2516438534 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Fixed Asset Projected Value Excel</source>
+          <source>About Fixed Asset Projected Value (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Projected - RequestPage RequestOptionsPage - Property AboutTitle</note>
         </trans-unit>
         <trans-unit id="Report 3199654583 - RequestPage 2516438534 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This report shows how Fixed Asset Ledger entries would look if depreciated in the given dates.</source>
+          <source>Explore projected depreciation amounts and book value for a future period for your fixed assets. You can choose to include projected disposals and use the accounting periods specified in the Accounting Period table in the report.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Projected - RequestPage RequestOptionsPage - Property AboutText</note>
         </trans-unit>
@@ -1919,7 +1949,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Fixed Asset Projected - ReportLayout FixedAssetProjectedValueExcel - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 2543906325 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Trial Balance by Period Excel</source>
+          <source>Trial Balance by Period (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Bal by Period Excel - Property Caption</note>
         </trans-unit>
@@ -1989,12 +2019,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Bal by Period Excel - ReportLabel YearPeriodStart</note>
         </trans-unit>
         <trans-unit id="Report 2543906325 - RequestPage 2516438534 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Trial Balance by Period Excel</source>
+          <source>About Trial Balance by Period (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Bal by Period Excel - RequestPage RequestOptionsPage - Property AboutTitle</note>
         </trans-unit>
         <trans-unit id="Report 2543906325 - RequestPage 2516438534 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This report contains aggregated general ledger data per accounting period for the trial balance with a net debit/credit net change column for each period. The periods covered are specified in the report's request page's Datefilter parameter and summarized per the 2 global dimensions per g/l account category.</source>
+          <source>View a trial balance with debit/credit columns for net change and balance for a period you specify. You get the report directly in Excel. See amounts in both local currency (LCY) and additional reporting currency (ACY), the latter only showing data if Additional Reporting Currency is in use. In addition to debit/credit for net change and balance the report shows the net debit/credit amount for both net change and balance for comparison. Data is summarized for the period specified in the report's request page's Date Filter parameter and grouped by the 2 global dimensions per G/L account category.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Bal by Period Excel - RequestPage RequestOptionsPage - Property AboutText</note>
         </trans-unit>
@@ -2034,7 +2064,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Bal by Period Excel - ReportLayout TrialBalancebyPeriodExcelLayout - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 832924415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Trial Balance/Previous Year Excel</source>
+          <source>Trial Balance/Previous Year (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Bal. Prev Year Excel - Property Caption</note>
         </trans-unit>
@@ -2119,12 +2149,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Bal. Prev Year Excel - ReportLabel UserLabel</note>
         </trans-unit>
         <trans-unit id="Report 832924415 - RequestPage 2516438534 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Trial Balance/Previous Year Excel</source>
+          <source>About Trial Balance/Previous Year (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Bal. Prev Year Excel - RequestPage RequestOptionsPage - Property AboutTitle</note>
         </trans-unit>
         <trans-unit id="Report 832924415 - RequestPage 2516438534 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This report contains aggregated general ledger data for the trial balance with debit/credit columns for net change and balance. A report is shown for both local currency (LCY) and additional reporting currency (ACY, the latter only showing data if Additional Reporting Currency is in use. In addition to debit/credit for net change and balance the report shows the net debit/credit amount for both net change and balance for comparison. The aggregation is for the period specified in the report's request page's Datefilter parameter and summarized per the 2 global dimensions per g/l account category.</source>
+          <source>View a trial balance with debit/credit columns for net change and balance for this year and previous year directly in Excel. See amounts in both local currency (LCY) and additional reporting currency (ACY), the latter only showing data if Additional Reporting Currency is in use. In addition to debit/credit for net change and balance the report shows the net debit/credit amount for both net change and balance for comparison. Data is summarized for the period specified in the report's request page's Date Filter parameter and grouped by the 2 global dimensions per G/L account category.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Bal. Prev Year Excel - RequestPage RequestOptionsPage - Property AboutText</note>
         </trans-unit>
@@ -2154,7 +2184,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Bal. Prev Year Excel - ReportLayout TrialBalancePrevYearExcelLayout - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 2951443352 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Trial Balance Excel</source>
+          <source>Trial Balance (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Balance Excel - Property Caption</note>
         </trans-unit>
@@ -2239,12 +2269,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Balance Excel - ReportLabel UserLabel</note>
         </trans-unit>
         <trans-unit id="Report 2951443352 - RequestPage 2516438534 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Trial Balance Excel</source>
+          <source>About Trial Balance (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Balance Excel - RequestPage RequestOptionsPage - Property AboutTitle</note>
         </trans-unit>
         <trans-unit id="Report 2951443352 - RequestPage 2516438534 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This report contains aggregated general ledger data for the trial balance with debit/credit columns for net change and balance. A report is shown for both local currency (LCY) and additional reporting currency (ACY), the latter only showing data if Additional Reporting Currency is in use. The aggregation is for the period specified in the report's request page's Datefilter parameter and summarized per the 2 global dimensions per g/l account category.</source>
+          <source>View a snapshot of your chart of accounts at a given point to check the debit and credit net change and closing balance. You can see the trial balance in both your local currency (LCY) and additional reporting currency (ACY).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Balance Excel - RequestPage RequestOptionsPage - Property AboutText</note>
         </trans-unit>
@@ -2274,7 +2304,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial Balance Excel - ReportLayout TrialBalanceExcelLayout - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 2265219475 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Trial Balance/Budget Excel</source>
+          <source>Trial Balance/Budget (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial BalanceBudgetExcel - Property Caption</note>
         </trans-unit>
@@ -2349,12 +2379,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial BalanceBudgetExcel - ReportLabel UserLabel</note>
         </trans-unit>
         <trans-unit id="Report 2265219475 - RequestPage 2516438534 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Trial Balance/Budget Excel</source>
+          <source>About Trial Balance/Budget (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial BalanceBudgetExcel - RequestPage RequestOptionsPage - Property AboutTitle</note>
         </trans-unit>
         <trans-unit id="Report 2265219475 - RequestPage 2516438534 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This report contains aggregated general ledger data for the trial balance with debit/credit columns for net change and balance. A report is shown for both local currency (LCY) and additional reporting currency (ACY, the latter only showing data if Additional Reporting Currency is in use. In addition to debit/credit for net change and balance the report shows the net debit/credit amount for both net change and balance for comparison. The aggregation is for the period specified in the report's request page's Datefilter parameter and summarized per the 2 global dimensions per g/l account category.</source>
+          <source>View a snapshot of your chart of accounts at a given point to check the debit and credit net change and closing balance compared to the budget. Amounts are shown in local currency (LCY).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial BalanceBudgetExcel - RequestPage RequestOptionsPage - Property AboutText</note>
         </trans-unit>
@@ -2382,6 +2412,11 @@
           <source>Trial Balance/Budget Excel</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Trial BalanceBudgetExcel - ReportLayout TrialBalanceBudgetExcelLayout - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 2836220445 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EXR Trial Balance</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query EXR Trial Balance - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3518204702 - Action 174802644 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3518204702">
           <source>View and compare general ledger balances across the different business units.</source>
@@ -2509,7 +2544,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXT Top Vendor Caption Handler - NamedType PurchasesLCYTok</note>
         </trans-unit>
         <trans-unit id="Report 4199566814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor - Top List Excel</source>
+          <source>Vendor - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Vendor Top List - Property Caption</note>
         </trans-unit>
@@ -2584,12 +2619,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Vendor Top List - ReportLabel UserLabel</note>
         </trans-unit>
         <trans-unit id="Report 4199566814 - RequestPage 2516438534 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor - Top Trends</source>
+          <source>About Vendor - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Vendor Top List - RequestPage RequestOptionsPage - Property AboutTitle</note>
         </trans-unit>
         <trans-unit id="Report 4199566814 - RequestPage 2516438534 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This report contains aggregated purchase (LCY) and balance (LCY) data for the top number of vendors selected. The data is aggregated for the period specified in the request page's Datefilter parameter.</source>
+          <source>Analyze the effect of vendors on cash flow, and prioritize vendor payments. Amounts are shown in local currency (LCY).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Vendor Top List - RequestPage RequestOptionsPage - Property AboutText</note>
         </trans-unit>
@@ -2633,15 +2668,15 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Vendor Top List - Control Show - Property OptionCaption</note>
         </trans-unit>
-        <trans-unit id="Report 4199566814 - ReportLayout 2771570707 - Property 2166945456" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Built in layout for the Vendor - Top Trends excel report. This report contains aggregated purchase (LCY) and balance (LCY) data for the top number of vendors selected. Report uses Query connections.</source>
+        <trans-unit id="Report 4199566814 - ReportLayout 3256196966 - Property 2166945456" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Built in layout for the Vendor - Top List (Excel) report. This report contains aggregated purchase (LCY) and balance (LCY) data for the top number of vendors selected. Report uses Query connections.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report EXR Vendor Top List - ReportLayout VendorTopTrendExcel - Property Summary</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report EXR Vendor Top List - ReportLayout VendorTopListExcel - Property Summary</note>
         </trans-unit>
-        <trans-unit id="Report 4199566814 - ReportLayout 2771570707 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor - Top Trends Excel</source>
+        <trans-unit id="Report 4199566814 - ReportLayout 3256196966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report EXR Vendor Top List - ReportLayout VendorTopTrendExcel - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report EXR Vendor Top List - ReportLayout VendorTopListExcel - Property Caption</note>
         </trans-unit>
         <trans-unit id="Query 1958081322 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Top Vendor Balance</source>
@@ -2739,7 +2774,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EXT Top Cust. Caption Handler - NamedType SalesLCYTok</note>
         </trans-unit>
         <trans-unit id="Report 2081705526 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Customer - Top List Excel</source>
+          <source>Customer - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Customer Top List - Property Caption</note>
         </trans-unit>
@@ -2814,12 +2849,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Customer Top List - ReportLabel UserLabel</note>
         </trans-unit>
         <trans-unit id="Report 2081705526 - RequestPage 2516438534 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Customer - Top Trends</source>
+          <source>About Customer - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Customer Top List - RequestPage RequestOptionsPage - Property AboutTitle</note>
         </trans-unit>
         <trans-unit id="Report 2081705526 - RequestPage 2516438534 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This report contains aggregated sales (LCY) and balance (LCY) data for the top number of customers selected. The data is aggregated for the period specified in the request page's Datefilter parameter.</source>
+          <source>Review customers with the most transactions in a selected period. Identify sales trends and manage debt collections. Amounts are shown in local currency (LCY).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Customer Top List - RequestPage RequestOptionsPage - Property AboutText</note>
         </trans-unit>
@@ -2863,15 +2898,15 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report EXR Customer Top List - Control Show - Property OptionCaption</note>
         </trans-unit>
-        <trans-unit id="Report 2081705526 - ReportLayout 1529034891 - Property 2166945456" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Built in layout for the Customer - Top Trends excel report. This report contains aggregated sales (LCY) and balance (LCY) data for the top number of customers selected. Report uses Query connections.</source>
+        <trans-unit id="Report 2081705526 - ReportLayout 2151250734 - Property 2166945456" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Built in layout for the Customer - Top List (Excel) report. This report contains aggregated sales (LCY) and balance (LCY) data for the top number of customers selected. Report uses Query connections.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report EXR Customer Top List - ReportLayout CustomerTopTrendExcel - Property Summary</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report EXR Customer Top List - ReportLayout CustomerTopListExcel - Property Summary</note>
         </trans-unit>
-        <trans-unit id="Report 2081705526 - ReportLayout 1529034891 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Customer - Top Trends Excel</source>
+        <trans-unit id="Report 2081705526 - ReportLayout 2151250734 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report EXR Customer Top List - ReportLayout CustomerTopTrendExcel - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report EXR Customer Top List - ReportLayout CustomerTopListExcel - Property Caption</note>
         </trans-unit>
         <trans-unit id="Query 3316903586 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Top Customer Balance</source>
@@ -2904,7 +2939,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRARRoleCenter - Action EXRCustomerTopListExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1364487181 - Action 3179496975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1430368898">
-          <source>Customer - Top List</source>
+          <source>Customer - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRARRoleCenter - Action EXRCustomerTopListExcel - Property Caption</note>
         </trans-unit>
@@ -2914,7 +2949,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRARRoleCenter - Action EXRTrialBalanceBudgetExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1364487181 - Action 3943235107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1430368898">
-          <source>Trial Balance/Budget</source>
+          <source>Trial Balance/Budget (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRARRoleCenter - Action EXRTrialBalanceBudgetExcel - Property Caption</note>
         </trans-unit>
@@ -2934,7 +2969,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRARRoleCenter - Action EXRTrialBalbyPeriodExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1364487181 - Action 3276863733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1430368898">
-          <source>Trial Balance by Period</source>
+          <source>Trial Balance by Period (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRARRoleCenter - Action EXRTrialBalbyPeriodExcel - Property Caption</note>
         </trans-unit>
@@ -2944,7 +2979,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRARRoleCenter - Action EXRTrialBalPrevYearExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1364487181 - Action 1318786165 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1430368898">
-          <source>Trial Balance/Previous Year</source>
+          <source>Trial Balance/Previous Year (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRARRoleCenter - Action EXRTrialBalPrevYearExcel - Property Caption</note>
         </trans-unit>
@@ -2979,7 +3014,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRConsolidatedTrialBalance - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3178332075 - Action 346154772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4105562392">
-          <source>Consolidated Trial Balance</source>
+          <source>Consolidated Trial Balance (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRConsolidatedTrialBalance - Property Caption</note>
         </trans-unit>
@@ -2989,7 +3024,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRCustomerTopListExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3178332075 - Action 3179496975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4105562392">
-          <source>Customer - Top List</source>
+          <source>Customer - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRCustomerTopListExcel - Property Caption</note>
         </trans-unit>
@@ -2999,7 +3034,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRFixedAssetAnalysisExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3178332075 - Action 1871302856 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4105562392">
-          <source>Fixed Asset Analysis</source>
+          <source>Fixed Asset Analysis (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRFixedAssetAnalysisExcel - Property Caption</note>
         </trans-unit>
@@ -3009,7 +3044,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRFixedAssetDetailsExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3178332075 - Action 502688296 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4105562392">
-          <source>Fixed Asset Details</source>
+          <source>Fixed Asset Details (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRFixedAssetDetailsExcel - Property Caption</note>
         </trans-unit>
@@ -3019,7 +3054,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRFixedAssetProjected - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3178332075 - Action 3431284391 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4105562392">
-          <source>Fixed Asset Projected Value</source>
+          <source>Fixed Asset Projected Value (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRFixedAssetProjected - Property Caption</note>
         </trans-unit>
@@ -3029,7 +3064,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRTrialBalanceBudgetExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3178332075 - Action 3943235107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4105562392">
-          <source>Trial Balance/Budget</source>
+          <source>Trial Balance/Budget (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRTrialBalanceBudgetExcel - Property Caption</note>
         </trans-unit>
@@ -3049,7 +3084,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRTrialBalbyPeriodExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3178332075 - Action 3276863733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4105562392">
-          <source>Trial Balance by Period</source>
+          <source>Trial Balance by Period (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRTrialBalbyPeriodExcel - Property Caption</note>
         </trans-unit>
@@ -3059,7 +3094,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRTrialBalPrevYearExcel - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3178332075 - Action 1318786165 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4105562392">
-          <source>Trial Balance/Previous Year</source>
+          <source>Trial Balance/Previous Year (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRTrialBalPrevYearExcel - Property Caption</note>
         </trans-unit>
@@ -3069,7 +3104,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRVendorTopList - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3178332075 - Action 2026640950 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4105562392">
-          <source>Vendor - Top List</source>
+          <source>Vendor - Top List (Excel)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXRFinRoleCenter - Action EXRVendorTopList - Property Caption</note>
         </trans-unit>

@@ -216,7 +216,7 @@ codeunit 10 "Type Helper"
     var
         Language: Codeunit Language;
     begin
-        exit(FormatDate(DateToFormat, 'd', Language.GetCurrentCultureName()));
+        exit(FormatDate(DateToFormat, 'd', Language.GetUserLanguageTag()));
     end;
 
     procedure GetHMSFromTime(var Hour: Integer; var Minute: Integer; var Second: Integer; TimeSource: Time)
@@ -503,6 +503,29 @@ codeunit 10 "Type Helper"
         exit(Value);
     end;
 
+    [NonDebuggable]
+    procedure UrlEncode(var Value: SecretText): SecretText
+    var
+        HttpUtility: DotNet HttpUtility;
+        EncodedValue: Text;
+    begin
+        EncodedValue := HttpUtility.UrlEncode(Value.Unwrap());
+        Value := EncodedValue;
+        exit(EncodedValue);
+    end;
+
+#if not CLEAN27
+    [NonDebuggable]
+    [Obsolete('Use UrlEncode with secret text.', '27.0')]
+    procedure UrlEncodeSecret(var Value: Text): Text
+    var
+        HttpUtility: DotNet HttpUtility;
+    begin
+        Value := HttpUtility.UrlEncode(Value);
+        exit(Value);
+    end;
+#endif
+
     procedure UrlDecode(var Value: Text): Text
     var
         HttpUtility: DotNet HttpUtility;
@@ -525,6 +548,20 @@ codeunit 10 "Type Helper"
     begin
         Value := HttpUtility.HtmlDecode(Value);
         exit(Value);
+    end;
+
+    procedure JavaScriptStringEncode(Value: Text): Text
+    var
+        HttpUtility: DotNet HttpUtility;
+    begin
+        exit(HttpUtility.JavaScriptStringEncode(Value));
+    end;
+
+    procedure JavaScriptStringEncode(Value: Text; AddDoubleQuotes: Boolean): Text
+    var
+        HttpUtility: DotNet HttpUtility;
+    begin
+        exit(HttpUtility.JavaScriptStringEncode(Value, AddDoubleQuotes));
     end;
 
     procedure UriEscapeDataString(Value: Text): Text
@@ -991,6 +1028,11 @@ codeunit 10 "Type Helper"
         else
             if RecordVariant.IsRecordRef() then
                 RecRef := RecordVariant;
+    end;
+
+    procedure IsLatinLetter(ch: Char): Boolean
+    begin
+        exit(((ch >= 'A') and (ch <= 'Z')) or ((ch >= 'a') and (ch <= 'z')));
     end;
 
     procedure IsDigit(ch: Char): Boolean

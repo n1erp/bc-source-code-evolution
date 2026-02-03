@@ -1818,6 +1818,45 @@ codeunit 136209 "Marketing Opportunity Mgmt"
         Opportunity.CloseOpportunity();
     end;
 
+    [Test]
+    [Scope('OnPrem')]
+    procedure BuildCaptionLengthIssueOnOpportunitiesListPage()
+    var
+        Opportunity: Record Opportunity;
+        Contact: Record Contact;
+        OpportunityList: TestPage "Opportunity List";
+        FilterText: Text;
+        i: Integer;
+    begin
+        // [SCENARIO 574639] The length of the string is XX but it must be less than or equal to 20 characters when working with Opportunities
+        Initialize();
+
+        // [GIVEN] Create contact and it's opportunity
+        LibraryMarketing.CreateCompanyContact(Contact);
+        LibraryMarketing.CreateOpportunity(Opportunity, Contact."No.");
+
+        // [GIVEN] Prepare Filter Text with Salesperson Code
+        for i := 1 to LibraryRandom.RandIntInRange(20, 20) do
+            FilterText += Opportunity."Salesperson Code" + '|';
+        FilterText += Opportunity."Salesperson Code";
+
+        // [THEN] Open Opportunities list page and apply salesperson code filter without issue
+        Clear(FilterText);
+        OpportunityList.OpenView();
+        OpportunityList.Filter.SetFilter("Salesperson Code", FilterText);
+        OpportunityList.Close();
+
+        // [GIVEN] Prepare Filter Text with Contact No
+        for i := 1 to LibraryRandom.RandIntInRange(20, 20) do
+            FilterText += Contact."No." + '|';
+        FilterText += Contact."No.";
+
+        // [THEN] Open Opportunities list page and contacts filter without issue
+        OpportunityList.OpenView();
+        OpportunityList.Filter.SetFilter("Contact No.", FilterText);
+        OpportunityList.Close();
+    end;
+
     local procedure Initialize()
     begin
         LibraryTestInitialize.OnTestInitialize(CODEUNIT::"Marketing Opportunity Mgmt");
@@ -1927,17 +1966,6 @@ codeunit 136209 "Marketing Opportunity Mgmt"
 
         LibraryMarketing.CreateSalesCycle(SalesCycle);
         CreateSalesCycleStage(SalesCycleStage, SalesCycle.Code);
-    end;
-
-    local procedure CreateContactWithSalesPerson(var Contact: Record Contact)
-    var
-        SalespersonPurchaser: Record "Salesperson/Purchaser";
-    begin
-        Initialize();
-        LibraryMarketing.CreatePersonContact(Contact);
-        CreateSalespersonWithEmail(SalespersonPurchaser);
-        Contact.Validate("Salesperson Code", SalespersonPurchaser.Code);
-        Contact.Modify(true);
     end;
 
     local procedure CreateCustomerTemplateForContact(VATBusPostingGroupCode: Code[20]): Code[20]
@@ -2692,4 +2720,3 @@ codeunit 136209 "Marketing Opportunity Mgmt"
         Assert.ExpectedMessage(ExpectedMsg, Message);
     end;
 }
-

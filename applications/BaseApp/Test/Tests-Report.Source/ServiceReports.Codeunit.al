@@ -2151,7 +2151,7 @@ codeunit 136900 "Service Reports"
         ServiceContractTemplate: Record "Service Contract Template";
         SignServContractDoc: Codeunit SignServContractDoc;
     begin
-        // [SCENARIO 555819] Expected Invoice Amount in Create Service Contracts Invoice Report 
+        // [SCENARIO 555819] Expected Invoice Amount in Create Service Contracts Invoice Report
         // Opened with Print Only is equal to the total of Line Value in non prepaid Service Contract.
         Initialize();
 
@@ -2184,7 +2184,7 @@ codeunit 136900 "Service Reports"
         // [GIVEN] Create a Service Contract Account Group.
         LibraryService.CreateServiceContractAcctGrp(ServiceContractAccountGroup);
 
-        // [GIVEN] Validate Annual Amount, Serv. Contract Acc. Gr. Code, 
+        // [GIVEN] Validate Annual Amount, Serv. Contract Acc. Gr. Code,
         // Invoice Period and Prepaid in Service Contract Header.
         ServiceContractHeader.Validate("Annual Amount", LibraryRandom.RandIntInRange(100, 100));
         ServiceContractHeader.Validate("Serv. Contract Acc. Gr. Code", ServiceContractAccountGroup.Code);
@@ -2205,9 +2205,59 @@ codeunit 136900 "Service Reports"
         // [WHEN] Run Create Service Contract Invoices Report.
         RunCreateContractInvoices(ServiceContractHeader);
 
-        // [THEN] Expected Invoice Amount in Create Service Contract Invoices Report 
+        // [THEN] Expected Invoice Amount in Create Service Contract Invoices Report
         // Is equal to Line Value of Service Contract Line.
         VerifyContractInvoicingExpectedInvAmount(ServiceContractHeader, ServiceContractLine);
+    end;
+
+    [Test]
+    [HandlerFunctions('ServiceInvoiceToExcelRequestPageHandler')]
+    procedure ServiceInvoiceShowsTranslatedVATClause()
+    var
+        ServiceHeader: Record "Service Header";
+        ServiceInvoiceHeader: Record "Service Invoice Header";
+        VATClause: Record "VAT Clause";
+        VATPostingSetup: Record "VAT Posting Setup";
+        VATClauseTranslation: Record "VAT Clause Translation";
+        Customer: Record Customer;
+        Language: Record Language;
+        ServiceInvoiceNo: Code[20];
+    begin
+        // [SCENARIO 575517] Check Report 5911 "Service - Invoice" shows the translated VAT Clause.
+        Initialize();
+
+        // [GIVEN] Language code "DEU".
+        Language.Validate(Code, LibraryUtility.GenerateGUID());
+        Language.Insert(true);
+
+        // [GIVEN] VAT Posting Setup with the VAT clause that has a translation for the language code "X". Description = "Beschreibung 1", "Description 2" ="Beschreibung 2"
+        LibraryERM.CreateVATPostingSetupWithAccounts(VATPostingSetup, VATPostingSetup."VAT Calculation Type"::"Normal VAT", 0);
+        LibraryERM.CreateVATClause(VATClause);
+        VATPostingSetup.Validate("VAT Clause Code", VATClause.Code);
+        VATPostingSetup.Modify(true);
+
+        // [GIVEN] Create VAT Clause Translation.
+        CreateVATClauseTranslation(VATClauseTranslation, VATClause.Code, Language.Code);
+
+        // [GIVEN] Service Invoice with the VAT Posting setup associated with the VAT Clause.
+        LibrarySales.CreateCustomer(Customer);
+        Customer.Validate("Language Code", Language.Code);
+        Customer.Validate("VAT Bus. Posting Group", VATPostingSetup."VAT Bus. Posting Group");
+        Customer.Modify(true);
+        LibraryService.CreateServiceHeader(ServiceHeader, ServiceHeader."Document Type"::Invoice, Customer."No.");
+        CreateServiceLineWithItemWithVATPostingSetup(ServiceHeader, VATPostingSetup);
+
+        // [GIVEN] Posted Service Invoice.
+        ServiceInvoiceNo := PostServiceInvoice(ServiceHeader);
+        ServiceInvoiceHeader.Get(ServiceInvoiceNo);
+        ServiceInvoiceHeader.SetRecFilter();
+
+        // [WHEN] Run report "Service - Invoice" for Posted Service Invoice.
+        Report.Run(Report::"Service - Invoice", true, false, ServiceInvoiceHeader);
+
+        // [THEN] Report DataSet contains VAT Clause fields: "Beschreibung 1" and "Beschreibung 2".
+        LibraryReportValidation.OpenExcelFile();
+        VerifyVATClauseTranslationDescription(VATClauseTranslation);//assert
     end;
 
     local procedure Initialize()
@@ -2399,13 +2449,6 @@ codeunit 136900 "Service Reports"
     begin
         LibraryERM.CreateReasonCode(ReasonCode);
         exit(ReasonCode.Code);
-    end;
-
-    local procedure CreateSalesOrder(var SalesHeader: Record "Sales Header"; var SalesLine: Record "Sales Line")
-    begin
-        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Order, '');
-        LibrarySales.CreateSalesLine(
-          SalesLine, SalesHeader, SalesLine.Type::Item, '', LibraryRandom.RandDecInRange(5, 10, 2));
     end;
 
     local procedure CreateServiceOrderWithDiscount(var ServiceHeader: Record "Service Header"; var ServiceItemLineNo: Integer; var DiscountPct: Decimal)
@@ -3172,6 +3215,51 @@ codeunit 136900 "Service Reports"
         LibraryReportDataset.AssertCurrentRowValueEquals('ServLedgEntryAmt', ServiceContractLine."Line Value");
     end;
 
+    local procedure PostServiceInvoice(var ServiceHeader: Record "Service Header"): Code[20]
+    begin
+        // "Invoice" parameter must be false when posting a service invoice via PostServiceOrder, otherwise posting fails
+        LibraryService.PostServiceOrder(ServiceHeader, false, false, false);
+        exit(ServiceHeader."Last Posting No.");
+    end;
+
+    local procedure CreateServiceLineWithItemWithVATPostingSetup(ServiceHeader: Record "Service Header"; VATPostingSetup: Record "VAT Posting Setup")
+    var
+        Item: Record Item;
+        ServiceLine: Record "Service Line";
+    begin
+        LibraryInventory.CreateItem(Item);
+        Item.Validate("VAT Prod. Posting Group", VATPostingSetup."VAT Prod. Posting Group");
+        Item.Modify(true);
+        LibraryService.CreateServiceLine(ServiceLine, ServiceHeader, ServiceLine.Type::Item, Item."No.");
+        ServiceLine.Validate(Quantity, LibraryRandom.RandDec(100, 2));
+        ServiceLine.Validate("Unit Price", LibraryRandom.RandDec(100, 2));
+        ServiceLine.Modify(true);
+    end;
+
+    local procedure CreateVATClauseTranslation(var VATClauseTranslation: Record "VAT Clause Translation"; VATClauseCode: Code[20]; LanguageCode: Code[10])
+    begin
+        VATClauseTranslation.Validate("VAT Clause Code", VATClauseCode);
+        VATClauseTranslation.Validate("Language Code", LanguageCode);
+        VATClauseTranslation.Validate(Description, LibraryUtility.GenerateGUID());
+        VATClauseTranslation.Validate("Description 2", LibraryUtility.GenerateGUID());
+        VATClauseTranslation.Insert(true);
+    end;
+
+    local procedure VerifyVATClauseTranslationDescription(var VATClauseTranslation: Record "VAT Clause Translation")
+    var
+        RowNo: Integer;
+        ColumnNo: Integer;
+        CheckValueExist: Boolean;
+    begin
+        CheckValueExist := LibraryReportValidation.CheckIfValueExists(VATClauseTranslation.Description + ' ' + VATClauseTranslation."Description 2");
+        if CheckValueExist then begin
+            ColumnNo := LibraryReportValidation.FindFirstColumnNoByValue(CopyStr(VATClauseTranslation.Description + ' ' + VATClauseTranslation."Description 2", 1, 250));
+            RowNo := LibraryReportValidation.FindRowNoFromColumnNoAndValue(ColumnNo, CopyStr(VATClauseTranslation.Description + ' ' + VATClauseTranslation."Description 2", 1, 250));
+            Assert.AreNotEqual(0, LibraryReportValidation.FindRowNoFromColumnNoAndValueInsideArea(ColumnNo, CopyStr(VATClauseTranslation.Description + ' '
+                + VATClauseTranslation."Description 2", 1, 250), StrSubstNo('=%1', RowNo)), '');
+        end;
+    end;
+
     [ConfirmHandler]
     [Scope('OnPrem')]
     procedure ConfirmHandlerFalse(Question: Text[1024]; var Reply: Boolean)
@@ -3463,4 +3551,3 @@ codeunit 136900 "Service Reports"
         ServiceOrder.SaveAsXml(LibraryReportDataset.GetParametersFileName(), LibraryReportDataset.GetFileName());
     end;
 }
-

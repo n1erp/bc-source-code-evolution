@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Purchases.Document;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Purchases.Document;
 
 using Microsoft.Purchases.Archive;
 using Microsoft.Purchases.History;
@@ -187,7 +191,7 @@ report 492 "Copy Purchase Document"
 
         OnPreReportOnBeforeCopyPurchaseDoc(CopyDocMgt, CurrReport.UseRequestPage(), IncludeHeader, RecalculateLines);
 
-        CopyDocMgt.CopyPurchDoc(FromDocType, FromDocNo, PurchHeader);
+        CopyDocMgt.CopyPurchDoc(FromDocType, FromDocNo, PurchHeader, true);
 
         OnAfterOnPreReport(FromDocType, FromDocNo, PurchHeader);
     end;
@@ -287,14 +291,25 @@ report 492 "Copy Purchase Document"
             end;
         FromPurchHeader."No." := '';
 
+        UpdateIncludeHeader();
+        OnBeforeValidateIncludeHeader(IncludeHeader, FromDocType.AsInteger(), PurchHeader, FromPurchHeader);
+        ValidateIncludeHeader();
+    end;
+
+    local procedure UpdateIncludeHeader()
+    var
+        IsHandled: Boolean;
+    begin
+        IsHandled := false;
+        OnBeforeUpdateIncludeHeader(IncludeHeader, FromDocType.AsInteger(), PurchHeader, FromPurchHeader, IsHandled);
+        if IsHandled then
+            exit;
+
         IncludeHeader :=
           (FromDocType in [FromDocType::"Posted Invoice", FromDocType::"Posted Credit Memo"]) and
           ((FromDocType = FromDocType::"Posted Credit Memo") <>
            (PurchHeader."Document Type" = PurchHeader."Document Type"::"Credit Memo")) and
           (PurchHeader."Buy-from Vendor No." in [FromPurchHeader."Buy-from Vendor No.", '']);
-
-        OnBeforeValidateIncludeHeader(IncludeHeader, FromDocType.AsInteger(), PurchHeader, FromPurchHeader);
-        ValidateIncludeHeader();
     end;
 
     local procedure FindFromPurchHeaderArchive()
@@ -473,7 +488,14 @@ report 492 "Copy Purchase Document"
     end;
 
     protected procedure ValidateIncludeHeader()
+    var
+        IsHandled: Boolean;
     begin
+        IsHandled := false;
+        OnValidateIncludeHeaderOnBeforeUpdateRecalculateLines(IncludeHeader, FromDocType.AsInteger(), PurchHeader, FromPurchHeader, IsHandled);
+        if IsHandled then
+            exit;
+
         RecalculateLines :=
           (FromDocType in [FromDocType::"Posted Receipt", FromDocType::"Posted Return Shipment"]) or not IncludeHeader;
         OnAfterValidateIncludeHeader(RecalculateLines, IncludeHeader);
@@ -621,6 +643,16 @@ report 492 "Copy Purchase Document"
 
     [IntegrationEvent(false, false)]
     local procedure OnValidateDocNoOnCaseElse(FromDocumentType: Enum "Purchase Document Type From"; var FromPurchaseHeader: Record "Purchase Header"; FromDocumentNo: Code[20]; var FromDocumentNoOccurrance: Integer; var FromDocumentVersionNo: Integer)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeUpdateIncludeHeader(var IncludeHeader: Boolean; DocType: Integer; var PurchaseHeader: Record "Purchase Header"; FromPurchaseHeader: Record "Purchase Header"; var IsHandled: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnValidateIncludeHeaderOnBeforeUpdateRecalculateLines(var IncludeHeader: Boolean; DocType: Integer; var PurchaseHeader: Record "Purchase Header"; FromPurchaseHeader: Record "Purchase Header"; var IsHandled: Boolean)
     begin
     end;
 }

@@ -10,6 +10,9 @@ import threading
 import azure.ai.evaluation.simulator as aais_simulator
 from azure.identity import DefaultAzureCredential
 
+ADVERSARIAL_INDIRECT_JAILBREAK = "ADVERSARIAL_INDIRECT_JAILBREAK"
+
+
 class PeekableQueue(queue.Queue):
     def peek(self):
         with self.not_empty:
@@ -27,6 +30,7 @@ class Simulation():
     def __init__(
             self,
             id,
+            language,
             scenario,
             max_simulation_results,
             max_conversation_turns,
@@ -44,7 +48,10 @@ class Simulation():
         self.queries = PeekableQueue()
         self.responses = ResponseQueue()
 
+        supported_language = aais_simulator.SupportedLanguages(language)
+
         simulator_params = {
+            "language": supported_language,
             "scenario": aais_simulator.AdversarialScenario.__members__.get(scenario),
             "target": self._callback,
             "max_simulation_results": max_simulation_results,
@@ -55,16 +62,20 @@ class Simulation():
         if upia:
             simulator_params["_jailbreak_type"] = "upia"
 
+        print(f"SCENARIO: {scenario} in language {supported_language}.")
         simulator_class = aais_simulator.AdversarialSimulator
-        if (simulator_params["scenario"] == aais_simulator.AdversarialScenario.ADVERSARIAL_INDIRECT_JAILBREAK):
+        if (scenario == ADVERSARIAL_INDIRECT_JAILBREAK):
             simulator_class = aais_simulator.IndirectAttackSimulator
             del simulator_params["randomization_seed"] # Seed is not supported for XPIA
+            del simulator_params["scenario"] # Scenario is not supported for XPIA
 
         simulator = simulator_class(azure_ai_project=azure_ai_project, credential=DefaultAzureCredential())
 
-        print(f"\nSimulation {self.id} created with parameters {simulator_params}\n")
+        print(f"\nSimulator {simulator} created with parameters {simulator_params}\n")
 
         simulation = simulator(**simulator_params)
+
+        print(f"\nSimulation {self.id} created with parameters {simulator_params}\n")
 
         # Create a separate thread for the simulation to not block the API
         self.thread = threading.Thread(target=asyncio.run, args=(simulation,))
@@ -93,7 +104,7 @@ class Simulation():
 
         self.queries.put(query)
 
-        print(f"\nQuery:\n   - '{query["query"][0:100]}'\n   - result: {self.simulation_result_number}\n   - turn: {self.conversation_turn_number}\n")
+        print(f"\nQuery:\n   - '{query['query'][0:100]}'\n   - result: {self.simulation_result_number}\n   - turn: {self.conversation_turn_number}\n")
 
         response = self.responses.get()
         print(f"\nResponse:\n   - '{response}'\n   - result: {self.simulation_result_number}\n   - turn: {self.conversation_turn_number}\n")

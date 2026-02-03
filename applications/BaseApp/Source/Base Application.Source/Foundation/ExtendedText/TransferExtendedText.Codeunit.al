@@ -33,10 +33,6 @@ codeunit 378 "Transfer Extended Text"
         MakeUpdateRequired: Boolean;
         AutoText: Boolean;
 
-#pragma warning disable AA0074
-        Text000: Label 'There is not enough space to insert extended text lines.';
-#pragma warning restore AA0074
-
     procedure SalesCheckIfAnyExtText(var SalesLine: Record "Sales Line"; Unconditionally: Boolean): Boolean
     var
         SalesHeader: Record "Sales Header";
@@ -332,17 +328,7 @@ codeunit 378 "Transfer Extended Text"
         if IsHandled then
             exit;
 
-        ToReminderLine.Reset();
-        ToReminderLine.SetRange("Reminder No.", ReminderLine."Reminder No.");
-        ToReminderLine := ReminderLine;
-        if ToReminderLine.Find('>') then begin
-            LineSpacing :=
-              (ToReminderLine."Line No." - ReminderLine."Line No.") div
-              (1 + TempExtTextLine.Count);
-            if LineSpacing = 0 then
-                Error(Text000);
-        end else
-            LineSpacing := 10000;
+        LineSpacing := 10; // New fixed Line Spacing method
 
         NextLineNo := ReminderLine."Line No." + LineSpacing;
 
@@ -377,17 +363,7 @@ codeunit 378 "Transfer Extended Text"
         if IsHandled then
             exit;
 
-        ToFinChrgMemoLine.Reset();
-        ToFinChrgMemoLine.SetRange("Finance Charge Memo No.", FinChrgMemoLine."Finance Charge Memo No.");
-        ToFinChrgMemoLine := FinChrgMemoLine;
-        if ToFinChrgMemoLine.Find('>') then begin
-            LineSpacing :=
-              (ToFinChrgMemoLine."Line No." - FinChrgMemoLine."Line No.") div
-              (1 + TempExtTextLine.Count);
-            if LineSpacing = 0 then
-                Error(Text000);
-        end else
-            LineSpacing := 10000;
+        LineSpacing := 10; // New fixed Line Spacing method
 
         NextLineNo := FinChrgMemoLine."Line No." + LineSpacing;
 
@@ -427,19 +403,13 @@ codeunit 378 "Transfer Extended Text"
         if IsHandled then
             exit;
 
+        LineSpacing := 10; // New fixed Line Spacing method
+
         ToPurchLine.Reset();
         ToPurchLine.SetRange("Document Type", PurchLine."Document Type");
         ToPurchLine.SetRange("Document No.", PurchLine."Document No.");
         ToPurchLine := PurchLine;
         InsertPurchExtTextRetLastOnBeforeToPurchLineFind(ToPurchLine);
-        if ToPurchLine.Find('>') then begin
-            LineSpacing :=
-              (ToPurchLine."Line No." - PurchLine."Line No.") div
-              (1 + TempExtTextLine.Count);
-            if LineSpacing = 0 then
-                Error(Text000);
-        end else
-            LineSpacing := 10000;
 
         NextLineNo := PurchLine."Line No." + LineSpacing;
 
@@ -721,18 +691,7 @@ codeunit 378 "Transfer Extended Text"
         if IsHandled then
             exit;
 
-        ToServiceLine.Reset();
-        ToServiceLine.SetRange("Document Type", ServiceLine."Document Type");
-        ToServiceLine.SetRange("Document No.", ServiceLine."Document No.");
-        ToServiceLine := ServiceLine;
-        if ToServiceLine.Find('>') then begin
-            LineSpacing :=
-              (ToServiceLine."Line No." - ServiceLine."Line No.") div
-              (1 + TempExtTextLine.Count);
-            if LineSpacing = 0 then
-                Error(Text000);
-        end else
-            LineSpacing := 10000;
+        LineSpacing := 10; // New fixed Line Spacing method
 
         NextLineNo := ServiceLine."Line No." + LineSpacing;
 
@@ -770,7 +729,13 @@ codeunit 378 "Transfer Extended Text"
     procedure JobCheckIfAnyExtText(var JobPlanningLine: Record "Job Planning Line"; Unconditionally: Boolean; Job: Record Job) Result: Boolean
     var
         ExtTextHeader: Record "Extended Text Header";
+        IsHandled: Boolean;
     begin
+        IsHandled := false;
+        OnBeforeJobCheckIfAnyExtText(JobPlanningLine, Unconditionally, MakeUpdateRequired, AutoText, Result, IsHandled);
+        if IsHandled then
+            exit(Result);
+
         MakeUpdateRequired := false;
         if IsDeleteAttachedLines(JobPlanningLine."Line No.", JobPlanningLine."No.", JobPlanningLine."Attached to Line No.") and not JobPlanningLine.IsExtendedText() then
             MakeUpdateRequired := DeleteJobPlanningLines(JobPlanningLine);
@@ -851,12 +816,6 @@ codeunit 378 "Transfer Extended Text"
         OnBeforeInsertJobExtTextRetLast(JobPlanningLine, TempExtTextLine, MakeUpdateRequired);
 
         LineSpacing := 10; // New fixed Line Spacing method
-
-        ToJobPlanningLine.Reset();
-        ToJobPlanningLine.SetRange("Job No.", JobPlanningLine."Job No.");
-        ToJobPlanningLine.SetRange("Job Task No.", JobPlanningLine."Job Task No.");
-        ToJobPlanningLine := JobPlanningLine;
-
         NextLineNo := JobPlanningLine."Line No." + LineSpacing;
 
         TempExtTextLine.Reset();
@@ -1168,5 +1127,9 @@ codeunit 378 "Transfer Extended Text"
     local procedure OnInsertSalesExtTextRetLastOnAfterSetLineSpacing(var LineSpacing: Integer)
     begin
     end;
-}
 
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeJobCheckIfAnyExtText(var JobPlanningLine: Record "Job Planning Line"; Unconditionally: Boolean; var MakeUpdateRequired: Boolean; var AutoText: Boolean; var Result: Boolean; var IsHandled: Boolean)
+    begin
+    end;
+}

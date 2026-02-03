@@ -396,9 +396,9 @@ report 6520 "Item Tracing Specification"
     protected var
         TempTrackEntry: Record "Item Tracing Buffer" temporary;
         NoOfRecords: Integer;
-        HeaderText: array[11] of Text[50];
-        BodyText: array[11] of Text[50];
-        FieldCaption: array[11] of Text[50];
+        HeaderText: array[11] of Text;
+        BodyText: array[11] of Text;
+        FieldCaption: array[11] of Text;
         FldNo: array[11] of Integer;
 
     procedure TransferEntries(var ItemTrackingEntry: Record "Item Tracing Buffer")

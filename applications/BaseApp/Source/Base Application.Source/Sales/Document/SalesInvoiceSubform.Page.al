@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Sales.Document;
 
 using Microsoft.Finance.AllocationAccount;
@@ -938,7 +942,7 @@ page 47 "Sales Invoice Subform"
                         Caption = 'Get &Project Planning Lines';
                         Ellipsis = true;
                         Image = JobLines;
-                        ToolTip = 'Select multiple planning lines to the same customer because you want to combine them on one invoice.';
+                        ToolTip = 'Select multiple planning lines associated with the same billing and selling customer to consolidate them into a single invoice. Lines must be associated with invoice currency code that matches that of the invoice.';
 
                         trigger OnAction()
                         begin
@@ -1258,12 +1262,12 @@ page 47 "Sales Invoice Subform"
         if IsHandled then
             exit(Result);
 
-        if (Rec.Quantity <> 0) and Rec.ItemExists(Rec."No.") then begin
-            Commit();
-            if not SalesLineReserve.DeleteLineConfirm(Rec) then
-                exit(false);
-            SalesLineReserve.DeleteLine(Rec);
-        end;
+        if Rec.Quantity <> 0 then
+            if Rec.ItemExists(Rec."No.") then begin
+                if not SalesLineReserve.DeleteLineConfirm(Rec) then
+                    exit(false);
+                SalesLineReserve.DeleteLine(Rec);
+            end;
         DocumentTotals.SalesDocTotalsNotUpToDate();
     end;
 
@@ -1363,10 +1367,11 @@ page 47 "Sales Invoice Subform"
 
     local procedure SetOpenPage()
     var
+        [SecurityFiltering(SecurityFilter::Filtered)]
+        Location: Record Location;
         ServerSetting: Codeunit "Server Setting";
         PriceCalculationMgt: Codeunit "Price Calculation Mgt.";
         DocumentErrorsMgt: Codeunit "Document Errors Mgt.";
-        Location: Record Location;
     begin
         OnBeforeSetOpenPage();
 
@@ -1393,6 +1398,7 @@ page 47 "Sales Invoice Subform"
             exit;
 
         SalesHeader.Get(Rec."Document Type", Rec."Document No.");
+        SalesHeader.TestStatusOpen();
         SalesCalcDiscByType.ApplyInvDiscBasedOnAmt(InvoiceDiscountAmount, SalesHeader);
         DocumentTotals.SalesDocTotalsNotUpToDate();
         CurrPage.Update(false);
@@ -1531,11 +1537,16 @@ page 47 "Sales Invoice Subform"
     end;
 
     procedure DeltaUpdateTotals()
+    var
+        IsHandled: Boolean;
     begin
         if SuppressTotals then
             exit;
 
-        OnBeforeDeltaUpdateTotals(Rec, xRec, SuppressTotals);
+        IsHandled := false;
+        OnBeforeDeltaUpdateTotals(Rec, xRec, SuppressTotals, IsHandled);
+        if IsHandled then
+            exit;
 
         DocumentTotals.SalesDeltaUpdateTotals(Rec, xRec, TotalSalesLine, VATAmount, InvoiceDiscountAmount, InvoiceDiscountPct);
         if Rec."Line Amount" <> xRec."Line Amount" then
@@ -1680,7 +1691,7 @@ page 47 "Sales Invoice Subform"
     end;
 
     [IntegrationEvent(true, false)]
-    local procedure OnBeforeDeltaUpdateTotals(var SalesLine: Record "Sales Line"; xSalesLine: Record "Sales Line"; SuppressTotals: Boolean)
+    local procedure OnBeforeDeltaUpdateTotals(var SalesLine: Record "Sales Line"; xSalesLine: Record "Sales Line"; SuppressTotals: Boolean; var IsHandled: Boolean)
     begin
     end;
 

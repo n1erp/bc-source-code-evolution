@@ -1058,6 +1058,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Audit File Export Setup - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3665447164 - Control 1750257447 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Data Quality</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Audit File Export Setup - Control Data Quality - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3665447164 - Control 2627088132 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies if you want to be notified about the address that has not been set up correctly.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1092,6 +1097,11 @@
           <source>Specifies the post code to use when no values specified in the customer or vendor card.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Audit File Export Setup - Control DefaultPostCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3665447164 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Audit File Export Setup - Control General - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3665447164 - Control 2051062043 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the default audit file export format code.</source>
@@ -1248,91 +1258,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping - Control StartingDate - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 3668181135 - Property 2019332006" size-unit="char" translate="yes" xml:space="preserve">
-          <source>New, Process</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Property PromotedActionCategories</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>G/L Account Mapping</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Control 668720920 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Mapping</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Control Mapping - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Control 1597877536 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the starting date of the accounting period that will be used as reporting period.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Control AccountingPeriod - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Control 1203412368 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the audit file export format to which the standard general ledger accounts are linked.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Control AuditFileExportFormat - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Control 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the mapping code that represents the reporting period.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Control Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Control 3592094765 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the ending date of the reporting period.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Control EndingDate - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Control 1163052056 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies if the incoming balance of G/L account of type "Balance Account" needs to be considered for mapping instead of the reporting period's net change.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Control IncludeIncomingBalance - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Control 43593927 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the type for an accounting period or custom period with a flexible start date/time.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Control PeriodType - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Control 1377863565 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the code of the standard account or grouping code that is used for mapping.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Control StanadrdAccountNo - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Control 772199925 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the category of the standard account or grouping code that is used for mapping.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Control StandardAccountCategoryNo - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Control 705636630 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the type of the standard general ledger accounts.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Control StandardAccountType - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Control 543275552 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the starting date of the reporting period.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Control StartingDate - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Action 3517601603 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Copy the G/L account mapping from another mapping code.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Action CopyMapping - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Action 3517601603 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Copy from Another Mapping</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Action CopyMapping - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Action 972680765 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Generate lines on the G/L Account Mapping page based on an existing chart of accounts.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Action InitMappingSource - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3668181135 - Action 972680765 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Initialize Source for Mapping</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page G/L Account Mapping Card - Action InitMappingSource - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 2470509826 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Lines</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1418,10 +1343,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Standard Accounts - Control No. - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 1032828427 - Control 1878130204 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of standard general ledger accounts that is used for mapping.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Standard Accounts - Control Type - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Report 3152158736 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Copy G/L Account Mapping</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Copy G/L Account Mapping - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3152158736 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Copy G/L Account Mapping - Control General - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 3152158736 - Control 54877203 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the general ledger account mapping code to copy mapping from.</source>
@@ -1443,11 +1378,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Copy G/L Account Mapping - Control ReplaceControl - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2425764697 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source> </source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum Audit Data Check Status - EnumValue   - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Enum 2425764697 - EnumValue 3826689261 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1458,6 +1388,36 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum Audit Data Check Status - EnumValue Passed - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Enum 3747849523 - EnumValue 3431463797 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Custom</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Audit File Export Data Class - EnumValue Custom - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3747849523 - EnumValue 4089118995 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General Ledger Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Audit File Export Data Class - EnumValue GeneralLedgerEntries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3747849523 - EnumValue 1572708512 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Master Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Audit File Export Data Class - EnumValue MasterData - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3747849523 - EnumValue 3371220206 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Audit File Export Data Class - EnumValue None - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3747849523 - EnumValue 1088794139 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Documents</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Audit File Export Data Class - EnumValue SourceDocuments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1217862704 - EnumValue 3371220206 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Audit File Export Format - EnumValue None - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Enum 1719650270 - EnumValue 2327360480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Accounting Period</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1467,6 +1427,26 @@
           <source>Date Range</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum G/L Acc. Mapping Period Type - EnumValue Date Range - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1719650270 - EnumValue 3371220206 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum G/L Acc. Mapping Period Type - EnumValue None - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2341503086 - EnumValue 3371220206 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Standard Account Type - EnumValue None - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 242939956 - Property 2879900210" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Audit Export - Edit</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet Audit Export - Edit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 3008181602 - Property 2879900210" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Audit Export - Read</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet Audit Export - Read - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3546478469 - Property 2019332006" size-unit="char" translate="yes" xml:space="preserve">
           <source>New, Process</source>

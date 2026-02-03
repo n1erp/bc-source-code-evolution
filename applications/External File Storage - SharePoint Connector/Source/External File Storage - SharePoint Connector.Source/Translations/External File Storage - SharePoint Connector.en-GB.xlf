@@ -3,22 +3,238 @@
   <file datatype="xml" source-language="en-US" target-language="en-GB" original="External File Storage - SharePoint Connector">
     <body>
       <group id="body">
-        <trans-unit id="Table 153473473 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1805637975 - NamedType 1293915263" maxwidth="250" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use SharePoint to store and retrieve files.</source>
+          <target state="translated">Use SharePoint to store and retrieve files.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - NamedType ConnectorDescriptionTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1805637975 - NamedType 1482857067" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>We could not find the account. Typically, this is because the account has been deleted.</source>
+          <target state="translated">We could not find the account. Typically, this is because the account has been deleted.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - NamedType NotRegisteredAccountErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1805637975 - Method 1700570109 - NamedType 541854896" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>An error occured.\%1</source>
+          <target state="translated">An error occured.\%1</target>
+          <note from="Developer" annotates="general" priority="2">%1 - Error message from sharepoint(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - Method ShowError - NamedType ErrorOccuredErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1805637975 - Method 782160614 - NamedType 1957616760" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The account "%1" is disabled.</source>
+          <target state="translated">The account "%1" is disabled.</target>
+          <note from="Developer" annotates="general" priority="2">%1 - Account Name(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - Method InitSharePointClient - NamedType AccountDisabledErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2450500354 - EnumValue 1846567327 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate</source>
+          <target state="translated">Certificate</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=System.ExternalFileStorage)(LookupHint=Enum Ext. SharePoint Auth Type - EnumValue Certificate - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2450500354 - EnumValue 2529110793 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <target state="translated">Client Secret</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=System.ExternalFileStorage)(LookupHint=Enum Ext. SharePoint Auth Type - EnumValue Client Secret - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="EnumExtension 2160742183 - EnumValue 2366980715 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint</source>
+          <target state="translated">SharePoint</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (ObjectTarget=Enum 534202269)(Namespace=System.ExternalFileStorage)(LookupHint=EnumExtension Ext. SharePoint Connector - EnumValue SharePoint - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Action 1235620153 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Move to next step.</source>
+          <target state="translated">Move to next step.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Next - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Action 1235620153 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <target state="translated">Next</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Next - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Action 742034285 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Move to previous step.</source>
+          <target state="translated">Move to previous step.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Back - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Action 742034285 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <target state="translated">Back</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Back - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 1697509288 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Client Secret value from the App Registration in Microsoft Entra ID. This value is used to authenticate the connection to SharePoint.</source>
+          <target state="translated">Specifies the Client Secret value from the App Registration in Microsoft Entra ID. This value is used to authenticate the connection to SharePoint.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control SecretField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 1697509288 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <target state="translated">Client Secret</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control SecretField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 2740551636 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the password used to protect the private key in the certificate. Leave empty if the certificate is not password-protected.</source>
+          <target state="translated">Specifies the password used to protect the private key in the certificate. Leave empty if the certificate is not password-protected.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control CertificatePasswordField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 2740551636 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Password</source>
+          <target state="translated">Certificate Password</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control CertificatePasswordField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 349922534 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the certificate file used for authentication. Click here to upload a new certificate file (.pfx, .cer, or .crt).</source>
+          <target state="translated">Specifies the certificate file used for authentication. Click here to upload a new certificate file (.pfx, .cer, or .crt).</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control CertificateUploadStatus - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 349922534 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate</source>
+          <target state="translated">Certificate</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control CertificateUploadStatus - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 4229622380 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credentials</source>
+          <target state="translated">Credentials</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control Credentials - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 1459871223 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a descriptive name for this SharePoint storage account connection.</source>
+          <target state="translated">Specifies a descriptive name for this SharePoint storage account connection.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control NameField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 1459871223 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <target state="translated">Account Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control NameField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 1916394943 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Client Secret value from the App Registration in Microsoft Entra ID. This value is used to authenticate the connection to SharePoint.</source>
+          <target state="translated">Specifies the Client Secret value from the App Registration in Microsoft Entra ID. This value is used to authenticate the connection to SharePoint.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control ClientSecretField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 1916394943 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <target state="translated">Client Secret</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control ClientSecretField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 2740551636 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the password used to protect the private key in the certificate. Leave empty if the certificate is not password-protected.</source>
+          <target state="translated">Specifies the password used to protect the private key in the certificate. Leave empty if the certificate is not password-protected.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control CertificatePasswordField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 2740551636 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Password</source>
+          <target state="translated">Certificate Password</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control CertificatePasswordField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 2906998308 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the authentication flow used for this SharePoint account. Client Secret uses User grant flow, which means that the user must sign in when using this account. Certificate uses Client credentials flow, which means that the user does not need to sign in when using this account.</source>
+          <target state="translated">Specifies the authentication flow used for this SharePoint account. Client Secret uses User grant flow, which means that the user must sign in when using this account. Certificate uses Client credentials flow, which means that the user does not need to sign in when using this account.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control Authentication Type - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 349922534 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the certificate file used for authentication. Click here to upload a certificate file (.pfx, .cer, or .crt).</source>
+          <target state="translated">Specifies the certificate file used for authentication. Click here to upload a certificate file (.pfx, .cer, or .crt).</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control CertificateUploadStatus - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 349922534 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate</source>
+          <target state="translated">Certificate</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control CertificateUploadStatus - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 3879241928 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Client ID (Application ID) of the App Registration in Microsoft Entra ID.</source>
+          <target state="translated">Specifies the Client ID (Application ID) of the App Registration in Microsoft Entra ID.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control Client Id - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 588430355 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Microsoft Entra ID Tenant ID (Directory ID) where your SharePoint site and app registration are located.</source>
+          <target state="translated">Specifies the Microsoft Entra ID Tenant ID (Directory ID) where your SharePoint site and app registration are located.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control Tenant Id - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 92775614 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint Name</source>
+          <target state="translated">SharePoint Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control SharePoint Url - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Method 2555594772 - NamedType 2553944727" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate uploaded (click to change)</source>
+          <target state="translated">Certificate uploaded (click to change)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Method UpdateCertificateStatus - NamedType CertificateUploadedLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Method 2555594772 - NamedType 76040314" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No certificate (click to upload)</source>
+          <target state="translated">No certificate (click to upload)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Method UpdateCertificateStatus - NamedType NoCertificateLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Method 2555594772 - NamedType 1236401456" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Click to upload certificate file...</source>
+          <target state="translated">Click to upload certificate file...</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Method UpdateCertificateStatus - NamedType NoCertificateUploadedLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Method 2555594772 - NamedType 2553944727" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate uploaded (click to change)</source>
+          <target state="translated">Certificate uploaded (click to change)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Method UpdateCertificateStatus - NamedType CertificateUploadedLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>SharePoint Account</source>
           <target state="translated">SharePoint Account</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Property Caption)</note>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Table 153473473 - NamedType 1723178096" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unable to get SharePoint Account Client Secret.</source>
-          <target state="translated">Unable to get SharePoint Account Client Secret.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToGetClientMsg)</note>
+        <trans-unit id="Page 4098062784 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Setup SharePoint Account</source>
+          <target state="translated">Setup SharePoint Account</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Table 153473473 - NamedType 366485914" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unable to set SharePoint Client Secret.</source>
-          <target state="translated">Unable to set SharePoint Client Secret.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToSetClientSecretMsg)</note>
+        <trans-unit id="PermissionSet 1217000447 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint - Objects</source>
+          <target state="translated">SharePoint - Objects</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. SharePoint - Objects - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 1768104129 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint - Edit</source>
+          <target state="translated">SharePoint - Edit</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. SharePoint - Edit - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 3164621731 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint - Read</source>
+          <target state="translated">SharePoint - Read</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. SharePoint - Read - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Table 153473473 - Field 1562360606 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -33,9 +249,57 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Base Relative Folder Path - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
+        <trans-unit id="Table 153473473 - Field 1864907812 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the account is disabled. Accounts are automatically disabled when a sandbox environment is created from production.</source>
+          <target state="translated">Specifies if the account is disabled. Accounts are automatically disabled when a sandbox environment is created from production.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Disabled - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 1864907812 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disabled</source>
+          <target state="translated">Disabled</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Disabled - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2906998308 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the authentication flow used for this SharePoint account. Client Secret uses User grant flow, which means that the user must sign in when using this account. Certificate uses Client credentials flow, which means that the user does not need to sign in when using this account.</source>
+          <target state="translated">Specifies the authentication flow used for this SharePoint account. Client Secret uses User grant flow, which means that the user must sign in when using this account. Certificate uses Client credentials flow, which means that the user does not need to sign in when using this account.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Authentication Type - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2906998308 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authentication Type</source>
+          <target state="translated">Authentication Type</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Authentication Type - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2961552353 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a descriptive name for this SharePoint storage account connection.</source>
+          <target state="translated">Specifies a descriptive name for this SharePoint storage account connection.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2961552353 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <target state="translated">Account Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2971556863 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Password Key</source>
+          <target state="translated">Certificate Password Key</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Certificate Password Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 3302236422 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Key</source>
+          <target state="translated">Certificate Key</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Certificate Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
         <trans-unit id="Table 153473473 - Field 3879241928 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the the Client Id of the App Registration.</source>
-          <target state="translated">Specifies the the Client Id of the App Registration.</target>
+          <source>Specifies the Client ID (Application ID) of the App Registration in Microsoft Entra ID.</source>
+          <target state="translated">Specifies the Client ID (Application ID) of the App Registration in Microsoft Entra ID.</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Client Id - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
@@ -51,51 +315,15 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Client Secret Key - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Table 153473473 - Field 1864907812 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies if the account is disabled. This happens automatically when a sandbox is created.</source>
-          <target state="translated">Specifies if the account is disabled. This happens automatically when a sandbox is created.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Disabled - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 153473473 - Field 1864907812 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Disabled</source>
-          <target state="translated">Disabled</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Disabled - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
         <trans-unit id="Table 153473473 - Field 415504711 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Primary Key</source>
           <target state="translated">Primary Key</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Id - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Table 153473473 - Field 2961552353 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the name of the storage account connection.</source>
-          <target state="translated">Specifies the name of the storage account connection.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Name - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 153473473 - Field 2961552353 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Account Name</source>
-          <target state="translated">Account Name</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Name - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 153473473 - Field 92775614 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the the url to your SharePoint site.</source>
-          <target state="translated">Specifies the the url to your SharePoint site.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field SharePoint Url - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 153473473 - Field 92775614 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SharePoint Url</source>
-          <target state="translated">SharePoint Url</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field SharePoint Url - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
         <trans-unit id="Table 153473473 - Field 588430355 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Tenant Id of the App Registration.</source>
-          <target state="translated">Specifies the Tenant Id of the App Registration.</target>
+          <source>Specifies the Microsoft Entra ID Tenant ID (Directory ID) where your SharePoint site and app registration are located.</source>
+          <target state="translated">Specifies the Microsoft Entra ID Tenant ID (Directory ID) where your SharePoint site and app registration are located.</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Tenant Id - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
@@ -105,137 +333,70 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field Tenant Id - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 1805637975 - NamedType 1293915263" maxwidth="250" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Use SharePoint to store and retrieve files.</source>
-          <target state="translated">Use SharePoint to store and retrieve files.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - NamedType ConnectorDescriptionTxt)</note>
+        <trans-unit id="Table 153473473 - Field 92775614 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the complete URL to your SharePoint site (e.g., https://mysharepoint.sharepoint.com/sites/ProjectX). This is the site URL where your documents will be stored.</source>
+          <target state="translated">Specifies the complete URL to your SharePoint site (e.g., https://mysharepoint.sharepoint.com/sites/ProjectX). This is the site URL where your documents will be stored.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field SharePoint Url - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 1805637975 - NamedType 1482857067" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>We could not find the account. Typically, this is because the account has been deleted.</source>
-          <target state="translated">We could not find the account. Typically, this is because the account has been deleted.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - NamedType NotRegisteredAccountErr)</note>
+        <trans-unit id="Table 153473473 - Field 92775614 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint Url</source>
+          <target state="translated">SharePoint Url</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Field SharePoint Url - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 1805637975 - Method 782160614 - NamedType 1957616760" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The account "%1" is disabled.</source>
-          <target state="translated">The account "%1" is disabled.</target>
-          <note from="Developer" annotates="general" priority="2">%1 - Account Name(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - Method InitSharePointClient - NamedType AccountDisabledErr)</note>
+        <trans-unit id="Table 153473473 - NamedType 1723178096" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to get SharePoint Account Client Secret.</source>
+          <target state="translated">Unable to get SharePoint Account Client Secret.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToGetClientMsg)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 1805637975 - Method 1700570109 - NamedType 541854896" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>An error occured.\%1</source>
-          <target state="translated">An error occured.\%1</target>
-          <note from="Developer" annotates="general" priority="2">%1 - Error message from sharepoint(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. SharePoint Connector Impl - Method ShowError - NamedType ErrorOccuredErr)</note>
+        <trans-unit id="Table 153473473 - NamedType 1998288797" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to set SharePoint Certificate Password.</source>
+          <target state="translated">Unable to set SharePoint Certificate Password.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToSetCertificatePasswordMsg)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 153473473 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 153473473 - NamedType 2689045865" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to get SharePoint Account Certificate Password.</source>
+          <target state="translated">Unable to get SharePoint Account Certificate Password.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToGetCertificatePasswordMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - NamedType 366485914" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to set SharePoint Client Secret.</source>
+          <target state="translated">Unable to set SharePoint Client Secret.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToSetClientSecretMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - NamedType 4038086976" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to set SharePoint Certificate.</source>
+          <target state="translated">Unable to set SharePoint Certificate.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToSetCertificateMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - NamedType 504935412" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to get SharePoint Account Certificate.</source>
+          <target state="translated">Unable to get SharePoint Account Certificate.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - NamedType UnableToGetCertificateMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Method 3780574772 - NamedType 2313763999" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate Files (*.pfx;*.p12)|*.pfx;*.p12|All Files (*.*)|*.*</source>
+          <target state="translated">Certificate Files (*.pfx;*.p12)|*.pfx;*.p12|All Files (*.*)|*.*</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Method UploadCertificateFile - NamedType CertificateFilterTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Method 3780574772 - NamedType 3077000456" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certificate file was not uploaded.</source>
+          <target state="translated">Certificate file was not uploaded.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Method UploadCertificateFile - NamedType FileNotUploadedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>SharePoint Account</source>
           <target state="translated">SharePoint Account</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 153473473 - Control 1697509288 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the the Client Secret of the App Registration.</source>
-          <target state="translated">Specifies the the Client Secret of the App Registration.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control SecretField - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 153473473 - Control 1697509288 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Password</source>
-          <target state="translated">Password</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account - Control SecretField - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Setup SharePoint Account</source>
-          <target state="translated">Setup SharePoint Account</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 1916394943 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Client Secret of the App Registration.</source>
-          <target state="translated">Specifies the Client Secret of the App Registration.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control ClientSecretField - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 1916394943 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Client Secret</source>
-          <target state="translated">Client Secret</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control ClientSecretField - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 1459871223 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the name of the Azure SharePoint account.</source>
-          <target state="translated">Specifies the name of the Azure SharePoint account.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control NameField - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 1459871223 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Account Name</source>
-          <target state="translated">Account Name</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control NameField - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 92775614 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the SharePoint to use of the storage account.</source>
-          <target state="translated">Specifies the SharePoint to use of the storage account.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control SharePoint Url - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Control 92775614 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SharePoint Name</source>
-          <target state="translated">SharePoint Name</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Control SharePoint Url - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Action 742034285 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Move to previous step.</source>
-          <target state="translated">Move to previous step.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Back - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Action 742034285 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Back</source>
-          <target state="translated">Back</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Back - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Action 1235620153 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Move to next step.</source>
-          <target state="translated">Move to next step.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Next - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4098062784 - Action 1235620153 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Next</source>
-          <target state="translated">Next</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. SharePoint Account Wizard - Action Next - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="EnumExtension 2160742183 - EnumValue 2366980715 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SharePoint</source>
-          <target state="translated">SharePoint</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-          <note from="ObjectTarget" annotates="general" priority="5">Enum 534202269</note>
-        </trans-unit>
-        <trans-unit id="PermissionSet 1768104129 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SharePoint - Edit</source>
-          <target state="translated">SharePoint - Edit</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. SharePoint - Edit - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="PermissionSet 1217000447 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SharePoint - Objects</source>
-          <target state="translated">SharePoint - Objects</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. SharePoint - Objects - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="PermissionSet 3164621731 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SharePoint - Read</source>
-          <target state="translated">SharePoint - Read</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. SharePoint - Read - Property Caption)</note>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. SharePoint Account - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
       </group>

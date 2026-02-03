@@ -1,3 +1,8 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+
 namespace Microsoft.Integration.Shopify;
 
 /// <summary>
@@ -24,6 +29,11 @@ codeunit 30200 "Shpfy Communication Events"
 
     [InternalEvent(false)]
     internal procedure OnClientPost(var Url: Text; var Content: HttpContent; var Response: HttpResponseMessage)
+    begin
+    end;
+
+    [InternalEvent(false)]
+    internal procedure OnClientGet(var Url: Text; var Response: HttpResponseMessage)
     begin
     end;
 }

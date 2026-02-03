@@ -12,7 +12,6 @@ table 8002 "Planned Subscription Line"
     Caption = 'Planned Subscription Line';
     LookupPageId = "Planned Service Commitments";
     DrillDownPageId = "Planned Service Commitments";
-    Access = Internal;
 
     fields
     {
@@ -74,7 +73,8 @@ table 8002 "Planned Subscription Line"
             Caption = 'Calculation Base Amount';
             MinValue = 0;
             BlankZero = true;
-            AutoFormatType = 2;
+            AutoFormatType = 1;
+            AutoFormatExpression = Rec."Currency Code";
 
             trigger OnValidate()
             begin
@@ -95,6 +95,7 @@ table 8002 "Planned Subscription Line"
             MinValue = 0;
             BlankZero = true;
             DecimalPlaces = 0 : 5;
+            AutoFormatType = 0;
 
             trigger OnValidate()
             begin
@@ -107,6 +108,7 @@ table 8002 "Planned Subscription Line"
             Editable = false;
             BlankZero = true;
             AutoFormatType = 2;
+            AutoFormatExpression = Rec."Currency Code";
 
             trigger OnValidate()
             begin
@@ -121,6 +123,7 @@ table 8002 "Planned Subscription Line"
             MaxValue = 100;
             BlankZero = true;
             DecimalPlaces = 0 : 5;
+            AutoFormatType = 0;
         }
         field(13; "Discount Amount"; Decimal)
         {
@@ -128,12 +131,14 @@ table 8002 "Planned Subscription Line"
             MinValue = 0;
             BlankZero = true;
             AutoFormatType = 1;
+            AutoFormatExpression = Rec."Currency Code";
         }
         field(14; Amount; Decimal)
         {
             Caption = 'Amount';
             BlankZero = true;
             AutoFormatType = 1;
+            AutoFormatExpression = Rec."Currency Code";
 
         }
         field(15; "Billing Base Period"; DateFormula)
@@ -192,6 +197,7 @@ table 8002 "Planned Subscription Line"
                 if Format("Extension Term") = '' then
                     TestField("Notice Period", "Extension Term");
                 DateFormulaManagement.ErrorIfDateFormulaNegative("Extension Term");
+                CheckRatioBetweenBillingBasePeriodAndRhythm();
             end;
         }
         field(23; "Billing Rhythm"; DateFormula)
@@ -201,6 +207,7 @@ table 8002 "Planned Subscription Line"
             begin
                 DateFormulaManagement.ErrorIfDateFormulaEmpty("Billing Rhythm", FieldCaption("Billing Rhythm"));
                 DateFormulaManagement.ErrorIfDateFormulaNegative("Billing Rhythm");
+                CheckRatioBetweenBillingBasePeriodAndRhythm();
             end;
         }
         field(24; "Cancellation Possible Until"; Date)
@@ -261,6 +268,7 @@ table 8002 "Planned Subscription Line"
             Editable = false;
             BlankZero = true;
             AutoFormatType = 2;
+            AutoFormatExpression = '';
         }
         field(32; "Discount Amount (LCY)"; Decimal)
         {
@@ -269,6 +277,7 @@ table 8002 "Planned Subscription Line"
             MinValue = 0;
             BlankZero = true;
             AutoFormatType = 1;
+            AutoFormatExpression = '';
         }
         field(33; "Service Amount (LCY)"; Decimal)
         {
@@ -276,6 +285,7 @@ table 8002 "Planned Subscription Line"
             Editable = false;
             BlankZero = true;
             AutoFormatType = 1;
+            AutoFormatExpression = '';
         }
         field(34; "Currency Code"; Code[10])
         {
@@ -289,6 +299,7 @@ table 8002 "Planned Subscription Line"
             DecimalPlaces = 0 : 15;
             Editable = false;
             MinValue = 0;
+            AutoFormatType = 0;
         }
         field(36; "Currency Factor Date"; Date)
         {
@@ -301,6 +312,7 @@ table 8002 "Planned Subscription Line"
             Editable = false;
             BlankZero = true;
             AutoFormatType = 2;
+            AutoFormatExpression = '';
         }
         field(50; "Next Price Update"; Date)
         {
@@ -328,6 +340,7 @@ table 8002 "Planned Subscription Line"
         field(101; "Unit Cost (LCY)"; Decimal)
         {
             AutoFormatType = 2;
+            AutoFormatExpression = '';
             Caption = 'Unit Cost (LCY)';
 
             trigger OnValidate()
@@ -386,12 +399,6 @@ table 8002 "Planned Subscription Line"
         key(Contract; "Subscription Contract No.", "Subscription Contract Line No.") { }
         key(Quote; "Sales Quote No.", "Sales Quote Line No.") { }
     }
-    trigger OnModify()
-    begin
-        xRec.Get(xRec."Entry No.");
-        if ((xRec."Billing Base Period" <> Rec."Billing Base Period") or (xRec."Billing Rhythm" <> Rec."Billing Rhythm")) then
-            DateFormulaManagement.CheckIntegerRatioForDateFormulas("Billing Base Period", FieldCaption("Billing Base Period"), "Billing Rhythm", FieldCaption("Billing Rhythm"));
-    end;
 
     local procedure CheckServiceDates()
     begin
@@ -426,10 +433,17 @@ table 8002 "Planned Subscription Line"
             Validate(Price, 0);
     end;
 
+    local procedure CheckRatioBetweenBillingBasePeriodAndRhythm()
+    var
+    begin
+        if (Format("Billing Base Period") <> '') and (Format("Billing Rhythm") <> '') then
+            DateFormulaManagement.CheckIntegerRatioForDateFormulas("Billing Base Period", FieldCaption("Billing Base Period"), "Billing Rhythm", FieldCaption("Billing Rhythm"));
+    end;
+
     var
         Currency: Record Currency;
         CurrExchRate: Record "Currency Exchange Rate";
         DateFormulaManagement: Codeunit "Date Formula Management";
-        DateBeforeDateErr: Label '%1 cannot be before %2.';
-        DateAfterDateErr: Label '%1 cannot be after %2.';
+        DateBeforeDateErr: Label '%1 cannot be before %2.', Comment = '%1=Field Caption, %2=Field Caption';
+        DateAfterDateErr: Label '%1 cannot be after %2.', Comment = '%1=Field Caption, %2=Field Caption';
 }

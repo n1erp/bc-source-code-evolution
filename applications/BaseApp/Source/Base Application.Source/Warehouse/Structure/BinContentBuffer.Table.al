@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Warehouse.Structure;
 
 using Microsoft.Inventory.Item;
@@ -101,6 +105,11 @@ table 7330 "Bin Content Buffer"
         field(6515; "Package No."; Code[50])
         {
             Caption = 'Package No.';
+            DataClassification = SystemMetadata;
+        }
+        field(7382; Dedicated; Boolean)
+        {
+            Caption = 'Dedicated';
             DataClassification = SystemMetadata;
         }
     }

@@ -18,7 +18,6 @@ codeunit 137140 "SCM Inventory Documents"
         LibraryPurchase: Codeunit "Library - Purchase";
         LibraryItemTracking: Codeunit "Library - Item Tracking";
         LibraryWarehouse: Codeunit "Library - Warehouse";
-        LibraryCosting: Codeunit "Library - Costing";
         LibraryUtility: Codeunit "Library - Utility";
         LibraryRandom: Codeunit "Library - Random";
         LibraryVariableStorage: Codeunit "Library - Variable Storage";
@@ -40,6 +39,9 @@ codeunit 137140 "SCM Inventory Documents"
         ReorderingPolicyShouldBeVisibleErr: Label 'Reordering Policy should be visible.';
         SpecialEquipmentCodeShouldBeVisibleErr: Label 'Special Equipment Code should be visible.';
         DueDateBeforeWorkDateMsg: Label 'is before work date';
+        TransferOrderErr: Label 'Transfer Order has not been posted successfully.';
+        ReserveMustNotBeNeverErr: Label 'Reserve must not be Never';
+        InventoryReceiptErr: Label 'Inventory Receipt has not been posted successfully.';
 
     [Test]
     [Scope('OnPrem')]
@@ -384,7 +386,7 @@ codeunit 137140 "SCM Inventory Documents"
         TransferHeader: Record "Transfer Header";
         Qty: Integer;
     begin
-        // [FEATURE] [Location] [Warehouse] [Direct Transfer] 
+        // [FEATURE] [Location] [Warehouse] [Direct Transfer]
         // [SCENARIO 449256] Direct transfer to location with directed put-away and pick cannot be posted
 
         Initialize();
@@ -611,7 +613,7 @@ codeunit 137140 "SCM Inventory Documents"
         CopyInvtDocMgt: Codeunit "Copy Invt. Document Mgt.";
     begin
         // [FEATURE] [Inventory Receipt] [Item Tracking] [Copy Document]
-        // [SCENARIO 474794] Posting correction inventory receipt with multiple serial nos. for posted inventory receipt 
+        // [SCENARIO 474794] Posting correction inventory receipt with multiple serial nos. for posted inventory receipt
 
         Initialize();
 
@@ -647,7 +649,7 @@ codeunit 137140 "SCM Inventory Documents"
         InvtDocumentHeader.Validate("Correction", true);
         InvtDocumentHeader.Modify();
 
-        // [WHEN]  Coping lines from posted Inventory Receipt with item tracking data and apllies values 
+        // [WHEN]  Coping lines from posted Inventory Receipt with item tracking data and apllies values
         CopyInvtDocMgt.SetProperties(false, true, false, false, true);
         CopyInvtDocMgt.SetCopyItemTracking(true);
         CopyInvtDocMgt.CopyItemDoc(Enum::"Invt. Doc. Document Type From"::"Posted Receipt", InvtRcptHeader."No.", InvtDocumentHeader);
@@ -933,7 +935,7 @@ codeunit 137140 "SCM Inventory Documents"
         InvtDocumentLine: Record "Invt. Document Line";
         Location: Record Location;
     begin
-        // [FEATURE 378558] [Item Receipt] 
+        // [FEATURE 378558] [Item Receipt]
         // Create item document line with non-inventory item produce error
         Initialize();
 
@@ -1058,7 +1060,7 @@ codeunit 137140 "SCM Inventory Documents"
         LocationReceipt: Record Location;
         LocationPutAwayAndPick: Record Location;
     begin
-        // [SCENARIO] It is possible to use a location with require receipt for inventory receipt document but 
+        // [SCENARIO] It is possible to use a location with require receipt for inventory receipt document but
         // not for directed put-away and pick.
         Initialize();
 
@@ -1090,7 +1092,7 @@ codeunit 137140 "SCM Inventory Documents"
         LocationShipment: Record Location;
         LocationPutAwayAndPick: Record Location;
     begin
-        // [SCENARIO] It is possible to use a location with require receipt for inventory shipment document but 
+        // [SCENARIO] It is possible to use a location with require receipt for inventory shipment document but
         // not for directed put-away and pick.
         Initialize();
 
@@ -1325,7 +1327,7 @@ codeunit 137140 "SCM Inventory Documents"
         InvtDocumentLine.Validate("Unit of Measure Code", ItemUnitOfMeasure.Code);
         InvtDocumentLine.Modify();
 
-        // [VERIFY] Verify Unit Cost will update when Base Unit Of Measure Code is Change to new Unit of Measure Code. 
+        // [VERIFY] Verify Unit Cost will update when Base Unit Of Measure Code is Change to new Unit of Measure Code.
         Assert.AreEqual(Item."Unit Cost" * ItemUnitOfMeasure."Qty. per Unit of Measure", InvtDocumentLine."Unit Cost", UnitCostErr);
     end;
 
@@ -1643,7 +1645,7 @@ codeunit 137140 "SCM Inventory Documents"
         // [THEN] Find the first Inventory Shipment Line
         InvtShipment.ShipmentLines.First();
 
-        // [VERIFY] Verify: The dimension on the Inventory Shipment line should be empty        
+        // [VERIFY] Verify: The dimension on the Inventory Shipment line should be empty
         Assert.AreEqual('', InvtShipment.ShipmentLines."Shortcut Dimension 1 Code".Value, StrSubstNo(DimensionErr, ''));
     end;
 
@@ -1948,11 +1950,212 @@ codeunit 137140 "SCM Inventory Documents"
         CreateRegisterWhsePick(WhseActivityHeader, WarehouseShipmentLine, TransferLine.Quantity);
         PostWhseShipmentFromTO(TransferHeader."No.");
         LibraryNotificationMgt.RecallNotificationsForRecordID(AssemblyHeader.RecordId);
-        //[WHEN] Post created assembly order    
+        //[WHEN] Post created assembly order
         LibraryAssembly.PostAssemblyHeader(AssemblyHeader, '');
 
         //[THEN] Assembly Order should be posted successfully.
 
+    end;
+
+    [Test]
+    procedure PostDirectTransferOrderWithReservation()
+    var
+        DirectTransHeader: Record "Direct Trans. Header";
+        Item: Record Item;
+        LocationA: Record Location;
+        LocationB: Record Location;
+        TransferHeader: Record "Transfer Header";
+        TransferLine: Record "Transfer Line";
+        InventorySetup: Record "Inventory Setup";
+        TransferOrderNo: Code[20];
+    begin
+        // [Scenario 565331] Verify Direct Transfer with reservation posted successfully.
+        Initialize();
+
+        // [GIVEN] Update Inventory setup with Direct Transfer Posting as Direct Transfer and Prevent Negative Inventory as TRUE
+        InventorySetup.Get();
+        InventorySetup."Prevent Negative Inventory" := true;
+        InventorySetup."Direct Transfer Posting" := InventorySetup."Direct Transfer Posting"::"Direct Transfer";
+        InventorySetup.Modify();
+
+        // [GIVEN] Create Two locations: "A" and "B" without Warehouse Setup
+        LibraryWarehouse.CreateLocationWithInventoryPostingSetup(LocationA);
+        LibraryWarehouse.CreateLocationWithInventoryPostingSetup(LocationB);
+
+        // [GIVEN] Create an Item
+        LibraryInventory.CreateItem(Item);
+
+        // [GIVEN] Create and Post Item Journal Line
+        CreateAndPostItemJournalLine(Item."No.", LocationA.Code, '');
+
+        // [GIVEN] Create a Direct Transfer Order from Location "A" to location "B" and Reserve From Inventory
+        CreateDirectTransferHeader(TransferHeader, LocationA.code, LocationB.Code);
+        TransferHeader.Validate("Posting Date", WorkDate());
+        TransferHeader.Modify(true);
+
+        LibraryWarehouse.CreateTransferLine(TransferHeader, TransferLine, Item."No.", 10);
+        TransferLine.ReserveFromInventory(TransferLine);
+        TransferHeader.PerformManualRelease();
+        TransferOrderNo := TransferHeader."No.";
+
+        // [WHEN] Post the Direct Transfer Order
+        LibraryInventory.PostDirectTransferOrder(TransferHeader);
+
+        // [THEN] Verify Direct TransferOrder Posted Successfully.
+        DirectTransHeader.SetRange("Transfer Order No.", TransferOrderNo);
+        Assert.IsTrue(DirectTransHeader.FindFirst(), TransferOrderErr);
+    end;
+
+    [Test]
+    procedure PostDirectTransferOrderWithTwoReservation()
+    var
+        DirectTransHeader: Record "Direct Trans. Header";
+        InventorySetup: Record "Inventory Setup";
+        ItemA: Record Item;
+        ItemB: Record Item;
+        LocationA: Record Location;
+        LocationB: Record Location;
+        TransferHeader: Record "Transfer Header";
+        TransferLine: Record "Transfer Line";
+        TransferOrderNo: Code[20];
+    begin
+        // [Scenario 565331] Verify Direct Transfer with two reservation posted successfully.
+        Initialize();
+
+        // [GIVEN] Update Inventory Setup with Direct Transfer Posting as Direct Transfer and Prevent Negative Inventory as TRUE
+        InventorySetup.Get();
+        InventorySetup."Prevent Negative Inventory" := true;
+        InventorySetup."Direct Transfer Posting" := InventorySetup."Direct Transfer Posting"::"Direct Transfer";
+        InventorySetup.Modify();
+
+        // [GIVEN] Create Two locations: "A" and "B" without Warehouse Setup
+        LibraryWarehouse.CreateLocationWithInventoryPostingSetup(LocationA);
+        LibraryWarehouse.CreateLocationWithInventoryPostingSetup(LocationB);
+
+        // [GIVEN] Create two Item A and Item B.
+        LibraryInventory.CreateItem(ItemA);
+        LibraryInventory.CreateItem(ItemB);
+
+        // [GIVEN] Create and Post Item Journal Line for Item A and Item B.
+        CreateAndPostItemJournalLine(ItemA."No.", LocationA.Code, '');
+        CreateAndPostItemJournalLine(ItemB."No.", LocationA.Code, '');
+
+        // [GIVEN] Create a Direct Transfer Order from Location "A" to location "B" for Item A and Reserve From Inventory
+        CreateDirectTransferHeader(TransferHeader, LocationA.code, LocationB.Code);
+        TransferHeader.Validate("Posting Date", WorkDate());
+        TransferHeader.Modify(true);
+
+        LibraryWarehouse.CreateTransferLine(TransferHeader, TransferLine, ItemA."No.", 5);
+        TransferLine.ReserveFromInventory(TransferLine);
+        TransferHeader.PerformManualRelease();
+
+        // [GIVEN] Post the Direct Transfer Order
+        LibraryInventory.PostDirectTransferOrder(TransferHeader);
+
+        // [GIVEN] Create a Direct Transfer Order from Location "A" to location "B" for Item B and Reserve From Inventory
+        CreateDirectTransferHeader(TransferHeader, LocationA.code, LocationB.Code);
+        TransferHeader.Validate("Posting Date", WorkDate());
+        TransferHeader.Modify(true);
+
+        LibraryWarehouse.CreateTransferLine(TransferHeader, TransferLine, ItemB."No.", 5);
+        TransferLine.ReserveFromInventory(TransferLine);
+        TransferHeader.PerformManualRelease();
+        TransferOrderNo := TransferHeader."No.";
+
+        // [WHEN] Post the Direct Transfer Order
+        LibraryInventory.PostDirectTransferOrder(TransferHeader);
+
+        // [THEN] Verify Direct TransferOrder Posted Successfully.
+        DirectTransHeader.SetRange("Transfer Order No.", TransferOrderNo);
+        Assert.IsTrue(DirectTransHeader.FindFirst(), TransferOrderErr);
+    end;
+
+    [Test]
+    procedure ReservationShouldNotPossibleOnTransferOrderIfItemReserveSetAsNever()
+    var
+        Item: Record Item;
+        LocationA: Record Location;
+        LocationB: Record Location;
+        TransferHeader: Record "Transfer Header";
+        TransferLine: Record "Transfer Line";
+    begin
+        // [SCENARIO 578318] Reservation of an Item possible with in a Transfer order if the item is set to reserve=never
+        Initialize();
+
+        // [GIVEN] Create Two locations: "A" and "B" without Warehouse Setup
+        LibraryWarehouse.CreateLocationWithInventoryPostingSetup(LocationA);
+        LibraryWarehouse.CreateLocationWithInventoryPostingSetup(LocationB);
+
+        // [GIVEN] Create an Item with Reserve = Never
+        LibraryInventory.CreateItem(Item);
+        Item.Validate(Reserve, Item.Reserve::Never);
+        Item.Modify();
+
+        // [GIVEN] Create and Post Item Journal Line
+        CreateAndPostItemJournalLine(Item."No.", LocationA.Code, '');
+
+        // [GIVEN] Create a Direct Transfer Order from Location "A" to location "B" and Reserve From Inventory
+        CreateDirectTransferHeader(TransferHeader, LocationA.code, LocationB.Code);
+        TransferHeader.Validate("Posting Date", WorkDate());
+        TransferHeader.Modify(true);
+
+        // [WHEN] Create transfer line with Item with Reserve set as Never and Show Reservation
+        LibraryWarehouse.CreateTransferLine(TransferHeader, TransferLine, Item."No.", 10);
+        asserterror TransferLine.ShowReservation();
+
+        // [THEN] Verify Reserve must not be Never error
+        Assert.ExpectedErrorCode('TestField');
+        Assert.ExpectedError(ReserveMustNotBeNeverErr);
+    end;
+
+    [Test]
+    [HandlerFunctions('ItemTrackingLinesPageHandler')]
+    procedure PostInvtReceiptWithNonBaseUOMAndMultipleTrackingEntries()
+    var
+        Item: Record Item;
+        ItemUOM: Record "Item Unit of Measure";
+        InvtDocumentHeader: Record "Invt. Document Header";
+        InvtDocumentLine: Record "Invt. Document Line";
+        ItemTrackingCode: Record "Item Tracking Code";
+        InvtReceiptHeader: Record "Invt. Receipt Header";
+        Location: Record Location;
+        UnitOfMeasure: Record "Unit of Measure";
+        DocumentNo: Code[20];
+    begin
+        // [SCENARIO 591585] Post Inventory Receipt When Line Contains Item with Non-Base UoM and Multiple Tracking Entries.
+        Initialize();
+
+        // [GIVEN] Create Item and Item Unit of Measure with QtyperUoM as 0.01.
+        LibraryInventory.CreateItem(Item);
+        LibraryInventory.CreateUnitOfMeasureCode(UnitOfMeasure);
+        LibraryInventory.CreateItemUnitOfMeasure(ItemUOM, Item."No.", UnitOfMeasure.code, 0.01);
+
+        // [GIVEN] Create Item Tracking Code and assign it to Item.
+        LibraryItemTracking.CreateItemTrackingCode(ItemTrackingCode, false, true);
+        Item.Validate("Item Tracking Code", ItemTrackingCode.Code);
+        Item.Modify(true);
+
+        // [GIVEN] Create Inventory Receipt Document.
+        LibraryWarehouse.CreateLocationWithInventoryPostingSetup(Location);
+        LibraryInventory.CreateInvtDocument(InvtDocumentHeader, InvtDocumentHeader."Document Type"::Receipt, Location.Code);
+
+        // [GIVEN] Add Inventory Receipt line with non-base UOM, Quantity as 100.
+        LibraryInventory.CreateInvtDocumentLine(InvtDocumentHeader, InvtDocumentLine, Item."No.", LibraryRandom.RandDec(100, 2), 100);
+        InvtDocumentLine.Validate("Unit of Measure Code", UnitOfMeasure.Code);
+        InvtDocumentLine.Modify(true);
+
+        // [GIVEN] Assign two tracking lines with different quantities as 0.7 and 0.3.
+        LibraryVariableStorage.Enqueue(0.7);
+        LibraryVariableStorage.Enqueue(0.3);
+        InvtDocumentLine.OpenItemTrackingLines();
+
+        // [WHEN] Post the Inventory Receipt .
+        DocumentNo := InvtDocumentHeader."No.";
+        LibraryInventory.PostInvtDocument(InvtDocumentHeader);
+
+        // [THEN] Inventory Receipt should be posted successfully.
+        InvtReceiptHeader.SetRange("Receipt No.", DocumentNo);
+        Assert.IsTrue(InvtReceiptHeader.FindFirst(), InventoryReceiptErr);
     end;
 
     local procedure PostWhseShipmentFromTO(DocumentNo: Code[20])
@@ -2268,19 +2471,6 @@ codeunit 137140 "SCM Inventory Documents"
           DefaultDimension, DATABASE::Item, Item."No.", Dimension.Code, DimensionValue.Code);
     end;
 
-    local procedure CreateItemJournalLine(var ItemJournalLine: Record "Item Journal Line"; EntryType: Enum "Item Ledger Entry Type"; ItemNo: Code[20]; Quantity: Decimal; UnitCost: Decimal)
-    var
-        ItemJournalTemplate: Record "Item Journal Template";
-        ItemJournalBatch: Record "Item Journal Batch";
-    begin
-        LibraryInventory.FindItemJournalTemplate(ItemJournalTemplate);
-        LibraryInventory.CreateItemJournalBatch(ItemJournalBatch, ItemJournalTemplate.Name);
-        LibraryInventory.CreateItemJournalLine(ItemJournalLine, ItemJournalTemplate.Name, ItemJournalBatch.Name, EntryType, ItemNo, Quantity);
-
-        ItemJournalLine.Validate("Unit Cost", UnitCost);
-        ItemJournalLine.Modify(true);
-    end;
-
     local procedure CreateSalespersonPurchaseWithDimension(var SalespersonPurchaser: Record "Salesperson/Purchaser"; var DimensionValue: Record "Dimension Value")
     var
         Dimension: Record Dimension;
@@ -2344,36 +2534,6 @@ codeunit 137140 "SCM Inventory Documents"
         InventorySetup.Get();
         InventorySetup."Copy Comments to Invt. Doc." := true;
         InventorySetup.Modify();
-    end;
-
-    local procedure PostItemJournalLine(EntryType: Enum "Item Ledger Entry Type"; ItemNo: Code[20]; Quantity: Decimal; UnitCost: Decimal)
-    var
-        ItemJournalLine: Record "Item Journal Line";
-    begin
-        CreateItemJournalLine(ItemJournalLine, EntryType, ItemNo, Quantity, UnitCost);
-        LibraryInventory.PostItemJournalLine(ItemJournalLine."Journal Template Name", ItemJournalLine."Journal Batch Name");
-    end;
-
-    local procedure PostItemRevaluation(ItemNo: Code[20]; NewAmount: Decimal)
-    var
-        Item: Record Item;
-        ItemJournalTemplate: Record "Item Journal Template";
-        ItemJournalBatch: Record "Item Journal Batch";
-        ItemJournalLine: Record "Item Journal Line";
-    begin
-        LibraryCosting.AdjustCostItemEntries(ItemNo, '');
-
-        Item.SetRange("No.", ItemNo);
-        LibraryInventory.CreateItemJournalBatchByType(ItemJournalBatch, ItemJournalTemplate.Type::Revaluation);
-        LibraryCosting.CreateRevaluationJournal(
-          ItemJournalBatch, Item, WorkDate(), LibraryUtility.GenerateGUID(), "Inventory Value Calc. Per"::Item, false, false, false, "Inventory Value Calc. Base"::" ", false);
-        ItemJournalLine.SetRange("Journal Template Name", ItemJournalBatch."Journal Template Name");
-        ItemJournalLine.SetRange("Journal Batch Name", ItemJournalBatch.Name);
-        ItemJournalLine.FindFirst();
-        ItemJournalLine.Validate("Inventory Value (Revalued)", NewAmount);
-        ItemJournalLine.Modify(true);
-
-        LibraryInventory.PostItemJournalLine(ItemJournalLine."Journal Template Name", ItemJournalLine."Journal Batch Name");
     end;
 
     local procedure SetupForItemDocument(var SalespersonPurchaser: Record "Salesperson/Purchaser"; var Location: Record Location; var DimensionValue: Record "Dimension Value")
@@ -2554,6 +2714,18 @@ codeunit 137140 "SCM Inventory Documents"
         AvailableInvtDocLines.Reserve.Invoke();
     end;
 
+    [ModalPageHandler]
+    procedure ItemTrackingLinesPageHandler(var ItemTrackingLines: TestPage "Item Tracking Lines")
+    begin
+        ItemTrackingLines.New();
+        ItemTrackingLines."Lot No.".SetValue(LibraryUtility.GenerateGUID());
+        ItemTrackingLines."Quantity (Base)".SetValue(LibraryVariableStorage.DequeueDecimal());
+        ItemTrackingLines.New();
+        ItemTrackingLines."Lot No.".SetValue(LibraryUtility.GenerateGUID());
+        ItemTrackingLines."Quantity (Base)".SetValue(LibraryVariableStorage.DequeueDecimal());
+        ItemTrackingLines.OK().Invoke();
+    end;
+
     [ConfirmHandler]
     [Scope('OnPrem')]
     procedure ConfirmHandlerTrue(Question: Text[1024]; var Reply: Boolean)
@@ -2567,4 +2739,3 @@ codeunit 137140 "SCM Inventory Documents"
         Reply := false;
     end;
 }
-

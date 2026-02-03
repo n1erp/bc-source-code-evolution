@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Sales.Reminder;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Sales.Reminder;
 
 using Microsoft.Bank.BankAccount;
 using Microsoft.CRM.Contact;
@@ -713,7 +717,7 @@ report 117 Reminder
                             end else
                                 BodyTxt := ReminderEmailText.GetBodyLbl();
                         end;
-                        OnLetterTextOnPreDataItemOnAfterSetAmtDueTxt("Issued Reminder Header", AmtDueTxt);
+                        OnLetterTextOnPreDataItemOnAfterSetAmtDueTxt("Issued Reminder Header", AmtDueTxt, GreetingTxt, BodyTxt, ClosingTxt, DescriptionTxt);
                     end;
                 }
             }
@@ -787,6 +791,8 @@ report 117 Reminder
                 NNC_VATAmount := 0;
                 NNC_TotalInclVAT := 0;
                 TotalRemAmt := 0;
+
+                OnAfterResetAmounts(VATInterest, AddFeeInclVAT, AddFeePerLineInclVAT);
             end;
 
             trigger OnPreDataItem()
@@ -843,6 +849,8 @@ report 117 Reminder
 
         trigger OnInit()
         begin
+            LogInteraction := SegManagement.FindInteractionTemplateCode(Enum::"Interaction Log Entry Document Type"::"Sales Rmdr.") <> '';
+            LogInteractionEnable := LogInteraction;
             if ReportParametersInitialized then
                 LogInteractionEnable := true;
         end;
@@ -851,8 +859,6 @@ report 117 Reminder
         begin
             if ReportParametersInitialized then
                 exit;
-            LogInteraction := SegManagement.FindInteractionTemplateCode(Enum::"Interaction Log Entry Document Type"::"Sales Rmdr.") <> '';
-            LogInteractionEnable := LogInteraction;
         end;
     }
 
@@ -1067,7 +1073,12 @@ report 117 Reminder
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnLetterTextOnPreDataItemOnAfterSetAmtDueTxt(var IssuedReminderHeader: Record "Issued Reminder Header"; var AmtDueTxt: Text)
+    local procedure OnLetterTextOnPreDataItemOnAfterSetAmtDueTxt(var IssuedReminderHeader: Record "Issued Reminder Header"; var AmtDueTxt: Text; var GreetingTxt: Text; var BodyTxt: Text; var ClosingTxt: Text; var DescriptionTxt: Text)
+    begin
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnAfterResetAmounts(var VATInterest: Decimal; var AddFeeInclVAT: Decimal; var AddFeePerLineInclVAT: Decimal)
     begin
     end;
 }

@@ -18,10 +18,15 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Bank Deposit Posting Tests - NamedType GLEntryErr</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2437925581 - Method 710346161 - NamedType 403291627" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 2437925581 - Method 2261378691 - NamedType 403291627" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reversed field is not calculated correctly.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Bank Deposit Posting Tests - Method VerifyReversedOnPostedBankDepositList - NamedType ReversedErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Bank Deposit Posting Tests - Method VerifyReversedOnPostedBankDepositCard - NamedType ReversedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1661462096 - NamedType 531924155" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies-to ID must contain Bank Deposit No. and Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Page Bank Deposit - NamedType AppliesToIDErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 1661462096 - NamedType 2932411483" size-unit="char" translate="yes" xml:space="preserve">
           <source>Validation error for Field: Posting Date,  Message = </source>
@@ -47,6 +52,11 @@
           <source>AmountDue</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Report Bank Deposit - NamedType AmountDueCapTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3617257267 - NamedType 4106141210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AmountPmtTolerance_Control1020036</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Report Bank Deposit - NamedType AmountPmtToleranceCapTxt</note>
         </trans-unit>
         <trans-unit id="Codeunit 3617257267 - NamedType 3755173550" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dim1Number</source>

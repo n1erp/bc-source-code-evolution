@@ -3,6 +3,116 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Sustainability Tests">
     <body>
       <group id="body">
+        <trans-unit id="Codeunit 983294985 - NamedType 2239636051" size-unit="char" translate="yes" xml:space="preserve">
+          <source>'%1' field should be hidden.</source>
+          <note from="Developer" annotates="general" priority="2">%1 - field caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Sustainability Test - NamedType FieldHiddenMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 983294985 - NamedType 3827439018" size-unit="char" translate="yes" xml:space="preserve">
+          <source>'%1' field should be shown.</source>
+          <note from="Developer" annotates="general" priority="2">%1 - field caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Sustainability Test - NamedType FieldShownMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 983294985 - NamedType 2421134277" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Response should not be empty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Sustainability Test - NamedType ResponseEmptyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 1995986831" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balance at Date (%1)</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Emission Type</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType BalanceAtDateLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 965223736" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balance (%1)</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Emission Type</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType BalanceLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 266417211" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Baseline for %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Emission Type</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType BaselineLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 2317993408" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 caption must be equal to %2 in the Page %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Expected Value, %3 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType CaptionValueMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 3035775105" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CO2e for CH4</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType CO2eForCH4Txt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 2083863242" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CO2e for CO2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType CO2eForCO2Txt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 2207255245" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CO2e for N2O</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType CO2eForN2OTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 2265999548" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Current Value for %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Emission Type</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType CurrentValueLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 2710889780" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Default %1 Emission</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Emission Type</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType DefaultEmissionLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 395194346" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission Factor %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Emission Type</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType EmissionFactorLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 1807870741" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Emission Type</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType EmissionLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 4252895102" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Energy Consumption (%1)</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Energy Unit of Measure Code</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType EnergyConsumptionUnitOfMeasureLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 921195469" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Net Change (%1)</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Emission Type</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType NetChangeLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 1611855507" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Emission Type</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType PostedEmissionCostLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 1724446014" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Emission %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Emission Type</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType PostedEmissionLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 851719397" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Energy Consumption (%1)</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Energy Unit of Measure Code</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType PostedEnergyConsumptionUnitOfMeasureLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 419807836" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Target Value for %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Emission Type</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType TargetValueLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 1191411112" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total CBAM Cost</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType TotalCBAMCostTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3519527523 - NamedType 633268986" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Emission %1 (%2)</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Emission Type , %2 = Emission Unit of Measure Code</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Caption Class Test - NamedType TotalEmissionUnitOfMeasureLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 782872104 - NamedType 1460374629" size-unit="char" translate="yes" xml:space="preserve">
           <source>Calculate CO2e action should be visible in Page %1</source>
           <note from="Developer" annotates="general" priority="2">%1 = Page Caption</note>
@@ -13,10 +123,25 @@
           <note from="Developer" annotates="general" priority="2">%1 = Page Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType ActionShouldNotBeVisibleErr</note>
         </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 667873818" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculate Total CO2e action should be visible in Page %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType CalculateTotalCO2eActionShouldBeVisibleErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 455854149" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculate Total CO2e action should not be visible in Page %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType CalculateTotalCO2eActionShouldNotBeVisibleErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 782872104 - NamedType 2764772792" size-unit="char" translate="yes" xml:space="preserve">
           <source>Changing the Replenishment System to %1 will clear sustainability emission value. Do you want to continue?</source>
           <note from="Developer" annotates="general" priority="2">%1 = Replenishment System</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType ConfirmationForClearEmissionInfoQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 3007656137" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The value for %1 cannot be modified because there are existing sustainability ledger entries that use the unit of measure %2.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption, %2 = Unit of Measure Code</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType EmissionUOMCannotBeChangedErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 782872104 - NamedType 3848767272" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 should be enabled in Page %2</source>
@@ -28,6 +153,11 @@
           <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Page Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType FieldShouldBeVisibleErr</note>
         </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 1513560622" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 should not be editable in Page %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption, %2 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType FieldShouldNotBeEditableErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 782872104 - NamedType 1685224715" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 should not be enabled in Page %2</source>
           <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Page Caption</note>
@@ -37,6 +167,16 @@
           <source>%1 should not be visible in Page %2</source>
           <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Page Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType FieldShouldNotBeVisibleErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 1247939254" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The value must be less than or equal to %1. Value: %2.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Maximum Value, %2 = Field Value</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType RecyclabilityPercentageMaxValueErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 179269864" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The value must be greater than or equal to %1. Value: %2.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Minimum Value, %2 = Field Value</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType RecyclabilityPercentageMinValueErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 782872104 - NamedType 102787433" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sustainability Ledger Entries action should be visible in Page %1</source>
@@ -73,6 +213,56 @@
           <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Expected Value, %3 = Table Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType ValueMustBeEqualErr</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1022678408 - NamedType 604982680" size-unit="char" translate="yes" xml:space="preserve">
+          <source>At least one emission must be specified.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Energy Tracking Test - NamedType AllEmissionsZeroErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1022678408 - NamedType 1684189477" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Emission fields must have a value that is not 0.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Energy Tracking Test - NamedType EmissionMustNotBeZeroErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1022678408 - NamedType 306311142" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 must be equal to %2 in the %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Expected Value, %3 = Table Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Energy Tracking Test - NamedType ValueMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4120929770 - NamedType 547878607" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Job Queue Entry status should be On Hold.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. ESG Integration Test - NamedType JobQueueEntryStatusOnHoldErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4120929770 - NamedType 99335176" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2 must be coupled to %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Table Caption, %2 = primary key value, %3 - service name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. ESG Integration Test - NamedType RecordMustBeCoupledErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4120929770 - NamedType 370030606" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The default setup for %1 synchronization has completed successfully.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = CRM product name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. ESG Integration Test - NamedType SetupSuccessfulMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4120929770 - NamedType 233922401" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wrong control visibility.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. ESG Integration Test - NamedType WrongControlVisibilityErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1314664410 - NamedType 1033648990" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Drilldown is not possible when %1 is %2.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Field Value</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. ESG Reporting Test - NamedType DrillDownIsNotPossibleErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1314664410 - NamedType 2680134906" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 is incorrect.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. ESG Reporting Test - NamedType FilterIsIncorrectErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1314664410 - NamedType 2093272128" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The row does not exist on the TestPage.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. ESG Reporting Test - NamedType RowNotfoundErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 2480078594 - NamedType 3172811853" size-unit="char" translate="yes" xml:space="preserve">
           <source>You can only specify Sustainability Accounts for lines of type blank, invoice and credit memo for Journal Template Name=%1 ,Journal Batch Name=%2 ,Line No.=%3.</source>
           <note from="Developer" annotates="general" priority="2">%1 = Journal Template Name , %2 = Journal Batch Name , %3 = Line No.</note>
@@ -82,6 +272,56 @@
           <source>%1 must be equal to %2 in the %3.</source>
           <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Expected Value, %3 = Table Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. General Journal Test - NamedType ValueMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3460175815 - NamedType 306311142" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 must be equal to %2 in the %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Expected Value, %3 = Table Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Item Chrg Assign. Test - NamedType ValueMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 115684071 - NamedType 2210971912" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1, %2, %3 cannot all be zero. Please provide at least one non-zero value.</source>
+          <note from="Developer" annotates="general" priority="2">%1, %2 , %3 = Field Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Item Of Concern Test - NamedType AtLeastOneNonZeroEmissionValueErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 115684071 - NamedType 2494585545" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CO2e_Emission</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Item Of Concern Test - NamedType CO2e_EmissionLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 115684071 - NamedType 4059303513" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Direction</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Item Of Concern Test - NamedType DirectionLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 115684071 - NamedType 4245157981" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission_CH4</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Item Of Concern Test - NamedType Emission_CH4Lbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 115684071 - NamedType 680790" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission_CO2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Item Of Concern Test - NamedType Emission_CO2Lbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 115684071 - NamedType 899985361" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission_N2O</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Item Of Concern Test - NamedType Emission_N2OLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 115684071 - NamedType 2344936182" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sum of %1 must be %2 in Report.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Element Name , %2 = Element Value</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Item Of Concern Test - NamedType SumOfElementValueErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3974542657 - NamedType 4047901243" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The CO2e fields must have a value that is not 0.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Job Journal Test - NamedType CO2eMustNotBeZeroErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3974542657 - NamedType 306311142" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 must be equal to %2 in the %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Expected Value, %3 = Table Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Job Journal Test - NamedType ValueMustBeEqualErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 2040440002 - NamedType 306311142" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 must be equal to %2 in the %3.</source>
@@ -153,6 +393,31 @@
           <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Emission Type, %3 = Page Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Check Test - NamedType FieldShouldNotBeEditableErr</note>
         </trans-unit>
+        <trans-unit id="Codeunit 4285978806 - NamedType 4047901243" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The CO2e fields must have a value that is not 0.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Excise Test - NamedType CO2eMustNotBeZeroErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4285978806 - NamedType 1684189477" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Emission fields must have a value that is not 0.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Excise Test - NamedType EmissionMustNotBeZeroErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4285978806 - NamedType 2689946489" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 should be visible in Page %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Excise Test - NamedType FieldShouldBeVisibleErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4285978806 - NamedType 3257365064" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2 is supported with %3 %4</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption, %2 = Field Value, %3 = Field Caption, %4 = Field Value</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Excise Test - NamedType UnsupportedEntryErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4285978806 - NamedType 306311142" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 must be equal to %2 in the %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Expected Value, %3 = Table Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Excise Test - NamedType ValueMustBeEqualErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3248404358 - NamedType 458271472" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total %1 must be equal to %2 in Page %3</source>
           <note from="Developer" annotates="general" priority="2">%1 = Field Caption ,%2 = Total Amount, %3 = Page Caption</note>
@@ -197,6 +462,286 @@
           <source>%1 must be equal to %2 in the %3.</source>
           <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Expected Value, %3 = Table Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Posting Test - NamedType ValueMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 3274224402" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Approval Comment action must be visible.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType ApprovalCommentActionMustBeVisibleLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 1207331653" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Approval Comment action must not be visible.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType ApprovalCommentActionMustNotBeVisibleLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 2898171381" size-unit="char" translate="yes" xml:space="preserve">
+          <source>An approval request already exists.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType ApprovalRequestExistsErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 4256912415" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Approve action must be visible.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType ApproveActionMustBeVisibleLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 4096130140" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Approve action must not be visible.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType ApproveActionMustNotBeVisibleLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 846842187" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cancel Approval Request Journal Batch action must be disabled.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType CancelApprovalRequestJournalBatchActionMustBeDisabledLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 497360544" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cancel Approval Request Journal Batch action must be enabled.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType CancelApprovalRequestJournalBatchActionMustBeEnabledLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 1997446143" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delegate action must be visible.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType DelegateActionMustBeVisibleLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 3349339708" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delegate action must not be visible.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType DelegateActionMustNotBeVisibleLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 2381905420" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dialog</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType DialogTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 2145200405" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The %1 page contains the wrong number of comments. Comments must be equal to %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Page Name, %2 = No. of Comments</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType PageContainsWrongNumberOfCommentsLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 4139001823" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reject action must be visible.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType RejectActionMustBeVisibleLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 3447638428" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reject action must not be visible.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType RejectActionMustNotBeVisibleLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 211392733" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Send Approval Request Journal Batch action must be disabled.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType SendApprovalRequestJournalBatchActionMustBeDisabledLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2440615474 - NamedType 3377221577" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Comment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WF Sustainability Jnl. Batch - NamedType TestCommentLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sust. Caption Class Test Page</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 2730832324 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the balance of CH4 emissions at the specified date.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control BalanceAtDateCH4 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 2403615107 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the balance of CO2 emissions at the specified date.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control BalanceAtDateCO2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 1730014184 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the balance of N2O emissions at the specified date.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control BalanceAtDateN2O - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 573710443 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the balance of CH4 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control BalanceCH4 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 4025980332 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the balance of CO2 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control BalanceCO2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 3718825151 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the balance of N2O emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control BalanceN2O - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 2200360504 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the baseline CH4 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control BaselineCH4 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 3735490007 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the baseline CO2 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control BaselineCO2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 444564 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the baseline N2O emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control BaselineN2O - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 1685071209 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the CH4 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control CH4 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 3080833162 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the CO2 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control CO2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 3714066727 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the current value of CH4 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control CurrentValueCH4 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 1486505128 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the current value of CO2 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control CurrentValueCO2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 2511346179 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the current value of N2O emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control CurrentValueN2O - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 240837103 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default emission value for CH4.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control DefaultEmissionCH4 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 1239698064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default emission value for CO2.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control DefaultEmissionCO2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 2914659707 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default emission value for N2O.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control DefaultEmissionN2O - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 3892442050 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total CH4 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control EmissionCH4 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 1529505249 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total CO2 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control EmissionCO2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 644736189 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the emission factor for CH4.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control EmissionFactorCH4 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 3404573982 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the emission factor for CO2.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control EmissionFactorCO2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 1053120657 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the emission factor for N2O.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control EmissionFactorN2O - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 3627610606 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total N2O emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control EmissionN2O - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 2149196201 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the energy consumption in the specified unit of measure.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control EnergyConsumption - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 1250416965 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the N2O emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control N2O - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 3702564906 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Net change in CH4 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control NetChangeCH4 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 250295017 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Net change in CO2 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control NetChangeCO2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 717425542 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Net change in N2O emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control NetChangeN2O - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 2703446889 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the posted emission value for CH4.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control PostedEmissionCH4 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 4099208842 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the posted emission value for CO2.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control PostedEmissionCO2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 2268792645 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the posted emission value for N2O.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control PostedEmissionN2O - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 276804866 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the posted energy consumption in the specified unit of measure.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control PostedEnergyConsumption - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 54705427 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the posted total emission cost field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control PostedTotalEmissionCost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 1661504007 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the target value for CH4 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control TargetValueCH4 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 3749698056 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the target value for CO2 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control TargetValueCO2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 2802243939 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the target value for N2O emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control TargetValueN2O - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 4130593276 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the total emission cost field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control TotalEmissionCost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 4109233389 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unit of measure for total CH4 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control TotalEmissionUnitOfMeasureCH4 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 2574103886 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unit of measure for total CO2 emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control TotalEmissionUnitOfMeasureCO2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2608065190 - Control 3335493441 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unit of measure for total N2O emissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sust. Caption Class Test Page - Control TotalEmissionUnitOfMeasureN2O - Property ToolTip</note>
         </trans-unit>
       </group>
     </body>

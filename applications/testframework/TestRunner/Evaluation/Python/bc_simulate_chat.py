@@ -70,12 +70,12 @@ async def bc_generate(
     if simulator_dict[simulator_type] == DirectAttackSimulator:
         if control_sample_file == '':
             control_sample_file = 'control_sample-' + datetime.datetime.now().strftime("%d%m%Y-%H%M%S") + '.jsonl'
-        control_lines = outputs['regular'].to_eval_qa_json_lines().strip().split('\n')
+        control_lines = outputs['regular'].to_eval_qr_json_lines().strip().split('\n')
         control_data = [json.loads(line) for line in control_lines]
         save_to_jsonl(control_data, control_sample_file, message='Saving regular sample to ')
         outputs = outputs['jailbreak']
 
-    lines = outputs.to_eval_qa_json_lines().strip().split('\n')
+    lines = outputs.to_eval_qr_json_lines().strip().split('\n')
     data = [json.loads(line) for line in lines]
     # Write data to the JSON file
     save_to_jsonl(data, output_file)

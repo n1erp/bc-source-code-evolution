@@ -3,24 +3,6 @@
   <file datatype="xml" source-language="en-US" target-language="nb-NO" original="Email - SMTP API">
     <body>
       <group id="body">
-        <trans-unit id="Codeunit 270637162 - NamedType 3430817766" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Please connect to a server first.</source>
-          <target state="translated">Du må først koble til en server.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit MailKit Client - NamedType ServerNotConnectedErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 4121103001 - NamedType 1846709916" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>No extension provided the OAuth 2.0 authentication.</source>
-          <target state="translated">Ingen utvidelse gir OAuth 2.0-godkjenning.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit OAuth2 SMTP Auth - NamedType NoOAuth2ProviderErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1512706315 - NamedType 4026580400" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The address %1 could not be parsed correctly.</source>
-          <target state="translated">Kan ikke analysere adressen %1 på riktig måte.</target>
-          <note from="Developer" annotates="general" priority="2">%1=The email address(Namespace=System.Email)(LookupHint=Codeunit SMTP Message Impl - NamedType EmailParseFailureErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
         <trans-unit id="Codeunit 1512706315 - NamedType 2104307454" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>The From address %1 could not be parsed correctly.</source>
           <target state="translated">Kan ikke analysere Fra-adressen %1 på riktig måte.</target>
@@ -31,6 +13,24 @@
           <source>Could not add recipient %1.</source>
           <target state="translated">Kan ikke legge til mottakeren %1.</target>
           <note from="Developer" annotates="general" priority="2">%1 = email address(Namespace=System.Email)(LookupHint=Codeunit SMTP Message Impl - NamedType RecipientErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1512706315 - NamedType 4026580400" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The address %1 could not be parsed correctly.</source>
+          <target state="translated">Kan ikke analysere adressen %1 på riktig måte.</target>
+          <note from="Developer" annotates="general" priority="2">%1=The email address(Namespace=System.Email)(LookupHint=Codeunit SMTP Message Impl - NamedType EmailParseFailureErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 270637162 - NamedType 3430817766" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please connect to a server first.</source>
+          <target state="translated">Du må først koble til en server.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit MailKit Client - NamedType ServerNotConnectedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 4121103001 - NamedType 1846709916" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No extension provided the OAuth 2.0 authentication.</source>
+          <target state="translated">Ingen utvidelse gir OAuth 2.0-godkjenning.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit OAuth2 SMTP Auth - NamedType NoOAuth2ProviderErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="PermissionSet 3506008068 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">

@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Warehouse.Structure;
 
 page 7304 "Bin Content"
@@ -195,6 +199,8 @@ page 7304 "Bin Content"
             Rec."Location Code" := xRec."Location Code";
         if xRec."Unit of Measure Code" <> '' then
             Rec."Unit of Measure Code" := xRec."Unit of Measure Code";
+        if xRec."Qty. per Unit of Measure" > 1 then
+            Rec."Qty. per Unit of Measure" := xRec."Qty. per Unit of Measure";
         Rec.SetUpNewLine();
     end;
 }

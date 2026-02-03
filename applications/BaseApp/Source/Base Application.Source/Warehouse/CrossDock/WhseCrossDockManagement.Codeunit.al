@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Warehouse.CrossDock;
 
 using Microsoft.Foundation.UOM;
@@ -464,9 +468,12 @@ codeunit 5780 "Whse. Cross-Dock Management"
 
     local procedure UpdateQtyToCrossDock(var WarehouseReceiptLine: Record "Warehouse Receipt Line"; var RemainingNeededQtyBase: Decimal; var QtyToCrossDockBase: Decimal; var QtyOnCrossDockBase: Decimal)
     var
-        IsHandled: Boolean;
+        RunGetUseCrossDoc, IsHandled : Boolean;
     begin
-        GetUseCrossDock(UseCrossDocking, WarehouseReceiptLine."Location Code", WarehouseReceiptLine."Item No.");
+        RunGetUseCrossDoc := true;
+        OnBeforeUpdateQtyToCrossDock(UseCrossDocking, WarehouseReceiptLine, RunGetUseCrossDoc);
+        if RunGetUseCrossDoc then
+            GetUseCrossDock(UseCrossDocking, WarehouseReceiptLine."Location Code", WarehouseReceiptLine."Item No.");
         if not UseCrossDocking then
             exit;
 
@@ -860,6 +867,11 @@ codeunit 5780 "Whse. Cross-Dock Management"
 
     [IntegrationEvent(false, false)]
     local procedure OnCalcCrossDockReceivedNotCrossDockedOnAfterPostedWhseReceiptLineSetFilters(var PostedWhseReceiptLine: Record "Posted Whse. Receipt Line")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeUpdateQtyToCrossDock(var UseCrossDock: Boolean; var WarehouseReceiptLine: Record "Warehouse Receipt Line"; var RunGetUseCrossDoc: Boolean)
     begin
     end;
 }

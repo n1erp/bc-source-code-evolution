@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-GB" original="E-Document Connector - B2Brouter">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 2313483526 - NamedType 1760479663" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No API Key found for %1 environment. Please setup API Key first.</source>
+          <target state="translated">No API Key found for %1 environment. Please setup API Key first.</target>
+          <note from="Developer" annotates="general" priority="2">%1 =&gt; Production/Sandbox environment(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Codeunit B2Brouter Api Management - NamedType NoApiKeyFoundErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2313483526 - NamedType 680877491" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed to consume API.</source>
+          <target state="translated">Failed to consume API.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Codeunit B2Brouter Api Management - NamedType FailedToConsumeApiErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="EnumExtension 1889328961 - EnumValue 3763469899 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>B2Brouter</source>
+          <target state="translated">B2Brouter</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (ObjectTarget=Enum 1694972421)(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=EnumExtension B2Brouter Integration - EnumValue B2Brouter - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2900421778 - Control 1065337893 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production Environment</source>
+          <target state="translated">Production Environment</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Page B2Brouter Setup - Control Production - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2900421778 - Control 1763353490 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project</source>
+          <target state="translated">Project</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Page B2Brouter Setup - Control Production Project - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2900421778 - Control 2343602115 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the key that is used for the production environment.</source>
+          <target state="translated">Specifies the key that is used for the production environment.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Page B2Brouter Setup - Control Production API-Key - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2900421778 - Control 2343602115 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>API Key</source>
+          <target state="translated">API Key</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Page B2Brouter Setup - Control Production API-Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2900421778 - Control 2776935966 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Staging Mode</source>
+          <target state="translated">Staging Mode</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Page B2Brouter Setup - Control Staging Mode - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2900421778 - Control 479276376 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project</source>
+          <target state="translated">Project</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Page B2Brouter Setup - Control Staging Project - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2900421778 - Control 492010123 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sandbox Environment</source>
+          <target state="translated">Sandbox Environment</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Page B2Brouter Setup - Control Staging - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2900421778 - Control 711363629 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the key that is used for the staging environment.</source>
+          <target state="translated">Specifies the key that is used for the staging environment.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Page B2Brouter Setup - Control Staging API-Key - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2900421778 - Control 711363629 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>API Key</source>
+          <target state="translated">API Key</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Page B2Brouter Setup - Control Staging API-Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2900421778 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>B2Brouter Setup</source>
+          <target state="translated">B2Brouter Setup</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Page B2Brouter Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2900421778 - Field 1763353490 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the project name for the B2Brouter production environment.</source>
+          <target state="translated">Specifies the project name for the B2Brouter production environment.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Table B2Brouter Setup - Field Production Project - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2900421778 - Field 1763353490 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project</source>
+          <target state="translated">Project</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Table B2Brouter Setup - Field Production Project - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2900421778 - Field 1928539420 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the project name for the B2Brouter sandbox environment.</source>
+          <target state="translated">Specifies the project name for the B2Brouter sandbox environment.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Table B2Brouter Setup - Field Sandbox Project - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2900421778 - Field 1928539420 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sandbox Project</source>
+          <target state="translated">Sandbox Project</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Table B2Brouter Setup - Field Sandbox Project - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2900421778 - Field 3344701050 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the connector is in sandbox mode.</source>
+          <target state="translated">Specifies whether the connector is in sandbox mode.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Table B2Brouter Setup - Field Sandbox Mode - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2900421778 - Field 3344701050 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sandbox Mode</source>
+          <target state="translated">Sandbox Mode</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Table B2Brouter Setup - Field Sandbox Mode - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2900421778 - Field 970416965 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the primary key for the B2Brouter setup.</source>
+          <target state="translated">Specifies the primary key for the B2Brouter setup.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Table B2Brouter Setup - Field PK - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2900421778 - Field 970416965 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <target state="translated">Primary Key</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Table B2Brouter Setup - Field PK - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2900421778 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>B2Brouter Setup</source>
+          <target state="translated">B2Brouter Setup</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.B2Brouter)(LookupHint=Table B2Brouter Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="TableExtension 1036788762 - Field 1407522918 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Id</source>
+          <target state="translated">File Id</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 4128474945</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

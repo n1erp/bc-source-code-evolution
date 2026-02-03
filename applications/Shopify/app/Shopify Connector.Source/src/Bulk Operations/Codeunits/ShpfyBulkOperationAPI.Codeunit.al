@@ -1,3 +1,8 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+
 namespace Microsoft.Integration.Shopify;
 
 codeunit 30278 "Shpfy Bulk Operation API"
@@ -17,7 +22,7 @@ codeunit 30278 "Shpfy Bulk Operation API"
         CommunicationMgt.SetShop(Shop);
     end;
 
-    internal procedure GetCurrentBulkRequest(var BulkOperationId: BigInteger; var Status: Enum "Shpfy Bulk Operation Status"; var ErrorCode: Text; var CompletedAt: DateTime)
+    internal procedure GetCurrentBulkRequest(var BulkOperationId: BigInteger; var Status: Enum "Shpfy Bulk Operation Status"; var ErrorCode: Text; var CompletedAt: DateTime; var Url: Text; var PartialDataUrl: Text)
     var
         JsonHelper: Codeunit "Shpfy Json Helper";
         GraphQLType: Enum "Shpfy GraphQL Type";
@@ -31,10 +36,12 @@ codeunit 30278 "Shpfy Bulk Operation API"
             Status := ConvertToBulkOperationStatus(JsonHelper.GetValueAsText(JBulkOperation, 'status'));
             ErrorCode := JsonHelper.GetValueAsText(JBulkOperation, 'errorCode');
             CompletedAt := JsonHelper.GetValueAsDateTime(JBulkOperation, 'completedAt');
+            Url := JsonHelper.GetValueAsText(JBulkOperation, 'url');
+            PartialDataUrl := JsonHelper.GetValueAsText(JBulkOperation, 'partialDataUrl');
         end;
     end;
 
-    internal procedure GetBulkRequest(BulkOperationId: BigInteger; var Status: Enum "Shpfy Bulk Operation Status"; var ErrorCode: Text; var CompletedAt: DateTime)
+    internal procedure GetBulkRequest(BulkOperationId: BigInteger; var Status: Enum "Shpfy Bulk Operation Status"; var ErrorCode: Text; var CompletedAt: DateTime; var Url: Text; var PartialDataUrl: Text)
     var
         JsonHelper: Codeunit "Shpfy Json Helper";
         Parameters: Dictionary of [Text, Text];
@@ -47,6 +54,8 @@ codeunit 30278 "Shpfy Bulk Operation API"
             Status := ConvertToBulkOperationStatus(JsonHelper.GetValueAsText(JBulkOperation, 'status'));
             ErrorCode := JsonHelper.GetValueAsText(JBulkOperation, 'errorCode');
             CompletedAt := JsonHelper.GetValueAsDateTime(JBulkOperation, 'completedAt');
+            Url := JsonHelper.GetValueAsText(JBulkOperation, 'url');
+            PartialDataUrl := JsonHelper.GetValueAsText(JBulkOperation, 'partialDataUrl');
         end;
     end;
 
@@ -86,21 +95,6 @@ codeunit 30278 "Shpfy Bulk Operation API"
             exit(Enum::"Shpfy Bulk Operation Status".FromInteger(Enum::"Shpfy Bulk Operation Status".Ordinals().Get(Enum::"Shpfy Bulk Operation Status".Names().IndexOf(Value))))
         else
             exit(Enum::"Shpfy Bulk Operation Status"::" ");
-    end;
-
-    internal procedure GetBulkOperationResult(BulkOperationId: BigInteger; var Url: Text; var PartialDataUrl: Text)
-    var
-        JsonHelper: Codeunit "Shpfy Json Helper";
-        Parameters: Dictionary of [Text, Text];
-        JResponse: JsonToken;
-        JBulkOperation: JsonObject;
-    begin
-        Parameters.Add('BulkOperationId', Format(BulkOperationId));
-        JResponse := CommunicationMgt.ExecuteGraphQL("Shpfy GraphQL Type"::GetBulkOperation, Parameters);
-        if JsonHelper.GetJsonObject(JResponse, JBulkOperation, 'data.node') then begin
-            Url := JsonHelper.GetValueAsText(JBulkOperation, 'url');
-            PartialDataUrl := JsonHelper.GetValueAsText(JBulkOperation, 'partialDataUrl');
-        end;
     end;
 
     local procedure CreateBulkMutationUploadUrl(var Url: Text; var JParameters: JsonArray): Boolean

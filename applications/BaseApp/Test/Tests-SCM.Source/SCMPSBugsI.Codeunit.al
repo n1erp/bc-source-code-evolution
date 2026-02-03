@@ -37,10 +37,14 @@ codeunit 137035 "SCM PS Bugs-I"
         MSG_Change_Status_Q: Label 'Production Order';
         WrongDescriptionInOrderErr: Label 'Wrong description in %1.';
         ValueEntriesWerePostedTxt: Label 'value entries have been posted to the general ledger.';
-        OutputIsMissingQst: Label 'Some output is still missing. Do you still want to finish the order?';
-        ConsumptionIsMissingQst: Label 'Some consumption is still missing. Do you still want to finish the order?';
+        MissingQst: Label '\\  * Some output is still missing.\  * Some consumption is still missing.\\ Do you still want to finish the order?';
+        OutputIsMissingQst: Label '\\  * Some output is still missing.\\ Do you still want to finish the order?';
+        ConsumptionIsMissingQst: Label '\\  * Some consumption is still missing.\\ Do you still want to finish the order?';
         UpdateInterruptedErr: Label 'The update has been interrupted to respect the warning.';
         OustandingPickLineExistsErr: Label 'You cannot finish production order no. %1 because there is an outstanding pick for one or more components.';
+        QuantityErr: Label 'Quantity update should be possible in %1.', Comment = '%1= Table Name.';
+        DueDateErr: Label 'Planned production order due date not match with planning worksheet due date';
+        SKUInventoryErr: Label 'Expected inventory to be blank for non-inventory item';
 
     [Test]
     [Scope('OnPrem')]
@@ -400,7 +404,7 @@ codeunit 137035 "SCM PS Bugs-I"
 
         // Create Sales Order and Create Firm Planned Prod order using order Planning.Change Status to Released.
         CreateSalesOrder(SalesHeader, Item."No.", LibraryRandom.RandInt(10));
-        LibraryPlanning.CreateProdOrderUsingPlanning(
+        LibraryManufacturing.CreateProdOrderUsingPlanning(
           ProductionOrder, ProductionOrder.Status::"Firm Planned", SalesHeader."No.", Item."No.");
         ProdOrderNo :=
           LibraryManufacturing.ChangeProuctionOrderStatus(
@@ -552,7 +556,7 @@ codeunit 137035 "SCM PS Bugs-I"
         Clear(SalesHeader);
         Item.CalcFields(Inventory);
         CreateSalesOrder(SalesHeader, Item."No.", Item.Inventory);
-        LibraryPlanning.CreateProdOrderUsingPlanning(
+        LibraryManufacturing.CreateProdOrderUsingPlanning(
           ProductionOrder, ProductionOrder.Status::"Firm Planned", SalesHeader."No.", Item."No.");
 
         // 2. Execute : Find firm planned order and Change Status to released with Update unit cost as TRUE.
@@ -1109,10 +1113,8 @@ codeunit 137035 "SCM PS Bugs-I"
 
         CreateProdOrderComponent(ProdOrderComponent, ProdOrderLine);
 
-        // [WHEN] Change status of the production order to "Finished" and reply "Yes" to missing output warning, but "No" to missed consumption warning.
-        LibraryVariableStorage.Enqueue(OutputIsMissingQst);
-        LibraryVariableStorage.Enqueue(true);
-        LibraryVariableStorage.Enqueue(ConsumptionIsMissingQst);
+        // [WHEN] Change status of the production order to "Finished" and reply "No" to missing output and consumption warning
+        LibraryVariableStorage.Enqueue(MissingQst);
         LibraryVariableStorage.Enqueue(false);
         asserterror LibraryManufacturing.ChangeStatusReleasedToFinished(ProductionOrder."No.");
 
@@ -1154,6 +1156,168 @@ codeunit 137035 "SCM PS Bugs-I"
         // [THEN] No warning is raised.
         // [THEN] The production order is finished.
         ProductionOrder.Get(ProductionOrder.Status::Finished, ProductionOrder."No.");
+    end;
+
+    [Test]
+    procedure PlanningComponentsChangingQuantityPossibleNonInventoryItem()
+    var
+        Item: array[2] of Record Item;
+        Location: Record Location;
+        PlanningComponent: Record "Planning Component";
+        ProductionBOMHeader: Record "Production BOM Header";
+        RequisitionWkshName: Record "Requisition Wksh. Name";
+        RequisitionLine: Record "Requisition Line";
+        SalesHeader: Record "Sales Header";
+        SalesLine: Record "Sales Line";
+        Quantity: Decimal;
+    begin
+        // [SCENARIO 575511] Planning worksheet in the planning Components when changing Quantity is possible on non inventory Item.
+        Initialize();
+
+        // [GIVEN] Create a Location with Inventory Posting Setup.
+        LibraryWarehouse.CreateLocationWithInventoryPostingSetup(Location);
+
+        // [GIVEN] Create an Item and Validate Replenishment System and Policy.
+        LibraryInventory.CreateItem(Item[1]);
+        Item[1].Validate("Replenishment System", Item[1]."Replenishment System"::"Prod. Order");
+        Item[1].Validate("Reordering Policy", Item[1]."Reordering Policy"::"Lot-for-Lot");
+
+        // [GIVEN] Create an Item with Type Non Inventory.
+        LibraryInventory.CreateNonInventoryTypeItem(Item[2]);
+
+        // [GIVEN] Create Certified Production BOM.
+        LibraryManufacturing.CreateCertifiedProductionBOM(ProductionBOMHeader, Item[2]."No.", LibraryRandom.RandInt(1));
+
+        // [GIVEN] Validate Production BOM No. in Item.
+        Item[1].Validate(Item[1]."Production BOM No.", ProductionBOMHeader."No.");
+        Item[1].Modify(true);
+
+        // [GIVEN] Create Sales Document with Item.
+        LibrarySales.CreateSalesDocumentWithItem(
+            SalesHeader,
+            SalesLine,
+            SalesHeader."Document Type"::Order,
+            '',
+            Item[1]."No.",
+            LibraryRandom.RandInt(2),
+            Location.Code,
+            0D);
+
+        // [GIVEN] Create a Requisition Line.
+        CreateRequisitionLine(RequisitionLine, RequisitionWkshName."Template Type"::Planning);
+
+        // [GIVEN] Run Calculate Regenerative plan for Item.
+        LibraryPlanning.CalcRegenPlanForPlanWksh(Item[1], CalcDate('<-1M>', WorkDate()), CalcDate('<+1M>', WorkDate()));
+
+        // [GIVEN] Store a Quantity in Variable.
+        Quantity := LibraryRandom.RandInt(10);
+
+        // [GIVEN] Find Planning Component.
+        PlanningComponent.SetRange("Worksheet Template Name", RequisitionLine."Worksheet Template Name");
+        PlanningComponent.SetRange("Item No.", Item[2]."No.");
+        PlanningComponent.FindFirst();
+
+        // [WHEN] Validate new Quantity in Planning Componenet.
+        PlanningComponent.Validate(Quantity, Quantity);
+        PlanningComponent.Modify(true);
+
+        // [THEN] Quantity should be able to updated when Item is Non-Inventory.
+        Assert.AreEqual(
+            Quantity,
+            PlanningComponent.Quantity,
+            StrSubstNo(
+                QuantityErr,
+                PlanningComponent.TableName()));
+    end;
+
+    [Test]
+    procedure CheckDueDateWhileCreatingPlannedProductionOrderFromPlanningWorksheet()
+    var
+        Item: Record Item;
+        Location: Record Location;
+        ProductionOrder: Record "Production Order";
+        ReqLineInPlanWksh: Record "Requisition Line";
+        RequisitionWkshName: Record "Requisition Wksh. Name";
+        StockkeepingUnit: Record "Stockkeeping Unit";
+        SafetyLeadTime: DateFormula;
+        NewProdOrderChoice: Option " ",Planned,"Firm Planned","Firm Planned & Print","Copy to Req. Wksh";
+        DueDate: Date;
+    begin
+        // [SCENARIO 566003] Check DueDate While Creating Planned Production Order From Planning Worksheet.
+        Initialize();
+
+        // [GIVEN] Create Item with Replenishment System as Production Order.
+        CreateItem(Item, Item."Costing Method"::FIFO, '', '', Item."Manufacturing Policy"::"Make-to-Stock", Item."Reordering Policy"::" ",
+            Item."Replenishment System"::"Prod. Order");
+
+        // [GIVEN] Create Location.
+        LibraryWarehouse.CreateLocation(Location);
+
+        // [GIVEN] Create Stock Keeping Unit.
+        LibraryInventory.CreateStockkeepingUnitForLocationAndVariant(StockkeepingUnit, Location.Code, Item."No.", '');
+        Evaluate(SafetyLeadTime, '<10D>');
+        StockkeepingUnit.Validate(StockkeepingUnit."Safety Lead Time", SafetyLeadTime);
+        StockkeepingUnit.Modify(true);
+
+        // [GIVEN] Create Create Requisition Line and Modify Due Date.
+        CreateRequisitionLineForItemAndLocation(ReqLineInPlanWksh, RequisitionWkshName, Item."No.", Location.Code, DueDate);
+
+        // [WHEN] Execute : Carry Out Action Message for Reference Order Type Planned Production Order.
+        LibraryPlanning.CarryOutPlanWksh(ReqLineInPlanWksh, NewProdOrderChoice::Planned, 0, 0, 0,
+            ReqLineInPlanWksh."Worksheet Template Name", ReqLineInPlanWksh."Journal Batch Name", '', '');
+
+        // [THEN] Verify Planned Production Order Created DueDate.
+        VerifyPlannedProdOrderDueDate(ProductionOrder, ProductionOrder.Status::Planned, Item."No.", DueDate);
+    end;
+
+    [Test]
+    [HandlerFunctions('SKURequestPageHandler')]
+    procedure CheckInventoryValueIsHiddenForNonInventorySKU()
+    var
+        Item: Record Item;
+        Location: Record Location;
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+        SKUPage: TestPage "Stockkeeping Unit List";
+        SKUCardPage: TestPage "Stockkeeping Unit Card";
+        Itemcard: TestPage "Item Card";
+    begin
+        // [SCENARIO 592721] For Non-Inventory Item SKUs, Check Inventory value is Blank on List and Card page.
+        Initialize();
+
+        // [GIVEN] Create Item with Replenishment System as Production Order.
+        CreateItem(Item, Item."Costing Method"::FIFO, '', '', Item."Manufacturing Policy"::"Make-to-Stock", Item."Reordering Policy"::" ", Item."Replenishment System"::Purchase);
+        Item.Validate("Type", Item.Type::"Non-Inventory");
+        Item.Modify(true);
+
+        // [GIVEN] Create Location.
+        LibraryWarehouse.CreateLocation(Location);
+
+        // [GIVEN] Create Purchase order for Item and Location.
+        LibraryPurchase.CreatePurchaseOrder(PurchaseHeader, PurchaseLine, Item, Location.Code, '', LibraryRandom.RandInt(5), WorkDate(), 100);
+
+        // [WHEN] Post Purchase Order.
+        LibraryPurchase.PostPurchaseDocument(PurchaseHeader, true, true);
+
+        // [WHEN] Create Stockkeeping Unit for Item and Location.
+        LibraryVariableStorage.Enqueue(Location.Code);
+        ItemCard.OpenView();
+        ItemCard.GotoRecord(Item);
+        ItemCard."&Create Stockkeeping Unit".Invoke();
+        ItemCard.OK().Invoke();
+
+        // [THEN] Verify Stockkeeping Unit Created for Item and Location Inventory Value is blank on List Page.
+        SKUPage.OpenView();
+        SKUPage.Filter.SetFilter("Item No.", Item."No.");
+        SKUPage.Filter.SetFilter("Location Code", Location."Code");
+        Assert.AreEqual('', SKUPage.Inventory.Value, SKUInventoryErr);
+
+        // [THEN] Verify Stockkeeping Unit Created for Item and Location Inventory Value is blank on Card Page.
+        SKUCardPage.OpenView();
+        SKUCardPage.Filter.SetFilter("Item No.", Item."No.");
+        SKUCardPage.Filter.SetFilter("Location Code", Location."Code");
+        Assert.AreEqual('', SKUCardPage.Inventory.Value, SKUInventoryErr);
+        LibraryVariableStorage.AssertEmpty();
     end;
 
     local procedure Initialize()
@@ -1604,13 +1768,6 @@ codeunit 137035 "SCM PS Bugs-I"
         ProdOrderLine.Delete(true);
     end;
 
-    local procedure FindItemLedgerEntry(var ItemLedgerEntry: Record "Item Ledger Entry"; EntryType: Enum "Item Ledger Document Type"; DocumentNo: Code[20])
-    begin
-        ItemLedgerEntry.SetRange("Entry Type", EntryType);
-        ItemLedgerEntry.SetRange("Document No.", DocumentNo);
-        ItemLedgerEntry.FindFirst();
-    end;
-
     local procedure FindLastOperationNo(RoutingNo: Code[20]): Code[10]
     var
         RoutingLine: Record "Routing Line";
@@ -1962,6 +2119,30 @@ codeunit 137035 "SCM PS Bugs-I"
           ErrMessageCostNotSame);
     end;
 
+    local procedure CreateRequisitionLineForItemAndLocation(var ReqLineInPlanWksh: Record "Requisition Line"; var RequisitionWkshName: Record "Requisition Wksh. Name"; ItemNo: Code[20]; LocationCode: Code[10]; var DueDate: Date)
+    begin
+        LibraryPlanning.SelectRequisitionWkshName(RequisitionWkshName, RequisitionWkshName."Template Type"::Planning);
+        LibraryPlanning.CreateRequisitionLine(ReqLineInPlanWksh, RequisitionWkshName."Worksheet Template Name", RequisitionWkshName.Name);
+        ReqLineInPlanWksh.Validate(Type, ReqLineInPlanWksh.Type::Item);
+        ReqLineInPlanWksh.Validate("No.", ItemNo);
+        ReqLineInPlanWksh.Validate("Accept Action Message", true);
+        ReqLineInPlanWksh.Validate("Location Code", LocationCode);
+        ReqLineInPlanWksh.Validate(Quantity, 1);
+        ReqLineInPlanWksh.SetCurrFieldNo(ReqLineInPlanWksh.FieldNo("Due Date"));
+        ReqLineInPlanWksh.Validate("Due Date", WorkDate());
+        ReqLineInPlanWksh.Modify(true);
+        DueDate := ReqLineInPlanWksh."Due Date";
+    end;
+
+    local procedure VerifyPlannedProdOrderDueDate(var ProductionOrder: Record "Production Order"; Status: Enum "Production Order Status"; SourceNo: Code[20]; DueDate: Date)
+    begin
+        ProductionOrder.SetRange(Status, Status);
+        ProductionOrder.SetRange("Source No.", SourceNo);
+        ProductionOrder.FindFirst();
+
+        Assert.AreEqual(DueDate, ProductionOrder."Due Date", DueDateErr);
+    end;
+
     [ConfirmHandler]
     [Scope('OnPrem')]
     procedure ConfirmHandler(Question: Text[1024]; var Reply: Boolean)
@@ -2043,5 +2224,14 @@ codeunit 137035 "SCM PS Bugs-I"
     begin
         LibraryReportDataset.RunReportAndLoad(Report::"Prod. Order - List", ProductionOrder, '');
     end;
-}
 
+    [RequestPageHandler]
+    procedure SKURequestPageHandler(var CreateStockkeepingUnit: TestRequestPage "Create Stockkeeping Unit")
+    var
+        LocationCode: Variant;
+    begin
+        LibraryVariableStorage.Dequeue(LocationCode);
+        CreateStockkeepingUnit.Item.SetFilter("Location Filter", LocationCode);
+        CreateStockkeepingUnit.OK().Invoke();
+    end;
+}

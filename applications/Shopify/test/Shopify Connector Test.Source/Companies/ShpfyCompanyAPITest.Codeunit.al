@@ -1,6 +1,18 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+
+namespace Microsoft.Integration.Shopify.Test;
+
+using Microsoft.Integration.Shopify;
+using System.TestLibraries.Utilities;
+using Microsoft.Sales.Customer;
+
 codeunit 139637 "Shpfy Company API Test"
 {
     Subtype = Test;
+    TestType = IntegrationTest;
     TestPermissions = Disabled;
 
     var
@@ -17,7 +29,6 @@ codeunit 139637 "Shpfy Company API Test"
     var
         ShopifyCompany: Record "Shpfy Company";
         CompanyLocation: Record "Shpfy Company Location";
-        ShopifyCustomer: Record "Shpfy Customer";
         CompanyAPI: Codeunit "Shpfy Company API";
         GraphQL: Text;
     begin
@@ -30,7 +41,7 @@ codeunit 139637 "Shpfy Company API Test"
         // [GIVEN] ShpfyCompanyLocation
 
         // [WHEN] Invoke CompanyAPI.CreateCompanyGraphQLQuery
-        GraphQL := CompanyAPI.CreateCompanyGraphQLQuery(ShopifyCompany, CompanyLocation, ShopifyCustomer);
+        GraphQL := CompanyAPI.CreateCompanyGraphQLQuery(ShopifyCompany, CompanyLocation);
 
         // [THEN] CompanyInitialize.CreateCompanyGraphQLResult() = GraphQL.
         LibraryAssert.AreEqual(CompanyInitialize.CreateCompanyGraphQLResult(), GraphQL, 'CreateCompanyGraphQuery');
@@ -121,6 +132,7 @@ codeunit 139637 "Shpfy Company API Test"
         CompanyAPI: Codeunit "Shpfy Company API";
         JResponse: JsonObject;
         Name: Text;
+        ExternalId: Text;
         Result: Boolean;
         CompanyContactId: BigInteger;
         CustomerId: BigInteger;
@@ -128,9 +140,10 @@ codeunit 139637 "Shpfy Company API Test"
         // Creating Test data.
         ShopifyCompany.Insert();
         Name := LibraryRandom.RandText(MaxStrLen(ShopifyCompany.Name));
+        ExternalId := LibraryRandom.RandText(MaxStrLen(ShopifyCompany."External Id"));
         CompanyContactId := LibraryRandom.RandIntInRange(100000, 999999);
         CustomerId := LibraryRandom.RandIntInRange(100000, 999999);
-        JResponse := CompanyInitialize.CompanyResponse(Name, CompanyContactId, CustomerId);
+        JResponse := CompanyInitialize.CompanyResponse(Name, ExternalId, CompanyContactId, CustomerId);
 
         // [SCENARIO] Extracting the company from the Shopify response.
         // [GIVEN] JResponse with Company
@@ -141,6 +154,7 @@ codeunit 139637 "Shpfy Company API Test"
         // [THEN] Shopify company fields are updated.
         LibraryAssert.IsTrue(Result, 'Result');
         LibraryAssert.AreEqual(ShopifyCompany.Name, Name, 'Name');
+        LibraryAssert.AreEqual(ShopifyCompany."External Id", ExternalId, 'External Id');
         LibraryAssert.AreEqual(ShopifyCompany."Main Contact Id", CompanyContactId, 'Company Contact Id');
         LibraryAssert.AreEqual(ShopifyCompany."Main Contact Customer Id", CustomerId, 'Customer Id');
     end;
@@ -150,7 +164,6 @@ codeunit 139637 "Shpfy Company API Test"
     var
         ShopifyCompany: Record "Shpfy Company";
         CompanyLocation: Record "Shpfy Company Location";
-        ShopifyCustomer: Record "Shpfy Customer";
         CompanyAPI: Codeunit "Shpfy Company API";
         GraphQL: Text;
     begin
@@ -163,7 +176,7 @@ codeunit 139637 "Shpfy Company API Test"
         CompanyLocation."Shpfy Payment Terms Id" := LibraryRandom.RandIntInRange(1000, 9999);
 
         // [WHEN] Invoke CompanyAPI.CreateCompanyGraphQLQuery
-        GraphQL := CompanyAPI.CreateCompanyGraphQLQuery(ShopifyCompany, CompanyLocation, ShopifyCustomer);
+        GraphQL := CompanyAPI.CreateCompanyGraphQLQuery(ShopifyCompany, CompanyLocation);
 
         // [THEN] The payment terms id is present in query.
         LibraryAssert.IsTrue(GraphQL.Contains(StrSubstNo(CompanyInitialize.PaymentTermsGQLNode(), CompanyLocation."Shpfy Payment Terms Id")), 'Payment Terms Id');
@@ -227,7 +240,6 @@ codeunit 139637 "Shpfy Company API Test"
         Customer: Record Customer;
         ShopifyCompany: Record "Shpfy Company";
         CompanyLocation: Record "Shpfy Company Location";
-        ShopifyCustomer: Record "Shpfy Customer";
         CompanyAPI: Codeunit "Shpfy Company API";
         GraphQL: Text;
     begin
@@ -238,11 +250,11 @@ codeunit 139637 "Shpfy Company API Test"
         CreateCustomer(Customer);
         // [GIVEN] Shopify Company connected with customer
         CompanyInitialize.CreateShopifyCompany(ShopifyCompany);
-        // [GIVEN] Shopify Customer connected with customer
-        CreateShopifyCustomer(ShopifyCustomer, Customer.SystemId);
+        ShopifyCompany."External Id" := Customer."No.";
+        ShopifyCompany.Modify();
 
         // [WHEN] Invoke CompanyAPI.CreateCompanyGraphQLQuery
-        GraphQL := CompanyAPI.CreateCompanyGraphQLQuery(ShopifyCompany, CompanyLocation, ShopifyCustomer);
+        GraphQL := CompanyAPI.CreateCompanyGraphQLQuery(ShopifyCompany, CompanyLocation);
 
         // [THEN] The external id is present in query.
         LibraryAssert.IsTrue(GraphQL.Contains(CompanyInitialize.ExternalIdGQLNode(Customer)), 'externalId missing in query.');
@@ -265,7 +277,8 @@ codeunit 139637 "Shpfy Company API Test"
     begin
         BindSubscription(CompanyAPISubs);
         CompanyAPI.SetShop(Shop);
-        CompanyAPI.UpdateCompany(ShopifyCompany, CompanyLocation);
+        CompanyAPI.UpdateCompany(ShopifyCompany);
+        CompanyAPI.UpdateCompanyLocation(CompanyLocation);
         GraphQL := CompanyAPISubs.GetExecutedQuery();
         UnbindSubscription(CompanyAPISubs);
     end;
@@ -275,13 +288,5 @@ codeunit 139637 "Shpfy Company API Test"
         Customer.Init();
         Customer."No." := CopyStr(Any.AlphanumericText(20), 1, MaxStrLen(Customer."No."));
         Customer.Insert(false);
-    end;
-
-    local procedure CreateShopifyCustomer(var ShopifyCustomer: Record "Shpfy Customer"; CustomerSystemId: Guid)
-    begin
-        ShopifyCustomer.Init();
-        ShopifyCustomer.Id := Any.IntegerInRange(10000, 99999);
-        ShopifyCustomer."Customer SystemId" := CustomerSystemId;
-        ShopifyCustomer.Insert(false);
     end;
 }

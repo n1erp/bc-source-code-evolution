@@ -1,6 +1,11 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Purchases.History;
 
 using Microsoft.Finance.Dimension;
+using Microsoft.Utilities;
 
 page 529 "Posted Purchase Invoice Lines"
 {
@@ -24,6 +29,11 @@ page 529 "Posted Purchase Invoice Lines"
                     ToolTip = 'Specifies the document number.';
                 }
                 field("Buy-from Vendor No."; Rec."Buy-from Vendor No.")
+                {
+                    ApplicationArea = Basic, Suite;
+                    ToolTip = 'Specifies the no. of the vendor who delivered the items.';
+                }
+                field("Buy-from Vendor Name"; Rec."Buy-from Vendor Name")
                 {
                     ApplicationArea = Basic, Suite;
                     ToolTip = 'Specifies the name of the vendor who delivered the items.';
@@ -210,9 +220,11 @@ page 529 "Posted Purchase Invoice Lines"
                     ToolTip = 'Open the document that the selected line exists on.';
 
                     trigger OnAction()
+                    var
+                        PageManagement: Codeunit "Page Management";
                     begin
                         PurchInvHeader.Get(Rec."Document No.");
-                        PAGE.Run(PAGE::"Posted Purchase Invoice", PurchInvHeader);
+                        PageManagement.PageRun(PurchInvHeader);
                     end;
                 }
                 action(Dimensions)

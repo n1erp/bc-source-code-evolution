@@ -51,6 +51,8 @@ codeunit 137048 "SCM Warehouse II"
         NonWarehouseErr: Label 'Directed Put-away and Pick must have a value';
         BinContentGetCaptionErr: Label 'BinContent.GetCaption does not work with %1';
         LocationCodeMustMatchErr: Label 'Location Code must match.';
+        QuantityErr: Label 'Quantity must not be changed when a Warehouse Receipt Line for this Purchase Line exists:  in Purchase Line Document Type=''%1'',Document No.=''%2'',Line No.=''%3''.',
+                     Comment = '%1= Document Type Value, %2= Document No. Value, %3= Line No. Value.';
 
     [Test]
     [Scope('OnPrem')]
@@ -2450,7 +2452,7 @@ codeunit 137048 "SCM Warehouse II"
         // [THEN] Create Purchase Invoice with Receipt No.
         CreatePurchaseInvoiceWithReceiptNo(PurchaseHeader2, PurchaseHeader, PurchRcptLine."Document No.");
 
-        // [THEN] Open Purchase Invoice Page and Post the Invoice 
+        // [THEN] Open Purchase Invoice Page and Post the Invoice
         PostedPurchaseInvoice.Trap();
         PurchaseInvoice.OpenView();
         PurchaseInvoice.Filter.SetFilter("No.", PurchaseHeader2."No.");
@@ -2491,7 +2493,7 @@ codeunit 137048 "SCM Warehouse II"
         // [THEN] Create Purchase Invoice with Receipt No.
         CreatePurchaseInvoiceWithReceiptNo(PurchaseHeader2, PurchaseHeader, PurchRcptLine."Document No.");
 
-        // [THEN] Open Purchase Invoices List Page and Post the Invoice 
+        // [THEN] Open Purchase Invoices List Page and Post the Invoice
         PostedPurchaseInvoice.Trap();
         PurchaseInvoices.OpenView();
         PurchaseInvoices.Filter.SetFilter("No.", PurchaseHeader2."No.");
@@ -2538,7 +2540,7 @@ codeunit 137048 "SCM Warehouse II"
         // [THEN] Create Purchase Invoice with Receipt No.
         CreatePurchaseInvoiceWithReceipt(PurchaseHeader2, PurchaseHeader);
 
-        // [THEN] Open Purchase Invoice Page and Post the Invoice 
+        // [THEN] Open Purchase Invoice Page and Post the Invoice
         PostedPurchaseInvoice.Trap();
         PurchaseInvoice.OpenView();
         PurchaseInvoice.Filter.SetFilter("No.", PurchaseHeader2."No.");
@@ -2552,6 +2554,50 @@ codeunit 137048 "SCM Warehouse II"
 
         // [VERIFY] The posted document opened in the Posted Purchase Invoice page
         PostedPurchaseInvoice.Close();
+    end;
+
+    [Test]
+    procedure PurchaseOrderLineDeleteNotAllowedWhenWarehouseReceiptExists()
+    var
+        Location: Record Location;
+        Item: Record Item;
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+    begin
+        // [SCENARIO 571552] Delete of Purchase Order line is not allowed while a Warehouse Receipt exists.
+        Initialize();
+
+        // [GIVEN] Create Location with Inventory Posting Setup.
+        LibraryWarehouse.CreateLocationWithInventoryPostingSetup(Location);
+
+        // [GIVEN] Create a Warehouse Location.
+        LibraryWarehouse.CreateLocationWMS(Location, true, true, true, true, true);
+
+        // [GIVEN] Create an Item.
+        LibraryInventory.CreateItem(Item);
+
+        // [GIVEN] Create a Purchase Order.
+        CreatePurchaseOrder(PurchaseHeader, PurchaseLine, Location.Code, Item."No.");
+
+        // [GIVEN] Release Purchase Document.
+        LibraryPurchase.ReleasePurchaseDocument(PurchaseHeader);
+
+        // [GIVEN] Create a Warehouse Receipt of Purchase Order.
+        LibraryWarehouse.CreateWhseReceiptFromPO(PurchaseHeader);
+
+        // [GIVEN] Reopen Purchase Order.
+        LibraryPurchase.ReopenPurchaseDocument(PurchaseHeader);
+
+        // [WHEN] Validate Purchase Line to 0.
+        asserterror PurchaseLine.Validate(Quantity, 0);
+
+        // [THEN] Quantity should not be allowed to be 0 when Warehouse Recipt exits.
+        Assert.ExpectedError(
+            StrSubstNo(
+                QuantityErr,
+                PurchaseLine."Document Type",
+                PurchaseLine."Document No.",
+                PurchaseLine."Line No."));
     end;
 
     local procedure Initialize()
@@ -3819,29 +3865,6 @@ codeunit 137048 "SCM Warehouse II"
          PurchaseHeader, PurchaseLine, PurchaseHeader."Document Type"::Order, '', Item."No.", LibraryRandom.RandDec(100, 2), '', WorkDate());
     end;
 
-    local procedure CreateAndModifyVendor(VATBusPostingGroup: Code[20]): Code[20]
-    var
-        Vendor: Record Vendor;
-    begin
-        LibraryPurchase.CreateVendor(Vendor);
-        Vendor.Validate("VAT Bus. Posting Group", VATBusPostingGroup);
-        Vendor.Modify(true);
-        exit(Vendor."No.");
-    end;
-
-    local procedure CreateItem(AllowInvDisc: Boolean; VATProdPostingGroup: Code[20]): Code[20]
-    var
-        Item: Record Item;
-    begin
-        LibraryInventory.CreateItem(Item);
-        Item.Validate("Allow Invoice Disc.", AllowInvDisc);
-        Item.Validate("VAT Prod. Posting Group", VATProdPostingGroup);
-        Item.Validate("Unit Price", 10 + LibraryRandom.RandInt(100));
-        Item.Validate("Last Direct Cost", Item."Unit Price");
-        Item.Modify(true);
-        exit(Item."No.");
-    end;
-
     local procedure CreatePurchaseInvoiceWithReceipt(var PurchaseHeader: Record "Purchase Header"; var PurchaseHeader2: Record "Purchase Header")
     var
         PurchRcptHeader: Record "Purch. Rcpt. Header";
@@ -3977,4 +4000,3 @@ codeunit 137048 "SCM Warehouse II"
         Assert.IsTrue(StrPos(Message, PutAwayActivityMessage) > 0, Message);
     end;
 }
-

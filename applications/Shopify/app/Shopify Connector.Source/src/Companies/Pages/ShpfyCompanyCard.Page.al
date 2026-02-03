@@ -1,3 +1,8 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+
 namespace Microsoft.Integration.Shopify;
 
 using Microsoft.Sales.Customer;
@@ -32,6 +37,11 @@ page 30157 "Shpfy Company Card"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the company''s name.';
+                }
+                field("External Id"; Rec."External Id")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the external ID of the company.';
                 }
                 field(Note; Rec.GetNote())
                 {
@@ -103,7 +113,11 @@ page 30157 "Shpfy Company Card"
                     ToolTip = 'Specifies the customer''s address.';
                 }
             }
-
+            part(CompanyLocations; "Shpfy Comp. Locations Subform")
+            {
+                ApplicationArea = All;
+                SubPageLink = "Company SystemId" = field(SystemId);
+            }
         }
         area(FactBoxes)
         {

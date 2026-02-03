@@ -1907,7 +1907,7 @@ codeunit 134988 "ERM Purchase Reports III"
     begin
         // [SCENARIO 435424] To check if Aged Account Payable report is not showing Invoices if Posting date is not in range even if Document date is in range
 
-        // [GIVEN] Create Vendor,Post Invoice 
+        // [GIVEN] Create Vendor,Post Invoice
         Initialize();
         VendorNo := CreateVendor();
         LibraryERM.SelectGenJnlBatch(GenJournalBatch);
@@ -1943,7 +1943,7 @@ codeunit 134988 "ERM Purchase Reports III"
         Currency: Record Currency;
         PeriodLength: DateFormula;
     begin
-        // [SCENARIO 543167] Amount in Aged Accounts Payable report is displayed with 
+        // [SCENARIO 543167] Amount in Aged Accounts Payable report is displayed with
         // Decimal places defined in the Currency of that Vendor Ledger Entry.
         Initialize();
 
@@ -1966,6 +1966,65 @@ codeunit 134988 "ERM Purchase Reports III"
 
         // [THEN] AgedVendLedgEnt6RemAmtLCY5 have value 1.234 in Aged Accounts Payable report.
         LibraryReportDataset.AssertElementWithValueExists('AgedVendLedgEnt6RemAmtLCY5', 1.234);
+    end;
+
+    [Test]
+    [HandlerFunctions('RHAgedAccountsPayable')]
+    [Scope('OnPrem')]
+    procedure AgedAccountReceivablesAndPayableReportsPrioritizeMostRecentPostingCausingFaultyReports()
+    var
+        GenJournalLine: Record "Gen. Journal Line";
+        Vendor: Record Vendor;
+        VendorLedgerEntry: Record "Vendor Ledger Entry";
+        LibraryLowerPermissions: Codeunit "Library - Lower Permissions";
+        PeriodLength: DateFormula;
+        DocumentNo: Code[20];
+        Amount: Decimal;
+        ReportEndingDate: Date;
+        PostingDate: Date;
+        EarlyPostingDate: Date;
+        LaterPostingDate: Date;
+    begin
+        //[SCENARIO 574822] Aged Account Receivables and Aged Account Payable Reports Prioritize Most Recent Posting Date Rather than Posting Date on Latest Entry Causing Faulty Reports
+
+        Initialize();
+
+        // [GIVEN] Create Vendor
+        LibraryPurchase.CreateVendor(Vendor);
+
+        // [GIVEN] Posting Dates and Report Ending Date
+        PostingDate := WorkDate();
+        EarlyPostingDate := CalcDate('<-1M>', PostingDate);
+        LaterPostingDate := CalcDate('<+1M>', PostingDate);
+        ReportEndingDate := DMY2Date(31, 12, Date2DMY(LaterPostingDate, 3));
+
+        //[GIVEN] Create and Post Purchase Invoice
+        Amount := 12000;
+        DocumentNo := CreateAndPostPurchaseInvoiceWithOneLine(Vendor."No.", 'Test', Amount, 1, 0D, EarlyPostingDate);
+
+        // [GIVEN] Create Payment Journal and post for Purchase Invoice
+        CreateGeneralJournalLine(GenJournalLine, 1, Vendor."No.", GenJournalLine."Document Type"::Payment, Amount);
+        GenJournalLine.Validate("Posting Date", PostingDate);
+        UpdateGenJournalLine(GenJournalLine, '', DocumentNo, Amount);
+        LibraryLowerPermissions.SetAccountPayables();
+        LibraryERM.PostGeneralJnlLine(GenJournalLine);
+
+        // [GIVEN] Unapply The Payment for Purchase Invoice
+        LibraryERM.FindVendorLedgerEntry(VendorLedgerEntry, VendorLedgerEntry."Document Type"::Payment, DocumentNo);
+        UnapplyVendorLedgerEntry(VendorLedgerEntry, LaterPostingDate);
+
+        // [GIVEN] apply the payment again for the Purchase Invoice
+        CreateGeneralJournalLine(GenJournalLine, 1, Vendor."No.", GenJournalLine."Document Type"::Payment, Amount);
+        GenJournalLine.Validate("Posting Date", PostingDate);
+        UpdateGenJournalLine(GenJournalLine, '', DocumentNo, Amount);
+        LibraryLowerPermissions.SetAccountPayables();
+        LibraryERM.PostGeneralJnlLine(GenJournalLine);
+
+        //[WHEN] Run Aged Account Payble Report
+        SaveAgedAccPayable(Vendor, AgingBy::"Posting Date", HeadingType::"Date Interval", PeriodLength, false, true, ReportEndingDate);
+
+        //[THEN] Check These  Entries should not be there.
+        LibraryReportDataset.AssertElementWithValueNotExist('VendLedgEntryEndDtPostgDt', PostingDate);
     end;
 
     local procedure Initialize()
@@ -3097,18 +3156,6 @@ codeunit 134988 "ERM Purchase Reports III"
         Assert.IsTrue(RowNo > 0, StrSubstNo(RowNotFoundErr, 'VALVATBaseLCY', -VATEntry.Base));
     end;
 
-    local procedure VerifyPurchaseReportVATAmount(DocumentType: Enum "Gen. Journal Document Type"; DocumentNo: Code[20]; Sign: Integer; VATAmountElementName: Text; VATBaseAmountElementName: Text)
-    var
-        VATEntry: Record "VAT Entry";
-    begin
-        VATEntry.SetRange(Type, VATEntry.Type::Purchase);
-        VATEntry.SetRange("Document Type", DocumentType);
-        VATEntry.SetRange("Document No.", DocumentNo);
-        VATEntry.FindLast();
-        LibraryReportDataset.AssertCurrentRowValueEquals(VATAmountElementName, Sign * VATEntry.Amount);
-        LibraryReportDataset.AssertCurrentRowValueEquals(VATBaseAmountElementName, Sign * VATEntry.Base);
-    end;
-
     local procedure VerifyInvoiceDiscountInReport(PurchaseHeader: Record "Purchase Header")
     var
         PurchaseLine: Record "Purchase Line";
@@ -3454,6 +3501,87 @@ codeunit 134988 "ERM Purchase Reports III"
         LibraryERM.PostGeneralJnlLine(GenJournalLine);
     end;
 
+    local procedure UnapplyVendorLedgerEntry(VendorLedgerEntry: Record "Vendor Ledger Entry"; PostingDate: Date)
+    var
+        DetailedVendorLedgEntry: Record "Detailed Vendor Ledg. Entry";
+        GenJournalLine: Record "Gen. Journal Line";
+        SourceCodeSetup: Record "Source Code Setup";
+        GenJnlPostLine: Codeunit "Gen. Jnl.-Post Line";
+    begin
+        DetailedVendorLedgEntry.SetRange("Entry Type", DetailedVendorLedgEntry."Entry Type"::Application);
+        DetailedVendorLedgEntry.SetRange("Vendor No.", VendorLedgerEntry."Vendor No.");
+        DetailedVendorLedgEntry.SetRange("Document No.", VendorLedgerEntry."Document No.");
+        DetailedVendorLedgEntry.SetRange("Vendor Ledger Entry No.", VendorLedgerEntry."Entry No.");
+        DetailedVendorLedgEntry.SetRange(Unapplied, false);
+        DetailedVendorLedgEntry.FindFirst();
+        SourceCodeSetup.Get();
+        VendorLedgerEntry.Get(DetailedVendorLedgEntry."Vendor Ledger Entry No.");
+        GenJournalLine.Validate("Document No.", DetailedVendorLedgEntry."Document No.");
+        GenJournalLine.Validate("Posting Date", PostingDate);
+        GenJournalLine.Validate("Account Type", GenJournalLine."Account Type"::Vendor);
+        GenJournalLine.Validate("Account No.", DetailedVendorLedgEntry."Vendor No.");
+        GenJournalLine.Validate(Correction, true);
+        GenJournalLine.Validate("Document Type", GenJournalLine."Document Type"::" ");
+        GenJournalLine.Validate(Description, VendorLedgerEntry.Description);
+        GenJournalLine.Validate("Shortcut Dimension 1 Code", VendorLedgerEntry."Global Dimension 1 Code");
+        GenJournalLine.Validate("Shortcut Dimension 2 Code", VendorLedgerEntry."Global Dimension 2 Code");
+        GenJournalLine.Validate("Posting Group", VendorLedgerEntry."Vendor Posting Group");
+        GenJournalLine.Validate("Source Type", GenJournalLine."Source Type"::Vendor);
+        GenJournalLine.Validate("Source No.", DetailedVendorLedgEntry."Vendor No.");
+        GenJournalLine.Validate("Source Code", SourceCodeSetup."Unapplied Purch. Entry Appln.");
+        GenJournalLine.Validate("Source Currency Code", DetailedVendorLedgEntry."Currency Code");
+        GenJournalLine.Validate("System-Created Entry", true);
+        GenJnlPostLine.UnapplyVendLedgEntry(GenJournalLine, DetailedVendorLedgEntry);
+    end;
+
+    local procedure CreateGeneralJournalLine(var GenJournalLine: Record "Gen. Journal Line"; NoOfLine: Integer; VendorNo: Code[20]; DocumentType: Enum "Gen. Journal Document Type"; Amount: Decimal)
+    var
+        GenJournalBatch: Record "Gen. Journal Batch";
+        Counter: Integer;
+    begin
+        SelectGenJournalBatch(GenJournalBatch);
+        for Counter := 1 to NoOfLine do
+            LibraryERM.CreateGeneralJnlLine(
+              GenJournalLine, GenJournalBatch."Journal Template Name", GenJournalBatch.Name, DocumentType,
+              GenJournalLine."Account Type"::Vendor, VendorNo, Amount);
+    end;
+
+    local procedure UpdateGenJournalLine(var GenJournalLine: Record "Gen. Journal Line"; CurrencyCode: Code[10]; AppliestoDocNo: Code[20]; Amount: Decimal)
+    begin
+        GenJournalLine.Validate("Currency Code", CurrencyCode);
+        GenJournalLine.Validate("Applies-to Doc. Type", GenJournalLine."Applies-to Doc. Type"::Invoice);
+        GenJournalLine.Validate("Applies-to Doc. No.", AppliestoDocNo);
+        GenJournalLine.Validate("Document No.", AppliestoDocNo);
+        GenJournalLine.Validate(Amount, Amount);
+        GenJournalLine.Modify(true);
+    end;
+
+    local procedure CreateAndPostPurchaseInvoiceWithOneLine(VendorNo: Code[20]; ExtDocNo: Code[20]; Amount: Decimal; Quantity: Decimal; DueDate: Date; PostingDate: Date): Code[20]
+    var
+        Item: Record Item;
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+    begin
+        CreateItem(Item, Amount);
+        LibraryPurchase.CreatePurchHeader(PurchaseHeader, PurchaseHeader."Document Type"::Invoice, VendorNo);
+        PurchaseHeader.Validate("Vendor Invoice No.", ExtDocNo);
+        if DueDate <> 0D then
+            PurchaseHeader.Validate("Due Date", DueDate);
+        PurchaseHeader."Posting Date" := PostingDate;
+
+        PurchaseHeader.Modify(true);
+        LibraryPurchase.CreatePurchaseLine(PurchaseLine, PurchaseHeader, PurchaseLine.Type::Item, Item."No.", Quantity);
+        exit(LibraryPurchase.PostPurchaseDocument(PurchaseHeader, true, true));
+    end;
+
+    local procedure CreateItem(var Item: Record Item; Amount: Decimal)
+    begin
+        LibraryInventory.CreateItem(Item);
+        Item.Validate("Unit Price", Amount);
+        Item.Validate("Last Direct Cost", Amount);
+        Item.Modify(true);
+    end;
+
     [RequestPageHandler]
     [Scope('OnPrem')]
     procedure PurchaseInvoiceRequestPageHandler(var PurchaseInvoice: TestRequestPage "Purchase - Invoice")
@@ -3693,4 +3821,3 @@ codeunit 134988 "ERM Purchase Reports III"
         VendorBalanceToDate.SaveAsXml(LibraryReportDataset.GetParametersFileName(), LibraryReportDataset.GetFileName());
     end;
 }
-

@@ -2,7 +2,6 @@ namespace System.Integration;
 
 using Microsoft.CRM.BusinessRelation;
 using Microsoft.CRM.Contact;
-using Microsoft.CRM.RoleCenters;
 using Microsoft.Inventory.Item;
 using Microsoft.Purchases.Vendor;
 using Microsoft.Sales.Customer;
@@ -232,6 +231,8 @@ codeunit 1802 "Data Migration Notifier"
         if Notification.Recall() then;
     end;
 
+#if not CLEAN27
+    [Obsolete('This is very non-performant code. Existing callers should implement a query instead.', '27.0')]
     procedure ShowContactNotificationIfCustWithoutContExist()
     var
         Customer: Record Customer;
@@ -247,6 +248,7 @@ codeunit 1802 "Data Migration Notifier"
                 until Customer.Next() = 0;
     end;
 
+    [Obsolete('This is very non-performant code. Existing callers should implement a query instead.', '27.0')]
     procedure ShowContactNotificationIfVendWithoutContExist()
     var
         Vendor: Record Vendor;
@@ -261,14 +263,7 @@ codeunit 1802 "Data Migration Notifier"
                     end;
                 until Vendor.Next() = 0;
     end;
-
-    [EventSubscriber(ObjectType::Page, Page::"Sales & Relationship Mgr. Act.", 'OnOpenPageEvent', '', false, false)]
-    local procedure OnOpenSalesRelationshipMgrActPage(var Rec: Record "Relationship Mgmt. Cue")
-    begin
-        ShowContactNotificationIfCustWithoutContExist();
-        ShowContactNotificationIfVendWithoutContExist();
-    end;
-
+#endif
     [EventSubscriber(ObjectType::Page, Page::"Customer List", 'OnAfterGetCurrRecordEvent', '', false, false)]
     local procedure OnCustomerListGetCurrRec(var Rec: Record Customer)
     begin

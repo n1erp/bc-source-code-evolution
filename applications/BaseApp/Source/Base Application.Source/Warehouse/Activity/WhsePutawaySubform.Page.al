@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Warehouse.Activity;
+﻿// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Warehouse.Activity;
 
 using Microsoft.Inventory.Availability;
 using Microsoft.Warehouse.Availability;
@@ -432,9 +436,6 @@ page 5771 "Whse. Put-away Subform"
 
     trigger OnOpenPage()
     begin
-#if not CLEAN24
-        SetPackageTrackingVisibility();
-#endif
     end;
 
     var
@@ -446,10 +447,6 @@ page 5771 "Whse. Put-away Subform"
         BinCodeEditable: Boolean;
         HideBinFields: Boolean;
         QtyToHandleEditable: Boolean;
-#if not CLEAN24
-        [Obsolete('Package Tracking enabled by default.', '24.0')]
-        PackageTrackingVisible: Boolean;
-#endif
 
     local procedure ShowSourceLine()
     begin
@@ -485,9 +482,17 @@ page 5771 "Whse. Put-away Subform"
 
     procedure RegisterPutAwayYesNo()
     var
+        WhseActivityHeader: Record "Warehouse Activity Header";
         WhseActivLine: Record "Warehouse Activity Line";
     begin
-        WhseActivLine.Copy(Rec);
+        WhseActivityHeader.Get(Rec."Activity Type", Rec."No.");
+        if (Rec."Activity Type"::"Put-away" = Rec."Activity Type"::"Put-away") and WhseActivityHeader."Breakbulk Filter" then begin
+            WhseActivLine.SetRange("Activity Type", WhseActivLine."Activity Type"::"Put-away");
+            WhseActivLine.SetRange("No.", Rec."No.");
+            WhseActivLine.FindSet();
+        end
+        else
+            WhseActivLine.Copy(Rec);
         WhseActivLine.FilterGroup(3);
         WhseActivLine.SetRange(Breakbulk);
         WhseActivLine.FilterGroup(0);
@@ -554,16 +559,9 @@ page 5771 "Whse. Put-away Subform"
         CurrPage.Update(true);
     end;
 
-#if not CLEAN24
-    local procedure SetPackageTrackingVisibility()
-    begin
-        PackageTrackingVisible := true;
-    end;
-#endif
 
     [IntegrationEvent(false, false)]
     local procedure OnAutofillQtyToHandleOnBeforeRecAutofillQtyToHandle(var WarehouseActivityLine: Record "Warehouse Activity Line")
     begin
     end;
 }
-

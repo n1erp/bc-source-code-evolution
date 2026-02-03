@@ -61,6 +61,7 @@ codeunit 64 "Sales-Get Shipment"
         Text003: Label 'Inserted lines             #1######';
 #pragma warning restore AA0470
 #pragma warning restore AA0074
+        CannotCombineShptsDiffTaxLiableErr: Label 'You cannot combine shipments from orders which have different values of Tax Liable.';
 
     procedure CreateInvLines(var SalesShptLine2: Record "Sales Shipment Line")
     var
@@ -70,6 +71,7 @@ codeunit 64 "Sales-Get Shipment"
         PrepmtAmtToDeductRounding: Decimal;
         IsHandled: Boolean;
         OrderNoList: List of [Code[20]];
+        TaxLiable: Boolean;
     begin
         IsHandled := false;
         OnBeforeCreateInvLines(SalesShptLine2, SalesHeader, SalesLine, SalesShptHeader, IsHandled);
@@ -87,6 +89,7 @@ codeunit 64 "Sales-Get Shipment"
             OnCreateInvLinesOnAfterSalesShptLineSetFilters(SalesShptLine2, SalesHeader);
             SalesLine."Document Type" := SalesHeader."Document Type";
             SalesLine."Document No." := SalesHeader."No.";
+            TaxLiable := SalesShptLine2."Tax Liable";
             Window.Open(Text002 + Text003);
             OnBeforeInsertLines(SalesHeader);
 
@@ -112,6 +115,8 @@ codeunit 64 "Sales-Get Shipment"
                           SalesShptHeader.TableCaption(), SalesShptHeader."No.");
                         TransferLine := false;
                     end;
+                    if TaxLiable <> SalesShptLine2."Tax Liable" then
+                        Error(CannotCombineShptsDiffTaxLiableErr);
                     OnBeforeTransferLineToSalesDoc(SalesShptHeader, SalesShptLine2, SalesHeader, TransferLine);
                 end;
                 InsertInvoiceLineFromShipmentLine(SalesShptLine2, TransferLine, PrepmtAmtToDeductRounding);
@@ -272,6 +277,8 @@ codeunit 64 "Sales-Get Shipment"
                                     SalesLine2.SetRange("Document Type", SalesOrderLine."Document Type"::Invoice);
                                     SalesLine2.SetRange("Shipment No.", SalesShptLine2."Document No.");
                                     SalesLine2.SetRange("Shipment Line No.", SalesShptLine2."Line No.");
+
+                                    OnCopyItemChargeAssgntOnBeforeFindSalesLine2(SalesLine2, ItemChargeAssgntSales2, SalesShptLine);
                                     if SalesLine2.FindFirst() and (SalesLine2.Quantity <> 0) then
                                         ItemChargeAssgntSales2."Applies-to Doc. Line No." := SalesLine2."Line No."
                                     else
@@ -582,6 +589,11 @@ codeunit 64 "Sales-Get Shipment"
 
     [IntegrationEvent(false, false)]
     local procedure OnBeforeCopyDocumentAttachments(var DestinationSalesHeader: Record "Sales Header"; var Handled: Boolean; var OrderNoList: List of [Code[20]])
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnCopyItemChargeAssgntOnBeforeFindSalesLine2(var SalesLine2: Record "Sales Line"; var ItemChargeAssignmentSales2: Record "Item Charge Assignment (Sales)"; SalesShipmentLine: Record "Sales Shipment Line")
     begin
     end;
 }

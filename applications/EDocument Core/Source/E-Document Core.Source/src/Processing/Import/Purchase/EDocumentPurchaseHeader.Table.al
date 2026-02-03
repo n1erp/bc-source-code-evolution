@@ -5,12 +5,16 @@
 namespace Microsoft.EServices.EDocument.Processing.Import.Purchase;
 
 using Microsoft.eServices.EDocument;
+using System.Telemetry;
+using Microsoft.Purchases.Document;
+using Microsoft.Purchases.Vendor;
 
 table 6100 "E-Document Purchase Header"
 {
-    InherentEntitlements = X;
-    InherentPermissions = X;
     Access = Internal;
+    ReplicateData = false;
+    InherentEntitlements = RIMDX;
+    InherentPermissions = RIMDX;
 
     fields
     {
@@ -21,6 +25,7 @@ table 6100 "E-Document Purchase Header"
             DataClassification = SystemMetadata;
             ValidateTableRelation = true;
         }
+        #region External data - Purchase fields [2-100]
         field(2; "Customer Company Name"; Text[250])
         {
             Caption = 'Customer Company Name';
@@ -201,6 +206,22 @@ table 6100 "E-Document Purchase Header"
             Caption = 'Vendor Contact Name';
             DataClassification = CustomerContent;
         }
+        #endregion Purchase fields
+
+        #region Business Central Data - Validated fields [101-200]
+        field(101; "[BC] Vendor No."; Code[20])
+        {
+            Caption = 'Vendor No.';
+            DataClassification = CustomerContent;
+            TableRelation = Vendor."No.";
+        }
+        field(102; "[BC] Purchase Order No."; Code[20])
+        {
+            Caption = 'Purchase Order No.';
+            DataClassification = CustomerContent;
+            TableRelation = "Purchase Header"."No." where("Document Type" = const(Order));
+        }
+        #endregion Business Central Data
     }
     keys
     {
@@ -210,6 +231,12 @@ table 6100 "E-Document Purchase Header"
         }
     }
 
+    trigger OnDelete()
+    begin
+        Session.LogMessage('0000PCQ', DeleteDraftPerformedTxt, Verbosity::Normal, DataClassification::SystemMetadata, TelemetryScope::All, 'Category', FeatureName());
+        FeatureTelemetry.LogUsage('0000PCV', FeatureName(), 'Discard draft');
+    end;
+
     procedure GetFromEDocument(EDocument: Record "E-Document")
     begin
         Clear(Rec);
@@ -218,12 +245,19 @@ table 6100 "E-Document Purchase Header"
 
     procedure InsertForEDocument(EDocument: Record "E-Document")
     begin
-        Rec."E-Document Entry No." := EDocument."Entry No";
-        if not Rec.Insert() then begin
-            Clear(Rec);
+        if not Rec.Get(EDocument."Entry No") then begin
             Rec."E-Document Entry No." := EDocument."Entry No";
-            Rec.Modify();
+            Rec.Insert();
         end;
     end;
+
+    internal procedure FeatureName(): Text
+    begin
+        exit('E-Document Matching Assistance');
+    end;
+
+    var
+        FeatureTelemetry: Codeunit "Feature Telemetry";
+        DeleteDraftPerformedTxt: Label 'User deleted the draft.';
 
 }

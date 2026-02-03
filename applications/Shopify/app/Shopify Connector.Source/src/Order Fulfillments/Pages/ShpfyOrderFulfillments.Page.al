@@ -1,3 +1,8 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+
 namespace Microsoft.Integration.Shopify;
 
 using Microsoft.Sales.History;
@@ -91,7 +96,7 @@ page 30112 "Shpfy Order Fulfillments"
                 PromotedIsBig = true;
                 PromotedOnly = true;
                 RunObject = Page "Posted Sales Shipment";
-                RunPageLink = "Shpfy Fulfillment Id" = FIELD("Shopify Fulfillment Id");
+                RunPageLink = "Shpfy Fulfillment Id" = field("Shopify Fulfillment Id");
                 RunPageMode = View;
                 ToolTip = 'View related posted sales shipments.';
             }

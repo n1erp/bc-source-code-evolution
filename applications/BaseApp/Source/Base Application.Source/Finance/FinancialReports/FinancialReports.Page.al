@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Finance.FinancialReports;
 
 using Microsoft.Finance.Analysis;
@@ -24,7 +28,7 @@ page 108 "Financial Reports"
                 field(Name; Rec.Name)
                 {
                     ApplicationArea = Basic, Suite;
-                    trigger OnDrillDown()
+                    trigger OnAssistEdit()
                     var
                         AccScheduleOverview: Page "Acc. Schedule Overview";
                     begin

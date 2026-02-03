@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Finance.Dimension.Correction;
 
 using Microsoft.Finance.Analysis;
@@ -19,6 +23,7 @@ table 2582 "Dimension Correction"
         {
             DataClassification = CustomerContent;
             OptionMembers = Draft,"In Process","Validaton in Process",Failed,Completed,"Undo in Process","Undo Completed";
+            OptionCaption = 'Draft,In Process,Validation in Process,Failed,Completed,Undo in Process,Undo Completed';
             Editable = false;
         }
 
@@ -184,6 +189,7 @@ table 2582 "Dimension Correction"
         AnalysisView.SetRange("Account Source", AnalysisView."Account Source"::"G/L Account");
         AnalysisView.SetRange("Update on Posting", true);
         Rec."Update Analysis Views" := not AnalysisView.IsEmpty();
+        OnAfterOnInsert(Rec);
     end;
 
     trigger OnDelete()
@@ -285,4 +291,9 @@ table 2582 "Dimension Correction"
     var
         CannotChangeDimensionCorrectionErr: Label 'You cannot change a dimension correction while it is in %1 state.', Comment = '%1 Name of the state';
         DimensionCorrectionLbl: Label 'Dimension Correction %1', Comment = '%1 Entry No of the dimension correction';
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterOnInsert(var DimensionCorrection: Record "Dimension Correction")
+    begin
+    end;
 }

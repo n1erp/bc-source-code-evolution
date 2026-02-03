@@ -132,7 +132,7 @@ codeunit 929 "Asm. Get Demand To Reserve"
                 begin
                     AssemblyHeader.SetLoadFields("Document Type", "No.");
                     AssemblyHeader.Get(ReservationWkshLine."Source Subtype", ReservationWkshLine."Source ID");
-                    AssemblyHeader.ShowStatistics();
+                    PAGE.Run(PAGE::"Assembly Order Statistics", AssemblyHeader);
                 end;
         end;
     end;
@@ -204,8 +204,11 @@ codeunit 929 "Asm. Get Demand To Reserve"
         until TempAssemblyLine.Next() = 0;
     end;
 
+#if not CLEAN27
+    [Obsolete('This event is never raised.', '27.0')]
     [IntegrationEvent(false, false)]
     local procedure OnGetDemandOnBeforeSetTempAssemblyLine(var AssemblyLine: Record "Assembly Line"; var IsHandled: Boolean)
     begin
     end;
+#endif
 }

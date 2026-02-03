@@ -53,6 +53,14 @@ page 5971 "Posted Service Credit Memos"
                     ApplicationArea = Service;
                     ToolTip = 'Specifies the currency code for the amounts on the credit memo.';
                 }
+                field(Amount; Rec.Amount)
+                {
+                    ToolTip = 'Specifies the total credit memo amount excluding VAT.';
+                }
+                field("Amount Including VAT"; Rec."Amount Including VAT")
+                {
+                    ToolTip = 'Specifies the total credit memo amount including VAT.';
+                }
                 field("Post Code"; Rec."Post Code")
                 {
                     ApplicationArea = Service;
@@ -221,6 +229,7 @@ page 5971 "Posted Service Credit Memos"
             {
                 Caption = '&Cr. Memo';
                 Image = CreditMemo;
+#if not CLEAN27
                 action(Statistics)
                 {
                     ApplicationArea = Service;
@@ -228,11 +237,30 @@ page 5971 "Posted Service Credit Memos"
                     Image = Statistics;
                     ShortCutKey = 'F7';
                     ToolTip = 'View statistical information, such as the value of posted entries, for the record.';
+                    ObsoleteReason = 'The statistics action will be replaced with the ServiceStatistics action. The new action uses RunObject and does not run the action trigger. Use a page extension to modify the behaviour.';
+                    ObsoleteState = Pending;
+                    ObsoleteTag = '27.0';
 
                     trigger OnAction()
                     begin
                         Rec.OpenStatistics();
                     end;
+                }
+#endif
+                action(ServiceStatistics)
+                {
+                    ApplicationArea = Service;
+                    Caption = 'Statistics';
+                    Image = Statistics;
+                    ShortCutKey = 'F7';
+                    ToolTip = 'View statistical information, such as the value of posted entries, for the record.';
+#if CLEAN27
+                    Visible = true;
+#else
+                    Visible = false;
+#endif
+                    RunObject = Page "Service Credit Memo Statistics";
+                    RunPageOnRec = true;
                 }
                 action("Co&mments")
                 {
@@ -274,6 +302,7 @@ page 5971 "Posted Service Credit Memos"
 
                 trigger OnAction()
                 begin
+                    ServCrMemoHeader := Rec;
                     CurrPage.SetSelectionFilter(ServCrMemoHeader);
                     ServCrMemoHeader.PrintRecords(true);
                 end;
@@ -348,10 +377,18 @@ page 5971 "Posted Service Credit Memos"
                 group("Category_Credit Memo")
                 {
                     Caption = 'Credit Memo';
-
+#if not CLEAN27
                     actionref(Statistics_Promoted; Statistics)
                     {
+                        ObsoleteReason = 'The statistics action will be replaced with the ServiceStatistics action. The new action uses RunObject and does not run the action trigger. Use a page extension to modify the behaviour.';
+                        ObsoleteState = Pending;
+                        ObsoleteTag = '27.0';
                     }
+#else
+                    actionref(ServiceStatistics_Promoted; ServiceStatistics)
+                    {
+                    }
+#endif
                     actionref("Co&mments_Promoted"; "Co&mments")
                     {
                     }
@@ -389,4 +426,3 @@ page 5971 "Posted Service Credit Memos"
         DocExchStatusStyle: Text;
         DocExchStatusVisible: Boolean;
 }
-

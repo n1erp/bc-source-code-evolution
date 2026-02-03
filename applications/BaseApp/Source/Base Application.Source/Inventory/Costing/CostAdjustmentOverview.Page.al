@@ -460,6 +460,8 @@ page 5801 "Cost Adjustment Overview"
             }
             group(Diagnostics)
             {
+                Caption = 'Diagnostics';
+
                 action("Action Messages")
                 {
                     Caption = 'Action Messages';
@@ -607,12 +609,8 @@ page 5801 "Cost Adjustment Overview"
 
     trigger OnOpenPage()
     var
-        CompanyInformation: Record "Company Information";
-        EnvironmentInformation: Codeunit "Environment Information";
     begin
-        InventorySetup.Get();
-        CompanyInformation.Get();
-        SandboxActionsVisible := EnvironmentInformation.IsSandbox() or CompanyInformation."Demo Company";
+        SandboxActionsVisible := IsSandBoxActionsVisible();
 
         CheckActionMessages();
     end;
@@ -651,6 +649,16 @@ page 5801 "Cost Adjustment Overview"
             else
                 StatusItemStyleExpr := 'Standard';
         end;
+    end;
+
+    protected procedure IsSandboxActionsVisible(): Boolean
+    var
+        CompanyInformation: Record "Company Information";
+        EnvironmentInformation: Codeunit "Environment Information";
+    begin
+        InventorySetup.Get();
+        CompanyInformation.Get();
+        exit(EnvironmentInformation.IsSandbox() or CompanyInformation."Demo Company");
     end;
 
     local procedure UpdateSummary()
@@ -746,5 +754,10 @@ page 5801 "Cost Adjustment Overview"
         ActionMessagesExistNotification.Scope := NotificationScope::LocalScope;
         ActionMessagesExistNotification.AddAction(ReviewActionMessagesTxt, Codeunit::"Cost Adjmt. Signals", 'ShowActionMessages');
         ActionMessagesExistNotification.Send();
+    end;
+
+    protected procedure GetNotTestEnvironmentErr(): Text
+    begin
+        exit(NotTestEnvironmentErr);
     end;
 }

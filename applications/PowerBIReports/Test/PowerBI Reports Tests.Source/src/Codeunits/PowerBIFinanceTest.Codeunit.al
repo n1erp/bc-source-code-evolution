@@ -1,26 +1,28 @@
 namespace Microsoft.Finance.PowerBIReports.Test;
 
-using Microsoft.PowerBIReports;
-using Microsoft.Finance.GeneralLedger.Journal;
 using Microsoft.Finance.GeneralLedger.Account;
-using Microsoft.Finance.GeneralLedger.Ledger;
-using System.Text;
-using System.Utilities;
 using Microsoft.Finance.GeneralLedger.Budget;
-using Microsoft.Sales.History;
-using Microsoft.Sales.Receivables;
-using Microsoft.Sales.Document;
+using Microsoft.Finance.GeneralLedger.Journal;
+using Microsoft.Finance.GeneralLedger.Ledger;
+using Microsoft.Finance.GeneralLedger.Setup;
+using Microsoft.Finance.PowerBIReports;
+using Microsoft.PowerBIReports;
+using Microsoft.PowerBIReports.Test;
+using Microsoft.Purchases.Document;
 using Microsoft.Purchases.History;
 using Microsoft.Purchases.Payables;
-using Microsoft.Purchases.Document;
-using Microsoft.PowerBIReports.Test;
-using System.TestLibraries.Utilities;
-using Microsoft.Finance.GeneralLedger.Setup;
+using Microsoft.Sales.Document;
+using Microsoft.Sales.History;
+using Microsoft.Sales.Receivables;
 using System.TestLibraries.Security.AccessControl;
+using System.TestLibraries.Utilities;
+using System.Text;
+using System.Utilities;
 
 codeunit 139876 "PowerBI Finance Test"
 {
     Subtype = Test;
+    TestType = Uncategorized;
     Access = Internal;
 
     var
@@ -103,6 +105,7 @@ codeunit 139876 "PowerBI Finance Test"
         Assert.AreEqual(Format(VendorLedgerEntry."Posting Date", 0, 9), JsonMgt.GetValue('vlePostingDate'), 'Posting date did not match.');
         Assert.AreEqual(Format(VendorLedgerEntry."Document Date", 0, 9), JsonMgt.GetValue('vleDocumentDate'), 'Document date did not match.');
         Assert.AreEqual(Format(VendorLedgerEntry."Dimension Set ID"), JsonMgt.GetValue('vleDimensionSetID'), 'Dimension set ID did not match.');
+        Assert.AreEqual(Format(VendorLedgerEntry."Closed at Date", 0, 9), JsonMgt.GetValue('vleClosedAtDate'), 'Closed at Date did not match.');
         Assert.AreEqual(Format(DetailedVendLedgerEntry."Posting Date", 0, 9), JsonMgt.GetValue('dvlePostingDate'), 'Detailed vendor ledger entry posting date did not match.');
         Assert.AreEqual(Format(DetailedVendLedgerEntry."Entry Type"), JsonMgt.GetValue('dvleEntryType'), 'Detailed vendor ledger entry type did not match.');
         Assert.AreEqual(Format(DetailedVendLedgerEntry."Document Type"), JsonMgt.GetValue('dvleDocumentType'), 'Detailed vendor ledger entry document type did not match.');
@@ -191,6 +194,7 @@ codeunit 139876 "PowerBI Finance Test"
         Assert.AreEqual(Format(CustomerLedgerEntry."Posting Date", 0, 9), JsonMgt.GetValue('clePostingDate'), 'Posting date did not match.');
         Assert.AreEqual(Format(CustomerLedgerEntry."Document Date", 0, 9), JsonMgt.GetValue('cleDocumentDate'), 'Document date did not match.');
         Assert.AreEqual(Format(CustomerLedgerEntry."Dimension Set ID"), JsonMgt.GetValue('cleDimensionSetID'), 'Dimension set ID did not match.');
+        Assert.AreEqual(Format(CustomerLedgerEntry."Closed at Date", 0, 9), JsonMgt.GetValue('cleClosedAtDate'), 'Closed at Date did not match.');
         Assert.AreEqual(Format(DetailedCustLedgerEntry."Posting Date", 0, 9), JsonMgt.GetValue('dclePostingDate'), 'Detailed customer ledger entry posting date did not match.');
         Assert.AreEqual(Format(DetailedCustLedgerEntry."Entry Type"), JsonMgt.GetValue('dcleEntryType'), 'Detailed customer ledger entry type did not match.');
         Assert.AreEqual(Format(DetailedCustLedgerEntry."Document Type"), JsonMgt.GetValue('dcleDocumentType'), 'Detailed customer ledger entry document type did not match.');
@@ -613,6 +617,35 @@ codeunit 139876 "PowerBI Finance Test"
 
         // [THEN] A filter text of format "%1..%2" should be created 
         Assert.AreEqual('', ActualFilterTxt, 'The expected & actual filter text did not match.');
+    end;
+
+    [Test]
+    procedure VerifyEditingPowerBIAccCategoryWhenGLAccCategoryContainsSpecialCharacter()
+    var
+        GLAccountCategory: Record "G/L Account Category";
+        AccountCategories: TestPage "Account Categories";
+    begin
+        // [SCENARIO 572645] Verify editing of Power BI account categories when the G/L account category contains the special character ')', and ensure the update is successful without errors.
+        // Permission Set.
+        PermissionsMock.Assign('SUPER');
+        PowerBICoreTest.AssignAdminPermissionSet();
+        RecreatePBISetup();
+
+        // [GIVEN] Create G/L Account Category.
+        LibERM.CreateGLAccountCategory(GLAccountCategory);
+
+        // [GIVEN] Change the G/L account category description and add a special character to the description.
+        GLAccountCategory.Validate(Description, '');
+        GLAccountCategory.Validate(Description, '3)Cash');
+        GLAccountCategory.Modify();
+        PermissionsMock.ClearAssignments();
+
+        // [WHEN] Account Category page is open
+        AccountCategories.OpenEdit();
+        AccountCategories.First();
+
+        // [THEN] Edit the Power BI account categories and add the G/L account category that contains the special character.The system did not display any errors, and the category was successfully changed.
+        AccountCategories.AccountCategoryDescription.SetValue(GLAccountCategory.Description);
     end;
 
     local procedure RecreatePBISetup()

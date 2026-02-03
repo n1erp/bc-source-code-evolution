@@ -62,6 +62,7 @@ codeunit 134386 "ERM Sales Documents II"
         ExpectedRenameErr: Label 'You cannot rename the line.';
         SalesQuoteLineNotEditableErr: Label 'The Sales Quote line should be editable';
         CannotRenameItemUsedInSalesLinesErr: Label 'You cannot rename %1 in a %2, because it is used in sales document lines.', Comment = '%1 = Item No. caption, %2 = Table caption.';
+        ChangeExtendedTextErr: Label 'You cannot change %1 for Extended Text Line.', Comment = '%1= Field Caption';
 
     [Test]
     [Scope('OnPrem')]
@@ -1131,7 +1132,7 @@ codeunit 134386 "ERM Sales Documents II"
     end;
 
     [Test]
-    [HandlerFunctions('GetShipmentLinesHandler,SendNotificationHandler,NotificationDetailsHandler,RecallNotificationHandler')]
+    [HandlerFunctions('GetShipmentLinesHandler,RecallNotificationHandler')]
     [Scope('OnPrem')]
     procedure CheckCreditLimitCustomerTotalAmount()
     var
@@ -2729,7 +2730,7 @@ codeunit 134386 "ERM Sales Documents II"
         // [GIVEN] Customer "C" where Bill-to Customer "B" has Name "N"
         CreateCustomerWithBillToCustomer(Customer, CustomerBillTo);
 
-        // [GIVEN] Create Ship-to Address for Customer "C" and assigne as default "Ship-to Address"        
+        // [GIVEN] Create Ship-to Address for Customer "C" and assigne as default "Ship-to Address"
         LibrarySales.CreateShipToAddress(ShipToAddress, Customer."No.");
         if ShipToAddress."Shipment Method Code" = '' then begin
             ShipToAddress.Validate("Shipment Method Code", CreateShipmentMethod());
@@ -3973,7 +3974,7 @@ codeunit 134386 "ERM Sales Documents II"
         SalesOrder: TestPage "Sales Order";
     begin
         // [FEATURE] [UI]
-        // [SCENARIO 414694] When user change Sell-to Contact No. in Sales Order card then contact info must be updated 
+        // [SCENARIO 414694] When user change Sell-to Contact No. in Sales Order card then contact info must be updated
         Initialize();
 
         // [GIVEN] Customer with two contacts
@@ -4425,7 +4426,7 @@ codeunit 134386 "ERM Sales Documents II"
         SalesLine: Record "Sales Line";
         SalesOrder: TestPage "Sales Order";
     begin
-        // [SCENARIO 468735] Verify Invoice Discount Value on Sales Header after updating Posting Date on Sales Order with Line Discount 
+        // [SCENARIO 468735] Verify Invoice Discount Value on Sales Header after updating Posting Date on Sales Order with Line Discount
         Initialize();
 
         // [GIVEN] Create Sales Header
@@ -4443,7 +4444,7 @@ codeunit 134386 "ERM Sales Documents II"
         SalesOrder.SalesLines."Invoice Discount Amount".SetValue(100);
         SalesOrder.Close();
 
-        // [GIVEN] Set Line Discount on first Sales Line        
+        // [GIVEN] Set Line Discount on first Sales Line
         SalesHeader.Get(SalesHeader."Document Type", SalesHeader."No.");
         SalesLine.Get(SalesHeader."Document Type", SalesHeader."No.", 10000);
         SalesLine.SetSalesHeader(SalesHeader);
@@ -4461,9 +4462,197 @@ codeunit 134386 "ERM Sales Documents II"
         SalesOrder.SalesLines."Invoice Discount Amount".AssertEquals(SalesHeader."Invoice Discount Value");
     end;
 
+    [HandlerFunctions('CustomerLookupHandler,ConfirmHandlerYes')]
+    [Test]
+    procedure UpdateEmailAndPhoneNoWhenChangeBillToOfSalesInvoice()
+    var
+        Contact: array[2] of Record Contact;
+        Customer: array[2] of Record Customer;
+        SalesHeader: Record "Sales Header";
+        SalesInvoice: TestPage "Sales Invoice";
+    begin
+        // [SCENARIO 564632] The Email and Phone No. should update when selecting Another Customer in the "Bill-to" field of a Sales Invoice
+        Initialize();
+
+        // [GIVEN] Create First Customer with First Contact with Phone = "111111111", Mobile Phone = "222222222" and Email = "contact1@mail.com"
+        LibraryMarketing.CreateContactWithCustomer(Contact[1], Customer[1]);
+        UpdateContactInfo(Contact[1], '111111111', '222222222', 'contact1@mail.com');
+        Contact[1].Modify(true);
+
+        // [GIVEN] Create Second Customer with Second Contact with Phone = "333333333", Mobile Phone = "444444444" and Email = "contact2@mail.com"
+        LibraryMarketing.CreateContactWithCustomer(Contact[2], Customer[2]);
+        UpdateContactInfo(Contact[2], '333333333', '444444444', 'contact2@mail.com');
+        Contact[2].Modify(true);
+
+        // [GIVEN] Create Sales Invoice with First Customer
+        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Invoice, Customer[1]."No.");
+
+        // [GIVEN] Sales Invoice Card is opened
+        LibraryVariableStorage.Enqueue(Customer[2]."No.");
+        LibraryVariableStorage.Enqueue('');
+        LibraryVariableStorage.Enqueue(true); // yes to change "Bill-to Customer No."
+        SalesInvoice.OpenEdit();
+        SalesInvoice.FILTER.SetFilter("No.", SalesHeader."No.");
+
+        // [WHEN] Select Second Customer when lookup "Bill-to Customer Name"
+        SalesInvoice."Bill-to Name".Lookup();
+
+        // [THEN] Verify Sales Invoice "Phone No." = "333333333"
+        SalesInvoice.BillToContactPhoneNo.AssertEquals(Contact[2]."Phone No.");
+
+        // [THEN] Verify Sales Invoice "Mobile Phone No." = "444444444"
+        SalesInvoice.BillToContactMobilePhoneNo.AssertEquals(Contact[2]."Mobile Phone No.");
+
+        // [THEN] Verify Sales Invoice "Email" = "contact2@mail.com"
+        SalesInvoice.BillToContactEmail.AssertEquals(Contact[2]."E-Mail");
+    end;
+
+    [Test]
+    [HandlerFunctions('ContactListPageHandler,ConfirmHandlerYes')]
+    procedure ShipToContactUpdateFromAlternateShippingAddressContact()
+    var
+        Customer: Record Customer;
+        Contact: Record Contact;
+        ContactNew: Record Contact;
+        SalesHeader: Record "Sales Header";
+        ShipToAddress: Record "Ship-to Address";
+        SalesOrder: TestPage "Sales Order";
+    begin
+        // [SCENARIO 562670] Alternate shipping address contact on a Sales Order is changed when changing the contact person on the General FastTab
+        Initialize();
+
+        // [GIVEN] Create Customer and ShipToAddress with Contact
+        CreateCustomerWithTwoContacts(Customer, Contact, ContactNew);
+        LibrarySales.CreateShipToAddress(ShipToAddress, Customer."No.");
+        ShipToAddress.Validate(Contact, 'London');
+        ShipToAddress.Modify(true);
+
+        // [GIVEN] Sales Order with default Contact
+        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Order, Customer."No.");
+        SalesHeader.Validate("Ship-to Code", ShipToAddress.Code);
+        SalesHeader.Modify(true);
+
+        // [WHEN] Open Sales Order page and change Contact on General Tab
+        SalesOrder.OpenEdit();
+        SalesOrder.GotoRecord(SalesHeader);
+        LibraryVariableStorage.Enqueue(ContactNew."No.");
+        SalesOrder."Sell-to Contact".Lookup();
+        SalesOrder.OK().Invoke();
+
+        // [THEN] Ship-to Option is "Alternate Shipping Address" in Sales Order
+        Assert.AreEqual(ShipToAddress.Contact, SalesHeader."Ship-to Contact", ' ');
+    end;
+
+    [Scope('OnPrem')]
+    procedure UpdateExtendedTextTypeNotAllowed()
+    var
+        Item: Record Item;
+        SalesHeader: Record "Sales Header";
+        SalesLine: Record "Sales Line";
+    begin
+        // [SCENARIO 564049] Error message when adding a sales line with type Item that have extended text previously
+        Initialize();
+
+        // [GIVEN] Item "X" with Extended Text
+        CreateItemAndExtendedText(Item);
+
+        // [GIVEN] Create Sales Header
+        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Order, LibrarySales.CreateCustomerNo());
+
+        // [GIVEN] Sales Line with Item, second Sales Line with Extended Text
+        CreateSalesLineWithExtendedText(SalesHeader, Item."No.");
+
+        // [WHEN] Get extended text Sales Line
+        SalesLine.SetRange("Document No.", SalesHeader."No.");
+        SalesLine.FindLast();
+
+        // [THEN] Error come when try to change type of extended text Sales line
+        asserterror SalesLine.Validate(Type, SalesLine.Type::Item);
+
+        // [THEN] Verify the error of extended text
+        Assert.ExpectedError(StrSubstNo(ChangeExtendedTextErr, SalesLine.FieldCaption(Type)));
+    end;
+
+    [Test]
+    [HandlerFunctions('ConfirmHandlerYes')]
+    procedure UpdateEmailAndPhoneNoAfterChangeSelltoContactfieldinSalesQuote()
+    var
+        Customer: Record Customer;
+        Contact: Record Contact;
+        Contact2: Record Contact;
+        SalesHeader: Record "Sales Header";
+        SalesQuote: TestPage "Sales Quote";
+    begin
+        // [SCENARIO 564179] Email and Phone No. must be updated when change sell-to contact on sales Quote.
+        Initialize();
+
+        // [GIVEN] Create Two Contacts with Customer
+        LibraryMarketing.CreateContactWithCustomer(Contact, Customer);
+        UpdateContactInfo(Contact, '111111111', '222222222', 'contact1@mail.com');
+        Contact.Modify(true);
+        Customer.Validate("Primary Contact No.", Contact."No.");
+        Customer.Modify(true);
+        LibraryMarketing.CreatePersonContact(Contact2);
+        UpdateContactInfo(Contact2, '333333333', '444444444', 'contact2@mail.com');
+        Contact2.Validate("Company No.", Contact."Company No.");
+        Contact2.Modify(true);
+
+        // [GIVEN] Create Sales Quote
+        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Quote, Customer."No.");
+        SalesQuote.Trap();
+        Page.Run(Page::"Sales Quote", SalesHeader);
+
+        // [WHEN] Update "Sell-to Contact"
+        SalesQuote."Sell-to Contact No.".SetValue(Contact2."No.");
+        SalesQuote."Sell-to Contact".SetValue(Contact2.Name);
+
+        // [THEN] Verify Email and Phone No auto update from Contact
+        SalesQuote.SellToPhoneNo.AssertEquals(Contact2."Phone No.");
+        SalesQuote.SellToEmail.AssertEquals(Contact2."E-Mail");
+    end;
+
+    [Test]
+    [HandlerFunctions('ContactListModalPageHandler')]
+    procedure CompanyNoAndCompanyNameAutomaticallyFilledOnContactCardWhenCreateNewFromSellToContactNoLookup()
+    var
+        Contact: Record Contact;
+        Contact2: Record Contact;
+        Customer: Record Customer;
+        Salesheader: Record "Sales Header";
+        SalesQuote: TestPage "Sales Quote";
+    begin
+        // [SCENARIO 564179] "Company No." and "Company Name" auto filled from contacts when create new contact from "Sell-to Contact No." lookup
+        Initialize();
+
+        // [GIVEN] Create Contact with Customer
+        LibraryMarketing.CreateContactWithCustomer(Contact, Customer);
+        Customer.Validate("Primary Contact No.", Contact."No.");
+        Customer.Modify(true);
+        Contact.Validate("Contact Business Relation", Contact."Contact Business Relation"::Customer);
+        Contact.Modify(true);
+
+        // [GIVEN] Create Person Contact
+        LibraryMarketing.CreatePersonContact(Contact2);
+        Contact2.Validate("Company No.", Contact."Company No.");
+        Contact2.Validate("Contact Business Relation", Contact2."Contact Business Relation"::Customer);
+        Contact2.Modify(true);
+
+        // [GIVEN] Create Sales Quote
+        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Quote, Customer."No.");
+
+        // [GIVEN] Lookup "Contact list" page.
+        SalesQuote.OpenView();
+        SalesQuote.GoToRecord(SalesHeader);
+        LibraryVariableStorage.Enqueue(Contact2."Company No.");
+        SalesQuote."Sell-to Contact No.".Lookup();
+
+        // [THEN] Verify Company No. and Company Name after create new from "Sell-to Contact No." lookup.
+    end;
+
     local procedure Initialize()
     var
         ICSetup: Record "IC Setup";
+        GLSetup: Record "General Ledger Setup";
         LibraryERMCountryData: Codeunit "Library - ERM Country Data";
         DocumentNoVisibility: Codeunit DocumentNoVisibility;
     begin
@@ -4486,6 +4675,12 @@ codeunit 134386 "ERM Sales Documents II"
         LibraryERMCountryData.CreateVATData();
         LibraryERMCountryData.UpdateGeneralPostingSetup();
         LibrarySetupStorage.Save(DATABASE::"Sales & Receivables Setup");
+
+        GLSetup.Get();
+        GLSetup."Show Amounts" := GLSetup."Show Amounts"::"All Amounts";
+        GLSetup.Modify();
+        LibrarySetupStorage.SaveGeneralLedgerSetup();
+
         isInitialized := true;
         Commit();
         LibraryTestInitialize.OnAfterTestSuiteInitialize(CODEUNIT::"ERM Sales Documents II");
@@ -5641,7 +5836,7 @@ codeunit 134386 "ERM Sales Documents II"
         Customer.Validate("Credit Limit (LCY)", CreditLimit);
         Customer.Modify(true);
     end;
-
+#if not CLEAN25
     local procedure OpenAndUpdateSalesInvoicePage(var SalesInvoice: TestPage "Sales Invoice"; SalesInvoiceNo: Code[20]; ItemNo: Code[20]; Quantity: Decimal)
     var
         SalesLine: Record "Sales Line";
@@ -5652,7 +5847,7 @@ codeunit 134386 "ERM Sales Documents II"
         SalesInvoice.SalesLines."No.".SetValue(ItemNo);
         SalesInvoice.SalesLines.Quantity.SetValue(Quantity);
     end;
-
+#endif
     local procedure OpenSalesOrderPageWithNewOrder(CustomerNo: Code[20])
     var
         SalesHeader: Record "Sales Header";
@@ -5749,14 +5944,6 @@ codeunit 134386 "ERM Sales Documents II"
         REPORT.SaveAsExcel(REPORT::"Archived Sales Quote", LibraryReportValidation.GetFileName(), SalesHeaderArchive);
     end;
 
-    local procedure RunArchivedSalesOrderReport(SalesHeader: Record "Sales Header")
-    var
-        SalesHeaderArchive: Record "Sales Header Archive";
-    begin
-        FindSalesHeaderArchive(SalesHeaderArchive, SalesHeader);
-        REPORT.SaveAsExcel(REPORT::"Archived Sales Order", LibraryReportValidation.GetFileName(), SalesHeaderArchive);
-    end;
-
     local procedure RunArchivedSalesOrderReportAsXml(SalesHeader: Record "Sales Header")
     var
         SalesHeaderArchive: Record "Sales Header Archive";
@@ -5779,13 +5966,13 @@ codeunit 134386 "ERM Sales Documents II"
         Customer.Validate(City, PostCode.City);
         Customer.Modify(true);
     end;
-
+#if not CLEAN25
     local procedure UpdateCreditLimitInCustomer(var Customer: Record Customer; CreditLimitAmount: Decimal)
     begin
         Customer.Validate("Credit Limit (LCY)", CreditLimitAmount);
         Customer.Modify(true);
     end;
-
+#endif
     local procedure UpdateSalesReceivablesSetup(NewStockOutWarning: Boolean; CreditWarning: Option)
     var
         DocumentNoVisibility: Codeunit DocumentNoVisibility;
@@ -6080,7 +6267,7 @@ codeunit 134386 "ERM Sales Documents II"
         SalesLine.TestField(Quantity, SalesInvoiceLine.Quantity);
         SalesLine.TestField("Unit Price", SalesInvoiceLine."Unit Price");
     end;
-
+#if not CLEAN25
     local procedure VerifyUnitPriceAndLineDiscountOnSalesLine(SalesLine: Record "Sales Line"; Quantity: Decimal; UnitPrice: Decimal; LineDiscountPercentage: Decimal)
     var
         SalesLine2: Record "Sales Line";
@@ -6093,7 +6280,7 @@ codeunit 134386 "ERM Sales Documents II"
         SalesLine2.TestField("Unit Price", UnitPrice);
         SalesLine2.TestField("Line Discount %", LineDiscountPercentage);
     end;
-
+#endif
     local procedure VerifyVATEntry(DocumentNo: Code[20]; Amount: Decimal)
     var
         VATEntry: Record "VAT Entry";
@@ -6563,5 +6750,20 @@ codeunit 134386 "ERM Sales Documents II"
         CustomerLookup.Filter.SetFilter(Name, LibraryVariableStorage.DequeueText());
         CustomerLookup.OK().Invoke();
     end;
-}
 
+    [ModalPageHandler]
+    procedure CustomerLookupHandler(var CustomerLookup: TestPage "Customer Lookup")
+    begin
+        CustomerLookup.GotoKey(LibraryVariableStorage.DequeueText());
+        Assert.AreEqual(LibraryVariableStorage.DequeueText(),
+            CustomerLookup.Filter.GetFilter("Date Filter"), 'Wrong Date Filter.');
+        CustomerLookup.OK().Invoke();
+    end;
+
+    [ModalPageHandler]
+    procedure ContactListModalPageHandler(var ContactList: TestPage "Contact List")
+    begin
+        ContactList.FILTER.SetFilter("Company No.", LibraryVariableStorage.DequeueText());
+        ContactList.New();
+    end;
+}

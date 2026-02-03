@@ -125,7 +125,7 @@ codeunit 134832 "Alloc. Acc. Jounral E2E Tests"
         // [GIVEN] Create Allocation Account "X" with variable GL distributions
         AllocationAccount := CreateAllocationAccountWithVariableDistribution();
 
-        // [GIVEN] Create two G/L Accounts "X" and "Y" with direct posting 
+        // [GIVEN] Create two G/L Accounts "X" and "Y" with direct posting
         // [GIVEN] Create two G/L Accounts "M" and "N" with direct posting with negative balance
         // [GIVEN] Create and post General Journal line: Gen. Journal Batch "X", G/L Account "M", amount is negative
         // [GIVEN] Create and post General Journal line: Gen. Journal Batch "X", G/L Account "N", amount is negative
@@ -1338,7 +1338,7 @@ codeunit 134832 "Alloc. Acc. Jounral E2E Tests"
         // [GIVEN] Calculate Sum of Amount Value Variable to Create Balancing Line of General Journal.
         AmountValue[4] := AmountValue[1] + AmountValue[2] + AmountValue[3];
 
-        // [GIVEN] Create General Journal Line Four as Balancing Line.     
+        // [GIVEN] Create General Journal Line Four as Balancing Line.
         CreateLineOnGeneralJournal2(
             GenJournalLine[4],
             BankAccount."No.",
@@ -1362,9 +1362,52 @@ codeunit 134832 "Alloc. Acc. Jounral E2E Tests"
         VerifyGLEntryAmount(GLEntry, 0, 1);
     end;
 
+    [Test]
+    [HandlerFunctions('ConfirmHandlerTrue,MessageHandler,GeneralJournalTemplateHandler')]
+    procedure GeneralJournalPostingWithMultipleAllocationAccountLines()
+    var
+        DestinationGLAccount: Record "G/L Account";
+        BalancingGLAccount: Record "G/L Account";
+        AllocationAccount: array[2] of Record "Allocation Account";
+        GLEntry: Record "G/L Entry";
+        GeneralJournalPage: TestPage "General Journal";
+        DocumentNumber: Code[10];
+        Amount: Decimal;
+    begin
+        // [SCENARIO 569036] Issue with posting General Journals that contain Allocation Account lines with 10 entries resulting an error
+        Initialize();
+
+        // [GIVEN] Create Destination and Balancing G/L Account
+        DestinationGLAccount.Get(LibraryERM.CreateGLAccountNoWithDirectPosting());
+        BalancingGLAccount.Get(LibraryERM.CreateGLAccountNoWithDirectPosting());
+
+        // [GIVEN] An Allocation Account with variable GL distributions
+        CreateAllocationAccountwithSpecificNoOfFixedGLDistributionLines(AllocationAccount[1], DestinationGLAccount, LibraryRandom.RandIntInRange(10, 10));
+        CreateAllocationAccountwithSpecificNoOfFixedGLDistributionLines(AllocationAccount[2], DestinationGLAccount, LibraryRandom.RandIntInRange(10, 10));
+        Amount := LibraryRandom.RandDecInDecimalRange(10000, 10000, 0);
+
+        // [GIVEN] The General Journal line with Allocation Account
+        CreateBalancingLinesOnGeneralJournalWithTwoAllocationAccount(
+            DocumentNumber,
+            GeneralJournalPage,
+            AllocationAccount,
+            BalancingGLAccount."No.",
+            Amount);
+
+        // [WHEN] The General Journal line is posted
+        GeneralJournalPage.Post.Invoke();
+
+        // [THEN] Verify the General Journal Posted Successfylly
+        GLEntry.SetRange("Document No.", DocumentNumber);
+        GLEntry.SetRange("G/L Account No.", DestinationGLAccount."No.");
+        Assert.AreEqual(20, GLEntry.Count(), 'Wrong number of G/L Entries created for the destination account');
+        GLEntry.CalcSums(Amount);
+        Assert.AreEqual(Amount, GLEntry.Amount, 'The rounding amount was not distributed correctly');
+    end;
+
     local procedure CreateLineOnCashReceiptJournal(var DocumentNumber: Code[10]; var CashReceiptJournalPage: TestPage "Cash Receipt Journal"; AccountType: Enum "Gen. Journal Account Type"; AccountNo: Code[20];
-                                                                                                                                                         BalancingAccountType: Enum "Gen. Journal Account Type";
-                                                                                                                                                         BalancingAccountNo: Code[20])
+                                                                                                                                                               BalancingAccountType: Enum "Gen. Journal Account Type";
+                                                                                                                                                               BalancingAccountNo: Code[20])
     var
         GenJournalBatch: Record "Gen. Journal Batch";
         GenJournalTemplateType: Enum "Gen. Journal Template Type";
@@ -1386,27 +1429,7 @@ codeunit 134832 "Alloc. Acc. Jounral E2E Tests"
         CashReceiptJournalPage."Bal. Account No.".SetValue(BalancingAccountNo);
     end;
 
-    local procedure CreateLineOnPaymentJournal(var DocumentNumber: Code[10]; var PaymentJournalPage: TestPage "Payment Journal"; AccountType: Enum "Gen. Journal Account Type"; AccountNo: Code[20];
-                                                                                                                                                  BalancingAccountType: Enum "Gen. Journal Account Type";
-                                                                                                                                                  BalancingAccountNo: Code[20])
-
-    begin
-        PaymentJournalPage.OpenEdit();
-#pragma warning disable AA0139
-        DocumentNumber := Any.AlphanumericText(10);
-#pragma warning restore AA0139
-        PaymentJournalPage."Document No.".SetValue(DocumentNumber);
-        PaymentJournalPage."Account Type".SetValue(AccountType);
-        PaymentJournalPage."Account No.".SetValue(AccountNo);
-        PaymentJournalPage.Description.SetValue(DocumentNumber);
-        PaymentJournalPage.Amount.SetValue(GetLineAmountToForceRounding());
-        PaymentJournalPage."Bal. Account Type".SetValue(BalancingAccountType);
-        PaymentJournalPage."Bal. Account No.".SetValue(BalancingAccountNo);
-    end;
-
-    local procedure CreateLineOnSalesJournal(var DocumentNumber: Code[10]; var SalesJournalPage: TestPage "Sales Journal"; AccountType: Enum "Gen. Journal Account Type"; AccountNo: Code[20];
-                                                                                                                                                     BalancingAccountType: Enum "Gen. Journal Account Type";
-                                                                                                                                                     BalancingAccountNo: Code[20])
+    local procedure CreateLineOnSalesJournal(var DocumentNumber: Code[10]; var SalesJournalPage: TestPage "Sales Journal"; AccountType: Enum "Gen. Journal Account Type"; AccountNo: Code[20]; BalancingAccountType: Enum "Gen. Journal Account Type"; BalancingAccountNo: Code[20])
     var
         GenJournalBatch: Record "Gen. Journal Batch";
         GenJournalTemplateType: Enum "Gen. Journal Template Type";
@@ -1429,8 +1452,8 @@ codeunit 134832 "Alloc. Acc. Jounral E2E Tests"
     end;
 
     local procedure CreateLineOnPurchaseJournal(var DocumentNumber: Code[10]; var PurchaseJournalPage: TestPage "Purchase Journal"; AccountType: Enum "Gen. Journal Account Type"; AccountNo: Code[20];
-                                                                                                                                                   BalancingAccountType: Enum "Gen. Journal Account Type";
-                                                                                                                                                   BalancingAccountNo: Code[20])
+                                                                                                                                                     BalancingAccountType: Enum "Gen. Journal Account Type";
+                                                                                                                                                     BalancingAccountNo: Code[20])
     var
         GenJournalBatch: Record "Gen. Journal Batch";
         GenJournalTemplateType: Enum "Gen. Journal Template Type";
@@ -1869,15 +1892,15 @@ codeunit 134832 "Alloc. Acc. Jounral E2E Tests"
         var GenJournalLine: Record "Gen. Journal Line";
         AccountNo: Code[20];
         AccountType: Enum "Gen. Journal Account Type";
-        BalancingAccountType: Enum "Gen. Journal Account Type";
-        BalancingAccountNo: Code[20];
-        Amount: Decimal;
-        DocumentNo: Code[20];
-        GenJournalBatch: Record "Gen. Journal Batch";
-        VATBusPostingGroup: Code[20];
-        VATProdPostingGroup: Code[20];
-        CurrencyCode: Code[20];
-        SelectedAllocAccountNo: Code[20])
+                         BalancingAccountType: Enum "Gen. Journal Account Type";
+                         BalancingAccountNo: Code[20];
+                         Amount: Decimal;
+                         DocumentNo: Code[20];
+                         GenJournalBatch: Record "Gen. Journal Batch";
+                         VATBusPostingGroup: Code[20];
+                         VATProdPostingGroup: Code[20];
+                         CurrencyCode: Code[20];
+                         SelectedAllocAccountNo: Code[20])
     begin
         LibraryJournals.CreateGenJournalLine(
             GenJournalLine,
@@ -1896,6 +1919,59 @@ codeunit 134832 "Alloc. Acc. Jounral E2E Tests"
         GenJournalLine.Validate("Currency Code", CurrencyCode);
         GenJournalLine.Validate("Selected Alloc. Account No.", SelectedAllocAccountNo);
         GenJournalLine.Modify(true);
+    end;
+
+    local procedure CreateAllocationAccountwithSpecificNoOfFixedGLDistributionLines(
+       var AllocationAccount: Record "Allocation Account";
+       DestinationGLAccount: Record "G/L Account"; NoOfFixedAccountDistributionLines: Integer)
+    var
+        AllocationAccountPage: TestPage "Allocation Account";
+        FixedAllocationAccountCode: Code[20];
+        i: Integer;
+    begin
+        FixedAllocationAccountCode := CreateAllocationAccountWithFixedDistribution(AllocationAccountPage);
+
+        for i := 1 to NoOfFixedAccountDistributionLines do begin
+            AddGLDestinationAccountForFixedDistribution(AllocationAccountPage, DestinationGLAccount);
+            AllocationAccountPage.FixedAccountDistribution.Share.SetValue(LibraryRandom.RandDecInDecimalRange(10, 10, 0));
+            if i <> NoOfFixedAccountDistributionLines then
+                AllocationAccountPage.FixedAccountDistribution.New();
+        end;
+        AllocationAccountPage.Close();
+
+        AllocationAccount.Get(FixedAllocationAccountCode);
+    end;
+
+    local procedure CreateBalancingLinesOnGeneralJournalWithTwoAllocationAccount(
+        var DocumentNumber: Code[10];
+        var GeneralJournalPage: TestPage "General Journal";
+        AllocationAccount: array[2] of Record "Allocation Account";
+        BalancingAccountNo: Code[20];
+        Amount: Decimal)
+    var
+        GenJournalBatch: Record "Gen. Journal Batch";
+        AccountType: Enum "Gen. Journal Account Type";
+        i: Integer;
+    begin
+        CreateGeneralJournalBatch(GenJournalBatch);
+        LibraryVariableStorage.Enqueue(GenJournalBatch."Journal Template Name");
+        GeneralJournalPage.OpenEdit();
+        DocumentNumber := LibraryRandom.RandText(10);
+        GeneralJournalPage."Document No.".SetValue(DocumentNumber);
+        GeneralJournalPage."Account Type".SetValue(AccountType::"G/L Account");
+        GeneralJournalPage."Account No.".SetValue(BalancingAccountNo);
+        GeneralJournalPage.Description.SetValue(DocumentNumber);
+        GeneralJournalPage.Amount.SetValue(-Amount);
+
+        for i := 1 to ArrayLen(AllocationAccount) do begin
+            GeneralJournalPage.New();
+            GeneralJournalPage."Document No.".SetValue(DocumentNumber);
+            GeneralJournalPage."Account Type".SetValue(AccountType::"Allocation Account");
+            GeneralJournalPage."Account No.".SetValue(AllocationAccount[i]."No.");
+            GeneralJournalPage.Description.SetValue(DocumentNumber);
+            GeneralJournalPage.Amount.SetValue(Amount / 2);
+
+        end;
     end;
 
     [ModalPageHandler]

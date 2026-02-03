@@ -5,6 +5,7 @@ using Microsoft.Sales.Document;
 using Microsoft.Sales.Pricing;
 using Microsoft.Finance.Currency;
 using Microsoft.Finance.SalesTax;
+
 table 8068 "Sales Subscription Line"
 {
     DataClassification = CustomerContent;
@@ -81,7 +82,8 @@ table 8068 "Sales Subscription Line"
             Caption = 'Calculation Base Amount';
             MinValue = 0;
             BlankZero = true;
-            AutoFormatType = 2;
+            AutoFormatType = 1;
+            AutoFormatExpression = GetCurrency();
 
             trigger OnValidate()
             begin
@@ -95,6 +97,7 @@ table 8068 "Sales Subscription Line"
             MinValue = 0;
             BlankZero = true;
             DecimalPlaces = 0 : 5;
+            AutoFormatType = 0;
 
             trigger OnValidate()
             begin
@@ -108,6 +111,7 @@ table 8068 "Sales Subscription Line"
             Editable = false;
             BlankZero = true;
             AutoFormatType = 2;
+            AutoFormatExpression = GetCurrency();
 
             trigger OnValidate()
             var
@@ -127,6 +131,7 @@ table 8068 "Sales Subscription Line"
             MaxValue = 100;
             BlankZero = true;
             DecimalPlaces = 0 : 5;
+            AutoFormatType = 0;
 
             trigger OnValidate()
             begin
@@ -139,6 +144,7 @@ table 8068 "Sales Subscription Line"
             MinValue = 0;
             BlankZero = true;
             AutoFormatType = 1;
+            AutoFormatExpression = GetCurrency();
 
             trigger OnValidate()
             begin
@@ -150,6 +156,7 @@ table 8068 "Sales Subscription Line"
             Caption = 'Amount';
             BlankZero = true;
             AutoFormatType = 1;
+            AutoFormatExpression = GetCurrency();
 
             trigger OnValidate()
             begin
@@ -174,7 +181,7 @@ table 8068 "Sales Subscription Line"
             trigger OnValidate()
             begin
                 TestIfSalesOrderIsReleased();
-                DateFormulaManagementGlobal.ErrorIfDateFormulaNegative("Initial Term");
+                DateFormulaManagement.ErrorIfDateFormulaNegative("Initial Term");
             end;
         }
         field(24; "Notice Period"; DateFormula)
@@ -183,7 +190,7 @@ table 8068 "Sales Subscription Line"
             trigger OnValidate()
             begin
                 TestIfSalesOrderIsReleased();
-                DateFormulaManagementGlobal.ErrorIfDateFormulaNegative("Notice Period");
+                DateFormulaManagement.ErrorIfDateFormulaNegative("Notice Period");
             end;
         }
         field(25; "Extension Term"; DateFormula)
@@ -194,7 +201,7 @@ table 8068 "Sales Subscription Line"
                 TestIfSalesOrderIsReleased();
                 if Format("Extension Term") = '' then
                     TestField("Notice Period", "Extension Term");
-                DateFormulaManagementGlobal.ErrorIfDateFormulaNegative("Extension Term");
+                DateFormulaManagement.ErrorIfDateFormulaNegative("Extension Term");
             end;
         }
         field(26; "Billing Base Period"; DateFormula)
@@ -205,8 +212,9 @@ table 8068 "Sales Subscription Line"
             trigger OnValidate()
             begin
                 TestIfSalesOrderIsReleased();
-                DateFormulaManagementGlobal.ErrorIfDateFormulaEmpty("Billing Base Period", FieldCaption("Billing Base Period"));
-                DateFormulaManagementGlobal.ErrorIfDateFormulaNegative("Billing Base Period");
+                DateFormulaManagement.ErrorIfDateFormulaEmpty("Billing Base Period", FieldCaption("Billing Base Period"));
+                DateFormulaManagement.ErrorIfDateFormulaNegative("Billing Base Period");
+                CheckRatioBetweenBillingBasePeriodAndRhythm();
             end;
         }
         field(27; "Billing Rhythm"; DateFormula)
@@ -217,8 +225,9 @@ table 8068 "Sales Subscription Line"
             trigger OnValidate()
             begin
                 TestIfSalesOrderIsReleased();
-                DateFormulaManagementGlobal.ErrorIfDateFormulaEmpty("Billing Rhythm", FieldCaption("Billing Rhythm"));
-                DateFormulaManagementGlobal.ErrorIfDateFormulaNegative("Billing Rhythm");
+                DateFormulaManagement.ErrorIfDateFormulaEmpty("Billing Rhythm", FieldCaption("Billing Rhythm"));
+                DateFormulaManagement.ErrorIfDateFormulaNegative("Billing Rhythm");
+                CheckRatioBetweenBillingBasePeriodAndRhythm();
             end;
         }
         field(28; "Invoicing via"; Enum "Invoicing Via")
@@ -260,6 +269,10 @@ table 8068 "Sales Subscription Line"
         {
             Caption = 'Discount';
             Editable = false;
+        }
+        field(40; "Create Contract Deferrals"; Enum "Create Contract Deferrals")
+        {
+            Caption = 'Create Contract Deferrals';
         }
         field(50; "Subscription Header No."; Code[20])
         {
@@ -305,10 +318,13 @@ table 8068 "Sales Subscription Line"
         {
             Caption = 'Unit Cost';
             Editable = false;
+            AutoFormatType = 2;
+            AutoFormatExpression = GetCurrency();
         }
         field(101; "Unit Cost (LCY)"; Decimal)
         {
             AutoFormatType = 2;
+            AutoFormatExpression = '';
             Caption = 'Unit Cost (LCY)';
 
             trigger OnValidate()
@@ -361,6 +377,7 @@ table 8068 "Sales Subscription Line"
         {
             Caption = 'Pricing Unit Cost Surcharge %';
             DataClassification = CustomerContent;
+            AutoFormatType = 0;
         }
     }
 
@@ -378,9 +395,6 @@ table 8068 "Sales Subscription Line"
     trigger OnModify()
     begin
         TestIfSalesOrderIsReleased();
-        xRec.Get(xRec."Line No.");
-        if ((xRec."Billing Base Period" <> Rec."Billing Base Period") or (xRec."Billing Rhythm" <> Rec."Billing Rhythm")) then
-            DateFormulaManagementGlobal.CheckIntegerRatioForDateFormulas("Billing Base Period", FieldCaption("Billing Base Period"), "Billing Rhythm", FieldCaption("Billing Rhythm"));
     end;
 
     trigger OnDelete()
@@ -401,21 +415,28 @@ table 8068 "Sales Subscription Line"
             Error(ReleasedSalesOrderExistsErr);
     end;
 
-    internal procedure FilterOnSalesLine(SourceSalesLine: Record "Sales Line")
+    procedure FilterOnSalesLine(SourceSalesLine: Record "Sales Line")
     begin
-        Rec.SetRange("Document Type", SourceSalesLine."Document Type");
-        Rec.SetRange("Document No.", SourceSalesLine."Document No.");
+        Rec.FilterOnDocument(SourceSalesLine."Document Type", SourceSalesLine."Document No.");
         Rec.SetRange("Document Line No.", SourceSalesLine."Line No.");
+    end;
+
+    internal procedure FilterOnDocument(SalesDocumentType: Enum "Sales Document Type"; DocumentNo: Code[20])
+    begin
+        Rec.SetRange("Document Type", SalesDocumentType);
+        Rec.SetRange("Document No.", DocumentNo);
     end;
 
     internal procedure InitRecord(SourceSalesLine: Record "Sales Line")
     begin
         Rec.Init();
         SetDocumentFields(SourceSalesLine."Document Type", SourceSalesLine."Document No.", SourceSalesLine."Line No.");
+        SalesLine := SourceSalesLine;
         Rec."Line No." := 0;
     end;
 
-    internal procedure SetDocumentFields(DocType: Enum "Sales Document Type"; DocNo: Code[20]; DocLineNo: Integer)
+    internal procedure SetDocumentFields(DocType: Enum "Sales Document Type"; DocNo: Code[20];
+                                                      DocLineNo: Integer)
     begin
         Rec."Document Type" := DocType;
         Rec."Document No." := DocNo;
@@ -429,7 +450,7 @@ table 8068 "Sales Subscription Line"
     begin
         TestIfSalesOrderIsReleased();
         GetSalesHeader(SalesHeader);
-        SalesLine.Get("Document Type", "Document No.", "Document Line No.");
+        GetSalesLine(SalesLine);
 
         MaxServiceAmount := Round((Price * SalesLine.Quantity), Currency."Amount Rounding Precision");
         if CalledByFieldNo = FieldNo(Amount) then begin
@@ -450,11 +471,11 @@ table 8068 "Sales Subscription Line"
         end;
     end;
 
-    internal procedure CalculateCalculationBaseAmount()
+    procedure CalculateCalculationBaseAmount()
     var
         IsHandled: Boolean;
     begin
-        SalesLine.Get("Document Type", "Document No.", "Document Line No.");
+        GetSalesLine(SalesLine);
         OnBeforeCalculateCalculationBaseAmount(SalesLine, Rec, IsHandled);
         if IsHandled then
             exit;
@@ -546,7 +567,7 @@ table 8068 "Sales Subscription Line"
     begin
         if "Calculation Base Amount" <> 0 then begin
             if Discount then
-                "Calculation Base Amount" := "Calculation Base Amount" * -1;
+                "Calculation Base Amount" := Abs("Calculation Base Amount") * -1;
             Validate(Price, "Calculation Base Amount" * "Calculation Base %" / 100);
         end else
             Validate(Price, 0);
@@ -554,7 +575,7 @@ table 8068 "Sales Subscription Line"
             CalculateUnitCost();
     end;
 
-    internal procedure GetSalesHeader(var OutSalesHeader: Record "Sales Header")
+    local procedure GetSalesHeader(var OutSalesHeader: Record "Sales Header")
     var
         SalesHeader: Record "Sales Header";
     begin
@@ -592,8 +613,7 @@ table 8068 "Sales Subscription Line"
 
         TempSalesServiceCommitmentBuff.DeleteAll(false);
 
-        SalesServiceCommitment.SetRange("Document Type", SalesHeader."Document Type");
-        SalesServiceCommitment.SetRange("Document No.", SalesHeader."No.");
+        SalesServiceCommitment.FilterOnDocument(SalesHeader."Document Type", SalesHeader."No.");
         SalesServiceCommitment.SetRange(Partner, Enum::"Service Partner"::Customer);
         SalesServiceCommitment.SetRange("Invoicing via", SalesServiceCommitment."Invoicing via"::Contract);
         if SalesServiceCommitment.FindSet() then
@@ -667,7 +687,6 @@ table 8068 "Sales Subscription Line"
     var
         SalesLineVAT: Record "Sales Line";
         ContractRenewalMgt: Codeunit "Sub. Contract Renewal Mgt.";
-        DateFormulaManagement: Codeunit "Date Formula Management";
         IsHandled: Boolean;
         RhythmIdentifier: Code[20];
         ContractRenewalPriceCalculationRatio: Decimal;
@@ -681,7 +700,7 @@ table 8068 "Sales Subscription Line"
         if IsHandled then
             exit;
 
-        SalesLineVAT.Get(SalesServiceCommitment."Document Type", SalesServiceCommitment."Document No.", SalesServiceCommitment."Document Line No.");
+        GetSalesLine(SalesServiceCommitment, SalesLineVAT);
         // Get Rhythm and Base period count
         if SalesLineVAT.IsContractRenewal() then begin
             ContractRenewalPriceCalculationRatio := DateFormulaManagement.CalculateRenewalTermRatioByBillingRhythm(SalesServiceCommitment."Agreed Sub. Line Start Date", SalesServiceCommitment."Initial Term", SalesServiceCommitment."Billing Rhythm");
@@ -725,6 +744,7 @@ table 8068 "Sales Subscription Line"
                 TempSalesServiceCommitmentBuff."VAT Calculation Type" := SalesLineVAT."VAT Calculation Type";
                 TempSalesServiceCommitmentBuff."Tax Group Code" := SalesLineVAT."Tax Group Code";
                 TempSalesServiceCommitmentBuff."VAT %" := VatPercent;
+                TempSalesServiceCommitmentBuff."Currency Code" := SalesLineVAT."Currency Code";
                 TempSalesServiceCommitmentBuff.Insert(false);
             end;
             TempSalesServiceCommitmentBuff.Reset();
@@ -762,11 +782,10 @@ table 8068 "Sales Subscription Line"
 
     internal procedure CalculateUnitCost()
     var
-        SalesLine: Record "Sales Line";
         SalesHeader: Record "Sales Header";
         CurrencyDate: Date;
     begin
-        SalesLine.Get(Rec."Document Type", Rec."Document No.", Rec."Document Line No.");
+        GetSalesLine(SalesLine);
         case Rec.Partner of
             Partner::Customer:
                 Rec.Validate("Unit Cost (LCY)", SalesLine."Unit Cost (LCY)" * Rec."Calculation Base %" / 100);
@@ -785,24 +804,66 @@ table 8068 "Sales Subscription Line"
         end;
     end;
 
-    internal procedure GetDate(): Date
+    local procedure GetDate(): Date
     begin
         SalesLine.Get(Rec."Document Type", Rec."Document No.", Rec."Document Line No.");
         exit(SalesLine.GetDate());
     end;
 
-    [InternalEvent(false, false)]
+    local procedure GetSalesLine(var SalesLine2: Record "Sales Line")
+    begin
+        GetSalesLine(Rec, SalesLine2);
+    end;
+
+    local procedure GetCurrency(): Code[10]
+    var
+        SalesHeader: Record "Sales Header";
+    begin
+        GetSalesHeader(SalesHeader);
+        exit(SalesHeader."Currency Code");
+    end;
+
+    local procedure GetSalesLine(SalesSubscriptionLine: Record "Sales Subscription Line"; var SalesLine2: Record "Sales Line")
+    begin
+        if (SalesLine."Document Type" <> SalesSubscriptionLine."Document Type")
+            or (SalesLine."Document No." <> SalesSubscriptionLine."Document No.")
+            or (SalesLine."Line No." <> SalesSubscriptionLine."Document Line No.")
+        then
+            SalesLine2.Get(SalesSubscriptionLine."Document Type", SalesSubscriptionLine."Document No.", SalesSubscriptionLine."Document Line No.")
+        else
+            SalesLine2 := SalesLine;
+        OnAfterGetSalesLine(Rec, SalesLine2);
+    end;
+
+    procedure SetSalesLine(var NewSalesLine: Record "Sales Line")
+    begin
+        SalesLine := NewSalesLine;
+    end;
+
+    local procedure CheckRatioBetweenBillingBasePeriodAndRhythm()
+    var
+    begin
+        if (Format("Billing Base Period") <> '') and (Format("Billing Rhythm") <> '') then
+            DateFormulaManagement.CheckIntegerRatioForDateFormulas("Billing Base Period", FieldCaption("Billing Base Period"), "Billing Rhythm", FieldCaption("Billing Rhythm"));
+    end;
+
+    [IntegrationEvent(false, false)]
     local procedure OnCalculateBaseTypeElseCaseOnCalculateCalculationBaseAmountCustomer(SalesSubscriptionLine: Record "Sales Subscription Line"; SalesLine: Record "Sales Line"; var CalculatedBaseAmount: Decimal; var IsHandled: Boolean)
     begin
     end;
 
-    [InternalEvent(false, false)]
+    [IntegrationEvent(false, false)]
     local procedure OnCalculateBaseTypeElseCaseOnCalculateCalculationBaseAmountVendor(SalesSubscriptionLine: Record "Sales Subscription Line"; SalesLine: Record "Sales Line"; var CalculatedBaseAmount: Decimal; var IsHandled: Boolean)
     begin
     end;
 
-    [InternalEvent(false, false)]
+    [IntegrationEvent(false, false)]
     local procedure OnBeforeCreateVATAmountLineForSalesSubscriptionLine(SalesSubscriptionLine: Record "Sales Subscription Line"; var IsHandled: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterGetSalesLine(var SalesSubscriptionLine: Record "Sales Subscription Line"; var SalesLine: Record "Sales Line")
     begin
     end;
 
@@ -820,7 +881,7 @@ table 8068 "Sales Subscription Line"
         Currency: Record Currency;
         CurrExchRate: Record "Currency Exchange Rate";
         SalesLine: Record "Sales Line";
-        DateFormulaManagementGlobal: Codeunit "Date Formula Management";
+        DateFormulaManagement: Codeunit "Date Formula Management";
         ServiceAmountIncreaseErr: Label '%1 cannot be greater than %2.', Comment = '%1 and %2 are numbers';
         ReleasedSalesOrderExistsErr: Label 'Subscription Lines cannot be edited on orders with status = Released.';
         CalculateBaseTypeOptionNotImplementedErr: Label 'Unknown option %1 for %2.\\ Object Name: %3, Procedure: %4', Comment = '%1=Format("Calculation Base Type"), %2 = Fieldcaption for "Calculation Base Type", %3 = Current object name, %4 = Current procedure name';

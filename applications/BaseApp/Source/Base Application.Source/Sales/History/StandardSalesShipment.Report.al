@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Sales.History;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Sales.History;
 
 using Microsoft.Assembly.History;
 using Microsoft.Bank.BankAccount;
@@ -819,11 +823,6 @@ report 1308 "Standard Sales - Shipment"
 
         trigger OnInit()
         begin
-            LogInteractionEnable := true;
-        end;
-
-        trigger OnOpenPage()
-        begin
             InitLogInteraction();
             LogInteractionEnable := LogInteraction;
         end;
@@ -898,15 +897,11 @@ report 1308 "Standard Sales - Shipment"
         if Header.GetFilters = '' then
             Error(NoFilterSetErr);
 
-        if not CurrReport.UseRequestPage then
-            InitLogInteraction();
-
         CompanyLogoPosition := SalesSetup."Logo Position on Documents";
     end;
 
     var
         GLSetup: Record "General Ledger Setup";
-        CompanyBankAccount: Record "Bank Account";
         DummyCompanyInfo: Record "Company Information";
         SalesSetup: Record "Sales & Receivables Setup";
         Cust: Record Customer;
@@ -933,7 +928,7 @@ report 1308 "Standard Sales - Shipment"
         ShowCorrectionLines: Boolean;
         CompanyLogoPosition: Integer;
         TrackingSpecCount: Integer;
-        NoFilterSetErr: Label 'You must specify one or more filters to avoid accidently printing all documents.';
+        NoFilterSetErr: Label 'You must specify one or more filters to avoid accidentally printing all documents.';
         GreetingLbl: Label 'Hello';
         ClosingLbl: Label 'Sincerely';
         BodyLbl: Label 'Thank you for your business. Your shipment is attached to this message.';
@@ -990,6 +985,7 @@ report 1308 "Standard Sales - Shipment"
         ShipmentMethod: Record "Shipment Method";
         SalespersonPurchaser: Record "Salesperson/Purchaser";
         TempTrackingSpecBuffer: Record "Tracking Specification" temporary;
+        CompanyBankAccount: Record "Bank Account";
         FirstLineHasBeenOutput: Boolean;
         CustAddr: array[8] of Text[100];
         ShipToAddr: array[8] of Text[100];

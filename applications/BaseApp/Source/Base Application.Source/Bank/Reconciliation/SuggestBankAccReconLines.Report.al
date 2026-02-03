@@ -35,6 +35,7 @@ report 1496 "Suggest Bank Acc. Recon. Lines"
                 BankAccLedgEntry.SetRange("Statement Status", BankAccLedgEntry."Statement Status"::Open);
                 if ExcludeReversedEntries then
                     BankAccLedgEntry.SetRange(Reversed, false);
+                OnBankAccountOnAfterGetRecordOnAfterSetFilters(BankAccLedgEntry, "Bank Account");
                 EOFBankAccLedgEntries := not BankAccLedgEntry.Find('-');
 
                 while not EOFBankAccLedgEntries do begin
@@ -50,7 +51,7 @@ report 1496 "Suggest Bank Acc. Recon. Lines"
                 OnPreDataItemBankAccount(ExcludeReversedEntries);
 
                 if EndDate = 0D then
-                    Error(Text000);
+                    Error(EnterEndingDateErr);
 
                 if BankAccRecon."Statement Date" <> 0D then
                     if BankAccRecon."Statement Date" < EndDate then
@@ -134,9 +135,7 @@ report 1496 "Suggest Bank Acc. Recon. Lines"
         EOFBankAccLedgEntries: Boolean;
         ExcludeReversedEntries: Boolean;
 
-#pragma warning disable AA0074
-        Text000: Label 'Enter the Ending Date.';
-#pragma warning restore AA0074
+        EnterEndingDateErr: Label 'Enter the Ending Date.';
 
     procedure SetStmt(var BankAccRecon2: Record "Bank Acc. Reconciliation")
     begin
@@ -196,6 +195,11 @@ report 1496 "Suggest Bank Acc. Recon. Lines"
     procedure OnPreDataItemBankAccount(var ExcludeReversedEntries: Boolean)
     begin
         // ExcludeReversedEntries = FALSE by default
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBankAccountOnAfterGetRecordOnAfterSetFilters(var BankAccLedgEntry: Record "Bank Account Ledger Entry"; var BankAccount: Record "Bank Account")
+    begin
     end;
 }
 

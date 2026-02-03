@@ -2628,6 +2628,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Employees - Control addressLine2 - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 950291140 - Control 2041787016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank Account No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Employees - Control bankAccountNumber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 950291140 - Control 4274452875 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank Branch No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Employees - Control bankBranchNumber - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 950291140 - Control 149988555 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Birth Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -2672,6 +2682,11 @@
           <source>Given Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Employees - Control givenName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 950291140 - Control 2214516256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBAN</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Employees - Control iban - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 950291140 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
@@ -8098,6 +8113,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Sales Orders - Control paymentTermsId - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 48856144 - Control 3310713783 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PDF Document</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Sales Orders - Control pdfDocument - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 48856144 - Control 1842080825 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Phone No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -10087,6 +10107,86 @@
           <source>No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Query APIV2 - Vendor Purchases - QueryColumn vendorNumber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Feature</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Features</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - NamedType 1611789237" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This feature has already been disabled.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - NamedType AlreadyDisabledErr</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - NamedType 1430361714" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This feature has already been enabled</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - NamedType AlreadyEnabledErr</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - NamedType 1629183447" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cannot create a background task. Please check your permissions or run it in the same session.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - NamedType CantScheduleTaskErr</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - NamedType 2696496991" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This feature has already been enabled and cannot be disabled.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - NamedType OneWayAlreadyEnabledErr</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - Control 3345300421 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Can Try</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - Control canTry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - Control 4048610780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Data Update Required</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - Control dataUpdateRequired - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - Control 919381909 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description In English</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - Control descriptionInEnglish - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - Control 3503180919 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enabled</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - Control enabled - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - Control 607776107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Is One Way</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - Control isOneWay - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - Control 1234246771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Documentation link</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - Control learnMoreLink - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - Control 2638541912 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mandatory By</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - Control mandatoryBy - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3656184442 - Control 3315854594 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mandatory By Version</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APIV2 - Feature Management - Control mandatoryByVersion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4240754908 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>APIV2 - FA Locations</source>

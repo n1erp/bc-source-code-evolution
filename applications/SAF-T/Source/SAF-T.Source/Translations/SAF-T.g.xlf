@@ -8,31 +8,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Missing Field SAF-T - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3219172725 - Field 823559016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Field Caption</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Missing Field SAF-T - Field Field Caption - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 3219172725 - Field 3531868071 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Field No.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Missing Field SAF-T - Field Field No. - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 3219172725 - Field 1787409580 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Group No.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Missing Field SAF-T - Field Group No. - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 3219172725 - Field 2897660500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Record ID</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Missing Field SAF-T - Field Record ID - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 3219172725 - Field 3017471043 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Table No.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Missing Field SAF-T - Field Table No. - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 3241486271 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>SAF-T Source Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -453,11 +428,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T Wizard - Control GLAccountsMappedInfo - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1410541002 - Control 300852202 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source></source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T Wizard - Control FinishedBanner - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 1410541002 - Control 2203603252 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>The SAF-T setup is completed!</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -467,16 +437,6 @@
           <source>You're ready to use the SAF-T functionality. Do an additional mapping on the G/L Account Mapping page if needed. Open the Audit File Export Document page to export the data in the SAF-T format.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T Wizard - Control FinishDescription - Property InstructionalText</note>
-        </trans-unit>
-        <trans-unit id="Page 1410541002 - Control 1182202415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source></source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T Wizard - Control FinishDescription - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1410541002 - Control 1121962313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source></source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T Wizard - Control StandardBanner - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1410541002 - Control 3520583103 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>VAT Posting Setup mapped:</source>
@@ -512,11 +472,6 @@
           <source>The SAF-T (Standard Audit File - Tax) is a standard file format for exporting various types of accounting transactional data using the XML format. This guide helps you set up SAF-T for Dynamics 365 Business Central. If you do not have a chart of accounts, this guide helps you to create it based on SAF-T standard chart of accounts. If you do not want to set this up right now, close this page.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T Wizard - Control SAFTDescription - Property InstructionalText</note>
-        </trans-unit>
-        <trans-unit id="Page 1410541002 - Control 859857378 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source></source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T Wizard - Control SAFTDescription - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1410541002 - Action 2438272767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Back</source>
@@ -743,6 +698,91 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension VAT Posting Setup SAF-T - Field Starting Date - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Enum 2721429565 - EnumValue 3371220206 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum SAF-T Modification - EnumValue None - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 3039475520 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>Analysis Type Table</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue AnalysisTypeTable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 661859261 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>Assets</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue Assets - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 4089419841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>Asset Transactions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue AssetTransactions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 3606140129 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>Customers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue Customers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 2198969875 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>General Ledger Accounts</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue GeneralLedgerAccounts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 4089118995 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>General Ledger Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue GeneralLedgerEntries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 4132041254 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>Movement Of Goods</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue MovementOfGoods - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 2605376831 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>Movement Type Table</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue MovementTypeTable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 1004196339 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>Payments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue Payments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 2225985959 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>Physical Stock</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue PhysicalStock - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 2362238540 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>Products</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue Products - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 4034672467 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>Purchase Invoices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue PurchaseInvoices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 2728404382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>Sales Invoices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue SalesInvoices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 2480742273 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>Suppliers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue Suppliers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 3140678949 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>Tax Table</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue TaxTable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3114437096 - EnumValue 3789284779 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1957603449">
+          <source>UOM Table</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit Export Data Type SAF-T - EnumValue UOMTable - Property Caption</note>
+        </trans-unit>
         <trans-unit id="EnumExtension 1161618275 - EnumValue 2880136412 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1217862704">
           <source>SAF-T</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -752,6 +792,16 @@
           <source>Government</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Partner Type SAF-T - EnumValue Government - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 1753948712 - Property 2879900210" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T - Edit</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet SAF-T - Edit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 3127330926 - Property 2879900210" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T - Read</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet SAF-T - Read - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 753838746 - Control 2809465974 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2173385693">
           <source>Specifies the SAF-T code that will be exported to AnalysisType XML node of the SAF-T file.</source>

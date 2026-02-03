@@ -62,6 +62,7 @@ codeunit 137030 "SCM Extend Warehouse"
         MSG_WHSEEMPLEE: Label 'You cannot use Location Code';
         MSG_BIN_MANDATORY: Label 'Bin Mandatory must be ';
         UnitOfMeasureErr: Label 'The field Unit of Measure Code of table Internal Movement Line contains a value (%1) that cannot be found in the related table (Item Unit of Measure).', Comment = '%1= Unit of Measure Code.';
+        BinCodeErr: Label 'Bin Code on Warehouse Activity Line should be equal to Bin Code on Whse Worksheet Line';
 
     [Normal]
     local procedure Initialize()
@@ -131,20 +132,24 @@ codeunit 137030 "SCM Extend Warehouse"
         PurchasesPayablesSetup.Modify(true);
     end;
 
-    local procedure ManufacturingSetup()
+    local procedure UpdatePlanningSetup()
     var
-        ManufacturingSetupRec: Record "Manufacturing Setup";
+        InventorySetup: Record "Inventory Setup";
+        ManufacturingSetup: Record "Manufacturing Setup";
     begin
-        ManufacturingSetupRec.Get();
-        ManufacturingSetupRec.Validate("Components at Location", '');
-        ManufacturingSetupRec.Validate("Current Production Forecast", '');
-        ManufacturingSetupRec.Validate("Use Forecast on Locations", true);
-        ManufacturingSetupRec.Validate("Combined MPS/MRP Calculation", true);
-        Evaluate(ManufacturingSetupRec."Default Safety Lead Time", '<1D>');
-        Evaluate(ManufacturingSetupRec."Default Dampener Period", '');
-        ManufacturingSetupRec.Validate("Default Dampener %", 0);
-        ManufacturingSetupRec.Validate("Blank Overflow Level", ManufacturingSetupRec."Blank Overflow Level"::"Allow Default Calculation");
-        ManufacturingSetupRec.Modify(true);
+        ManufacturingSetup.Get();
+        ManufacturingSetup.Validate("Components at Location", '');
+        ManufacturingSetup.Modify(true);
+
+        InventorySetup.Get();
+        InventorySetup.Validate("Current Demand Forecast", '');
+        InventorySetup.Validate("Use Forecast on Locations", true);
+        InventorySetup.Validate("Combined MPS/MRP Calculation", true);
+        Evaluate(InventorySetup."Default Safety Lead Time", '<1D>');
+        Evaluate(InventorySetup."Default Dampener Period", '');
+        InventorySetup.Validate("Default Dampener %", 0);
+        InventorySetup.Validate("Blank Overflow Level", InventorySetup."Blank Overflow Level"::"Allow Default Calculation");
+        InventorySetup.Modify(true);
     end;
 
     local procedure ItemSetup(var Item: Record Item; ReplenishmentSystem: Enum "Replenishment System"; FlushingMethod: Enum "Flushing Method")
@@ -1108,7 +1113,7 @@ codeunit 137030 "SCM Extend Warehouse"
 
     local procedure TestSetup()
     begin
-        ManufacturingSetup();
+        UpdatePlanningSetup();
         ErrorMessageCounter := 0;
     end;
 
@@ -1179,7 +1184,7 @@ codeunit 137030 "SCM Extend Warehouse"
         ReserveComponentLine(ProdOrderComponent, false, 2 * QtyUnit);
 
         // [GIVEN] Created warehouse pick from production, partly registered and deleted rest
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
         UpdateQtyToHandleRegisterPickAndDeleteRest(ProdOrderComponent, 2 * QtyUnit, 0.9);
 
         Clear(ProductionOrder);
@@ -1188,7 +1193,7 @@ codeunit 137030 "SCM Extend Warehouse"
 
         // [WHEN] Create new production order for same item and warehouse pick from production
         CreateRelProdOrderAndRefresh(ProductionOrder, Item."No.", 1, LocationWhite.Code, '');
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
         FindComponent(ProdOrderComponent, ProductionOrder, ItemComponent, 1);
 
         // [THEN] Warehouse activity lines are created just for the remaining quantity
@@ -5406,7 +5411,6 @@ codeunit 137030 "SCM Extend Warehouse"
         ToBin: array[2] of Record Bin;
         FromBin: array[2] of Record Bin;
         OSFBBin: array[2] of Record Bin;
-        ManufacturingSetup: Record "Manufacturing Setup";
     begin
         // Test setup
         DedicatedBinTestSetup(ParentItem, Location, WorkCenter, MachineCenter, ToBin, FromBin, OSFBBin);
@@ -5430,9 +5434,7 @@ codeunit 137030 "SCM Extend Warehouse"
         LibraryWarehouse.CreateFullWMSLocation(LocationW, 10);
 
         // Set components at location
-        ManufacturingSetup.Get();
-        ManufacturingSetup.Validate("Components at Location", LocationSilv.Code);
-        ManufacturingSetup.Modify(true);
+        LibraryManufacturing.SetComponentsAtLocation(LocationSilv.Code);
 
         // Create and refresh production order on WHITE like location
         CreateRelProdOrderAndRefresh(ProductionOrder, ParentItem."No.", 10, LocationW.Code, LocationW."From-Production Bin Code");
@@ -5491,7 +5493,6 @@ codeunit 137030 "SCM Extend Warehouse"
         ToBin: array[2] of Record Bin;
         FromBin: array[2] of Record Bin;
         OSFBBin: array[2] of Record Bin;
-        ManufacturingSetup: Record "Manufacturing Setup";
         ProdOrderComponent: Record "Prod. Order Component";
     begin
         // Test setup
@@ -5516,9 +5517,7 @@ codeunit 137030 "SCM Extend Warehouse"
         LibraryWarehouse.CreateFullWMSLocation(LocationW, 10);
 
         // Set components at location
-        ManufacturingSetup.Get();
-        ManufacturingSetup.Validate("Components at Location", LocationSilv.Code);
-        ManufacturingSetup.Modify(true);
+        LibraryManufacturing.SetComponentsAtLocation(LocationSilv.Code);
 
         // Create and refresh production order on WHITE like location
         CreateRelProdOrderAndRefresh(ProductionOrder, ParentItem."No.", 10, LocationW.Code, LocationW."From-Production Bin Code");
@@ -5586,7 +5585,6 @@ codeunit 137030 "SCM Extend Warehouse"
         ToBin: array[2] of Record Bin;
         FromBin: array[2] of Record Bin;
         OSFBBin: array[2] of Record Bin;
-        ManufacturingSetup: Record "Manufacturing Setup";
         ProdOrderComponent: Record "Prod. Order Component";
     begin
         // Test setup
@@ -5613,9 +5611,7 @@ codeunit 137030 "SCM Extend Warehouse"
         LibraryWarehouse.CreateFullWMSLocation(LocationW, 10);
 
         // Set components at location
-        ManufacturingSetup.Get();
-        ManufacturingSetup.Validate("Components at Location", LocationSilv.Code);
-        ManufacturingSetup.Modify(true);
+        LibraryManufacturing.SetComponentsAtLocation(LocationSilv.Code);
 
         // Create and refresh production order on WHITE like location
         CreateRelProdOrderAndRefresh(ProductionOrder, ParentItem."No.", 10, LocationW.Code, LocationW."From-Production Bin Code");
@@ -5768,7 +5764,7 @@ codeunit 137030 "SCM Extend Warehouse"
         ChangeBinForComponent(ProdOrderComponent, FromBin[1].Code);
 
         // Create warehouse pick
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
 
         AssertActivityHdr(WarehouseActivityHeader, Location, WarehouseActivityHeader.Type::Pick,
           "Warehouse Activity Source Document"::" ", '', 1, MSG_WHSE_PICK);
@@ -7407,7 +7403,7 @@ codeunit 137030 "SCM Extend Warehouse"
         Initialize();
 
         // [GIVEN] Get Manufacturing Setup.
-        ManufacturingSetup();
+        UpdatePlanningSetup();
 
         // [GIVEN] Create an Item with Setup.
         ItemSetup(Item, Item."Replenishment System"::Purchase, Item."Flushing Method"::"Pick + Manual");
@@ -7445,6 +7441,59 @@ codeunit 137030 "SCM Extend Warehouse"
 
         // [THEN] Item Unit of Measure should be for Unit Of Measure Code.
         Assert.ExpectedError(StrSubstNo(UnitOfMeasureErr, UnitOfMeasureCode));
+    end;
+
+    [Test]
+    [HandlerFunctions('CreateInvtMvmntConfirmHandler,MessageHandlerSimple')]
+    [Scope('OnPrem')]
+    procedure MovementWorksheetCreateInventoryMovementWothCorrectBin()
+    var
+        Item: Record Item;
+        FirstBin: Record Bin;
+        SecondBin: Record Bin;
+        ThirdBin: Record Bin;
+        FourthBin: Record Bin;
+        Location: Record Location;
+        WhseWorksheetLine: Record "Whse. Worksheet Line";
+        WarehouseActivityLine: Record "Warehouse Activity Line";
+    begin
+        // [SCENARIO 578567] Movement Worksheet Create Inventory Movement with Correct Bin Code
+        Initialize();
+
+        // [GIVEN] Create Location with Pick According to FEFO as true.
+        LocationSetup(Location, true, true, true, true, true, 0, 4);
+        Location.Validate("Pick According to FEFO", true);
+        Location.Modify(true);
+
+        //[GIVEN] Create Item with Assembly Replenishment System and Manual Flushing Method.
+        TestSetup();
+        ItemSetup(Item, Item."Replenishment System"::Assembly, Item."Flushing Method"::Manual);
+
+        // [GIVEN] Create Bins.
+        FindBin(FirstBin, Location, false, 1);
+        FindBin(SecondBin, Location, false, 2);
+        FindBin(ThirdBin, Location, false, 3);
+        FindBin(FourthBin, Location, false, 4);
+
+        // [GIVEN] Create Inventory in Bins.
+        AddInventoryNonDirectLocation(Item, Location, FirstBin, 1);
+        AddInventoryNonDirectLocation(Item, Location, SecondBin, 1);
+        AddInventoryNonDirectLocation(Item, Location, ThirdBin, 1);
+        AddInventoryNonDirectLocation(Item, Location, FourthBin, 1);
+
+        // [GIVEN] Create Whse Worksheet Line with Item and from Bin = ThirdBin, To Bin = SecondBin.
+        LibraryWarehouse.CreateMovementWorksheetLine(WhseWorksheetLine, ThirdBin, SecondBin, Item."No.", '', 1);
+
+        // [WHEN] Create Inventory Movement from Whse Worksheet Line.
+        WhseWorksheetLine.MovementCreate(WhseWorksheetLine);
+
+        // [THEN] Verify that Inventory Movement is created.
+        FindWarehouseActivityLine(WarehouseActivityLine, 0, Location.Code, WarehouseActivityLine."Activity Type"::"Invt. Movement");
+
+        // [THEN] Verify that Bin Code on Warehouse Activity Line is equal to Bin Code on Whse Worksheet Line.
+        Assert.IsTrue(WarehouseActivityLine."Bin Code" = ThirdBin.Code, BinCodeErr);
+        WarehouseActivityLine.Next();
+        Assert.IsTrue(WarehouseActivityLine."Bin Code" = SecondBin.Code, BinCodeErr);
     end;
 
     local procedure UpdateMachineCenterOnRoutingLine(var ProductionOrder: Record "Production Order"; var MachineCenter: array[2] of Record "Machine Center")
@@ -7738,6 +7787,14 @@ codeunit 137030 "SCM Extend Warehouse"
         WorkCenter.Get(RoutingLine."No.");
         WorkCenter.Validate("Flushing Method", FlushingMethodOfWorkCenter);
         WorkCenter.Modify(true);
+    end;
+
+    local procedure FindWarehouseActivityLine(var WarehouseActivityLine: Record "Warehouse Activity Line"; SourceType: Integer; LocationCode: Code[10]; ActivityType: Enum "Warehouse Activity Type")
+    begin
+        WarehouseActivityLine.SetRange("Source Type", SourceType);
+        WarehouseActivityLine.SetRange("Location Code", LocationCode);
+        WarehouseActivityLine.SetRange("Activity Type", ActivityType);
+        WarehouseActivityLine.FindSet();
     end;
 
     [ModalPageHandler]

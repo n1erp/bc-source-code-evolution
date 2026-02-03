@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Finance.ReceivablesPayables;
 
 using Microsoft.Purchases.Document;
@@ -60,7 +64,7 @@ codeunit 99 "Posting Selection Management"
                     case true of
                         not SalesHeader.Ship and not SalesHeader.Invoice:
                             begin
-                                Selection := StrMenu(ShipInvoiceOptionsQst, DefaultOption);
+                                Selection := GetSalesOrderPostingSelection(SalesHeader, DefaultOption);
                                 if Selection = 0 then
                                     exit(false);
                                 SalesHeader.Ship := Selection in [1, 3];
@@ -141,7 +145,7 @@ codeunit 99 "Posting Selection Management"
                     case true of
                         not PurchaseHeader.Receive and not PurchaseHeader.Invoice:
                             begin
-                                Selection := StrMenu(ReceiveInvoiceOptionsQst, DefaultOption);
+                                Selection := GetPurchaseOrderPostingSelection(PurchaseHeader, DefaultOption);
                                 if Selection = 0 then
                                     exit(false);
                                 PurchaseHeader.Receive := Selection in [1, 3];
@@ -437,6 +441,30 @@ codeunit 99 "Posting Selection Management"
         exit(PostingInvoiceProhibitedErr);
     end;
 
+    local procedure GetSalesOrderPostingSelection(var SalesHeader: Record "Sales Header"; DefaultOption: Integer) Selection: Integer
+    var
+        IsHandled: Boolean;
+    begin
+        IsHandled := false;
+        OnBeforeGetSalesOrderPostingSelection(SalesHeader, DefaultOption, IsHandled, Selection);
+        if IsHandled then
+            exit(Selection);
+
+        Selection := StrMenu(ShipInvoiceOptionsQst, DefaultOption);
+    end;
+
+    local procedure GetPurchaseOrderPostingSelection(var PurchaseHeader: Record "Purchase Header"; DefaultOption: Integer) Selection: Integer
+    var
+        IsHandled: Boolean;
+    begin
+        IsHandled := false;
+        OnBeforeGetPurchaseOrderPostingSelection(PurchaseHeader, DefaultOption, IsHandled, Selection);
+        if IsHandled then
+            exit(Selection);
+
+        Selection := StrMenu(ReceiveInvoiceOptionsQst, DefaultOption);
+    end;
+
     [IntegrationEvent(false, false)]
     local procedure OnConfirmPostSalesDocumentOnBeforeSalesOrderGetSalesInvoicePostingPolicy(var SalesHeader: Record "Sales Header"; var IsHandled: Boolean)
     begin
@@ -464,6 +492,16 @@ codeunit 99 "Posting Selection Management"
 
     [IntegrationEvent(false, false)]
     local procedure OnAfterGetInvoicePostingPolicy(SourceDocument: Enum "Warehouse Activity Source Document"; var Ship: Boolean; var Invoice: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeGetSalesOrderPostingSelection(var SalesHeader: Record "Sales Header"; DefaultOption: Integer; var IsHandled: Boolean; var Selection: Integer)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeGetPurchaseOrderPostingSelection(var PurchaseHeader: Record "Purchase Header"; DefaultOption: Integer; var IsHandled: Boolean; var Selection: Integer)
     begin
     end;
 }

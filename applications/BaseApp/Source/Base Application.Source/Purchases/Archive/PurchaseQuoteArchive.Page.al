@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Purchases.Archive;
 
 using Microsoft.CRM.Contact;
@@ -49,6 +53,13 @@ page 5164 "Purchase Quote Archive"
                         Caption = 'Name';
                         ToolTip = 'Specifies the name of the vendor who delivered the items.';
                     }
+                    field("Buy-from Vendor Name 2"; Rec."Buy-from Vendor Name 2")
+                    {
+                        ApplicationArea = Suite;
+                        Caption = 'Name 2';
+                        Importance = Additional;
+                        Visible = false;
+                    }
                     field("Buy-from Address"; Rec."Buy-from Address")
                     {
                         ApplicationArea = Suite;
@@ -74,7 +85,7 @@ page 5164 "Purchase Quote Archive"
                         field("Buy-from County"; Rec."Buy-from County")
                         {
                             ApplicationArea = Suite;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Buy-from Country/Region Code";
                             ToolTip = 'Specifies the county of your vendor.';
                         }
                     }
@@ -199,6 +210,13 @@ page 5164 "Purchase Quote Archive"
                         Caption = 'Name';
                         ToolTip = 'Specifies the name of the vendor who you received the invoice from.';
                     }
+                    field("Pay-to Name 2"; Rec."Pay-to Name 2")
+                    {
+                        ApplicationArea = Suite;
+                        Caption = 'Name 2';
+                        Importance = Additional;
+                        Visible = false;
+                    }
                     field("Pay-to Address"; Rec."Pay-to Address")
                     {
                         ApplicationArea = Suite;
@@ -224,7 +242,7 @@ page 5164 "Purchase Quote Archive"
                         field("Pay-to County"; Rec."Pay-to County")
                         {
                             ApplicationArea = Suite;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Pay-to Country/Region Code";
                             ToolTip = 'Specifies the county of the vendor on the purchase document.';
                         }
                     }
@@ -362,6 +380,12 @@ page 5164 "Purchase Quote Archive"
                         Caption = 'Address 2';
                         ToolTip = 'Specifies an additional part of the ship-to address, in case it is a long address.';
                     }
+                    field("Ship-to City"; Rec."Ship-to City")
+                    {
+                        ApplicationArea = Suite;
+                        Caption = 'City';
+                        ToolTip = 'Specifies the city of the address that the items are shipped to.';
+                    }
                     group(Control31)
                     {
                         ShowCaption = false;
@@ -369,15 +393,9 @@ page 5164 "Purchase Quote Archive"
                         field("Ship-to County"; Rec."Ship-to County")
                         {
                             ApplicationArea = Suite;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Ship-to Country/Region Code";
                             ToolTip = 'Specifies the county of the ship-to address.';
                         }
-                    }
-                    field("Ship-to City"; Rec."Ship-to City")
-                    {
-                        ApplicationArea = Suite;
-                        Caption = 'City';
-                        ToolTip = 'Specifies the city of the address that the items are shipped to.';
                     }
                     field("Ship-to Post Code"; Rec."Ship-to Post Code")
                     {

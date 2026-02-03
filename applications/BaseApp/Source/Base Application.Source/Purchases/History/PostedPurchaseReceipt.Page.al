@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Purchases.History;
 
 using Microsoft.CRM.Contact;
@@ -76,6 +80,14 @@ page 136 "Posted Purchase Receipt"
                         Editable = false;
                         ToolTip = 'Specifies the name of the vendor who delivered the items.';
                     }
+                    field("Buy-from Vendor Name 2"; Rec."Buy-from Vendor Name 2")
+                    {
+                        ApplicationArea = Suite;
+                        Caption = 'Name 2';
+                        Editable = false;
+                        Importance = Additional;
+                        Visible = false;
+                    }
                     field("Buy-from Address"; Rec."Buy-from Address")
                     {
                         ApplicationArea = Suite;
@@ -104,7 +116,7 @@ page 136 "Posted Purchase Receipt"
                         field("Buy-from County"; Rec."Buy-from County")
                         {
                             ApplicationArea = Suite;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Buy-from Country/Region Code";
                             Editable = false;
                             ToolTip = 'Specifies the state, province or county related to the posted purchase order.';
                         }
@@ -260,6 +272,14 @@ page 136 "Posted Purchase Receipt"
                         Editable = false;
                         ToolTip = 'Specifies the name of the vendor who you received the invoice from.';
                     }
+                    field("Pay-to Name 2"; Rec."Pay-to Name 2")
+                    {
+                        ApplicationArea = Suite;
+                        Caption = 'Name 2';
+                        Editable = false;
+                        Importance = Additional;
+                        Visible = false;
+                    }
                     field("Pay-to Address"; Rec."Pay-to Address")
                     {
                         ApplicationArea = Suite;
@@ -288,7 +308,7 @@ page 136 "Posted Purchase Receipt"
                         field("Pay-to County"; Rec."Pay-to County")
                         {
                             ApplicationArea = Suite;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Pay-to Country/Region Code";
                             Editable = false;
                             ToolTip = 'Specifies the state, province or county related to the posted purchase order.';
                         }
@@ -378,7 +398,7 @@ page 136 "Posted Purchase Receipt"
                         field("Ship-to County"; Rec."Ship-to County")
                         {
                             ApplicationArea = Suite;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Ship-to Country/Region Code";
                             Editable = false;
                             ToolTip = 'Specifies the state, province or county related to the posted purchase order.';
                         }

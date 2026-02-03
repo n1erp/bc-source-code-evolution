@@ -207,6 +207,8 @@ report 5064 "Segment - Cover Sheet"
 
     requestpage
     {
+        AboutTitle = 'About Segment - Cover Sheet';
+        AboutText = 'Get or print cover sheets for your segments.';
         SaveValues = false;
 
         layout
@@ -360,11 +362,6 @@ report 5064 "Segment - Cover Sheet"
         }
 
         trigger OnInit()
-        begin
-            LogInteractionEnable := true;
-        end;
-
-        trigger OnOpenPage()
         begin
             LogInteraction := SegManagement.FindInteractionTemplateCode(Enum::"Interaction Log Entry Document Type"::"Cover Sheet") <> '';
             LogInteractionEnable := LogInteraction;

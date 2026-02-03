@@ -57,10 +57,11 @@ codeunit 134286 "Non. Ded. VAT Currency"
     procedure PurchInvWithdFCYAndTwoLines()
     var
         PurchHeader: Record "Purchase Header";
-        PurchLine: Record "Purchase Line";
+        PurchLine1: Record "Purchase Line";
+        PurchLine2: Record "Purchase Line";
         VATPostingSetup: Record "VAT Posting Setup";
         CurrencyCode: Code[10];
-        DocNo: Code[10];
+        DocNo: Code[20];
         Base: array[2] of Decimal;
         Amount: array[2] of Decimal;
         NDBase: array[2] of Decimal;
@@ -73,22 +74,24 @@ codeunit 134286 "Non. Ded. VAT Currency"
         // [GIVEN] Currency code USD with exchange rate = 10
         CurrencyCode := LibraryERM.CreateCurrencyWithExchangeRate(WorkDate(), 10, 10);
         // [GIVEN] USD Purchase invoice
-        CreatePurchaseInvoice(PurchHeader, PurchLine, VATPostingSetup, CurrencyCode);
+        CreatePurchaseInvoice(PurchHeader, PurchLine1, VATPostingSetup, CurrencyCode);
         // [GIVEN] First invoice line has amount = 1000
-        CalculateNDValues(Base[1], Amount[1], NDBase[1], NDAmount[1], PurchLine, VATPostingSetup, CurrencyCode, PurchHeader."Posting Date", 0.01);
+        CalculateNDValues(Base[1], Amount[1], NDBase[1], NDAmount[1], PurchLine1, VATPostingSetup, CurrencyCode, PurchHeader."Posting Date", 0.01);
         // [GIVEN] Second invoice line with the same VAT Identifier has amount = 2000
         LibraryPurchase.CreatePurchaseLine(
-            PurchLine, PurchHeader, PurchLine.Type::Item,
-            LibraryInventory.CreateItemWithVATProdPostingGroup(PurchLine."VAT Prod. Posting Group"), LibraryRandom.RandInt(100));
-        PurchLine.Validate("Direct Unit Cost", LibraryRandom.RandDec(100, 2));
-        PurchLine.Modify(true);
-        CalculateNDValues(Base[2], Amount[2], NDBase[2], NDAmount[2], PurchLine, VATPostingSetup, CurrencyCode, PurchHeader."Posting Date", 0.01);
+            PurchLine2, PurchHeader, PurchLine2.Type::Item,
+            LibraryInventory.CreateItemWithVATProdPostingGroup(PurchLine1."VAT Prod. Posting Group"), LibraryRandom.RandInt(100));
+        PurchLine2.Validate("Direct Unit Cost", LibraryRandom.RandDec(100, 2));
+        PurchLine2.Modify(true);
+        CalculateNDValues(Base[2], Amount[2], NDBase[2], NDAmount[2], PurchLine2, VATPostingSetup, CurrencyCode, PurchHeader."Posting Date", 0.01);
         Base[1] += Base[2];
         Amount[1] += Amount[2];
         NDBase[1] += NDBase[2];
         NDAmount[1] += NDAmount[2];
+
         // [WHEN] Post Document
         DocNo := LibraryPurchase.PostPurchaseDocument(PurchHeader, true, true);
+
         // [THEN] VAT Entry has the following values:
         // [THEN] Base ACY = 10000 + 20000 = 30000
         // [THEN] Amount ACY = 2000 + 4000 = 6000
@@ -161,23 +164,6 @@ codeunit 134286 "Non. Ded. VAT Currency"
         PurchLine.Modify(true);
     end;
 
-    local procedure CreatePurchaseLine(var PurchaseLine: Record "Purchase Line"; PurchaseHeader: Record "Purchase Header"; Type: Enum "Purchase Line Type"; No: Code[20])
-    begin
-        LibraryPurchase.CreatePurchaseLine(PurchaseLine, PurchaseHeader, Type, No, LibraryRandom.RandDec(10, 2));
-        PurchaseLine.Validate("Direct Unit Cost", LibraryRandom.RandDec(100, 2));
-        PurchaseLine.Modify(true);
-    end;
-
-    local procedure CreateVendor(VATBusPostingGroup: Code[20]; CurrencyCode: Code[10]): Code[20]
-    var
-        Vendor: Record Vendor;
-    begin
-        Vendor.Get(LibraryPurchase.CreateVendorWithVATBusPostingGroup(VATBusPostingGroup));
-        Vendor.Validate("Currency Code", CurrencyCode);
-        Vendor.Modify(true);
-        exit(Vendor."No.");
-    end;
-
     local procedure CreateNonDeductibleNormalVATPostingSetup(var VATPostingSetup: Record "VAT Posting Setup")
     begin
         LibraryERM.CreateVATPostingSetupWithAccounts(VATPostingSetup, VATPostingSetup."VAT Calculation Type"::"Normal VAT", LibraryRandom.RandIntInRange(10, 25));
@@ -223,8 +209,7 @@ codeunit 134286 "Non. Ded. VAT Currency"
         Amount := GenJournalLine."Amount (LCY)" - Base;
         BaseFCY := Round(GenJournalLine.Amount / (1 + VATPostingSetup."VAT %" / 100));
         VATAmountFCY := Round(GenJournalLine.Amount - BaseFCY);
-        NDBase :=
-            Round(Round(BaseFCY * GetNonDeductibleVATPctFromVATPostingSetup(VATPostingSetup) / 100) * CurrencyFactor);
+        NDBase := Round(Round(BaseFCY * GetNonDeductibleVATPctFromVATPostingSetup(VATPostingSetup) / 100) * CurrencyFactor);
         NDAmount := Round(VATAmountFCY * GetNonDeductibleVATPctFromVATPostingSetup(VATPostingSetup) / 100 * CurrencyFactor);
         Base -= NDBase;
         Amount -= NDAmount;

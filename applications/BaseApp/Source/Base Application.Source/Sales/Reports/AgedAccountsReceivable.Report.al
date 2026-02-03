@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Sales.Reports;
 
 using Microsoft.Finance.Currency;
@@ -241,7 +245,6 @@ report 120 "Aged Accounts Receivable"
                     begin
                         if AgingBy = AgingBy::"Posting Date" then begin
                             SetRange("Posting Date", 0D, EndingDate);
-                            SetRange("Date Filter", 0D, EndingDate);
                             SetAutoCalcFields("Remaining Amt. (LCY)");
                             SetFilter("Remaining Amt. (LCY)", '<>0');
                         end;

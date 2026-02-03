@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Purchases.Posting;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Purchases.Posting;
 
 using Microsoft.Finance.Currency;
 using Microsoft.Finance.Deferral;
@@ -11,6 +15,8 @@ using Microsoft.Finance.SalesTax;
 using Microsoft.Finance.VAT.Calculation;
 using Microsoft.Finance.VAT.Setup;
 using Microsoft.FixedAssets.Depreciation;
+using Microsoft.FixedAssets.FixedAsset;
+using Microsoft.FixedAssets.Setup;
 using Microsoft.Projects.Project.Posting;
 using Microsoft.Purchases.Document;
 using Microsoft.Purchases.History;
@@ -44,9 +50,11 @@ codeunit 816 "Purch. Post Invoice" implements "Invoice Posting"
         HideProgressWindow: Boolean;
         PreviewMode: Boolean;
         SuppressCommit: Boolean;
+        SplitByFA: Boolean;
         NoDeferralScheduleErr: Label 'You must create a deferral schedule because you have specified the deferral code %2 in line %1.', Comment = '%1=The item number of the sales transaction line, %2=The Deferral Template Code';
         ZeroDeferralAmtErr: Label 'Deferral amounts cannot be 0. Line: %1, Deferral Template: %2.', Comment = '%1=The item number of the sales transaction line, %2=The Deferral Template Code';
         IncorrectInterfaceErr: Label 'This implementation designed to post Purchase Header table only.';
+        TotalToDeferErr: Label 'The sum of the deferred amounts must be equal to the amount in the Amount to Defer field.';
 
     procedure Check(TableID: Integer)
     begin
@@ -229,8 +237,12 @@ codeunit 816 "Purch. Post Invoice" implements "Invoice Posting"
         end;
 
         PurchPostInvoiceEvents.RunOnPrepareLineOnBeforeAdjustTotalAmounts(PurchLine, TotalAmount, TotalAmountACY, PurchHeader.GetUseDate());
-        DeferralUtilities.AdjustTotalAmountForDeferralsNoBase(
-          PurchLine."Deferral Code", AmtToDefer, AmtToDeferACY, TotalAmount, TotalAmountACY, PurchLine."Inv. Discount Amount" + PurchLine."Line Discount Amount", PurchLineACY."Inv. Discount Amount" + PurchLineACY."Line Discount Amount");
+        if PurchSetup."Discount Posting" = PurchSetup."Discount Posting"::"No Discounts" then
+            DeferralUtilities.AdjustTotalAmountForDeferralsNoBase(
+          PurchLine."Deferral Code", AmtToDefer, AmtToDeferACY, TotalAmount, TotalAmountACY, 0, 0)
+        else
+            DeferralUtilities.AdjustTotalAmountForDeferralsNoBase(
+              PurchLine."Deferral Code", AmtToDefer, AmtToDeferACY, TotalAmount, TotalAmountACY, PurchLine."Inv. Discount Amount" + PurchLine."Line Discount Amount", PurchLineACY."Inv. Discount Amount" + PurchLineACY."Line Discount Amount");
 
         IsHandled := false;
         PurchPostInvoiceEvents.RunOnPrepareLineOnBeforeSetAmounts(
@@ -273,9 +285,14 @@ codeunit 816 "Purch. Post Invoice" implements "Invoice Posting"
         if PurchLine."Deferral Code" <> '' then begin
             PurchPostInvoiceEvents.RunOnPrepareLineOnBeforePrepareDeferralLine(
                 PurchLine, InvoicePostingBuffer, PurchHeader.GetUseDate(), InvDefLineNo, DeferralLineNo, SuppressCommit);
-            PrepareDeferralLine(
-                PurchHeader, PurchLine, InvoicePostingBuffer.Amount, InvoicePostingBuffer."Amount (ACY)",
-                AmtToDefer, AmtToDeferACY, DeferralAccount, PurchAccount, PurchLine."Inv. Discount Amount" + PurchLine."Line Discount Amount", PurchLineACY."Inv. Discount Amount" + PurchLineACY."Line Discount Amount");
+            if PurchSetup."Discount Posting" = PurchSetup."Discount Posting"::"No Discounts" then
+                PrepareDeferralLine(
+                    PurchHeader, PurchLine, InvoicePostingBuffer.Amount, InvoicePostingBuffer."Amount (ACY)",
+                    AmtToDefer, AmtToDeferACY, DeferralAccount, PurchAccount, 0, 0)
+            else
+                PrepareDeferralLine(
+                    PurchHeader, PurchLine, InvoicePostingBuffer.Amount, InvoicePostingBuffer."Amount (ACY)",
+                    AmtToDefer, AmtToDeferACY, DeferralAccount, PurchAccount, PurchLine."Inv. Discount Amount" + PurchLine."Line Discount Amount", PurchLineACY."Inv. Discount Amount" + PurchLineACY."Line Discount Amount");
             PurchPostInvoiceEvents.RunOnPrepareLineOnAfterPrepareDeferralLine(
                 PurchLine, InvoicePostingBuffer, PurchHeader.GetUseDate(), InvDefLineNo, DeferralLineNo, SuppressCommit);
         end;
@@ -304,7 +321,7 @@ codeunit 816 "Purch. Post Invoice" implements "Invoice Posting"
             TempInvoicePostingBufferReverseCharge.Modify();
     end;
 
-    internal procedure PrepareInvoicePostingBuffer(var PurchLine: Record "Purchase Line"; var InvoicePostingBuffer: Record "Invoice Posting Buffer")
+    procedure PrepareInvoicePostingBuffer(var PurchLine: Record "Purchase Line"; var InvoicePostingBuffer: Record "Invoice Posting Buffer")
     begin
         PurchPostInvoiceEvents.RunOnBeforePrepareInvoicePostingBuffer(PurchLine, InvoicePostingBuffer);
 
@@ -336,6 +353,7 @@ codeunit 816 "Purch. Post Invoice" implements "Invoice Posting"
             InvoicePostingBuffer."Maintenance Code" := PurchLine."Maintenance Code";
             InvoicePostingBuffer."Insurance No." := PurchLine."Insurance No.";
             InvoicePostingBuffer."Budgeted FA No." := PurchLine."Budgeted FA No.";
+            InvoicePostingBuffer."No. of Fixed Asset Cards" := PurchLine."No. of Fixed Asset Cards";
         end;
 
         UpdateEntryDescriptionFromPurchaseLine(PurchLine, InvoicePostingBuffer);
@@ -469,7 +487,7 @@ codeunit 816 "Purch. Post Invoice" implements "Invoice Posting"
         IsHandled: Boolean;
     begin
         IsHandled := false;
-        PurchPostInvoiceEvents.RunOnBeforePrepareLineFADiscount(InvoicePostingBuffer, GenPostingSetup, IsHandled);
+        PurchPostInvoiceEvents.RunOnBeforePrepareLineFADiscount(InvoicePostingBuffer, GenPostingSetup, AccountNo, IsHandled);
         if IsHandled then
             exit;
 
@@ -527,7 +545,12 @@ codeunit 816 "Purch. Post Invoice" implements "Invoice Posting"
 
                 PurchPostInvoiceEvents.RunOnPostLinesOnBeforeGenJnlLinePost(
                     GenJnlLine, PurchHeader, TempInvoicePostingBuffer, GenJnlPostLine, PreviewMode, SuppressCommit);
-                GLEntryNo := RunGenJnlPostLine(GenJnlLine, GenJnlPostLine);
+
+                if SplitByFA then
+                    SplitFA(GenJnlLine, TempInvoicePostingBuffer."No. of Fixed Asset Cards", GenJnlPostLine)
+                else
+                    GLEntryNo := RunGenJnlPostLine(GenJnlLine, GenJnlPostLine);
+
                 PurchPostInvoiceEvents.RunOnPostLinesOnAfterGenJnlLinePost(
                     GenJnlLine, PurchHeader, TempInvoicePostingBuffer, GenJnlPostLine, PreviewMode, SuppressCommit, GLEntryNo);
 
@@ -576,6 +599,7 @@ codeunit 816 "Purch. Post Invoice" implements "Invoice Posting"
                     GenJnlLine."FA Posting Type" := GenJnlLine."FA Posting Type"::Appreciation;
             end;
             InvoicePostingBuffer.CopyToGenJnlLineFA(GenJnlLine);
+            SplitByFA := CalcSplitFA(GenJnlLine, InvoicePostingBuffer."No. of Fixed Asset Cards");
         end;
 
         PurchPostInvoiceEvents.RunOnAfterPrepareGenJnlLine(GenJnlLine, PurchHeader, InvoicePostingBuffer);
@@ -895,6 +919,11 @@ codeunit 816 "Purch. Post Invoice" implements "Invoice Posting"
                             PurchPostInvoiceEvents.RunOnCalculateVATAmountInBufferOnBeforeTempInvoicePostingBufferAssign(VATAmount, VATAmountACY, TempInvoicePostingBuffer);
                             TempInvoicePostingBufferReverseCharge := InvoicePostingBuffer;
                             if TempInvoicePostingBufferReverseCharge.Find() then begin
+                                if VATPostingSetup."VAT %" = 0 then begin
+                                    VATAmountRemainder := VATAmount;
+                                    VATAmountACYRemainder := VATAmountACY;
+                                end;
+
                                 VATAmountRemainder += VATAmount;
                                 InvoicePostingBuffer."VAT Amount" := Round(VATAmountRemainder, CurrencyDocument."Amount Rounding Precision");
                                 VATAmountRemainder -= InvoicePostingBuffer."VAT Amount";
@@ -923,7 +952,7 @@ codeunit 816 "Purch. Post Invoice" implements "Invoice Posting"
                                 InvoicePostingBuffer."VAT Base Amount" := Round(InvoicePostingBuffer."VAT Base Amount" * (1 - PurchHeader."VAT Base Discount %" / 100));
                                 InvoicePostingBuffer."VAT Base Amount (ACY)" := Round(InvoicePostingBuffer."VAT Base Amount (ACY)" * (1 - PurchHeader."VAT Base Discount %" / 100));
                             end;
-                            NonDeductibleVAT.Update(InvoicePostingBuffer, RemainderInvoicePostingBuffer, CurrencyDocument."Amount Rounding Precision");
+                            NonDeductibleVAT.Update(InvoicePostingBuffer, RemainderInvoicePostingBuffer, GetGeneralLedgerSetupAmountRoundingPrecision(CurrencyDocument."Amount Rounding Precision"));
                             PurchPostInvoiceEvents.RunOnCalculateVATAmountsOnReverseChargeVATOnBeforeModify(PurchHeader, CurrencyDocument, VATPostingSetup, InvoicePostingBuffer);
                             InvoicePostingBuffer.Modify();
                         end;
@@ -953,6 +982,7 @@ codeunit 816 "Purch. Post Invoice" implements "Invoice Posting"
     var
         DeferralTemplate: Record "Deferral Template";
         DeferralPostingBuffer: Record "Deferral Posting Buffer";
+        IsDeferralAmountCheck: Boolean;
         IsHandled: Boolean;
     begin
         IsHandled := false;
@@ -990,6 +1020,11 @@ codeunit 816 "Purch. Post Invoice" implements "Invoice Posting"
                 if TempDeferralLine.FindSet() then
                     repeat
                         if (TempDeferralLine."Amount (LCY)" <> 0) or (TempDeferralLine.Amount <> 0) then begin
+                            if not IsDeferralAmountCheck then begin
+                                CheckDeferralAmount(TempDeferralLine);
+                                IsDeferralAmountCheck := true;
+                            end;
+
                             DeferralPostingBuffer.PreparePurch(PurchLine, InvoicePostingParameters."Document No.");
                             DeferralPostingBuffer.InitFromDeferralLine(TempDeferralLine);
                             if PurchLine.IsCreditDocType() then
@@ -1011,6 +1046,37 @@ codeunit 816 "Purch. Post Invoice" implements "Invoice Posting"
                 Error(NoDeferralScheduleErr, PurchLine."No.", PurchLine."Deferral Code")
         end else
             Error(NoDeferralScheduleErr, PurchLine."No.", PurchLine."Deferral Code")
+    end;
+
+    local procedure GetGeneralLedgerSetupAmountRoundingPrecision(CurrencyAmountRoundingPrecision: Decimal): Decimal
+    var
+        GeneralLedgerSetup: Record "General Ledger Setup";
+    begin
+        GeneralLedgerSetup.GetRecordOnce();
+        if GeneralLedgerSetup."Amount Rounding Precision" <> 0 then
+            exit(GeneralLedgerSetup."Amount Rounding Precision");
+
+        exit(CurrencyAmountRoundingPrecision);
+    end;
+
+    local procedure CheckDeferralAmount(DeferralLine: Record "Deferral Line")
+    var
+        DeferralHeader: Record "Deferral Header";
+    begin
+        DeferralHeader.SetLoadFields("Amount to Defer", "Schedule Line Total");
+        if not DeferralHeader.Get(
+            DeferralLine."Deferral Doc. Type",
+            DeferralLine."Gen. Jnl. Template Name",
+            DeferralLine."Gen. Jnl. Batch Name",
+            DeferralLine."Document Type",
+            DeferralLine."Document No.",
+            DeferralLine."Line No.")
+        then
+            exit;
+
+        DeferralHeader.CalcFields("Schedule Line Total");
+        if DeferralHeader."Schedule Line Total" <> DeferralHeader."Amount to Defer" then
+            Error(TotalToDeferErr);
     end;
 
     procedure CalcDeferralAmounts(PurchHeaderVar: Variant; PurchLineVar: Variant; OriginalDeferralAmount: Decimal)
@@ -1118,5 +1184,95 @@ codeunit 816 "Purch. Post Invoice" implements "Invoice Posting"
         end;
 
         PurchPostInvoiceEvents.RunOnAfterCreatePostedDeferralSchedule(PurchLine, PostedDeferralHeader);
+    end;
+
+    local procedure CalcSplitFA(GenJnlLine: Record "Gen. Journal Line"; SplitNo: Integer): Boolean
+    begin
+        exit(
+          (SplitNo >= 2) and
+          (GenJnlLine."FA Posting Type" = GenJnlLine."FA Posting Type"::"Acquisition Cost"));
+    end;
+
+    local procedure SplitFA(GenJnlLine: Record "Gen. Journal Line"; SplitNo: Integer; var GenJnlPostLine: Codeunit "Gen. Jnl.-Post Line")
+    var
+        GenJnlLine2: Record "Gen. Journal Line";
+        TotalGenJnlLine: Record "Gen. Journal Line";
+        TempFA: Record "Fixed Asset" temporary;
+        I: Integer;
+    begin
+        CreateTempFA(GenJnlLine, SplitNo, TempFA);
+        TotalGenJnlLine := GenJnlLine;
+        Clear(GenJnlLine2);
+        Clear(TempFA);
+        TempFA."No." := '';
+        for I := 1 to SplitNo do begin
+            TempFA.Next();
+            GenJnlLine."Account No." := TempFA."No.";
+            CalcSplitAmount(
+                GenJnlLine.Amount, GenJnlLine2.Amount, TotalGenJnlLine.Amount, I, SplitNo);
+            CalcSplitAmount(
+                GenJnlLine."Source Currency Amount", GenJnlLine2."Source Currency Amount",
+                TotalGenJnlLine."Source Currency Amount", I, SplitNo);
+            CalcSplitAmount(
+                GenJnlLine.Quantity, GenJnlLine2.Quantity, TotalGenJnlLine.Quantity, I, SplitNo);
+            CalcSplitAmount(
+                GenJnlLine."VAT Base Amount", GenJnlLine2."VAT Base Amount", TotalGenJnlLine."VAT Base Amount", I, SplitNo);
+            CalcSplitAmount(
+                GenJnlLine."Source Curr. VAT Amount",
+                GenJnlLine2."Source Curr. VAT Amount", TotalGenJnlLine."Source Curr. VAT Amount", I, SplitNo);
+            CalcSplitAmount(
+                GenJnlLine."VAT Amount", GenJnlLine2."VAT Amount", TotalGenJnlLine."VAT Amount", I, SplitNo);
+            CalcSplitAmount(
+                GenJnlLine."Source Curr. VAT Amount",
+                GenJnlLine2."Source Curr. VAT Amount", TotalGenJnlLine."Source Curr. VAT Amount", I, SplitNo);
+            CalcSplitAmount(
+                GenJnlLine."VAT Difference", GenJnlLine2."VAT Difference", TotalGenJnlLine."VAT Difference", I, SplitNo);
+            CalcSplitAmount(
+                GenJnlLine."Salvage Value", GenJnlLine2."Salvage Value", TotalGenJnlLine."Salvage Value", I, SplitNo);
+
+            RunGenJnlPostLine(GenJnlLine, GenJnlPostLine);
+        end;
+    end;
+
+    procedure CreateTempFA(GenJnlLine: Record "Gen. Journal Line"; SplitNo: Integer; var TempFA: Record "Fixed Asset" temporary): Boolean
+    var
+        FASetup: Record "FA Setup";
+        FA: Record "Fixed Asset";
+        FA2: Record "Fixed Asset";
+        FADeprBook: Record "FA Depreciation Book";
+        FADeprBook2: Record "FA Depreciation Book";
+        I: Integer;
+    begin
+        FASetup.Get();
+        FASetup.TestField("Fixed Asset Nos.");
+        TempFA.DeleteAll();
+        FA.Get(GenJnlLine."Account No.");
+        TempFA := FA;
+        TempFA.Insert();
+        SplitNo := SplitNo - 1;
+        for I := 1 to SplitNo do begin
+            FA2 := FA;
+            FA2."No." := '';
+            FA2.Insert(true);
+            TempFA := FA2;
+            TempFA.Insert();
+            Clear(FADeprBook);
+            FADeprBook.SetRange("FA No.", FA."No.");
+            if FADeprBook.FindSet() then
+                repeat
+                    FADeprBook2 := FADeprBook;
+                    FADeprBook2."FA No." := FA2."No.";
+                    FADeprBook2.Insert(true);
+                until FADeprBook.Next() = 0;
+        end;
+    end;
+
+    local procedure CalcSplitAmount(var Amount: Decimal; var Amount2: Decimal; TotalAmount: Decimal; I: Integer; SplitNo: Integer)
+    begin
+        if I < SplitNo then
+            Amount := Round(TotalAmount * I / SplitNo - Amount2)
+        else
+            Amount := TotalAmount - Amount2;
+        Amount2 += Amount;
     end;
 }

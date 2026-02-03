@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Finance.Dimension;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Finance.Dimension;
 
 using Microsoft.Bank.BankAccount;
 using Microsoft.CashFlow.Setup;
@@ -57,8 +61,8 @@ table 352 "Default Dimension"
 
                 CalcFields("Table Caption");
                 DimensionManagement.DefaultDimObjectNoList(TempAllObjWithCaption);
-                TempAllObjWithCaption."Object Type" := TempAllObjWithCaption."Object Type"::Table;
-                TempAllObjWithCaption."Object ID" := "Table ID";
+                TempAllObjWithCaption.SetRange("Object Type", TempAllObjWithCaption."Object Type"::Table);
+                TempAllObjWithCaption.SetRange("Object ID", "Table ID");
                 if TempAllObjWithCaption.IsEmpty() then
                     FieldError("Table ID");
             end;
@@ -165,7 +169,13 @@ table 352 "Default Dimension"
             trigger OnValidate()
             var
                 DimValuePerAccount: Record "Dim. Value per Account";
+                IsHandled: Boolean;
             begin
+                IsHandled := false;
+                OnBeforeValidateAllowedValuesFilter(Rec, xRec, IsHandled);
+                if IsHandled then
+                    exit;
+
                 TestField("Dimension Code");
                 TestField("Value Posting", Enum::"Default Dimension Value Posting Type"::"Code Mandatory");
                 if not IsTemporary() then
@@ -1468,6 +1478,11 @@ table 352 "Default Dimension"
 
     [IntegrationEvent(false, false)]
     local procedure OnBeforeValidateTableID(var RecDefaultDimension: Record "Default Dimension"; xRecDefaultDimension: Record "Default Dimension"; var IsHandled: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeValidateAllowedValuesFilter(var RecDefaultDimension: Record "Default Dimension"; xRecDefaultDimension: Record "Default Dimension"; var IsHandled: Boolean)
     begin
     end;
 }

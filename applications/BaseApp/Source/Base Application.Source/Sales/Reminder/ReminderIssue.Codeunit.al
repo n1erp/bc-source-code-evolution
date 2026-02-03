@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Sales.Reminder;
 
 using Microsoft.Finance.Dimension;
@@ -266,8 +270,8 @@ codeunit 393 "Reminder-Issue"
     begin
         GenJnlLine2."Shortcut Dimension 1 Code" := GlobalReminderHeader."Shortcut Dimension 1 Code";
         GenJnlLine2."Shortcut Dimension 2 Code" := GlobalReminderHeader."Shortcut Dimension 2 Code";
-        DimSetIDArr[1] := GlobalReminderHeader."Dimension Set ID";
-        DimSetIDArr[2] := TempGenJnlLine."Dimension Set ID";
+        DimSetIDArr[1] := TempGenJnlLine."Dimension Set ID";
+        DimSetIDArr[2] := GlobalReminderHeader."Dimension Set ID";
         GenJnlLine2."Dimension Set ID" :=
             DimMgt.GetCombinedDimensionSetID(
                 DimSetIDArr, GenJnlLine2."Shortcut Dimension 1 Code", GenJnlLine2."Shortcut Dimension 2 Code");

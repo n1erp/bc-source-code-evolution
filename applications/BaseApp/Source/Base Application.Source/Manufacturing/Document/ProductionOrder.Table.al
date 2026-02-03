@@ -724,10 +724,6 @@ table 5405 "Production Order"
     var
         InvtAdjmtEntryOrder: Record "Inventory Adjmt. Entry (Order)";
         NoSeries: Codeunit "No. Series";
-#if not CLEAN24
-        NoSeriesManagement: Codeunit NoSeriesManagement;
-        DefaultNoSeriesCode: Code[20];
-#endif
         IsHandled: Boolean;
     begin
         IsHandled := false;
@@ -738,24 +734,11 @@ table 5405 "Production Order"
         MfgSetup.Get();
         if "No." = '' then begin
             TestNoSeries();
-#if not CLEAN24
-            DefaultNoSeriesCode := GetNoSeriesCode();
-            NoSeriesManagement.RaiseObsoleteOnBeforeInitSeries(DefaultNoSeriesCode, xRec."No. Series", "Due Date", "No.", "No. Series", IsHandled);
-            if not IsHandled then begin
-                if NoSeries.AreRelated(DefaultNoSeriesCode, xRec."No. Series") then
-                    "No. Series" := xRec."No. Series"
-                else
-                    "No. Series" := DefaultNoSeriesCode;
-                "No." := NoSeries.GetNextNo("No. Series", "Due Date");
-                NoSeriesManagement.RaiseObsoleteOnAfterInitSeries("No. Series", DefaultNoSeriesCode, "Due Date", "No.");
-            end;
-#else
             if NoSeries.AreRelated(GetNoSeriesCode(), xRec."No. Series") then
                 "No. Series" := xRec."No. Series"
             else
                 "No. Series" := GetNoSeriesCode();
             "No." := NoSeries.GetNextNo("No. Series", "Due Date");
-#endif
         end;
 
         IsHandled := false;
@@ -968,6 +951,8 @@ table 5405 "Production Order"
             WhseRequest.DeleteAll(true);
         ItemTrackingMgt.DeleteWhseItemTrkgLines(
           Database::"Prod. Order Component", Status.AsInteger(), "No.", '', 0, 0, '', false);
+
+        OnAfterDeleteProdOrderRelations(Rec, ProdOrderComment, WhseRequest, ReservMgt, ItemTrackingMgt);
     end;
 
     local procedure DeleteProdOrderLines()
@@ -1167,23 +1152,24 @@ table 5405 "Production Order"
 
     procedure CreatePick(AssignedUserID: Code[50]; SortingMethod: Option; SetBreakBulkFilter: Boolean; DoNotFillQtyToHandle: Boolean; PrintDocument: Boolean)
     var
-        ProdOrderCompLine: Record "Prod. Order Component";
+        ProdOrderComponent: Record "Prod. Order Component";
 #if not CLEAN26
         ManufacturingSetup: Record "Manufacturing Setup";
 #endif
-        ItemTrackingMgt: Codeunit "Item Tracking Management";
+        ItemTrackingManagement: Codeunit "Item Tracking Management";
     begin
-        ProdOrderCompLine.Reset();
-        ProdOrderCompLine.SetRange(Status, Status);
-        ProdOrderCompLine.SetRange("Prod. Order No.", "No.");
-        if ProdOrderCompLine.Find('-') then
+        ProdOrderComponent.Reset();
+        ProdOrderComponent.SetRange(Status, Status);
+        ProdOrderComponent.SetRange("Prod. Order No.", "No.");
+        OnCreatePickOnBeforeFindProdOrderComponent(ProdOrderComponent);
+        if ProdOrderComponent.FindSet() then
             repeat
-                ItemTrackingMgt.InitItemTrackingForTempWhseWorksheetLine(
-                  Enum::"Warehouse Worksheet Document Type"::Production, ProdOrderCompLine."Prod. Order No.",
-                  ProdOrderCompLine."Prod. Order Line No.", Database::"Prod. Order Component",
-                  ProdOrderCompLine.Status.AsInteger(), ProdOrderCompLine."Prod. Order No.",
-                  ProdOrderCompLine."Prod. Order Line No.", ProdOrderCompLine."Line No.");
-            until ProdOrderCompLine.Next() = 0;
+                ItemTrackingManagement.InitItemTrackingForTempWhseWorksheetLine(
+                  Enum::"Warehouse Worksheet Document Type"::Production, ProdOrderComponent."Prod. Order No.",
+                  ProdOrderComponent."Prod. Order Line No.", Database::"Prod. Order Component",
+                  ProdOrderComponent.Status.AsInteger(), ProdOrderComponent."Prod. Order No.",
+                  ProdOrderComponent."Prod. Order Line No.", ProdOrderComponent."Line No.");
+            until ProdOrderComponent.Next() = 0;
         Commit();
 
         TestField(Status, Status::Released);
@@ -1191,28 +1177,29 @@ table 5405 "Production Order"
         if "Completely Picked" then
             Error(Text008);
 
-        ProdOrderCompLine.Reset();
-        ProdOrderCompLine.SetRange(Status, Status);
-        ProdOrderCompLine.SetRange("Prod. Order No.", "No.");
+        ProdOrderComponent.Reset();
+        ProdOrderComponent.SetRange(Status, Status);
+        ProdOrderComponent.SetRange("Prod. Order No.", "No.");
 
 #if not CLEAN26
         if not ManufacturingSetup.IsFeatureKeyFlushingMethodManualWithoutPickEnabled() then
-            ProdOrderCompLine.SetFilter(
+            ProdOrderComponent.SetFilter(
               "Flushing Method", '%1|%2|%3|%4',
-              ProdOrderCompLine."Flushing Method"::Manual,
-              ProdOrderCompLine."Flushing Method"::"Pick + Manual",
-              ProdOrderCompLine."Flushing Method"::"Pick + Forward",
-              ProdOrderCompLine."Flushing Method"::"Pick + Backward")
+              ProdOrderComponent."Flushing Method"::Manual,
+              ProdOrderComponent."Flushing Method"::"Pick + Manual",
+              ProdOrderComponent."Flushing Method"::"Pick + Forward",
+              ProdOrderComponent."Flushing Method"::"Pick + Backward")
         else
 #endif
-            ProdOrderCompLine.SetFilter(
+            ProdOrderComponent.SetFilter(
               "Flushing Method", '%1|%2|%3',
-              ProdOrderCompLine."Flushing Method"::"Pick + Manual",
-              ProdOrderCompLine."Flushing Method"::"Pick + Forward",
-              ProdOrderCompLine."Flushing Method"::"Pick + Backward");
-        ProdOrderCompLine.SetRange("Planning Level Code", 0);
-        ProdOrderCompLine.SetFilter("Expected Quantity", '>0');
-        if ProdOrderCompLine.Find('-') then
+              ProdOrderComponent."Flushing Method"::"Pick + Manual",
+              ProdOrderComponent."Flushing Method"::"Pick + Forward",
+              ProdOrderComponent."Flushing Method"::"Pick + Backward");
+        ProdOrderComponent.SetRange("Planning Level Code", 0);
+        ProdOrderComponent.SetFilter("Expected Quantity", '>0');
+        OnCreatePickOnBeforeRunCreatePickFromWhseSource(ProdOrderComponent);
+        if not ProdOrderComponent.IsEmpty() then
             RunCreatePickFromWhseSource(AssignedUserID, SortingMethod, SetBreakBulkFilter, DoNotFillQtyToHandle, PrintDocument)
         else
             if not HideValidationDialog then
@@ -1368,7 +1355,7 @@ table 5405 "Production Order"
                             CalcProdOrder.Recalculate(ProdOrderLine, 1, true);
                 end;
                 IsHandled := false;
-                OnBeforeUpdateProdOrderLineDueDate(ProdOrderLine, IsHandled);
+                OnBeforeUpdateProdOrderLineDueDate(ProdOrderLine, IsHandled, CalcProdOrder);
                 if not IsHandled then
                     if ProdOrderLine."Planning Level Code" > 0 then
                         ProdOrderLine."Due Date" := ProdOrderLine."Ending Date"
@@ -1589,24 +1576,28 @@ table 5405 "Production Order"
 
     internal procedure GetQtyReservedFromStockState() Result: Enum "Reservation From Stock"
     var
-        ProdOrderComponent: Record "Prod. Order Component";
         ProdOrderCompReserve: Codeunit "Prod. Order Comp.-Reserve";
         QtyReservedFromStock: Decimal;
     begin
         QtyReservedFromStock := ProdOrderCompReserve.GetReservedQtyFromInventory(Rec);
+        if QtyReservedFromStock = 0 then
+            exit(Result::None);
 
-        ProdOrderComponent.SetRange(Status, Rec.Status);
-        ProdOrderComponent.SetRange("Prod. Order No.", Rec."No.");
-        ProdOrderComponent.CalcSums("Remaining Qty. (Base)");
+        if QtyReservedFromStock = CalculateReservableRemainingQuantityBase() then
+            exit(Result::Full);
 
-        case QtyReservedFromStock of
-            0:
-                exit(Result::None);
-            ProdOrderComponent."Remaining Qty. (Base)":
-                exit(Result::Full);
-            else
-                exit(Result::Partial);
-        end;
+        exit(Result::Partial);
+    end;
+
+    local procedure CalculateReservableRemainingQuantityBase() RemainingQtyBase: Decimal
+    var
+        RemQtyBaseInvtItemProdOrdComp: Query RemQtyBaseInvtItemProdOrdComp;
+    begin
+        RemQtyBaseInvtItemProdOrdComp.SetJobPlanningLineFilter(Rec);
+        if RemQtyBaseInvtItemProdOrdComp.Open() then
+            if RemQtyBaseInvtItemProdOrdComp.Read() then
+                RemainingQtyBase := RemQtyBaseInvtItemProdOrdComp.Remaining_Qty___Base_;
+        RemQtyBaseInvtItemProdOrdComp.Close();
     end;
 
     local procedure ConfirmDeletion()
@@ -1735,7 +1726,7 @@ table 5405 "Production Order"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnBeforeUpdateProdOrderLineDueDate(var ProdOrderLine: Record "Prod. Order Line"; var IsHandled: Boolean)
+    local procedure OnBeforeUpdateProdOrderLineDueDate(var ProdOrderLine: Record "Prod. Order Line"; var IsHandled: Boolean; var CalculateProdOrder: Codeunit "Calculate Prod. Order")
     begin
     end;
 
@@ -1843,5 +1834,19 @@ table 5405 "Production Order"
     local procedure OnUpdateAllLineDimOnAfterUpdateProdOrderCompDim(var ProductionOrder: Record "Production Order"; var ProdOrderLine: Record "Prod. Order Line"; NewParentDimSetID: Integer; OldParentDimSetID: Integer);
     begin
     end;
-}
 
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterDeleteProdOrderRelations(var ProductionOrder: Record "Production Order"; var ProdOrderCommentLine: Record "Prod. Order Comment Line"; var WhsePickRequest: Record "Whse. Pick Request"; var ReservationManagement: Codeunit "Reservation Management"; var ItemTrackingManagement: Codeunit "Item Tracking Management")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnCreatePickOnBeforeFindProdOrderComponent(var ProdOrderComponent: Record "Prod. Order Component")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnCreatePickOnBeforeRunCreatePickFromWhseSource(var ProdOrderComponent: Record "Prod. Order Component")
+    begin
+    end;
+}

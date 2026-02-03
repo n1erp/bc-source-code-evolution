@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Sales.Document;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Sales.Document;
 
 using Microsoft.Foundation.UOM;
 using Microsoft.Inventory.Item;
@@ -49,6 +53,7 @@ codeunit 99000832 "Sales Line-Reserve"
         ShipmentDate: Date;
         SignFactor: Integer;
         IsHandled: Boolean;
+        DoCreateReservationEntry: Boolean;
     begin
         IsHandled := false;
         OnBeforeCreateReservation(SalesLine, IsHandled);
@@ -95,7 +100,8 @@ codeunit 99000832 "Sales Line-Reserve"
         end;
 
         IsHandled := false;
-        OnCreateReservationOnBeforeCreateReservEntry(SalesLine, Quantity, QuantityBase, ForReservationEntry, IsHandled, FromTrackingSpecification, ExpectedReceiptDate, Description, ShipmentDate);
+        DoCreateReservationEntry := true;
+        OnCreateReservationOnBeforeCreateReservEntry(SalesLine, Quantity, QuantityBase, ForReservationEntry, IsHandled, FromTrackingSpecification, ExpectedReceiptDate, Description, ShipmentDate, DoCreateReservationEntry);
         if not IsHandled then begin
             CreateReservEntry.CreateReservEntryFor(
                 Database::"Sales Line", SalesLine."Document Type".AsInteger(),
@@ -103,9 +109,10 @@ codeunit 99000832 "Sales Line-Reserve"
                 Quantity, QuantityBase, ForReservationEntry);
             CreateReservEntry.CreateReservEntryFrom(FromTrackingSpecification);
         end;
-        CreateReservEntry.CreateReservEntry(
-            SalesLine."No.", SalesLine."Variant Code", SalesLine."Location Code",
-            Description, ExpectedReceiptDate, ShipmentDate, 0);
+        if DoCreateReservationEntry then
+            CreateReservEntry.CreateReservEntry(
+                SalesLine."No.", SalesLine."Variant Code", SalesLine."Location Code",
+                Description, ExpectedReceiptDate, ShipmentDate, 0);
 
         FromTrackingSpecification."Source Type" := 0;
 
@@ -474,6 +481,9 @@ codeunit 99000832 "Sales Line-Reserve"
     begin
         if not SalesLine.ReservEntryExist() then
             exit(true);
+
+        if GuiAllowed then
+            Commit();
 
         ReservationManagement.SetReservSource(SalesLine);
         if ReservationManagement.DeleteItemTrackingConfirm() then
@@ -1294,6 +1304,9 @@ codeunit 99000832 "Sales Line-Reserve"
         if (NewSalesLine.Type <> NewSalesLine.Type::Item) or (NewSalesLine.Quantity = 0) or (NewSalesLine.Reserve <> NewSalesLine.Reserve::Always) then
             exit(false);
 
+        if ShipmentExists(NewSalesLine) then
+            exit(false);
+
         Item.SetLoadFields("Costing Method");
         Item.Get(NewSalesLine."No.");
 
@@ -1301,6 +1314,15 @@ codeunit 99000832 "Sales Line-Reserve"
             exit(false);
 
         exit(NewSalesLine.Quantity < OldSalesLine.Quantity);
+    end;
+
+    local procedure ShipmentExists(SalesLine: Record "Sales Line"): Boolean
+    var
+        SalesShipmentLine: Record "Sales Shipment Line";
+    begin
+        SalesShipmentLine.SetRange("Document No.", SalesLine."Shipment No.");
+        SalesShipmentLine.SetRange("Line No.", SalesLine."Shipment Line No.");
+        exit(not SalesShipmentLine.IsEmpty());
     end;
 
     [IntegrationEvent(false, false)]
@@ -1467,7 +1489,7 @@ codeunit 99000832 "Sales Line-Reserve"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnCreateReservationOnBeforeCreateReservEntry(var SalesLine: Record "Sales Line"; var Quantity: Decimal; var QuantityBase: Decimal; var ForReservEntry: Record "Reservation Entry"; var IsHandled: Boolean; var FromTrackingSpecification: Record "Tracking Specification"; ExpectedReceiptDate: Date; Description: Text[100]; ShipmentDate: Date)
+    local procedure OnCreateReservationOnBeforeCreateReservEntry(var SalesLine: Record "Sales Line"; var Quantity: Decimal; var QuantityBase: Decimal; var ForReservEntry: Record "Reservation Entry"; var IsHandled: Boolean; var FromTrackingSpecification: Record "Tracking Specification"; ExpectedReceiptDate: Date; Description: Text[100]; ShipmentDate: Date; var DoCreateReservationEntry: Boolean)
     begin
     end;
 
@@ -1510,16 +1532,19 @@ codeunit 99000832 "Sales Line-Reserve"
         end;
     end;
 
+#if not CLEAN27
+    [Obsolete('This event is never raised.', '27.0')]
     [IntegrationEvent(false, false)]
     local procedure OnSetSourceForReservationOnBeforeUpdateReservation(var ReservEntry: Record "Reservation Entry"; SalesLine: Record "Sales Line")
     begin
     end;
 
+    [Obsolete('This event is never raised.', '27.0')]
     [IntegrationEvent(false, false)]
     local procedure OnAfterSetSourceForReservation(var CalcReservEntry: Record "Reservation Entry"; SalesLine: Record "Sales Line")
     begin
     end;
-
+#endif
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Reservation Management", 'OnAutoReserveOnBeforeStopReservation', '', false, false)]
     local procedure OnAutoReserveOnBeforeStopReservation(var CalcReservEntry: Record "Reservation Entry"; var StopReservation: Boolean; SourceRecRef: RecordRef);
     var
@@ -1754,4 +1779,3 @@ codeunit 99000832 "Sales Line-Reserve"
         end;
     end;
 }
-

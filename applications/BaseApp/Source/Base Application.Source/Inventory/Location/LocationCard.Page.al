@@ -197,24 +197,6 @@ page 5703 "Location Card"
                         end;
                     }
                 }
-                group("Production Warehouse Handling")
-                {
-                    Caption = 'Production';
-                    field("Prod. Consumption Whse. Handling"; Rec."Prod. Consump. Whse. Handling")
-                    {
-                        Caption = 'Prod. Consumption Whse. Handling';
-                        ApplicationArea = Warehouse;
-                        ToolTip = 'Specifies the warehouse handling for consumption in production scenarios.';
-                        Enabled = ProdPickWhseHandlingEnable;
-                    }
-                    field("Prod. Output Whse. Handling"; Rec."Prod. Output Whse. Handling")
-                    {
-                        Caption = 'Prod. Output Whse. Handling';
-                        ApplicationArea = Warehouse;
-                        ToolTip = 'Specifies the warehouse handling for output in production scenarios';
-                        Enabled = ProdPutawayWhseHandlingEnable;
-                    }
-                }
                 group("Assembly Warehouse Handling")
                 {
                     Caption = 'Assembly';
@@ -267,7 +249,7 @@ page 5703 "Location Card"
                     {
                         ApplicationArea = Warehouse;
                         Enabled = UsePutAwayWorksheetEnable;
-                        ToolTip = 'Specifies if put-aways for posted warehouse receipts must be created with the put-away worksheet. If the check box is not selected, put-aways are created directly when you post a warehouse receipt.';
+                        ToolTip = 'Specifies if put-aways for posted warehouse receipts must be created with the put-away worksheet. If the check box is not selected, put-aways are created directly when you post a warehouse receipt or production output.';
                     }
                     field("Use ADCS"; Rec."Use ADCS")
                     {
@@ -460,7 +442,6 @@ page 5703 "Location Card"
                 {
                     ApplicationArea = Warehouse;
                     Enabled = AllowBreakbulkEnable;
-                    ToolTip = 'Specifies that an order can be fulfilled with items stored in alternate units of measure, if an item stored in the requested unit of measure is not found.';
                 }
                 group("Put-away")
                 {

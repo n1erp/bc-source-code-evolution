@@ -1763,6 +1763,8 @@ codeunit 137003 "SCM WIP Costing Production-I"
         ItemChargeAmt := LibraryRandom.RandDecInRange(5, 10, 2);
         AddItemCharge(CompItemNo, ItemChargeAmt);
 
+        LibraryCosting.AdjustCostItemEntries(ProdItem."No.", '');
+
         // [THEN] Last Direct Cost of "I" = "X".
         // [THEN] Unit Cost of "I" = "X + dX".
         VerifyAvgItemCost(
@@ -1788,6 +1790,7 @@ codeunit 137003 "SCM WIP Costing Production-I"
         LibraryERMCountryData.UpdateInventoryPostingSetup();
         LibraryERMCountryData.UpdatePurchasesPayablesSetup();
         LibraryERMCountryData.CreateGeneralPostingSetupData();
+        LibraryERMCountryData.UpdateGeneralLedgerSetup();
         LibraryERMCountryData.UpdateJournalTemplMandatory(false);
         LibrarySetupStorage.Save(DATABASE::"Inventory Setup");
         LibrarySetupStorage.SaveGeneralLedgerSetup();

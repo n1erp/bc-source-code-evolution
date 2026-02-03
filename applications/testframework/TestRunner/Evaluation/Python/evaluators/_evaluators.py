@@ -50,7 +50,6 @@ class IncitingHarmfulActionsEvaluator(BCEvaluator):
 
     def __call__(self, *, query: str, response: str, **kwargs):
         return super().__call__(question=query, answer=response, **kwargs)
-<<<<<<< HEAD
 
 class XPIAWithItemContextEvaluator(BCEvaluator):
     def __init__(self, model_config: AzureOpenAIModelConfiguration):
@@ -58,5 +57,3 @@ class XPIAWithItemContextEvaluator(BCEvaluator):
 
     def __call__(self, *, query: str, response: str, context: str, **kwargs):
         return super().__call__(question=query, answer=response, context=context, **kwargs)
-=======
->>>>>>> 4e338bd488fa47b3061e71a29e528dd727f0a574

@@ -509,6 +509,8 @@ codeunit 5988 "Serv-Documents Mgt."
                     InvoicePostingInterface.SetTotalLines(TotalServiceLine, TotalServiceLineLCY);
                     ServPostingJnlsMgt.PostBalancingEntry(ServHeader, InvoicePostingInterface);
                 end;
+
+            OnPostDocumentLinesOnAfterPostSalesAndVAT(ServHeader, TotalServiceLine, Window, GenJnlLineDocNo, GenJnlLineExtDocNo, Invoice);
         end;
 
         MakeInvtAdjustment();
@@ -1323,6 +1325,8 @@ codeunit 5988 "Serv-Documents Mgt."
         end else
             Cust.CheckBlockedCustOnDocs(Cust, ServHeader."Document Type", false, true);
 
+        OnGetAndCheckCustomerOnAfterCheckBlocked(ServHeader);
+
         if ServHeader."Bill-to Customer No." <> ServHeader."Customer No." then begin
             Cust.Get(ServHeader."Bill-to Customer No.");
             if Ship or ServMgtSetup."Shipment on Invoice" and
@@ -1337,6 +1341,9 @@ codeunit 5988 "Serv-Documents Mgt."
             end else
                 Cust.CheckBlockedCustOnDocs(Cust, ServHeader."Document Type", false, true);
         end;
+
+        OnAfterGetAndCheckCustomer(ServHeader);
+
         ServLine.Reset();
     end;
 
@@ -1848,16 +1855,8 @@ codeunit 5988 "Serv-Documents Mgt."
                         ServiceShptLine.Get(ItemEntryRelation."Source ID", ItemEntryRelation."Source Ref. No.");
                     end else
                         ItemEntryRelation."Item Entry No." := ServiceShptLine."Item Shpt. Entry No.";
-                    ServiceShptLine.TestField("Customer No.", ServiceLine."Customer No.");
-                    ServiceShptLine.TestField(Type, ServiceLine.Type);
-                    ServiceShptLine.TestField("No.", ServiceLine."No.");
-                    ServiceShptLine.TestField("Gen. Bus. Posting Group", ServiceLine."Gen. Bus. Posting Group");
-                    ServiceShptLine.TestField("Gen. Prod. Posting Group", ServiceLine."Gen. Prod. Posting Group");
 
-                    ServiceShptLine.TestField("Unit of Measure Code", ServiceLine."Unit of Measure Code");
-                    ServiceShptLine.TestField("Variant Code", ServiceLine."Variant Code");
-                    if -ServiceLine."Qty. to Invoice" * ServiceShptLine.Quantity < 0 then
-                        ServiceLine.FieldError("Qty. to Invoice", Text011);
+                    CheckServiceShipmentLineValues(ServiceShptLine, ServiceLine);
 
                     if TrackingSpecificationExists then begin
                         if Invoice then begin
@@ -1980,6 +1979,26 @@ codeunit 5988 "Serv-Documents Mgt."
                 Error(Text027, ServiceShptLine."Document No.");
             Error(Text013);
         end;
+    end;
+
+    local procedure CheckServiceShipmentLineValues(var ServiceShptLine: Record "Service Shipment Line"; var ServiceLine: Record "Service Line")
+    var
+        IsHandled: Boolean;
+    begin
+        OnBeforeCheckServiceShipmentLineValues(ServiceShptLine, ServiceLine, IsHandled);
+        if IsHandled then
+            exit;
+
+        ServiceShptLine.TestField("Customer No.", ServiceLine."Customer No.");
+        ServiceShptLine.TestField(Type, ServiceLine.Type);
+        ServiceShptLine.TestField("No.", ServiceLine."No.");
+        ServiceShptLine.TestField("Gen. Bus. Posting Group", ServiceLine."Gen. Bus. Posting Group");
+        ServiceShptLine.TestField("Gen. Prod. Posting Group", ServiceLine."Gen. Prod. Posting Group");
+
+        ServiceShptLine.TestField("Unit of Measure Code", ServiceLine."Unit of Measure Code");
+        ServiceShptLine.TestField("Variant Code", ServiceLine."Variant Code");
+        if -ServiceLine."Qty. to Invoice" * ServiceShptLine.Quantity < 0 then
+            ServiceLine.FieldError("Qty. to Invoice", Text011);
     end;
 
     local procedure UpdateServLinesOnPostOrder()
@@ -2681,13 +2700,6 @@ codeunit 5988 "Serv-Documents Mgt."
     begin
     end;
 
-#if not CLEAN24
-    [Obsolete('Replaced by new implementation in codeunit Service Post Invoice', '20.0')]
-    [IntegrationEvent(false, false)]
-    local procedure OnPostDocumentLinesOnBeforePostInvoicePostBuffer(ServiceHeader: Record "Service Header"; var TempInvoicePostBuffer: Record "Invoice Post. Buffer" temporary; var TotalServiceLine: Record "Service Line"; var TotalServiceLineLCY: Record "Service Line")
-    begin
-    end;
-#endif
 
     [IntegrationEvent(false, false)]
     local procedure OnPostDocumentLinesOnBeforePostRemQtyToBeConsumed(var ServiceHeader: Record "Service Header"; var ServiceLine: Record "Service Line")
@@ -2946,6 +2958,26 @@ codeunit 5988 "Serv-Documents Mgt."
 
     [IntegrationEvent(false, false)]
     local procedure OnFinalizeCrMemoDocumentOnBeforeServiceCreditMemoHeaderInsert(var ServiceCrMemoHeaderToInsert: Record "Service Cr.Memo Header"; var TempServiceCrMemoHeader: Record "Service Cr.Memo Header" temporary; var TempServiceHeader: Record "Service Header" temporary)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeCheckServiceShipmentLineValues(var ServiceShipmentLine: Record "Service Shipment Line"; var ServiceLine: Record "Service Line"; var IsHandled: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnPostDocumentLinesOnAfterPostSalesAndVAT(var ServiceHeader: Record "Service Header"; var TotalServiceLine: Record "Service Line"; var Window: Dialog; GenJnlLineDocNo: Code[20]; GenJnlLineExtDocNo: Text[35]; Invoice: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterGetAndCheckCustomer(var ServiceHeader: Record "Service Header")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnGetAndCheckCustomerOnAfterCheckBlocked(var ServiceHeader: Record "Service Header")
     begin
     end;
 }

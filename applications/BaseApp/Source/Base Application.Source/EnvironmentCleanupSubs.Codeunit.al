@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace System.Environment;
 
 using Microsoft.CRM.Outlook;
@@ -39,6 +43,7 @@ codeunit 8912 "Environment Cleanup Subs"
         end;
 
         OCRServiceSetup.ModifyAll("Password Key", nullGUID);
+        OCRServiceSetup.ModifyAll(Enabled, false);
 
         DocExchServiceSetup.ModifyAll(Enabled, false);
 

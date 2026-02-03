@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Finance.GeneralLedger.Preview;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Finance.GeneralLedger.Preview;
 
 using Microsoft.Bank.Ledger;
 using Microsoft.Finance.Currency;
@@ -16,9 +20,7 @@ using Microsoft.Inventory.Ledger;
 using Microsoft.Projects.Project.Ledger;
 using Microsoft.Projects.Resources.Ledger;
 using Microsoft.Purchases.Payables;
-using Microsoft.Purchases.Posting;
 using Microsoft.Sales.History;
-using Microsoft.Sales.Posting;
 using Microsoft.Sales.Receivables;
 using Microsoft.Warehouse.Ledger;
 
@@ -49,7 +51,6 @@ codeunit 20 "Posting Preview Event Handler"
         TempExchRateAdjmtLedgEntry: Record "Exch. Rate Adjmt. Ledg. Entry" temporary;
         TempWarehouseEntry: Record "Warehouse Entry" temporary;
         TempPhysInventoryLedgerEntry: Record "Phys. Inventory Ledger Entry" temporary;
-        PreviewDocumentNumbers: List of [Code[20]];
         CommitPrevented: Boolean;
         ShowDocNo: Boolean;
         TransactionConsistent: Boolean;
@@ -876,40 +877,5 @@ codeunit 20 "Posting Preview Event Handler"
         Result := true;
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", OnSetPostingPreviewDocumentNo, '', false, false)]
-    local procedure SetPurchasePostingPreviewDocumentNo(var PreviewDocumentNo: Code[20])
-    var
-        NewDocNo: Code[20];
-    begin
-        NewDocNo := PreviewDocumentNo;
-        if PreviewDocumentNumbers.Contains(NewDocNo) then
-            NewDocNo := CopyStr(CreateGuid(), 1, MaxStrLen(NewDocNo));
-        PreviewDocumentNumbers.Add(NewDocNo);
-        PreviewDocumentNo := NewDocNo;
-    end;
-
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", OnSetPostingPreviewDocumentNo, '', false, false)]
-    local procedure SetSalesPostingPreviewDocumentNo(var PreviewDocumentNo: Code[20])
-    var
-        NewDocNo: Code[20];
-    begin
-        NewDocNo := PreviewDocumentNo;
-        if PreviewDocumentNumbers.Contains(NewDocNo) then
-            NewDocNo := CopyStr(CreateGuid(), 1, MaxStrLen(NewDocNo));
-        PreviewDocumentNumbers.Add(NewDocNo);
-        PreviewDocumentNo := NewDocNo;
-    end;
-
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", OnGetPostingPreviewDocumentNos, '', false, false)]
-    local procedure GetPurchasePostingPreviewDocumentNos(var PreviewDocumentNos: List of [Code[20]])
-    begin
-        PreviewDocumentNos := PreviewDocumentNumbers;
-    end;
-
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", OnGetPostingPreviewDocumentNos, '', false, false)]
-    local procedure GetSalesPostingPreviewDocumentNos(var PreviewDocumentNos: List of [Code[20]])
-    begin
-        PreviewDocumentNos := PreviewDocumentNumbers;
-    end;
 }
 

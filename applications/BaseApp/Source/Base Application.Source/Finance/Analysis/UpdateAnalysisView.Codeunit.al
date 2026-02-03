@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Finance.Analysis;
 
 using Microsoft.CashFlow.Forecast;
@@ -89,14 +93,30 @@ codeunit 410 "Update Analysis View"
     procedure UpdateAll(Which: Option "Ledger Entries","Budget Entries",Both; DirectlyFromPosting: Boolean)
     var
         AnalysisView2: Record "Analysis View";
+        InBatchPosting: Boolean;
+        SessionNo: Integer;
     begin
-        OnBeforeUpdateAll(Which, DirectlyFromPosting, AnalysisView2);
+        OnBeforeUpdateAll(Which, DirectlyFromPosting, AnalysisView2, InBatchPosting);
+        if DirectlyFromPosting and InBatchPosting then
+            exit;
 
+        AnalysisView2.ReadIsolation(IsolationLevel::ReadUncommitted);
         AnalysisView2.SetRange(Blocked, false);
         if DirectlyFromPosting then
             AnalysisView2.SetRange("Update on Posting", true);
 
         if AnalysisView2.IsEmpty() then
+            exit;
+
+        if GuiAllowed() and DirectlyFromPosting and TaskScheduler.CanCreateTask() then
+            StartSession(SessionNo, Codeunit::"Update Analysis View Backgr.")
+        else
+            UpdateAll(AnalysisView2, Which, DirectlyFromPosting);
+    end;
+
+    internal procedure UpdateAll(var AnalysisView2: Record "Analysis View"; Which: Option "Ledger Entries","Budget Entries",Both; DirectlyFromPosting: Boolean)
+    begin
+        if not AnalysisView2.WritePermission() then
             exit;
 
         InitLastEntryNo();
@@ -703,7 +723,7 @@ codeunit 410 "Update Analysis View"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnBeforeUpdateAll(Which: Option "Ledger Entries","Budget Entries",Both; DirectlyFromPosting: Boolean; var AnalysisView: Record "Analysis View")
+    local procedure OnBeforeUpdateAll(Which: Option "Ledger Entries","Budget Entries",Both; DirectlyFromPosting: Boolean; var AnalysisView: Record "Analysis View"; var InBatchPosting: Boolean)
     begin
     end;
 

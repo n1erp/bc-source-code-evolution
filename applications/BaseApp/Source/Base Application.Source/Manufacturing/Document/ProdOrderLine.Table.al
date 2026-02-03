@@ -109,7 +109,7 @@ table 5406 "Prod. Order Line"
                                 Validate("Routing No.", Item."Routing No.");
                     OnAfterCopyFromItem(Rec, Item, xRec, CurrFieldNo);
                     if ProdOrder."Source Type" = ProdOrder."Source Type"::Family then
-                        "Routing Reference No." := 0
+                        "Routing Reference No." := "Line No."
                     else
                         if "Line No." = 0 then
                             "Routing Reference No." := -10000
@@ -251,6 +251,21 @@ table 5406 "Prod. Order Line"
                 end;
             end;
         }
+#if not CLEANSCHEMA30
+        field(35; "Standard Task Code"; Code[10])
+        {
+            Caption = 'Standard Task Code';
+            TableRelation = "Standard Task";
+            ObsoleteReason = 'This field is not required anymore. The standard task code is now defined on the routing line.';
+#if CLEAN27
+            ObsoleteState = Removed;
+            ObsoleteTag = '30.0';
+#else
+            ObsoleteState = Pending;
+            ObsoleteTag = '27.0';
+#endif
+        }
+#endif
         field(40; Quantity; Decimal)
         {
             Caption = 'Quantity';
@@ -740,14 +755,14 @@ table 5406 "Prod. Order Line"
         }
         field(5831; "Cost Amount (ACY)"; Decimal)
         {
-            AutoFormatExpression = GetCurrencyCode();
+            AutoFormatExpression = GetAdditionalReportingCurrencyCode();
             AutoFormatType = 1;
             Caption = 'Cost Amount (ACY)';
             Editable = false;
         }
         field(5832; "Unit Cost (ACY)"; Decimal)
         {
-            AutoFormatExpression = GetCurrencyCode();
+            AutoFormatExpression = GetAdditionalReportingCurrencyCode();
             AutoFormatType = 1;
             Caption = 'Unit Cost (ACY)';
             Editable = false;
@@ -799,7 +814,7 @@ table 5406 "Prod. Order Line"
         }
         field(66; "Put-away Status"; Option)
         {
-            Caption = 'Status';
+            Caption = 'Put-away Status';
             Editable = false;
             OptionCaption = ' ,Partially Put Away,Completely Put Away';
             OptionMembers = " ","Partially Put Away","Completely Put Away";
@@ -1067,7 +1082,7 @@ table 5406 "Prod. Order Line"
         ProdOrderLine.SetRange("Routing No.", "Routing No.");
         ProdOrderLine.SetFilter("Line No.", '<>%1', "Line No.");
         ProdOrderLine.SetRange("Routing Reference No.", "Routing Reference No.");
-        if not ProdOrderLine.FindFirst() then begin
+        if ProdOrderLine.IsEmpty() then begin
             ProdOrderRoutingLine.SetRange(Status, Status);
             ProdOrderRoutingLine.SetRange("Prod. Order No.", "Prod. Order No.");
             ProdOrderRoutingLine.SetRange("Routing Reference No.", "Routing Reference No.");
@@ -1108,6 +1123,8 @@ table 5406 "Prod. Order Line"
         end;
 
         WhseOutputProdRelease.DeleteLine(Rec);
+
+        OnAfterDeleteRelations(Rec);
     end;
 
     procedure ShowOrderTracking()
@@ -1149,11 +1166,11 @@ table 5406 "Prod. Order Line"
 
     procedure CheckEndingDate(ShowWarning: Boolean)
     var
-        CheckDateConflict: Codeunit "Reservation-Check Date Confl.";
+        MfgReserveCheckDateConfl: Codeunit "Mfg. ReservCheckDateConfl";
     begin
         OnBeforeCheckEndingDate(Rec, ShowWarning);
         if not Blocked then begin
-            CheckDateConflict.ProdOrderLineCheck(Rec, ShowWarning);
+            MfgReserveCheckDateConfl.ProdOrderLineCheck(Rec, ShowWarning);
             ProdOrderLineReserve.AssignForPlanning(Rec);
         end;
 
@@ -1337,7 +1354,7 @@ table 5406 "Prod. Order Line"
         GLSetupRead := true;
     end;
 
-    local procedure GetCurrencyCode(): Code[10]
+    local procedure GetAdditionalReportingCurrencyCode(): Code[10]
     begin
         if not GLSetupRead then begin
             GLSetup.Get();
@@ -1650,7 +1667,10 @@ table 5406 "Prod. Order Line"
         then
             exit;
 
-        CalcProdOrder.FindAndSetProdOrderLineBinCodeFromProdRoutingLines(Status, "Prod. Order No.", "Line No.");
+        IsHandled := false;
+        OnShowRoutingOnBeforeFindAndSetProdOrderLineBinCodeFromProdRoutingLines(Rec, IsHandled);
+        if not IsHandled then
+            CalcProdOrder.FindAndSetProdOrderLineBinCodeFromProdRoutingLines(Status, "Prod. Order No.", "Line No.");
     end;
 
     procedure SetFilterByReleasedOrderNo(OrderNo: Code[20])
@@ -1988,5 +2008,14 @@ table 5406 "Prod. Order Line"
     local procedure OnValidateVariantCodeOnAfterVerifyChange(var ProdOrderLine: Record "Prod. Order Line"; xProdOrderLine: Record "Prod. Order Line"; CurrFieldNo: Integer)
     begin
     end;
-}
 
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterDeleteRelations(var ProdOrderLine: Record "Prod. Order Line")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnShowRoutingOnBeforeFindAndSetProdOrderLineBinCodeFromProdRoutingLines(var ProdOrderLine: Record "Prod. Order Line"; var IsHandled: Boolean)
+    begin
+    end;
+}

@@ -1,3 +1,8 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+
 namespace Microsoft.Integration.Shopify;
 
 codeunit 30280 "Shpfy Bulk UpdateProductImage" implements "Shpfy IBulk Operation"
@@ -25,5 +30,27 @@ codeunit 30280 "Shpfy Bulk UpdateProductImage" implements "Shpfy IBulk Operation
     procedure GetType(): Text
     begin
         exit('mutation');
+    end;
+
+    procedure RevertFailedRequests(var BulkOperation: Record "Shpfy Bulk Operation")
+    begin
+        exit; // No implementation needed for this operation
+    end;
+
+    procedure RevertAllRequests(var BulkOperation: Record "Shpfy Bulk Operation")
+    var
+        Product: Record "Shpfy Product";
+        JRequestData: JsonArray;
+        JRequest: JsonToken;
+        JProduct: JsonObject;
+    begin
+        JRequestData := BulkOperation.GetRequestData();
+        foreach JRequest in JRequestData do begin
+            JProduct := JRequest.AsObject();
+            if Product.Get(JProduct.GetBigInteger('id')) then begin
+                Product."Image Hash" := JProduct.GetInteger('imageHash');
+                Product.Modify();
+            end;
+        end;
     end;
 }

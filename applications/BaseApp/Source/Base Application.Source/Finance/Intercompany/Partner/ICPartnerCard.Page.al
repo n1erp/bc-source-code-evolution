@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Intercompany.Partner;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Intercompany.Partner;
 
 using Microsoft.Finance.Dimension;
 using Microsoft.Intercompany.BankAccount;
@@ -282,7 +286,7 @@ page 609 "IC Partner Card"
     local procedure SetInboxDetailsCaption()
     begin
         EnableInboxDetails :=
-          (Rec."Inbox Type" <> Rec."Inbox Type"::"No IC Transfer") and
+          (Rec."Inbox Type" <> Rec."Inbox Type"::"No IC Transfer") and (Rec."Data Exchange Type" <> Rec."Data Exchange Type"::API) and
           not ((Rec."Inbox Type" = Rec."Inbox Type"::"File Location") and EnvironmentInformation.IsSaaS());
         case Rec."Inbox Type" of
             Rec."Inbox Type"::Database:

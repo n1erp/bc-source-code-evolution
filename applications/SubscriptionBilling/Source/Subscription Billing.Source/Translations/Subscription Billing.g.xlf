@@ -3,6 +3,166 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Subscription Billing">
     <body>
       <group id="body">
+        <trans-unit id="Page 2030015066 - Action 2741324474 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Power BI reports for subscription billing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action PBI Reports - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 2741324474 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Power BI Reports</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action PBI Reports - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 4187246573 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Billing Schedule report provides a forecast of vendor and customer invoiced amounts according to the contractual billing rhythm. It helps to identify future development of incoming and outgoing cash from billed subscriptions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Billing Schedule (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 4187246573 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Billing Schedule (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Billing Schedule (Power BI) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 3846084135 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Churn Analysis report breaks down churn by various dimensions such as contract term, contract type or product.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Churn Analysis (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 3846084135 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Churn Analysis (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Churn Analysis (Power BI) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 2856052287 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Customer Deferrals report provides an overview of deferred vs. released subscription sales amount.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Customer Deferrals (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 2856052287 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Customer Deferrals (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Customer Deferrals (Power BI) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 1504186999 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Revenue Analysis report breaks down Monthly Recurring Revenue by various dimension such as billing rhythm, contract type or customer.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Revenue Analysis (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 1504186999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Revenue Analysis (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Revenue Analysis (Power BI) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 3913108116 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Revenue by Customer report breaks down subscription performance by customer and item, highlighting metrics such as Monthly Recurring Revenue, Monthly Recurring Cost, Monthly Net Profit Amount and Monthly Net Profit %. This report provides detailed insights into which customers and items are driving subscription revenue and profitability.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Revenue by Customer (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 3913108116 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Revenue by Customer (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Revenue by Customer (Power BI) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 2759052531 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Revenue by Item report breaks down subscription performance by item category, highlighting metrics such as Monthly Recurring Revenue, Monthly Recurring Cost, Monthly Net Profit Amount and Monthly Net Profit %. This report provides detailed insights into which categories and items are driving subscription revenue and profitability.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Revenue by Item (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 2759052531 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Revenue by Item (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Revenue by Item (Power BI) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 2857546323 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Revenue by Salesperson report breaks down subscription performance by Salesperson, highlighting metrics such as Monthly Recurring Revenue, Monthly Recurring Cost, Monthly Net Profit Amount and Churn.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Revenue by Salesperson (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 2857546323 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Revenue by Salesperson (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Revenue by Salesperson (Power BI) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 3858226368 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Revenue Development report shows the change in monthly recurring revenue and helps to identify its various sources such as churn, downgrades, new subscriptions or upgrades.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Revenue Development (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 3858226368 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Revenue Development (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Revenue Development (Power BI) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 3336162308 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Revenue YoY report compares Monthly Recurring Revenue performance across a year-over-year period.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Revenue YoY (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 3336162308 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Revenue YoY (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Revenue YoY (Power BI) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 4256378890 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Sales and Cost forecast report provides the forecast of Monthly Recurring Revenue and Monthly Recurring Cost for the future months and years. This report provides detailed insights into which salespersons and customers are driving future subscription performance.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Sales and Cost forecast (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 4256378890 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Sales and Cost forecast (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Sales and Cost forecast (Power BI) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 4206933229 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Subscription Billing Report offers a consolidated view of all subscription report pages, conveniently embedded into a single page for easy access.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Subscription Billing Report (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 4206933229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Subscription Billing Report (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Subscription Billing Report (Power BI) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 3574335983 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Subscription Overview provides a comprehensive view of subscription performance, offering insights into metrics such as Monthly Recurring Revenue, Total Contract Value, Churn and top-performing customers or vendors.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Subscription Overview (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 3574335983 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Subscription Overview (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Subscription Overview (Power BI) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 739632048 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Total Contract Value Analysis report breaks down Total Contract Value by various dimension such as billing rhythm, contract type or customer.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Total Contract Value Analysis (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 739632048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Total Contract Value Analysis (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Total Contract Value Analysis (Power BI) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 1488882403 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Total Contract Value YoY report compares the Total Contract Value and Active Customers across a year-over-year period.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Total Contract Value YoY (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 1488882403 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Total Contract Value YoY (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Total Contract Value YoY (Power BI) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 3499695735 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>The Vendor Deferrals report provides an overview of deferred vs. released subscription cost amount.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Vendor Deferrals (Power BI) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2030015066 - Action 3499695735 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2030015066">
+          <source>Vendor Deferrals (Power BI)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sub. Billing Role Center - Action Vendor Deferrals (Power BI) - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 65360695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Billing Line</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -20,7 +180,7 @@
         </trans-unit>
         <trans-unit id="Table 65360695 - NamedType 163380746" size-unit="char" translate="yes" xml:space="preserve">
           <source>Only last Billing Line for Subscription Line can be deleted or all Billing Lines. Please make your selection accordingly or use the "Clear Billing Proposal" action. (%1)</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Subscription Header No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Billing Line - NamedType OnlyLastServiceLineCanBeDeletedErr</note>
         </trans-unit>
         <trans-unit id="Table 65360695 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -398,6 +558,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Cust. Sub. Contract Deferral - Field Bill-to Customer No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3964310572 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Cust. Sub. Contract Deferral - Field Currency Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3964310572 - Field 4190130733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -673,11 +838,6 @@
           <note from="Developer" annotates="general" priority="2">%1 = Contact number, %2 = Contact name, %3 = Customer number</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Customer Subscription Contract - NamedType ContactRelatedToDifferentCompanyErr</note>
         </trans-unit>
-        <trans-unit id="Table 607896767 - NamedType 947065583" size-unit="char" translate="yes" xml:space="preserve">
-          <source>If you change the currency code, the prices for existing Subscription Lines must be recalculated.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Customer Subscription Contract - NamedType CurrCodeChangePricesMustBeRecalculatedMsg</note>
-        </trans-unit>
         <trans-unit id="Table 607896767 - NamedType 4282587090" size-unit="char" translate="yes" xml:space="preserve">
           <source>The Customer Subscription Contract %1 already exists.</source>
           <note from="Developer" annotates="general" priority="2">%1 = Contract number</note>
@@ -768,6 +928,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Customer Subscription Contract - Method NotifyIfShipToAddressDiffers - NamedType ActionShowServiceObjectsTxt</note>
         </trans-unit>
+        <trans-unit id="Table 607896767 - Method 3281705089 - NamedType 1412109137" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Currency Code for the selected customer is different from the current Currency Code in Customer Contract %1. If the customer is changed the currency and exchange rate needs to be updated.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Contract number</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Customer Subscription Contract - Method ShouldReplaceCurrencyCode - NamedType CurrencyCodeWillBeChangedQst</note>
+        </trans-unit>
         <trans-unit id="Table 607896767 - Field 1090351696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Active</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -852,6 +1017,11 @@
           <source>Contractor Name in collective Invoice</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Customer Subscription Contract - Field Contractor Name in coll. Inv. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 607896767 - Field 1037928742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Contract Deferrals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Customer Subscription Contract - Field Create Contract Deferrals - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 607896767 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Currency Code</source>
@@ -1105,7 +1275,7 @@
         </trans-unit>
         <trans-unit id="Table 893915867 - Field 1358710565 - Method 2126772001 - NamedType 1141256684" size-unit="char" translate="yes" xml:space="preserve">
           <source>The length of the translation must not exceed %1 characters (current length: %2).</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Field Length, %2=Current Length</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Field Translation - Field Translation - Method OnValidate - NamedType TranslationTooLongErr</note>
         </trans-unit>
         <trans-unit id="Table 3456091 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1167,6 +1337,11 @@
           <source>Contract created</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Imported Cust. Sub. Contract - Field Contract created - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 837092773 - Field 1037928742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Contract Deferrals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Imported Cust. Sub. Contract - Field Create Contract Deferrals - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 837092773 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Currency Code</source>
@@ -1423,6 +1598,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Imported Subscription Line - Field Calculation Base Amount (LCY) - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1129940723 - Field 1037928742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Contract Deferrals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Imported Subscription Line - Field Create Contract Deferrals - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1129940723 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Currency Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1613,6 +1793,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Item Subscription Package - NamedType DiscountCannotBeAssignedErr</note>
         </trans-unit>
+        <trans-unit id="Table 2492290192 - NamedType 4225378973" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The %1 %2 can not be used with Item %3, because at least one of the Service Commitment Package lines is missing an %4.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Table Caption, %2 = Code, %3 = Item No., %4 = Invoicing Item No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Item Subscription Package - NamedType EmptyInvoicingItemNoInPackageLineErr</note>
+        </trans-unit>
+        <trans-unit id="Table 2492290192 - Method 1726008176 - NamedType 1069883375" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Table Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Item Subscription Package - Method ErrorIfPackageLineInvoicedViaContractWithoutInvoicingItemExist - NamedType OpenSubscriptionPackageTxt</note>
+        </trans-unit>
         <trans-unit id="Table 2492290192 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1682,6 +1872,11 @@
           <source>Billing Rhythm</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Overdue Subscription Line - Field Billing Rhythm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4218218065 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Overdue Subscription Line - Field Currency Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4218218065 - Field 3310956332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Discount %</source>
@@ -1780,12 +1975,12 @@
         </trans-unit>
         <trans-unit id="Table 1998007779 - NamedType 1606888371" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 cannot be after %2.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Field Caption, %2=Field Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Planned Subscription Line - NamedType DateAfterDateErr</note>
         </trans-unit>
         <trans-unit id="Table 1998007779 - NamedType 723183544" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 cannot be before %2.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Field Caption, %2=Field Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Planned Subscription Line - NamedType DateBeforeDateErr</note>
         </trans-unit>
         <trans-unit id="Table 1998007779 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2113,6 +2308,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Sales Service Commitment Buff. - Field Amount Including VAT - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1048802769 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Service Commitment Buff. - Field Currency Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1048802769 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Entry No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -2197,6 +2397,11 @@
           <source>Calculation Base Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Sales Sub. Line Archive - Field Calculation Base Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 933609418 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Sub. Line Archive - Field Currency Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 933609418 - Field 2725149570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer Price Group</source>
@@ -2398,6 +2603,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Sales Subscription Line - Field Calculation Base Type - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 794543239 - Field 1037928742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Contract Deferrals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Subscription Line - Field Create Contract Deferrals - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 794543239 - Field 2725149570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer Price Group</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -2573,6 +2783,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Sub. Contr. Price Update Line - Field Additional Amount - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3665744518 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sub. Contr. Price Update Line - Field Currency Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3665744518 - Field 3310956332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Discount %</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -2718,6 +2933,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Sub. Contract Renewal Line - Field Billing Rhythm - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2507546340 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sub. Contract Renewal Line - Field Currency Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2507546340 - Field 2852966117 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Error Message</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -2842,6 +3062,11 @@
           <source>Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Sub. Package Line Template - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2542603442 - Field 1037928742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Contract Deferrals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sub. Package Line Template - Field Create Contract Deferrals - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2542603442 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
@@ -3038,6 +3263,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Contract Setup - Field Contract Invoice Description - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2512020738 - Field 1037928742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Contract Deferrals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Contract Setup - Field Create Contract Deferrals - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2512020738 - Field 1911492949 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer Subscription Contract Nos.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -3110,18 +3340,28 @@
         </trans-unit>
         <trans-unit id="Table 2854030003 - NamedType 28698063" size-unit="char" translate="yes" xml:space="preserve">
           <source>You cannot delete %1 %2 because one or more contract are associated with this %1.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = Table, %2 = Table Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Contract Type - NamedType CannotDeleteErr</note>
+        </trans-unit>
+        <trans-unit id="Table 2854030003 - NamedType 3154321202" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The changed default for the creation of contract deferrals only applies to new contracts. For existing contracts the setting must be changed manually, if required. Contract Type = %1 %2</source>
+          <note from="Developer" annotates="general" priority="2">%1= Code, %2 = Description</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Contract Type - NamedType CurrentContractsNotAffectedMsg</note>
         </trans-unit>
         <trans-unit id="Table 2854030003 - NamedType 2653761124" size-unit="char" translate="yes" xml:space="preserve">
           <source>The Customer Subscription Contracts with contract type %1 may be set so that all contract elements are billed on the same key date. If you deselect this checkbox, Subscription Lines that are added will not be automatically harmonized with regard to billing and the information on harmonized billing will be removed from the contracts. Do you want to continue?</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">Code = %1</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Contract Type - NamedType CustomerContractWithContractTypeExistsQst</note>
         </trans-unit>
         <trans-unit id="Table 2854030003 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Contract Type - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2854030003 - Field 1037928742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Contract Deferrals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Contract Type - Field Create Contract Deferrals - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2854030003 - Field 4134983061 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Default Without Contract Deferrals</source>
@@ -3260,7 +3500,7 @@
         </trans-unit>
         <trans-unit id="Table 615625496 - NamedType 3280915453" size-unit="char" translate="yes" xml:space="preserve">
           <source>Serial No.: %1</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = Serial No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Header - NamedType SerialNoLbl</note>
         </trans-unit>
         <trans-unit id="Table 615625496 - NamedType 611461059" size-unit="char" translate="yes" xml:space="preserve">
@@ -3283,9 +3523,14 @@
           <note from="Developer" annotates="general" priority="2">%1: FieldCaption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Header - Method GetRecalculateLinesDialog - NamedType RecalculateLinesQst</note>
         </trans-unit>
+        <trans-unit id="Table 615625496 - Method 949626500 - NamedType 305994583" size-unit="char" translate="yes" xml:space="preserve">
+          <source>If you change %1, only the Amount for existing service commitments will be recalculated.\\Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">%1= Changed Field Name.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Header - Method GetRecalculateLinesDialog - NamedType RecalculateLinesFromQuantityQst</note>
+        </trans-unit>
         <trans-unit id="Table 615625496 - Method 949626500 - NamedType 300724216" size-unit="char" translate="yes" xml:space="preserve">
           <source>The %1 has been changed.\\Do you want to update the price and description?</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1= Changed Field Name.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Header - Method GetRecalculateLinesDialog - NamedType RecalculateLinesFromVariantCodeQst</note>
         </trans-unit>
         <trans-unit id="Table 615625496 - Field 3761260158 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -3575,12 +3820,12 @@
         </trans-unit>
         <trans-unit id="Table 3078347359 - NamedType 1675467678" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 cannot be greater than %2.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = Amount; %2 = Max Service Amount</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Line - NamedType CannotBeGreaterThanErr</note>
         </trans-unit>
         <trans-unit id="Table 3078347359 - NamedType 1578265203" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 cannot be less than %2.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = Amount; %2 = 0</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Line - NamedType CannotBeLessThanErr</note>
         </trans-unit>
         <trans-unit id="Table 3078347359 - NamedType 1765016628" size-unit="char" translate="yes" xml:space="preserve">
@@ -3590,8 +3835,13 @@
         </trans-unit>
         <trans-unit id="Table 3078347359 - NamedType 723183544" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 cannot be before %2.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = Next Billing Date; %2 = Subscription Line Start Date</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Line - NamedType DateBeforeDateErr</note>
+        </trans-unit>
+        <trans-unit id="Table 3078347359 - NamedType 2713723462" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The creation of contract deferrals cannot be changed as there are still unreleased deferrals for this contract line.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Line - NamedType DeferralsExistErr</note>
         </trans-unit>
         <trans-unit id="Table 3078347359 - NamedType 3524332899" size-unit="char" translate="yes" xml:space="preserve">
           <source>The selected Subscription Lines must be converted into different currencies. Please select only Subscription Lines with the same currency.</source>
@@ -3682,6 +3932,11 @@
           <source>Closed</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Line - Field Closed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3078347359 - Field 1037928742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Contract Deferrals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Line - Field Create Contract Deferrals - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3078347359 - Field 1748434477 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Created in Contract line</source>
@@ -4272,6 +4527,11 @@
           <source>Calculation Base Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Package Line - Field Calculation Base Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 767188337 - Field 1037928742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Contract Deferrals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Subscription Package Line - Field Create Contract Deferrals - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 767188337 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
@@ -4870,7 +5130,7 @@
         </trans-unit>
         <trans-unit id="Table 1183576035 - NamedType 1773246555" size-unit="char" translate="yes" xml:space="preserve">
           <source>Do you want to update %1 in %2?</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = Customer No., %2 = Table Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Usage Data Supp. Customer - NamedType UpdateUsageDataSubscriptionQst</note>
         </trans-unit>
         <trans-unit id="Table 1183576035 - Field 93878600 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -4959,7 +5219,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Usage Data Supp. Subscription - Field Billing Cycle - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 15641434 - Field 2986514419 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Connect to Subscription at Date</source>
+          <source>Connect to Subscription to Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Usage Data Supp. Subscription - Field Connect to Sub. Header at Date - Property Caption</note>
         </trans-unit>
@@ -5157,6 +5417,11 @@
           <source>Amount</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Vend. Sub. Contract Deferral - Field Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1403672500 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Vend. Sub. Contract Deferral - Field Currency Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1403672500 - Field 487876058 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Deferral Base Amount</source>
@@ -5415,23 +5680,18 @@
         </trans-unit>
         <trans-unit id="Table 101571207 - NamedType 2776500120" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contact %1 %2 is not related to a vendor.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Contact No., %2=Contact Name</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Vendor Subscription Contract - NamedType ContactIsNotRelatedToAnyVendorErr</note>
         </trans-unit>
         <trans-unit id="Table 101571207 - NamedType 71960348" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contact %1 %2 is not related to vendor %3.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Contact No., %2=Contact Name, %3=Vendor No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Vendor Subscription Contract - NamedType ContactNotRelatedToVendorErr</note>
         </trans-unit>
         <trans-unit id="Table 101571207 - NamedType 3044981445" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contact %1 %2 is related to a different company than vendor %3.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Contact No., %2=Contact Name, %3=Vendor No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Vendor Subscription Contract - NamedType ContactRelatedToDifferentCompanyErr</note>
-        </trans-unit>
-        <trans-unit id="Table 101571207 - NamedType 947065583" size-unit="char" translate="yes" xml:space="preserve">
-          <source>If you change the currency code, the prices for existing Subscription Lines must be recalculated.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Vendor Subscription Contract - NamedType CurrCodeChangePricesMustBeRecalculatedMsg</note>
         </trans-unit>
         <trans-unit id="Table 101571207 - NamedType 3826440826" size-unit="char" translate="yes" xml:space="preserve">
           <source>Don't show again</source>
@@ -5475,12 +5735,12 @@
         </trans-unit>
         <trans-unit id="Table 101571207 - NamedType 430254759" size-unit="char" translate="yes" xml:space="preserve">
           <source>You cannot rename a %1.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = Table Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Vendor Subscription Contract - NamedType RenameErr</note>
         </trans-unit>
         <trans-unit id="Table 101571207 - NamedType 1605192676" size-unit="char" translate="yes" xml:space="preserve">
           <source>The dimensions in %1 deferrals have been updated.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = Count of updated deferrals</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Vendor Subscription Contract - NamedType UpdatedDeferralsMsg</note>
         </trans-unit>
         <trans-unit id="Table 101571207 - NamedType 3158793340" size-unit="char" translate="yes" xml:space="preserve">
@@ -5562,6 +5822,11 @@
           <source>Contract Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Vendor Subscription Contract - Field Contract Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 101571207 - Field 1037928742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Contract Deferrals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Vendor Subscription Contract - Field Create Contract Deferrals - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 101571207 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Currency Code</source>
@@ -5695,12 +5960,12 @@
         </trans-unit>
         <trans-unit id="Codeunit 3296298855 - NamedType 2865856672" size-unit="char" translate="yes" xml:space="preserve">
           <source>The Subscription Line has already been invoiced until %1. In order to cancel the invoice, please cancel the newer invoices first.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Next Billing Date</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Billing Correction - NamedType NewerInvoiceExistErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 3296298855 - NamedType 4000427676" size-unit="char" translate="yes" xml:space="preserve">
           <source>The %1 %2 already exists for the Subscription Line. Please post or delete this %1 first.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Document Type, %2=Document No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Billing Correction - NamedType RelatedDocumentLineExistErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 3216999521 - NamedType 3819435562" size-unit="char" translate="yes" xml:space="preserve">
@@ -5730,7 +5995,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 3216999521 - NamedType 770603074" size-unit="char" translate="yes" xml:space="preserve">
           <source>A change of Billing to field from %1 to %2 for %3 and %4 is not allowed because the Subscription Line has already been calculated up to %5.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1: Old Billing To Date, %2: New Billing To Date, %3: Subscription Contract No., %4: Subscription Contract Line No., %5: Last Billing To Date</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Billing Proposal - NamedType BillingToChangeNotAllowedErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 3216999521 - NamedType 3940501287" size-unit="char" translate="yes" xml:space="preserve">
@@ -5780,7 +6045,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 239228301 - NamedType 1558925349" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contract No. %1</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Contract No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Billing Documents - NamedType ContractNoTxt</note>
         </trans-unit>
         <trans-unit id="Codeunit 239228301 - NamedType 3942070152" size-unit="char" translate="yes" xml:space="preserve">
@@ -5795,12 +6060,12 @@
         </trans-unit>
         <trans-unit id="Codeunit 239228301 - NamedType 302907289" size-unit="char" translate="yes" xml:space="preserve">
           <source>Creation of documents completed.\\%1 document(s) for %2 contract(s) were created and posted.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Number of documents, %2=Number of contracts</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Billing Documents - NamedType DocumentsCreatedAndPostedMsg</note>
         </trans-unit>
         <trans-unit id="Codeunit 239228301 - NamedType 3630995263" size-unit="char" translate="yes" xml:space="preserve">
           <source>Creation of documents completed.\\%1 document(s) for %2 contract(s) were created.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Number of documents, %2=Number of contracts</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Billing Documents - NamedType DocumentsCreatedMsg</note>
         </trans-unit>
         <trans-unit id="Codeunit 239228301 - NamedType 961969790" size-unit="char" translate="yes" xml:space="preserve">
@@ -5820,7 +6085,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 239228301 - NamedType 2379887463" size-unit="char" translate="yes" xml:space="preserve">
           <source>Creating documents...\Partner No. #1#################################\Contract No. #2#################################</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Partner No., %2=Contract No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Billing Documents - NamedType ProgressTxt</note>
         </trans-unit>
         <trans-unit id="Codeunit 239228301 - NamedType 1794465335" size-unit="char" translate="yes" xml:space="preserve">
@@ -5830,12 +6095,12 @@
         </trans-unit>
         <trans-unit id="Codeunit 239228301 - NamedType 1007700802" size-unit="char" translate="yes" xml:space="preserve">
           <source>Subscription period: %1 to %2</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Recurring Billing from, %2=Recurring Billing to</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Billing Documents - NamedType ServicePeriodDescriptionTxt</note>
         </trans-unit>
         <trans-unit id="Codeunit 239228301 - NamedType 3198432484" size-unit="char" translate="yes" xml:space="preserve">
           <source>The total amount of an invoice cannot be less than 0. Please check the contract %1.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Contract No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Billing Documents - NamedType TotalInvoiceAmountIsLessThanZeroErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 239228301 - NamedType 2147192615" size-unit="char" translate="yes" xml:space="preserve">
@@ -5860,12 +6125,12 @@
         </trans-unit>
         <trans-unit id="Codeunit 239228301 - Method 4110781728 - NamedType 1079304508" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reference No.: %1</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = Customer Reference</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Billing Documents - Method GetAdditionalLineText - NamedType ReferenceNoLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 239228301 - Method 4110781728 - NamedType 2275732742" size-unit="char" translate="yes" xml:space="preserve">
           <source>Error getting a Line Description: Option %1 (Field %2 in %3) is not handled.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = Contract Invoice Text Type, %2 = Field Caption, %3 = Table Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Billing Documents - Method GetAdditionalLineText - NamedType SetupOptionNotHandledErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 1866007702 - NamedType 3651953637" size-unit="char" translate="yes" xml:space="preserve">
@@ -5880,7 +6145,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 963234558 - Method 968556520 - NamedType 3909705948" size-unit="char" translate="yes" xml:space="preserve">
           <source>A Sales Quote already exists for %1 %2, %3 %4.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Table Caption, %2=Subscription Header No., %3=Field Caption, %4=Entry No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sub. Contract Renewal - Method CheckContractRenewalLine - NamedType ContractRenewalLineIsInSalesQuoteErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 963234558 - Method 198288977 - NamedType 3622789728" size-unit="char" translate="yes" xml:space="preserve">
@@ -5890,12 +6155,12 @@
         </trans-unit>
         <trans-unit id="Codeunit 963234558 - Method 198288977 - NamedType 1558925349" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contract No. %1</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Contract No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sub. Contract Renewal - Method CreateDescriptionLines - NamedType ContractNoTxt</note>
         </trans-unit>
         <trans-unit id="Codeunit 963234558 - Method 3017795259 - NamedType 10744700" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 to %2</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Start Date, %2=End Date</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sub. Contract Renewal - Method InsertTermInfoLine - NamedType TermDurationTxt</note>
         </trans-unit>
         <trans-unit id="Codeunit 963234558 - Method 2415148647 - NamedType 3083451624" size-unit="char" translate="yes" xml:space="preserve">
@@ -5905,12 +6170,12 @@
         </trans-unit>
         <trans-unit id="Codeunit 963234558 - Method 2415148647 - NamedType 3053587524" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 %2 has been created.\\Do you want to open the document?</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Document Type, %2=No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sub. Contract Renewal - Method OpenSalesQuotes - NamedType OpenSingleQst</note>
         </trans-unit>
         <trans-unit id="Codeunit 963234558 - Method 2415148647 - NamedType 2031891782" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 Sales Quotes have been created. Do you want to open a list of the documents?</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Count of Sales Quotes</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Sub. Contract Renewal - Method OpenSalesQuotes - NamedType OpenMultipleQst</note>
         </trans-unit>
         <trans-unit id="Codeunit 2178362548 - NamedType 1061143494" size-unit="char" translate="yes" xml:space="preserve">
@@ -5935,7 +6200,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 3528376742 - NamedType 1760702173" size-unit="char" translate="yes" xml:space="preserve">
           <source>Usage Data Billing for Import %1 already exist. Do you want to try to create new entries for the failed Usage Data Generic Import only?</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Usage Data Import Entry No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Usage Data Billing - NamedType RetryFailedUsageDataImportTxt</note>
         </trans-unit>
         <trans-unit id="Codeunit 2264750875 - NamedType 4033532371" size-unit="char" translate="yes" xml:space="preserve">
@@ -5955,12 +6220,12 @@
         </trans-unit>
         <trans-unit id="Codeunit 1535292707 - NamedType 519972416" size-unit="char" translate="yes" xml:space="preserve">
           <source>The %1 must be filled out. Please enter a date.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Field Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Date Formula Management - NamedType DateEmptyErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 1535292707 - NamedType 577433510" size-unit="char" translate="yes" xml:space="preserve">
           <source>The %1 must be filled out. Please enter a date formula.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Field Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Date Formula Management - NamedType DateFormulaEmptyErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 1535292707 - NamedType 3738642344" size-unit="char" translate="yes" xml:space="preserve">
@@ -5975,7 +6240,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 1535292707 - NamedType 407376554" size-unit="char" translate="yes" xml:space="preserve">
           <source>The ratio of '%1' and '%2' or vice versa must give a natural number.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Field Caption, %2=Field Caption</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Date Formula Management - NamedType NaturalNumberRatioErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 526183614 - NamedType 3625149050" size-unit="char" translate="yes" xml:space="preserve">
@@ -6095,7 +6360,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 1535460191 - NamedType 96554027" size-unit="char" translate="yes" xml:space="preserve">
           <source>No contract (for Subscription %1) found for processing step %2.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Subscription Header No., %2=Processing Step</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Process Usage Data Billing - NamedType NoContractFoundInUsageDataBillingErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 1535460191 - NamedType 2700801235" size-unit="char" translate="yes" xml:space="preserve">
@@ -6104,12 +6369,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Process Usage Data Billing - NamedType UsageBasedPricingOptionNotImplementedErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 656759664 - NamedType 3723661600" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Recurring Subscriptions*</source>
+          <source>Subscriptions*</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Report Printout Mgmt. - NamedType RecurringServicesPerLineLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 656759664 - NamedType 2822972561" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Recurring Subscriptions (* Part of Recurring Billing)</source>
+          <source>Subscriptions (* Part of Subscription Billing)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Report Printout Mgmt. - NamedType RecurringServicesTotalLbl</note>
         </trans-unit>
@@ -6130,7 +6395,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 656759664 - Method 3978340907 - NamedType 1048788515" size-unit="char" translate="yes" xml:space="preserve">
           <source>Table %1 %2 has not been defined for processing.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = Table ID, %2 = Table Name</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Report Printout Mgmt. - Method IsServiceCommitmentItem - NamedType SourceRecordNotDefinedForProcessingErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 2980985892 - NamedType 459053536" size-unit="char" translate="yes" xml:space="preserve">
@@ -6145,7 +6410,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 2980985892 - Method 4240192538 - NamedType 100372492" size-unit="char" translate="yes" xml:space="preserve">
           <source>The %1 of %2 %3 has not been transferred to the Sales Subscription Line(s). The %1 is only transferred to Sales Subscription Line, if %4 is set to %5.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1= Discount %, %2= Sales Line Type, %3= Sales Line No., %4= Calculation Base Type, %5= Document Price And Discount</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Subscription Line Mgmt. - Method NotifyIfDiscountIsNotTransferredFromSalesLine - NamedType DiscountNotTransferredTxt</note>
         </trans-unit>
         <trans-unit id="Codeunit 2980985892 - Method 4240192538 - NamedType 3826440826" size-unit="char" translate="yes" xml:space="preserve">
@@ -6190,7 +6455,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 1757145474 - Method 663170196 - NamedType 1214884531" size-unit="char" translate="yes" xml:space="preserve">
           <source>Existing Contract Renewal Lines for Contract %1 will be dropped.\Do you want to continue?</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = Contract No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sub. Contract Renewal Mgt. - Method DropContractRenewalLines - NamedType DropExistingLinesQst</note>
         </trans-unit>
         <trans-unit id="Codeunit 1757145474 - Method 1977811028 - NamedType 204779529" maxwidth="128" size-unit="char" translate="yes" xml:space="preserve">
@@ -6208,10 +6473,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sub. Contract Renewal Mgt. - Method NotifyIfLinesNotShown - NamedType NotAllLinesShownMsg</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1757145474 - Method 1570804555 - NamedType 3826440826" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1757145474 - Method 1570804555 - NamedType 41968419" size-unit="char" translate="yes" xml:space="preserve">
           <source>Don't show again</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sub. Contract Renewal Mgt. - Method NotifyIfLinesNotShown - NamedType DontShowAgainActionLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sub. Contract Renewal Mgt. - Method NotifyIfLinesNotShown - NamedType DoNotShowAgainActionLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3759831271 - Method 4015079420 - NamedType 837451028" size-unit="char" translate="yes" xml:space="preserve">
           <source>You cannot delete %1 %2 because there is at least one outstanding Contract for this customer.</source>
@@ -6235,7 +6500,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 1545608359 - NamedType 2845557940" size-unit="char" translate="yes" xml:space="preserve">
           <source>The value "%1" can only be set if either "%2" or "%3" is selected in the field "%4".</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Item Type, %2=Sales without Service Commitment, %3=Sales with Service Commitment, %4=Subscription Option</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sub. Contracts Item Management - NamedType NonInventoryTypeErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 1545608359 - NamedType 2823851010" size-unit="char" translate="yes" xml:space="preserve">
@@ -6295,7 +6560,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 918316910 - NamedType 3950098385" size-unit="char" translate="yes" xml:space="preserve">
           <source>#1###################################### \Progress @2@@@@@@@@@@@@@@@@@@</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = Progress, %2 = Table Name</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Usage Based Billing Mgmt. - NamedType ProgressLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 918316910 - NamedType 3331880969" size-unit="char" translate="yes" xml:space="preserve">
@@ -6310,7 +6575,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 2039096620 - NamedType 631911892" size-unit="char" translate="yes" xml:space="preserve">
           <source>Conversion of option %1 to %2 is not possible.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Source Option, %2=Target Option</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Usage Based Doc. Type Conv. - NamedType ConversionNotAllowedErr</note>
         </trans-unit>
         <trans-unit id="Page 2226129596 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -6364,17 +6629,17 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Archived Billing Lines - Control Discount % - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2226129596 - Control 2480638018 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the document line number of the document, it was posted in.</source>
+          <source>Specifies the document line number of the document, it was posted in.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Archived Billing Lines - Control Document Line No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2226129596 - Control 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the document number of the document created for posting.</source>
+          <source>Specifies the document number of the document created for posting.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Archived Billing Lines - Control Document No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2226129596 - Control 2363328873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the document type of the document created for posting.</source>
+          <source>Specifies the document type of the document created for posting.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Archived Billing Lines - Control Document Type - Property ToolTip</note>
         </trans-unit>
@@ -6439,7 +6704,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Archived Billing Lines - Control Unit Price - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2226129596 - Control 2708250016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the user who created the line.</source>
+          <source>Specifies the user who created the line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Archived Billing Lines - Control User ID - Property ToolTip</note>
         </trans-unit>
@@ -6504,17 +6769,17 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Archived Billing Lines List - Control Discount % - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3388100174 - Control 2480638018 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the document line number of the document, it was posted in.</source>
+          <source>Specifies the document line number of the document, it was posted in.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Archived Billing Lines List - Control Document Line No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3388100174 - Control 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the document number of the document created for posting.</source>
+          <source>Specifies the document number of the document created for posting.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Archived Billing Lines List - Control Document No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3388100174 - Control 2363328873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the document type of the document created for posting.</source>
+          <source>Specifies the document type of the document created for posting.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Archived Billing Lines List - Control Document Type - Property ToolTip</note>
         </trans-unit>
@@ -6604,7 +6869,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Archived Billing Lines List - Control Unit Price - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3388100174 - Control 2708250016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the user who created the line.</source>
+          <source>Specifies the user who created the line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Archived Billing Lines List - Control User ID - Property ToolTip</note>
         </trans-unit>
@@ -6667,6 +6932,11 @@
           <source>Assign Subscription Lines</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Assign Service Commitments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1983185816 - Method 3554514845 - NamedType 4225378973" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The %1 %2 can not be used with Item %3, because at least one of the Service Commitment Package lines is missing an "Invoicing Item No."</source>
+          <note from="Developer" annotates="general" priority="2">%1=Table Caption, %2=Code, %3=Item No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Assign Service Commitments - Method ErrorIfInvoicingItemNoIsMissingForSalesWithServiceCommitmentItem - NamedType EmptyInvoicingItemNoInPackageLineErr</note>
         </trans-unit>
         <trans-unit id="Page 1983185816 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
@@ -6819,17 +7089,17 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines - Control Discount % - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2874599362 - Control 2480638018 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the document line number of the document created for posting.</source>
+          <source>Specifies the document line number of the document created for posting.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines - Control Document Line No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2874599362 - Control 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the document number of the document created for posting.</source>
+          <source>Specifies the document number of the document created for posting.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines - Control Document No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2874599362 - Control 2363328873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the document type of the document created for posting.</source>
+          <source>Specifies the document type of the document created for posting.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines - Control Document Type - Property ToolTip</note>
         </trans-unit>
@@ -6899,7 +7169,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines - Control Update Required - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2874599362 - Control 2708250016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the user who created the line.</source>
+          <source>Specifies the user who created the line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines - Control User ID - Property ToolTip</note>
         </trans-unit>
@@ -6974,17 +7244,17 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines List - Control Discount % - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3410184032 - Control 2480638018 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the document line number of the document created for posting.</source>
+          <source>Specifies the document line number of the document created for posting.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines List - Control Document Line No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3410184032 - Control 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the document number of the document created for posting.</source>
+          <source>Specifies the document number of the document created for posting.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines List - Control Document No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3410184032 - Control 2363328873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the document type of the document created for posting.</source>
+          <source>Specifies the document type of the document created for posting.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines List - Control Document Type - Property ToolTip</note>
         </trans-unit>
@@ -7084,7 +7354,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines List - Control Update Required - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3410184032 - Control 2708250016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the user who created the line.</source>
+          <source>Specifies the user who created the line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines List - Control User ID - Property ToolTip</note>
         </trans-unit>
@@ -7154,7 +7424,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Templates - Control Group by - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1929828852 - Control 2801346406 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows if the filters of the template are defined.</source>
+          <source>Specifies if the filters of the template are defined.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Templates - Control HasContractFilterField - Property ToolTip</note>
         </trans-unit>
@@ -7169,7 +7439,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Templates - Control My Suggestions Only - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1929828852 - Control 186081026 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Determines whether the template applies to customer or Vendor Subscription Contracts.</source>
+          <source>Specifies whether the template applies to customer or Vendor Subscription Contracts.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Templates - Control Partner - Property ToolTip</note>
         </trans-unit>
@@ -7209,7 +7479,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Change Date - NamedType NoDateErr</note>
         </trans-unit>
         <trans-unit id="Page 3970350934 - Control 3192175264 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Enter the new Date.</source>
+          <source>Specifies the new Date.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Change Date - Control Date - Property ToolTip</note>
         </trans-unit>
@@ -7282,6 +7552,11 @@
           <source>Specifies the contract line type.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Closed Cust. Cont. Line Subp. - Control Contract Line Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1642888827 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether this Subscription Line should generate contract deferrals. If it is set to No, no deferrals are generated and the invoices are posted directly to profit or loss.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Closed Cust. Cont. Line Subp. - Control Create Contract Deferrals - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1642888827 - Control 4198939294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the currency of amounts in the Subscription Line.</source>
@@ -7399,7 +7674,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Closed Cust. Cont. Line Subp. - Control Package Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1642888827 - Control 2377237336 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The Period Calculation controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
+          <source>Specifies the Period Calculation, which controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Closed Cust. Cont. Line Subp. - Control Period Calculation - Property ToolTip</note>
         </trans-unit>
@@ -7603,6 +7878,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Closed Vend. Cont. Line Subp. - Control Contract Line Type - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 3740541235 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether this Subscription Line should generate contract deferrals. If it is set to No, no deferrals are generated and the invoices are posted directly to profit or loss.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Closed Vend. Cont. Line Subp. - Control Create Contract Deferrals - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3740541235 - Control 4198939294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the currency of amounts in the Subscription Line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -7719,7 +7999,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Closed Vend. Cont. Line Subp. - Control Package Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3740541235 - Control 2377237336 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The Period Calculation controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
+          <source>Specifies the Period Calculation, which controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Closed Vend. Cont. Line Subp. - Control Period Calculation - Property ToolTip</note>
         </trans-unit>
@@ -7864,7 +8144,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Connect Subscription To SO - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3603223246 - NamedType 1917623542" size-unit="char" translate="yes" xml:space="preserve">
-          <source>If you continue, the selected Subscriptions will be connected to their respective Subscription by either creating new Subscription Line or by updating existing Subscription Line.\\Do you want to continue?</source>
+          <source>If you continue, the selected Supplier Subscriptions will be connected to their respective Subscription by either creating new a Subscription Line or by updating the existing Subscription Line.\\\\Do you want to continue?</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Connect Subscription To SO - NamedType ProceedConnectingServiceObjectToSubscriptionQst</note>
         </trans-unit>
@@ -7879,7 +8159,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Connect Subscription To SO - Control Billing Cycle - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3603223246 - Control 2105646390 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Subscription to which the subscription should be connected.</source>
+          <source>Specifies the Subscription to which the Supplier Subscription should be connected.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Connect Subscription To SO - Control Connect to Service Object No. - Property ToolTip</note>
         </trans-unit>
@@ -7994,7 +8274,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Connect Subscription To SO - Control Unit Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3603223246 - Action 1133324922 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Connects the selected subscriptions to the selected Subscriptions as specified.</source>
+          <source>Connects the Supplier Subscriptions to the selected Subscriptions as specified.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Connect Subscription To SO - Action Connect Subscriptions to Service Objects - Property ToolTip</note>
         </trans-unit>
@@ -8254,7 +8534,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Renewal - Control ContractDescriptionField - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2997449368 - Control 2852966117 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the last error that occured when processing the line.</source>
+          <source>Specifies the last error that occured when processing the line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Renewal - Control Error Message - Property ToolTip</note>
         </trans-unit>
@@ -8264,7 +8544,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Renewal - Control Linked to Contract No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2997449368 - Control 186081026 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Determines whether the template applies to customer or Vendor Subscription Contracts.</source>
+          <source>Specifies whether the template applies to customer or Vendor Subscription Contracts.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Renewal - Control Partner - Property ToolTip</note>
         </trans-unit>
@@ -8315,7 +8595,7 @@
         </trans-unit>
         <trans-unit id="Page 2997449368 - Action 475219876 - Method 1377591017 - NamedType 895773054" size-unit="char" translate="yes" xml:space="preserve">
           <source>All Lines (%1),Selected Lines (%2)</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=All Lines Count, %2=Selected Lines Count</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Renewal - Action CreateContractRenewal - Method OnAction - NamedType SelectionLbl</note>
         </trans-unit>
         <trans-unit id="Page 2997449368 - Action 2545318555 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -8425,27 +8705,27 @@
         </trans-unit>
         <trans-unit id="Page 4220168832 - Method 2451180830 - NamedType 3844397812" size-unit="char" translate="yes" xml:space="preserve">
           <source>A Sales document already exists for %1 %2, %3 %4.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Table Caption, %2=Subscription Header No., %3=Field Caption, %4=Line No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Renewal Selection - Method CheckContractLine - NamedType ContractRenewalDocumentAlreadyExistsErr</note>
         </trans-unit>
         <trans-unit id="Page 4220168832 - Method 2451180830 - NamedType 2789670011" size-unit="char" translate="yes" xml:space="preserve">
           <source>A Contract Renewal Line already exists for %1 %2, %3 %4.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Table Caption, %2=Subscription Header No., %3=Field Caption, %4=Line No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Renewal Selection - Method CheckContractLine - NamedType ContractRenewalLineAlreadyExistsErr</note>
         </trans-unit>
         <trans-unit id="Page 4220168832 - Method 2720537141 - NamedType 2491588100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Add Vendor Subscription Contract Lines (%1)</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Number of Vendor Subscription Contract Lines</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Renewal Selection - Method GetAddVendorServicesCaption - NamedType AddVendorContractLinesLbl</note>
         </trans-unit>
         <trans-unit id="Page 4220168832 - Method 4177352842 - NamedType 539847537" size-unit="char" translate="yes" xml:space="preserve">
           <source>At least one check failed. Do you want to close the page and abort the process?\\The following error was found:\%1</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Error Text</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Renewal Selection - Method OnQueryClosePage - NamedType DataIncompleteCloseAnywayQst</note>
         </trans-unit>
         <trans-unit id="Page 4220168832 - Method 4177352842 - NamedType 887396971" size-unit="char" translate="yes" xml:space="preserve">
           <source>The following  error occured while processing:\\%1</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Error Text</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Renewal Selection - Method OnQueryClosePage - NamedType ErrorDuringProcessingMsg</note>
         </trans-unit>
         <trans-unit id="Page 4220168832 - Control 3471137671 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -8529,7 +8809,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Renewal Selection - Control Initial Term - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4220168832 - Control 3195396816 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Displays the result of a preliminary check to see if the line is valid for a Contract Renewal.</source>
+          <source>Specifies the result of a preliminary check to see if the line is valid for a Contract Renewal.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Renewal Selection - Control LineCheckTextCtrl - Property ToolTip</note>
         </trans-unit>
@@ -8693,6 +8973,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Types - Control Code - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 4018737939 - Control 263088034 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default value for the associated field in the contract.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Contract Types - Control ContractDeferrals - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 4018737939 - Control 270313499 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the default value for the associated field in the contract.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -8709,7 +8994,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Types - Control HarmonizedBillingCustContracts - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 4018737939 - Control 3226190995 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the number of translations.</source>
+          <source>Specifies the number of translations.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Types - Control NoOfTranslationsCtrl - Property ToolTip</note>
         </trans-unit>
@@ -9057,6 +9342,11 @@
           <source>Specifies the classification of the contract.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract - Control Contract Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1844147434 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether to generate contract deferrals for the contract in general. The field affects only Subscription lines assigned to the contract for which the field "Create Contract Deferrals" is set to Contract-dependent.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract - Control Create Contract Deferrals - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1844147434 - Control 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
@@ -9888,6 +10178,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract Line Subp. - Control Contract Line Type - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 156152318 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether this Subscription Line should generate contract deferrals. If it is set to No, no deferrals are generated and the invoices are posted directly to profit or loss.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract Line Subp. - Control Create Contract Deferrals - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 156152318 - Control 4198939294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the currency of amounts in the Subscription Line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -10003,6 +10298,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract Line Subp. - Control No. - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 156152318 - Control 2418570937 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a date formula for the lead time that a notice must have before the subscription line ends. The rhythm of the update of "Notice possible to" and "Term until" is determined using the extension term. For example, with an extension period of 1M, the notice period is repeatedly postponed by one month.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract Line Subp. - Control Notice Period - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 156152318 - Control 2418570937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Notice Period</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract Line Subp. - Control Notice Period - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 156152318 - Control 4253581577 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the code of the Subscription Package.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -10014,7 +10319,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract Line Subp. - Control Package Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 156152318 - Control 2377237336 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The Period Calculation controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
+          <source>Specifies the Period Calculation, which controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract Line Subp. - Control Period Calculation - Property ToolTip</note>
         </trans-unit>
@@ -10134,7 +10439,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract Line Subp. - Control Service Start Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 156152318 - Control 2758357644 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Displays the primary attribute of the related Subscription.</source>
+          <source>Specifies the primary attribute of the related Subscription.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract Line Subp. - Control ServiceObjectPrimaryAttribute - Property ToolTip</note>
         </trans-unit>
@@ -10434,7 +10739,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract Lines - Control Service Start Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 887240253 - Control 2758357644 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Displays the primary attribute of the related Subscription.</source>
+          <source>Specifies the primary attribute of the related Subscription.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract Lines - Control ServiceObjectPrimaryAttribute - Property ToolTip</note>
         </trans-unit>
@@ -10673,6 +10978,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Exchange Rate Selection - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 809472587 - Method 4177352842 - NamedType 487095235" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Currency Code has been changed. The price and Amount need to be converted using a currency factor.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Exchange Rate Selection - Method OnQueryClosePage - NamedType CurrencyCodeChangePriceMustBeUpdatedErr</note>
+        </trans-unit>
         <trans-unit id="Page 809472587 - Control 3807011934 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Options</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -10715,7 +11025,7 @@
         </trans-unit>
         <trans-unit id="Page 3311001376 - NamedType 3763904174" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 of %2</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = No. of selected service commitment packages, %2 = Total service commitment packages</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Extend Contract - NamedType NoOfSelectedPackagesLbl</note>
         </trans-unit>
         <trans-unit id="Page 3311001376 - NamedType 2287330231" size-unit="char" translate="yes" xml:space="preserve">
@@ -10729,12 +11039,22 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Extend Contract - NamedType ProvisionStartDateEmptyErr</note>
         </trans-unit>
         <trans-unit id="Page 3311001376 - NamedType 2645190956" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The action can only be called for Subscriptions that are not yet linked to a Subscription Line. The Subscription is already connected to Subscription %1. If necessary, detach the Subscription(s) from the Subscription Line(s).</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <source>The action can only be called for Supplier Subscriptions that are not yet linked to a Subscription Line. The Supplier Subscription is already connected to Subscription %1. If necessary, detach the Subscription(s) from the Subscription Line(s).</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Subscription No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Extend Contract - NamedType SubscriptionIsLinkedToServiceCommitmentErr</note>
         </trans-unit>
+        <trans-unit id="Page 3311001376 - Method 805484081 - NamedType 3738398136" size-unit="char" translate="yes" xml:space="preserve">
+          <source>None of the selected Subscription Package are intended for usage-based billing.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Extend Contract - Method ShowNotificationIfNoUBBSubscriptionPackageIsSelected - NamedType NoUBBServiceCommitmentPackFoundMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 3311001376 - Method 2331452764 - NamedType 3738398136" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No standard Subscription Package for usage-based billing is assigned to the item %1.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Item No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Extend Contract - Method ShowNotificationIfStandardSubscriptionPackageDoesNotContainUBBLine - NamedType NoUBBServiceCommitmentPackFoundMsg</note>
+        </trans-unit>
         <trans-unit id="Page 3311001376 - Method 4253644404 - NamedType 4024825929" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This Subscription is already connected to Subscription %1 Subscription Line %2. Contract extension is not possible.</source>
+          <source>This Supplier Subscription is already connected to Subscription %1 Line %2. Contract extension is not possible.</source>
           <note from="Developer" annotates="general" priority="2">%1 = SubscriptionLine."Subscription No.",  %2 = SubscriptionLine."Line No."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Extend Contract - Method ValidateSubscriptionEntryNo - NamedType SubscriptionAlreadyConnectedErr</note>
         </trans-unit>
@@ -10744,7 +11064,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Extend Contract - Control Customer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3311001376 - Control 3178647430 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the Subscription Contract Type of the selected Customer Subscription Contract.</source>
+          <source>Specifies the Subscription Contract Type of the selected Customer Subscription Contract.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Extend Contract - Control Contract Type - Property ToolTip</note>
         </trans-unit>
@@ -11004,7 +11324,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Generic Import Settings Card - Control Additional Processing - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2554371247 - Control 138981485 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Defines whether the associated customers should also be created as usage data when importing the billing data.</source>
+          <source>Specifies whether the associated customers should also be created as usage data when importing the billing data.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Generic Import Settings Card - Control Create Customers - Property ToolTip</note>
         </trans-unit>
@@ -11114,7 +11434,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Service Object Quantity - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2520676567 - Control 2991286571 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source> Specifies the amount to be charged.</source>
+          <source>Specifies the amount to be charged.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Vendor Invoice Amount - Property ToolTip</note>
         </trans-unit>
@@ -11177,6 +11497,11 @@
           <source>Specifies the classification of the contract.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Imported Customer Contracts - Control Contract Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 20514507 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether to generate contract deferrals for the contract in general. The field affects only Subscription lines assigned to the contract for which the field "Create Contract Deferrals" is set to Contract-dependent.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Imported Customer Contracts - Control Create Contract Deferrals - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 20514507 - Control 4198939294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the currency of amounts on the contract invoice.</source>
@@ -11322,6 +11647,11 @@
           <source>Specifies the number of the contract in which Subscription Lines will be created as contract lines. Subscription Lines with Invoicing via = Sales cannot be called into a Contract.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Imported Service Commitments - Control Contract No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2780903683 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether this Subscription Line should generate contract deferrals. If it is set to No, no deferrals are generated and the invoices are posted directly to profit or loss.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Imported Service Commitments - Control Create Contract Deferrals - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2780903683 - Control 4198939294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the currency of amounts in the Subscription Line.</source>
@@ -12009,7 +12339,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Price Update Templates - Control Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2977800337 - Control 112160102 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows if a filters has been defined for the template.</source>
+          <source>Specifies if a filter has been defined for the template.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Price Update Templates - Control Contract Filter - Property ToolTip</note>
         </trans-unit>
@@ -12034,7 +12364,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Price Update Templates - Control InclContrLinesUpToDateFormula - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2977800337 - Control 186081026 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Determines whether the template applies to customer or Vendor Subscription Contracts.</source>
+          <source>Specifies whether the template applies to customer or Vendor Subscription Contracts.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Price Update Templates - Control Partner - Property ToolTip</note>
         </trans-unit>
@@ -12054,7 +12384,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Price Update Templates - Control Price Update Method - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2977800337 - Control 2744589346 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows if a filters has been defined for the template.</source>
+          <source>Specifies if a filter has been defined for the template.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Price Update Templates - Control Service Commitment Filter - Property ToolTip</note>
         </trans-unit>
@@ -12064,7 +12394,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Price Update Templates - Control Service Commitment Filter - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2977800337 - Control 3226821860 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows if a filters has been defined for the template.</source>
+          <source>Specifies if a filter has been defined for the template.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Price Update Templates - Control Service Object Filter - Property ToolTip</note>
         </trans-unit>
@@ -12129,12 +12459,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Recurring Billing - Control Discount % - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3704080430 - Control 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the document number of the document created for posting.</source>
+          <source>Specifies the document number of the document created for posting.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Recurring Billing - Control Document No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3704080430 - Control 2363328873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the document type of the document created for posting.</source>
+          <source>Specifies the document type of the document created for posting.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Recurring Billing - Control Document Type - Property ToolTip</note>
         </trans-unit>
@@ -12204,7 +12534,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Recurring Billing - Control Update Required - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3704080430 - Control 2708250016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the user who created the line.</source>
+          <source>Specifies the user who created the line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Recurring Billing - Control User ID - Property ToolTip</note>
         </trans-unit>
@@ -12513,6 +12843,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments - Control Calculation Base Type - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 1940275159 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether deferrals are created for new Subscription lines.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments - Control Create Contract Deferrals - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 1940275159 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies a description of the package line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -12534,17 +12869,17 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments - Control Discount Amount - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1940275159 - Control 2480638018 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Document Line No.</source>
+          <source>Specifies the Document Line No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments - Control Document Line No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1940275159 - Control 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Document No.</source>
+          <source>Specifies the Document No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments - Control Document No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1940275159 - Control 2363328873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Document Type.</source>
+          <source>Specifies the Document Type.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments - Control Document Type - Property ToolTip</note>
         </trans-unit>
@@ -12599,7 +12934,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments - Control Partner - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1940275159 - Control 2377237336 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The Period Calculation controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
+          <source>Specifies the Period Calculation, which controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments - Control Period Calculation - Property ToolTip</note>
         </trans-unit>
@@ -12688,6 +13023,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments List - Control Calculation Base Type - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 2065999009 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether deferrals are created for new Subscription lines.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments List - Control Create Contract Deferrals - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 2065999009 - Control 2725149570 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the value of the Customer Price Group field.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -12774,7 +13114,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments List - Control Partner - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2065999009 - Control 2377237336 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The Period Calculation controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
+          <source>Specifies the Period Calculation, which controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments List - Control Period Calculation - Property ToolTip</note>
         </trans-unit>
@@ -12994,7 +13334,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Serv. Comm. WO Cust. Contract - Control Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3380153325 - Control 2377237336 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The Period Calculation controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
+          <source>Specifies the Period Calculation, which controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Serv. Comm. WO Cust. Contract - Control Period Calculation - Property ToolTip</note>
         </trans-unit>
@@ -13119,7 +13459,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Serv. Comm. WO Vend. Contract - Control Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1132816197 - Control 2377237336 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The Period Calculation controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
+          <source>Specifies the Period Calculation, which controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Serv. Comm. WO Vend. Contract - Control Period Calculation - Property ToolTip</note>
         </trans-unit>
@@ -13283,6 +13623,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Comm. Package Lines - Control Calculation Base Type - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 454558252 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether deferrals are created for new Subscription lines.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Service Comm. Package Lines - Control Create Contract Deferrals - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 454558252 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies a description of the package line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -13324,7 +13669,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Comm. Package Lines - Control Partner - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 454558252 - Control 2377237336 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The Period Calculation controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
+          <source>Specifies the Period Calculation, which controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Comm. Package Lines - Control Period Calculation - Property ToolTip</note>
         </trans-unit>
@@ -13608,6 +13953,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Commitment Templates - Control Code - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 3855727775 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether deferrals are created for new Subscription Package lines.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Service Commitment Templates - Control Create Contract Deferrals - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3855727775 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies a description of the Subscription Package Line Template.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -13682,6 +14032,11 @@
           <source>Specifies in which contract the Subscription Line will be calculated.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Commitments - Control Contract No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 150765807 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether this Subscription Line should generate contract deferrals. If it is set to No, no deferrals are generated and the invoices are posted directly to profit or loss.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Service Commitments - Control Create Contract Deferrals - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 150765807 - Control 4198939294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the currency of amounts in the Subscription Line.</source>
@@ -13774,7 +14129,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Commitments - Control Partner - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 150765807 - Control 2377237336 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The Period Calculation controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
+          <source>Specifies the Period Calculation, which controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Commitments - Control Period Calculation - Property ToolTip</note>
         </trans-unit>
@@ -13963,6 +14318,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Commitments List - Control Contract No. - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 3435758329 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether this Subscription Line should generate contract deferrals. If it is set to No, no deferrals are generated and the invoices are posted directly to profit or loss.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Service Commitments List - Control Create Contract Deferrals - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3435758329 - Control 1748434477 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies whether the Subscription was created by creating a Contract line manually.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -14069,7 +14429,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Commitments List - Control Partner - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3435758329 - Control 2377237336 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The Period Calculation controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
+          <source>Specifies the Period Calculation, which controls how a period is determined for billing. The calculation of a month from 28.02. can extend to 27.03. (Align to Start of Month) or 30.03. (Align to End of Month).</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Commitments List - Control Period Calculation - Property ToolTip</note>
         </trans-unit>
@@ -14252,6 +14612,11 @@
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Contract Setup - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2502802436 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether deferrals are created for new Subscription lines by default.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Service Contract Setup - Control Create Contract Deferrals - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2502802436 - Control 1424760476 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the default period to which the Subscription Line amount relates. For example, enter 1M if the amount relates to one month or 12M if the amount relates to 1 year.</source>
@@ -14479,7 +14844,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Object - Control Planned Serv. Comm. exists - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 4265752052 - Control 157455803 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Displays the primary attribute value.</source>
+          <source>Specifies the primary attribute value.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Object - Control PrimaryAttributeValueField - Property ToolTip</note>
         </trans-unit>
@@ -14944,22 +15309,22 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Balances - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2943976702 - Control 1501286198 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Balance between posted Contract Invoices and Contract Credit Memos for Vendor Subscription Contracts in current Month.</source>
+          <source>Specifies the Balance between posted Contract Invoices and Contract Credit Memos for Vendor Subscription Contracts in current Month.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Cost current Month - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2943976702 - Control 1511912814 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Balance between posted Contract Invoices and Contract Credit Memos for Vendor Subscription Contracts in previous Month.</source>
+          <source>Specifies the Balance between posted Contract Invoices and Contract Credit Memos for Vendor Subscription Contracts in previous Month.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Cost previous Month - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2943976702 - Control 3610570653 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Balance between posted Contract Invoices and Contract Credit Memos for Customer Subscription Contracts in current Month.</source>
+          <source>Specifies the Balance between posted Contract Invoices and Contract Credit Memos for Customer Subscription Contracts in current Month.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Revenue current Month - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2943976702 - Control 276338397 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Balance between posted Contract Invoices and Contract Credit Memos for Customer Subscription Contracts in previous Month.</source>
+          <source>Specifies the Balance between posted Contract Invoices and Contract Credit Memos for Customer Subscription Contracts in previous Month.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Revenue previous Month - Property ToolTip</note>
         </trans-unit>
@@ -14999,7 +15364,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Open Posted Documents Customer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2943976702 - Control 1746691598 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows Open Customer Subscription Contract Credit Memos.</source>
+          <source>Specifies the Open Customer Subscription Contract Credit Memos.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Customer Contract Credit Memos - Property ToolTip</note>
         </trans-unit>
@@ -15009,7 +15374,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Customer Contract Credit Memos - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2943976702 - Control 1902531976 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows Open Customer Subscription Contract Invoices.</source>
+          <source>Specifies the Open Customer Subscription Contract Invoices.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Customer Contract Invoices - Property ToolTip</note>
         </trans-unit>
@@ -15024,7 +15389,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Open Posted Documents Vendor - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2943976702 - Control 762252438 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows Open Vendor Subscription Contract Credit Memos.</source>
+          <source>Specifies the Open Vendor Subscription Contract Credit Memos.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Vendor Contract Credit Memos - Property ToolTip</note>
         </trans-unit>
@@ -15034,7 +15399,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Vendor Contract Credit Memos - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2943976702 - Control 755848336 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows Open Vendor Subscription Contract Invoices.</source>
+          <source>Specifies the Open Vendor Subscription Contract Invoices.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Vendor Contract Invoices - Property ToolTip</note>
         </trans-unit>
@@ -15049,12 +15414,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Overdue - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2943976702 - Control 4032342524 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows Billing Lines for Subscription Lines that have not been called into Posting Documents, yet.</source>
+          <source>Specifies the Billing Lines for Subscription Lines that have not been called into Posting Documents, yet.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Not Invoiced - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2943976702 - Control 1559365852 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows overdue Subscription Lines.</source>
+          <source>Specifies the overdue Subscription Lines.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control OverdueField - Property ToolTip</note>
         </trans-unit>
@@ -15064,7 +15429,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Service Commitments without Customer Contract - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2943976702 - Control 278878765 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows Subscription Lines without Customer Contract.</source>
+          <source>Specifies the Subscription Lines without Customer Contract.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Serv. Comm. wo Cust. Contract - Property ToolTip</note>
         </trans-unit>
@@ -15074,7 +15439,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Serv. Comm. wo Cust. Contract - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2943976702 - Control 2957656709 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows Subscription Lines without Vendor Subscription Contract.</source>
+          <source>Specifies the Subscription Lines without Vendor Subscription Contract.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Activities - Control Serv. Comm. wo Vend. Contract - Property ToolTip</note>
         </trans-unit>
@@ -15749,47 +16114,47 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Billing Metadata - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3096093805 - Control 3532969709 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Indicates which document no. was used to post the associated usage data.</source>
+          <source>Specifies which document no. was used to post the associated usage data.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Billing Metadata - Control Billing Document No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3096093805 - Control 1771559440 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Indicates which document type was used to post the associated usage data.</source>
+          <source>Specifies which document type was used to post the associated usage data.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Billing Metadata - Control Billing Document Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3096093805 - Control 3015270207 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Indicates whether the related usage data billing is invoiced.</source>
+          <source>Specifies whether the related usage data billing is invoiced.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Billing Metadata - Control Invoiced - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3096093805 - Control 1009323213 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Indicates the date up to which the Subscription Line was originally invoiced.</source>
+          <source>Specifies the date up to which the Subscription Line was originally invoiced.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Billing Metadata - Control Original Invoiced to Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3096093805 - Control 4002295632 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Indicates whether the related usage data billing comes out of a rebilling scenario.</source>
+          <source>Specifies whether the related usage data billing comes out of a rebilling scenario.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Billing Metadata - Control Rebilling - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3096093805 - Control 1137103463 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Indicates the number of the related Subscription Line line.</source>
+          <source>Specifies the number of the related Subscription Line line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Billing Metadata - Control Service Commitment Entry No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3096093805 - Control 2617171321 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Indicates the number of the related Subscription.</source>
+          <source>Specifies the number of the related Subscription.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Billing Metadata - Control Service Object No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3096093805 - Control 2893228647 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Indicates the end date of the usage provided by the supplier.</source>
+          <source>Specifies the end date of the usage provided by the supplier.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Billing Metadata - Control Supplier Charge End Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3096093805 - Control 512163846 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Indicates the start date of the usage provided by the supplier</source>
+          <source>Specifies the start date of the usage provided by the supplier</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Billing Metadata - Control Supplier Charge Start Date - Property ToolTip</note>
         </trans-unit>
@@ -16139,17 +16504,17 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Control CustomerName - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 81753491 - Control 2120429518 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This field can be used for any number.</source>
+          <source>Specifies a text value that can be used for any purpose.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Control Decimal1 - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 81753491 - Control 207339667 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This field can be used for any number.</source>
+          <source>Specifies a text value that can be used for any purpose.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Control Decimal2 - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 81753491 - Control 845036284 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This field can be used for any number.</source>
+          <source>Specifies a text value that can be used for any purpose.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Control Decimal3 - Property ToolTip</note>
         </trans-unit>
@@ -16194,12 +16559,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Control Reason Preview - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 81753491 - Control 4265752052 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether a Subscription is available to be connected with the subscription or if the connection has been established already.</source>
+          <source>Specifies whether a Subscription is available to be connected with the Supplier Subscription or if the connection has been established already.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Control Service Object - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 81753491 - Control 2617171321 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifices to which Subscription the usage data refers.</source>
+          <source>Specifies to which Subscription the usage data refers.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Control Service Object No. - Property ToolTip</note>
         </trans-unit>
@@ -16234,17 +16599,17 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Control Tax - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 81753491 - Control 3721534664 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This field can be used for any text.</source>
+          <source>Specifies a text value that can be used for any purpose.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Control Text1 - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 81753491 - Control 64263985 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This field can be used for any text.</source>
+          <source>Specifies a text value that can be used for any purpose.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Control Text2 - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 81753491 - Control 701960602 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This field can be used for any text.</source>
+          <source>Specifies a text value that can be used for any purpose.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Control Text3 - Property ToolTip</note>
         </trans-unit>
@@ -16264,7 +16629,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Action Usage Data Customers - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 81753491 - Action 2387389402 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Opens the page for connecting Supplier Subscriptions to Subscriptions, filtered to the currently selected subscription.</source>
+          <source>Opens the page for connecting Supplier Subscriptions to Subscriptions, filtered to the currently selected Subscription.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Action ConnectSubscriptionToServiceObject - Property ToolTip</note>
         </trans-unit>
@@ -16314,27 +16679,27 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Imports - Control Entry No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 584234461 - Control 501224905 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Displays the number of errors during the creation and processing of Imported Lines.</source>
+          <source>Specifies the number of errors during the creation and processing of Imported Lines.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Imports - Control No. of Imported Line Errors - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 584234461 - Control 3198339961 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Displays the number of Imported Lines.</source>
+          <source>Specifies the number of Imported Lines.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Imports - Control No. of Imported Lines - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 584234461 - Control 1422948281 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the number of usage data billing errors.</source>
+          <source>Specifies the number of usage data billing errors.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Imports - Control No. of UD Billing Errors - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 584234461 - Control 333286092 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Displays the number of errors during the creation and processing of Usage Data Billing.</source>
+          <source>Specifies the number of errors during the creation and processing of Usage Data Billing.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Imports - Control No. of Usage Data Billing - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 584234461 - Control 1653666469 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the number of files of the raw data.</source>
+          <source>Specifies the number of files of the raw data.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Imports - Control No. of Usage Data Blobs - Property ToolTip</note>
         </trans-unit>
@@ -16574,8 +16939,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Subscriptions - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1115613703 - NamedType 3271990264" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This Subscription is already connected to Subscription %1 Subscription Line %2. Contract extension is not possible.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <source>This Supplier Subscription is already connected to Subscription %1 Line %2. Contract extension is not possible.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Subscription Header No., %2 = Subscription Line Entry No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Subscriptions - NamedType AlreadyConnectedErr</note>
         </trans-unit>
         <trans-unit id="Page 1115613703 - Control 2083503261 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -16744,7 +17109,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Suppliers - Control Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 256102894 - Control 1190232844 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Defines whether the sales price from the usage data should be used. If yes, the pricing is overridden on the basis of the Subscription Line.</source>
+          <source>Specifies whether the sales price from the usage data should be used. If yes, the pricing is overridden on the basis of the Subscription Line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Suppliers - Control Unit Price from Import - Property ToolTip</note>
         </trans-unit>
@@ -16932,6 +17297,11 @@
           <source>Specifies the classification of the contract.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Vendor Contract - Control Contract Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2335879890 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether to generate contract deferrals for the contract in general. The field affects only Subscription lines assigned to the contract for which the field "Create Contract Deferrals" is set to Contract-dependent.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Vendor Contract - Control Create Contract Deferrals - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2335879890 - Control 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
@@ -17433,6 +17803,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Vendor Contract Line Subpage - Control Contract Line Type - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 4105232201 - Control 1037928742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether this Subscription Line should generate contract deferrals. If it is set to No, no deferrals are generated and the invoices are posted directly to profit or loss.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Vendor Contract Line Subpage - Control Create Contract Deferrals - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 4105232201 - Control 4198939294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the currency of amounts in the Subscription Line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -17547,6 +17922,16 @@
           <source>Specifies the No. of the Item or G/L Account of the Subscription.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Vendor Contract Line Subpage - Control No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4105232201 - Control 2418570937 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a date formula for the lead time that a notice must have before the subscription line ends. The rhythm of the update of "Notice possible to" and "Term until" is determined using the extension term. For example, with an extension period of 1M, the notice period is repeatedly postponed by one month.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Vendor Contract Line Subpage - Control Notice Period - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4105232201 - Control 2418570937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Notice Period</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Vendor Contract Line Subpage - Control Notice Period - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4105232201 - Control 4253581577 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the code of the Subscription Package.</source>
@@ -17915,7 +18300,7 @@
         </trans-unit>
         <trans-unit id="Report 331019953 - NamedType 3491330105" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contract: #1###############\\@2@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=Contract No., %2=Progress</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Contract Deferrals Release - NamedType ContractProgressTxt</note>
         </trans-unit>
         <trans-unit id="Report 331019953 - NamedType 234497962" size-unit="char" translate="yes" xml:space="preserve">
@@ -17935,7 +18320,7 @@
         </trans-unit>
         <trans-unit id="Report 331019953 - NamedType 1387774250" size-unit="char" translate="yes" xml:space="preserve">
           <source>Release Contract Deferral of %1.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1 = Posting Date in format &lt;Month Text&gt; &lt;Year4&gt;</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Contract Deferrals Release - NamedType ReleasingOfContractNoTxt</note>
         </trans-unit>
         <trans-unit id="Report 331019953 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -18129,7 +18514,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report Cust. Contr. Def. Analysis - Control DocumentType - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 2335864938 - Control 3515510917 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Document Posting Date filter in the form of 'Date1..Date2'.</source>
+          <source>Specifies the Document Posting Date filter in the form of 'Date1..Date2'.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Cust. Contr. Def. Analysis - Control EvaluationPeriod - Property ToolTip</note>
         </trans-unit>
@@ -18269,7 +18654,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report Select Contract Renewal - Control AddVendorServicesCtrl - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 103887352 - Control 1007750878 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This Date Filter is used to select then Contract Lines based on the Subscription Line End Date of the Subscription Lines.</source>
+          <source>Specifies the Date Filter used to select then Contract Lines based on the Subscription Line End Date of the Subscription Lines.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Select Contract Renewal - Control ServiceEndDatePeriodFilterCtrl - Property ToolTip</note>
         </trans-unit>
@@ -18389,7 +18774,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report Vend Contr. Def. Analysis - Control DocumentType - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 4043056652 - Control 3515510917 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Document Posting Date filter in the form of 'Date1..Date2'.</source>
+          <source>Specifies the Document Posting Date filter in the form of 'Date1..Date2'.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Vend Contr. Def. Analysis - Control EvaluationPeriod - Property ToolTip</note>
         </trans-unit>
@@ -18439,7 +18824,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Blanket Sales Order Arch. Sub. - Action ShowSalesServiceCommitmentArchive - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1234581291 - Control 150765807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1234581291">
-          <source>Shows the number of Subscription Lines for the archived sales line.</source>
+          <source>Specifies the number of Subscription Lines for the archived sales line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Blanket Sales Order Arch. Sub. - Control Service Commitments - Property ToolTip</note>
         </trans-unit>
@@ -18464,7 +18849,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Blanket Sales Order Subform - Action AddSalesServiceCommitment - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 884441745 - Control 150765807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 884441745">
-          <source>Shows the number of Subscription Lines for the sales line.</source>
+          <source>Specifies the number of Subscription Lines for the sales line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Blanket Sales Order Subform - Control Service Commitments - Property ToolTip</note>
         </trans-unit>
@@ -18954,7 +19339,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Invoice Subform - Action Usage Data - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3573230301 - Control 150765807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3573230301">
-          <source>Shows the number of Subscription Lines for the sales line.</source>
+          <source>Specifies the number of Subscription Lines for the sales line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Line FactBox - Control Service Commitments - Property ToolTip</note>
         </trans-unit>
@@ -18974,7 +19359,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Archive Subform - Action ShowSalesServiceCommitmentArchive - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4117186890 - Control 150765807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4117186890">
-          <source>Shows the number of Subscription Lines for the archived sales line.</source>
+          <source>Specifies the number of Subscription Lines for the archived sales line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Archive Subform - Control Service Commitments - Property ToolTip</note>
         </trans-unit>
@@ -19009,7 +19394,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Subform - Control Customer Contract No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2026081320 - Control 150765807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
-          <source>Shows the number of Subscription Lines for the sales line.</source>
+          <source>Specifies the number of Subscription Lines for the sales line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Subform - Control Service Commitments - Property ToolTip</note>
         </trans-unit>
@@ -19034,7 +19419,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Archive Subform - Action ShowSalesServiceCommitmentArchive - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1893889982 - Control 150765807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1893889982">
-          <source>Shows the number of Subscription Lines for the archived sales line.</source>
+          <source>Specifies the number of Subscription Lines for the archived sales line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Archive Subform - Control Service Commitments - Property ToolTip</note>
         </trans-unit>
@@ -19069,7 +19454,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Subform - Control Customer Contract No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 416138076 - Control 150765807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 416138076">
-          <source>Shows the number of Subscription Lines for the sales line.</source>
+          <source>Specifies the number of Subscription Lines for the sales line.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Subform - Control Service Commitments - Property ToolTip</note>
         </trans-unit>
@@ -19632,6 +20017,21 @@
           <source>Ship-to Address</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum Contract Origin Name Type - EnumValue Ship-to Address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1037928742 - EnumValue 3229371698 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contract-dependent</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Create Contract Deferrals - EnumValue Contract-dependent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1037928742 - EnumValue 949215307 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Create Contract Deferrals - EnumValue No - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1037928742 - EnumValue 1517371649 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Create Contract Deferrals - EnumValue Yes - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 3849171206 - EnumValue 2965034906 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Invoice recipient (Bill-To Customer)</source>

@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Purchases.Reports;
 
 using Microsoft.Finance.Currency;
@@ -308,6 +312,8 @@ report 321 "Vendor - Balance to Date"
 
     requestpage
     {
+        AboutTitle = 'About Vendor - Balance to Date';
+        AboutText = 'Track your outstanding payables and manage your vendor relationships';
         SaveValues = true;
 
         layout
@@ -482,6 +488,8 @@ report 321 "Vendor - Balance to Date"
                       RemainingAmt,
                       0,
                       Counter1);
+
+                OnCalcTotalVendorAmountOnAfterUpdateCurrencyTotalBuffer(TempVendorLedgerEntry, TempCurrencyTotalBuffer, Counter1, RemainingAmt, ShowEntriesWithZeroBalance)
             until TempVendorLedgerEntry.Next() = 0;
     end;
 
@@ -576,6 +584,11 @@ report 321 "Vendor - Balance to Date"
 
     [IntegrationEvent(true, false)]
     local procedure OnVendorOnAfterGetRecordOnAfterCalcShouldSkipVendor(var Vendor: Record Vendor; var ShouldSkipVendor: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnCalcTotalVendorAmountOnAfterUpdateCurrencyTotalBuffer(var TempVendorLedgerEntry: Record "Vendor Ledger Entry" temporary; var TempCurrencyTotalBuffer: Record "Currency Total Buffer" temporary; Counter1: Integer; RemainingAmt: Decimal; ShowEntriesWithZeroBalance: Boolean)
     begin
     end;
 }

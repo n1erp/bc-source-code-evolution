@@ -39,7 +39,10 @@ codeunit 137051 "SCM Warehouse - III"
         LibraryManufacturing: Codeunit "Library - Manufacturing";
         LibraryAssembly: Codeunit "Library - Assembly";
         LibraryVariableStorage: Codeunit "Library - Variable Storage";
+        LibrarySetupStorage: Codeunit "Library - Setup Storage";
         LibraryRandom: Codeunit "Library - Random";
+        LibraryCosting: Codeunit "Library - Costing";
+        LibraryFiscalYear: Codeunit "Library - Fiscal Year";
         Counter: Integer;
         IsInitialized: Boolean;
         TrackingAction: Option SerialNo,LotNo,All,SelectEntries,AssignLotNo,UpdateAndAssignNew,CheckQtyToHandleBase,AssignPackageNo;
@@ -3020,7 +3023,7 @@ codeunit 137051 "SCM Warehouse - III"
           LibraryRandom.RandInt(10));
 
         // [GIVEN] Create warehouse request and inventory put-away for the production order.
-        LibraryWarehouse.CreateInboundWhseReqFromProdO(ProductionOrder);
+        LibraryManufacturing.CreateInboundWhseReqFromProdOrder(ProductionOrder);
         LibraryWarehouse.CreateInvtPutPickMovement(
           WarehouseActivityLine."Source Document"::"Prod. Output", ProductionOrder."No.", true, false, false);
 
@@ -3869,7 +3872,7 @@ codeunit 137051 "SCM Warehouse - III"
           ProductionOrder, ProdOrderComponent, LibraryInventory.CreateItemNo(), 1, Item."No.", ComponentQty, LotNo[1], Location.Code);
 
         // [GIVEN] Pick was created for Production Order with Lot L1 and 20 PCS
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
         VerifyWarehouseActivityTakePlaceLinesQtyAndLot(ProductionOrder."No.", Location.Code, ComponentQty, LotNo[1]);
 
         // [GIVEN] Registered 12 PCS and deleted Pick
@@ -3885,7 +3888,7 @@ codeunit 137051 "SCM Warehouse - III"
         ProdOrderComponent.OpenItemTrackingLines();
 
         // [WHEN] Create Whse. Pick
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
 
         // [THEN] Pick is created with 8 PCS of Lot L2
         VerifyWarehouseActivityTakePlaceLinesQtyAndLot(ProductionOrder."No.", Location.Code, SecondPickQty, LotNo[2]);
@@ -3928,7 +3931,7 @@ codeunit 137051 "SCM Warehouse - III"
           ProductionOrder, ProdOrderComponent, LibraryInventory.CreateItemNo(), 1, Item."No.", ComponentQty, LotNo[1], Location.Code);
 
         // [GIVEN] Pick was created for Production Order with Lot L1 and 20 PCS
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
         VerifyWarehouseActivityTakePlaceLinesQtyAndLot(ProductionOrder."No.", Location.Code, ComponentQty, LotNo[1]);
 
         // [GIVEN] Registered 12 PCS and deleted Pick
@@ -3946,7 +3949,7 @@ codeunit 137051 "SCM Warehouse - III"
         ProdOrderComponent.OpenItemTrackingLines();
 
         // [WHEN] Create Whse. Pick
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
 
         // [THEN] Pick is created with 8 PCS of Lot L2
         VerifyWarehouseActivityTakePlaceLinesQtyAndLot(ProductionOrder."No.", Location.Code, PickQty[2], LotNo[2]);
@@ -4738,7 +4741,7 @@ codeunit 137051 "SCM Warehouse - III"
         ProdOrderComponent.TestField("Qty. Picked", 1);
 
         // [WHEN] We create a Warehouse Pick for the Production Order
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
         FindPickLine(WarehousePickLine, Database::"Prod. Order Component", "Production Order Status"::Released.AsInteger(), ProductionOrder."No.");
         LibraryWarehouse.FindWhseActivityBySourceDoc(WarehousePickHeader, Database::"Prod. Order Component", "Production Order Status"::Released.AsInteger(), ProductionOrder."No.", ProdOrderLine."Line No.");
 
@@ -4770,7 +4773,7 @@ codeunit 137051 "SCM Warehouse - III"
         ProdOrderComponent.TestField("Qty. Picked", 2);
 
         // [WHEN] We create a Warehouse Pick for the Production Order for the remaining 1 qty
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
         FindPickLine(WarehousePickLine, Database::"Prod. Order Component", "Production Order Status"::Released.AsInteger(), ProductionOrder."No.");
         LibraryWarehouse.FindWhseActivityBySourceDoc(WarehousePickHeader, Database::"Prod. Order Component", "Production Order Status"::Released.AsInteger(), ProductionOrder."No.", ProdOrderLine."Line No.");
 
@@ -4820,7 +4823,7 @@ codeunit 137051 "SCM Warehouse - III"
         ProdOrderComponent.Modify();
 
         // [WHEN] We create a Warehouse Pick for the Production Order
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
         FindPickLine(WarehousePickLine, Database::"Prod. Order Component", "Production Order Status"::Released.AsInteger(), ProductionOrder."No.");
         LibraryWarehouse.FindWhseActivityBySourceDoc(WarehousePickHeader, Database::"Prod. Order Component", "Production Order Status"::Released.AsInteger(), ProductionOrder."No.", ProdOrderLine."Line No.");
 
@@ -4975,7 +4978,7 @@ codeunit 137051 "SCM Warehouse - III"
 
         // [GIVEN] Create warehouse pick for prod. order component.
         // [GIVEN] Ensure the pick includes breakbulk lines.
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
         WarehouseActivityLine.SetFilter("Breakbulk No.", '<>0');
         FindPickLine(
           WarehouseActivityLine, Database::"Prod. Order Component", "Production Order Status"::Released.AsInteger(),
@@ -5351,7 +5354,6 @@ codeunit 137051 "SCM Warehouse - III"
         Bin: Record Bin;
         Bin2: Record Bin;
         WarehouseEmployee: Record "Warehouse Employee";
-        ManufacturingSetup: Record "Manufacturing Setup";
         ProductionBOMHeader: Record "Production BOM Header";
         ProductionBOMLine: Record "Production BOM Line";
         ItemJnlTemplate: Record "Item Journal Template";
@@ -5389,9 +5391,7 @@ codeunit 137051 "SCM Warehouse - III"
         LibraryWarehouse.CreateWarehouseEmployee(WarehouseEmployee, Location.Code, true);
 
         // [GIVEN] Validate Components at Location in Manufacturing Setup.
-        ManufacturingSetup.Get();
-        ManufacturingSetup.Validate("Components at Location", Location.Code);
-        ManufacturingSetup.Modify(true);
+        LibraryManufacturing.SetComponentsAtLocation(Location.Code);
 
         // [GIVEN] Create Item Journal Line & Validate Location Code & Bin Code.
         CreateItemJournalLine(ItemJnlTemplate, ItemJnlBatch, ItemJnlLine, Item);
@@ -5842,7 +5842,7 @@ codeunit 137051 "SCM Warehouse - III"
         ProdOrderComponent[2].OpenItemTrackingLines();
 
         // [GIVEN] Create Warehouse Pick from Production Order.
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
 
         // [GIVEN] Find and Register Warehouse Activity.
         FindAndRegisterWhseActivity(
@@ -6035,7 +6035,7 @@ codeunit 137051 "SCM Warehouse - III"
             ProductionOrder, ProdOrderComponent, LibraryInventory.CreateItemNo(), 1, Item."No.", LotQty, LotNo[2], Location.Code);
 
         // [GIVEN] Pick was created for Production Order with Lot L2 and 2000 PCS.
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
         VerifyWarehouseActivityTakePlaceLinesQtyAndLot(ProductionOrder."No.", Location.Code, LotQty, LotNo[2]);
 
         // [GIVEN] Registered 200 PCS and deleted Pick
@@ -6045,7 +6045,7 @@ codeunit 137051 "SCM Warehouse - III"
         RegisterAndDeletePartialPick(WarehouseActivityHeader, PartialQtyMultiplier);
 
         // [WHEN] Create Whse. Pick.
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
 
         // [THEN] Pick is created with 8 PCS of Lot L2
         VerifyWarehouseActivityTakePlaceLinesQtyAndLot(ProductionOrder."No.", Location.Code, LotQty - (LotQty * PartialQtyMultiplier), LotNo[2]);
@@ -6079,7 +6079,7 @@ codeunit 137051 "SCM Warehouse - III"
             ProductionOrder, ProdOrderComponent, LibraryInventory.CreateItemNo(), 1, Item."No.", PackageQty, PackageNo[2], Location.Code);
 
         // [GIVEN] Pick was created for Production Order with Package P2 and 2000 PCS.
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
         VerifyWarehouseActivityTakePlaceLinesQtyAndPackage(ProductionOrder."No.", Location.Code, PackageQty, PackageNo[2]);
 
         // [GIVEN] Registered 200 PCS and deleted Pick
@@ -6089,7 +6089,7 @@ codeunit 137051 "SCM Warehouse - III"
         RegisterAndDeletePartialPick(WarehouseActivityHeader, PartialQtyMultiplier);
 
         // [WHEN] Create Whse. Pick.
-        LibraryWarehouse.CreateWhsePickFromProduction(ProductionOrder);
+        LibraryManufacturing.CreateWhsePickFromProduction(ProductionOrder);
 
         // [THEN] Pick is created with 8 PCS of Package P2
         VerifyWarehouseActivityTakePlaceLinesQtyAndPackage(ProductionOrder."No.", Location.Code, PackageQty - (PackageQty * PartialQtyMultiplier), PackageNo[2]);
@@ -6195,6 +6195,89 @@ codeunit 137051 "SCM Warehouse - III"
         WarehouseActivityLine.TestField("Expiration Date", ExpirationDate);
     end;
 
+    [Test]
+    [HandlerFunctions('WhseCalculateInventoryIncludeItemWithoutTransactionHandler')]
+    procedure WhseCalculateInventoryShouldRunWithoutAnyErrorForDeletedItem()
+    var
+        Item: Record Item;
+        Location: Record Location;
+        PurchaseHeader: Record "Purchase Header";
+        PurchaseLine: Record "Purchase Line";
+        SalesHeader: Record "Sales Header";
+        SalesLine: Record "Sales Line";
+        WarehouseActivityLine: Record "Warehouse Activity Line";
+        BinCode: Code[20];
+        PostingDate: Date;
+        Quantity: Decimal;
+        WhsePhysInvJournal: TestPage "Whse. Phys. Invt. Journal";
+    begin
+        // [SCENARIO 562944] Verify "Calculate Inventory" in Warehouse Physical Inventory Journal should run without any error.
+        // when Stan filter with "Location Code" and "Bin Code" after closing the fiscal year for deleted item.
+        Initialize();
+
+        // [GIVEN] Create Warehouse location.
+        CreateFullWMSLocation(Location, 2);
+
+        // [GIVEN] Create Fiscal Year and Inventory Period.
+        PostingDate := CreateFiscalYearAndInventoryPeriod();
+
+        // [GIVEN] Create an Item "I".
+        LibraryInventory.CreateItem(Item);
+
+        // [GIVEN] Create PO for Item "I" with Posting Date.
+        CreatePurchaseOrder(PurchaseHeader, PurchaseLine, Location.Code, Item."No.");
+        PurchaseHeader.Validate("Posting Date", PostingDate);
+        PurchaseHeader.Modify(true);
+
+        // [GIVEN] Save Quantity.
+        Quantity := PurchaseLine.Quantity;
+
+        // [GIVEN] Create and Post Whse. Receipt from PO with Bin.
+        BinCode := CreateAndPostWhseReceiptFromPO(PurchaseHeader);
+
+        // [GIVEN] Register Put Away.
+        RegisterWarehouseActivity(PurchaseHeader."No.", WarehouseActivityLine."Activity Type"::"Put-away");
+
+        // [GIVEN] Post Purchase Order.
+        PurchaseHeader.Find();
+        LibraryPurchase.PostPurchaseDocument(PurchaseHeader, false, true);
+
+        // [GIVEN] Create and Release SO for Item "I" with Posting Date.
+        CreateSalesOrder(SalesHeader, SalesLine, Item."No.", Location.Code, Quantity);
+        SalesHeader.Validate("Posting Date", PostingDate);
+        SalesHeader.Modify(true);
+        LibrarySales.ReleaseSalesDocument(SalesHeader);
+
+        // [GIVEN] Create and Post Whse. Shipment from SO.
+        CreateAndPostWhseShipmentFromSO(SalesHeader, Location.Code);
+
+        // [GIVEN] Post Sales Order.
+        SalesHeader.Find();
+        LibrarySales.PostSalesDocument(SalesHeader, true, true);
+
+        // [GIVEN] Run Adjust Cost Item Entries.
+        LibraryCosting.AdjustCostItemEntries(Item."No.", '');
+
+        // [GIVEN] Close Accounting Year and Create Fiscal Year.
+        LibraryFiscalYear.CloseAccountingPeriod();
+        LibraryFiscalYear.CreateFiscalYear();
+
+        // [GIVEN] Delete Item.
+        Item.Delete(true);
+        Commit();
+
+        // [WHEN] Open "Whse. Phys. Invt. Journal".
+        LibraryVariableStorage.Clear();
+        LibraryVariableStorage.Enqueue(Location.Code);
+        LibraryVariableStorage.Enqueue(BinCode);
+        WhsePhysInvJournal.OpenEdit();
+
+        // [THEN] "Calculate Inventory" in Warehouse Physical Inventory Journal should run without any error.
+        WhsePhysInvJournal."Calculate &Inventory".Invoke();
+
+        LibraryVariableStorage.AssertEmpty();
+    end;
+
     local procedure Initialize()
     var
         LibraryERMCountryData: Codeunit "Library - ERM Country Data";
@@ -6207,6 +6290,7 @@ codeunit 137051 "SCM Warehouse - III"
         Clear(LocationCode);
         Clear(Counter);
         LibraryVariableStorage.Clear();
+        LibrarySetupStorage.Restore();
 
         // Lazy Setup.
         if IsInitialized then
@@ -6219,6 +6303,8 @@ codeunit 137051 "SCM Warehouse - III"
         NoSeriesSetup();
         ItemJournalSetup();
         OutputJournalSetup();
+        LibrarySetupStorage.SaveInventorySetup();
+
         IsInitialized := true;
         Commit();
         LibraryTestInitialize.OnAfterTestSuiteInitialize(CODEUNIT::"SCM Warehouse - III");
@@ -7078,7 +7164,7 @@ codeunit 137051 "SCM Warehouse - III"
         ParentItem.Validate("Production BOM No.", ProductionBOMHeader."No.");
         ParentItem.Modify(true);
         CreateAndRefreshProdOrder(ProductionOrder, ProductionOrder."Source Type"::Item, ParentItem."No.", LocationCode, Quantity);
-        LibraryWarehouse.CreateInboundWhseReqFromProdO(ProductionOrder);
+        LibraryManufacturing.CreateInboundWhseReqFromProdOrder(ProductionOrder);
     end;
 
     local procedure CreateReleasedPurchaseOrder(var PurchaseHeader: Record "Purchase Header"; LocationCode: Code[10])
@@ -8436,6 +8522,58 @@ codeunit 137051 "SCM Warehouse - III"
         RegisterWarehouseActivity(PurchaseHeader."No.", WarehouseActivityLine."Activity Type"::"Put-away");
     end;
 
+    local procedure CreateAndPostWhseShipmentFromSO(var SalesHeader: Record "Sales Header"; LocationCode: Code[10])
+    var
+        WarehouseActivityLine: Record "Warehouse Activity Line";
+        WarehouseShipmentHeader: Record "Warehouse Shipment Header";
+        WarehouseShipmentLine: Record "Warehouse Shipment Line";
+    begin
+        LibraryWarehouse.CreateWhseShipmentFromSO(SalesHeader);
+        WarehouseShipmentHeader.Get(FindWhseShipmentNo(WarehouseShipmentLine."Source Document"::"Sales Order", SalesHeader."No."));
+        CreatePick(WarehouseShipmentHeader, WarehouseShipmentHeader."No.");
+        FindWhseActivityLine(
+            WarehouseActivityLine, WarehouseActivityLine."Activity Type"::Pick, LocationCode, SalesHeader."No.",
+            WarehouseActivityLine."Action Type"::Take);
+        RegisterWarehouseActivity(SalesHeader."No.", WarehouseActivityLine."Activity Type"::Pick);
+        LibraryWarehouse.PostWhseShipment(WarehouseShipmentHeader, false);
+    end;
+
+    local procedure FindWhseShipmentNo(SourceDocument: Enum "Warehouse Activity Source Document"; SourceNo: Code[20]): Code[20]
+    var
+        WarehouseShipmentLine: Record "Warehouse Shipment Line";
+    begin
+        WarehouseShipmentLine.SetRange("Source Document", SourceDocument);
+        WarehouseShipmentLine.SetRange("Source No.", SourceNo);
+        WarehouseShipmentLine.FindFirst();
+
+        exit(WarehouseShipmentLine."No.");
+    end;
+
+    local procedure CreateFiscalYearAndInventoryPeriod() PostingDate: Date
+    var
+        InventoryPeriod: Record "Inventory Period";
+        AccountingPeriod: Record "Accounting Period";
+    begin
+        AccountingPeriod.DeleteAll();
+
+        LibraryFiscalYear.CreateFiscalYear();
+        PostingDate := LibraryFiscalYear.GetLastPostingDate(false);
+        LibraryInventory.CreateInventoryPeriod(InventoryPeriod, PostingDate);
+    end;
+
+    local procedure CreateAndPostWhseReceiptFromPO(PurchaseHeader: Record "Purchase Header"): Code[20]
+    var
+        WarehouseReceiptLine: Record "Warehouse Receipt Line";
+        BinCode: Code[20];
+    begin
+        CreateWhseReceiptFromPurchaseOrder(PurchaseHeader);
+        FindWarehouseReceiptNo(WarehouseReceiptLine, WarehouseReceiptLine."Source Document"::"Purchase Order", PurchaseHeader."No.");
+        BinCode := WarehouseReceiptLine."Bin Code";
+        PostWarehouseReceipt(WarehouseReceiptLine."Source Document"::"Purchase Order", PurchaseHeader."No.");
+
+        exit(BinCode);
+    end;
+
     [ModalPageHandler]
     [Scope('OnPrem')]
     procedure ProductionJournalPostOneHandler(var ProductionJournal: TestPage "Production Journal")
@@ -8842,6 +8980,14 @@ codeunit 137051 "SCM Warehouse - III"
             WhseItemTrackingLines.Next();
         end;
         WhseItemTrackingLines.OK().Invoke();
+    end;
+
+    [RequestPageHandler]
+    procedure WhseCalculateInventoryIncludeItemWithoutTransactionHandler(var WhseCalculateInventory: TestRequestPage "Whse. Calculate Inventory")
+    begin
+        WhseCalculateInventory."Bin Content".SetFilter("Location Code", LibraryVariableStorage.DequeueText());
+        WhseCalculateInventory."Bin Content".SetFilter("Bin Code", LibraryVariableStorage.DequeueText());
+        WhseCalculateInventory.OK().Invoke();
     end;
 }
 

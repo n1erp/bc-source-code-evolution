@@ -13,7 +13,6 @@ table 8066 "Cust. Sub. Contract Deferral"
     DataClassification = CustomerContent;
     DrillDownPageId = "Customer Contract Deferrals";
     LookupPageId = "Customer Contract Deferrals";
-    Access = Internal;
     Permissions =
         tabledata "Sales Invoice Line" = r,
         tabledata "Sales Cr.Memo Line" = r;
@@ -55,6 +54,7 @@ table 8066 "Cust. Sub. Contract Deferral"
         {
             Caption = 'Amount';
             AutoFormatType = 1;
+            AutoFormatExpression = Rec."Currency Code";
         }
         field(9; "Customer No."; Code[20])
         {
@@ -72,16 +72,19 @@ table 8066 "Cust. Sub. Contract Deferral"
         {
             Caption = 'Discount Amount';
             AutoFormatType = 1;
+            AutoFormatExpression = Rec."Currency Code";
         }
         field(14; "Deferral Base Amount"; Decimal)
         {
             Caption = 'Deferral Base Amount';
             AutoFormatType = 1;
+            AutoFormatExpression = Rec."Currency Code";
         }
         field(15; "Discount %"; Decimal)
         {
             Caption = 'Discount %';
             DecimalPlaces = 0 : 5;
+            AutoFormatType = 0;
         }
         field(16; "Bill-to Customer No."; Code[20])
         {
@@ -126,6 +129,10 @@ table 8066 "Cust. Sub. Contract Deferral"
         field(25; Discount; Boolean)
         {
             Caption = 'Discount';
+        }
+        field(26; "Currency Code"; Code[10])
+        {
+            Caption = 'Currency Code';
         }
         field(480; "Dimension Set ID"; Integer)
         {
@@ -172,6 +179,7 @@ table 8066 "Cust. Sub. Contract Deferral"
         Rec."Bill-to Customer No." := SalesLine."Bill-to Customer No.";
         Rec."Document Posting Date" := SalesLine."Posting Date";
         Rec.Discount := SalesLine."Discount";
+        Rec."Currency Code" := SalesLine."Currency Code";
     end;
 
     internal procedure ShowDimensions()

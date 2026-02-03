@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Finance.GeneralLedger.Budget;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Finance.GeneralLedger.Budget;
 
 using Microsoft.Finance.Analysis;
 using Microsoft.Finance.Consolidation;
@@ -30,6 +34,7 @@ report 81 "Import Budget from Excel"
                     GLBudgetEntry.SetRange("G/L Account No.", "G/L Account No.");
                     GLBudgetEntry.SetRange(Date, Date);
                     GLBudgetEntry.SetFilter("Entry No.", '<=%1', LastEntryNoBeforeImport);
+                    OnBudgetBufOnAfterGetRecordOnBeforeSetDimFilters(GLBudgetEntry);
                     if DimCode[1] <> '' then
                         SetBudgetDimFilter(DimCode[1], "Dimension Value Code 1", GLBudgetEntry);
                     if DimCode[2] <> '' then
@@ -360,25 +365,46 @@ report 81 "Import Budget from Excel"
                   "Code Caption", CopyStr(TempGlobalExcelBuf."Cell Value as Text", 1, MaxStrLen(TempDim."Code Caption")));
                 case true of
                     TempGlobalExcelBuf."Cell Value as Text" = GLBudgetEntry.FieldCaption("G/L Account No."):
-                        if HeaderRowNo = 0 then begin
-                            HeaderRowNo := TempGlobalExcelBuf."Row No.";
-                            TempExcelBuf := TempGlobalExcelBuf;
-                            TempExcelBuf.Comment := Text010;
-                            TempExcelBuf.Insert();
-                        end else
-                            Error(Text011);
+                        begin
+                            IsHandled := false;
+                            OnAnalyzeDataOnBeforeCheckHeaderRowNo(HeaderRowNo, TempGlobalExcelBuf, TempExcelBuf, IsHandled);
+                            if IsHandled then
+                                exit;
+
+                            if HeaderRowNo = 0 then begin
+                                HeaderRowNo := TempGlobalExcelBuf."Row No.";
+                                TempExcelBuf := TempGlobalExcelBuf;
+                                TempExcelBuf.Comment := Text010;
+                                TempExcelBuf.Insert();
+                            end else
+                                Error(Text011);
+                            OnAnalyzeDataOnAfterCheckHeaderRowNo(HeaderRowNo, TempGlobalExcelBuf, TempExcelBuf)
+                        end;
                     TempDim.FindFirst() and (TempGlobalExcelBuf."Row No." <> HeaderRowNo):
-                        if HeaderRowNo <> 0 then begin
-                            Session.LogMessage('0000G7G', DimensionValueCodeEqualToDimensionCodeTelemetryMsg, Verbosity::Normal, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, 'Category', TelemetryCategoryTxt);
-                            Error(TheUsedDimensionValueAreAlsoUsedAsACaptionForADimensionErr, Format(TempDim.Code));
-                        end else begin
-                            IncreaseAndCheckCountDim(CountDim);
-                            DimCode[CountDim] := TempDim.Code;
-                            DimRowNo := TempGlobalExcelBuf."Row No.";
-                            DimCode3 := TempDim.Code;
+                        begin
+                            IsHandled := false;
+                            OnAnalyzeDataOnBeforeCheckHeaderRowNo2(HeaderRowNo, TempGlobalExcelBuf, DimCode, DimRowNo, CountDim, TempDim, IsHandled);
+                            if IsHandled then
+                                exit;
+
+                            if HeaderRowNo <> 0 then begin
+                                Session.LogMessage('0000G7G', DimensionValueCodeEqualToDimensionCodeTelemetryMsg, Verbosity::Normal, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, 'Category', TelemetryCategoryTxt);
+                                Error(TheUsedDimensionValueAreAlsoUsedAsACaptionForADimensionErr, Format(TempDim.Code));
+                            end else begin
+                                IncreaseAndCheckCountDim(CountDim);
+                                DimCode[CountDim] := TempDim.Code;
+                                DimRowNo := TempGlobalExcelBuf."Row No.";
+                                DimCode3 := TempDim.Code;
+                            end;
+                            OnAnalyzeDataOnAfterCheckHeaderRowNo2(HeaderRowNo, TempGlobalExcelBuf, DimCode, DimRowNo, CountDim, TempDim)
                         end;
                     (TempGlobalExcelBuf."Row No." = DimRowNo) and (TempGlobalExcelBuf."Column No." > 1) and (ImportOption = ImportOption::"Replace entries"):
                         begin
+                            IsHandled := false;
+                            OnAnalyzeDataOnBeforeGLBudgetEntrySetFilters(GLBudgetEntry, TempGlobalExcelBuf, DimCode3, IsHandled);
+                            if IsHandled then
+                                exit;
+
                             case DimCode3 of
                                 BusUnitDimCode:
                                     GLBudgetEntry.SetFilter("Business Unit Code", TempGlobalExcelBuf."Cell Value as Text");
@@ -395,11 +421,16 @@ report 81 "Import Budget from Excel"
                                 BudgetDim4Code:
                                     GLBudgetEntry.SetFilter("Budget Dimension 4 Code", TempGlobalExcelBuf."Cell Value as Text");
                             end;
-                            OnAnalyzeDataOnAfterGLBudgetEntrySetFilters(GLBudgetEntry, TempGlobalExcelBuf, DimCode3);
+                            OnAnalyzeDataOnAfterGLBudgetEntrySetFilters(GLBudgetEntry, TempGlobalExcelBuf, DimCode3)
                         end;
 
                     TempGlobalExcelBuf."Row No." = HeaderRowNo:
                         begin
+                            IsHandled := false;
+                            OnAnalyzeDataOnBeforeConditionalTempExcelBufInsert(TempGlobalExcelBuf, TempDim, CountDim, DimCode, IsHandled);
+                            if IsHandled then
+                                exit;
+
                             TempExcelBuf := TempGlobalExcelBuf;
                             case true of
                                 TempDim.FindFirst():
@@ -417,6 +448,7 @@ report 81 "Import Budget from Excel"
                                         TempExcelBuf.Insert();
                                     end;
                             end;
+                            OnAnalyzeDataOnAfterConditionalTempExcelBufInsert(TempExcelBuf, TempDim, CountDim, DimCode, TestDateTime);
                         end;
                     (TempGlobalExcelBuf."Row No." > HeaderRowNo) and (HeaderRowNo > 0):
                         begin
@@ -484,32 +516,39 @@ report 81 "Import Budget from Excel"
                                             TempGlobalExcelBuf."Cell Value as Text",
                                             1, MaxStrLen(TempLocalBudgetBuf."Dimension Value Code 8"));
                                     Text014:
-                                        if TempLocalBudgetBuf."G/L Account No." <> '' then begin
-                                            BudgetBuf := TempLocalBudgetBuf;
-                                            if GLBudgetEntry.GetFilter("Global Dimension 1 Code") <> '' then
-                                                Evaluate(BudgetBuf."Dimension Value Code 1", GLBudgetEntry.GetFilter("Global Dimension 1 Code"));
-                                            if GLBudgetEntry.GetFilter("Global Dimension 2 Code") <> '' then
-                                                Evaluate(BudgetBuf."Dimension Value Code 2", GLBudgetEntry.GetFilter("Global Dimension 2 Code"));
-                                            if GLBudgetEntry.GetFilter("Budget Dimension 1 Code") <> '' then
-                                                Evaluate(BudgetBuf."Dimension Value Code 3", GLBudgetEntry.GetFilter("Budget Dimension 1 Code"));
-                                            if GLBudgetEntry.GetFilter("Budget Dimension 2 Code") <> '' then
-                                                Evaluate(BudgetBuf."Dimension Value Code 4", GLBudgetEntry.GetFilter("Budget Dimension 2 Code"));
-                                            if GLBudgetEntry.GetFilter("Budget Dimension 3 Code") <> '' then
-                                                Evaluate(BudgetBuf."Dimension Value Code 5", GLBudgetEntry.GetFilter("Budget Dimension 3 Code"));
-                                            if GLBudgetEntry.GetFilter("Budget Dimension 4 Code") <> '' then
-                                                Evaluate(BudgetBuf."Dimension Value Code 6", GLBudgetEntry.GetFilter("Budget Dimension 4 Code"));
-                                            if GLBudgetEntry.GetFilter("Business Unit Code") <> '' then
-                                                Evaluate(BudgetBuf."Dimension Value Code 7", GLBudgetEntry.GetFilter("Business Unit Code"));
-                                            Evaluate(BudgetBuf.Date, TempExcelBuf."Cell Value as Text");
-                                            Evaluate(BudgetBuf.Amount, TempGlobalExcelBuf."Cell Value as Text");
-                                            if not BudgetBuf.Find('=') then
-                                                BudgetBuf.Insert()
-                                            else begin
+                                        begin
+                                            if TempLocalBudgetBuf."G/L Account No." <> '' then begin
+                                                BudgetBuf := TempLocalBudgetBuf;
+                                                if GLBudgetEntry.GetFilter("Global Dimension 1 Code") <> '' then
+                                                    Evaluate(BudgetBuf."Dimension Value Code 1", GLBudgetEntry.GetFilter("Global Dimension 1 Code"));
+                                                if GLBudgetEntry.GetFilter("Global Dimension 2 Code") <> '' then
+                                                    Evaluate(BudgetBuf."Dimension Value Code 2", GLBudgetEntry.GetFilter("Global Dimension 2 Code"));
+                                                if GLBudgetEntry.GetFilter("Budget Dimension 1 Code") <> '' then
+                                                    Evaluate(BudgetBuf."Dimension Value Code 3", GLBudgetEntry.GetFilter("Budget Dimension 1 Code"));
+                                                if GLBudgetEntry.GetFilter("Budget Dimension 2 Code") <> '' then
+                                                    Evaluate(BudgetBuf."Dimension Value Code 4", GLBudgetEntry.GetFilter("Budget Dimension 2 Code"));
+                                                if GLBudgetEntry.GetFilter("Budget Dimension 3 Code") <> '' then
+                                                    Evaluate(BudgetBuf."Dimension Value Code 5", GLBudgetEntry.GetFilter("Budget Dimension 3 Code"));
+                                                if GLBudgetEntry.GetFilter("Budget Dimension 4 Code") <> '' then
+                                                    Evaluate(BudgetBuf."Dimension Value Code 6", GLBudgetEntry.GetFilter("Budget Dimension 4 Code"));
+                                                if GLBudgetEntry.GetFilter("Business Unit Code") <> '' then
+                                                    Evaluate(BudgetBuf."Dimension Value Code 7", GLBudgetEntry.GetFilter("Business Unit Code"));
+                                                Evaluate(BudgetBuf.Date, TempExcelBuf."Cell Value as Text");
+                                                Evaluate(BudgetBuf.Amount, TempGlobalExcelBuf."Cell Value as Text");
+                                                
                                                 IsHandled := false;
-                                                OnAnalyzeDataOnBeforeCombinationMustBeUniqueError(BudgetBuf, IsHandled);
+                                                OnAnalyzeDataOnBeforeInsertBudgetBuf(BudgetBuf, IsHandled);
                                                 if not IsHandled then
-                                                    Error(Text023 + Text024 + Format(BudgetBuf.RecordId()));
+                                                    if not BudgetBuf.Find('=') then
+                                                        BudgetBuf.Insert()
+                                                    else begin
+                                                        IsHandled := false;
+                                                        OnAnalyzeDataOnBeforeCombinationMustBeUniqueError(BudgetBuf, IsHandled);
+                                                    if not IsHandled then
+                                                        Error(Text023 + Text024 + Format(BudgetBuf.RecordId()));
+                                                end;
                                             end;
+                                            OnAnalyzeDataOnAfterCaseText014(BudgetBuf);
                                         end;
                                 end;
                         end;
@@ -649,6 +688,11 @@ report 81 "Import Budget from Excel"
     end;
 
     [IntegrationEvent(false, false)]
+    local procedure OnAnalyzeDataOnBeforeGLBudgetEntrySetFilters(var GLBudgetEntry: Record "G/L Budget Entry"; var ExcelBuf: Record "Excel Buffer"; DimCode3: Code[20]; var IsHandled: Boolean);
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
     local procedure OnAnalyzeDataOnAfterGLBudgetEntrySetFilters(var GLBudgetEntry: Record "G/L Budget Entry"; var ExcelBuf: Record "Excel Buffer"; DimCode3: Code[20]);
     begin
     end;
@@ -695,6 +739,52 @@ report 81 "Import Budget from Excel"
 
     [IntegrationEvent(false, false)]
     local procedure OnBudgetBufOnAfterGetRecordOnBeforeGLBudgetEntryInsert(var GLBudgetEntry: Record "G/L Budget Entry")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBudgetBufOnAfterGetRecordOnBeforeSetDimFilters(var GLBudgetEntry: Record "G/L Budget Entry")
+    begin
+    end;
+
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAnalyzeDataOnBeforeCheckHeaderRowNo(var HeaderRowNo: Integer; var TempGlobalExcelBuf: Record "Excel Buffer" temporary; var TempExcelBuf: Record "Excel Buffer" temporary; var IsHandled: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAnalyzeDataOnAfterCheckHeaderRowNo(var HeaderRowNo: Integer; var TempGlobalExcelBuf: Record "Excel Buffer" temporary; var TempExcelBuf: Record "Excel Buffer" temporary)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAnalyzeDataOnBeforeCheckHeaderRowNo2(var HeaderRowNo: Integer; var TempGlobalExcelBuf: Record "Excel Buffer" temporary; var DimCode: array[8] of Code[20]; var DimRowNo: Integer; var CountDim: Integer; var TempDim: Record Dimension temporary; var IsHandled: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAnalyzeDataOnAfterCheckHeaderRowNo2(var HeaderRowNo: Integer; var TempGlobalExcelBuf: Record "Excel Buffer" temporary; var DimCode: array[8] of Code[20]; var DimRowNo: Integer; var CountDim: Integer; var TempDim: Record Dimension temporary)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAnalyzeDataOnBeforeConditionalTempExcelBufInsert(var TempGlobalExcelBuf: Record "Excel Buffer" temporary; var TempDim: Record Dimension temporary; var CountDim: Integer; var DimCode: array[8] of Code[20]; var IsHandled: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAnalyzeDataOnAfterConditionalTempExcelBufInsert(var TempExcelBuf: Record "Excel Buffer" temporary; var TempDim: Record Dimension temporary; var CountDim: Integer; var DimCode: array[8] of Code[20]; var TestDateTime: DateTime)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAnalyzeDataOnBeforeInsertBudgetBuf(var BudgetBuf: Record "Budget Buffer"; var IsHandled: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAnalyzeDataOnAfterCaseText014(var BudgetBuf: Record "Budget Buffer")
     begin
     end;
 }

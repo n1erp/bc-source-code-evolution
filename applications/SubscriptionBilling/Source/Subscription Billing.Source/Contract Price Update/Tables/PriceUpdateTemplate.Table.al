@@ -6,7 +6,6 @@ table 8003 "Price Update Template"
     DataClassification = CustomerContent;
     DrillDownPageId = "Price Update Templates";
     LookupPageId = "Price Update Templates";
-    Access = Internal;
 
     fields
     {
@@ -48,6 +47,8 @@ table 8003 "Price Update Template"
         {
             Caption = 'Update Value %';
             BlankZero = true;
+            AutoFormatType = 0;
+
             trigger OnValidate()
             begin
                 ThrowErrorIfUpdateValueNotZeroInCaseOfRecentItemPrices();

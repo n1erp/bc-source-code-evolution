@@ -4,6 +4,9 @@ function Run-AlTestsInternal
     [string] $TestCodeunitsRange = "",
     [string] $TestProcedureRange = "",
     [string] $ExtensionId = "",
+    [ValidateSet('None','Disabled','Codeunit','Function')]
+    [string] $RequiredTestIsolation = "None",
+    [string] $TestType,
     [int] $TestRunnerId = $global:DefaultTestRunner,
     [ValidateSet('Windows','NavUserPassword','AAD')]
     [string] $AutorizationType = $script:DefaultAuthorizationType,
@@ -28,7 +31,9 @@ function Run-AlTestsInternal
 {
     $ErrorActionPreference = $script:DefaultErrorActionPreference
    
-    Setup-TestRun -DisableSSLVerification:$DisableSSLVerification -AutorizationType $AutorizationType -Credential $Credential -ServiceUrl $ServiceUrl -TestSuite $TestSuite -TestCodeunitsRange $TestCodeunitsRange -TestProcedureRange $TestProcedureRange -ExtensionId $ExtensionId -TestRunnerId $TestRunnerId -TestPage $TestPage -DisabledTests $DisabledTests -CodeCoverageTrackingType $CodeCoverageTrackingType -CodeCoverageTrackAllSessions:$CodeCoverageTrackAllSessions -CodeCoverageOutputPath $CodeCoverageOutputPath -CodeCoverageExporterId $CodeCoverageExporterId -ProduceCodeCoverageMap $ProduceCodeCoverageMap -StabilityRun $StabilityRun
+    Setup-TestRun -DisableSSLVerification:$DisableSSLVerification -AutorizationType $AutorizationType -Credential $Credential -ServiceUrl $ServiceUrl -TestSuite $TestSuite `
+        -TestCodeunitsRange $TestCodeunitsRange -TestProcedureRange $TestProcedureRange -ExtensionId $ExtensionId -RequiredTestIsolation $RequiredTestIsolation -TestType $TestType `
+        -TestRunnerId $TestRunnerId -TestPage $TestPage -DisabledTests $DisabledTests -CodeCoverageTrackingType $CodeCoverageTrackingType -CodeCoverageTrackAllSessions:$CodeCoverageTrackAllSessions -CodeCoverageOutputPath $CodeCoverageOutputPath -CodeCoverageExporterId $CodeCoverageExporterId -ProduceCodeCoverageMap $ProduceCodeCoverageMap -StabilityRun $StabilityRun
             
     $testRunResults = New-Object System.Collections.ArrayList 
     $testResult = ''
@@ -263,6 +268,9 @@ function Setup-TestRun
     [string] $TestCodeunitsRange = "",
     [string] $TestProcedureRange = "",
     [string] $ExtensionId = "",
+    [ValidateSet('None','Disabled','Codeunit','Function')]
+    [string] $RequiredTestIsolation = "None",
+    [string] $TestType,
     [int] $TestRunnerId = $global:DefaultTestRunner,
     [string] $TestPage = $global:DefaultTestPage,
     [array] $DisabledTests = @(),
@@ -276,7 +284,7 @@ function Setup-TestRun
     [bool] $StabilityRun
 )
 {
-    Write-Host "Setting up test run: $CodeCoverageTrackingType - $CodeCoverageOutputPath"
+    Write-Log "Setting up test run: $CodeCoverageTrackingType - $CodeCoverageOutputPath"
     if($CodeCoverageTrackingType -ne 'Disabled')
     {
         if (-not (Test-Path -Path $CodeCoverageOutputPath))
@@ -292,6 +300,10 @@ function Setup-TestRun
         $form = Open-TestForm -TestPage $TestPage -DisableSSLVerification:$DisableSSLVerification -AuthorizationType $AutorizationType -ClientContext $clientContext
         Set-TestSuite -TestSuite $TestSuite -ClientContext $clientContext -Form $form
         Set-ExtensionId -ExtensionId $ExtensionId -Form $form -ClientContext $clientContext
+        if (![string]::IsNullOrEmpty($TestType)) {
+            Set-RequiredTestIsolation -RequiredTestIsolation $RequiredTestIsolation -Form $form -ClientContext $clientContext
+            Set-TestType -TestType $TestType -Form $form -ClientContext $clientContext
+        }
         Set-TestCodeunits -TestCodeunitsFilter $TestCodeunitsRange -Form $form -ClientContext $clientContext
         Set-TestProcedures -Filter $TestProcedureRange -Form $form $ClientContext $clientContext
         Set-TestRunner -TestRunnerId $TestRunnerId -Form $form -ClientContext $clientContext
@@ -313,6 +325,7 @@ function Setup-TestRun
         {
             $clientContext.Dispose()
         }
+        Write-Log "Complete Test Setup"
     }
 }
 
@@ -361,7 +374,8 @@ function Open-ClientSessionWithWait
     [string] $ServiceUrl,
     [pscredential] $Credential,
     [int] $ClientSessionTimeout = 20,
-    [timespan] $TransactionTimeout = $script:DefaultTransactionTimeout
+    [timespan] $TransactionTimeout = $script:DefaultTransactionTimeout,
+    [string] $Culture = $script:DefaultCulture
 )
 {
         $lastErrorMessage = ""
@@ -369,7 +383,7 @@ function Open-ClientSessionWithWait
         {
             try
             {
-                $clientContext = Open-ClientSession -DisableSSLVerification:$DisableSSLVerification -AuthorizationType $AuthorizationType -Credential $Credential -ServiceUrl $ServiceUrl -TransactionTimeout $TransactionTimeout
+                $clientContext = Open-ClientSession -DisableSSLVerification:$DisableSSLVerification -AuthorizationType $AuthorizationType -Credential $Credential -ServiceUrl $ServiceUrl -TransactionTimeout $TransactionTimeout -Culture $Culture
                 return $clientContext
             }
             catch
@@ -438,6 +452,39 @@ function Set-ExtensionId
 
     $extensionIdControl = $ClientContext.GetControlByName($Form, "ExtensionId")
     $ClientContext.SaveValue($extensionIdControl, $ExtensionId)
+}
+
+function Set-RequiredTestIsolation {
+    param (
+        [ValidateSet('None','Disabled','Codeunit','Function')]
+        [string] $RequiredTestIsolation = "None",
+        [ClientContext] $ClientContext,
+        $Form
+    )
+    $TestIsolationValues = @{
+        None = 0
+        Disabled = 1
+        Codeunit = 2
+        Function = 3
+    }
+    $testIsolationControl = $ClientContext.GetControlByName($Form, "RequiredTestIsolation")
+    $ClientContext.SaveValue($testIsolationControl, $TestIsolationValues[$RequiredTestIsolation])
+}
+
+function Set-TestType {
+    param (
+        [ValidateSet("UnitTest","IntegrationTest","Uncategorized")]
+        [string] $TestType,
+        [ClientContext] $ClientContext,
+        $Form
+    )
+    $TypeValues = @{    
+        UnitTest = 1
+        IntegrationTest = 2
+        Uncategorized = 3
+    }
+    $testTypeControl = $ClientContext.GetControlByName($Form, "TestType")
+    $ClientContext.SaveValue($testTypeControl, $TypeValues[$TestType])
 }
 
 function Set-TestSuite
@@ -723,40 +770,40 @@ Export-ModuleMember -Function Run-AlTestsInternal,Open-ClientSessionWithWait, Op
 # SIG # Begin signature block
 # MIIoKAYJKoZIhvcNAQcCoIIoGTCCKBUCAQExDzANBglghkgBZQMEAgEFADB5Bgor
 # BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
-# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCC5BrnZcZhyefpU
-# q9NcuLNnr5KMtJzwpF8pan6ubDaROqCCDXYwggX0MIID3KADAgECAhMzAAAEBGx0
-# Bv9XKydyAAAAAAQEMA0GCSqGSIb3DQEBCwUAMH4xCzAJBgNVBAYTAlVTMRMwEQYD
+# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCBKIDSqOm9oUE5X
+# OIY+HhcPvHEV7QPv41mMaq8LxValSqCCDXYwggX0MIID3KADAgECAhMzAAAEhV6Z
+# 7A5ZL83XAAAAAASFMA0GCSqGSIb3DQEBCwUAMH4xCzAJBgNVBAYTAlVTMRMwEQYD
 # VQQIEwpXYXNoaW5ndG9uMRAwDgYDVQQHEwdSZWRtb25kMR4wHAYDVQQKExVNaWNy
 # b3NvZnQgQ29ycG9yYXRpb24xKDAmBgNVBAMTH01pY3Jvc29mdCBDb2RlIFNpZ25p
-# bmcgUENBIDIwMTEwHhcNMjQwOTEyMjAxMTE0WhcNMjUwOTExMjAxMTE0WjB0MQsw
+# bmcgUENBIDIwMTEwHhcNMjUwNjE5MTgyMTM3WhcNMjYwNjE3MTgyMTM3WjB0MQsw
 # CQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9u
 # ZDEeMBwGA1UEChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMR4wHAYDVQQDExVNaWNy
 # b3NvZnQgQ29ycG9yYXRpb24wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
-# AQC0KDfaY50MDqsEGdlIzDHBd6CqIMRQWW9Af1LHDDTuFjfDsvna0nEuDSYJmNyz
-# NB10jpbg0lhvkT1AzfX2TLITSXwS8D+mBzGCWMM/wTpciWBV/pbjSazbzoKvRrNo
-# DV/u9omOM2Eawyo5JJJdNkM2d8qzkQ0bRuRd4HarmGunSouyb9NY7egWN5E5lUc3
-# a2AROzAdHdYpObpCOdeAY2P5XqtJkk79aROpzw16wCjdSn8qMzCBzR7rvH2WVkvF
-# HLIxZQET1yhPb6lRmpgBQNnzidHV2Ocxjc8wNiIDzgbDkmlx54QPfw7RwQi8p1fy
-# 4byhBrTjv568x8NGv3gwb0RbAgMBAAGjggFzMIIBbzAfBgNVHSUEGDAWBgorBgEE
-# AYI3TAgBBggrBgEFBQcDAzAdBgNVHQ4EFgQU8huhNbETDU+ZWllL4DNMPCijEU4w
+# AQDASkh1cpvuUqfbqxele7LCSHEamVNBfFE4uY1FkGsAdUF/vnjpE1dnAD9vMOqy
+# 5ZO49ILhP4jiP/P2Pn9ao+5TDtKmcQ+pZdzbG7t43yRXJC3nXvTGQroodPi9USQi
+# 9rI+0gwuXRKBII7L+k3kMkKLmFrsWUjzgXVCLYa6ZH7BCALAcJWZTwWPoiT4HpqQ
+# hJcYLB7pfetAVCeBEVZD8itKQ6QA5/LQR+9X6dlSj4Vxta4JnpxvgSrkjXCz+tlJ
+# 67ABZ551lw23RWU1uyfgCfEFhBfiyPR2WSjskPl9ap6qrf8fNQ1sGYun2p4JdXxe
+# UAKf1hVa/3TQXjvPTiRXCnJPAgMBAAGjggFzMIIBbzAfBgNVHSUEGDAWBgorBgEE
+# AYI3TAgBBggrBgEFBQcDAzAdBgNVHQ4EFgQUuCZyGiCuLYE0aU7j5TFqY05kko0w
 # RQYDVR0RBD4wPKQ6MDgxHjAcBgNVBAsTFU1pY3Jvc29mdCBDb3Jwb3JhdGlvbjEW
-# MBQGA1UEBRMNMjMwMDEyKzUwMjkyMzAfBgNVHSMEGDAWgBRIbmTlUAXTgqoXNzci
+# MBQGA1UEBRMNMjMwMDEyKzUwNTM1OTAfBgNVHSMEGDAWgBRIbmTlUAXTgqoXNzci
 # tW2oynUClTBUBgNVHR8ETTBLMEmgR6BFhkNodHRwOi8vd3d3Lm1pY3Jvc29mdC5j
 # b20vcGtpb3BzL2NybC9NaWNDb2RTaWdQQ0EyMDExXzIwMTEtMDctMDguY3JsMGEG
 # CCsGAQUFBwEBBFUwUzBRBggrBgEFBQcwAoZFaHR0cDovL3d3dy5taWNyb3NvZnQu
 # Y29tL3BraW9wcy9jZXJ0cy9NaWNDb2RTaWdQQ0EyMDExXzIwMTEtMDctMDguY3J0
-# MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggIBAIjmD9IpQVvfB1QehvpC
-# Ge7QeTQkKQ7j3bmDMjwSqFL4ri6ae9IFTdpywn5smmtSIyKYDn3/nHtaEn0X1NBj
-# L5oP0BjAy1sqxD+uy35B+V8wv5GrxhMDJP8l2QjLtH/UglSTIhLqyt8bUAqVfyfp
-# h4COMRvwwjTvChtCnUXXACuCXYHWalOoc0OU2oGN+mPJIJJxaNQc1sjBsMbGIWv3
-# cmgSHkCEmrMv7yaidpePt6V+yPMik+eXw3IfZ5eNOiNgL1rZzgSJfTnvUqiaEQ0X
-# dG1HbkDv9fv6CTq6m4Ty3IzLiwGSXYxRIXTxT4TYs5VxHy2uFjFXWVSL0J2ARTYL
-# E4Oyl1wXDF1PX4bxg1yDMfKPHcE1Ijic5lx1KdK1SkaEJdto4hd++05J9Bf9TAmi
-# u6EK6C9Oe5vRadroJCK26uCUI4zIjL/qG7mswW+qT0CW0gnR9JHkXCWNbo8ccMk1
-# sJatmRoSAifbgzaYbUz8+lv+IXy5GFuAmLnNbGjacB3IMGpa+lbFgih57/fIhamq
-# 5VhxgaEmn/UjWyr+cPiAFWuTVIpfsOjbEAww75wURNM1Imp9NJKye1O24EspEHmb
-# DmqCUcq7NqkOKIG4PVm3hDDED/WQpzJDkvu4FrIbvyTGVU01vKsg4UfcdiZ0fQ+/
-# V0hf8yrtq9CkB8iIuk5bBxuPMIIHejCCBWKgAwIBAgIKYQ6Q0gAAAAAAAzANBgkq
+# MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggIBACjmqAp2Ci4sTHZci+qk
+# tEAKsFk5HNVGKyWR2rFGXsd7cggZ04H5U4SV0fAL6fOE9dLvt4I7HBHLhpGdE5Uj
+# Ly4NxLTG2bDAkeAVmxmd2uKWVGKym1aarDxXfv3GCN4mRX+Pn4c+py3S/6Kkt5eS
+# DAIIsrzKw3Kh2SW1hCwXX/k1v4b+NH1Fjl+i/xPJspXCFuZB4aC5FLT5fgbRKqns
+# WeAdn8DsrYQhT3QXLt6Nv3/dMzv7G/Cdpbdcoul8FYl+t3dmXM+SIClC3l2ae0wO
+# lNrQ42yQEycuPU5OoqLT85jsZ7+4CaScfFINlO7l7Y7r/xauqHbSPQ1r3oIC+e71
+# 5s2G3ClZa3y99aYx2lnXYe1srcrIx8NAXTViiypXVn9ZGmEkfNcfDiqGQwkml5z9
+# nm3pWiBZ69adaBBbAFEjyJG4y0a76bel/4sDCVvaZzLM3TFbxVO9BQrjZRtbJZbk
+# C3XArpLqZSfx53SuYdddxPX8pvcqFuEu8wcUeD05t9xNbJ4TtdAECJlEi0vvBxlm
+# M5tzFXy2qZeqPMXHSQYqPgZ9jvScZ6NwznFD0+33kbzyhOSz/WuGbAu4cHZG8gKn
+# lQVT4uA2Diex9DMs2WHiokNknYlLoUeWXW1QrJLpqO82TLyKTbBM/oZHAdIc0kzo
+# STro9b3+vjn2809D0+SOOCVZMIIHejCCBWKgAwIBAgIKYQ6Q0gAAAAAAAzANBgkq
 # hkiG9w0BAQsFADCBiDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0b24x
 # EDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1pY3Jvc29mdCBDb3Jwb3JhdGlv
 # bjEyMDAGA1UEAxMpTWljcm9zb2Z0IFJvb3QgQ2VydGlmaWNhdGUgQXV0aG9yaXR5
@@ -799,63 +846,63 @@ Export-ModuleMember -Function Run-AlTestsInternal,Open-ClientSessionWithWait, Op
 # /Xmfwb1tbWrJUnMTDXpQzTGCGggwghoEAgEBMIGVMH4xCzAJBgNVBAYTAlVTMRMw
 # EQYDVQQIEwpXYXNoaW5ndG9uMRAwDgYDVQQHEwdSZWRtb25kMR4wHAYDVQQKExVN
 # aWNyb3NvZnQgQ29ycG9yYXRpb24xKDAmBgNVBAMTH01pY3Jvc29mdCBDb2RlIFNp
-# Z25pbmcgUENBIDIwMTECEzMAAAQEbHQG/1crJ3IAAAAABAQwDQYJYIZIAWUDBAIB
+# Z25pbmcgUENBIDIwMTECEzMAAASFXpnsDlkvzdcAAAAABIUwDQYJYIZIAWUDBAIB
 # BQCggZAwGQYJKoZIhvcNAQkDMQwGCisGAQQBgjcCAQQwLwYJKoZIhvcNAQkEMSIE
-# IN3iKuuqcuQxwxBwj7enMeDFOeTg4YA92uExPDXMvADDMEIGCisGAQQBgjcCAQwx
+# IF9JCl9de3YPpjKa1iM5Sas6g/4bk3DvBbNHpOGZH8vkMEIGCisGAQQBgjcCAQwx
 # NDAyoBSAEgBNAGkAYwByAG8AcwBvAGYAdKEagBhodHRwOi8vd3d3Lm1pY3Jvc29m
-# dC5jb20wDQYJKoZIhvcNAQEBBQAEggEApzeHJ+GspNHe6kZRL9JXuKCTL+sR4AEO
-# /CJDFKE1iBtoKE9eKSereDXG4LWqftam5Jt2swLeek4vFiw+5yHX8QFU4WXJKDGo
-# 2LSd1etjxgl7cSWhjyfUM6+sgEdrzA+ye9Z4I2SF4vhxq6DRS0d30+G63TfFOwG6
-# EwqBfMDC7Upw+NlOvjI1e1BJGtaLdmtQi3g+pYxba8+icc5LdqPeXux1FP+Pbkfg
-# +GiaA6msHB4+oNYq5hG01IQeLyNohD/j/fqApACO15wB9Cn0Zk8h6C1O3vk0OEua
-# Ww7jTM8fhwaBofYehUYEt+2NuV1p3Gv5rJWdVbrEH5B+Ql/1Je/Y3aGCF7Awghes
+# dC5jb20wDQYJKoZIhvcNAQEBBQAEggEATDy8vWdbVeqhS4tog7gaakNAB69DdoB7
+# 30jnRDJtmnpzSsN3zV5AQqmd+/bk9zqCs2FbLaB9fc2THFE+JI0rWIDrfoizPWUZ
+# ywVkcj3KNVqluUfdNmrxsQnzuyFG54BTvGjVOAF9kD9GScW5qMVyXE8enK/P+UuK
+# T8t79uAsledp8xSn9xu3tm01VNhCZHMMlhR/D2SAf5NV27ltnWBdIAL0FlC54a+n
+# iXkJfhQ0kLBf8y5ZQ6RMHVGGdELZqLoAEliS8KCfAtmXxpRjsigLZxKuPwfQNiI+
+# 5IwfPrfNShK39MtF8hocrGkuW92UR/9IYt+lvXLu4DCH+14M9yEUoqGCF7Awghes
 # BgorBgEEAYI3AwMBMYIXnDCCF5gGCSqGSIb3DQEHAqCCF4kwgheFAgEDMQ8wDQYJ
 # YIZIAWUDBAIBBQAwggFaBgsqhkiG9w0BCRABBKCCAUkEggFFMIIBQQIBAQYKKwYB
-# BAGEWQoDATAxMA0GCWCGSAFlAwQCAQUABCDxL4CAndrK4au75yuX4C6Dm787MBBO
-# 0ee2X1d+aST/PQIGZ+058wSeGBMyMDI1MDQxMDE2MjcyNC42MDFaMASAAgH0oIHZ
+# BAGEWQoDATAxMA0GCWCGSAFlAwQCAQUABCAreoIzkwxGcl63eNNZ3r/ds0tz8Wwj
+# otoTmxqSyu6MLQIGaK4BFD76GBMyMDI1MDkxNjE1NDg1Ni41NjZaMASAAgH0oIHZ
 # pIHWMIHTMQswCQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UE
 # BxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMS0wKwYD
 # VQQLEyRNaWNyb3NvZnQgSXJlbGFuZCBPcGVyYXRpb25zIExpbWl0ZWQxJzAlBgNV
-# BAsTHm5TaGllbGQgVFNTIEVTTjo1NzFBLTA1RTAtRDk0NzElMCMGA1UEAxMcTWlj
+# BAsTHm5TaGllbGQgVFNTIEVTTjozNjA1LTA1RTAtRDk0NzElMCMGA1UEAxMcTWlj
 # cm9zb2Z0IFRpbWUtU3RhbXAgU2VydmljZaCCEf4wggcoMIIFEKADAgECAhMzAAAB
-# +8vLbDdn5TCVAAEAAAH7MA0GCSqGSIb3DQEBCwUAMHwxCzAJBgNVBAYTAlVTMRMw
+# 91ggdQTK+8L0AAEAAAH3MA0GCSqGSIb3DQEBCwUAMHwxCzAJBgNVBAYTAlVTMRMw
 # EQYDVQQIEwpXYXNoaW5ndG9uMRAwDgYDVQQHEwdSZWRtb25kMR4wHAYDVQQKExVN
 # aWNyb3NvZnQgQ29ycG9yYXRpb24xJjAkBgNVBAMTHU1pY3Jvc29mdCBUaW1lLVN0
-# YW1wIFBDQSAyMDEwMB4XDTI0MDcyNTE4MzExM1oXDTI1MTAyMjE4MzExM1owgdMx
+# YW1wIFBDQSAyMDEwMB4XDTI0MDcyNTE4MzEwNloXDTI1MTAyMjE4MzEwNlowgdMx
 # CzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpXYXNoaW5ndG9uMRAwDgYDVQQHEwdSZWRt
 # b25kMR4wHAYDVQQKExVNaWNyb3NvZnQgQ29ycG9yYXRpb24xLTArBgNVBAsTJE1p
 # Y3Jvc29mdCBJcmVsYW5kIE9wZXJhdGlvbnMgTGltaXRlZDEnMCUGA1UECxMeblNo
-# aWVsZCBUU1MgRVNOOjU3MUEtMDVFMC1EOTQ3MSUwIwYDVQQDExxNaWNyb3NvZnQg
+# aWVsZCBUU1MgRVNOOjM2MDUtMDVFMC1EOTQ3MSUwIwYDVQQDExxNaWNyb3NvZnQg
 # VGltZS1TdGFtcCBTZXJ2aWNlMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC
-# AgEAqMJWQeWAq4LwvSjYsjP0Uvhvm0j0aAOJiMLg0sLfxKoTXAdKD6oMuq5rF5oE
-# iOxV+9ox0H95Q8fhoZq3x9lxguZyTOK4l2xtcgtJCtjXRllM2bTpjOg35RUrBy0c
-# AloBU9GJBs7LBNrcbH6rBiOvqDQNicPRZwq16xyjMidU1J1AJuat9yLn7taifoD5
-# 8blYEcBvkj5dH1la9zU846QDeOoRO6NcqHLsDx8/zVKZxP30mW6Y7RMsqtB8cGCg
-# GwVVurOnaNLXs31qTRTyVHX8ppOdoSihCXeqebgJCRzG8zG/e/k0oaBjFFGl+8uF
-# ELwCyh4wK9Z5+azTzfa2GD4p6ihtskXs3lnW05UKfDJhAADt6viOc0Rk/c8zOiqz
-# h0lKpf/eWUY2o/hvcDPZNgLaHvyfDqb8AWaKvO36iRZSXqhSw8SxJo0TCpsbCjmt
-# x0LpHnqbb1UF7cq09kCcfWTDPcN12pbYLqck0bIIfPKbc7HnrkNQks/mSbVZTnDy
-# T3O8zF9q4DCfWesSr1akycDduGxCdKBvgtJh1YxDq1skTweYx5iAWXnB7KMyls3W
-# QZbTubTCLLt8Xn8t+slcKm5DkvobubmHSriuTA3wTyIy4FxamTKm0VDu9mWds8Mt
-# jUSJVwNVVlBXaQ3ZMcVjijyVoUNVuBY9McwYcIQK62wQ20ECAwEAAaOCAUkwggFF
-# MB0GA1UdDgQWBBRHVSGYUNQ3RwOl71zIAuUjIKg1KjAfBgNVHSMEGDAWgBSfpxVd
+# AgEA0OdHTBNom6/uXKaEKP9rPITkT6QxF11tjzB0Nk1byDpPrFTHha3hxwSdTcr8
+# Y0a3k6EQlwqy6ROz42e0R5eDW+dCoQapipDIFUOYp3oNuqwX/xepATEkY17MyXFx
+# 6rQW2NcWUJW3Qo2AuJ0HOtblSpItQZPGmHnGqkt/DB45Fwxk6VoSvxNcQKhKETku
+# zrt8U6DRccQm1FdhmPKgDzgcfDPM5o+GnzbiMu6y069A4EHmLMmkecSkVvBmcZ8V
+# nzFHTDkGLdpnDV5FXjVObAgbSM0cnqYSGfRp7VGHBRqyoscvR4bcQ+CV9pDjbJ6S
+# 5rZn1uA8hRhj09Hs33HRevt4oWAVYGItgEsG+BrCYbpgWMDEIVnAgPZEiPAaI8wB
+# GemE4feEkuz7TAwgkRBcUzLgQ4uvPqRD1A+Jkt26+pDqWYSn0MA8j0zacQk9q/Av
+# ciPXD9It2ez+mqEzgFRRsJGLtcf9HksvK8Jsd6I5zFShlqi5bpzf1Y4NOiNOh5Qw
+# W1pIvA5irlal7qFhkAeeeZqmop8+uNxZXxFCQG3R3s5pXW89FiCh9rmXrVqOCwgc
+# XFIJQAQkllKsI+UJqGq9rmRABJz5lHKTFYmFwcM52KWWjNx3z6odwz2h+sxaxewT
+# oe9GqtDx3/aU+yqNRcB8w0tSXUf+ylN4uk5xHEpLpx+ZNNsCAwEAAaOCAUkwggFF
+# MB0GA1UdDgQWBBTfRqQzP3m9PZWuLf1p8/meFfkmmDAfBgNVHSMEGDAWgBSfpxVd
 # AF5iXYP05dJlpxtTNRnpcjBfBgNVHR8EWDBWMFSgUqBQhk5odHRwOi8vd3d3Lm1p
 # Y3Jvc29mdC5jb20vcGtpb3BzL2NybC9NaWNyb3NvZnQlMjBUaW1lLVN0YW1wJTIw
 # UENBJTIwMjAxMCgxKS5jcmwwbAYIKwYBBQUHAQEEYDBeMFwGCCsGAQUFBzAChlBo
 # dHRwOi8vd3d3Lm1pY3Jvc29mdC5jb20vcGtpb3BzL2NlcnRzL01pY3Jvc29mdCUy
 # MFRpbWUtU3RhbXAlMjBQQ0ElMjAyMDEwKDEpLmNydDAMBgNVHRMBAf8EAjAAMBYG
 # A1UdJQEB/wQMMAoGCCsGAQUFBwMIMA4GA1UdDwEB/wQEAwIHgDANBgkqhkiG9w0B
-# AQsFAAOCAgEAwzoIKOY2dnUjfWuMiGoz/ovoc1e86VwWaZNFdgRmOoQuRe4nLdtZ
-# ONtTHNk3Sj3nkyBszzxSbZEQ0DduyKHHI5P8V87jFttGnlR0wPP22FAebbvAbutk
-# MMVQMFzhVBWiWD0VAnu9x0fjifLKDAVXLwoun5rCFqwbasXFc7H/0DPiC+DBn3tU
-# xefvcxUCys4+DC3s8CYp7WWXpZ8Wb/vdBhDliHmB7pWcmsB83uc4/P2GmAI3HMkO
-# Eu7fCaSYoQhouWOr07l/KM4TndylIirm8f2WwXQcFEzmUvISM6ludUwGlVNfTTJU
-# q2bTDEd3tlDKtV9AUY3rrnFwHTwJryLtT4IFhvgBfND3mL1eeSakKf7xTII4Jyt1
-# 5SXhHd5oI/XGjSgykgJrWA57rGnAC7ru3/ZbFNCMK/Jj6X8X4L6mBOYa2NGKwH4A
-# 37YGDrecJ/qXXWUYvfLYqHGf8ThYl12Yg1rwSKpWLolA/B1eqBw4TRcvVY0IvNNi
-# 5sm+//HJ9Aw6NJuR/uDR7X7vDXicpXMlRNgFMyADb8AFIvQPdHqcRpRorY+YUGlv
-# zeJx/2gNYyezAokbrFhACsJ2BfyeLyCEo6AuwEHn511PKE8dK4JvlmLSoHj7VFR3
-# NHDk3zRkx0ExkmF8aOdpvoKhuwBCxoZ/JhbzSzrvZ74GVjKKIyt5FA0wggdxMIIF
+# AQsFAAOCAgEAN0ajafILeL6SQIMIMAXM1Qd6xaoci2mOrpR8vKWyyTsL3b83A7XG
+# LiAbQxTrqnXvVWWeNst5YQD8saO+UTgOLJdTdfUADhLXoK+RlwjfndimIJT9MH9t
+# UYXLzJXKhZM09ouPwNsrn8YOLIpdAi5TPyN8Cl11OGZSlP9r8JnvomW00AoJ4Pl9
+# rlg0G5lcQknAXqHa9nQdWp1ZxXqNd+0JsKmlR8tcANX33ClM9NnaClJExLQHiKeH
+# UUWtqyLMl65TW6wRM7XlF7Y+PTnC8duNWn4uLng+ON/Z39GO6qBj7IEZxoq4o3av
+# Eh9ba43UU6TgzVZaBm8VaA0wSwUe/pqpTOYFWN62XL3gl/JC2pzfIPxP66XfRLIx
+# afjBVXm8KVDn2cML9IvRK02s941Y5+RR4gSAOhLiQQ6A03VNRup+spMa0k+XTPAi
+# +2aMH5xa1Zjb/K8u9f9M05U0/bUMJXJDP++ysWpJbVRDiHG7szaca+r3HiUPjQJy
+# Ql2NiOcYTGV/DcLrLCBK2zG503FGb04N5Kf10XgAwFaXlod5B9eKh95PnXKx2LNB
+# gLwG85anlhhGxxBQ5mFsJGkBn0PZPtAzZyfr96qxzpp2pH9DJJcjKCDrMmZziXaz
+# pa5VVN36CO1kDU4ABkSYTXOM8RmJXuQm7mUF3bWmj+hjAJb4pz6hT5UwggdxMIIF
 # WaADAgECAhMzAAAAFcXna54Cm0mZAAAAAAAVMA0GCSqGSIb3DQEBCwUAMIGIMQsw
 # CQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9u
 # ZDEeMBwGA1UEChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMTIwMAYDVQQDEylNaWNy
@@ -899,41 +946,41 @@ Export-ModuleMember -Function Run-AlTestsInternal,Open-ClientSessionWithWait, Op
 # pIHWMIHTMQswCQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UE
 # BxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMS0wKwYD
 # VQQLEyRNaWNyb3NvZnQgSXJlbGFuZCBPcGVyYXRpb25zIExpbWl0ZWQxJzAlBgNV
-# BAsTHm5TaGllbGQgVFNTIEVTTjo1NzFBLTA1RTAtRDk0NzElMCMGA1UEAxMcTWlj
-# cm9zb2Z0IFRpbWUtU3RhbXAgU2VydmljZaIjCgEBMAcGBSsOAwIaAxUABHHn7NCG
-# usZz2RfVbyuwYwPykBWggYMwgYCkfjB8MQswCQYDVQQGEwJVUzETMBEGA1UECBMK
+# BAsTHm5TaGllbGQgVFNTIEVTTjozNjA1LTA1RTAtRDk0NzElMCMGA1UEAxMcTWlj
+# cm9zb2Z0IFRpbWUtU3RhbXAgU2VydmljZaIjCgEBMAcGBSsOAwIaAxUAb28KDG/x
+# XbNBjmM7/nqw3bgrEOaggYMwgYCkfjB8MQswCQYDVQQGEwJVUzETMBEGA1UECBMK
 # V2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9zb2Z0
 # IENvcnBvcmF0aW9uMSYwJAYDVQQDEx1NaWNyb3NvZnQgVGltZS1TdGFtcCBQQ0Eg
-# MjAxMDANBgkqhkiG9w0BAQsFAAIFAOuiQ+8wIhgPMjAyNTA0MTAxMzE5NDNaGA8y
-# MDI1MDQxMTEzMTk0M1owdzA9BgorBgEEAYRZCgQBMS8wLTAKAgUA66JD7wIBADAK
-# AgEAAgIBlwIB/zAHAgEAAgITAzAKAgUA66OVbwIBADA2BgorBgEEAYRZCgQCMSgw
+# MjAxMDANBgkqhkiG9w0BAQsFAAIFAOxzhFcwIhgPMjAyNTA5MTYwNjM4MTVaGA8y
+# MDI1MDkxNzA2MzgxNVowdzA9BgorBgEEAYRZCgQBMS8wLTAKAgUA7HOEVwIBADAK
+# AgEAAgIcfAIB/zAHAgEAAgISgDAKAgUA7HTV1wIBADA2BgorBgEEAYRZCgQCMSgw
 # JjAMBgorBgEEAYRZCgMCoAowCAIBAAIDB6EgoQowCAIBAAIDAYagMA0GCSqGSIb3
-# DQEBCwUAA4IBAQAZxBf7FlDE9Z1ss7XVIgQTwSstZCJkeNPZkZU6N5kln0H3yZvE
-# zvYBtTSqm3F9AyUPjAXJ0RN5ViCE26CgYxdZJvtlXFHo4bRiQQF1VfBMwlqXqPHU
-# tGBLSRa9WSJaoawYeWGatXxUB8GP9AJ+2Rj+nvROwp53iNN5UDbWiziXG3GQ35JS
-# Z6vNGld//RitJfXo68KLThAojd5TxmpibpN9pA3fgL4sL2Kuob+/e7Y/eH3k2NTD
-# 6cAxheLeo/Y1eKBhM5zdHFXdWy4SgoD4T+7bHAkDaSgXUdm8o4/uGpp+7u6UmHtN
-# 7HyKqq3ndWUYaq6gM/RhHr0UfF9s05Y1kwbMMYIEDTCCBAkCAQEwgZMwfDELMAkG
+# DQEBCwUAA4IBAQBC+0z7WtRZOMQrgpmH7bRsQBnZSVggzwFvgZ42oQOcL8DYuSPM
+# vI3Uenqtr3te/oI6adKNCcpxQmUqTv1RVqz5GU+8eOQ3SAEPTO9S0QxTItfA08cd
+# P3X5qkmlTREwwuq/HQjsZsvE526R/L6rO4zgI8lPehu35qdRpvJtFJ7rFTcXljx0
+# iLb1Hg3fx+gu9kbW57FN+0PkjkLTTLpzPQ2og7sNoL0OaUbiMCkLjkE36T2vyE8b
+# 55x4+ocbwh246auP74aiFEjYfukflPyliYHAOM0zJ/2JXUxSN2AoQvSpudqMcJ5p
+# dJQJoI08g4R6rRDYITy7JOV6jUl9UAUq7e3YMYIEDTCCBAkCAQEwgZMwfDELMAkG
 # A1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0b24xEDAOBgNVBAcTB1JlZG1vbmQx
 # HjAcBgNVBAoTFU1pY3Jvc29mdCBDb3Jwb3JhdGlvbjEmMCQGA1UEAxMdTWljcm9z
-# b2Z0IFRpbWUtU3RhbXAgUENBIDIwMTACEzMAAAH7y8tsN2flMJUAAQAAAfswDQYJ
+# b2Z0IFRpbWUtU3RhbXAgUENBIDIwMTACEzMAAAH3WCB1BMr7wvQAAQAAAfcwDQYJ
 # YIZIAWUDBAIBBQCgggFKMBoGCSqGSIb3DQEJAzENBgsqhkiG9w0BCRABBDAvBgkq
-# hkiG9w0BCQQxIgQgfSaelS7xnoKhmtt3HBB6LXnItJHzB+/G1BDKrn+8Mp4wgfoG
-# CyqGSIb3DQEJEAIvMYHqMIHnMIHkMIG9BCA52wKr/KCFlVNYiWsCLsB4qhjEYEP3
-# xHqYqDu1SSTlGDCBmDCBgKR+MHwxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpXYXNo
+# hkiG9w0BCQQxIgQgibKwVbecR+8t1IE/p4tj0xY4DMPdd4hkefsV7T55UCwwgfoG
+# CyqGSIb3DQEJEAIvMYHqMIHnMIHkMIG9BCAh2pjaa3ca0ecYuhu60uYHP/IKnPbe
+# dbVQJ5SoIH5Z4jCBmDCBgKR+MHwxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpXYXNo
 # aW5ndG9uMRAwDgYDVQQHEwdSZWRtb25kMR4wHAYDVQQKExVNaWNyb3NvZnQgQ29y
 # cG9yYXRpb24xJjAkBgNVBAMTHU1pY3Jvc29mdCBUaW1lLVN0YW1wIFBDQSAyMDEw
-# AhMzAAAB+8vLbDdn5TCVAAEAAAH7MCIEIKIKX5T5Zh2yb9iv9D6OFqKVlmvk2sfA
-# jD78rLgwJaH4MA0GCSqGSIb3DQEBCwUABIICAJmgO5VuO5D2DvvIbPqxZLejjpi8
-# x3hQ7vCqCBSdqOAc7n31aKFqf4Ui7PlpNZ8Uc8M3mA7mgprdhe1aTOdkUYDpwtRo
-# c5TUY/BHsyzKmRrDj4hsQYIRO843skC+ojhfAJfhHSmtTwd8vG8kooI9yaOIUG0u
-# 0WolNrLHdopDiftKtWlmcwvkwkrAL4E66CJHLUycItD/WUao/wfJ8OmqSKelXmy8
-# MZZu6+rZH46VeFpBA3WNMgr2PQsO1j/xPlSdt71T7emRSU6v1UzLBF8Dtl0+KtYr
-# OQHxfiTuv7YUONoJobfDOLd5a07wPc0p2UFnFyjm2TkcAn5t0Y15Vb/p9HjO/Vnl
-# QAzPIwTleWA55305/633hPo1KJaySYgzH45m2NDlexIcWeAALHuw4TQ1WyQpSZCt
-# 0xV0pcsp57HwxE5JzB0RaVkueRHHJ3eN8g7iK/gBzdbBdobB8rEvQAVEJy7oCgZH
-# rXjEtICb3WUm3rFh6PTg54KZc83xLQcCMDDV1qDhBXWh8a9F+SnfyEJwz7aZZFEi
-# m1oRAcAuXRtZHsv3jjj4RJ122v4uEPlb0QgJ3/D6qFF1ZW4l5GeU7zGm7bKWnmtA
-# ryEe1yt7pQGVFZCEgXkgjjgawYEc9UpoD7gzaJF2mPbEgGUcF1TWr0Kv9IxspOJe
-# 5f+cqsNPPCsGQGmM
+# AhMzAAAB91ggdQTK+8L0AAEAAAH3MCIEINlbeS0pV+XdkjPCXoh+6LGB4L27sBvu
+# O2J+5Uu4ts7iMA0GCSqGSIb3DQEBCwUABIICAJcg0dCWVHWZJA7fC7eYBIQHfvkQ
+# 6/R64TaK7iVUi+pNFxbkuLWpF5KcoYIGMyQwhZWaMP1V8bF4AhYVLUxa1GJo/wFd
+# GBGhTbOMSx5OfRZOG+CgH6RUHD773qrmP5z3vrYMsXJmqNH19Bz0ZmSgbArNfk3q
+# QeeyQ2MrAJt98mP+xxv4AMOE8Kj0J1ak8xhD25WOdIJnO3In/oZD30SsuurDO+8V
+# Em0n4OnRg6sWUViukTgxn5S6jRJqa+oSMrl9nV4EJT6b3L6JbrMdOy44AP9xETdR
+# YmVzcowpApPWmaHkOi0soBj8+l91zUlUxVZrPDVZGiEFsWVq9DgjkVlrJ++K5SBE
+# 8s8SGGmfLFB2HjTVqbxIImst6j1EMzN5i0nVEfcWTD4nAf80NoWgjU/miboolPn9
+# 88dAIIJgRwobYAnE83WX+xDOx2ppe2kSn3geddWnG8U3pGPg3JjThEAIKtwUxpXV
+# 5D07yaKi9vUwQCLGXz0KbYw9BiEGmKgWyg5enzAZQz13msTTfAD146gz4WFNNqWS
+# Jz2y729BS/k9310E7Lsu6mBtmR5eH+pyWWXjc3otgTisyoN/l5kSjtaNscaeIHXK
+# h1uUe1FHbnv6FwRWlF9aqlxDybVh8REaeyPfcT3RpsEy3VlWfNoTSlA6WpL9YtKH
+# Tup8Yh0RgKTvCycn
 # SIG # End signature block

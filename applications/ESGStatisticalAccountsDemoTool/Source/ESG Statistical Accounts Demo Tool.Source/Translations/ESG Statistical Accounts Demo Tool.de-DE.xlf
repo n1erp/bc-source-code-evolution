@@ -3,35 +3,11 @@
   <file datatype="xml" source-language="en-US" target-language="de-DE" original="ESG Statistical Accounts Demo Tool">
     <body>
       <group id="body">
-        <trans-unit id="Codeunit 1989183922 - NamedType 3364135831" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Diversity: Employees Age &lt;25</source>
-          <target state="translated">Diversität: Mitarbeiter im Alter von &lt;25 Jahren</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Account - NamedType DivAge25Lbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 1989183922 - NamedType 22765290" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Diversity: Employees Age 25-40</source>
-          <target state="translated">Diversität: Mitarbeiter im Alter von 25-40 Jahren</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Account - NamedType DivAge40Lbl</note>
-        </trans-unit>
         <trans-unit id="Codeunit 1989183922 - NamedType 1286239046" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Diversity: Employees Age 40-55</source>
           <target state="translated">Diversität: Mitarbeiter im Alter von 40-55 Jahren</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Account - NamedType DivAge55Lbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 1989183922 - NamedType 4239763220" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Diversity: Employees Age 55+</source>
-          <target state="translated">Diversität: Mitarbeitende im Alter von über 55 Jahren</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Account - NamedType DivAge55PlusLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 1989183922 - NamedType 3647467773" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Diversity: Employees Gender - Female</source>
-          <target state="translated">Diversität: Mitarbeitendengeschlecht – Weibllich</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Account - NamedType DivGenFemaleLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 1989183922 - NamedType 214963260" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Diversity: Employees Gender - Male</source>
@@ -39,17 +15,29 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Account - NamedType DivGenMaleLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2568330637 - NamedType 3364135831" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Employees under the age of 25</source>
-          <target state="translated">Mitarbeitende unter 25 Jahren</target>
+        <trans-unit id="Codeunit 1989183922 - NamedType 22765290" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Diversity: Employees Age 25-40</source>
+          <target state="translated">Diversität: Mitarbeiter im Alter von 25-40 Jahren</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Entry - NamedType DivAge25Lbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Account - NamedType DivAge40Lbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2568330637 - NamedType 22765290" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Employees aged 25 to 40</source>
-          <target state="translated">Mitarbeitende im Alter von 25 bis 40 Jahren</target>
+        <trans-unit id="Codeunit 1989183922 - NamedType 3364135831" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Diversity: Employees Age &lt;25</source>
+          <target state="translated">Diversität: Mitarbeiter im Alter von &lt;25 Jahren</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Entry - NamedType DivAge40Lbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Account - NamedType DivAge25Lbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1989183922 - NamedType 3647467773" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Diversity: Employees Gender - Female</source>
+          <target state="translated">Diversität: Mitarbeitendengeschlecht – Weibllich</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Account - NamedType DivGenFemaleLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1989183922 - NamedType 4239763220" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Diversity: Employees Age 55+</source>
+          <target state="translated">Diversität: Mitarbeitende im Alter von über 55 Jahren</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Account - NamedType DivAge55PlusLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 2568330637 - NamedType 1286239046" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Employees aged 40 to 55</source>
@@ -57,11 +45,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Entry - NamedType DivAge55Lbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2568330637 - NamedType 4239763220" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Employees over the age of 55</source>
-          <target state="translated">Mitarbeitende über 55 Jahren</target>
+        <trans-unit id="Codeunit 2568330637 - NamedType 214963260" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Male employees</source>
+          <target state="translated">Männliche Mitarbeitende</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Entry - NamedType DivAge55PlusLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Entry - NamedType DivGenMaleLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2568330637 - NamedType 22765290" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Employees aged 25 to 40</source>
+          <target state="translated">Mitarbeitende im Alter von 25 bis 40 Jahren</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Entry - NamedType DivAge40Lbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2568330637 - NamedType 3364135831" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Employees under the age of 25</source>
+          <target state="translated">Mitarbeitende unter 25 Jahren</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Entry - NamedType DivAge25Lbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 2568330637 - NamedType 3647467773" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Female employees</source>
@@ -69,11 +69,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Entry - NamedType DivGenFemaleLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2568330637 - NamedType 214963260" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Male employees</source>
-          <target state="translated">Männliche Mitarbeitende</target>
+        <trans-unit id="Codeunit 2568330637 - NamedType 4239763220" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Employees over the age of 55</source>
+          <target state="translated">Mitarbeitende über 55 Jahren</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Entry - NamedType DivGenMaleLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Entry - NamedType DivAge55PlusLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3205527778 - NamedType 3199349235" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Environmental, Social, and Governance</source>
@@ -81,11 +81,17 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Jnl. Setup - NamedType ESGBatchDescriptionLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 509638450 - NamedType 3364135831" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Employees under the age of 25</source>
-          <target state="translated">Mitarbeitende unter 25 Jahren</target>
+        <trans-unit id="Codeunit 509638450 - NamedType 1286239046" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Employees aged 40 to 55</source>
+          <target state="translated">Mitarbeitende im Alter von 40 bis 55 Jahren</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Journal - NamedType DivAge25Lbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Journal - NamedType DivAge55Lbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 509638450 - NamedType 214963260" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Male employees</source>
+          <target state="translated">Männliche Mitarbeitende</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Journal - NamedType DivGenMaleLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 509638450 - NamedType 22765290" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Employees aged 25 to 40</source>
@@ -93,17 +99,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Journal - NamedType DivAge40Lbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 509638450 - NamedType 1286239046" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Employees aged 40 to 55</source>
-          <target state="translated">Mitarbeitende im Alter von 40 bis 55 Jahren</target>
+        <trans-unit id="Codeunit 509638450 - NamedType 3364135831" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Employees under the age of 25</source>
+          <target state="translated">Mitarbeitende unter 25 Jahren</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Journal - NamedType DivAge55Lbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 509638450 - NamedType 4239763220" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Employees over the age of 55</source>
-          <target state="translated">Mitarbeitende über 55 Jahren</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Journal - NamedType DivAge55PlusLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Journal - NamedType DivAge25Lbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 509638450 - NamedType 3647467773" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Female employees</source>
@@ -111,11 +111,17 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Journal - NamedType DivGenFemaleLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 509638450 - NamedType 214963260" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Male employees</source>
-          <target state="translated">Männliche Mitarbeitende</target>
+        <trans-unit id="Codeunit 509638450 - NamedType 4239763220" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Employees over the age of 55</source>
+          <target state="translated">Mitarbeitende über 55 Jahren</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Journal - NamedType DivGenMaleLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Statistical Journal - NamedType DivAge55PlusLbl</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3610996284 - EnumValue 2694284627 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statistical Account</source>
+          <target state="translated">Statistisches Konto</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (ObjectTarget=Enum 2207723152)(LookupHint=EnumExtension Stat. Contoso Demo Data Module - EnumValue Statistical Module - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
       </group>
     </body>

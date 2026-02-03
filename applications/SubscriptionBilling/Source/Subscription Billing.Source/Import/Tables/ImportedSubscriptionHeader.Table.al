@@ -9,7 +9,6 @@ table 8008 "Imported Subscription Header"
 {
     DataClassification = CustomerContent;
     Caption = 'Imported Subscription Header';
-    Access = Internal;
 
     fields
     {
@@ -111,6 +110,7 @@ table 8008 "Imported Subscription Header"
         {
             Caption = 'Quantity';
             InitValue = 1;
+            AutoFormatType = 0;
         }
         field(100; "Subscription Header created"; Boolean)
         {

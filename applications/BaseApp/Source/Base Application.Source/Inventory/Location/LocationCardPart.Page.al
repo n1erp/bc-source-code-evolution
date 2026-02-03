@@ -46,7 +46,6 @@ page 5705 "Location Card Part"
                 {
                     ApplicationArea = All;
                     Caption = 'Allow Breakbulk';
-                    ToolTip = 'Specifies that an order can be fulfilled with items stored in alternate units of measure, if an item stored in the requested unit of measure is not found.';
                 }
                 group(Bin)
                 {
@@ -90,12 +89,6 @@ page 5705 "Location Card Part"
                         ApplicationArea = All;
                         Caption = 'Require Shipment';
                         ToolTip = 'Specifies if the location requires a shipment document when shipping items.';
-                    }
-                    field("Prod. Consump. Whse. Handling"; Rec."Prod. Consump. Whse. Handling")
-                    {
-                        ApplicationArea = All;
-                        Caption = 'Production Consumption';
-                        ToolTip = 'Specifies the warehouse handling for consumption in production scenarios.';
                     }
                     field("Asm. Consump. Whse. Handling"; Rec."Asm. Consump. Whse. Handling")
                     {

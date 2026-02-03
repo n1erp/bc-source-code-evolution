@@ -67,7 +67,7 @@ page 8075 "Customer Contract Lines"
                     Caption = 'Primary Attribute';
                     Editable = false;
                     Visible = false;
-                    ToolTip = 'Displays the primary attribute of the related Subscription.';
+                    ToolTip = 'Specifies the primary attribute of the related Subscription.';
                 }
                 field("Service Commitment Description"; Rec."Subscription Line Description")
                 {
@@ -204,6 +204,12 @@ page 8075 "Customer Contract Lines"
     local procedure SetNextBillingDateStyle()
     begin
         if (ServiceCommitment."Next Billing Date" > ServiceCommitment."Subscription Line End Date") and (ServiceCommitment."Subscription Line End Date" <> 0D) then
-            NextBillingDateStyleExpr := 'AttentionAccent'
+            NextBillingDateStyleExpr := 'AttentionAccent';
+        OnAfterSetNextBillingDateStyle(Rec, ServiceCommitment, NextBillingDateStyleExpr);
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterSetNextBillingDateStyle(CustSubContractLine: Record "Cust. Sub. Contract Line"; SubscriptionLine: Record "Subscription Line"; var NextBillingDateStyleExpr: Text)
+    begin
     end;
 }

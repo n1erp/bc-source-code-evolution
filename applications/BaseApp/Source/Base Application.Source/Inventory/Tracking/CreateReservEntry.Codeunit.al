@@ -58,6 +58,7 @@ codeunit 99000830 "Create Reserv. Entry"
         FirstSplit: Boolean;
         IsHandled: Boolean;
     begin
+        OnBeforeCreateEntry(ItemNo, VariantCode, LocationCode, Description, ExpectedReceiptDate, ShipmentDate, TransferredFromEntryNo, Status);
         TempTrkgSpec1.Reset();
         TempTrkgSpec2.Reset();
         TempTrkgSpec1.DeleteAll();
@@ -112,7 +113,7 @@ codeunit 99000830 "Create Reserv. Entry"
             ReservEntry2."Source Prod. Order Line" := InsertReservEntry2."Source Prod. Order Line";
             ReservEntry2."Source Ref. No." := InsertReservEntry2."Source Ref. No.";
             ReservEntry2.CopyTrackingFromreservEntry(InsertReservEntry2);
-            ReservEntry2."Expiration Date" := InsertReservEntry2."Expiration Date";
+            ReservEntry2."Expiration Date" := ReservEntry."Expiration Date";
             ReservEntry2."Qty. per Unit of Measure" := InsertReservEntry2."Qty. per Unit of Measure";
             ReservEntry2."Untracked Surplus" := InsertReservEntry2."Untracked Surplus" and not ReservEntry2.Positive;
 
@@ -185,6 +186,7 @@ codeunit 99000830 "Create Reserv. Entry"
     var
         ReservationStatus: Enum "Reservation Status";
     begin
+        OnBeforeCreateReservEntry(ItemNo, VariantCode, LocationCode, Description, ExpectedReceiptDate, ShipmentDate);
         CreateEntry(ItemNo, VariantCode, LocationCode, Description, ExpectedReceiptDate, ShipmentDate, 0, ReservationStatus::Reservation);
     end;
 
@@ -636,7 +638,7 @@ codeunit 99000830 "Create Reserv. Entry"
     begin
         // This event used internally for base app source tables
         OnCheckSourceTypeSubtype(ReservEntry, IsError);
-        
+
         // This event used for compatibility with previous versions
         OnAfterCheckValidity(ReservEntry, IsError);
 
@@ -955,7 +957,6 @@ codeunit 99000830 "Create Reserv. Entry"
         UseQtyToInvoice := UseQtyToInvoice2;
     end;
 
-    [Scope('OnPrem')]
     procedure SetUntrackedSurplus(OrderTracking: Boolean)
     begin
         InsertReservEntry."Untracked Surplus" := OrderTracking;
@@ -1307,5 +1308,14 @@ codeunit 99000830 "Create Reserv. Entry"
     local procedure OnCheckSourceTypeSubtype(var ReservationEntry: Record "Reservation Entry"; var IsError: Boolean)
     begin
     end;
-}
 
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeCreateEntry(ItemNo: Code[20]; VariantCode: Code[10]; LocationCode: Code[10]; Description: Text[100]; ExpectedReceiptDate: Date; ShipmentDate: Date; TransferredFromEntryNo: Integer; Status: Enum "Reservation Status")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeCreateReservEntry(ItemNo: Code[20]; VariantCode: Code[10]; LocationCode: Code[10]; Description: Text[100]; ExpectedReceiptDate: Date; ShipmentDate: Date)
+    begin
+    end;
+}

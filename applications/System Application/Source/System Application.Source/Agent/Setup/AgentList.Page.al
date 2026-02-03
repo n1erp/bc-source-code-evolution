@@ -54,11 +54,13 @@ page 4316 "Agent List"
 
                 trigger OnAction()
                 var
-                    TempAgent: Record Agent temporary;
+                    Agent: Codeunit Agent;
                 begin
-                    TempAgent.Copy(Rec);
-                    TempAgent.Insert();
-                    Page.RunModal(Rec."Setup Page ID", TempAgent);
+                    if Rec.IsEmpty() then
+                        Error(NoAgentSetupErr);
+
+                    Agent.OpenSetupPageId(Rec."Agent Metadata Provider", Rec."User Security ID");
+                    CurrPage.Update(false);
                 end;
             }
             action(AgentTasks)
@@ -72,6 +74,8 @@ page 4316 "Agent List"
                 var
                     AgentTask: Record "Agent Task";
                 begin
+                    if Rec.IsEmpty() then
+                        Error(NoAgentSetupErr);
                     AgentTask.SetRange("Agent User Security ID", Rec."User Security ID");
                     Page.Run(Page::"Agent Task List", AgentTask);
                 end;
@@ -94,10 +98,15 @@ page 4316 "Agent List"
     trigger OnOpenPage()
     var
         AgentImpl: Codeunit "Agent Impl.";
+        AgentSessionImpl: Codeunit "Agent Session Impl.";
         AgentMetadataProvider: Enum "Agent Metadata Provider";
     begin
+        AgentSessionImpl.BlockPageFromBeingOpenedByAgent();
         // Check if there are any agents available
         if AgentMetadataProvider.Names().Count() = 0 then
             AgentImpl.ShowNoAgentsAvailableNotification();
     end;
+
+    var
+        NoAgentSetupErr: Label 'No agents have been setup. You must set up an agent first.';
 }

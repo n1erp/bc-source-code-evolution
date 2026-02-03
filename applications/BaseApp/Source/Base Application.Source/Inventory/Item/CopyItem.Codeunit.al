@@ -46,7 +46,10 @@ codeunit 730 "Copy Item"
 
         OnRunOnAfterItemCopied(TempCopyItemBuffer);
 
-        ShowNotification(Rec);
+        if TempCopyItemBuffer."Show Created Items" then
+            ShowCreatedItems()
+        else
+            ShowNotification(Rec);
     end;
 
     var
@@ -388,6 +391,7 @@ codeunit 730 "Copy Item"
                 NewPriceListLine := PriceListLine;
                 NewPriceListLine.SetAssetNo(ToItemNo);
                 NewPriceListLine.SetNextLineNo();
+                OnCopyItemPriceListLinesOnBeforeInsertNewPriceListLine(NewPriceListLine, PriceListLine);
                 NewPriceListLine.Insert();
             until PriceListLine.Next() = 0;
     end;
@@ -500,6 +504,21 @@ codeunit 730 "Copy Item"
                 PAGE.RunModal(PAGE::"Item List", Item);
     end;
 
+    local procedure ShowCreatedItems()
+    var
+        Item: Record Item;
+    begin
+        Item.SetRange("No.", FirstItemNo, LastItemNo);
+        case Item.Count() of
+            0:
+                exit;
+            1:
+                PAGE.Run(PAGE::"Item Card", Item);
+            else
+                PAGE.Run(PAGE::"Item List", Item);
+        end;
+    end;
+
     procedure GetNewItemNo(var NewFirstItemNo: Code[20]; var NewLastItemNo: Code[20])
     begin
         NewFirstItemNo := FirstItemNo;
@@ -553,6 +572,11 @@ codeunit 730 "Copy Item"
 
     [IntegrationEvent(false, false)]
     local procedure OnCopyItemOnBeforeTargetItemInsert(SourceItem: Record Item; var TargetItem: Record Item; CopyCounter: Integer; var CopyItemBuffer: Record "Copy Item Buffer")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnCopyItemPriceListLinesOnBeforeInsertNewPriceListLine(var NewPriceListLine: Record "Price List Line"; PriceListLine: Record "Price List Line")
     begin
     end;
 }

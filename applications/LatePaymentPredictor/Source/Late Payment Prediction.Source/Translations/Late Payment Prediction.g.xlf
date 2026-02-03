@@ -598,6 +598,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page LP Prediction FactBox - Control Confidence - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3534437048 - Control 1694176181 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI generated suggestions may not always be accurate. Please validate results for correctness before using content provided.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page LP Prediction FactBox - Control Disclaimer - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 3534437048 - Control 1694176181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page LP Prediction FactBox - Control Disclaimer - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3534437048 - Control 3006891759 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies that the payment for this invoice is predicted to be late.</source>
           <note from="Developer" annotates="general" priority="2"></note>

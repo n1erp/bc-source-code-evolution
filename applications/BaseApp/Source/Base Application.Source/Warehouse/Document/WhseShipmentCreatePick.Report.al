@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Warehouse.Document;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Warehouse.Document;
 
 using Microsoft.Assembly.Document;
 using Microsoft.Inventory.Location;
@@ -155,6 +159,8 @@ report 7318 "Whse.-Shipment - Create Pick"
             var
                 CreatePickParameters: Record "Create Pick Parameters";
             begin
+                ReadIsolation := IsolationLevel::UpdLock;
+
                 CreatePickParameters."Assigned ID" := AssignedIDReq;
                 CreatePickParameters."Sorting Method" := SortActivity;
                 CreatePickParameters."Max No. of Lines" := 0;

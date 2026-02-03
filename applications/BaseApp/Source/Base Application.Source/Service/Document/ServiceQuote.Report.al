@@ -591,6 +591,8 @@ report 5902 "Service Quote"
 
     requestpage
     {
+        AboutTitle = 'About Service Quote';
+        AboutText = 'Generate a service quote that you can send to your customer.';
         SaveValues = true;
 
         layout
@@ -641,14 +643,9 @@ report 5902 "Service Quote"
 
         trigger OnInit()
         begin
-            LogInteractionEnable := true;
-            ArchiveDocument := ServiceSetup."Archive Quotes" <> ServiceSetup."Archive Quotes"::Never;
-        end;
-
-        trigger OnOpenPage()
-        begin
             LogInteraction := SegManagement.FindInteractionTemplateCode(Enum::"Interaction Log Entry Document Type"::"Service Quote") <> '';
             LogInteractionEnable := LogInteraction;
+            ArchiveDocument := ServiceSetup."Archive Quotes" <> ServiceSetup."Archive Quotes"::Never;
         end;
     }
 

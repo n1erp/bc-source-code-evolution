@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Projects.Project.Archive;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Projects.Project.Archive;
 
 using Microsoft.CRM.Contact;
 using Microsoft.Foundation.Address;
@@ -53,6 +57,13 @@ page 5177 "Job Archive Card"
                     ShowMandatory = true;
                     ToolTip = 'Specifies the name of the customer who will receive the products and be billed by default.';
                 }
+                field("Sell-to Customer Name 2"; Rec."Sell-to Customer Name 2")
+                {
+                    ApplicationArea = Jobs;
+                    Caption = 'Customer Name 2';
+                    Importance = Additional;
+                    Visible = false;
+                }
                 group("Sell-to")
                 {
                     Caption = 'Sell-to';
@@ -88,7 +99,7 @@ page 5177 "Job Archive Card"
                         field("Sell-to County"; Rec."Sell-to County")
                         {
                             ApplicationArea = Jobs;
-                            Caption = 'County';
+                            CaptionClass = '5,1,' + Rec."Sell-to Country/Region Code";
                             Importance = Additional;
                             QuickEntry = false;
                             ToolTip = 'Specifies the state, province or county of the address.';
@@ -290,6 +301,13 @@ page 5177 "Job Archive Card"
                             Enabled = ((BillToOptions = BillToOptions::"Another Customer") or ((BillToOptions = BillToOptions::"Custom Address") and not ShouldSearchForCustByName));
                             NotBlank = true;
                         }
+                        field("Bill-to Name 2"; Rec."Bill-to Name 2")
+                        {
+                            ApplicationArea = Jobs;
+                            Caption = 'Name 2';
+                            Importance = Additional;
+                            Visible = false;
+                        }
                         field("Bill-to Address"; Rec."Bill-to Address")
                         {
                             Caption = 'Address';
@@ -327,10 +345,10 @@ page 5177 "Job Archive Card"
                             field("Bill-to County"; Rec."Bill-to County")
                             {
                                 ApplicationArea = Jobs;
+                                CaptionClass = '5,1,' + Rec."Bill-to Country/Region Code";
                                 QuickEntry = false;
                                 Importance = Additional;
                                 ToolTip = 'Specifies the county code of the customer''s billing address.';
-                                Caption = 'County';
                                 Editable = BillToInformationEditable;
                                 Enabled = BillToInformationEditable;
                             }
@@ -493,7 +511,7 @@ page 5177 "Job Archive Card"
                             field("Ship-to County"; Rec."Ship-to County")
                             {
                                 ApplicationArea = Jobs;
-                                Caption = 'County';
+                                CaptionClass = '5,1,' + Rec."Ship-to Country/Region Code";
                                 Editable = ShipToOptions = ShipToOptions::"Custom Address";
                                 QuickEntry = false;
                                 ToolTip = 'Specifies the state, province or county of the address.';
@@ -664,10 +682,8 @@ page 5177 "Job Archive Card"
                         JobPlanningArchiveLines: Page "Job Planning Archive Lines";
                     begin
                         Rec.TestField("No.");
-                        JobPlanningLineArchive.FilterGroup(2);
                         JobPlanningLineArchive.SetRange("Job No.", Rec."No.");
                         JobPlanningLineArchive.SetRange("Version No.", Rec."Version No.");
-                        JobPlanningLineArchive.FilterGroup(0);
                         JobPlanningArchiveLines.SetTableView(JobPlanningLineArchive);
                         JobPlanningArchiveLines.Run();
                     end;

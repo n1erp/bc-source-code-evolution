@@ -43,8 +43,12 @@ codeunit 99000836 "Transfer Line-Reserve"
     var
         ShipmentDate: Date;
         IsHandled: Boolean;
+        SkipCheck: Boolean;
     begin
-        if FromTrackingSpecification."Source Type" = 0 then
+        SkipCheck := false;
+        OnCreateReservationOnBeforeCheckSourceType(TransferLine, FromTrackingSpecification, SkipCheck);
+        
+        if (FromTrackingSpecification."Source Type" = 0) and (not SkipCheck) then
             Error(Text000Err);
 
         TransferLine.TestField("Item No.");
@@ -870,8 +874,11 @@ codeunit 99000836 "Transfer Line-Reserve"
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Reservation Management", 'OnUpdateStatistics', '', false, false)]
-    local procedure OnUpdateStatistics(CalcReservEntry: Record "Reservation Entry"; var ReservSummEntry: Record "Entry Summary"; AvailabilityDate: Date; Positive: Boolean; var TotalQuantity: Decimal)
+    local procedure OnUpdateStatistics(CalcReservEntry: Record "Reservation Entry"; var ReservSummEntry: Record "Entry Summary"; AvailabilityDate: Date; Positive: Boolean; var TotalQuantity: Decimal; ReservationSummaryType: Integer)
     begin
+        if ReservationSummaryType = Enum::"Reservation Summary Type"::"Item Tracking Line".AsInteger() then
+            exit;
+
         if ReservSummEntry."Entry No." in [101, 102] then
             UpdateStatistics(
                 CalcReservEntry, ReservSummEntry, AvailabilityDate, ReservSummEntry."Entry No." - 101, Positive, TotalQuantity);
@@ -967,6 +974,7 @@ codeunit 99000836 "Transfer Line-Reserve"
                             end;
                             sender.SetQtyToReserveDownToTrackedQuantity(
                                 CalcReservEntry, TransLine.RowID1(TransferDirection::Inbound), QtyThisLine, QtyThisLineBase);
+                            sender.SetReservedQtyDownToTrackedQuantity(CalcReservEntry, TransLine.RowID1(TransferDirection::Inbound), ReservQty);
                         end;
                 end;
 
@@ -1062,11 +1070,13 @@ codeunit 99000836 "Transfer Line-Reserve"
     begin
     end;
 
+#if not CLEAN27
+    [Obsolete('This event is never raised.', '27.0')]
     [IntegrationEvent(false, false)]
     local procedure OnSetSourceForReservationOnBeforeUpdateReservation(var ReservEntry: Record "Reservation Entry"; TransferLine: Record "Transfer Line")
     begin
     end;
-
+#endif
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Reservation Management", 'OnIssueActionMessageOnSetSourceTypeFromSKU', '', false, false)]
     local procedure OnIssueActionMessageOnSetSourceTypeFromSKU(var ActionMessageEntry: Record "Action Message Entry"; SKU: Record "Stockkeeping Unit")
     begin
@@ -1177,5 +1187,9 @@ codeunit 99000836 "Transfer Line-Reserve"
             ShipmentDate := TransferLine."Shipment Date";
         end;
     end;
-}
 
+    [IntegrationEvent(false, false)]
+    local procedure OnCreateReservationOnBeforeCheckSourceType(var TransferLine: Record "Transfer Line"; FromTrackingSpecification: Record "Tracking Specification"; var SkipCheck: Boolean)
+    begin
+    end;
+}

@@ -17,6 +17,7 @@ codeunit 134389 "ERM Customer Statistics"
         LibraryERM: Codeunit "Library - ERM";
         LibraryRandom: Codeunit "Library - Random";
         LibraryApplicationArea: Codeunit "Library - Application Area";
+        LibraryVariableStorage: Codeunit "Library - Variable Storage";
         LibraryUtility: Codeunit "Library - Utility";
         IsInitialized: Boolean;
         OverDueBalanceErr: Label 'Customer OverDue Balance is not correct';
@@ -28,6 +29,8 @@ codeunit 134389 "ERM Customer Statistics"
         FieldIsNotHiddenErr: Label 'Field is hidden';
         EntryNoMustMatchErr: Label 'Entry No. must match.';
         PaymentsLCYAndAmountLCYMustMatchErr: Label 'Payemnts (LCY) and Amount (LCY) must match.';
+        CustomerCardFactboxTotalErr: Label 'Customer card factbox total is not Correct';
+        LotNoErr: Label 'Lot No. should have value.';
 
     [Test]
     [Scope('OnPrem')]
@@ -964,6 +967,121 @@ codeunit 134389 "ERM Customer Statistics"
         CustomerCard.Close();
     end;
 
+    [Test]
+    [HandlerFunctions('GetShipmentLinesPageHandler')]
+    procedure CheckCustomerCardStatisticsTotalOnFactBox()
+    var
+        Customer: Record Customer;
+        Item: Record Item;
+        SalesHeader: Record "Sales Header";
+        SalesLine: Record "Sales Line";
+    begin
+        // [SCENARIO 574648] Check Customer Card Statistics Total On FactBox When Sales Order Only Shiped and Sales Invoice 
+        // Created By GetShipmentLines without Posting.
+        Initialize();
+
+        // [GIVEN] Created New Customer.
+        LibrarySales.CreateCustomer(Customer);
+
+        // [GIVEN] Created New Item.
+        LibraryInventory.CreateItem(Item);
+
+        // [GIVEN] Created Item Inventory By Posting Item Journal With Qty 10.
+        CreateItemInventory(Item, 10);
+
+        // [WHEN] Created New Sales Order With Qty 10.
+        CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Order, Customer."No.", WorkDate());
+        LibrarySales.CreateSalesLine(SalesLine, SalesHeader, SalesLine.Type::Item, Item."No.", 10);
+        SalesLine.Validate("Unit Price", LibraryRandom.RandDec(1000, 0));
+        SalesLine.Modify(true);
+
+        // [WHEN] "SO" Post invoked with "Shipped" selected.
+        LibrarySales.PostSalesDocument(SalesHeader, true, false);
+
+        // [WHEN] Create New Sales Invoice And Get Shipment Line Through GetShipmentLines.
+        CreateAndReleaseSalesInvoiceUsingGetShipmentLines(SalesHeader."Sell-to Customer No.");
+
+        // [THEN] Check Customer Card Statistics Total is Equal To SalesLine."Amount Including VAT" and Not Multiply.
+        Assert.AreEqual(SalesLine."Amount Including VAT", Customer.GetTotalAmountLCY(), CustomerCardFactboxTotalErr);
+    end;
+
+    [Test]
+    [HandlerFunctions('ItemTrackingLinesPageHandler,EnterQuantityToCreatePageHandler,GetShipmentLinesPageHandler')]
+    procedure QuantityReducedInSalesInvoiceAfterGenShipmentLineReservesTrackingInformation()
+    var
+        Customer: Record Customer;
+        Item: Record Item;
+        ItemTrackingCode: Record "Item Tracking Code";
+        SalesHeader: Record "Sales Header";
+        SalesLine: Record "Sales Line";
+        Quantity: Integer;
+    begin
+        // [SCENARIO 576049] When the quantity in a Sales Invoices was changed after using 'Get Shipment lines' and an item with item tracking lines and reserve always has the tracking information.
+        Initialize();
+
+        // [GIVEN] Created New Customer.
+        LibrarySales.CreateCustomer(Customer);
+
+        // [GIVEN] Create Item Tracking Code and Validate Trackings.
+        LibraryInventory.CreateItemTrackingCode(ItemTrackingCode);
+        ItemTrackingCode.Validate("Lot Specific Tracking", false);
+        ItemTrackingCode.Validate("SN Specific Tracking", false);
+        ItemTrackingCode.Validate("SN Sales Inbound Tracking", true);
+        ItemTrackingCode.Validate("SN Sales Outbound Tracking", true);
+        ItemTrackingCode.Validate("Lot Sales Inbound Tracking", true);
+        ItemTrackingCode.Validate("Lot Sales Outbound Tracking", true);
+        ItemTrackingCode.Modify(true);
+
+        // [GIVEN] Created New Item and Validate Item Tracking Code, Serial Nos, Reserve.
+        LibraryInventory.CreateItem(Item);
+        Item.Validate("Item Tracking Code", ItemTrackingCode.Code);
+        Item.Validate("Lot Nos.", LibraryERM.CreateNoSeriesCode());
+        Item.Validate("Serial Nos.", LibraryERM.CreateNoSeriesCode());
+        Item.Validate(Reserve, Item.Reserve::Always);
+        Item.Modify(true);
+
+        // [GIVEN] Store quantity in Variable.
+        Quantity := LibraryRandom.RandIntInRange(10, 10);
+
+        // [GIVEN] Created Item Inventory By Posting Item Journal.
+        CreateItemInventory(Item, Quantity);
+
+        // [GIVEN] Create new Sales Header.
+        CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Order, Customer."No.", WorkDate());
+
+        // [GIVEN] Create Sales line and Validate Unit Price.
+        LibrarySales.CreateSalesLine(SalesLine, SalesHeader, SalesLine.Type::Item, Item."No.", Quantity);
+        SalesLine.Validate("Unit Price", LibraryRandom.RandDec(1000, 0));
+        SalesLine.Modify(true);
+
+        // [GIVEN] Enqueue Quantity and assign Tracking Lines
+        LibraryVariableStorage.Enqueue(true);
+        LibraryVariableStorage.Enqueue(Quantity);
+        SalesLine.OpenItemTrackingLines();
+
+        // [GIVEN] Post Sales Order invoked with "Shipped" selected.
+        LibrarySales.PostSalesDocument(SalesHeader, true, false);
+
+        // [GIVEN] Create New Sales Invoice And Get Shipment Line Through GetShipmentLines.
+        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Invoice, Customer."No.");
+        SalesLine.Validate("Document Type", SalesHeader."Document Type");
+        SalesLine.Validate("Document No.", SalesHeader."No.");
+        LibrarySales.GetShipmentLines(SalesLine);
+
+        // [GIVEN] Find the Sales Line.
+        SalesLine.SetRange("Document No.", SalesHeader."No.");
+        SalesLine.SetRange(Type, SalesLine.Type::Item);
+        SalesLine.FindFirst();
+
+        // [WHEN] Validate Quantity with random integer less than previous quanitity.
+        SalesLine.Validate(Quantity, LibraryRandom.RandInt(5));
+        SalesLine.Modify(true);
+
+        // [THEN] Tracking Lines is not deleted.
+        LibraryVariableStorage.Enqueue(false);
+        SalesLine.OpenItemTrackingLines();
+    end;
+
     local procedure Initialize()
     var
         Currency: Record Currency;
@@ -1207,20 +1325,6 @@ codeunit 134389 "ERM Customer Statistics"
         exit(SalesInvHeader."No.");
     end;
 
-    local procedure IsCodeLineHitByCodeCoverage(ObjectType: Option; ObjectID: Integer; CodeLine: Text): Boolean
-    var
-        CodeCoverage: Record "Code Coverage";
-        CodeCoverageMgt: Codeunit "Code Coverage Mgt.";
-    begin
-        CodeCoverageMgt.Refresh();
-        CodeCoverage.SetRange("Line Type", CodeCoverage."Line Type"::Code);
-        CodeCoverage.SetRange("Object Type", ObjectType);
-        CodeCoverage.SetRange("Object ID", ObjectID);
-        CodeCoverage.SetFilter("No. of Hits", '>%1', 0);
-        CodeCoverage.SetFilter(Line, '@*' + CodeLine + '*');
-        exit(not CodeCoverage.IsEmpty);
-    end;
-
     local procedure InvokeCustStatsByCurrLinesFromCustomerList(var CustStatsByCurrLines: TestPage "Cust. Stats. by Curr. Lines"; CustomerNo: Code[20])
     var
         CustomerList: TestPage "Customer List";
@@ -1400,6 +1504,31 @@ codeunit 134389 "ERM Customer Statistics"
         DetailedCustLedgEntry.Insert();
     end;
 
+    local procedure CreateAndReleaseSalesInvoiceUsingGetShipmentLines(CustomerNo: Code[20])
+    var
+        SalesHeader: Record "Sales Header";
+        SalesLine: Record "Sales Line";
+    begin
+        LibrarySales.CreateSalesHeader(SalesHeader, SalesHeader."Document Type"::Invoice, CustomerNo);
+        SalesLine.Validate("Document Type", SalesHeader."Document Type");
+        SalesLine.Validate("Document No.", SalesHeader."No.");
+        LibrarySales.GetShipmentLines(SalesLine);
+        LibrarySales.ReleaseSalesDocument(SalesHeader);
+    end;
+
+    local procedure CreateItemInventory(var Item: Record Item; Qty: Decimal)
+    var
+        ItemJournalTemplate: Record "Item Journal Template";
+        ItemJournalBatch: Record "Item Journal Batch";
+        ItemJournalLine: Record "Item Journal Line";
+    begin
+        LibraryInventory.SelectItemJournalTemplateName(ItemJournalTemplate, ItemJournalTemplate.Type::Item);
+        LibraryInventory.SelectItemJournalBatchName(ItemJournalBatch, ItemJournalTemplate.Type::Item, ItemJournalTemplate.Name);
+        LibraryInventory.CreateItemJournalLine(ItemJournalLine, ItemJournalBatch."Journal Template Name",
+            ItemJournalBatch.Name, ItemJournalLine."Entry Type"::"Positive Adjmt.", Item."No.", Qty);
+        LibraryInventory.PostItemJournalLine(ItemJournalBatch."Journal Template Name", ItemJournalBatch.Name);
+    end;
+
     [ConfirmHandler]
     [Scope('OnPrem')]
     procedure ConfirmHandlerYes(Message: Text; var Response: Boolean)
@@ -1450,5 +1579,32 @@ codeunit 134389 "ERM Customer Statistics"
         CreditLimitNotification.CreditLimitDetails.OverdueBalance.AssertEquals(Customer."Balance Due (LCY)");
         CreditLimitNotification.CreditLimitDetails."Credit Limit (LCY)".AssertEquals(Customer."Credit Limit (LCY)");
     end;
-}
 
+    [ModalPageHandler]
+    procedure GetShipmentLinesPageHandler(var GetShipmentLines: TestPage "Get Shipment Lines")
+    begin
+        GetShipmentLines.OK().Invoke();
+    end;
+
+    [ModalPageHandler]
+    procedure ItemTrackingLinesPageHandler(var ItemTrackingLines: TestPage "Item Tracking Lines")
+    var
+        AssignSerial: Boolean;
+    begin
+        AssignSerial := LibraryVariableStorage.DequeueBoolean();
+        if AssignSerial then
+            ItemTrackingLines."Assign Serial No.".Invoke();
+
+        if not AssignSerial then
+            Assert.IsTrue(ItemTrackingLines."Lot No.".Value() <> '', LotNoErr);
+        ItemTrackingLines.OK().Invoke();
+    end;
+
+    [ModalPageHandler]
+    procedure EnterQuantityToCreatePageHandler(var EnterQuantitytoCreate: TestPage "Enter Quantity to Create")
+    begin
+        EnterQuantitytoCreate.QtyToCreate.SetValue(LibraryVariableStorage.DequeueInteger());
+        EnterQuantitytoCreate.CreateNewLotNo.SetValue(true);
+        EnterQuantitytoCreate.OK().Invoke();
+    end;
+}

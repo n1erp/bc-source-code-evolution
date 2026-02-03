@@ -119,45 +119,6 @@ class BcClient:
             print("Exception when creating a BC session: " + str(e))
             return { "success": False }
         
-    def enable_copilot_capability(self):
-        try:
-        # 3. Enable Copilot system action
-            url = self.bcParams.url + "/cs?aid=FIN&tenant=" + self.bcParams.tenantId
-            payload = json.dumps({
-                "jsonrpc": "2.0",
-                "method": "InvokeInteractions",
-                "params": [
-                    {
-                        "Context": {
-                        "SessionId": self.sessionId
-                    },
-                "InteractionsToInvoke": [
-                    {
-                        "InteractionName": "InvokeAction",
-                        "NamedParameters": {
-                            "SystemAction": 720,
-                            "AppId": '',
-                            "Data": {
-                                "AppId": '',
-                                "Silent" : True,
-                                "CopilotCapability": 1
-                            },
-                            "LogicalControlReference": {
-                                "ControlPath": "server:",
-                                "FormId": self.rcFormId
-                            }
-                        }
-                    }]
-                }
-                ],
-                "id": "0"
-            })
-            response = self.session.post(url=url, data=payload, headers=self._get_auth_headers(), verify=False)
-            return response
-        except Exception as e:
-            print("Exception when enabling Copilot capability: " + str(e))
-            return { "success": False }
-        
     def create_new_chat_session(self):
         try:            
             # 4. Create a Copilot chat session
@@ -272,7 +233,6 @@ class BcClient:
         try:
             if not messages["messages"][0]["content"] in session_state:
                 self.create_bc_session()
-                self.enable_copilot_capability()
                 self.create_new_chat_session()
                 session_state[messages["messages"][0]["content"]] = {"chatSessionId": self.chatId, "bcSessionId": self.sessionId}
 
@@ -307,14 +267,12 @@ class BcClient:
         query_response_pairs = []
         if keep_same_session:
             self.create_bc_session()
-            self.enable_copilot_capability()
         if keep_same_chat_session:
             self.create_new_chat_session()
 
         for message in messages:
             if not keep_same_session:
                 self.create_bc_session()
-                self.enable_copilot_capability()
             if not keep_same_chat_session:
                 self.create_new_chat_session()
 

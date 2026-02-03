@@ -3,226 +3,10 @@
   <file datatype="xml" source-language="en-US" target-language="es-MX" original="Sales and Inventory Forecast">
     <body>
       <group id="body">
-        <trans-unit id="Table 178869804 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>MS - Sales Forecast</source>
-          <target state="translated">MS - Previsión de ventas</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 178869804 - Field 3192175264 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Date</source>
-          <target state="translated">Fecha</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Field Date - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 178869804 - Field 2526400892 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Delta</source>
-          <target state="translated">Delta</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Field Delta - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 178869804 - Field 1530663077 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Forecast Data</source>
-          <target state="translated">Datos de previsión</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Field Forecast Data - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 178869804 - Field 1530663077 - Property 62802879" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Base,Result</source>
-          <target state="translated">Base,Resultado</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Field Forecast Data - Property OptionCaption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 178869804 - Field 568743302 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Item No.</source>
-          <target state="translated">N.º producto</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Field Item No. - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 178869804 - Field 2704404533 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity</source>
-          <target state="translated">Cantidad</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Field Quantity - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 178869804 - Field 1620293444 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Variance %</source>
-          <target state="translated">% de desviación</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Field Variance % - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 995188731 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>MS - Sales Forecast Parameter</source>
-          <target state="translated">MS - Parámetro de previsión de ventas</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 995188731 - Field 1266072289 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Forecast Start Date</source>
-          <target state="translated">Fecha de inicio de previsión</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Field Forecast Start Date - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 995188731 - Field 3694533338 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>History Start Date</source>
-          <target state="translated">Fecha de inicio de historial</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Field History Start Date - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 995188731 - Field 1749449385 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Horizon</source>
-          <target state="translated">Horizonte</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Field Horizon - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 995188731 - Field 568743302 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Item No.</source>
-          <target state="translated">N.º producto</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Field Item No. - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 995188731 - Field 1004750025 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Last Updated</source>
-          <target state="translated">Última actualización</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Field Last Updated - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 995188731 - Field 1832902037 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Time Series Period Type</source>
-          <target state="translated">Tipo de período de serie temporal</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Field Time Series Period Type - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 995188731 - Field 1832902037 - Property 62802879" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Day,Week,Month,Quarter,Year</source>
-          <target state="translated">Día,Semana,Mes,Trimestre,Año</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Field Time Series Period Type - Property OptionCaption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>MS - Sales Forecast Setup</source>
-          <target state="translated">MS - Configuración de previsión de ventas</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - NamedType 1644091217" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You must be an administrator to enable/disable sales forecasting. Ensure that you are assigned the 'SUPER' user permission set.</source>
-          <target state="translated">Debe ser administrador para habilitar o deshabilitar la previsión de ventas. Asegúrese de que se le ha asignado el conjunto de permisos de usuario "SUPER".</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - NamedType NotAdminErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - NamedType 3788244515" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You must specify an API key and an API URI in the Sales and Inventory Forecast Setup page.</source>
-          <target state="translated">Debe especificar una clave de API y un URI de API en la página de configuración de previsión de inventario y ventas.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - NamedType SpecifyApiKeyErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 264208910 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>API Key ID</source>
-          <target state="translated">Id. de clave de API</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field API Key ID - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 2038324810 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>API URI</source>
-          <target state="translated">URI de API</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field API URI - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 2891538263 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Enabled</source>
-          <target state="translated">Habilitado</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Enabled - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 3046871300 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Expiration Period (Days)</source>
-          <target state="translated">Período de caducidad (días)</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Expiration Period (Days) - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 3810224734 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Historical Periods</source>
-          <target state="translated">Períodos históricos</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Historical Periods - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 1749449385 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Horizon</source>
-          <target state="translated">Horizonte</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Horizon - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 729129122 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Last Run Completed</source>
-          <target state="translated">Última ejecución completada</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Last Run Completed - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 3414388415 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Limit</source>
-          <target state="translated">Límite</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Limit - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 95864743 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Period Type</source>
-          <target state="translated">Tipo periodo</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Period Type - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 95864743 - Property 62802879" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Day,Week,Month,Quarter,Year</source>
-          <target state="translated">Día,Semana,Mes,Trimestre,Año</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Period Type - Property OptionCaption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 1663593181 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Primary Key</source>
-          <target state="translated">Clave principal</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Primary Key - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 2927347786 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Processing Time</source>
-          <target state="translated">Tiempo de procesamiento</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Processing Time - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 1780437933 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Stockout Warning Horizon</source>
-          <target state="translated">Horizonte de advertencia por falta stock</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Stockout Warning Horizon - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 1158072699 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Timeout (seconds)</source>
-          <target state="translated">Tiempo de espera (segundos)</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Timeout (seconds) - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 2908512707 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Timeseries Model</source>
-          <target state="translated">Modelo de serie temporal</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Timeseries Model - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 2908512707 - Property 62802879" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>ARIMA,ETS,STL,ETS+ARIMA,ETS+STL,ALL,TBATS</source>
-          <target state="translated">ARIMA,ETS,STL,ETS+ARIMA,ETS+STL,ALL,TBATS</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Timeseries Model - Property OptionCaption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1767462481 - Field 1620293444 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Variance %</source>
-          <target state="translated">% de desviación</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Variance % - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2836764293 - NamedType 2569145044" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Failed to initialize the forecast method. Please, contact your system administrator.</source>
-          <target state="translated">No se pudo inicializar el método de previsión. Póngase en contacto con el administrador del sistema.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Handler - NamedType FailedTimeSeriesInitializationErr)</note>
+        <trans-unit id="Codeunit 2836764293 - NamedType 1168217811" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>We're updating the inventory forecast for item #1</source>
+          <target state="translated">Estamos actualizando la previsión de inventario para el producto #1</target>
+          <note from="Developer" annotates="general" priority="2">#1 = an Item No.(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Handler - NamedType UpdateDialogTxt)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Codeunit 2836764293 - NamedType 1508453294" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -237,10 +21,22 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Handler - NamedType OutOfLimitErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
+        <trans-unit id="Codeunit 2836764293 - NamedType 2569145044" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed to initialize the forecast method. Please, contact your system administrator.</source>
+          <target state="translated">No se pudo inicializar el método de previsión. Póngase en contacto con el administrador del sistema.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Handler - NamedType FailedTimeSeriesInitializationErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
         <trans-unit id="Codeunit 2836764293 - NamedType 3120113686" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Let Business Central analyze historical data to predict future demand, so you can base procurement decisions on accurate and reliable forecasts, and help your company avoid lost revenue, optimize shipping costs, discover trends, and boost your brand reputation by always delivering on orders. Set it up now.</source>
           <target state="translated">Permite a la solución Business Central analizar los datos históricos para prever la demanda futura, de modo que pueda basar las decisiones de compras en previsiones precisas y confiables, así como ayudar a la empresa a evitar pérdidas de ingresos, optimizar los costos de envío, descubrir tendencias y aumentar la reputación de su marca al cumplir siempre con las órdenes. Configúrela ahora.</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Handler - NamedType SalesForecastSetupDescriptionTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2836764293 - NamedType 3788244515" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must specify an API key and an API URI in the Sales and Inventory Forecast Setup page.</source>
+          <target state="translated">Debe especificar una clave de API y un URI de API en la página de configuración de previsión de inventario y ventas.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Handler - NamedType SpecifyApiKeyErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Codeunit 2836764293 - NamedType 473299602" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -255,16 +51,16 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Handler - NamedType SalesForecastSetupTitleTxt)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 2836764293 - NamedType 3788244515" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You must specify an API key and an API URI in the Sales and Inventory Forecast Setup page.</source>
-          <target state="translated">Debe especificar una clave de API y un URI de API en la página de configuración de previsión de inventario y ventas.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Handler - NamedType SpecifyApiKeyErr)</note>
+        <trans-unit id="Codeunit 3420482273 - NamedType 1947377117" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Items running low in inventory</source>
+          <target state="translated">Inventario de productos a punto de agotarse</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Notifier - NamedType ItemSalesForecastNotificationTxt)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 2836764293 - NamedType 1168217811" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>We're updating the inventory forecast for item #1</source>
-          <target state="translated">Estamos actualizando la previsión de inventario para el producto #1</target>
-          <note from="Developer" annotates="general" priority="2">#1 = an Item No.(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Handler - NamedType UpdateDialogTxt)</note>
+        <trans-unit id="Codeunit 3420482273 - NamedType 1978664471" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You have run out of stock on items that this vendor usually supplies.</source>
+          <target state="translated">Se ha quedado sin stock de los productos que normalmente proporciona este proveedor.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Notifier - NamedType NotificationTxt)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Codeunit 3420482273 - NamedType 2614170639" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -285,16 +81,16 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Notifier - NamedType ItemSalesForecastNotificationDescriptionTxt)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 3420482273 - NamedType 1947377117" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Items running low in inventory</source>
-          <target state="translated">Inventario de productos a punto de agotarse</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Notifier - NamedType ItemSalesForecastNotificationTxt)</note>
+        <trans-unit id="Codeunit 3659386448 - NamedType 1965332250" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The sales forecast will be updated every week. You can change the schedule in the Setup Scheduled Forecasting window in the Sales Inventory Forecast Setup.</source>
+          <target state="translated">La previsión de ventas se actualizará semanalmente. Puede cambiar el plan en la ventana Configurar previsión programada en la configuración de previsión de inventario de ventas.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Scheduler - NamedType ScheduledForecastingEnabledMsg)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 3420482273 - NamedType 1978664471" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You have run out of stock on items that this vendor usually supplies.</source>
-          <target state="translated">Se ha quedado sin stock de los productos que normalmente proporciona este proveedor.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Notifier - NamedType NotificationTxt)</note>
+        <trans-unit id="Codeunit 3659386448 - NamedType 2668691647" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set Up Scheduled Forecasting</source>
+          <target state="translated">Configurar previsión programada</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Scheduler - NamedType SetupScheduledForecastingTxt)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Codeunit 3659386448 - NamedType 3507565196" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -303,10 +99,10 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Scheduler - NamedType DontAskAgainTxt)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 3659386448 - NamedType 1965332250" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The sales forecast will be updated every week. You can change the schedule in the Setup Scheduled Forecasting window in the Sales Inventory Forecast Setup.</source>
-          <target state="translated">La previsión de ventas se actualizará semanalmente. Puede cambiar el plan en la ventana Configurar previsión programada en la configuración de previsión de inventario de ventas.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Scheduler - NamedType ScheduledForecastingEnabledMsg)</note>
+        <trans-unit id="Codeunit 3659386448 - NamedType 3788244515" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must specify an API key and an API URI in the Sales and Inventory Forecast Setup page before you can automate sales forecasting.</source>
+          <target state="translated">Especifique una clave de API y un URI de API en la configuración de previsión de inventario y ventas para poder automatizar la previsión de ventas.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Scheduler - NamedType SpecifyApiKeyErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Codeunit 3659386448 - NamedType 3942767717" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -319,173 +115,6 @@
           <source>You can get the sales forecast updated automatically every week.</source>
           <target state="translated">Puede obtener la previsión de ventas actualizada automáticamente cada semana.</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Scheduler - NamedType SetupScheduledForecastingMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3659386448 - NamedType 2668691647" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Set Up Scheduled Forecasting</source>
-          <target state="translated">Configurar previsión programada</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Scheduler - NamedType SetupScheduledForecastingTxt)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3659386448 - NamedType 3788244515" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You must specify an API key and an API URI in the Sales and Inventory Forecast Setup page before you can automate sales forecasting.</source>
-          <target state="translated">Especifique una clave de API y un URI de API en la configuración de previsión de inventario y ventas para poder automatizar la previsión de ventas.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Codeunit Sales Forecast Scheduler - NamedType SpecifyApiKeyErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Forecast</source>
-          <target state="translated">Previsión</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 2812220499" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>AI generated suggestions may not always be accurate. Please validate results for correctness before using content provided.</source>
-          <target state="translated">Es posible que las sugerencias generadas por IA no siempre sean precisas. Valide los resultados para comprobar que sean correctos antes de usar el contenido proporcionado.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType DisclaimerValueMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 2862976245" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Forecast expired</source>
-          <target state="translated">Previsión caducada</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ExistingForecastExpiredFactboxMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 540652290" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The forecast has passed the expiration date and is no longer valid.</source>
-          <target state="translated">La previsión ha superado la fecha de caducidad y ya no es válida.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ExistingForecastExpiredMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 108708945" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The sales forecast for this period is %1 with a variance of %2.</source>
-          <target state="translated">La previsión de ventas para este periodo es %1, con una desviación de %2.</target>
-          <note from="Developer" annotates="general" priority="2">%1 = amount, %2 = amount. Ex.The sales forecast for this period is 15 with a variance of 3.(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ExpectedSalesMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 1710977974" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>High variance</source>
-          <target state="translated">Desviación alta</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ForecastPeriodFilterFactboxMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 1733446473" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The forecast shows periods with a Variance % that is lower than specified in setup.</source>
-          <target state="translated">La previsión muestra períodos con un porcentaje de desviación inferior al especificado en la configuración.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ForecastPeriodFilterMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 1825422692" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The %1 has been changed</source>
-          <target state="translated">%1 ha cambiado</target>
-          <note from="Developer" annotates="general" priority="2">%1=Forecast Period Type(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ForecastPeriodTypeChangedFactboxMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 2020948295" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The forecast is not valid. Someone has changed the forecast period type in the setup on the Sales and Inventory Forecast Setup page. Recalculate the forecast to see the latest figures.</source>
-          <target state="translated">La previsión no es válida. Alguien ha cambiado el tipo de periodo de previsión en la página de configuración de previsión de inventario y ventas. Recalcule la previsión para ver las cifras más recientes.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ForecastPeriodTypeChangedMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 1553124563" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Inventory Forecast</source>
-          <target state="translated">Previsión de inventario</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType InventoryForecastTxt)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 212368089" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Updated %1</source>
-          <target state="translated">Fecha de actualización: %1</target>
-          <note from="Developer" annotates="general" priority="2">%1 = Last updated date(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType LastUpdatedTxt)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 16175266" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sales forecast not available.</source>
-          <target state="translated">Previsión de ventas no disponible.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType NoForecastFactboxMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 2480695581" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>To get an updated inventory forecast, you must set up forecasting on the Sales and Inventory Forecast page.</source>
-          <target state="translated">Para obtener una previsión de inventario actualizada, debe configurar la previsión en la página de previsión de inventario y ventas.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType NoForecastMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 2773416397" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Not enough historical data</source>
-          <target state="translated">No hay suficientes datos históricos</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType NotEnoughHistoricalDataFactboxMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 4271254522" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>There is not enough historical data to predict future sales.\You need at least five periods of historical sales in order to predict future sales.</source>
-          <target state="translated">No hay suficientes datos históricos para predecir las ventas futuras.\Necesita al menos 5 períodos de ventas históricas para poder predecir las ventas futuras.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType NotEnoughHistoricalDataMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 1187250541" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sales Forecast</source>
-          <target state="translated">Previsión de ventas</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType SalesForecastTxt)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 3193096050" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Status</source>
-          <target state="translated">Estado</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType StatusLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 2526222363" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Update Successful</source>
-          <target state="translated">Actualizar correcta</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType UpdateSuccessfulFactboxMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 1057239945" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Variance too high</source>
-          <target state="translated">Desviación muy alta</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType VarianceHigherDefinedLevelFactboxMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 2597248666" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The calculated forecast shows a degree of variance that is higher than the setup allows.</source>
-          <target state="translated">La previsión calculada muestra un grado de desviación superior al que permite la configuración.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType VarianceTooHighMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 1716009367" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Forecast is equal to 0</source>
-          <target state="translated">La previsión es igual a 0</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ZeroForecastFactboxMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - NamedType 931174140" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The calculated forecast contains values equal to 0.</source>
-          <target state="translated">La previsión calculada contiene los valores iguales a 0.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ZeroForecastMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - Control 1694176181 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source></source>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Control Disclaimer - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - Control 1529096658 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>AI generated suggestions may not always be accurate. Please validate results for correctness before using content provided.</source>
-          <target state="translated">Es posible que las sugerencias generadas por IA no siempre sean precisas. Valide los resultados para comprobar que sean correctos antes de usar el contenido proporcionado.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Control DisclaimerText - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - Control 2474810715 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the status of the forecast based on the current setup data.</source>
-          <target state="translated">Especifica el estado de la previsión según los datos de configuración actuales.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Control StatusText - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - Control 2474810715 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Status</source>
-          <target state="translated">Estado</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Control StatusText - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Page 3449274493 - Action 1388957642 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -524,18 +153,6 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Action Delete Sales Forecast - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 3449274493 - Action 740439730 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>View or edit the setup for the forecast.</source>
-          <target state="translated">Ver o editar la configuración de la previsión.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Action Forecast Settings - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3449274493 - Action 740439730 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Forecast Settings</source>
-          <target state="translated">Configuración de previsión</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Action Forecast Settings - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
         <trans-unit id="Page 3449274493 - Action 3613796910 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>View Item Inventory Forecast</source>
           <target state="translated">Ver previsión del inventario de productos</target>
@@ -546,6 +163,18 @@
           <source>Show Inventory Forecast</source>
           <target state="translated">Mostrar previsión de inventario</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Action Show Inventory Forecast - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - Action 740439730 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View or edit the setup for the forecast.</source>
+          <target state="translated">Ver o editar la configuración de la previsión.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Action Forecast Settings - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - Action 740439730 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast Settings</source>
+          <target state="translated">Configuración de previsión</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Action Forecast Settings - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Page 3449274493 - Action 951916468 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -560,95 +189,6 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Action Show Sales Forecast - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 3812782154 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Forecast</source>
-          <target state="translated">Previsión</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3812782154 - NamedType 2812220499" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>AI generated suggestions may not always be accurate. Please validate results for correctness before using content provided.</source>
-          <target state="translated">Es posible que las sugerencias generadas por IA no siempre sean precisas. Valide los resultados para comprobar que sean correctos antes de usar el contenido proporcionado.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType DisclaimerValueMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3812782154 - NamedType 2862976245" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Forecast expired</source>
-          <target state="translated">Previsión caducada</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType ExistingForecastExpiredFactboxMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3812782154 - NamedType 540652290" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The forecast has passed the expiration date and is no longer valid.</source>
-          <target state="translated">La previsión ha superado la fecha de caducidad y ya no es válida.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType ExistingForecastExpiredMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3812782154 - NamedType 1825422692" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The %1 has been changed</source>
-          <target state="translated">%1 ha cambiado</target>
-          <note from="Developer" annotates="general" priority="2">%1=Forecast Period Type(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType ForecastPeriodTypeChangedFactboxMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3812782154 - NamedType 2020948295" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The forecast is not valid. Someone has changed the forecast period type in the setup on the Sales and Inventory Forecast Setup page. Recalculate the forecast to see the latest figures.</source>
-          <target state="translated">La previsión no es válida. Alguien ha cambiado el tipo de periodo de previsión en la página de configuración de previsión de inventario y ventas. Recalcule la previsión para ver las cifras más recientes.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType ForecastPeriodTypeChangedMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3812782154 - NamedType 1475031092" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sales forecast not available for this item.</source>
-          <target state="translated">Previsión de ventas no disponible para este producto.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType NoForecastLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3812782154 - NamedType 2773416397" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Not enough historical data</source>
-          <target state="translated">No hay suficientes datos históricos</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType NotEnoughHistoricalDataFactboxMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3812782154 - NamedType 4271254522" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>There is not enough historical data to predict future sales.\You must have at least 5 periods of historical sales in order to predict future sales.</source>
-          <target state="translated">No hay suficientes datos históricos para predecir las ventas futuras.\Debe tener al menos 5 períodos de ventas históricas para poder predecir las ventas futuras.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType NotEnoughHistoricalDataMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3812782154 - NamedType 1057239945" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Variance too high</source>
-          <target state="translated">Desviación muy alta</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType VarianceHigherDefinedLevelFactboxMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3812782154 - NamedType 2597248666" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The calculated forecast shows a degree of variance that is higher than the setup allows.</source>
-          <target state="translated">La previsión calculada muestra un grado de desviación superior al que permite la configuración.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType VarianceTooHighMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3812782154 - Control 1694176181 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source></source>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - Control Disclaimer - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3812782154 - Control 1529096658 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>AI generated suggestions may not always be accurate. Please validate results for correctness before using content provided.</source>
-          <target state="translated">Es posible que las sugerencias generadas por IA no siempre sean precisas. Valide los resultados para comprobar que sean correctos antes de usar el contenido proporcionado.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - Control DisclaimerText - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3812782154 - Control 2474810715 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the status of the forecast based on the current setup data.</source>
-          <target state="translated">Especifica el estado de la previsión según los datos de configuración actuales.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - Control StatusText - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3812782154 - Control 2474810715 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Status</source>
-          <target state="translated">Estado</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - Control StatusText - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
         <trans-unit id="Page 3812782154 - Action 740439730 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>View or edit the setup for the forecast.</source>
           <target state="translated">Ver o editar la configuración de la previsión.</target>
@@ -661,130 +201,16 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - Action Forecast Settings - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 3997127860 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sales and Inventory Forecast Setup</source>
-          <target state="translated">Configuración de previsión de ventas e inventario</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Property Caption)</note>
+        <trans-unit id="Page 3997127860 - Action 1547422966 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update forecast for all items</source>
+          <target state="translated">Actualizar la previsión para todos los productos</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Action Update Forecast - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 3997127860 - NamedType 3455628948" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sales forecast updates are being scheduled. Please wait until the process is complete.</source>
-          <target state="translated">Se han programado la actualizaciones de previsión de ventas. Espere hasta que finalice el proceso.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - NamedType JobQueueCreationInProgressErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - NamedType 1644091217" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You must be an administrator to enable/disable sales forecasting. Ensure that you are assigned the 'SUPER' user permission set.</source>
-          <target state="translated">Debe ser administrador para habilitar o deshabilitar la previsión de ventas. Asegúrese de que se le ha asignado el conjunto de permisos de usuario "SUPER".</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - NamedType NotAdminErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - NamedType 2687205535" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sales forecasts are being updated in the background. This might take a minute.</source>
-          <target state="translated">Las previsiones de ventas se están actualizando en segundo plano. Este proceso puede tardar un minuto.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - NamedType UpdatingForecastsMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 2445482498 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>General</source>
-          <target state="translated">General</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control General - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 2038324810 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the API URI for the Azure Machine Learning instance.</source>
-          <target state="translated">Especifica el URI de API de la instancia de Azure Machine Learning.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control API URI - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 1951792025 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the API key for the Time Series experiment in Azure Machine Learning.</source>
-          <target state="translated">Especifica la clave de API para el experimento de serie temporal en Azure Machine Learning.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control APIKey - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 1951792025 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>API Key</source>
-          <target state="translated">Clave de API</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control APIKey - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 2891538263 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies if the forecasting feature is enabled.</source>
-          <target state="translated">Especifica si la característica de previsión está habilitada.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Enabled - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 3046871300 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the number of days until the forecast expires.</source>
-          <target state="translated">Especifica el número de días hasta que caduca la previsión.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Expiration Period (Days) - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 3810224734 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the number of historical periods from which to get data for the forecast. The length of the period is specified in the Period Type field.</source>
-          <target state="translated">Especifica el número de períodos históricos en los que obtener datos para la previsión. La duración del periodo se especifica en el campo Tipo periodo.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Historical Periods - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 1749449385 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies how many periods you want the forecast to cover.</source>
-          <target state="translated">Especifica la cantidad de períodos que desea que abarque la previsión.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Horizon - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 95864743 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the type of period that you want to see the forecast by.</source>
-          <target state="translated">Especifica el tipo de período según el cual desea ver la previsión.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Period Type - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 1780437933 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies how far in the future you want to look for stockouts. The value you enter works together with the unit of time specified in the Period Type field to determine the horizon.</source>
-          <target state="translated">Especifica hasta qué fecha en el futuro desea buscar la falta de stock. El valor que especifique se combinará con la unidad de tiempo especificada en el campo Tipo periodo para determinar el límite.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Stockout Warning Horizon - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 1158072699 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the number of seconds to wait before the call to Azure Machine Learning times out.</source>
-          <target state="translated">Especifica el número de segundos que se debe esperar antes de que se agote el tiempo de espera de la llamada a Azure Machine Learning.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Timeout (seconds) - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 2908512707 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the algorithm to use for the time series analysis.</source>
-          <target state="translated">Especifica el algoritmo que se usará para el análisis de las series temporales.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Timeseries Model - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 1620293444 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the range of deviation, plus or minus, that you'll accept in the forecast. Lower percentages represent more accurate forecasts, and are typically between 20 and 40. Forecasts outside the range are considered inaccurate, and do not display.</source>
-          <target state="translated">Especifica el rango de desviación, más o menos, que aceptará en la previsión. Los porcentajes más bajos representan previsiones más precisas y están normalmente entre 20 y 40. Las previsiones fuera del intervalo se consideran incorrectas y no se muestran.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Variance % - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 84074407 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Statistics</source>
-          <target state="translated">Estadísticas</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Statistics - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 729129122 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the date and time of the last completed forecast update. You cannot change this value.</source>
-          <target state="translated">Especifica la fecha y hora de la última actualización de previsión completada. No puede cambiar este valor.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Last Run Completed - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 1825078469 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies how many seconds of processing time have been used. You cannot change this value.</source>
-          <target state="translated">Especifica el número de segundos del tiempo de procesamiento utilizados. No puede cambiar este valor.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Used Processing Time (Seconds) - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 3997127860 - Control 1825078469 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Used Processing Time (Seconds)</source>
-          <target state="translated">Tiempo de procesamiento utilizado (segundos)</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Used Processing Time (Seconds) - Property Caption)</note>
+        <trans-unit id="Page 3997127860 - Action 1547422966 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update Forecast</source>
+          <target state="translated">Actualizar previsión</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Action Update Forecast - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Page 3997127860 - Action 2185364567 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -811,51 +237,375 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Action Setup Scheduled Forecasting - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 3997127860 - Action 1547422966 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Update forecast for all items</source>
-          <target state="translated">Actualizar la previsión para todos los productos</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Action Update Forecast - Property ToolTip)</note>
+        <trans-unit id="Page 3449274493 - Control 1529096658 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI generated suggestions may not always be accurate. Please validate results for correctness before using content provided.</source>
+          <target state="translated">Es posible que las sugerencias generadas por IA no siempre sean precisas. Valide los resultados para comprobar que sean correctos antes de usar el contenido proporcionado.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Control DisclaimerText - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 3997127860 - Action 1547422966 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Update Forecast</source>
-          <target state="translated">Actualizar previsión</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Action Update Forecast - Property Caption)</note>
+        <trans-unit id="Page 3449274493 - Control 1694176181 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Control Disclaimer - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Query 1089168795 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sales Forecast Query</source>
-          <target state="translated">Consulta previsión ventas</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Query Sales Forecast Query - Property Caption)</note>
+        <trans-unit id="Page 3449274493 - Control 2474810715 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the status of the forecast based on the current setup data.</source>
+          <target state="translated">Especifica el estado de la previsión según los datos de configuración actuales.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Control StatusText - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="PageExtension 2565734565 - Action 3452445781 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3449274493 - Control 2474810715 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target state="translated">Estado</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Control StatusText - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3812782154 - Control 1529096658 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI generated suggestions may not always be accurate. Please validate results for correctness before using content provided.</source>
+          <target state="translated">Es posible que las sugerencias generadas por IA no siempre sean precisas. Valide los resultados para comprobar que sean correctos antes de usar el contenido proporcionado.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - Control DisclaimerText - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3812782154 - Control 1694176181 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - Control Disclaimer - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3812782154 - Control 2474810715 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the status of the forecast based on the current setup data.</source>
+          <target state="translated">Especifica el estado de la previsión según los datos de configuración actuales.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - Control StatusText - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3812782154 - Control 2474810715 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target state="translated">Estado</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - Control StatusText - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 1158072699 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of seconds to wait before the call to Azure Machine Learning times out.</source>
+          <target state="translated">Especifica el número de segundos que se debe esperar antes de que se agote el tiempo de espera de la llamada a Azure Machine Learning.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Timeout (seconds) - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 1620293444 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the range of deviation, plus or minus, that you'll accept in the forecast. Lower percentages represent more accurate forecasts, and are typically between 20 and 40. Forecasts outside the range are considered inaccurate, and do not display.</source>
+          <target state="translated">Especifica el rango de desviación, más o menos, que aceptará en la previsión. Los porcentajes más bajos representan previsiones más precisas y están normalmente entre 20 y 40. Las previsiones fuera del intervalo se consideran incorrectas y no se muestran.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Variance % - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 1749449385 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many periods you want the forecast to cover.</source>
+          <target state="translated">Especifica la cantidad de períodos que desea que abarque la previsión.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Horizon - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 1780437933 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how far in the future you want to look for stockouts. The value you enter works together with the unit of time specified in the Period Type field to determine the horizon.</source>
+          <target state="translated">Especifica hasta qué fecha en el futuro desea buscar la falta de stock. El valor que especifique se combinará con la unidad de tiempo especificada en el campo Tipo periodo para determinar el límite.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Stockout Warning Horizon - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 1825078469 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many seconds of processing time have been used. You cannot change this value.</source>
+          <target state="translated">Especifica el número de segundos del tiempo de procesamiento utilizados. No puede cambiar este valor.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Used Processing Time (Seconds) - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 1825078469 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Used Processing Time (Seconds)</source>
+          <target state="translated">Tiempo de procesamiento utilizado (segundos)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Used Processing Time (Seconds) - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 1951792025 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the API key for the Time Series experiment in Azure Machine Learning.</source>
+          <target state="translated">Especifica la clave de API para el experimento de serie temporal en Azure Machine Learning.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control APIKey - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 1951792025 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>API Key</source>
+          <target state="translated">Clave de API</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control APIKey - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 2038324810 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the API URI for the Azure Machine Learning instance.</source>
+          <target state="translated">Especifica el URI de API de la instancia de Azure Machine Learning.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control API URI - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 2445482498 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="translated">General</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control General - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 2891538263 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the forecasting feature is enabled.</source>
+          <target state="translated">Especifica si la característica de previsión está habilitada.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Enabled - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 2908512707 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the algorithm to use for the time series analysis.</source>
+          <target state="translated">Especifica el algoritmo que se usará para el análisis de las series temporales.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Timeseries Model - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 3046871300 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of days until the forecast expires.</source>
+          <target state="translated">Especifica el número de días hasta que caduca la previsión.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Expiration Period (Days) - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 3810224734 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of historical periods from which to get data for the forecast. The length of the period is specified in the Period Type field.</source>
+          <target state="translated">Especifica el número de períodos históricos en los que obtener datos para la previsión. La duración del periodo se especifica en el campo Tipo periodo.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Historical Periods - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 729129122 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the date and time of the last completed forecast update. You cannot change this value.</source>
+          <target state="translated">Especifica la fecha y hora de la última actualización de previsión completada. No puede cambiar este valor.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Last Run Completed - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 84074407 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statistics</source>
+          <target state="translated">Estadísticas</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Statistics - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Control 95864743 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of period that you want to see the forecast by.</source>
+          <target state="translated">Especifica el tipo de período según el cual desea ver la previsión.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Control Period Type - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 1057239945" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variance too high</source>
+          <target state="translated">Desviación muy alta</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType VarianceHigherDefinedLevelFactboxMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 108708945" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The sales forecast for this period is %1 with a variance of %2.</source>
+          <target state="translated">La previsión de ventas para este periodo es %1, con una desviación de %2.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = amount, %2 = amount. Ex.The sales forecast for this period is 15 with a variance of 3.(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ExpectedSalesMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 1187250541" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Forecast</source>
+          <target state="translated">Previsión de ventas</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType SalesForecastTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 1553124563" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inventory Forecast</source>
+          <target state="translated">Previsión de inventario</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType InventoryForecastTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 16175266" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales forecast not available.</source>
+          <target state="translated">Previsión de ventas no disponible.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType NoForecastFactboxMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 1710977974" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>High variance</source>
+          <target state="translated">Desviación alta</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ForecastPeriodFilterFactboxMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 1716009367" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast is equal to 0</source>
+          <target state="translated">La previsión es igual a 0</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ZeroForecastFactboxMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 1733446473" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The forecast shows periods with a Variance % that is lower than specified in setup.</source>
+          <target state="translated">La previsión muestra períodos con un porcentaje de desviación inferior al especificado en la configuración.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ForecastPeriodFilterMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 1825422692" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The %1 has been changed</source>
+          <target state="translated">%1 ha cambiado</target>
+          <note from="Developer" annotates="general" priority="2">%1=Forecast Period Type(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ForecastPeriodTypeChangedFactboxMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 2020948295" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The forecast is not valid. Someone has changed the forecast period type in the setup on the Sales and Inventory Forecast Setup page. Recalculate the forecast to see the latest figures.</source>
+          <target state="translated">La previsión no es válida. Alguien ha cambiado el tipo de periodo de previsión en la página de configuración de previsión de inventario y ventas. Recalcule la previsión para ver las cifras más recientes.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ForecastPeriodTypeChangedMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 212368089" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Updated %1</source>
+          <target state="translated">Fecha de actualización: %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Last updated date(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType LastUpdatedTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 2480695581" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>To get an updated inventory forecast, you must set up forecasting on the Sales and Inventory Forecast page.</source>
+          <target state="translated">Para obtener una previsión de inventario actualizada, debe configurar la previsión en la página de previsión de inventario y ventas.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType NoForecastMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 2526222363" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update Successful</source>
+          <target state="translated">Actualizar correcta</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType UpdateSuccessfulFactboxMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 2597248666" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The calculated forecast shows a degree of variance that is higher than the setup allows.</source>
+          <target state="translated">La previsión calculada muestra un grado de desviación superior al que permite la configuración.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType VarianceTooHighMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 2773416397" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not enough historical data</source>
+          <target state="translated">No hay suficientes datos históricos</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType NotEnoughHistoricalDataFactboxMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 2812220499" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI generated suggestions may not always be accurate. Please validate results for correctness before using content provided.</source>
+          <target state="translated">Es posible que las sugerencias generadas por IA no siempre sean precisas. Valide los resultados para comprobar que sean correctos antes de usar el contenido proporcionado.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType DisclaimerValueMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 2862976245" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast expired</source>
+          <target state="translated">Previsión caducada</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ExistingForecastExpiredFactboxMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 3193096050" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target state="translated">Estado</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType StatusLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 4271254522" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There is not enough historical data to predict future sales.\You need at least five periods of historical sales in order to predict future sales.</source>
+          <target state="translated">No hay suficientes datos históricos para predecir las ventas futuras.\Necesita al menos 5 períodos de ventas históricas para poder predecir las ventas futuras.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType NotEnoughHistoricalDataMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 540652290" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The forecast has passed the expiration date and is no longer valid.</source>
+          <target state="translated">La previsión ha superado la fecha de caducidad y ya no es válida.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ExistingForecastExpiredMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - NamedType 931174140" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The calculated forecast contains values equal to 0.</source>
+          <target state="translated">La previsión calculada contiene los valores iguales a 0.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - NamedType ZeroForecastMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3812782154 - NamedType 1057239945" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variance too high</source>
+          <target state="translated">Desviación muy alta</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType VarianceHigherDefinedLevelFactboxMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3812782154 - NamedType 1475031092" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales forecast not available for this item.</source>
+          <target state="translated">Previsión de ventas no disponible para este producto.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType NoForecastLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3812782154 - NamedType 1825422692" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The %1 has been changed</source>
+          <target state="translated">%1 ha cambiado</target>
+          <note from="Developer" annotates="general" priority="2">%1=Forecast Period Type(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType ForecastPeriodTypeChangedFactboxMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3812782154 - NamedType 2020948295" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The forecast is not valid. Someone has changed the forecast period type in the setup on the Sales and Inventory Forecast Setup page. Recalculate the forecast to see the latest figures.</source>
+          <target state="translated">La previsión no es válida. Alguien ha cambiado el tipo de periodo de previsión en la página de configuración de previsión de inventario y ventas. Recalcule la previsión para ver las cifras más recientes.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType ForecastPeriodTypeChangedMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3812782154 - NamedType 2597248666" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The calculated forecast shows a degree of variance that is higher than the setup allows.</source>
+          <target state="translated">La previsión calculada muestra un grado de desviación superior al que permite la configuración.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType VarianceTooHighMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3812782154 - NamedType 2773416397" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not enough historical data</source>
+          <target state="translated">No hay suficientes datos históricos</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType NotEnoughHistoricalDataFactboxMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3812782154 - NamedType 2812220499" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI generated suggestions may not always be accurate. Please validate results for correctness before using content provided.</source>
+          <target state="translated">Es posible que las sugerencias generadas por IA no siempre sean precisas. Valide los resultados para comprobar que sean correctos antes de usar el contenido proporcionado.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType DisclaimerValueMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3812782154 - NamedType 2862976245" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast expired</source>
+          <target state="translated">Previsión caducada</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType ExistingForecastExpiredFactboxMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3812782154 - NamedType 4271254522" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There is not enough historical data to predict future sales.\You must have at least 5 periods of historical sales in order to predict future sales.</source>
+          <target state="translated">No hay suficientes datos históricos para predecir las ventas futuras.\Debe tener al menos 5 períodos de ventas históricas para poder predecir las ventas futuras.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType NotEnoughHistoricalDataMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3812782154 - NamedType 540652290" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The forecast has passed the expiration date and is no longer valid.</source>
+          <target state="translated">La previsión ha superado la fecha de caducidad y ya no es válida.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - NamedType ExistingForecastExpiredMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - NamedType 1644091217" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must be an administrator to enable/disable sales forecasting. Ensure that you are assigned the 'SUPER' user permission set.</source>
+          <target state="translated">Debe ser administrador para habilitar o deshabilitar la previsión de ventas. Asegúrese de que se le ha asignado el conjunto de permisos de usuario "SUPER".</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - NamedType NotAdminErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - NamedType 2687205535" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales forecasts are being updated in the background. This might take a minute.</source>
+          <target state="translated">Las previsiones de ventas se están actualizando en segundo plano. Este proceso puede tardar un minuto.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - NamedType UpdatingForecastsMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - NamedType 3455628948" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales forecast updates are being scheduled. Please wait until the process is complete.</source>
+          <target state="translated">Se han programado la actualizaciones de previsión de ventas. Espere hasta que finalice el proceso.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - NamedType JobQueueCreationInProgressErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3449274493 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Forecast</source>
           <target state="translated">Previsión</target>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
-          <note from="ObjectTarget" annotates="general" priority="5">Page 1434786627</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2565734565 - Action 1676605102 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies to update the sales forecast.</source>
-          <target state="translated">Especifica que se debe actualizar la previsión de ventas.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-          <note from="ObjectTarget" annotates="general" priority="5">Page 1434786627</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 2565734565 - Action 1676605102 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Update Sales Forecast</source>
-          <target state="translated">Actualizar la previsión de ventas</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-          <note from="ObjectTarget" annotates="general" priority="5">Page 1434786627</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 2261635039 - Action 3452445781 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3812782154 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Forecast</source>
           <target state="translated">Previsión</target>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast No Chart - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
-          <note from="ObjectTarget" annotates="general" priority="5">Page 4178721393</note>
+        </trans-unit>
+        <trans-unit id="Page 3997127860 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales and Inventory Forecast Setup</source>
+          <target state="translated">Configuración de previsión de ventas e inventario</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Page Sales Forecast Setup Card - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="PageExtension 2261635039 - Action 1676605102 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies to update the sales forecast.</source>
@@ -871,17 +621,44 @@
           <note from="Xliff Generator" annotates="general" priority="3" />
           <note from="ObjectTarget" annotates="general" priority="5">Page 4178721393</note>
         </trans-unit>
-        <trans-unit id="TableExtension 818531561 - Field 2006631723 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Has Sales Forecast</source>
-          <target state="translated">Con previsión de ventas</target>
+        <trans-unit id="PageExtension 2261635039 - Action 3452445781 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast</source>
+          <target state="translated">Previsión</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3" />
-          <note from="ObjectTarget" annotates="general" priority="5">Table 3276313895</note>
+          <note from="ObjectTarget" annotates="general" priority="5">Page 4178721393</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2565734565 - Action 1676605102 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies to update the sales forecast.</source>
+          <target state="translated">Especifica que se debe actualizar la previsión de ventas.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 1434786627</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2565734565 - Action 1676605102 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update Sales Forecast</source>
+          <target state="translated">Actualizar la previsión de ventas</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 1434786627</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2565734565 - Action 3452445781 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast</source>
+          <target state="translated">Previsión</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 1434786627</note>
         </trans-unit>
         <trans-unit id="PermissionSet 122279174 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>SalesAndInventoryForecast - Edit</source>
           <target state="translated">SalesAndInventoryForecast - Edición</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=System.Security.AccessControl)(LookupHint=PermissionSet SalesForecast - Edit - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 1805333520 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SalesAndInventoryForecast - Read</source>
+          <target state="translated">SalesAndInventoryForecast - Lectura</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Security.AccessControl)(LookupHint=PermissionSet SalesForecast - Read - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="PermissionSet 2248664108 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -890,11 +667,234 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=System.Security.AccessControl)(LookupHint=PermissionSet SalesForecast - Objects - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="PermissionSet 1805333520 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SalesAndInventoryForecast - Read</source>
-          <target state="translated">SalesAndInventoryForecast - Lectura</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=System.Security.AccessControl)(LookupHint=PermissionSet SalesForecast - Read - Property Caption)</note>
+        <trans-unit id="Query 1089168795 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Forecast Query</source>
+          <target state="translated">Consulta previsión ventas</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Query Sales Forecast Query - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 1158072699 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Timeout (seconds)</source>
+          <target state="translated">Tiempo de espera (segundos)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Timeout (seconds) - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 1620293444 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variance %</source>
+          <target state="translated">% de desviación</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Variance % - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 1663593181 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <target state="translated">Clave principal</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Primary Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 1749449385 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Horizon</source>
+          <target state="translated">Horizonte</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Horizon - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 1780437933 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Stockout Warning Horizon</source>
+          <target state="translated">Horizonte de advertencia por falta stock</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Stockout Warning Horizon - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 2038324810 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>API URI</source>
+          <target state="translated">URI de API</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field API URI - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 264208910 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>API Key ID</source>
+          <target state="translated">Id. de clave de API</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field API Key ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 2891538263 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enabled</source>
+          <target state="translated">Habilitado</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Enabled - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 2908512707 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Timeseries Model</source>
+          <target state="translated">Modelo de serie temporal</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Timeseries Model - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 2908512707 - Property 62802879" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ARIMA,ETS,STL,ETS+ARIMA,ETS+STL,ALL,TBATS</source>
+          <target state="translated">ARIMA,ETS,STL,ETS+ARIMA,ETS+STL,ALL,TBATS</target>
+          <note from="Developer" annotates="general" priority="2">A comma can only be used to separate options. The translation must contain same number of options as the source. {Placeholder=","} (Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Timeseries Model - Property OptionCaption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 2927347786 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Processing Time</source>
+          <target state="translated">Tiempo de procesamiento</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Processing Time - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 3046871300 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Expiration Period (Days)</source>
+          <target state="translated">Período de caducidad (días)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Expiration Period (Days) - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 3414388415 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Limit</source>
+          <target state="translated">Límite</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Limit - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 3810224734 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Historical Periods</source>
+          <target state="translated">Períodos históricos</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Historical Periods - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 729129122 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Run Completed</source>
+          <target state="translated">Última ejecución completada</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Last Run Completed - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 95864743 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Period Type</source>
+          <target state="translated">Tipo periodo</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Period Type - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Field 95864743 - Property 62802879" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Day,Week,Month,Quarter,Year</source>
+          <target state="translated">Día,Semana,Mes,Trimestre,Año</target>
+          <note from="Developer" annotates="general" priority="2">A comma can only be used to separate options. The translation must contain same number of options as the source. {Placeholder=","} (Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Field Period Type - Property OptionCaption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 178869804 - Field 1530663077 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast Data</source>
+          <target state="translated">Datos de previsión</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Field Forecast Data - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 178869804 - Field 1530663077 - Property 62802879" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Base,Result</source>
+          <target state="translated">Base,Resultado</target>
+          <note from="Developer" annotates="general" priority="2">A comma can only be used to separate options. The translation must contain same number of options as the source. {Placeholder=","} (Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Field Forecast Data - Property OptionCaption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 178869804 - Field 1620293444 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variance %</source>
+          <target state="translated">% de desviación</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Field Variance % - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 178869804 - Field 2526400892 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delta</source>
+          <target state="translated">Delta</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Field Delta - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 178869804 - Field 2704404533 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target state="translated">Cantidad</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Field Quantity - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 178869804 - Field 3192175264 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target state="translated">Fecha</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Field Date - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 178869804 - Field 568743302 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target state="translated">N.º producto</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Field Item No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 995188731 - Field 1004750025 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Updated</source>
+          <target state="translated">Última actualización</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Field Last Updated - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 995188731 - Field 1266072289 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast Start Date</source>
+          <target state="translated">Fecha de inicio de previsión</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Field Forecast Start Date - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 995188731 - Field 1749449385 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Horizon</source>
+          <target state="translated">Horizonte</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Field Horizon - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 995188731 - Field 1832902037 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Time Series Period Type</source>
+          <target state="translated">Tipo de período de serie temporal</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Field Time Series Period Type - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 995188731 - Field 1832902037 - Property 62802879" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Day,Week,Month,Quarter,Year</source>
+          <target state="translated">Día,Semana,Mes,Trimestre,Año</target>
+          <note from="Developer" annotates="general" priority="2">A comma can only be used to separate options. The translation must contain same number of options as the source. {Placeholder=","} (Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Field Time Series Period Type - Property OptionCaption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 995188731 - Field 3694533338 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>History Start Date</source>
+          <target state="translated">Fecha de inicio de historial</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Field History Start Date - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 995188731 - Field 568743302 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target state="translated">N.º producto</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Field Item No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - NamedType 1644091217" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must be an administrator to enable/disable sales forecasting. Ensure that you are assigned the 'SUPER' user permission set.</source>
+          <target state="translated">Debe ser administrador para habilitar o deshabilitar la previsión de ventas. Asegúrese de que se le ha asignado el conjunto de permisos de usuario "SUPER".</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - NamedType NotAdminErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - NamedType 3788244515" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must specify an API key and an API URI in the Sales and Inventory Forecast Setup page.</source>
+          <target state="translated">Debe especificar una clave de API y un URI de API en la página de configuración de previsión de inventario y ventas.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - NamedType SpecifyApiKeyErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1767462481 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MS - Sales Forecast Setup</source>
+          <target state="translated">MS - Configuración de previsión de ventas</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 178869804 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MS - Sales Forecast</source>
+          <target state="translated">MS - Previsión de ventas</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 995188731 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MS - Sales Forecast Parameter</source>
+          <target state="translated">MS - Parámetro de previsión de ventas</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.InventoryForecast)(LookupHint=Table MS - Sales Forecast Parameter - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="TableExtension 818531561 - Field 2006631723 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Has Sales Forecast</source>
+          <target state="translated">Con previsión de ventas</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 3276313895</note>
         </trans-unit>
       </group>
     </body>

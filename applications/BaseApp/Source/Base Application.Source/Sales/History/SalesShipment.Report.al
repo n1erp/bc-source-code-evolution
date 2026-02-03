@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Sales.History;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Sales.History;
 
 using Microsoft.Assembly.History;
 using Microsoft.Bank.BankAccount;
@@ -671,11 +675,6 @@ report 208 "Sales - Shipment"
 
         trigger OnInit()
         begin
-            LogInteractionEnable := true;
-        end;
-
-        trigger OnOpenPage()
-        begin
             InitLogInteraction();
             LogInteractionEnable := LogInteraction;
         end;
@@ -719,8 +718,6 @@ report 208 "Sales - Shipment"
 
     trigger OnPreReport()
     begin
-        if not CurrReport.UseRequestPage then
-            InitLogInteraction();
         AsmHeaderExists := false;
 
         OnAfterOnPreReport("Sales Shipment Header");

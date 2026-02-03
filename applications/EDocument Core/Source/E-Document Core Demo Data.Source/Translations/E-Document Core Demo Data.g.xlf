@@ -3,6 +3,86 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="E-Document Core Demo Data">
     <body>
       <group id="body">
+        <trans-unit id="Codeunit 2182587674 - NamedType 2903728378" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No data found in the blob.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit E-Doc ADI Handler Mock - NamedType NoDataFoundInBlobErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2182587674 - NamedType 3222530480" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No subscriber to OnBeforeGetADIJsonInStream event.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit E-Doc ADI Handler Mock - NamedType NoSubscriberToOnBeforeGetADIJsonInStreamErr</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1245530528 - EnumValue 2839207506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 3462895808">
+          <source>ADI Mock</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension ADI Mock Struct Receive E-Doc. - EnumValue ADI Mock - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>E-Doc From Resource Mapping</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the purchase line to use the mapping for.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 3641927271 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unique identifier for the mapping.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 3641927271 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies what you're selling. The options vary, depending on what you choose in the Type field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 3265714202 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the product code for the item in the purchase line.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Product Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 3265714202 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Product Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 1878130204 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of entity that will be posted for this purchase line, such as Item, Resource, or G/L Account.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 1878130204 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 1920046521 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unit of measure for the item in the purchase line.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Unit of Measure - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1738354404 - Field 1920046521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table E-Doc From Resource Mapping - Field Unit of Measure - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 922888270 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>E-Document Module Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -42,6 +122,31 @@
           <source>E-DOCUMENTS</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create E-Document Setup - NamedType ServiceCodeLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2363101040 - Method 1066425862 - NamedType 2258732533" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No pfd files found in the .resources\PDFs folder.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit E-Doc. From Resource Helper - Method CreateEDocumentsFromResources - NamedType NoPDFFilesInResourcesFolderErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2363101040 - Method 1066425862 - NamedType 1558777102" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No subscriber to OnGetListOfPDFResources event.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit E-Doc. From Resource Helper - Method CreateEDocumentsFromResources - NamedType NoSubscribertoOnGetListOfPDFResourcesErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2363101040 - Method 2461689013 - NamedType 2675554205" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No subscriber to OnBeforeCreteEDocFromResourceMappings event.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit E-Doc. From Resource Helper - Method CreteEDocFromResourceMappings - NamedType NMoSubscriberToOnBeforeCreteEDocFromResourceMappingsErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2363101040 - Method 1796859230 - NamedType 1101315447" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No subscriber to OnGetResourceInStreamWhenImportDocument event.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit E-Doc. From Resource Helper - Method ImportDocument - NamedType NoSubscriberToOnGetResourceInStreamWhenImportDocumentErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2363101040 - Method 676698991 - NamedType 1664725989" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Header not found for E-Document with ID %1. Possible reason: %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = E-Document ID, %2 = Last error text</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit E-Doc. From Resource Helper - Method PostPurchInvoice - NamedType PurchHeaderNotFoundForEdocErr</note>
         </trans-unit>
         <trans-unit id="Page 922888270 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>E-Document Module Setup</source>

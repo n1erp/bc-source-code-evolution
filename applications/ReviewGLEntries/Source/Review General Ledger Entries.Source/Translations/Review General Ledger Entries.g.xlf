@@ -23,6 +23,71 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table G/L Entry Review Entry - Field Reviewed Identifier - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 27944434 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Entry Review Log</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table G/L Entry Review Log - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 27944434 - Field 3852983238 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the G/L account number associated with the G/L entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table G/L Entry Review Log - Field G/L Account No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 27944434 - Field 3852983238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Account No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table G/L Entry Review Log - Field G/L Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 27944434 - Field 1411740825 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the G/L entry number that is being reviewed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table G/L Entry Review Log - Field G/L Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 27944434 - Field 1411740825 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table G/L Entry Review Log - Field G/L Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 27944434 - Field 3320823955 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line number of the G/L entry review log.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table G/L Entry Review Log - Field Line No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 27944434 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table G/L Entry Review Log - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 27944434 - Field 665639641 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the amount that was reviewed for the G/L entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table G/L Entry Review Log - Field Reviewed Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 27944434 - Field 665639641 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reviewed Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table G/L Entry Review Log - Field Reviewed Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 27944434 - Field 2188429124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the user who reviewed the G/L entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table G/L Entry Review Log - Field Reviewed By - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 27944434 - Field 2188429124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reviewed By</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table G/L Entry Review Log - Field Reviewed By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 27944434 - Field 1699201620 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the identifier for the review of the G/L entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table G/L Entry Review Log - Field Reviewed Identifier - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 27944434 - Field 1699201620 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reviewed Identifier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table G/L Entry Review Log - Field Reviewed Identifier - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2293883615 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>G/L Entry Review Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -92,6 +157,16 @@
           <source>%1 %2</source>
           <note from="Developer" annotates="general" priority="2">%1 is the G/L Account No. and %2 is the G/L Account Name</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Review G/L Entries - NamedType CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 2247589152 - NamedType 451553540" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount to Review must have the same sign as Remaining Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Review G/L Entries - NamedType MustHavetheSameSignErr</note>
+        </trans-unit>
+        <trans-unit id="Page 2247589152 - NamedType 3699159969" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount to Review must not be larger than Remaining Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Review G/L Entries - NamedType MustNotBelargerErr</note>
         </trans-unit>
         <trans-unit id="Page 2247589152 - Control 25700210 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
           <source>About Balance?</source>
@@ -197,6 +272,16 @@
           <source>Specifies the date when the G/L entries were posted.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Review G/L Entries - Control Posting Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2247589152 - Control 1794219516 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the remaining amount that can be applied to the entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Review G/L Entries - Control RemainingAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2247589152 - Control 1794219516 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remaining Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Review G/L Entries - Control RemainingAmount - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2247589152 - Control 1515723681 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
           <source>About Review Id?</source>
@@ -324,7 +409,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Review G/L Entries - Action Show All - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2247589152 - Action 3473830694 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Show reviewed entries, hides all the unreviewed entries on the page</source>
+          <source>Shows all the reviewed entries on the page</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Review G/L Entries - Action Show Reviewed Entries - Property ToolTip</note>
         </trans-unit>
@@ -337,6 +422,41 @@
           <source>Entry</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Review G/L Entries - Action Category_Process - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 994609695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reviewed G/L Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Reviewed G/L Entries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 994609695 - NamedType 2180186744" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 is the G/L Account No. and %2 is the G/L Account Name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Reviewed G/L Entries - NamedType CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 994609695 - Control 636392376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the amount of the G/L entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Reviewed G/L Entries - Control Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 994609695 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the G/L entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Reviewed G/L Entries - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 994609695 - Control 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the document number associated with the G/L entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Reviewed G/L Entries - Control Document No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 994609695 - Control 2363328873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of document associated with the G/L entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Reviewed G/L Entries - Control Document Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 994609695 - Control 3710982960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the date when the G/L entry was posted.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Reviewed G/L Entries - Control Posting Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3920593255 - Action 682019436 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3105459369">
           <source>Review Entries</source>
@@ -393,20 +513,60 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Account Review Policy - Field Review Policy - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2120619102 - Field 3368684655 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
+          <source>Specifies the amount that will be reviewed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry Review - Field Amount to Review - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2120619102 - Field 3368684655 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
+          <source>Amount to Review</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry Review - Field Amount to Review - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2120619102 - Field 3732000533 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
+          <source>Specifies whether the G/L entry has been reviewed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry Review - Field Reviewed - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="TableExtension 2120619102 - Field 3732000533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
           <source>Reviewed</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry Review - Field Reviewed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2120619102 - Field 665639641 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
+          <source>Specifies the amount that was reviewed for the G/L entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry Review - Field Reviewed Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2120619102 - Field 665639641 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
+          <source>Reviewed Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry Review - Field Reviewed Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2120619102 - Field 2188429124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
+          <source>Specifies the user who reviewed the G/L entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry Review - Field Reviewed By - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="TableExtension 2120619102 - Field 2188429124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
           <source>Reviewed By</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry Review - Field Reviewed By - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2120619102 - Field 2567000513 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
+          <source>Specifies the date and time when the G/L entry was reviewed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry Review - Field Reviewed Date - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="TableExtension 2120619102 - Field 2567000513 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
           <source>Reviewed Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry Review - Field Reviewed Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2120619102 - Field 1699201620 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
+          <source>Specifies the identifier for the review of the G/L entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry Review - Field Reviewed Identifier - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="TableExtension 2120619102 - Field 1699201620 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
           <source>Reviewed Identifier</source>
@@ -427,6 +587,11 @@
           <source>None</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum G/L Account Review Policy - EnumValue None - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1905066615 - EnumValue 3107932718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Review G/L Entry</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum G/L Entry Reviewer - EnumValue Review G/L Entry - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 3059661478 - EnumValue 171085621 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Allow Review</source>

@@ -38,6 +38,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Statistical Account Test - NamedType REVEMPLLbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1711171192 - NamedType 3108854004" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wrong balance on the statistical account %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Statistical Account No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Statistical Account Test - NamedType WrongBalanceErr</note>
+        </trans-unit>
       </group>
     </body>
   </file>

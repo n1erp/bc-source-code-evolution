@@ -1,4 +1,8 @@
-﻿
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+
 namespace Microsoft.Sales.Peppol;
 
 using Microsoft.Finance.GeneralLedger.Setup;
@@ -100,7 +104,7 @@ xmlport 1611 "Sales Cr.Memo - PEPPOL BIS 3.0"
 
                 trigger OnBeforePassVariable()
                 begin
-                    BuyerReference := SalesHeader."Your Reference";
+                    BuyerReference := PEPPOLMgt.GetBuyerReference(SalesHeader);
                     if BuyerReference = '' then
                         currXMLport.Skip();
                 end;
@@ -2082,6 +2086,7 @@ xmlport 1611 "Sales Cr.Memo - PEPPOL BIS 3.0"
                     if not FindNextCreditMemoLineRec(CreditMemoLineLoop.Number) then
                         currXMLport.Break();
 
+                    OnCreditMemoLineLoopOnAfterGetRecordOnBeforeGetLineGeneralInfo(SalesCrMemoLine, SalesLine);
                     PEPPOLMgt.GetLineGeneralInfo(
                       SalesLine,
                       SalesHeader,
@@ -2179,6 +2184,7 @@ xmlport 1611 "Sales Cr.Memo - PEPPOL BIS 3.0"
                     if SalesCrMemoLine.FindSet() then
                         repeat
                             SalesLine.TransferFields(SalesCrMemoLine);
+                            OnGetTotalsOnBeforeGetSalesLineTotals(SalesCrMemoLine, SalesLine);
                             PEPPOLMgt.GetTotals(SalesLine, TempVATAmtLine);
                             PEPPOLMgt.GetTaxCategories(SalesLine, TempVATProductPostingGroup);
                         until SalesCrMemoLine.Next() = 0;
@@ -2234,6 +2240,7 @@ xmlport 1611 "Sales Cr.Memo - PEPPOL BIS 3.0"
                     if SalesCrMemoLine.FindSet() then
                         repeat
                             SalesLine.TransferFields(SalesCrMemoLine);
+                            OnInitializeOnBeforeGetInvoiceRoundingLine(SalesCrMemoLine, SalesLine);
                             PEPPOLMgt.GetInvoiceRoundingLine(TempSalesLineRounding, SalesLine);
                         until SalesCrMemoLine.Next() = 0;
                     if TempSalesLineRounding."Line No." <> 0 then
@@ -2294,6 +2301,21 @@ xmlport 1611 "Sales Cr.Memo - PEPPOL BIS 3.0"
 
     [IntegrationEvent(false, false)]
     local procedure OnBeforeFindSalesCrMemoLine(var SalesCrMemoLine: Record "Sales Cr.Memo Line")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnGetTotalsOnBeforeGetSalesLineTotals(var SalesCrMemoLine: Record "Sales Cr.Memo Line"; var SalesLine: Record "Sales Line")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnInitializeOnBeforeGetInvoiceRoundingLine(var SalesCrMemoLine: Record "Sales Cr.Memo Line"; var SalesLine: Record "Sales Line")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnCreditMemoLineLoopOnAfterGetRecordOnBeforeGetLineGeneralInfo(var SalesCrMemoLine: Record "Sales Cr.Memo Line"; var SalesLine: Record "Sales Line")
     begin
     end;
 }

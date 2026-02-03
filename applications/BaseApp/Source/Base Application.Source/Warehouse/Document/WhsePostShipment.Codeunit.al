@@ -1,4 +1,8 @@
-﻿namespace Microsoft.Warehouse.Document;
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
+namespace Microsoft.Warehouse.Document;
 
 using Microsoft.Finance.GeneralLedger.Journal;
 using Microsoft.Finance.GeneralLedger.Preview;
@@ -31,7 +35,7 @@ codeunit 5763 "Whse.-Post Shipment"
         Code();
         Rec := WhseShptLine;
 
-        OnAfterRun(Rec);
+        OnAfterRun(Rec, WhsePostParameters."Preview Posting");
     end;
 
     var
@@ -175,7 +179,6 @@ codeunit 5763 "Whse.-Post Shipment"
 #endif
                 OnBeforePostSourceHeader(WhseShptLine, GlobalSourceHeader, WhsePostParameters);
                 PostSourceDocument(WhseShptLine, GlobalSourceHeader);
-                WhseJnlRegisterLine.LockIfLegacyPosting();
 
                 if WhseShptLine.FindLast() then;
                 WhseShptLine.SetRange(WhseShptLine."Source Type");
@@ -302,7 +305,7 @@ codeunit 5763 "Whse.-Post Shipment"
         WhseShptLine2: Record "Warehouse Shipment Line";
         DeleteWhseShptLine: Boolean;
     begin
-        OnBeforePostUpdateWhseDocuments(WhseShptHeaderParam);
+        OnBeforePostUpdateWhseDocuments(WhseShptHeaderParam, TempWarehouseShipmentLine);
         if TempWarehouseShipmentLine.Find('-') then begin
             repeat
                 WhseShptLine2.Get(TempWarehouseShipmentLine."No.", TempWarehouseShipmentLine."Line No.");
@@ -508,7 +511,7 @@ codeunit 5763 "Whse.-Post Shipment"
             OnPostWhseJnlLineOnAfterSplitWhseJnlLine(TempWhseJnlLine, PostedWhseShptLine, TempTrackingSpecification, TempWhseJnlLine2);
             if TempWhseJnlLine2.Find('-') then
                 repeat
-                    WhseJnlRegisterLine.Run(TempWhseJnlLine2);
+                    WhseJnlRegisterLine.Run(TempWhseJnlLine2); 
                 until TempWhseJnlLine2.Next() = 0;
         end;
 
@@ -683,7 +686,7 @@ codeunit 5763 "Whse.-Post Shipment"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnAfterRun(var WarehouseShipmentLine: Record "Warehouse Shipment Line")
+    local procedure OnAfterRun(var WarehouseShipmentLine: Record "Warehouse Shipment Line"; PreviewMode: Boolean)
     begin
     end;
 
@@ -1128,7 +1131,7 @@ codeunit 5763 "Whse.-Post Shipment"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnBeforePostUpdateWhseDocuments(var WhseShptHeader: Record "Warehouse Shipment Header")
+    local procedure OnBeforePostUpdateWhseDocuments(var WhseShptHeader: Record "Warehouse Shipment Header"; var TempWarehouseShipmentLine: Record "Warehouse Shipment Line" temporary)
     begin
     end;
 
@@ -1616,7 +1619,7 @@ codeunit 5763 "Whse.-Post Shipment"
     end;
 
     [IntegrationEvent(false, false)]
-    local procedure OnPostSourceDocumentAfterGetWhseShptHeader(WhseShptLine: Record "Warehouse Shipment Line"; var WhseShptHeader: Record "Warehouse Shipment Header")
+    local procedure OnPostSourceDocumentAfterGetWhseShptHeader(var WhseShptLine: Record "Warehouse Shipment Line"; var WhseShptHeader: Record "Warehouse Shipment Header")
     begin
     end;
 

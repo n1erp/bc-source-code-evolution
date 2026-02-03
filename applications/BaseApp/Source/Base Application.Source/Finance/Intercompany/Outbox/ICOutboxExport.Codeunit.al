@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Intercompany.Outbox;
 
 using Microsoft.Finance.GeneralLedger.Preview;
@@ -14,6 +18,7 @@ using System.Environment;
 using System.IO;
 using System.Telemetry;
 using System.Utilities;
+using Microsoft.Intercompany.Inbox;
 
 codeunit 431 "IC Outbox Export"
 {
@@ -136,6 +141,7 @@ codeunit 431 "IC Outbox Export"
         ICPartnerFilter := ICOutboxTrans.GetFilter("IC Partner Code");
         if ICPartnerFilter <> '' then
             ICPartner.SetFilter(Code, ICPartnerFilter);
+        OnSendToExternalPartnerOnBeforeICPartnerFindset(ICPartner);
         if ICPartner.Find('-') then
             repeat
                 ICOutboxTrans.SetRange("IC Partner Code", ICPartner.Code);
@@ -199,7 +205,6 @@ codeunit 431 "IC Outbox Export"
                             DocumentMailing.EnqueueEmailFile(
                               InStream,
                               StrSubstNo('%1.xml', ICPartner.Code),
-                              '',
                               ICOutboxTrans."Document No.",
                               EmailItem."Send to",
                               EmailItem.Subject,
@@ -290,7 +295,10 @@ codeunit 431 "IC Outbox Export"
     procedure SendToInternalPartner(var ICOutboxTrans: Record "IC Outbox Transaction")
     var
         ICPartner: Record "IC Partner";
+        TempAllPartnerICInboxTransaction: Record "IC Inbox Transaction" temporary;
+        TempAllPartnerHandledICInboxTrans: Record "Handled IC Inbox Trans." temporary;
         MoveICTransToPartnerCompany: Report "Move IC Trans. to Partner Comp";
+        ICPartnerCodeList: List of [Text];
         IsHandled: Boolean;
     begin
         if ICOutboxTrans.Find('-') then
@@ -303,6 +311,7 @@ codeunit 431 "IC Outbox Export"
                     IsHandled := false;
                     OnSendToInternalPartnerOnBeforeMoveICTransToPartnerCompany(ICOutboxTrans, IsHandled);
                     if not IsHandled then begin
+                        MoveICTransToPartnerCompany.Initialize(ICPartnerCodeList, TempAllPartnerICInboxTransaction, TempAllPartnerHandledICInboxTrans);
                         MoveICTransToPartnerCompany.SetTableView(ICOutboxTrans);
                         MoveICTransToPartnerCompany.UseRequestPage := false;
                         MoveICTransToPartnerCompany.Run();
@@ -462,6 +471,11 @@ codeunit 431 "IC Outbox Export"
 
     [IntegrationEvent(false, false)]
     local procedure OnBeforeProcessAutoSendOutboxTransactionNo(var ICOutboxTransactionNo: Integer; var IsHandled: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnSendToExternalPartnerOnBeforeICPartnerFindset(var ICPartner: Record "IC Partner")
     begin
     end;
 }

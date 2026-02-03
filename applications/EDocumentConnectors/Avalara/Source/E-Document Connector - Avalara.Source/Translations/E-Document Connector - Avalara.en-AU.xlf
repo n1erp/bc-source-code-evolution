@@ -3,160 +3,16 @@
   <file datatype="xml" source-language="en-US" target-language="en-AU" original="E-Document Connector - Avalara">
     <body>
       <group id="body">
-        <trans-unit id="Table 3591760865 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Avalara Company</source>
-          <target state="translated">Avalara Company</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Avalara Company - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 3591760865 - Field 613381766 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Company Id</source>
-          <target state="translated">Company Id</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Avalara Company - Field Company Id - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 3591760865 - Field 3997336476 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Company Name</source>
-          <target state="translated">Company Name</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Avalara Company - Field Company Name - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 3591760865 - Field 415504711 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Id</source>
-          <target state="translated">Id</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Avalara Company - Field Id - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 718441699 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Connection Setup</source>
-          <target state="translated">Connection Setup</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 718441699 - Field 3951414661 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>API URL</source>
-          <target state="translated">API URL</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field API URL - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 718441699 - Field 3242117461 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Authentication URL</source>
-          <target state="translated">Authentication URL</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Authentication URL - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 718441699 - Field 3843000922 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Client Id</source>
-          <target state="translated">Client Id</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Client Id - Key - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 718441699 - Field 3536916135 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Client Secret</source>
-          <target state="translated">Client Secret</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Client Secret - Key - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 718441699 - Field 613381766 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Company ID</source>
-          <target state="translated">Company ID</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Company Id - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 718441699 - Field 3997336476 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Company Name</source>
-          <target state="translated">Company Name</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Company Name - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 718441699 - Field 415504711 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Id</source>
-          <target state="translated">Id</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Id - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 718441699 - Field 2522678818 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sandbox Authentication URL</source>
-          <target state="translated">Sandbox Authentication URL</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Sandbox API URL - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 718441699 - Field 2079198506 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sandbox Authentication URL</source>
-          <target state="translated">Sandbox Authentication URL</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Sandbox Authentication URL - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 718441699 - Field 2325619241 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Send Mode</source>
-          <target state="translated">Send Mode</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Send Mode - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 718441699 - Field 3303401035 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Token</source>
-          <target state="translated">Token</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Token - Key - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 718441699 - Field 1662423936 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Token Expiry</source>
-          <target state="translated">Token Expiry</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Token Expiry - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 2840930930 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Mandate</source>
-          <target state="translated">Mandate</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Mandate - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 2840930930 - Field 2542713143 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Country Mandate</source>
-          <target state="translated">Country Mandate</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Mandate - Field Country Code - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 2840930930 - Field 1233556098 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Country Mandate</source>
-          <target state="translated">Country Mandate</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Mandate - Field Country Mandate - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 2840930930 - Field 3461834954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <target state="translated">Description</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Mandate - Field Description - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 299594015 - NamedType 2567922443" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Avalara Client Id is not set in %1</source>
-          <target state="translated">Avalara Client Id is not set in %1</target>
-          <note from="Developer" annotates="general" priority="2">%1 - Client id(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Authenticator - NamedType AvalaraClientIdErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 299594015 - NamedType 2739238806" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Avalara Client Secret is not set in %1</source>
-          <target state="translated">Avalara Client Secret is not set in %1</target>
-          <note from="Developer" annotates="general" priority="2">%1 - Client secret(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Authenticator - NamedType AvalaraClientSecretErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 299594015 - NamedType 3425104517" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Failed to parse response for Avalara Access token request</source>
-          <target state="translated">Failed to parse response for Avalara Access token request</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Authenticator - NamedType AvalaraParseTokenErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1015814377 - NamedType 2108005185" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The HTTP request was incorrectly formed or invalid.</source>
-          <target state="translated">The HTTP request was incorrectly formed or invalid.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Http Executor - NamedType HTTPBadRequestMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
         <trans-unit id="Codeunit 1015814377 - NamedType 1252900355" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Error Code: %1, Error Message: %2</source>
           <target state="translated">Error Code: %1, Error Message: %2</target>
           <note from="Developer" annotates="general" priority="2">%1 = Error Code, %2 = Error Message(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Http Executor - NamedType HttpErrorMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1015814377 - NamedType 141161722" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The HTTP request is not successful. The service is unavailable.</source>
+          <target state="translated">The HTTP request is not successful. The service is unavailable.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Http Executor - NamedType HTTPServiceUnavailableMsg)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Codeunit 1015814377 - NamedType 1884515926" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -171,10 +27,16 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Http Executor - NamedType HTTPInternalServerErrorMsg)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 1015814377 - NamedType 141161722" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The HTTP request is not successful. The service is unavailable.</source>
-          <target state="translated">The HTTP request is not successful. The service is unavailable.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Http Executor - NamedType HTTPServiceUnavailableMsg)</note>
+        <trans-unit id="Codeunit 1015814377 - NamedType 2108005185" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The HTTP request was incorrectly formed or invalid.</source>
+          <target state="translated">The HTTP request was incorrectly formed or invalid.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Http Executor - NamedType HTTPBadRequestMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1015814377 - NamedType 2274071287" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The HTTP request is not authorized. Authentication credentials are not valid.</source>
+          <target state="translated">The HTTP request is not authorised. Authentication credentials are not valid.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Http Executor - NamedType HTTPUnauthorizedMsg)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Codeunit 1015814377 - NamedType 2991387915" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -189,10 +51,22 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Http Executor - NamedType HTTPSuccessMsg)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 1015814377 - NamedType 2274071287" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The HTTP request is not authorized. Authentication credentials are not valid.</source>
-          <target state="translated">The HTTP request is not authorised. Authentication credentials are not valid.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Http Executor - NamedType HTTPUnauthorizedMsg)</note>
+        <trans-unit id="Codeunit 299594015 - NamedType 2567922443" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Avalara Client Id is not set in %1</source>
+          <target state="translated">Avalara Client Id is not set in %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 - Client id(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Authenticator - NamedType AvalaraClientIdErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 299594015 - NamedType 2739238806" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Avalara Client Secret is not set in %1</source>
+          <target state="translated">Avalara Client Secret is not set in %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 - Client secret(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Authenticator - NamedType AvalaraClientSecretErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 299594015 - NamedType 3238107908" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed to parse response for Avalara Access token request</source>
+          <target state="translated">Failed to parse response for Avalara Access token request</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Authenticator - NamedType AvalaraGetTokenErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Codeunit 3862845261 - NamedType 1069400727" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -201,16 +75,40 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Processing - NamedType AvalaraCountryIdLongerErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
+        <trans-unit id="Codeunit 3862845261 - NamedType 1974412065" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Avalara mandate description is longer than what is supported by framework.</source>
+          <target state="translated">Avalara mandate description is longer than what is supported by framework.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Processing - NamedType AvalaraCountryMandateDescLongerErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
         <trans-unit id="Codeunit 3862845261 - NamedType 2082204858" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Avalara country code is longer than what is supported by framework.</source>
           <target state="translated">Avalara country code is longer than what is supported by framework.</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Processing - NamedType AvalaraCountryMandateCodeErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 3862845261 - NamedType 1974412065" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Avalara mandate description is longer than what is supported by framework.</source>
-          <target state="translated">Avalara mandate description is longer than what is supported by framework.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Processing - NamedType AvalaraCountryMandateDescLongerErr)</note>
+        <trans-unit id="Codeunit 3862845261 - NamedType 213294610" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select which Avalara service you want to update mandate for.</source>
+          <target state="translated">Select which Avalara service you want to update mandate for.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Processing - NamedType AvalaraPickMandateMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3862845261 - NamedType 2220225998" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document ID returned by API does not match E-Document.</source>
+          <target state="translated">Document ID returned by API does not match E-Document.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Processing - NamedType IncorrectDocumentIdInResponseErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3862845261 - NamedType 2449851249" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Avalara company name is longer than what is supported by framework.</source>
+          <target state="translated">Avalara company name is longer than what is supported by framework.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Processing - NamedType AvaralaCountryNameLongerErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3862845261 - NamedType 2451725535" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>An error has been identified in the submitted document.</source>
+          <target state="translated">An error has been identified in the submitted document.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Processing - NamedType AvalaraProcessingDocFailedErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Codeunit 3862845261 - NamedType 3485531562" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -225,40 +123,88 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Processing - NamedType AvalaraIdLongerErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 3862845261 - NamedType 213294610" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select which Avalara service you want to update mandate for.</source>
-          <target state="translated">Select which Avalara service you want to update mandate for.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Processing - NamedType AvalaraPickMandateMsg)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3862845261 - NamedType 2451725535" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>An error has been identified in the submitted document.</source>
-          <target state="translated">An error has been identified in the submitted document.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Processing - NamedType AvalaraProcessingDocFailedErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3862845261 - NamedType 2449851249" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Avalara company name is longer than what is supported by framework.</source>
-          <target state="translated">Avalara company name is longer than what is supported by framework.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Processing - NamedType AvaralaCountryNameLongerErr)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
         <trans-unit id="Codeunit 3862845261 - NamedType 983558944" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Document ID not found in response.</source>
           <target state="translated">Document ID not found in response.</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Processing - NamedType DocumentIdNotFoundErr)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 3862845261 - NamedType 2220225998" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Document ID returned by API does not match E-Document.</source>
-          <target state="translated">Document ID returned by API does not match E-Document.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Codeunit Processing - NamedType IncorrectDocumentIdInResponseErr)</note>
+        <trans-unit id="Enum 2614690178 - EnumValue 1065337893 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production</source>
+          <target state="translated">Production</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Enum E-Doc. Ext. Send Mode - EnumValue Production - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 2045936927 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Company List</source>
-          <target state="translated">Company List</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Company List - Property Caption)</note>
+        <trans-unit id="Enum 2614690178 - EnumValue 2391601916 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certification</source>
+          <target state="translated">Certification</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Enum E-Doc. Ext. Send Mode - EnumValue Certification - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2614690178 - EnumValue 3732224266 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test</source>
+          <target state="translated">Test</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Enum E-Doc. Ext. Send Mode - EnumValue Test - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 449039953 - EnumValue 1065337893 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production</source>
+          <target state="translated">Production</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Enum Avalara Send Mode - EnumValue Production - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 449039953 - EnumValue 2391601916 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Certification</source>
+          <target state="translated">Certification</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Enum Avalara Send Mode - EnumValue Certification - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 449039953 - EnumValue 3732224266 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test</source>
+          <target state="translated">Test</target>
+          <note from="Developer" annotates="general" priority="2">Commas cannot be used in EnumValues {InvalidChars=","} (Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Enum Avalara Send Mode - EnumValue Test - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4085496631 - Action 1782074954 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select Avalara company for service.</source>
+          <target state="translated">Select Avalara company for service.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Action SelectMandate - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4085496631 - Action 1782074954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select Avalara Mandate</source>
+          <target state="translated">Select Avalara Mandate</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Action SelectMandate - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4085496631 - Action 2510962270 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select Avalara company for service.</source>
+          <target state="translated">Select Avalara company for service.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Action SelectCompanyId - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4085496631 - Action 2510962270 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select Avalara Company Id</source>
+          <target state="translated">Select Avalara Company Id</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Action SelectCompanyId - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015559312 - Control 1233556098 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the mandate for the country.</source>
+          <target state="translated">Specifies the mandate for the country.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Mandate List - Control Country Mandate - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015559312 - Control 2542713143 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code of the country.</source>
+          <target state="translated">Specifies the code of the country.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Mandate List - Control Country Code - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015559312 - Control 3461834954 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the mandate.</source>
+          <target state="translated">Specifies the description of the mandate.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Mandate List - Control Description - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Page 2045936927 - Control 552006252 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -267,16 +213,22 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Company List - Control CompanyName - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 4085496631 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Avalara Connection Setup</source>
-          <target state="translated">Avalara Connection Setup</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Property Caption)</note>
+        <trans-unit id="Page 4085496631 - Control 2079198506 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the URL to connect to Avalara sandbox.</source>
+          <target state="translated">Specifies the URL to connect to Avalara sandbox.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Control Sandbox Authentication URL - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 4085496631 - Control 3951414661 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the URL to connect to Avalara's api.</source>
-          <target state="translated">Specifies the URL to connect to Avalara's api.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Control API URL - Property ToolTip)</note>
+        <trans-unit id="Page 4085496631 - Control 2325619241 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the send mode.</source>
+          <target state="translated">Specifies the send mode.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Control Send Mode - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4085496631 - Control 2522678818 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the URL to connect to Avalara sandbox api.</source>
+          <target state="translated">Specifies the URL to connect to Avalara sandbox api.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Control Sandbox API URL - Property ToolTip)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Page 4085496631 - Control 3242117461 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -297,6 +249,18 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Control ClientID - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
+        <trans-unit id="Page 4085496631 - Control 3951414661 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the URL to connect to Avalara's api.</source>
+          <target state="translated">Specifies the URL to connect to Avalara's api.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Control API URL - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 4085496631 - Control 3997336476 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the company name.</source>
+          <target state="translated">Specifies the company name.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Control Company Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
         <trans-unit id="Page 4085496631 - Control 4069789961 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the client secret.</source>
           <target state="translated">Specifies the client secret.</target>
@@ -309,58 +273,16 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Control ClientSecret - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
+        <trans-unit id="Page 4085496631 - Control 449039953 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the send mode.</source>
+          <target state="translated">Specifies the send mode.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Control Avalara Send Mode - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
         <trans-unit id="Page 4085496631 - Control 613381766 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the company ID.</source>
           <target state="translated">Specifies the company ID.</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Control Company Id - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4085496631 - Control 3997336476 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the company name.</source>
-          <target state="translated">Specifies the company name.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Control Company Name - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4085496631 - Control 2522678818 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the URL to connect to Avalara sandbox api.</source>
-          <target state="translated">Specifies the URL to connect to Avalara sandbox api.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Control Sandbox API URL - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4085496631 - Control 2079198506 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the URL to connect to Avalara sandbox.</source>
-          <target state="translated">Specifies the URL to connect to Avalara sandbox.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Control Sandbox Authentication URL - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4085496631 - Control 2325619241 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the send mode.</source>
-          <target state="translated">Specifies the send mode.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Control Send Mode - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4085496631 - Action 2510962270 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select Avalara company for service.</source>
-          <target state="translated">Select Avalara company for service.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Action SelectCompanyId - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4085496631 - Action 2510962270 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select Avalara Company Id</source>
-          <target state="translated">Select Avalara Company Id</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Action SelectCompanyId - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4085496631 - Action 1782074954 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select Avalara company for service.</source>
-          <target state="translated">Select Avalara company for service.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Action SelectMandate - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 4085496631 - Action 1782074954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select Avalara Mandate</source>
-          <target state="translated">Select Avalara Mandate</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Action SelectMandate - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Page 1015559312 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -369,30 +291,17 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Mandate List - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 1015559312 - Control 2542713143 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the code of the country.</source>
-          <target state="translated">Specifies the code of the country.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Mandate List - Control Country Code - Property ToolTip)</note>
+        <trans-unit id="Page 2045936927 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company List</source>
+          <target state="translated">Company List</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Company List - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 1015559312 - Control 1233556098 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the mandate for the country.</source>
-          <target state="translated">Specifies the mandate for the country.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Mandate List - Control Country Mandate - Property ToolTip)</note>
+        <trans-unit id="Page 4085496631 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Avalara Connection Setup</source>
+          <target state="translated">Avalara Connection Setup</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Connection Setup Card - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Page 1015559312 - Control 3461834954 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the description of the mandate.</source>
-          <target state="translated">Specifies the description of the mandate.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Page Mandate List - Control Description - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="PageExtension 2677791245 - Control 1590341268 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Avalara</source>
-          <target state="translated">Avalara</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-          <note from="ObjectTarget" annotates="general" priority="5">Page 4102148806</note>
         </trans-unit>
         <trans-unit id="PageExtension 2677791245 - Control 1376197130 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the mandate used with Avalara service.</source>
@@ -401,23 +310,29 @@
           <note from="Xliff Generator" annotates="general" priority="3" />
           <note from="ObjectTarget" annotates="general" priority="5">Page 4102148806</note>
         </trans-unit>
-        <trans-unit id="TableExtension 2677791245 - Field 1376197130 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Avalara Mandate</source>
-          <target state="translated">Avalara Mandate</target>
+        <trans-unit id="PageExtension 2677791245 - Control 1590341268 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Avalara</source>
+          <target state="translated">Avalara</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3" />
-          <note from="ObjectTarget" annotates="general" priority="5">Table 4102148806</note>
-        </trans-unit>
-        <trans-unit id="PermissionSet 2666392528 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Avalara E-Document Connector - Edit</source>
-          <target state="translated">Avalara E-Document Connector - Edit</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=PermissionSet Avalara Edit - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 4102148806</note>
         </trans-unit>
         <trans-unit id="PermissionSet 176275722 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Avalara E-Document Connector - Objects</source>
           <target state="translated">Avalara E-Document Connector - Objects</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=PermissionSet Avalara Objects - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 2119658478 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Avalara E-Document Connector - Read</source>
+          <target state="translated">Avalara E-Document Connector - Read</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=PermissionSet Read - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 2666392528 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Avalara E-Document Connector - Edit</source>
+          <target state="translated">Avalara E-Document Connector - Edit</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=PermissionSet Avalara Edit - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="PermissionSet 2681504006 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -426,23 +341,163 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=PermissionSet Avalara Read - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="PermissionSet 746276264 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Avalara E-Document Connector - Edit</source>
-          <target state="translated">Avalara E-Document Connector - Edit</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=PermissionSet Edit - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
         <trans-unit id="PermissionSet 4035890834 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>Avalara E-Document Connector - Objects</source>
           <target state="translated">Avalara E-Document Connector - Objects</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=PermissionSet Objects - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="PermissionSet 2119658478 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Avalara E-Document Connector - Read</source>
-          <target state="translated">Avalara E-Document Connector - Read</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=PermissionSet Read - Property Caption)</note>
+        <trans-unit id="PermissionSet 746276264 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Avalara E-Document Connector - Edit</source>
+          <target state="translated">Avalara E-Document Connector - Edit</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=PermissionSet Edit - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2840930930 - Field 1233556098 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Country Mandate</source>
+          <target state="translated">Country Mandate</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Mandate - Field Country Mandate - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2840930930 - Field 2542713143 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Country Mandate</source>
+          <target state="translated">Country Mandate</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Mandate - Field Country Code - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2840930930 - Field 3461834954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Description</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Mandate - Field Description - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3591760865 - Field 3997336476 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company Name</source>
+          <target state="translated">Company Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Avalara Company - Field Company Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3591760865 - Field 415504711 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target state="translated">Id</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Avalara Company - Field Id - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3591760865 - Field 613381766 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company Id</source>
+          <target state="translated">Company Id</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Avalara Company - Field Company Id - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 718441699 - Field 1662423936 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Token Expiry</source>
+          <target state="translated">Token Expiry</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Token Expiry - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 718441699 - Field 2079198506 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sandbox Authentication URL</source>
+          <target state="translated">Sandbox Authentication URL</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Sandbox Authentication URL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 718441699 - Field 2325619241 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Send Mode</source>
+          <target state="translated">Send Mode</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Send Mode - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 718441699 - Field 2522678818 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sandbox Authentication URL</source>
+          <target state="translated">Sandbox Authentication URL</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Sandbox API URL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 718441699 - Field 3242117461 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authentication URL</source>
+          <target state="translated">Authentication URL</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Authentication URL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 718441699 - Field 3303401035 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Token</source>
+          <target state="translated">Token</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Token - Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 718441699 - Field 3536916135 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <target state="translated">Client Secret</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Client Secret - Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 718441699 - Field 3843000922 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Id</source>
+          <target state="translated">Client Id</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Client Id - Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 718441699 - Field 3951414661 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>API URL</source>
+          <target state="translated">API URL</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field API URL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 718441699 - Field 3997336476 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company Name</source>
+          <target state="translated">Company Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Company Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 718441699 - Field 415504711 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target state="translated">Id</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Id - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 718441699 - Field 449039953 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Send Mode</source>
+          <target state="translated">Send Mode</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Avalara Send Mode - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 718441699 - Field 613381766 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company ID</source>
+          <target state="translated">Company ID</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Field Company Id - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2840930930 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mandate</source>
+          <target state="translated">Mandate</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Mandate - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3591760865 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Avalara Company</source>
+          <target state="translated">Avalara Company</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Avalara Company - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 718441699 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Connection Setup</source>
+          <target state="translated">Connection Setup</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Avalara)(LookupHint=Table Connection Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="TableExtension 1078314978 - Field 1741683190 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Avalara Document Id</source>
+          <target state="translated">Avalara Document Id</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 4128474945</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2677791245 - Field 1376197130 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Avalara Mandate</source>
+          <target state="translated">Avalara Mandate</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 4102148806</note>
         </trans-unit>
       </group>
     </body>

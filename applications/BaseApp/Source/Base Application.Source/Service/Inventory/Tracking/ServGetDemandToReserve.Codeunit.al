@@ -133,7 +133,7 @@ codeunit 6485 "Serv. Get Demand To Reserve"
                 begin
                     ServiceHeader.SetLoadFields("Document Type", "No.");
                     ServiceHeader.Get(ReservationWkshLine."Source Subtype", ReservationWkshLine."Source ID");
-                    ServiceHeader.OpenOrderStatistics();
+                    Page.Run(Page::"Service Order Statistics", ServiceHeader);
                 end;
         end;
     end;
@@ -214,8 +214,11 @@ codeunit 6485 "Serv. Get Demand To Reserve"
         until TempServiceLine.Next() = 0;
     end;
 
+#if not CLEAN27
+    [Obsolete('This event is never raised.', '27.0')]
     [IntegrationEvent(false, false)]
     local procedure OnGetDemandOnBeforeSetTempServiceLine(var ServiceLine: Record "Service Line"; var IsHandled: Boolean)
     begin
     end;
+#endif
 }

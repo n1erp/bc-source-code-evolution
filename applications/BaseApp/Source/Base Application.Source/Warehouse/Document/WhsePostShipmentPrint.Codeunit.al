@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Warehouse.Document;
 
 using Microsoft.Finance.ReceivablesPayables;
@@ -42,6 +46,7 @@ codeunit 5765 "Whse.-Post Shipment + Print"
 
         WhsePostShipment.SetPostingSettings(Invoice);
         WhsePostShipment.SetPrint(true);
+        OnCodeOnBeforePostShipmentLine(WhseShptLine, WhsePostShipment);
         WhsePostShipment.Run(WhseShptLine);
         WhsePostShipment.GetResultMessage();
         Clear(WhsePostShipment);
@@ -60,6 +65,11 @@ codeunit 5765 "Whse.-Post Shipment + Print"
 
     [IntegrationEvent(false, false)]
     local procedure OnBeforeCode(var WhseShptLine: Record "Warehouse Shipment Line"; var HideDialog: Boolean; var Invoice: Boolean; var IsPosted: Boolean; var Selection: Integer)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnCodeOnBeforePostShipmentLine(WarehouseShipmentLine: Record "Warehouse Shipment Line"; var WhsePostShipment: Codeunit "Whse.-Post Shipment")
     begin
     end;
 }

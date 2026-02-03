@@ -3,100 +3,10 @@
   <file datatype="xml" source-language="en-US" target-language="en-AU" original="Subscription Billing Demo Data">
     <body>
       <group id="body">
-        <trans-unit id="Table 1106456176 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sub. Billing Module Setup</source>
-          <target state="translated">Sub. Billing Module Setup</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1106456176 - Field 2075359513 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether Subscription Billing related tasks are created in the Job Queue.</source>
-          <target state="translated">Specifies whether Subscription Billing related tasks are created in the Job Queue.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Field Create entries in Job Queue - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1106456176 - Field 2075359513 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Create entries in Job Queue</source>
-          <target state="translated">Create entries in Job Queue</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Field Create entries in Job Queue - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1106456176 - Field 1720582596 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether a Data Exchange Definition is imported to be used for usage data.</source>
-          <target state="translated">Specifies whether a Data Exchange Definition is imported to be used for usage data.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Field Import Data Exch. Definition - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1106456176 - Field 1720582596 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Import Data Exchange Definition</source>
-          <target state="translated">Import Data Exchange Definition</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Field Import Data Exch. Definition - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1106456176 - Field 2465242824 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether a reconciliation file is imported to be used for usage data.</source>
-          <target state="translated">Specifies whether a reconciliation file is imported to be used for usage data.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Field Import reconciliation file - Property ToolTip)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1106456176 - Field 2465242824 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Import reconciliation file</source>
-          <target state="translated">Import reconciliation file</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Field Import reconciliation file - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Table 1106456176 - Field 1663593181 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Primary Key</source>
-          <target state="translated">Primary Key</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Field Primary Key - Property Caption)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3834498718 - NamedType 3317213321" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Maintenance</source>
-          <target state="translated">Maintenance</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType MaintenanceLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3834498718 - NamedType 1463612479" maxwidth="10" size-unit="char" translate="yes" xml:space="preserve">
-          <source>MAINT</source>
-          <target state="translated">MAINT</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType MaintenanceTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3834498718 - NamedType 3957840668" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Misc. subscriptions</source>
-          <target state="translated">Misc. subscriptions</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType MiscellaneousLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3834498718 - NamedType 2418780182" maxwidth="10" size-unit="char" translate="yes" xml:space="preserve">
-          <source>MISC</source>
-          <target state="translated">MISC</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType MiscellaneousTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3834498718 - NamedType 1657701311" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 1144263930 - NamedType 1657701311" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Support</source>
           <target state="translated">Support</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType SupportLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3834498718 - NamedType 1568903577" maxwidth="10" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SUPPORT</source>
-          <target state="translated">SUPPORT</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType SupportTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3834498718 - NamedType 4182466129" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage data</source>
-          <target state="translated">Usage data</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType UsageDataLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3834498718 - NamedType 2120418247" maxwidth="10" size-unit="char" translate="yes" xml:space="preserve">
-          <source>UD</source>
-          <target state="translated">UD</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType UsageDataTok)</note>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Cust. Contr. - NamedType SupportLbl)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Codeunit 1144263930 - NamedType 2307765211" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
@@ -111,544 +21,10 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Cust. Contr. - NamedType NewspaperLbl)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Codeunit 1144263930 - NamedType 1657701311" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Support</source>
-          <target state="translated">Support</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Cust. Contr. - NamedType SupportLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
         <trans-unit id="Codeunit 1144263930 - NamedType 4182466129" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Usage data</source>
           <target state="translated">Usage data</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Cust. Contr. - NamedType UsageDataLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3708670363 - NamedType 575297485" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Customer Subscription Contract Deferrals</source>
-          <target state="translated">Customer Subscription Contract Deferrals</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. GL Account - NamedType CustomerContractsDeferralsLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3708670363 - NamedType 2536511519" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Customer Subscription Contracts Revenue</source>
-          <target state="translated">Customer Subscription Contracts Revenue</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. GL Account - NamedType CustomerContractsRevenueLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3708670363 - NamedType 2711675280" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor Subscription Contracts Cost</source>
-          <target state="translated">Vendor Subscription Contracts Cost</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. GL Account - NamedType VendorContractsCostLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3708670363 - NamedType 259009701" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor Subscription Contract Deferrals</source>
-          <target state="translated">Vendor Subscription Contract Deferrals</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. GL Account - NamedType VendorContractsDeferralsLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 927838514 - NamedType 3383317059" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Digital newspaper</source>
-          <target state="translated">Digital newspaper</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType DigitalNewspaperLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 927838514 - NamedType 810448984" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Hardware</source>
-          <target state="translated">Hardware</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType HardwareLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 927838514 - NamedType 3317213321" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Maintenance</source>
-          <target state="translated">Maintenance</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType MaintenanceLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 927838514 - NamedType 1752736658" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Software licence (user)</source>
-          <target state="translated">Software licence (user)</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType SoftwareLicenceLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 927838514 - NamedType 1657701311" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Support (monthly)</source>
-          <target state="translated">Support (monthly)</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType SupportLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 927838514 - NamedType 1919725627" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sample: Usage data - Fixed Qty.</source>
-          <target state="translated">Sample: Usage data - Fixed Qty.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType UDFixedQtyLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 927838514 - NamedType 2628063767" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sample: Usage data - Surcharge</source>
-          <target state="translated">Sample: Usage data - Surcharge</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType UDSurchargeLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 927838514 - NamedType 1910232854" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sample: Usage Data - Usage Qty.</source>
-          <target state="translated">Sample: Usage Data - Usage Qty.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType UDUsageQtyLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2475264284 - NamedType 2613686216" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Subscription Item</source>
-          <target state="translated">Subscription Item</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item Templ. - NamedType SubscriptionItemLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2475264284 - NamedType 3948252962" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SUBSCRIPTION</source>
-          <target state="translated">SUBSCRIPTION</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item Templ. - NamedType SubscriptionItemTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 864774331" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Maintenance - Bronze</source>
-          <target state="translated">Maintenance - Bronze</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MaintenanceBronzeLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 2740453141" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>MAINTENANCE-1-BRONZE</source>
-          <target state="translated">MAINTENANCE-1-BRONZE</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MaintenanceBronzeTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 3458277537" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Maintenance - Gold</source>
-          <target state="translated">Maintenance - Gold</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MaintenanceGoldLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 1566124791" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>MAINTENANCE-3-GOLD</source>
-          <target state="translated">MAINTENANCE-3-GOLD</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MaintenanceGoldTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 1154405788" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Maintenance - Silver</source>
-          <target state="translated">Maintenance - Silver</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MaintenanceSilverLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 3910312598" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>MAINTENANCE-2-SILVER</source>
-          <target state="translated">MAINTENANCE-2-SILVER</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MaintenanceSilverTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 4004487640" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Subscription (month)</source>
-          <target state="translated">Subscription (month)</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MonthlySubscriptionLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 1038986258" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SUBSCRIPTION-1M</source>
-          <target state="translated">SUBSCRIPTION-1M</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MonthlySubscriptionTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 1944344287" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage data - Fixed Qty.</source>
-          <target state="translated">Usage data - Fixed Qty.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType UDFixedLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 1855546553" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>UD-FIXED</source>
-          <target state="translated">UD-FIXED</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType UDFixedTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 2628063767" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage data - Surcharge</source>
-          <target state="translated">Usage data - Surcharge</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType UDSurchargeLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 3160455089" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>UD-SURCHARGE</source>
-          <target state="translated">UD-SURCHARGE</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType UDSurchargeTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 3608870594" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage data - Usage Qty.</source>
-          <target state="translated">Usage data - Usage Qty.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType UDUsageLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 2359199800" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>UD-USAGE</source>
-          <target state="translated">UD-USAGE</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType UDUsageTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 963777514" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Warranty</source>
-          <target state="translated">Warranty</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType WarrantyLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 4079000960" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>WARRANTY</source>
-          <target state="translated">WARRANTY</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType WarrantyTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 2871217781" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Subscription (annual)</source>
-          <target state="translated">Subscription (annual)</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType YearlySubscriptionLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3820468582 - NamedType 1451703467" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SUBSCRIPTION-1Y</source>
-          <target state="translated">SUBSCRIPTION-1Y</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType YearlySubscriptionTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1716736434 - NamedType 3317213321" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Maintenance</source>
-          <target state="translated">Maintenance</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Pr. U. Temp. - NamedType MaintenanceLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1716736434 - NamedType 1463612479" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>MAINTENANCE</source>
-          <target state="translated">MAINTENANCE</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Pr. U. Temp. - NamedType MaintenanceTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1716736434 - NamedType 1657701311" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Support</source>
-          <target state="translated">Support</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Pr. U. Temp. - NamedType SupportLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1716736434 - NamedType 1568903577" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SUPPORT</source>
-          <target state="translated">SUPPORT</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Pr. U. Temp. - NamedType SupportTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1823261554 - NamedType 3317213321" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Maintenance</source>
-          <target state="translated">Maintenance</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType MaintenanceLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1823261554 - NamedType 1463612479" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>MAINTENANCE</source>
-          <target state="translated">MAINTENANCE</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType MaintenanceTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1823261554 - NamedType 4004487640" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Subscription (month)</source>
-          <target state="translated">Subscription (month)</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType MonthlySubscriptionLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1823261554 - NamedType 1038986258" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SUBSCRIPTION-1M</source>
-          <target state="translated">SUBSCRIPTION-1M</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType MonthlySubscriptionTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1823261554 - NamedType 1944344287" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage data - Fixed Qty.</source>
-          <target state="translated">Usage data - Fixed Qty.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType UDFixedLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1823261554 - NamedType 1855546553" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>UD-FIXED</source>
-          <target state="translated">UD-FIXED</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType UDFixedTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1823261554 - NamedType 2628063767" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage data - Surcharge</source>
-          <target state="translated">Usage data - Surcharge</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType UDSurchargeLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1823261554 - NamedType 3160455089" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>UD-SURCHARGE</source>
-          <target state="translated">UD-SURCHARGE</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType UDSurchargeTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1823261554 - NamedType 3608870594" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage data - Usage Qty.</source>
-          <target state="translated">Usage data - Usage Qty.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType UDUsageLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1823261554 - NamedType 2359199800" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>UD-USAGE</source>
-          <target state="translated">UD-USAGE</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType UDUsageTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1823261554 - NamedType 963777514" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Warranty</source>
-          <target state="translated">Warranty</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType WarrantyLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1823261554 - NamedType 4079000960" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>WARRANTY</source>
-          <target state="translated">WARRANTY</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType WarrantyTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1823261554 - NamedType 2871217781" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Subscription (annual)</source>
-          <target state="translated">Subscription (annual)</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType YearlySubscriptionLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1823261554 - NamedType 1451703467" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SUBSCRIPTION-1Y</source>
-          <target state="translated">SUBSCRIPTION-1Y</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType YearlySubscriptionTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1673917529 - NamedType 573895389" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Generic</source>
-          <target state="translated">Generic</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Supplier - NamedType GenericLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 1673917529 - NamedType 1309234099" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>GENERIC</source>
-          <target state="translated">GENERIC</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Supplier - NamedType GenericTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2578744716 - NamedType 76061626" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Customer sample</source>
-          <target state="translated">Customer sample</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType CustomerLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2578744716 - NamedType 3196385904" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>CUSTOMER</source>
-          <target state="translated">CUSTOMER</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType CustomerTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2578744716 - NamedType 3317213321" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Maintenance</source>
-          <target state="translated">Maintenance</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType MaintenanceLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2578744716 - NamedType 1463612479" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>MAINTENANCE</source>
-          <target state="translated">MAINTENANCE</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType MaintenanceTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2578744716 - NamedType 1289554734" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Misc. subscriptions</source>
-          <target state="translated">Misc. subscriptions</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType SubscriptionsLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2578744716 - NamedType 1453098372" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SUBSCRIPTIONS</source>
-          <target state="translated">SUBSCRIPTIONS</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType SubscriptionsTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2578744716 - NamedType 1657701311" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Support</source>
-          <target state="translated">Support</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType SupportLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2578744716 - NamedType 1568903577" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SUPPORT</source>
-          <target state="translated">SUPPORT</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType SupportTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2578744716 - NamedType 1841900101" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage data customer</source>
-          <target state="translated">Usage data customer</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType UsageDataCustomerLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2578744716 - NamedType 1334611547" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>UD-CUSTOMER</source>
-          <target state="translated">UD-CUSTOMER</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType UsageDataCustomerTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2578744716 - NamedType 1041717821" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage data vendor</source>
-          <target state="translated">Usage data vendor</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType UsageDataVendorLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2578744716 - NamedType 2560963859" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>UD-VENDOR</source>
-          <target state="translated">UD-VENDOR</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType UsageDataVendorTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2578744716 - NamedType 1485212386" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor sample</source>
-          <target state="translated">Vendor sample</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType VendorLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 2578744716 - NamedType 3788178264" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>VENDOR</source>
-          <target state="translated">VENDOR</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType VendorTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 848215449 - NamedType 3733694666" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>CustomerId;CustomerName;SubscriptionId;ProductId;ProductName;SubscriptionStartDate;SubscriptionEndDate;ChargeStartDate;ChargeEndDate;Quantity;UnitCost;UnitPrice;CostAmount;Amount;Currency</source>
-          <target state="translated">CustomerId;CustomerName;SubscriptionId;ProductId;ProductName;SubscriptionStartDate;SubscriptionEndDate;ChargeStartDate;ChargeEndDate;Quantity;UnitCost;UnitPrice;CostAmount;Amount;Currency</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. UD Import - NamedType GenericDataHeaderTxt)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 848215449 - NamedType 136611033" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>5741f4d2-be5a-4fc7-a874-5822b152d568;Alpine Ski House;sub-1105-001;prd-wwi-1105-001;Usage data - Usage Qty.;01-01-2025;12-31-2025;01-01-2025;01-31-2025;3;10;0;30;0;USD</source>
-          <target state="translated">5741f4d2-be5a-4fc7-a874-5822b152d568;Alpine Ski House;sub-1105-001;prd-wwi-1105-001;Usage data - Usage Qty.;01-01-2025;12-31-2025;01-01-2025;01-31-2025;3;10;0;30;0;AUD</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. UD Import - NamedType GenericDataLineTxt)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 848215449 - NamedType 4050956246" maxwidth="250" size-unit="char" translate="yes" xml:space="preserve">
-          <source>ReconFile_Generic.csv</source>
-          <target state="translated">ReconFile_Generic.csv</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. UD Import - NamedType GenericFileNameLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 848215449 - NamedType 3662660952" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sample</source>
-          <target state="translated">Sample</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. UD Import - NamedType SampleLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 6952550 - NamedType 1735789290" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage data - Usage Qty.</source>
-          <target state="translated">Usage data - Usage Qty.</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. UD Subscr. - NamedType ProductNameLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3480093314 - NamedType 2307765211" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Hardware Maintenance</source>
-          <target state="translated">Hardware Maintenance</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Vend. Contr. - NamedType HardwareMaintenanceLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 3480093314 - NamedType 4182466129" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage data</source>
-          <target state="translated">Usage data</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Vend. Contr. - NamedType UsageDataLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 813975742" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>CSC999999</source>
-          <target state="translated">CSC999999</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType CustomerContractEndingNoLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 3930172380" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>CSC100004</source>
-          <target state="translated">CSC100004</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType CustomerContractLastUsedNoLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 1239394646" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Customer Subscription Contracts</source>
-          <target state="translated">Customer Subscription Contracts</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType CustomerContractNoSeriesDescriptionTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 102538008" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>CUSTSUBCONTR</source>
-          <target state="translated">CUSTSUBCONTR</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType CustomerContractNoSeriesTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 783514071" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>CSC100001</source>
-          <target state="translated">CSC100001</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType CustomerContractStartingNoLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 960134776" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SUB999999</source>
-          <target state="translated">SUB999999</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType ServiceObjectEndingNoLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 2531819066" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SUB100004</source>
-          <target state="translated">SUB100004</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType ServiceObjectLastUsedNoLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 1180644928" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Subscriptions</source>
-          <target state="translated">Subscriptions</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType ServiceObjectNoSeriesDescriptionTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 3390643070" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SUBSCRIPTION</source>
-          <target state="translated">SUBSCRIPTION</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType ServiceObjectNoSeriesTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 2249233821" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SUB100001</source>
-          <target state="translated">SUB100001</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType ServiceObjectStartingNoLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 1460902870" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>VSC999999</source>
-          <target state="translated">VSC999999</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType VendorContractEndingNoLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 250597300" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>VSC100002</source>
-          <target state="translated">VSC100002</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType VendorContractLastUsedNoLbl)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 1401909198" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor Subscription Contracts</source>
-          <target state="translated">Vendor Subscription Contracts</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType VendorContractNoSeriesDescriptionTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 221702448" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>VENDSUBCONTR</source>
-          <target state="translated">VENDSUBCONTR</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType VendorContractNoSeriesTok)</note>
-          <note from="Xliff Generator" annotates="general" priority="3" />
-        </trans-unit>
-        <trans-unit id="Codeunit 536022387 - NamedType 3345437535" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
-          <source>VSC100001</source>
-          <target state="translated">VSC100001</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType VendorContractStartingNoLbl)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Codeunit 1267318142 - NamedType 1293230849" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
@@ -663,16 +39,640 @@
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing Setup - NamedType SubBillDefRelTok)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
-        <trans-unit id="Page 1106456176 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sub. Billing Module Setup</source>
-          <target state="translated">Sub. Billing Module Setup</target>
-          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Page Sub. Billing Module Setup - Property Caption)</note>
+        <trans-unit id="Codeunit 1673917529 - NamedType 1309234099" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>GENERIC</source>
+          <target state="translated">GENERIC</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Supplier - NamedType GenericTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1673917529 - NamedType 573895389" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generic</source>
+          <target state="translated">Generic</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Supplier - NamedType GenericLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1716736434 - NamedType 1463612479" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MAINTENANCE</source>
+          <target state="translated">MAINTENANCE</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Pr. U. Temp. - NamedType MaintenanceTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1716736434 - NamedType 1568903577" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SUPPORT</source>
+          <target state="translated">SUPPORT</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Pr. U. Temp. - NamedType SupportTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1716736434 - NamedType 1657701311" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Support</source>
+          <target state="translated">Support</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Pr. U. Temp. - NamedType SupportLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1716736434 - NamedType 3317213321" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maintenance</source>
+          <target state="translated">Maintenance</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Pr. U. Temp. - NamedType MaintenanceLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1823261554 - NamedType 1038986258" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SUBSCRIPTION-1M</source>
+          <target state="translated">SUBSCRIPTION-1M</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType MonthlySubscriptionTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1823261554 - NamedType 1451703467" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SUBSCRIPTION-1Y</source>
+          <target state="translated">SUBSCRIPTION-1Y</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType YearlySubscriptionTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1823261554 - NamedType 1463612479" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MAINTENANCE</source>
+          <target state="translated">MAINTENANCE</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType MaintenanceTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1823261554 - NamedType 1855546553" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UD-FIXED</source>
+          <target state="translated">UD-FIXED</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType UDFixedTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1823261554 - NamedType 1944344287" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Usage data - Fixed Qty.</source>
+          <target state="translated">Usage data - Fixed Qty.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType UDFixedLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1823261554 - NamedType 2359199800" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UD-USAGE</source>
+          <target state="translated">UD-USAGE</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType UDUsageTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1823261554 - NamedType 2628063767" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Usage data - Surcharge</source>
+          <target state="translated">Usage data - Surcharge</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType UDSurchargeLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1823261554 - NamedType 2871217781" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Subscription (annual)</source>
+          <target state="translated">Subscription (annual)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType YearlySubscriptionLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1823261554 - NamedType 3160455089" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UD-SURCHARGE</source>
+          <target state="translated">UD-SURCHARGE</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType UDSurchargeTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1823261554 - NamedType 3317213321" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maintenance</source>
+          <target state="translated">Maintenance</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType MaintenanceLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1823261554 - NamedType 3608870594" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Usage data - Usage Qty.</source>
+          <target state="translated">Usage data - Usage Qty.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType UDUsageLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1823261554 - NamedType 4004487640" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Subscription (month)</source>
+          <target state="translated">Subscription (month)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType MonthlySubscriptionLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1823261554 - NamedType 4079000960" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WARRANTY</source>
+          <target state="translated">WARRANTY</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType WarrantyTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1823261554 - NamedType 963777514" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Warranty</source>
+          <target state="translated">Warranty</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. S. Template - NamedType WarrantyLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2475264284 - NamedType 2613686216" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Subscription Item</source>
+          <target state="translated">Subscription Item</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item Templ. - NamedType SubscriptionItemLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2475264284 - NamedType 3948252962" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SUBSCRIPTION</source>
+          <target state="translated">SUBSCRIPTION</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item Templ. - NamedType SubscriptionItemTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2578744716 - NamedType 1041717821" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Usage data vendor</source>
+          <target state="translated">Usage data vendor</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType UsageDataVendorLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2578744716 - NamedType 1289554734" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Misc. subscriptions</source>
+          <target state="translated">Misc. subscriptions</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType SubscriptionsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2578744716 - NamedType 1334611547" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UD-CUSTOMER</source>
+          <target state="translated">UD-CUSTOMER</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType UsageDataCustomerTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2578744716 - NamedType 1453098372" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SUBSCRIPTIONS</source>
+          <target state="translated">SUBSCRIPTIONS</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType SubscriptionsTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2578744716 - NamedType 1463612479" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MAINTENANCE</source>
+          <target state="translated">MAINTENANCE</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType MaintenanceTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2578744716 - NamedType 1485212386" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor sample</source>
+          <target state="translated">Vendor sample</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType VendorLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2578744716 - NamedType 1568903577" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SUPPORT</source>
+          <target state="translated">SUPPORT</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType SupportTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2578744716 - NamedType 1657701311" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Support</source>
+          <target state="translated">Support</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType SupportLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2578744716 - NamedType 1841900101" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Usage data customer</source>
+          <target state="translated">Usage data customer</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType UsageDataCustomerLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2578744716 - NamedType 2560963859" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UD-VENDOR</source>
+          <target state="translated">UD-VENDOR</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType UsageDataVendorTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2578744716 - NamedType 3196385904" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CUSTOMER</source>
+          <target state="translated">CUSTOMER</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType CustomerTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2578744716 - NamedType 3317213321" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maintenance</source>
+          <target state="translated">Maintenance</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType MaintenanceLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2578744716 - NamedType 3788178264" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VENDOR</source>
+          <target state="translated">VENDOR</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType VendorTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2578744716 - NamedType 76061626" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer sample</source>
+          <target state="translated">Customer sample</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Templates - NamedType CustomerLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3480093314 - NamedType 2307765211" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hardware Maintenance</source>
+          <target state="translated">Hardware Maintenance</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Vend. Contr. - NamedType HardwareMaintenanceLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3480093314 - NamedType 4182466129" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Usage data</source>
+          <target state="translated">Usage data</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Vend. Contr. - NamedType UsageDataLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3708670363 - NamedType 2536511519" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Subscription Contracts Revenue</source>
+          <target state="translated">Customer Subscription Contracts Revenue</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. GL Account - NamedType CustomerContractsRevenueLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3708670363 - NamedType 259009701" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Subscription Contract Deferrals</source>
+          <target state="translated">Vendor Subscription Contract Deferrals</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. GL Account - NamedType VendorContractsDeferralsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3708670363 - NamedType 2711675280" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Subscription Contracts Cost</source>
+          <target state="translated">Vendor Subscription Contracts Cost</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. GL Account - NamedType VendorContractsCostLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3708670363 - NamedType 575297485" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Subscription Contract Deferrals</source>
+          <target state="translated">Customer Subscription Contract Deferrals</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. GL Account - NamedType CustomerContractsDeferralsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 1038986258" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SUBSCRIPTION-1M</source>
+          <target state="translated">SUBSCRIPTION-1M</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MonthlySubscriptionTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 1154405788" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maintenance - Silver</source>
+          <target state="translated">Maintenance - Silver</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MaintenanceSilverLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 1451703467" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SUBSCRIPTION-1Y</source>
+          <target state="translated">SUBSCRIPTION-1Y</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType YearlySubscriptionTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 1566124791" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MAINTENANCE-3-GOLD</source>
+          <target state="translated">MAINTENANCE-3-GOLD</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MaintenanceGoldTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 1855546553" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UD-FIXED</source>
+          <target state="translated">UD-FIXED</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType UDFixedTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 1944344287" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Usage data - Fixed Qty.</source>
+          <target state="translated">Usage data - Fixed Qty.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType UDFixedLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 2359199800" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UD-USAGE</source>
+          <target state="translated">UD-USAGE</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType UDUsageTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 2628063767" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Usage data - Surcharge</source>
+          <target state="translated">Usage data - Surcharge</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType UDSurchargeLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 2740453141" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MAINTENANCE-1-BRONZE</source>
+          <target state="translated">MAINTENANCE-1-BRONZE</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MaintenanceBronzeTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 2871217781" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Subscription (annual)</source>
+          <target state="translated">Subscription (annual)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType YearlySubscriptionLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 3160455089" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UD-SURCHARGE</source>
+          <target state="translated">UD-SURCHARGE</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType UDSurchargeTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 3458277537" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maintenance - Gold</source>
+          <target state="translated">Maintenance - Gold</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MaintenanceGoldLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 3608870594" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Usage data - Usage Qty.</source>
+          <target state="translated">Usage data - Usage Qty.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType UDUsageLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 3910312598" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MAINTENANCE-2-SILVER</source>
+          <target state="translated">MAINTENANCE-2-SILVER</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MaintenanceSilverTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 4004487640" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Subscription (month)</source>
+          <target state="translated">Subscription (month)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MonthlySubscriptionLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 4079000960" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WARRANTY</source>
+          <target state="translated">WARRANTY</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType WarrantyTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 864774331" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maintenance - Bronze</source>
+          <target state="translated">Maintenance - Bronze</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType MaintenanceBronzeLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3820468582 - NamedType 963777514" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Warranty</source>
+          <target state="translated">Warranty</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Packages - NamedType WarrantyLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3834498718 - NamedType 1463612479" maxwidth="10" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MAINT</source>
+          <target state="translated">MAINT</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType MaintenanceTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3834498718 - NamedType 1568903577" maxwidth="10" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SUPPORT</source>
+          <target state="translated">SUPPORT</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType SupportTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3834498718 - NamedType 1657701311" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Support</source>
+          <target state="translated">Support</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType SupportLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3834498718 - NamedType 2120418247" maxwidth="10" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UD</source>
+          <target state="translated">UD</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType UsageDataTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3834498718 - NamedType 2418780182" maxwidth="10" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MISC</source>
+          <target state="translated">MISC</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType MiscellaneousTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3834498718 - NamedType 3317213321" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maintenance</source>
+          <target state="translated">Maintenance</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType MaintenanceLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3834498718 - NamedType 3957840668" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Misc. subscriptions</source>
+          <target state="translated">Misc. subscriptions</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType MiscellaneousLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3834498718 - NamedType 4182466129" maxwidth="50" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Usage data</source>
+          <target state="translated">Usage data</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Contr. Types - NamedType UsageDataLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 102538008" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CUSTSUBCONTR</source>
+          <target state="translated">CUSTSUBCONTR</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType CustomerContractNoSeriesTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 1180644928" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Subscriptions</source>
+          <target state="translated">Subscriptions</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType ServiceObjectNoSeriesDescriptionTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 1239394646" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Subscription Contracts</source>
+          <target state="translated">Customer Subscription Contracts</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType CustomerContractNoSeriesDescriptionTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 1401909198" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Subscription Contracts</source>
+          <target state="translated">Vendor Subscription Contracts</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType VendorContractNoSeriesDescriptionTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 1460902870" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VSC999999</source>
+          <target state="translated">VSC999999</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType VendorContractEndingNoLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 221702448" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VENDSUBCONTR</source>
+          <target state="translated">VENDSUBCONTR</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType VendorContractNoSeriesTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 2249233821" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SUB100001</source>
+          <target state="translated">SUB100001</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType ServiceObjectStartingNoLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 250597300" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VSC100002</source>
+          <target state="translated">VSC100002</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType VendorContractLastUsedNoLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 2531819066" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SUB100004</source>
+          <target state="translated">SUB100004</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType ServiceObjectLastUsedNoLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 3345437535" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VSC100001</source>
+          <target state="translated">VSC100001</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType VendorContractStartingNoLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 3390643070" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SUBSCRIPTION</source>
+          <target state="translated">SUBSCRIPTION</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType ServiceObjectNoSeriesTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 3930172380" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CSC100004</source>
+          <target state="translated">CSC100004</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType CustomerContractLastUsedNoLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 783514071" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CSC100001</source>
+          <target state="translated">CSC100001</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType CustomerContractStartingNoLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 813975742" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CSC999999</source>
+          <target state="translated">CSC999999</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType CustomerContractEndingNoLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 536022387 - NamedType 960134776" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SUB999999</source>
+          <target state="translated">SUB999999</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Billing No. Series - NamedType ServiceObjectEndingNoLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 6952550 - NamedType 1735789290" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Usage data - Usage Qty.</source>
+          <target state="translated">Usage data - Usage Qty.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. UD Subscr. - NamedType ProductNameLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 848215449 - NamedType 136611033" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>5741f4d2-be5a-4fc7-a874-5822b152d568;Alpine Ski House;sub-1105-001;prd-wwi-1105-001;Usage data - Usage Qty.;01-01-2025;12-31-2025;01-01-2025;01-31-2025;3;10;0;30;0;USD</source>
+          <target state="translated">5741f4d2-be5a-4fc7-a874-5822b152d568;Alpine Ski House;sub-1105-001;prd-wwi-1105-001;Usage data - Usage Qty.;01-01-2025;12-31-2025;01-01-2025;01-31-2025;3;10;0;30;0;AUD</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. UD Import - NamedType GenericDataLineTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 848215449 - NamedType 3662660952" maxwidth="80" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample</source>
+          <target state="translated">Sample</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. UD Import - NamedType SampleLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 848215449 - NamedType 3733694666" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CustomerId;CustomerName;SubscriptionId;ProductId;ProductName;SubscriptionStartDate;SubscriptionEndDate;ChargeStartDate;ChargeEndDate;Quantity;UnitCost;UnitPrice;CostAmount;Amount;Currency</source>
+          <target state="translated">CustomerId;CustomerName;SubscriptionId;ProductId;ProductName;SubscriptionStartDate;SubscriptionEndDate;ChargeStartDate;ChargeEndDate;Quantity;UnitCost;UnitPrice;CostAmount;Amount;Currency</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. UD Import - NamedType GenericDataHeaderTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 848215449 - NamedType 4050956246" maxwidth="250" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ReconFile_Generic.csv</source>
+          <target state="translated">ReconFile_Generic.csv</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. UD Import - NamedType GenericFileNameLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 927838514 - NamedType 1657701311" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Support (monthly)</source>
+          <target state="translated">Support (monthly)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType SupportLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 927838514 - NamedType 1752736658" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Software licence (user)</source>
+          <target state="translated">Software licence (user)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType SoftwareLicenceLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 927838514 - NamedType 1910232854" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample: Usage Data - Usage Qty.</source>
+          <target state="translated">Sample: Usage Data - Usage Qty.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType UDUsageQtyLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 927838514 - NamedType 1919725627" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample: Usage data - Fixed Qty.</source>
+          <target state="translated">Sample: Usage data - Fixed Qty.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType UDFixedQtyLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 927838514 - NamedType 2628063767" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample: Usage data - Surcharge</source>
+          <target state="translated">Sample: Usage data - Surcharge</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType UDSurchargeLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 927838514 - NamedType 3317213321" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maintenance</source>
+          <target state="translated">Maintenance</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType MaintenanceLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 927838514 - NamedType 3383317059" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Digital newspaper</source>
+          <target state="translated">Digital newspaper</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType DigitalNewspaperLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 927838514 - NamedType 810448984" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hardware</source>
+          <target state="translated">Hardware</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Codeunit Create Sub. Bill. Item - NamedType HardwareLbl)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
         <trans-unit id="Page 1106456176 - Control 2445482498 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <target state="translated">General</target>
           <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Page Sub. Billing Module Setup - Control General - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1106456176 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sub. Billing Module Setup</source>
+          <target state="translated">Sub. Billing Module Setup</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Page Sub. Billing Module Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1106456176 - Field 1663593181 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <target state="translated">Primary Key</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Field Primary Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1106456176 - Field 1720582596 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether a Data Exchange Definition is imported to be used for usage data.</source>
+          <target state="translated">Specifies whether a Data Exchange Definition is imported to be used for usage data.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Field Import Data Exch. Definition - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1106456176 - Field 1720582596 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import Data Exchange Definition</source>
+          <target state="translated">Import Data Exchange Definition</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Field Import Data Exch. Definition - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1106456176 - Field 2075359513 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether Subscription Billing related tasks are created in the Job Queue.</source>
+          <target state="translated">Specifies whether Subscription Billing related tasks are created in the Job Queue.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Field Create entries in Job Queue - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1106456176 - Field 2075359513 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create entries in Job Queue</source>
+          <target state="translated">Create entries in Job Queue</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Field Create entries in Job Queue - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1106456176 - Field 2465242824 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether a reconciliation file is imported to be used for usage data.</source>
+          <target state="translated">Specifies whether a reconciliation file is imported to be used for usage data.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Field Import reconciliation file - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1106456176 - Field 2465242824 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import reconciliation file</source>
+          <target state="translated">Import reconciliation file</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Field Import reconciliation file - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1106456176 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sub. Billing Module Setup</source>
+          <target state="translated">Sub. Billing Module Setup</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.SubscriptionBilling)(LookupHint=Table Sub. Billing Module Setup - Property Caption)</note>
           <note from="Xliff Generator" annotates="general" priority="3" />
         </trans-unit>
       </group>

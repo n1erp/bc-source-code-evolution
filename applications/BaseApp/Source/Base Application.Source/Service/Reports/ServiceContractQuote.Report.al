@@ -387,7 +387,8 @@ report 5972 "Service Contract Quote"
 
     requestpage
     {
-
+        AboutTitle = 'About Service Contract Quote';
+        AboutText = 'Generate a service contract quote that you can send to your customer.';
         layout
         {
             area(content)
@@ -423,11 +424,6 @@ report 5972 "Service Contract Quote"
         }
 
         trigger OnInit()
-        begin
-            LogInteractionEnable := true;
-        end;
-
-        trigger OnOpenPage()
         begin
             LogInteraction := SegManagement.FindInteractionTemplateCode(Enum::"Interaction Log Entry Document Type"::"Service Contract Quote") <> '';
             LogInteractionEnable := LogInteraction;

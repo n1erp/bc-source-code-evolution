@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Intrastat Core Demo Data">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 1028371262 - NamedType 312160788" maxwidth="100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Intrastat</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Intrastat No. Series - NamedType IntrastatLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1028371262 - NamedType 2214233326" maxwidth="20" size-unit="char" translate="yes" xml:space="preserve">
+          <source>INTRA</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Create Intrastat No. Series - NamedType IntrastatTok</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1339122543 - EnumValue 1339122543 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2207723152">
+          <source>Intrastat</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Intrastat Contoso Module - EnumValue Intrastat Contoso Module - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

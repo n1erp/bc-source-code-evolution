@@ -157,7 +157,8 @@ codeunit 817 "Service Post Invoice" implements "Invoice Posting"
         InvoicePostingBuffer.SetAccount(SalesAccountNo, TotalVAT, TotalVATACY, TotalAmount, TotalAmountACY);
         InvoicePostingBuffer.UpdateVATBase(TotalVATBase, TotalVATBaseACY);
 
-        ServicePostInvoiceEvents.RunOnPrepareLineOnAfterFillInvoicePostingBuffer(InvoicePostingBuffer, ServiceLine, ServiceLineACY, SuppressCommit);
+        ServicePostInvoiceEvents.RunOnPrepareLineOnAfterFillInvoicePostingBuffer(
+            InvoicePostingBuffer, ServiceLine, ServiceLineACY, SuppressCommit, TempInvoicePostingBuffer);
 
         UpdateInvoicePostingBuffer(InvoicePostingBuffer, ServiceLine);
     end;
@@ -245,7 +246,7 @@ codeunit 817 "Service Post Invoice" implements "Invoice Posting"
         InvoicePostingBuffer."Global Dimension 2 Code" := ServiceLine."Shortcut Dimension 2 Code";
         InvoicePostingBuffer."Dimension Set ID" := ServiceLine."Dimension Set ID";
         InvoicePostingBuffer."Job No." := ServiceLine."Job No.";
-        InvoicePostingBuffer."VAT %" := ServiceLine."VAT %";
+        InvoicePostingBuffer."VAT %" := ServiceLine.GetVATPct();
         InvoicePostingBuffer."VAT Difference" := ServiceLine."VAT Difference";
         if InvoicePostingBuffer."VAT Calculation Type" = InvoicePostingBuffer."VAT Calculation Type"::"Sales Tax" then begin
             InvoicePostingBuffer."Tax Area Code" := ServiceLine."Tax Area Code";
@@ -298,6 +299,8 @@ codeunit 817 "Service Post Invoice" implements "Invoice Posting"
         LineCount: Integer;
     begin
         ServiceHeader := DocumentHeaderVar;
+
+        ServicePostInvoiceEvents.RunOnBeforePostLines(ServiceHeader, TempInvoicePostingBuffer);
 
         LineCount := 0;
         if TempInvoicePostingBuffer.Find('+') then
