@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="External File Storage - SharePoint Connector">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 153473473 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint Account</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - NamedType 1723178096" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to get SharePoint Account Client Secret.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - NamedType UnableToGetClientMsg</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - NamedType 366485914" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to set SharePoint Client Secret.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - NamedType UnableToSetClientSecretMsg</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 1562360606 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the folder path relative to the site collection. Start with the document library or folder name (e.g., Shared Documents/Reports). This path can be copied from the URL of the folder in SharePoint after the site collection (e.g., /Shared Documents/Reports from https://mysharepoint.sharepoint.com/sites/ProjectX/Shared%20Documents/Reports).</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Base Relative Folder Path - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 1562360606 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Base Relative Folder Path</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Base Relative Folder Path - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 3879241928 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the the Client Id of the App Registration.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Client Id - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 3879241928 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Client Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 4106039276 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Client Secret Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 1864907812 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the account is disabled. This happens automatically when a sandbox is created.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Disabled - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 1864907812 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disabled</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Disabled - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 415504711 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the storage account connection.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 92775614 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the the url to your SharePoint site.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field SharePoint Url - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 92775614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint Url</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field SharePoint Url - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 588430355 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Tenant Id of the App Registration.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Tenant Id - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 153473473 - Field 588430355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tenant Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ext. SharePoint Account - Field Tenant Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1805637975 - NamedType 1293915263" maxwidth="250" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use SharePoint to store and retrieve files.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ext. SharePoint Connector Impl - NamedType ConnectorDescriptionTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1805637975 - NamedType 1482857067" size-unit="char" translate="yes" xml:space="preserve">
+          <source>We could not find the account. Typically, this is because the account has been deleted.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ext. SharePoint Connector Impl - NamedType NotRegisteredAccountErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1805637975 - Method 782160614 - NamedType 1957616760" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The account "%1" is disabled.</source>
+          <note from="Developer" annotates="general" priority="2">%1 - Account Name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ext. SharePoint Connector Impl - Method InitSharePointClient - NamedType AccountDisabledErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1805637975 - Method 1700570109 - NamedType 541854896" size-unit="char" translate="yes" xml:space="preserve">
+          <source>An error occured.\%1</source>
+          <note from="Developer" annotates="general" priority="2">%1 - Error message from sharepoint</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ext. SharePoint Connector Impl - Method ShowError - NamedType ErrorOccuredErr</note>
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint Account</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 1697509288 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the the Client Secret of the App Registration.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account - Control SecretField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 153473473 - Control 1697509288 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account - Control SecretField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Setup SharePoint Account</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 1916394943 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Client Secret of the App Registration.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control ClientSecretField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 1916394943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control ClientSecretField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 1459871223 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the Azure SharePoint account.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control NameField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 1459871223 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control NameField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 92775614 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the SharePoint to use of the storage account.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control SharePoint Url - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Control 92775614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Control SharePoint Url - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Action 742034285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Move to previous step.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Action Back - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Action 742034285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Action Back - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Action 1235620153 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Move to next step.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Action Next - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4098062784 - Action 1235620153 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ext. SharePoint Account Wizard - Action Next - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 2160742183 - EnumValue 2366980715 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 534202269">
+          <source>SharePoint</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Ext. SharePoint Connector - EnumValue SharePoint - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 1768104129 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint - Edit</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet Ext. SharePoint - Edit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 1217000447 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint - Objects</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet Ext. SharePoint - Objects - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 3164621731 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SharePoint - Read</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet Ext. SharePoint - Read - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

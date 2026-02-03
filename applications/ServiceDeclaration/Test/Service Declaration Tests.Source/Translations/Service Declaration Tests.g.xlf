@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Service Declaration Tests">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 1004349847 - NamedType 3072794966" size-unit="char" translate="yes" xml:space="preserve">
+          <source>A service transaction type code is not specified</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Service Declaration Posting - NamedType TransactionTypeCodeNotSpecifiedInLineErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 695218840 - NamedType 2242053473" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The %1 page is part of the new Service Declaration feature, which is not yet enabled in your Business Central. An administrator can enable the feature on the Feature Management page.</source>
+          <note from="Developer" annotates="general" priority="2">%1 - page caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Service Declaration UI Tests - NamedType FeatureNotEnabledMessageTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 695218840 - NamedType 253089800" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The service declaration %1 already exists.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = service declaration number.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Service Declaration UI Tests - NamedType ServDeclAlreadyExistErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1019890872 - NamedType 3726067581" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You may not enter numbers manually</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Service Declaration UT - NamedType CannotEnterNumbersManuallyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1019890872 - NamedType 2937416225" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to change</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Service Declaration UT - NamedType DoYouWantToChangeQst</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

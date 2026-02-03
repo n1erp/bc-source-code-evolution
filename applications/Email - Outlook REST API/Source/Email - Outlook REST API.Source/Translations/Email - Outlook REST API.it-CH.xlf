@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="it-CH" original="Email - Outlook REST API">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 923233499 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email - Outlook Account</source>
+          <target state="translated">E-mail - Account Outlook</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Table Email - Outlook Account - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 923233499 - Field 90141998 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email Address</source>
+          <target state="translated">Indirizzo e-mail</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Table Email - Outlook Account - Field Email Address - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 923233499 - Field 415504711 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <target state="translated">Chiave primaria</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Table Email - Outlook Account - Field Id - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 923233499 - Field 2961552353 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <target state="translated">Nome account</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Table Email - Outlook Account - Field Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 923233499 - Field 72161626 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Outlook API Email Connector</source>
+          <target state="translated">Connettore e-mail API Outlook</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Table Email - Outlook Account - Field Outlook API Email Connector - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3074962881 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email - Outlook API Setup</source>
+          <target state="translated">E-mail - Setup API Outlook</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Table Email - Outlook API Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3074962881 - Field 2788077256 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Id</source>
+          <target state="translated">ID client</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Table Email - Outlook API Setup - Field ClientId - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3074962881 - Field 4069789961 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <target state="translated">Segreto client</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Table Email - Outlook API Setup - Field ClientSecret - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3074962881 - Field 415504711 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target state="translated">ID</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Table Email - Outlook API Setup - Field Id - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3074962881 - Field 1464062987 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Redirect URL</source>
+          <target state="translated">URL di reindirizzamento</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Table Email - Outlook API Setup - Field RedirectURL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3663318601 - NamedType 1632511380" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Could not get access token.</source>
+          <target state="translated">Impossibile ottenere il token di accesso.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - OAuth Client - NamedType CouldNotGetAccessTokenErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3663318601 - NamedType 3856184457" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Third-party extensions are restricted from obtaining access tokens. Please contact your system administrator.</source>
+          <target state="translated">Le estensioni di terze parti non possono ottenere token di accesso. Contattare l'amministratore di sistema.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - OAuth Client - NamedType ThirdPartyExtensionsNotAllowedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 571534387 - NamedType 2389531293" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Could not establish the connection to the remote service for sending email. Try again later.</source>
+          <target state="translated">Impossibile stabilire la connessione al servizio remoto per l'invio di posta elettronica. Riprovare più tardi.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Client - NamedType ConnectionErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 571534387 - NamedType 3625692055" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emails retrieved.</source>
+          <target state="translated">Messaggi e-mail recuperati.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Client - NamedType EmailsRetrievedTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 571534387 - NamedType 3949230830" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The request to send email has been blocked. To resolve the problem, enable outgoing HTTP requests for the Email - Outlook REST API app on the Extension Management page.</source>
+          <target state="translated">La richiesta di invio di e-mail è stata bloccata. Per risolvere il problema, abilitare le richieste HTTP in uscita per l'app Email - Outlook REST API nella pagina Gestione estensioni.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Client - NamedType EnvironmentBlocksErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 571534387 - NamedType 2364649794" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Multi-Factor Authentication is enabled on this account but the user did not complete the setup. Please sign in to the account and try again.</source>
+          <target state="translated">L'autenticazione a più fattori è abilitata su questo account ma l'utente non ha completato il setup. Accedere all'account e riprovare.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Client - NamedType ExternalSecurityChallengeNotSatisfiedMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 571534387 - NamedType 1186942071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed to read the response content.</source>
+          <target state="translated">Impossibile leggere il contenuto della risposta.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Client - NamedType FailedToReadResponseContentErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 571534387 - NamedType 4072976761" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed to retrieve message body.</source>
+          <target state="translated">Impossibile recuperare il corpo del messaggio.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Client - NamedType FailedToRetrieveEmailBodyErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 571534387 - NamedType 3034691552" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed to retrieve emails.</source>
+          <target state="translated">Impossibile recuperare messaggi e-mail.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Client - NamedType FailedToRetrieveEmailsErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 571534387 - NamedType 2932448238" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed to update draft message.</source>
+          <target state="translated">Impossibile aggiornare la bozza del messaggio.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Client - NamedType FailedToUpdateDraftMessageErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 571534387 - NamedType 1976153897" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed to retrieve emails. Error:\\%1</source>
+          <target state="translated">Impossibile recuperare messaggi e-mail. Errore:\\%1</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Error message(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Client - NamedType RetrieveEmailsMessageErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 571534387 - NamedType 68286719" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Could not send the email message. Try again later.</source>
+          <target state="translated">Impossibile inviare il messaggio e-mail. Riprovare più tardi.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Client - NamedType SendEmailErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 571534387 - NamedType 2917787611" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Could not send the email, because the user is delegated or external.</source>
+          <target state="translated">Impossibile inviare il messaggio e-mail perché l'utente è delegato o esterno.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Client - NamedType SendEmailExternalUserErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 571534387 - NamedType 2078957562" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed to send email. Error:\\%1</source>
+          <target state="translated">Impossibile inviare il messaggio e-mail. Errore:\\%1</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Error message(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Client - NamedType SendEmailMessageErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 571534387 - NamedType 2164095947" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The mailbox is not valid.\\A likely cause is that the user does not have a valid license for Office 365. To read about other potential causes, visit https://go.microsoft.com/fwlink/?linkid=2206177</source>
+          <target state="translated">La cassetta postale non è valida.\\La causa probabile di questo errore è che l'utente non dispone di una licenza valida per Office 365. Per ulteriori informazioni sulle cause potenziali, visitare https://go.microsoft.com/fwlink/?linkid=2206177</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Client - NamedType TheMailboxIsNotValidErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1049555962 - NamedType 3792450033" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>We could not find the account. Typically, this is because the account has been deleted.</source>
+          <target state="translated">Impossibile trovare l'account. In genere il problema si verifica perché l'account è stato eliminato.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Helper - NamedType AccountNotFoundErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1049555962 - NamedType 1683059839" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client ID or Client secret is not set up on the Email Microsoft Entra application registration page.</source>
+          <target state="translated">L'ID client o il segreto del client non sono impostati nella pagina di registrazione di applicazioni per la funzionalità e-mail Microsoft Entra.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Helper - NamedType CannotConnectToMailServerErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1049555962 - NamedType 2227893846" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authentication using the Client ID and secret should only be used for Business Central on-premises.</source>
+          <target state="translated">L'autenticazione che utilizza l'ID client e il segreto deve essere utilizzata solo per Business Central locale.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Helper - NamedType OnPremOnlyErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1049555962 - NamedType 3435643268" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>To connect to your email account you must create an App registration in Microsoft Entra and then enter information about the registration on the Email Microsoft Entra application registration page in Business Central. Do you want to do that now?</source>
+          <target state="translated">Per connettersi all'account e-mail è necessario creare una registrazione dell'app in Microsoft Entra e immettere le informazioni relative alla registrazione nella pagina di registrazione di applicazioni per la funzionalità e-mail Microsoft Entra in Business Central. Eseguire subito questa operazione?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Codeunit Email - Outlook API Helper - NamedType SetupOutlookAPIQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email Microsoft Entra application registration</source>
+          <target state="translated">Registrazione di applicazioni per la funzionalità e-mail Microsoft Entra</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - NamedType 970166781" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Learn more about the permissions</source>
+          <target state="translated">Ulteriori informazioni sulle autorizzazioni</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - NamedType AppPermissionsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - NamedType 1327595939" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Learn more about app registration</source>
+          <target state="translated">Ulteriori informazioni sulla registrazione dell'app</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - NamedType AppRegistrationsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - NamedType 1883556333" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Success! Your authentication was verified.</source>
+          <target state="translated">La verifica dell'autenticazione è stata completata.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - NamedType SuccessfulTestMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - NamedType 680356195" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>If you clear the app registration on this page, users will not be able to send email messages from their Exchange accounts. Do you want to continue?</source>
+          <target state="translated">Se si cancella la registrazione dell'app in questa pagina, gli utenti non potranno inviare messaggi e-mail dai propri account di Exchange. Continuare?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - NamedType ThisWillClearTheFieldsTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - NamedType 143307884" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>We could not get access token with the current setup. Error: "%1".\\Please verify the values on the page as well as settings of your app registration and try again.</source>
+          <target state="translated">Impossibile ottenere il token di accesso con il setup corrente. Errore: "%1".\\Verificare i valori nella pagina nonché le impostazioni della registrazione dell'app e riprovare.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = error message(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - NamedType UnsuccessfulTestMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - NamedType 2108276406" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 is not a valid URI.</source>
+          <target state="translated">%1 non è un URI valido.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = a string(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - NamedType UriIsNotValidErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Control 3123527090 - Property 1968111052" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must already have registered your application in Microsoft Entra and granted certain permissions. Use the client ID and secret from that registration to authenticate the email account.</source>
+          <target state="translated">È necessario aver già registrato l'applicazione in Microsoft Entra e concesso le autorizzazioni. Utilizzare l'ID client e il segreto del client presente nella registrazione per autenticare l'account e-mail.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Control Info - Property InstructionalText)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Control 2425676828 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <target state="translated"> </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Control Doc - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Control 70122822 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <target state="translated"> </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Control Doc2 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Control 330024935 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Azure Application registration</source>
+          <target state="translated">Registrazione applicazione Azure</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Control Secrets - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Control 2788077256 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Client Id.</source>
+          <target state="translated">Specifica l'ID del client.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Control ClientId - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Control 2788077256 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Id</source>
+          <target state="translated">ID client</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Control ClientId - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Control 4069789961 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Client Secret.</source>
+          <target state="translated">Specifica il segreto del client.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Control ClientSecret - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Control 4069789961 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <target state="translated">Segreto client</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Control ClientSecret - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Control 1464062987 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Redirect URL.</source>
+          <target state="translated">Specifica l'URL di reindirizzamento.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Control RedirectURL - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Control 1464062987 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Redirect URL</source>
+          <target state="translated">URL di reindirizzamento</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Control RedirectURL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Control 2141615146 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <target state="translated"> </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Control NotDoneIcon - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Control 2141615146 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <target state="translated"> </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Control NotDoneIcon - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Action 2457075619 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete the Microsoft Entra app registration information in Business Central.</source>
+          <target state="translated">Eliminare le informazioni di registrazione dell'app di Microsoft Entra in Business Central.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Action Clear - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Action 2457075619 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Clear</source>
+          <target state="translated">Cancella</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Action Clear - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Action 1010501080 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <target state="translated"> </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Action Ok - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Action 1010501080 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ok</source>
+          <target state="translated">OK</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Action Ok - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Action 273330248 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change the email account that is associated with the email app registration for the current user.</source>
+          <target state="translated">Modificare l'account e-mail associato alla registrazione dell'app e-mail per l'utente corrente.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Action SingInAgain - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Action 273330248 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sign in with a different account</source>
+          <target state="translated">Accedi con un account diverso</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Action SingInAgain - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Action 2116299361 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Verify that you can use the settings on this page to authenticate to the application registration.</source>
+          <target state="translated">Verificare di poter utilizzare le impostazioni in questa pagina per autenticare la registrazione dell'applicazione.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Action TestSetupAction - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3074962881 - Action 2116299361 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Verify Registration</source>
+          <target state="translated">Verifica registrazione</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=Page Email - Outlook API Setup - Action TestSetupAction - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 143312419 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email - Outlook REST API - Edit</source>
+          <target state="translated">Email - Outlook REST API - Modifica</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=PermissionSet Email ORA - Edit - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 65726293 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email - Outlook REST API - Objects</source>
+          <target state="translated">Email - Outlook REST API - Oggetti</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=PermissionSet Email ORA - Objects - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 1262931937 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email - Outlook REST API - Read</source>
+          <target state="translated">Email - Outlook REST API - Leggi</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.Email)(LookupHint=PermissionSet Email ORA - Read - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

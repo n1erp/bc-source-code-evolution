@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Subscription Billing Test">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 32521736 - NamedType 4144059976" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Items that are marked as Invoicing Item may not be used here. Please choose another item.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Item Service Comm. Type Test - NamedType InvoicingItemErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 32521736 - NamedType 2823851010" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Items that are marked as Subscription Item may not be used here. Please choose another item.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Item Service Comm. Type Test - NamedType ServiceCommitmentItemErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1010650385 - NamedType 4042537543" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No contract lines were found that can be billed with the specified parameters.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Recurring Billing Docs Test - NamedType NoContractLinesFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1010650385 - Method 593973872 - NamedType 1690029766" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Billing line with unposted Sales Invoice exists. New invoices cannot be created until the current invoice is posted. Do you want to open the invoice?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Recurring Billing Docs Test - Method CheckCustomerBillingProposalCanBeCreatedForSalesInvoiceExists - NamedType UnpostedSalesInvExistsMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1010650385 - Method 3868504497 - NamedType 3946445755" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Billing line with unposted Purchase Invoice exists. New invoices cannot be created until the current invoice is posted. Do you want to open the invoice?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Recurring Billing Docs Test - Method CheckVendorBillingProposalCanBeCreatedForPurchaseInvoiceExists - NamedType UnpostedPurchaseInvExistsMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 837722888 - NamedType 4030333737" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Billing proposal not created.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Recurring Billing Test - NamedType BillingProposalNotCreatedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2178075116 - NamedType 1751174665" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Subscription Lines are not created properly.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Service Commitment Test - NamedType NotCreatedProperlyErr</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

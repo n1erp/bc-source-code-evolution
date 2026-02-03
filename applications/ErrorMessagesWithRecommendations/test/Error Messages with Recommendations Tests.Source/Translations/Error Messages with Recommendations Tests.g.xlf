@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Error Messages with Recommendations Tests">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 673422063 - NamedType 2882013966" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The recommendations will be applied to %1 out of %2 selected error messages. \\Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">%1 - count of actionable error messages, %2 = Total selected count</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ErrorMessageExtensibilityTests - NamedType AcceptRecommendationPartialTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 673422063 - NamedType 4112164427" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The recommendations will be applied to %1 error messages. \\Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">%1 - selected count</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ErrorMessageExtensibilityTests - NamedType AcceptRecommendationTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 673422063 - NamedType 3371211530" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set the value to %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = "Dimension Value Code" Value</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ErrorMessageExtensibilityTests - NamedType DimensionUseRequiredActionLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 673422063 - NamedType 3373926666" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Recommendations applied: %1 \Failed to apply the recommendation: %2</source>
+          <note from="Developer" annotates="general" priority="2">%1=Fixed Count, %2=Failed to fix count</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ErrorMessageExtensibilityTests - NamedType FixedPartialAckLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1097683516 - NamedType 4112164427" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The recommendations will be applied to %1 error messages. \\Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">%1 - selected count</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ErrorMessageRecommendedAction - NamedType AcceptRecommendationTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1097683516 - NamedType 3371211530" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set the value to %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = "Dimension Value Code" Value</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ErrorMessageRecommendedAction - NamedType DimensionUseRequiredActionLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1097683516 - NamedType 1618299912" size-unit="char" translate="yes" xml:space="preserve">
+          <source>All of your selections were processed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ErrorMessageRecommendedAction - NamedType FixedAllAckLbl</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

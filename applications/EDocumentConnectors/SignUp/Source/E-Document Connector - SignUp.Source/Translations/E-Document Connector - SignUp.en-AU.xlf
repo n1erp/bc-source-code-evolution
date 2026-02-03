@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-AU" original="E-Document Connector - SignUp">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 2487911809 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SignUp Connection Setup</source>
+          <target state="translated">SignUp Connection Setup</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 3242117461 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the URL to connect Microsoft Entra.</source>
+          <target state="translated">Specifies the URL to connect Microsoft Entra.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Authentication URL - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 3242117461 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authentication URL</source>
+          <target state="translated">Authentication URL</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Authentication URL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 652819368 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the client ID.</source>
+          <target state="translated">Specifies the client ID.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Client ID - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 652819368 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client ID</source>
+          <target state="translated">Client ID</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Client ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 2529110793 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the client secret.</source>
+          <target state="translated">Specifies the client secret.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Client Secret - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 2529110793 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <target state="translated">Client Secret</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Client Secret - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 3998291119 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the client application tenant.</source>
+          <target state="translated">Specifies the client application tenant.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Client Tenant - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 3998291119 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client App Tenant</source>
+          <target state="translated">Client App Tenant</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Client Tenant - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 1436111935 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the environment type.</source>
+          <target state="translated">Specifies the environment type.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Environment Type - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 1436111935 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Environment Type</source>
+          <target state="translated">Environment Type</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Environment Type - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 868633933 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace app ID.</source>
+          <target state="translated">Specifies the Marketplace app ID.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Marketplace App ID - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 868633933 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace App ID</source>
+          <target state="translated">Marketplace App ID</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Marketplace App ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 2518567227 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace application secret.</source>
+          <target state="translated">Specifies the Marketplace application secret.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Marketplace Secret - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 2518567227 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace App Secret</source>
+          <target state="translated">Marketplace App Secret</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Marketplace Secret - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 851358917 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace application tenant.</source>
+          <target state="translated">Specifies the Marketplace application tenant.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Marketplace Tenant - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 851358917 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace App Tenant</source>
+          <target state="translated">Marketplace App Tenant</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Marketplace Tenant - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 3906579504 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace URL.</source>
+          <target state="translated">Specifies the Marketplace URL.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Marketplace URL - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 3906579504 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace URL</source>
+          <target state="translated">Marketplace URL</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Marketplace URL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 2575991450 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the service URL.</source>
+          <target state="translated">Specifies the service URL.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Service URL - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 2575991450 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service URL</source>
+          <target state="translated">Service URL</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Connection Setup - Field Service URL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MetadataProfile</source>
+          <target state="translated">MetadataProfile</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Metadata Profile - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 303042659 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the scheme of the document identifier.</source>
+          <target state="translated">Specifies the scheme of the document identifier.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Metadata Profile - Field Document Identifier Scheme - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 303042659 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Identifier Scheme</source>
+          <target state="translated">Document Identifier Scheme</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Metadata Profile - Field Document Identifier Scheme - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 1410814017 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the document identifier.</source>
+          <target state="translated">Specifies the value of the document identifier.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Metadata Profile - Field Document Identifier Value - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 1410814017 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Identifier Value</source>
+          <target state="translated">Document Identifier Value</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Metadata Profile - Field Document Identifier Value - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 818923927 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the scheme of the process identifier.</source>
+          <target state="translated">Specifies the scheme of the process identifier.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Metadata Profile - Field Process Identifier Scheme - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 818923927 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process Identifier Scheme</source>
+          <target state="translated">Process Identifier Scheme</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Metadata Profile - Field Process Identifier Scheme - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 567449997 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the process identifier.</source>
+          <target state="translated">Specifies the value of the process identifier.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Metadata Profile - Field Process Identifier Value - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 567449997 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process Identifier Value</source>
+          <target state="translated">Process Identifier Value</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Metadata Profile - Field Process Identifier Value - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 3489829666 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unique identifier for the metadata profile.</source>
+          <target state="translated">Specifies the unique identifier for the metadata profile.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Metadata Profile - Field Profile ID - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 3489829666 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Profile ID</source>
+          <target state="translated">Profile ID</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Metadata Profile - Field Profile ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 4184392216 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the common name of the metadata profile.</source>
+          <target state="translated">Specifies the common name of the metadata profile.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Metadata Profile - Field Profile Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 4184392216 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Profile Name</source>
+          <target state="translated">Profile Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Table SignUp Metadata Profile - Field Profile Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 4070399590" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show %1</source>
+          <target state="translated">Show %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Table Name(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp API Requests - NamedType MissingSetupCompanyIdActionErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 3816171416" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 in %2 is missing</source>
+          <target state="translated">%1 in %2 is missing</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Name, %2 = Table Name(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp API Requests - NamedType MissingSetupCompanyIdErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 568927881" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must set up %1 in %2.</source>
+          <target state="translated">You must set up %1 in %2.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Name, %2 = Table Name(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp API Requests - NamedType MissingSetupCompanyIdMessageErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 4090211762" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Connection Setup is missing</source>
+          <target state="translated">Connection Setup is missing</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp API Requests - NamedType MissingSetupErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 42373855" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must set up service integration in the e-document service card.</source>
+          <target state="translated">You must set up service integration in the e-document service card.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp API Requests - NamedType MissingSetupMessageErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 2877324166" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show E-Document Services</source>
+          <target state="translated">Show E-Document Services</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp API Requests - NamedType MissingSetupNavigationActionErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 4173554166" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supported Document Types</source>
+          <target state="translated">Supported Document Types</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp API Requests - NamedType SupportedDocumentTypesTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 846574951" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document %1 is not supported since %2 is missing in %3 %4</source>
+          <target state="translated">Document %1 is not supported since %2 is missing in %3 %4</target>
+          <note from="Developer" annotates="general" priority="2">%1 = EDocument Type; %2 = Profile Id; %3 = E-Document Service; %4 = Supported Document Types(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp API Requests - NamedType UnSupportedDocumentTypeProfileMissingTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 1178043566" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document %1 is not supported.</source>
+          <target state="translated">Document %1 is not supported.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = EDocument Type(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp API Requests - NamedType UnSupportedDocumentTypeTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2929047250 - NamedType 1176925779" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to fetch Marketplace token.</source>
+          <target state="translated">Unable to fetch Marketplace token.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp Authentication - NamedType ErrorTokenLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2929047250 - NamedType 2816754975" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to create client credentials.</source>
+          <target state="translated">Unable to create client credentials.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp Authentication - NamedType ErrorUnableToCreateClientCredentialsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2929047250 - Method 748932884 - NamedType 4152095307" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There was an error sending the request. Response code: %1 and error message: %2</source>
+          <target state="translated">There was an error sending the request. Response code: %1 and error message: %2</target>
+          <note from="Developer" annotates="general" priority="2">%1 - http response status code, e.g. 400, %2- error message(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp Authentication - Method ShowErrorMessage - NamedType UnsuccessfulResponseErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 4138622684 - NamedType 3949230830" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The request to send documents has been blocked. To resolve the problem, enable outgoing HTTP requests for the E-Document apps on the Extension Management page.</source>
+          <target state="translated">The request to send documents has been blocked. To resolve the problem, enable outgoing HTTP requests for the E-Document apps on the Extension Management page.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp Connection - NamedType EnvironmentBlocksErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 4138622684 - NamedType 3022709987" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You do not have a valid subscription.</source>
+          <target state="translated">You do not have a valid subscription.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp Connection - NamedType NoValidSubscriptionErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 4138622684 - NamedType 4152095307" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There was an error sending the request. Response code: %1 and error message: %2</source>
+          <target state="translated">There was an error sending the request. Response code: %1 and error message: %2</target>
+          <note from="Developer" annotates="general" priority="2">%1 - http response status code, e.g. 400, %2- error message(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp Connection - NamedType UnsuccessfulResponseErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2327165127 - NamedType 1855753092" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Could not retrieve document with id: %1 from the service</source>
+          <target state="translated">Could not retrieve document with id: %1 from the service</target>
+          <note from="Developer" annotates="general" priority="2">%1 - Document ID(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp Processing - NamedType CouldNotRetrieveDocumentErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2327165127 - NamedType 1931209323" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Could not retrieve status from response</source>
+          <target state="translated">Could not retrieve status from response</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp Processing - NamedType CouldNotRetrieveStatusFromResponseLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2327165127 - NamedType 396125741" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Could not Send Patch for document with id: %1</source>
+          <target state="translated">Could not Send Patch for document with id: %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 - Document ID(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp Processing - NamedType CouldNotSendPatchErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2327165127 - NamedType 983558944" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document ID not found in response</source>
+          <target state="translated">Document ID not found in response</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp Processing - NamedType DocumentIdNotFoundErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2327165127 - NamedType 2625528086" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error message is missing or could not be parsed in the response</source>
+          <target state="translated">Error message is missing or could not be parsed in the response</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Codeunit SignUp Processing - NamedType ErrorMessageMissingErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SignUp Connection Setup</source>
+          <target state="translated">SignUp Connection Setup</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 3856621992 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the client ID token.</source>
+          <target state="translated">Specifies the client ID token.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Control ClientID - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 3856621992 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client ID</source>
+          <target state="translated">Client ID</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Control ClientID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 4069789961 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the client secret token.</source>
+          <target state="translated">Specifies the client secret token.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Control ClientSecret - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 4069789961 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <target state="translated">Client Secret</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Control ClientSecret - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 1244002991 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the client tenant.</source>
+          <target state="translated">Specifies the client tenant.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Control ClientTenant - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 1244002991 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Tenant</source>
+          <target state="translated">Client Tenant</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Control ClientTenant - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 3611573742 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace app id token.</source>
+          <target state="translated">Specifies the Marketplace app id token.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Control MarketplaceID - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 3611573742 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace App ID</source>
+          <target state="translated">Marketplace App ID</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Control MarketplaceID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 606440363 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace secret token.</source>
+          <target state="translated">Specifies the Marketplace secret token.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Control MarketplaceSecret - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 606440363 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace Secret</source>
+          <target state="translated">Marketplace Secret</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Control MarketplaceSecret - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 1189874581 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace tenant id token.</source>
+          <target state="translated">Specifies the Marketplace tenant id token.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Control MarketplaceTenant - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 1189874581 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace Tenant ID</source>
+          <target state="translated">Marketplace Tenant ID</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Control MarketplaceTenant - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 2681938816 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace url token.</source>
+          <target state="translated">Specifies the Marketplace url token.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Control MarketplaceUrl - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 2681938816 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace URL</source>
+          <target state="translated">Marketplace URL</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Control MarketplaceUrl - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Action 2217703665 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create client credentials and open the onboarding process in a web browser.</source>
+          <target state="translated">Create client credentials and open the onboarding process in a web browser.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Action InitOnboardingAction - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Action 2217703665 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open Onboarding</source>
+          <target state="translated">Open Onboarding</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Connection Setup Card - Action InitOnboardingAction - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1624908397 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SignUp Metadata Profiles</source>
+          <target state="translated">SignUp Metadata Profiles</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Page SignUp Metadata Profiles - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PageExtension 224319448 - Control 18776898 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ExFlow E-Invoicing</source>
+          <target state="translated">ExFlow E-Invoicing</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3469146285</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3310491777 - Action 1814318637 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Retrieves Metadata Profiles from service</source>
+          <target state="translated">Retrieves Metadata Profiles from service</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2744253236</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3310491777 - Action 1814318637 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Retrieve Metadata Profiles</source>
+          <target state="translated">Retrieve Metadata Profiles</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2744253236</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 224319448 - Field 2357888347 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the PEPPOL participant identifier registered for your company in the ExFlow E-Invoicing subscription. This identifier is used when you are sending/receiving documents via the PEPPOL network.</source>
+          <target state="translated">Specifies the PEPPOL participant identifier registered for your company in the ExFlow E-Invoicing subscription. This identifier is used when you are sending/receiving documents via the PEPPOL network.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 3469146285</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 224319448 - Field 2357888347 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Participant Id</source>
+          <target state="translated">Service Participant Id</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 3469146285</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 436369051 - Field 263407106 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unique identifier for the metadata profile.</source>
+          <target state="translated">Specifies the unique identifier for the metadata profile.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 1890189815</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 436369051 - Field 263407106 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Profile Id</source>
+          <target state="translated">Profile Id</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 1890189815</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 436369051 - Field 4184392216 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the common name of the metadata profile.</source>
+          <target state="translated">Specifies the common name of the metadata profile.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 1890189815</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 436369051 - Field 4184392216 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Profile Name</source>
+          <target state="translated">Profile Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 1890189815</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3424644660 - Field 2268364712 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies document id used by ExFlow E-Invoicing</source>
+          <target state="translated">Specifies document id used by ExFlow E-Invoicing</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 4128474945</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3424644660 - Field 2268364712 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SignUp Document ID</source>
+          <target state="translated">SignUp Document ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 4128474945</note>
+        </trans-unit>
+        <trans-unit id="Enum 1505045349 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Environment Type</source>
+          <target state="translated">Environment Type</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Enum SignUp Environment Type - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 1505045349 - EnumValue 1065337893 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production</source>
+          <target state="translated">Production</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Enum SignUp Environment Type - EnumValue Production - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 1505045349 - EnumValue 3732224266 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test</source>
+          <target state="translated">Test</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=Enum SignUp Environment Type - EnumValue Test - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="EnumExtension 897853030 - EnumValue 597974053 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ExFlow E-Invoicing</source>
+          <target state="translated">ExFlow E-Invoicing</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Enum 1694972421</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 913824254 - Property 2879900210" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SignUp E-Doc. Connector - Edit</source>
+          <target state="translated">SignUp E-Doc. Connector - Edit</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=PermissionSet SignUp E-Doc Edit - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 4206156564 - Property 2879900210" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SignUp E-Doc. Connector - Obj.</source>
+          <target state="translated">SignUp E-Doc. Connector - Obj.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=PermissionSet SignUp E-Doc Objects - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 3421318040 - Property 2879900210" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SignUp E-Doc. Connector - Read</source>
+          <target state="translated">SignUp E-Doc. Connector - Read</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.SignUp)(LookupHint=PermissionSet SignUp E-Doc Read - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="E-Document Connector - SignUp">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 2487911809 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SignUp Connection Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 3242117461 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the URL to connect Microsoft Entra.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Authentication URL - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 3242117461 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authentication URL</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Authentication URL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 652819368 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the client ID.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Client ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 652819368 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Client ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 2529110793 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the client secret.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Client Secret - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 2529110793 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Client Secret - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 3998291119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the client application tenant.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Client Tenant - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 3998291119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client App Tenant</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Client Tenant - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 1436111935 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the environment type.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Environment Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 1436111935 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Environment Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Environment Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 868633933 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace app ID.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Marketplace App ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 868633933 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace App ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Marketplace App ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 2518567227 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace application secret.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Marketplace Secret - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 2518567227 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace App Secret</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Marketplace Secret - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 851358917 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace application tenant.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Marketplace Tenant - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 851358917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace App Tenant</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Marketplace Tenant - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 3906579504 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace URL.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Marketplace URL - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 3906579504 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace URL</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Marketplace URL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 2575991450 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the service URL.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Service URL - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2487911809 - Field 2575991450 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service URL</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Connection Setup - Field Service URL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MetadataProfile</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Metadata Profile - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 303042659 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the scheme of the document identifier.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Metadata Profile - Field Document Identifier Scheme - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 303042659 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Identifier Scheme</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Metadata Profile - Field Document Identifier Scheme - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 1410814017 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the document identifier.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Metadata Profile - Field Document Identifier Value - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 1410814017 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Identifier Value</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Metadata Profile - Field Document Identifier Value - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 818923927 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the scheme of the process identifier.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Metadata Profile - Field Process Identifier Scheme - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 818923927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process Identifier Scheme</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Metadata Profile - Field Process Identifier Scheme - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 567449997 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the process identifier.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Metadata Profile - Field Process Identifier Value - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 567449997 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process Identifier Value</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Metadata Profile - Field Process Identifier Value - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 3489829666 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unique identifier for the metadata profile.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Metadata Profile - Field Profile ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 3489829666 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Profile ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Metadata Profile - Field Profile ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 4184392216 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the common name of the metadata profile.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Metadata Profile - Field Profile Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1024128332 - Field 4184392216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Profile Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SignUp Metadata Profile - Field Profile Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 4070399590" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Table Name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp API Requests - NamedType MissingSetupCompanyIdActionErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 3816171416" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 in %2 is missing</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Name, %2 = Table Name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp API Requests - NamedType MissingSetupCompanyIdErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 568927881" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must set up %1 in %2.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Name, %2 = Table Name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp API Requests - NamedType MissingSetupCompanyIdMessageErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 4090211762" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Connection Setup is missing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp API Requests - NamedType MissingSetupErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 42373855" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must set up service integration in the e-document service card.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp API Requests - NamedType MissingSetupMessageErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 2877324166" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show E-Document Services</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp API Requests - NamedType MissingSetupNavigationActionErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 4173554166" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supported Document Types</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp API Requests - NamedType SupportedDocumentTypesTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 846574951" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document %1 is not supported since %2 is missing in %3 %4</source>
+          <note from="Developer" annotates="general" priority="2">%1 = EDocument Type; %2 = Profile Id; %3 = E-Document Service; %4 = Supported Document Types</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp API Requests - NamedType UnSupportedDocumentTypeProfileMissingTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 560292040 - NamedType 1178043566" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document %1 is not supported.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = EDocument Type</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp API Requests - NamedType UnSupportedDocumentTypeTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2929047250 - NamedType 1176925779" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to fetch Marketplace token.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp Authentication - NamedType ErrorTokenLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2929047250 - NamedType 2816754975" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to create client credentials.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp Authentication - NamedType ErrorUnableToCreateClientCredentialsLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2929047250 - Method 748932884 - NamedType 4152095307" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There was an error sending the request. Response code: %1 and error message: %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 - http response status code, e.g. 400, %2- error message</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp Authentication - Method ShowErrorMessage - NamedType UnsuccessfulResponseErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4138622684 - NamedType 3949230830" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The request to send documents has been blocked. To resolve the problem, enable outgoing HTTP requests for the E-Document apps on the Extension Management page.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp Connection - NamedType EnvironmentBlocksErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4138622684 - NamedType 3022709987" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You do not have a valid subscription.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp Connection - NamedType NoValidSubscriptionErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4138622684 - NamedType 4152095307" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There was an error sending the request. Response code: %1 and error message: %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 - http response status code, e.g. 400, %2- error message</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp Connection - NamedType UnsuccessfulResponseErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2327165127 - NamedType 1855753092" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Could not retrieve document with id: %1 from the service</source>
+          <note from="Developer" annotates="general" priority="2">%1 - Document ID</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp Processing - NamedType CouldNotRetrieveDocumentErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2327165127 - NamedType 1931209323" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Could not retrieve status from response</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp Processing - NamedType CouldNotRetrieveStatusFromResponseLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2327165127 - NamedType 396125741" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Could not Send Patch for document with id: %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 - Document ID</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp Processing - NamedType CouldNotSendPatchErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2327165127 - NamedType 983558944" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document ID not found in response</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp Processing - NamedType DocumentIdNotFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2327165127 - NamedType 2625528086" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error message is missing or could not be parsed in the response</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SignUp Processing - NamedType ErrorMessageMissingErr</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SignUp Connection Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 3856621992 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the client ID token.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Control ClientID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 3856621992 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Control ClientID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 4069789961 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the client secret token.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Control ClientSecret - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 4069789961 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Control ClientSecret - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 1244002991 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the client tenant.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Control ClientTenant - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 1244002991 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Tenant</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Control ClientTenant - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 3611573742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace app id token.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Control MarketplaceID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 3611573742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace App ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Control MarketplaceID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 606440363 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace secret token.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Control MarketplaceSecret - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 606440363 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace Secret</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Control MarketplaceSecret - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 1189874581 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace tenant id token.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Control MarketplaceTenant - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 1189874581 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace Tenant ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Control MarketplaceTenant - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 2681938816 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Marketplace url token.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Control MarketplaceUrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Control 2681938816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketplace URL</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Control MarketplaceUrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Action 2217703665 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create client credentials and open the onboarding process in a web browser.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Action InitOnboardingAction - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1015196013 - Action 2217703665 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open Onboarding</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Connection Setup Card - Action InitOnboardingAction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1624908397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SignUp Metadata Profiles</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SignUp Metadata Profiles - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 224319448 - Control 18776898 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
+          <source>ExFlow E-Invoicing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SignUp Company Information Ext - Control ExFlowEInvoicing - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3310491777 - Action 1814318637 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2744253236">
+          <source>Retrieves Metadata Profiles from service</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SignUp EDoc. Svc. Type PageExt - Action PopulateMetaData - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3310491777 - Action 1814318637 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2744253236">
+          <source>Retrieve Metadata Profiles</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SignUp EDoc. Svc. Type PageExt - Action PopulateMetaData - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 224319448 - Field 2357888347 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3469146285">
+          <source>Specifies the PEPPOL participant identifier registered for your company in the ExFlow E-Invoicing subscription. This identifier is used when you are sending/receiving documents via the PEPPOL network.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SignUp Company Information Ext - Field SignUp Service Participant Id - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 224319448 - Field 2357888347 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3469146285">
+          <source>Service Participant Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SignUp Company Information Ext - Field SignUp Service Participant Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 436369051 - Field 263407106 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1890189815">
+          <source>Specifies the unique identifier for the metadata profile.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SignUp E-Doc. Svc. Type Ext - Field Profile Id - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 436369051 - Field 263407106 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1890189815">
+          <source>Profile Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SignUp E-Doc. Svc. Type Ext - Field Profile Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 436369051 - Field 4184392216 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1890189815">
+          <source>Specifies the common name of the metadata profile.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SignUp E-Doc. Svc. Type Ext - Field Profile Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 436369051 - Field 4184392216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1890189815">
+          <source>Profile Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SignUp E-Doc. Svc. Type Ext - Field Profile Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3424644660 - Field 2268364712 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4128474945">
+          <source>Specifies document id used by ExFlow E-Invoicing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SignUp E-Document Ext - Field SignUp Document Id - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3424644660 - Field 2268364712 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4128474945">
+          <source>SignUp Document ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SignUp E-Document Ext - Field SignUp Document Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1505045349 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Environment Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum SignUp Environment Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1505045349 - EnumValue 1065337893 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum SignUp Environment Type - EnumValue Production - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1505045349 - EnumValue 3732224266 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum SignUp Environment Type - EnumValue Test - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 897853030 - EnumValue 597974053 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1694972421">
+          <source>ExFlow E-Invoicing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension SignUp Integration Enum Ext - EnumValue ExFlow E-Invoicing - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 913824254 - Property 2879900210" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SignUp E-Doc. Connector - Edit</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet SignUp E-Doc Edit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 4206156564 - Property 2879900210" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SignUp E-Doc. Connector - Obj.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet SignUp E-Doc Objects - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 3421318040 - Property 2879900210" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SignUp E-Doc. Connector - Read</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet SignUp E-Doc Read - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,959 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-CA" original="Bank Account Reconciliation With AI">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 3558828025 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank Acc. Rec. AI Prop. Buf.</source>
+          <target state="translated">Bank Acc. Rec. AI Prop. Buf.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - NamedType 399884464" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimensions for Copilot proposal</source>
+          <target state="translated">Dimensions for Copilot proposal</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - NamedType DimensionsForProposalTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - NamedType 1563172719" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Edit...</source>
+          <target state="translated">Edit...</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - NamedType EditDimensionsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - NamedType 4102074290" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 (%2)</source>
+          <target state="translated">%1 (%2)</target>
+          <note from="Developer" annotates="general" priority="2">%1 - G/L Account number, %2 - G/L Account name(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - NamedType PostPaymentProposalTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - NamedType 868927645" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set...</source>
+          <target state="translated">Set...</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - NamedType SetDimensionsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - Field 4104418200 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proposal</source>
+          <target state="translated">Proposal</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - Field AI Proposal - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - Field 4248640148 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank Account No.</source>
+          <target state="translated">Bank Account No.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - Field Bank Account No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - Field 3461834954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Description</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - Field Description - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - Field 365542049 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount to Apply</source>
+          <target state="translated">Amount to Apply</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - Field Difference - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - Field 3322554545 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimension Set ID</source>
+          <target state="translated">Dimension Set ID</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - Field Dimension Set ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - Field 3904546329 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimension Set Text</source>
+          <target state="translated">Dimension Set Text</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - Field Dimension Set Text - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - Field 486908828 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <target state="translated">Document No.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - Field Document No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - Field 3852983238 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Account No.</source>
+          <target state="translated">G/L Account No.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - Field G/L Account No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - Field 2175495992 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement Line No.</source>
+          <target state="translated">Statement Line No.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - Field Statement Line No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - Field 2170220406 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement No.</source>
+          <target state="translated">Statement No.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - Field Statement No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - Field 1483877167 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement Type</source>
+          <target state="translated">Statement Type</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - Field Statement Type - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3558828025 - Field 775380468 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transaction Date</source>
+          <target state="translated">Transaction Date</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Prop. Buf. - Field Transaction Date - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank Acc. Rec. AI Proposal</source>
+          <target state="translated">Bank Acc. Rec. AI Proposal</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - NamedType 1823991130" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1; %2; %3</source>
+          <target state="translated">%1; %2; %3</target>
+          <note from="Developer" annotates="general" priority="2">%1 - bank accout ledger entry date, %2 bank account ledger entry description, , %3 bank account ledger entry amount(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - NamedType ApplyToLedgerEntryTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - NamedType 4102074290" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 (%2)</source>
+          <target state="translated">%1 (%2)</target>
+          <note from="Developer" annotates="general" priority="2">%1 - G/L Account number, %2 - G/L Account name(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - NamedType PostPaymentProposalTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Field 4104418200 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proposal</source>
+          <target state="translated">Proposal</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Field AI Proposal - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Field 4216984123 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank Account Ledger Entry No.</source>
+          <target state="translated">Bank Account Ledger Entry No.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Field Bank Account Ledger Entry No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Field 4248640148 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank Account No.</source>
+          <target state="translated">Bank Account No.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Field Bank Account No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Field 3461834954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Description</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Field Description - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Field 365542049 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount to Apply</source>
+          <target state="translated">Amount to Apply</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Field Difference - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Field 3322554545 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimension Set ID</source>
+          <target state="translated">Dimension Set ID</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Field Dimension Set ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Field 486908828 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <target state="translated">Document No.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Field Document No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Field 3852983238 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Account No.</source>
+          <target state="translated">G/L Account No.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Field G/L Account No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Field 2704330142 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Batch Name</source>
+          <target state="translated">Journal Batch Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Field Journal Batch Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Field 3684440170 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Template Name</source>
+          <target state="translated">Journal Template Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Field Journal Template Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Field 2175495992 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement Line No.</source>
+          <target state="translated">Statement Line No.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Field Statement Line No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Field 2170220406 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement No.</source>
+          <target state="translated">Statement No.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Field Statement No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Field 1483877167 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement Type</source>
+          <target state="translated">Statement Type</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Field Statement Type - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3767244041 - Field 775380468 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transaction Date</source>
+          <target state="translated">Transaction Date</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Bank Acc. Rec. AI Proposal - Field Transaction Date - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4177971298 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Trans. to G/L Acc. Jnl. Batch</source>
+          <target state="translated">Trans. to G/L Acc. Jnl. Batch</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Trans. to G/L Acc. Jnl. Batch - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4177971298 - Field 2704330142 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Batch Name</source>
+          <target state="translated">Journal Batch Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Trans. to G/L Acc. Jnl. Batch - Field Journal Batch Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4177971298 - Field 3684440170 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Template Name</source>
+          <target state="translated">Journal Template Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Trans. to G/L Acc. Jnl. Batch - Field Journal Template Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4177971298 - Field 1525341075 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open Journal Batch</source>
+          <target state="translated">Open Journal Batch</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Trans. to G/L Acc. Jnl. Batch - Field Open Journal Batch - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4177971298 - Field 1663593181 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <target state="translated">Primary Key</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Table Trans. to G/L Acc. Jnl. Batch - Field Primary Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 678420997 - NamedType 1795332495" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Choose G/L Account...</source>
+          <target state="translated">Choose G/L Account...</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Codeunit Bank Acc. Rec. Trans. to Acc. - NamedType ChooseGLAccountLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 678420997 - NamedType 2568840905" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There was an error with sending the call to Copilot. Log a Business Central support request about this.</source>
+          <target state="translated">There was an error with sending the call to Copilot. Log a Business Central support request about this.</target>
+          <note from="Developer" annotates="general" priority="2">Copilot is a Microsoft service name and must not be translated(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Codeunit Bank Acc. Rec. Trans. to Acc. - NamedType ConstructingPromptFailedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 678420997 - NamedType 4132971870" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There were errors while attempting to post the payments. Do you want to open the journal batch with the unposted payments?</source>
+          <target state="translated">There were errors while attempting to post the payments. Do you want to open the journal batch with the unposted payments?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Codeunit Bank Acc. Rec. Trans. to Acc. - NamedType ErrorsDuringBatchPostingQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 678420997 - NamedType 3699337797" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applied by Copilot to a new payment based on semantic similarity with the G/L Account name.</source>
+          <target state="translated">Applied by Copilot to a new payment based on semantic similarity with the G/L Account name.</target>
+          <note from="Developer" annotates="general" priority="2">Copilot is a Microsoft service acronym and must not be translated(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Codeunit Bank Acc. Rec. Trans. to Acc. - NamedType MatchJustificationTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 678420997 - NamedType 2600741748" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must create at least one G/L Account that allows direct posting.</source>
+          <target state="translated">You must create at least one G/L Account that allows direct posting.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Codeunit Bank Acc. Rec. Trans. to Acc. - NamedType NoDirectPostingGLAccountsErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 678420997 - NamedType 531866587" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are statement lines that have transaction dates outside of the allowed posting date range. Payments will not be posted for these statement lines. You must match these lines manually. Alternatively, choose another journal template or adjust the allowed posting dates on the journal template or general ledger setup.</source>
+          <target state="translated">There are statement lines that have transaction dates outside of the allowed posting date range. Payments will not be posted for these statement lines. You must match these lines manually. Alternatively, choose another journal template or adjust the allowed posting dates on the journal template or general ledger setup.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Codeunit Bank Acc. Rec. Trans. to Acc. - NamedType StatementLinesWithDisallowedDatesLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1225237571 - NamedType 2568840905" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There was an error with sending the call to Copilot. Log a Business Central support request about this.</source>
+          <target state="translated">There was an error with sending the call to Copilot. Log a Business Central support request about this.</target>
+          <note from="Developer" annotates="general" priority="2">Copilot is a Microsoft service name and must not be translated(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Codeunit Bank Rec. AI Matching Impl. - NamedType ConstructingPromptFailedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1225237571 - NamedType 1780748572" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reconciling %1 statement %2 for %3</source>
+          <target state="translated">Reconciling %1 statement %2 for %3</target>
+          <note from="Developer" annotates="general" priority="2">%1 - bank account code, %2 - statement number, %3 - statement date(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Codeunit Bank Rec. AI Matching Impl. - NamedType ContentAreaCaptionTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1225237571 - NamedType 1525883669" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Matched by Copilot based on semantic similarity.</source>
+          <target state="translated">Matched by Copilot based on semantic similarity.</target>
+          <note from="Developer" annotates="general" priority="2">Copilot is a Microsoft service name and must not be translated(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Codeunit Bank Rec. AI Matching Impl. - NamedType MatchedByCopilotTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1225237571 - NamedType 265358163" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The number of open ledger entries for this bank account exceeds the capacity of data that we can send to Copilot. Open the bank account reconciliation card and use action 'Match Automatically' to reconcile this statement. Perform the reconciliation month by month - reconciling the oldest open ledger entries first, then moving on to newer ones.</source>
+          <target state="translated">The number of open ledger entries for this bank account exceeds the capacity of data that we can send to Copilot. Open the bank account reconciliation card and use action 'Match Automatically' to reconcile this statement. Perform the reconciliation month by month - reconciling the oldest open ledger entries first, then moving on to newer ones.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Codeunit Bank Rec. AI Matching Impl. - NamedType TooManyOpenLedgerEntriesErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reconcile with Copilot</source>
+          <target state="translated">Reconcile with Copilot</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - NamedType 2157519906" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>All lines (100%) are matched. Review match proposals.</source>
+          <target state="translated">All lines (100%) are matched. Review match proposals.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - NamedType AllLinesMatchedTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - NamedType 3290455486" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 of %2 lines (%3%)</source>
+          <target state="translated">%1 of %2 lines (%3%)</target>
+          <note from="Developer" annotates="general" priority="2">%1 - an integer; %2 - an integer; %3 a decimal between 0 and 100(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - NamedType AutoMatchedLinesLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - NamedType 1780748572" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reconciling %1 statement %2 for %3</source>
+          <target state="translated">Reconciling %1 statement %2 for %3</target>
+          <note from="Developer" annotates="general" priority="2">%1 - bank account code, %2 - statement number, %3 - statement date(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - NamedType ContentAreaCaptionTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - NamedType 903299789" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import transaction data...</source>
+          <target state="translated">Import transaction data...</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - NamedType ImportTransactionDataLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - NamedType 646177817" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement line descriptions or ledger entry descriptions with reserved AI chat completion prompt words were detected. For security reasons, they were excluded from the auto-matching process. You must match these statement lines or ledger entries manually.</source>
+          <target state="translated">Statement line descriptions or ledger entry descriptions with reserved AI chat completion prompt words were detected. For security reasons, they were excluded from the auto-matching process. You must match these statement lines or ledger entries manually.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - NamedType InputWithReservedWordsRemovedTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - NamedType 1032855696" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must specify a bank statement import format on at least one bank account. Open the card of a bank account and either choose action 'Link to Online Bank Account' or let the notification guide you how to set up a file import format. Do you want to open the Bank Accounts list?</source>
+          <target state="translated">You must specify a bank statement import format on at least one bank account. Open the card of a bank account and either choose action 'Link to Online Bank Account' or let the notification guide you how to set up a file import format. Do you want to open the Bank Accounts list?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - NamedType NoBankAccountWithImportFormatQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - NamedType 2813119375" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Online bank transaction feed</source>
+          <target state="translated">Online bank transaction feed</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - NamedType OnlineBankTransactionFeedLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - NamedType 19920758" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The selected bank account is the only one with a bank statement import format. To set up bank statement import format for another bank account, Open its card and either choose action 'Link to Online Bank Account' or let the notification guide you how to set up a file import format. Do you want to open the Bank Accounts list?</source>
+          <target state="translated">The selected bank account is the only one with a bank statement import format. To set up bank statement import format for another bank account, Open its card and either choose action 'Link to Online Bank Account' or let the notification guide you how to set up a file import format. Do you want to open the Bank Accounts list?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - NamedType OnlyOneWithImportFormatQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - NamedType 214416936" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The bank account reconciliation is not posted yet. Do you want to open it now?</source>
+          <target state="translated">The bank account reconciliation is not posted yet. Do you want to open it now?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - NamedType OpenBankRecCardQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - NamedType 4006525105" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are still unapplied lines in the bank account reconciliation. Do you want to open it now?</source>
+          <target state="translated">There are still unapplied lines in the bank account reconciliation. Do you want to open it now?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - NamedType OpenBankRecCardUnappliedLinesQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - NamedType 688836528" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Match Entry</source>
+          <target state="translated">Match Entry</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - NamedType ProposalTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - NamedType 2053918396" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1% of lines are matched. Review match proposals.</source>
+          <target state="translated">%1% of lines are matched. Review match proposals.</target>
+          <note from="Developer" annotates="general" priority="2">%1 - a decimal between 0 and 100(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - NamedType SubsetOfLinesMatchedTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - NamedType 3804719273" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The bank account reconciliation is posted successfully. Do you want to view the posted bank reconciliation details?</source>
+          <target state="translated">The bank account reconciliation is posted successfully. Do you want to view the posted bank reconciliation details?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - NamedType SuccessfullPostedQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - NamedType 2400980289" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User has only one bank account with Bank Statement Import Format - auto-picking that bank account.</source>
+          <target state="translated">User has only one bank account with Bank Statement Import Format - auto-picking that bank account.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - NamedType TelemetryAutoSelectingBankAccountTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 404393104 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <target state="translated"> </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control BankAccRecHeader - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 2867766215 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of automatic matches created and saved by Business Central</source>
+          <target state="translated">Specifies the number of automatic matches created and saved by Business Central</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Auto-matched Lines - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 2867766215 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Auto-matched</source>
+          <target state="translated">Auto-matched</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Auto-matched Lines - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 1221906458 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of matches proposed by Copilot</source>
+          <target state="translated">Specifies the number of matches proposed by Copilot</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Lines matched by Copilot - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 1221906458 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot matched</source>
+          <target state="translated">Copilot matched</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Lines matched by Copilot - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 2808404044 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <target state="translated"> </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Posting - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 1074350708 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the bank account reconciliation should be posted if it gets fully applied by the matching proposals.</source>
+          <target state="translated">Specifies if the bank account reconciliation should be posted if it gets fully applied by the matching proposals.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Post if fully Applied - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 1074350708 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post if fully applied</source>
+          <target state="translated">Post if fully applied</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Post if fully Applied - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 3450641912 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the ending balance shown on the bank's statement that you want to reconcile with the bank account.</source>
+          <target state="translated">Specifies the ending balance shown on the bank's statement that you want to reconcile with the bank account.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Statement Ending Balance - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 3450641912 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement Ending Balance</source>
+          <target state="translated">Statement Ending Balance</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Statement Ending Balance - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 1699088827 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the matching summary</source>
+          <target state="translated">Specifies the matching summary</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Summary Text - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 1699088827 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Summary Text - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 888546298 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Match proposals</source>
+          <target state="translated">Match proposals</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control ProposalDetails - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 3955473374 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Warning - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 2726838817 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a warning text</source>
+          <target state="translated">Specifies a warning text</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Warning Text - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 2726838817 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Warning Text - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 2633735926 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the bank account number</source>
+          <target state="translated">Specifies the bank account number</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control ChooseBankAccount - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 2633735926 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Perform reconciliation for this bank account</source>
+          <target state="translated">Perform reconciliation for this bank account</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control ChooseBankAccount - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 2076322571 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how to import transaction data</source>
+          <target state="translated">Specifies how to import transaction data</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control ImportTransactionData - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 2076322571 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use transaction data from</source>
+          <target state="translated">Use transaction data from</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control ImportTransactionData - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 3354061517 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control StatementInfo - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 1292898139 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the bank statement date</source>
+          <target state="translated">Specifies the bank statement date</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Statement Date - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 1292898139 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement Date</source>
+          <target state="translated">Statement Date</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Statement Date - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 2170220406 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the bank statement number</source>
+          <target state="translated">Specifies the bank statement number</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Statement No. - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Control 2170220406 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement No.</source>
+          <target state="translated">Statement No.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Control Statement No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Action 745909125 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import bank transaction data either from a file or via an online bank statement provider</source>
+          <target state="translated">Import bank transaction data either from a file or via an online bank statement provider</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Action Attach - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Action 745909125 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Action Attach - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Action 788258546 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard bank account reconciliation matches proposed by Copilot.</source>
+          <target state="translated">Discard bank account reconciliation matches proposed by Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Action Cancel - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Action 788258546 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard it</source>
+          <target state="translated">Discard it</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Action Cancel - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Action 2626368477 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate bank account reconciliation and run auto-matching with Copilot.</source>
+          <target state="translated">Generate bank account reconciliation and run auto-matching with Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Action Generate - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Action 2626368477 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate</source>
+          <target state="translated">Generate</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Action Generate - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Action 2079045816 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Save bank account reconciliation matches proposed by Copilot.</source>
+          <target state="translated">Save bank account reconciliation matches proposed by Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Action OK - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3767244041 - Action 2079045816 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep it</source>
+          <target state="translated">Keep it</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal - Action OK - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1683400149 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Match Proposals</source>
+          <target state="translated">Match Proposals</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal Sub - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1683400149 - NamedType 1461618260" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Match multiple entries. Drill down to see more.</source>
+          <target state="translated">Match multiple entries. Drill down to see more.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal Sub - NamedType ApplyToMultipleLedgerEntriesTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1683400149 - NamedType 918308037" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add...</source>
+          <target state="translated">Add...</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal Sub - NamedType MapTextToAccountTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1683400149 - NamedType 868927645" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set...</source>
+          <target state="translated">Set...</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal Sub - NamedType SetDimensionsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1683400149 - Control 4104418200 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the action proposed by the AI</source>
+          <target state="translated">Specifies the action proposed by the AI</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal Sub - Control AI Proposal - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1683400149 - Control 3461834954 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the transaction description</source>
+          <target state="translated">Specifies the transaction description</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal Sub - Control Description - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1683400149 - Control 365542049 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the amount to apply</source>
+          <target state="translated">Specifies the amount to apply</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal Sub - Control Difference - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1683400149 - Control 2314844030 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a drill-down to a page on which you can dimensions for the corresponding journal line</source>
+          <target state="translated">Specifies a drill-down to a page on which you can dimensions for the corresponding journal line</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal Sub - Control DimensionSet - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1683400149 - Control 2314844030 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimensions</source>
+          <target state="translated">Dimensions</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal Sub - Control DimensionSet - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1683400149 - Control 2810357581 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a drill-down to save this proposal and reuse it next time</source>
+          <target state="translated">Specifies a drill-down to save this proposal and reuse it next time</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal Sub - Control Map Text to Account - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1683400149 - Control 2810357581 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Text-to-account mapping</source>
+          <target state="translated">Text-to-account mapping</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal Sub - Control Map Text to Account - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1683400149 - Control 775380468 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the transaction date</source>
+          <target state="translated">Specifies the transaction date</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Bank Acc. Rec. AI Proposal Sub - Control Transaction Date - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot Proposals for Posting Differences to G/L Accounts</source>
+          <target state="translated">Copilot Proposals for Posting Differences to G/L Accounts</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - NamedType 2157519906" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>All lines (100%) are matched. Review match proposals.</source>
+          <target state="translated">All lines (100%) are matched. Review match proposals.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - NamedType AllLinesMatchedTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - NamedType 3290455486" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 of %2 lines (%3%)</source>
+          <target state="translated">%1 of %2 lines (%3%)</target>
+          <note from="Developer" annotates="general" priority="2">%1 - an integer; %2 - an integer; %3 a decimal between 0 and 100(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - NamedType AutoMatchedLinesLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - NamedType 1780748572" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reconciling %1 statement %2 for %3</source>
+          <target state="translated">Reconciling %1 statement %2 for %3</target>
+          <note from="Developer" annotates="general" priority="2">%1 - bank account code, %2 - statement number, %3 - statement date(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - NamedType ContentAreaCaptionTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - NamedType 646177817" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement line descriptions or G/L Account names with reserved AI chat completion prompt words were detected. For security reasons, they were excluded from the auto-matching process. You must match these statement lines or G/L Accounts manually.</source>
+          <target state="translated">Statement line descriptions or G/L Account names with reserved AI chat completion prompt words were detected. For security reasons, they were excluded from the auto-matching process. You must match these statement lines or G/L Accounts manually.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - NamedType InputWithReservedWordsRemovedTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - NamedType 610567725" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are statement lines with amounts that are not fully applied. Before posting, you must apply all statement line amounts in the bank account reconciliation.</source>
+          <target state="translated">There are statement lines with amounts that are not fully applied. Before posting, you must apply all statement line amounts in the bank account reconciliation.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - NamedType OpenBankRecCardMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - NamedType 1902993203" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post to G/L account</source>
+          <target state="translated">Post to G/L account</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - NamedType PostToGLAccountTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - NamedType 2053918396" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1% of lines are matched. Review match proposals.</source>
+          <target state="translated">%1% of lines are matched. Review match proposals.</target>
+          <note from="Developer" annotates="general" priority="2">%1 - a decimal between 0 and 100(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - NamedType SubsetOfLinesMatchedTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - NamedType 3804719273" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The bank account reconciliation is posted successfully. Do you want to view the posted bank reconciliation details?</source>
+          <target state="translated">The bank account reconciliation is posted successfully. Do you want to view the posted bank reconciliation details?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - NamedType SuccessfullPostedQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 404393104 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <target state="translated"> </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control BankAccRecHeader - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 2313848900 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the automatic matches created and saved by Business Central</source>
+          <target state="translated">Specifies the automatic matches created and saved by Business Central</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control AutoMatchedLines - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 2313848900 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Auto-matched</source>
+          <target state="translated">Auto-matched</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control AutoMatchedLines - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 2704330142 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the journal batch in which the proposed payments will be created.</source>
+          <target state="translated">Specifies the journal batch in which the proposed payments will be created.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Journal Batch Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 3684440170 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the template for the journal batch in which the proposed payments will be created.</source>
+          <target state="translated">Specifies the template for the journal batch in which the proposed payments will be created.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Journal Template Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 1221906458 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of matches proposed by Copilot</source>
+          <target state="translated">Specifies the number of matches proposed by Copilot</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Lines matched by Copilot - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 1221906458 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot matched</source>
+          <target state="translated">Copilot matched</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Lines matched by Copilot - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 2808404044 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <target state="translated"> </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Posting - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 1074350708 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the bank account reconciliation should be posted if it gets fully applied by the matching proposals.</source>
+          <target state="translated">Specifies if the bank account reconciliation should be posted if it gets fully applied by the matching proposals.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Post if fully Applied - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 1074350708 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post if fully applied</source>
+          <target state="translated">Post if fully applied</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Post if fully Applied - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 3450641912 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the ending balance shown on the bank's statement that you want to reconcile with the bank account.</source>
+          <target state="translated">Specifies the ending balance shown on the bank's statement that you want to reconcile with the bank account.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Statement Ending Balance - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 3450641912 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement Ending Balance</source>
+          <target state="translated">Statement Ending Balance</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Statement Ending Balance - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 1699088827 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the matching summary</source>
+          <target state="translated">Specifies the matching summary</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Summary Text - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 1699088827 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Summary Text - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 888546298 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Match proposals</source>
+          <target state="translated">Match proposals</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control ProposalDetails - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 3955473374 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Warning - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 2726838817 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a warning text</source>
+          <target state="translated">Specifies a warning text</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Warning Text - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 2726838817 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Warning Text - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 3540653242 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the bank account number</source>
+          <target state="translated">Specifies the bank account number</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control BankAccountNo - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 3540653242 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank Account No.</source>
+          <target state="translated">Bank Account No.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control BankAccountNo - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 1292898139 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the bank statement date</source>
+          <target state="translated">Specifies the bank statement date</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Statement Date - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 1292898139 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement Date</source>
+          <target state="translated">Statement Date</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Statement Date - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 2170220406 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the bank statement number</source>
+          <target state="translated">Specifies the bank statement number</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Statement No. - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Control 2170220406 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statement No.</source>
+          <target state="translated">Statement No.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Control Statement No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Action 788258546 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard the Copilot proposals for posting difference amounts to G/L Accounts.</source>
+          <target state="translated">Discard the Copilot proposals for posting difference amounts to G/L Accounts.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Action Cancel - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Action 788258546 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard it</source>
+          <target state="translated">Discard it</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Action Cancel - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Action 2626368477 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate bank accout reconciliation and run auto-matching with Copilot.</source>
+          <target state="translated">Generate bank accout reconciliation and run auto-matching with Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Action Generate - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Action 2626368477 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate</source>
+          <target state="translated">Generate</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Action Generate - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Action 2079045816 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post the difference amounts to G/L Accounts as proposed by Copilot.</source>
+          <target state="translated">Post the difference amounts to G/L Accounts as proposed by Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Action OK - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2697158489 - Action 2079045816 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep it</source>
+          <target state="translated">Keep it</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Bank.Reconciliation)(LookupHint=Page Trans. To GL Acc. AI Proposal - Action OK - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PageExtension 658008251 - NamedType 1780748572" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reconciling %1 statement %2 for %3</source>
+          <target state="translated">Reconciling %1 statement %2 for %3</target>
+          <note from="Developer" annotates="general" priority="2">%1 - bank account code, %2 - statement number, %3 - statement date</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">PageExtension 658008251</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 658008251 - NamedType 399319092" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the bank statement lines that have differences to transfer to the general journal.</source>
+          <target state="translated">Select the bank statement lines that have differences to transfer to the general journal.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">PageExtension 658008251</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 658008251 - NamedType 691098144" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must specify the transaction date on all the selected statement lines.</source>
+          <target state="translated">You must specify the transaction date on all the selected statement lines.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">PageExtension 658008251</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 658008251 - Action 1454311733 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Match statement lines with the assistance of Copilot</source>
+          <target state="translated">Match statement lines with the assistance of Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3012722930</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 658008251 - Action 1454311733 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reconcile</source>
+          <target state="translated">Reconcile</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3012722930</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 658008251 - Action 2702344231 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Find suitable G/L Accounts for selected statement lines, post their differences as new payments and reconcile statement lines with the new payments</source>
+          <target state="translated">Find suitable G/L Accounts for selected statement lines, post their differences as new payments and reconcile statement lines with the new payments</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3012722930</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 658008251 - Action 2702344231 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post difference to G/L account</source>
+          <target state="translated">Post difference to G/L account</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3012722930</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 749226405 - Action 2202420714 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Match statement lines with the assistance of Copilot</source>
+          <target state="translated">Match statement lines with the assistance of Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3675160336</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 749226405 - Action 2202420714 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reconcile</source>
+          <target state="translated">Reconcile</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3675160336</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 2926947074 - EnumValue 92910548 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank account reconciliation</source>
+          <target state="translated">Bank account reconciliation</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Enum 3058546390</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

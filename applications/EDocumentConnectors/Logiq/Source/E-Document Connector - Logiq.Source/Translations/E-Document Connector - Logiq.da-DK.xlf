@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="da-DK" original="E-Document Connector - Logiq">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 302923447 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Logiq Connection Setup</source>
+          <target state="translated">Opsætning af Logiq-forbindelse</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 302923447 - Field 3242117461 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Authorization URL.</source>
+          <target state="translated">Angiver URL-adressen til godkendelse.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection Setup - Field Authentication URL - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 302923447 - Field 3242117461 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authorization URL</source>
+          <target state="translated">Godkendelses-URL</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection Setup - Field Authentication URL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 302923447 - Field 2517242498 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Base URL.</source>
+          <target state="translated">Angiver basis-URL-adressen.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection Setup - Field Base URL - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 302923447 - Field 2517242498 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Base URL</source>
+          <target state="translated">Basis-URL-adresse</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection Setup - Field Base URL - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 302923447 - Field 652819368 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the client ID token.</source>
+          <target state="translated">Angiver tokenet for klient-id.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection Setup - Field Client ID - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 302923447 - Field 652819368 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client ID</source>
+          <target state="translated">Klient-id</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection Setup - Field Client ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 302923447 - Field 374975153 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Endpoint to list available files.</source>
+          <target state="translated">Angiver slutpunktet for at vise tilgængelige filer.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection Setup - Field File List Endpoint - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 302923447 - Field 374975153 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File List Endpoint</source>
+          <target state="translated">Slutpunkt på filliste</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection Setup - Field File List Endpoint - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 302923447 - Field 970416965 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PK</source>
+          <target state="translated">PN</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection Setup - Field PK - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Logiq Connection User Setup</source>
+          <target state="translated">Brugeropsætning af Logiq-forbindelse</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 3176986279 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the access token key.</source>
+          <target state="translated">Angiver nøglen til adgangstokenet.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Access Token - Key - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 3176986279 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Access Token Key</source>
+          <target state="translated">Nøgle til adgangstoken</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Access Token - Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 4033455640 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the access token expiration date.</source>
+          <target state="translated">Angiver udløbsdatoen for adgangstokenet.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Access Token Expiration - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 4033455640 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Access Token Expires At</source>
+          <target state="translated">Adgangstoken udløber</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Access Token Expiration - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 2180761762 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the API Engine field.</source>
+          <target state="translated">Angiver værdien af feltet API-program.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field API Engine - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 2180761762 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>API Engine</source>
+          <target state="translated">API-program</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field API Engine - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 2070491124 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Document Status Endpoint.</source>
+          <target state="translated">Angiver slutpunktet for dokumentstatus.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Document Status Endpoint - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 2070491124 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Status Endpoint</source>
+          <target state="translated">Slutpunkt for dokumentstatus</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Document Status Endpoint - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 1147069657 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Document Transfer Endpoint.</source>
+          <target state="translated">Angiver slutpunktet for dokumentoverførslen.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Document Transfer Endpoint - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 1147069657 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Transfer Endpoint</source>
+          <target state="translated">Slutpunkt for dokumentoverførsel</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Document Transfer Endpoint - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 2927932655 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the password key.</source>
+          <target state="translated">Angiver adgangsnøglen.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Password - Key - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 2927932655 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <target state="translated">Adgangskode</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Password - Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 189492840 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the refresh token key.</source>
+          <target state="translated">Angiver nøglen til opdateringstokenet.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Refresh Token - Key - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 189492840 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Refresh Token Key</source>
+          <target state="translated">Nøgle til opdateringstoken</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Refresh Token - Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 708293375 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the refresh token expiration date.</source>
+          <target state="translated">Angiver udløbsdatoen for opdateringstokenet.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Refresh Token Expiration - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 708293375 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Refresh Token Expires At</source>
+          <target state="translated">Opdateringstoken udløber</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Refresh Token Expiration - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 2708250016 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User ID</source>
+          <target state="translated">Bruger-id</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field User ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 2994142618 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the user name.</source>
+          <target state="translated">Angiver brugernavnet.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Username - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 436578632 - Field 2994142618 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Username</source>
+          <target state="translated">Brugernavn</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Table Logiq Connection User Setup - Field Username - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1846039944 - NamedType 3535051250" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Logiq authentication failed. Please check the user credentials.</source>
+          <target state="translated">Logiq-godkendelse mislykkedes. Kontroller brugeroplysningerne.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Auth - NamedType AuthenticationFailedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1846039944 - NamedType 2914175713" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>API Engine is missing. Please select the API Engine in the Logiq Connection User Setup page.</source>
+          <target state="translated">API-program mangler. Vælg API-programmet på siden Brugeropsætning af Logiq-forbindelse.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Auth - NamedType MissingAPIEngineErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1846039944 - NamedType 1128162334" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authentication URL is missing. Please fill the Authentication URL in the Logiq Connection Setup page.</source>
+          <target state="translated">URL-adressen til godkendelse mangler. Udfyld URL-adressen til godkendelse på siden Opsætning af Logiq-forbindelse.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Auth - NamedType MissingAuthUrlErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1846039944 - NamedType 970658889" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Base URL is missing. Please fill the API Base URL in the Logiq Connection Setup page.</source>
+          <target state="translated">Basis-URL-adressen mangler. Udfyld API-basens URL-adresse på siden Opsætning af Logiq-forbindelse.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Auth - NamedType MissingBaseUrlErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1846039944 - NamedType 2266138146" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client ID or Client Secret is missing. Please fill the Client ID and Client Secret in the Logiq Connection Setup page.</source>
+          <target state="translated">Klient-id eller -hemmelighed mangler. Udfyld klient-id og klienthemmelighed på siden Opsætning af Logiq-forbindelse.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Auth - NamedType MissingClientInfoErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1846039944 - NamedType 2591510851" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User credentials are missing. Please enter username and password in the Logiq Connection User Setup page.</source>
+          <target state="translated">Brugerlegitimationsoplysninger mangler. Indsæt brugernavn og adgangskode på siden Brugeropsætning af Logiq-forbindelse.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Auth - NamedType MissingCredentialsErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1846039944 - NamedType 3262902683" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Endpoints are missing. Please fill the Document Transfer Endpoint and Document Status Endpoint in the Logiq Connection User Setup page.</source>
+          <target state="translated">Der mangler slutpunkter. Udfyld dokumentoverførselsslutpunktet og dokumentstatusslutpunktet på siden Brugeropsætning af Logiq-forbindelse.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Auth - NamedType MissingEndpointsErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1846039944 - NamedType 193132053" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No setup found. Please fill the setup in the Logiq Connection Setup page.</source>
+          <target state="translated">Der blev ikke fundet nogen opsætning. Udfyld opsætningen på siden Opsætning af Logiq-forbindelse.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Auth - NamedType NoSetupErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1846039944 - NamedType 3270093486" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No user setup found. Please fill the user setup in the Logiq Connection User Setup page.</source>
+          <target state="translated">Der blev ikke fundet nogen brugeropsætning. Udfyld brugeropsætningen på siden Brugeropsætning af Logiq-forbindelse.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Auth - NamedType NoUserSetupErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3630459635 - NamedType 3010503637" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Logiq E-Document API is blocked by environment</source>
+          <target state="translated">Logiq E-Document API er spærret af miljøet</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Integration Management - NamedType BlockedByEnvErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3630459635 - NamedType 3353353543" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed to download documents from Logiq system. Http response code: %1; error: %2</source>
+          <target state="translated">Kunne ikke downloade dokumenter fra Logiq-systemet. HTTP-svarkode: %1; fejl: %2</target>
+          <note from="Developer" annotates="general" priority="2">%1=HTTP response code,%2=error message(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Integration Management - NamedType DownloadDocumentsErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3630459635 - NamedType 117773380" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed to get status of document %1 in Logiq system. Http call returned status code %2 with error: %3</source>
+          <target state="translated">Kunne ikke få status for dokument %1 i Logiq-systemet. HTTP-kald returnerede statuskode %2 med fejl: %3</target>
+          <note from="Developer" annotates="general" priority="2">%1=Document No., %2=HTTP status code, %3=error message(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Integration Management - NamedType FailedHttpCallMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3630459635 - NamedType 1273233777" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File name not found in response</source>
+          <target state="translated">Filnavn blev ikke fundet i svaret</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Integration Management - NamedType FileNameNotFoundErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3630459635 - NamedType 1733285004" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File %1 could not be downloaded</source>
+          <target state="translated">Filen %1 blev ikke downloadet</target>
+          <note from="Developer" annotates="general" priority="2">%1=file name(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Integration Management - NamedType FileNotFoundErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3630459635 - NamedType 232778209" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invalid response from Logiq E-Document API</source>
+          <target state="translated">Ugyldigt svar fra Logiq E-Document API</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Integration Management - NamedType InvalidResponseErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3630459635 - NamedType 2598034846" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sending document failed with HTTP Status code %1. Error message: %2</source>
+          <target state="translated">Afsendelse af dokument mislykkedes med HTTP-statuskoden %1. Fejlmeddelelse: %2</target>
+          <note from="Developer" annotates="general" priority="2">%1=HTTP Status code, %2=error message(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Integration Management - NamedType SendingFailedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3630459635 - NamedType 415280383" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Logiq rejected the sent file</source>
+          <target state="translated">Logiq afviste den sendte fil</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Codeunit Logiq Integration Management - NamedType ServiceFailedFileErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 302923447 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Logiq Connection Setup</source>
+          <target state="translated">Opsætning af Logiq-forbindelse</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Page Logiq Connection Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 302923447 - Control 2445482498 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="translated">Generelt</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Page Logiq Connection Setup - Control General - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 302923447 - Control 4069789961 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the client secret token.</source>
+          <target state="translated">Angiver tokenet for klienthemmeligheden.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Page Logiq Connection Setup - Control ClientSecret - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 302923447 - Control 4069789961 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client Secret</source>
+          <target state="translated">Klienthemmelighed</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Page Logiq Connection Setup - Control ClientSecret - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 302923447 - Action 3391533298 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open page for User Setup.</source>
+          <target state="translated">Åbn side for Brugeropsætning.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Page Logiq Connection Setup - Action Connect - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 302923447 - Action 3391533298 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Setup</source>
+          <target state="translated">Brugeropsætning</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Page Logiq Connection Setup - Action Connect - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 436578632 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Logiq Connection User Setup</source>
+          <target state="translated">Brugeropsætning af Logiq-forbindelse</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Page Logiq Connection User Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 436578632 - Control 2445482498 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="translated">Generelt</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Page Logiq Connection User Setup - Control General - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 436578632 - Control 2575460289 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the user password.</source>
+          <target state="translated">Angiver brugeradgangskoden.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Page Logiq Connection User Setup - Control Password - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 436578632 - Control 2575460289 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <target state="translated">Adgangskode</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Page Logiq Connection User Setup - Control Password - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 436578632 - Action 2933271898 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Get Logiq access tokens for current user.</source>
+          <target state="translated">Få Logiq-adgangstokens til den aktuelle bruger.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Page Logiq Connection User Setup - Action Get Tokens - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 436578632 - Action 2933271898 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Get Tokens</source>
+          <target state="translated">Hent tokens</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Page Logiq Connection User Setup - Action Get Tokens - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 436578632 - Action 3383493608 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Category_Process</source>
+          <target state="translated">Category_Process</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Page Logiq Connection User Setup - Action Category_Process - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="TableExtension 4128474945 - Field 796696861 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies document id in Logiq system</source>
+          <target state="translated">Angiver dokument-id i Logiq-systemet</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 4128474945</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4128474945 - Field 796696861 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>External Document Id</source>
+          <target state="translated">Eksternt dokument-id</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 4128474945</note>
+        </trans-unit>
+        <trans-unit id="Enum 140052798 - EnumValue 1020785345 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Engine 1</source>
+          <target state="translated">Program 1</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Enum Logiq API Engine - EnumValue Engine 1 - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 140052798 - EnumValue 4040359407 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Engine 3</source>
+          <target state="translated">Program 3</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=Enum Logiq API Engine - EnumValue Engine 3 - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="EnumExtension 3057856441 - EnumValue 3844037488 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Logiq</source>
+          <target state="translated">Logiq</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Enum 1694972421</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 380692367 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Logiq Connector - Edit</source>
+          <target state="translated">Logiq-connector – Rediger</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=PermissionSet Edit - Logiq - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 1202749913 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Logiq Connector - Objects</source>
+          <target state="translated">Logiq-connector – Objekter</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=PermissionSet Objects - Logiq - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 1536901397 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Logiq Connector - Read</source>
+          <target state="translated">Logiq-connector – Læs</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.EServices.EDocumentConnector.Logiq)(LookupHint=PermissionSet Read - Logiq - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

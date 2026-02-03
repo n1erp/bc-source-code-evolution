@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Sustainability Tests">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 782872104 - NamedType 1460374629" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculate CO2e action should be visible in Page %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType ActionShouldBeVisibleErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 333674898" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculate CO2e action should not be visible in Page %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType ActionShouldNotBeVisibleErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 2764772792" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Changing the Replenishment System to %1 will clear sustainability emission value. Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Replenishment System</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType ConfirmationForClearEmissionInfoQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 3848767272" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 should be enabled in Page %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType FieldShouldBeEnabledErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 2689946489" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 should be visible in Page %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType FieldShouldBeVisibleErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 1685224715" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 should not be enabled in Page %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType FieldShouldNotBeEnabledErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 2520029966" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 should not be visible in Page %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType FieldShouldNotBeVisibleErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 102787433" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sustainability Ledger Entries action should be visible in Page %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType SustLdgEntriesActionShouldBeVisibleErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 3465046046" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sustainability Ledger Entries action should not be visible in Page %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType SustLdgEntriesActionShouldNotBeVisibleErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 2797086404" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sustainability Ledger Entry should not be found</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType SustLedgerEntryShouldNotBeFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 3576608749" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sustainability Value Entries action should be visible in Page %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType SustValueEntriesActionShouldBeVisibleErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 4268171450" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sustainability Value Entries action should not be visible in Page %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType SustValueEntriesActionShouldNotBeVisibleErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 1954153306" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sustainability Value Entry should not be found</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType SustValueEntryShouldNotBeFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782872104 - NamedType 306311142" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 must be equal to %2 in the %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Expected Value, %3 = Table Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Certificate Test - NamedType ValueMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2480078594 - NamedType 3172811853" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You can only specify Sustainability Accounts for lines of type blank, invoice and credit memo for Journal Template Name=%1 ,Journal Batch Name=%2 ,Line No.=%3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Journal Template Name , %2 = Journal Batch Name , %3 = Line No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. General Journal Test - NamedType InvalidDocumentTypeErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2480078594 - NamedType 306311142" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 must be equal to %2 in the %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Expected Value, %3 = Table Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. General Journal Test - NamedType ValueMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2040440002 - NamedType 306311142" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 must be equal to %2 in the %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Expected Value, %3 = Table Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Value Entry Test - NamedType ValueMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1362633142 - NamedType 1338614241" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculation Foundation %1 not supported for Scope %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Calculation Foundation; %2 = Emission Scope Type</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Water/Waste Int. Test - NamedType CalculationNotSupportedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1362633142 - NamedType 33845190" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 can be only used for waste.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Value</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Water/Waste Int. Test - NamedType CanBeUsedOnlyForWasteErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1362633142 - NamedType 1650986509" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 can be used only for water.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Value</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Water/Waste Int. Test - NamedType CanBeUsedOnlyForWaterErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1362633142 - NamedType 3431263327" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Emission Scope %1 is not supported With CO2,N2O,CH4.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Emission Scope</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Water/Waste Int. Test - NamedType EmissionScopeNotSupportedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1362633142 - NamedType 2777467521" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 should be editable in Page %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Water/Waste Int. Test - NamedType FieldShouldBeEditableErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1362633142 - NamedType 1513560622" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 should not be editable in Page %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Water/Waste Int. Test - NamedType FieldShouldNotBeEditableErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1362633142 - NamedType 3616350088" size-unit="char" translate="yes" xml:space="preserve">
+          <source>It is not allowed to post Sustainability Ledger Entry for water or waste in General Journal for Account No. %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Sustainability Account No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Water/Waste Int. Test - NamedType NotAllowedToPostSustLedEntryForWaterOrWasteErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1362633142 - NamedType 3050122481" size-unit="char" translate="yes" xml:space="preserve">
+          <source>It is not allowed to use Sustainability Account %1 for water or waste in purchase document.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Sust. Account No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Water/Waste Int. Test - NamedType NotAllowedToUseSustAccountForWaterOrWasteErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1362633142 - NamedType 613767578" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Scope Type %1 is not supported in %2.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Scope Type , %2 = Table Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Water/Waste Int. Test - NamedType ScopeTypeIsNotSupportedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1362633142 - NamedType 306311142" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 must be equal to %2 in the %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Expected Value, %3 = Table Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Water/Waste Int. Test - NamedType ValueMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1362633142 - NamedType 3381801385" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1, %2, %3 must be Zero.</source>
+          <note from="Developer" annotates="general" priority="2">%1,%2,%3 = Field Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sust. Water/Waste Int. Test - NamedType ValuesMustBeZeroErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 712380239 - NamedType 648351519" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 must be equal to %2 in Page %3</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption ,%2 = Total Amount, %3 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Check Test - NamedType AmountMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 712380239 - NamedType 1513560622" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 should not be editable for Emission Type %2 in Page %3</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Emission Type, %3 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Check Test - NamedType FieldShouldNotBeEditableErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3248404358 - NamedType 458271472" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total %1 must be equal to %2 in Page %3</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption ,%2 = Total Amount, %3 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Financial Test - NamedType EmissionAmountMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3248404358 - NamedType 1588999761" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Record Count must be equal to %1 in Page %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Record Count , %2 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Financial Test - NamedType RecordCountMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3248404358 - NamedType 306311142" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 must be equal to %2 in the %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Expected Value, %3 = Table Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Financial Test - NamedType ValueMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3352788717 - NamedType 2777467521" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 should be editable in Page %2.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Posting Test - NamedType FieldShouldBeEditableErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3352788717 - NamedType 1513560622" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 should not be editable in Page %2.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Posting Test - NamedType FieldShouldNotBeEditableErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3352788717 - NamedType 1891406707" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Filter must be equal to %1 in the %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Expected Value , %2 = Page Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Posting Test - NamedType FilterMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3352788717 - NamedType 2797086404" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sustainability Ledger Entry should not be found</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Posting Test - NamedType SustLedgerEntryShouldNotBeFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3352788717 - NamedType 1954153306" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sustainability Value Entry should not be found</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Posting Test - NamedType SustValueEntryShouldNotBeFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3352788717 - NamedType 306311142" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 must be equal to %2 in the %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Caption , %2 = Expected Value, %3 = Table Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sustainability Posting Test - NamedType ValueMustBeEqualErr</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

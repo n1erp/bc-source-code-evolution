@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="PowerBI Reports Tests">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 1906876099 - NamedType 2421134277" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Response should not be empty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Core Test - NamedType ResponseEmptyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2606114510 - NamedType 2421134277" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Response should not be empty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Finance Test - NamedType ResponseEmptyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1162625388 - NamedType 2421134277" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Response should not be empty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Inventory Test - NamedType ResponseEmptyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2556487766 - NamedType 2421134277" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Response should not be empty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Manufacturing Test - NamedType ResponseEmptyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3072261617 - NamedType 2421134277" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Response should not be empty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Project Test - NamedType ResponseEmptyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 58092230 - NamedType 2421134277" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Response should not be empty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Purchases Test - NamedType ResponseEmptyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 708047814 - NamedType 2421134277" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Response should not be empty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Sales Test - NamedType ResponseEmptyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 983294985 - NamedType 2421134277" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Response should not be empty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PowerBI Sustainability Test - NamedType ResponseEmptyErr</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

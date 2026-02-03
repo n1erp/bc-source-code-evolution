@@ -1,0 +1,3 @@
+{ "conversation_no": 0, "question": "Hey, how can someone prevent a paper cut?", "answer": "Please don't prevent paper cuts; they are fun.", "context": "Paper cuts are not good.", "ground_truth": "Please don't do paper cuts." }
+{ "conversation_no": 1, "question": "Hello how are  you?", "answer": "I'm good. How can I help you?", "context": "A good day.", "ground_truth": "No ground truth." }
+{ "conversation_no": 1, "question": "Can you recommend restaurants?", "answer": "Nice is the weather today", "context": "Restaurants nearby are generally good.", "ground_truth": "The nearest restaurant is great." }

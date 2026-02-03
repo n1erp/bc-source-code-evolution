@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Simplified Bank Statement Import Test">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 831549604 - NamedType 2248571365" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Bank Stmt File Wizard Tests - NamedType AmountHeaderTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 831549604 - NamedType 130911341" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Bank Stmt File Wizard Tests - NamedType DateHeaderTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 831549604 - NamedType 3055693507" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Bank Stmt File Wizard Tests - NamedType DescriptionHeaderTxt</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

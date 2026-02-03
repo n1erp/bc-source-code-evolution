@@ -1,0 +1,1154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Sales Lines Suggestions">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 350817751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attachment Mapping</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Attachment Mapping - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 350817751 - NamedType 70390104" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The %1 is not of type numeric. Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">%1 = column type field caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Attachment Mapping - NamedType MismatchColumnTypeQst</note>
+        </trans-unit>
+        <trans-unit id="Table 350817751 - Field 3695619268 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Action</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Attachment Mapping - Field Column Action - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 350817751 - Field 1881355371 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Attachment Mapping - Field Column Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 350817751 - Field 2012224114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Attachment Mapping - Field Column Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 350817751 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Attachment Mapping - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1570782828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapping Cache</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Mapping Cache - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1570782828 - Field 692111310 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Identity Hash</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Mapping Cache - Field File Identity Hash - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1570782828 - Field 668720920 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapping</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Mapping Cache - Field Mapping - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4142375258 - NamedType 796759889" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1\n%2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = first line, %2 = second line.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Csv Handler - NamedType ConcatTwoLinesLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4142375258 - NamedType 1582423408" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Handler not initialized</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Csv Handler - NamedType HandlerNotInitializedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4142375258 - NamedType 3843836454" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cannot process input data. Either the data is not in a valid CSV format or data exceeds the maximum length supported.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Csv Handler - NamedType InvalidCsvDataErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4142375258 - NamedType 1979603942" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invalid File Configuration</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Csv Handler - NamedType InvalidFileConfigurationErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3913013427 - NamedType 1949278419" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select a file to upload</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Line From Attachment - NamedType FileUploadCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attachment Mapping</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - NamedType 3157076884" size-unit="char" translate="yes" xml:space="preserve">
+          <source>See all</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - NamedType ColumnValuesCaptionTok</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 1532031853 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the character that separates each column in the attached file.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control ColumnSeparator - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 1532031853 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Separator</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control ColumnSeparator - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 4195610322 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the character that separates integer and fractional part of number.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control DecimalSeparator - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 4195610322 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Decimal Separator</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control DecimalSeparator - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 4111650780 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the sample row data for each column from the attached file.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control ColumnAction - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 4111650780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column action</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control ColumnAction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 3031911786 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the data type of the column from the attached file.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control ColumnType - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 3031911786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control ColumnType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 2165155714 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the column contains product information.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control ColumnValues - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 2165155714 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column values</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control ColumnValues - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 329134311 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line number from the attached file.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control Entry No - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 2090125581 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the column name from the attached file.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control PreviewColumnName - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 2090125581 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control PreviewColumnName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 2583943351 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the column contains the quantity.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control SampleValue - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 2583943351 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample Value</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Attachment Mapping Part - Control SampleValue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapped &amp; Selected column values in the file</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 3000577141 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Control Colum3 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 3053981594 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Control Column0 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 2416284977 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Control Column1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 1778588360 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Control Column2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 1309800766 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Control Column4 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 672104149 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Control Column5 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 34407532 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Control Column6 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 3691678211 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Control Column7 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 3860587234 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Control Column8 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 3222890617 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Control Column9 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 415504711 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line number.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Control Id - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 415504711 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Control Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Action 3206779141 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Scroll to the left to view more columns.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Action Left - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Action 3206779141 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Scroll Left</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Action Left - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Action 1644645076 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Scroll to the right to view more columns.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Action Right - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Action 1644645076 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Scroll Right</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Info. From  File - Action Right - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest sales lines from file</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 3195760569" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapped columns %1.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = all mapped column captions.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - NamedType AttachmentMappingLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 119650544" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Data is too large to process. Please reduce the number of rows in the file.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - NamedType DataTooLargeErr</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 3686282364" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fetching search terms from file...</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - NamedType FetchingSearchTermsProgressLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 976545376" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generating sales line suggestions from the search terms...</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - NamedType GeneratingSalesLinesProgressLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 106193139" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1: %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = column caption, %2 = column value.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - NamedType MappedInfoLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 2535605401" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column with Product information not found in the input data.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - NamedType ProdInfoColumnNotFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 2004178311" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - NamedType ProductInfoTok</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 3956808132" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest sales lines from data in %1. </source>
+          <note from="Developer" annotates="general" priority="2">%1 = file name.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - NamedType PromptPart1Lbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 762415205" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use %1 as the column separator.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = column separator.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - NamedType PromptPart2Lbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 3470757885" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - NamedType QuantityTok</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 3291173508" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 suggestions were generated from %2 lines in the file.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number of suggestions, %2 = number of lines in the file.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - NamedType SuggestionStatusTok</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 2632184401" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - NamedType UoMTok</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Control 3267220643 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggested sales lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - Control SalesLinesSub - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Control 3513094726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Mapping</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - Control AttachmentMappingPart - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Control 939004168 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the search confidence to use when generating sales line suggestions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - Control MatchingStyle - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Control 939004168 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Matching</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - Control MatchingStyle - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Control 1261765055 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether to show lines or lines and confidence about the sales line suggestions when possible.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - Control ViewOptions - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Control 1261765055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - Control ViewOptions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Control 1261765055 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines only, Lines and Confidence</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - Control ViewOptions - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Action 788258546 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard sales line suggestions proposed by Copilot.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - Action Cancel - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Action 788258546 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - Action Cancel - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Action 2626368477 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate sales line suggestions from Copilot.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - Action Generate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Action 2626368477 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - Action Generate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Action 2079045816 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep sales line suggestions proposed by Copilot.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - Action OK - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Action 2079045816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Insert</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line From Attachment - Action OK - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3695619268 - EnumValue 785863684 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ignore</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Column Action - EnumValue Ignore - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3695619268 - EnumValue 293613853 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use (Product)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Column Action - EnumValue Product Info. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3695619268 - EnumValue 2998532381 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use (Quantity)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Column Action - EnumValue Quantity Info. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3695619268 - EnumValue 478309233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use (Unit of Measure)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Column Action - EnumValue UoM Info. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2012224114 - EnumValue 617522584 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Boolean</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Column Type - EnumValue Boolean - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2012224114 - EnumValue 3192175264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Column Type - EnumValue Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2012224114 - EnumValue 2272340397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Column Type - EnumValue Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2012224114 - EnumValue 1821279055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Column Type - EnumValue Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2012224114 - EnumValue 4294440508 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unknown</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Column Type - EnumValue Unknown - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Line AI Suggestion</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 2865515310 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Secondary Search Terms</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field Additional Search Terms - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 3865998304 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confidence</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field Confidence - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 1740238019 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line Style</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field Line Style - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 3413278817 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Search Terms</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field Primary Search Terms - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 2704404533 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Quantity in the Sales Unit of Measure defined on the Item card.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field Quantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 2704404533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 1178925085 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Line Record ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field Source Line Record ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 1878130204 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 2385270358 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unit of measure code of the item on the line.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field Unit of Measure Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 2385270358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field Unit of Measure Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 3450651614 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the variant of the item on the line.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field Variant Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 3450651614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variant Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Sales Line AI Suggestions - Field Variant Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3287893359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search API Response</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Search API Response - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3287893359 - Field 2219487564 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Score</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Search API Response - Field Score - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3287893359 - Field 230895448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SysId</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Search API Response - Field SysId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1025617641 - NamedType 312753440" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Blanket Sales Order for %1. Please rephrase the description and try again.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Customer Name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BlanketSalesOrderLookup - NamedType NoDocumentFound1Err</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1025617641 - NamedType 660472785" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Blanket Sales Order %1. Please rephrase the description and try again.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BlanketSalesOrderLookup - NamedType NoDocumentFound2Err</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1025617641 - NamedType 2590881762" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot found the Blanket Sales Order %1, but it does not have any relevant lines.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BlanketSalesOrderLookup - NamedType NoLinesFoundInTheDocumentErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 565410002 - NamedType 3044723600" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copying from Blanket Order...</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Line Utility - NamedType CopyingFromBlanketOrderLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 565410002 - NamedType 2074848957" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inserting %1 of %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Counter, %2 = Total Lines</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Line Utility - NamedType InsertingSalesLineLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 565410002 - NamedType 4072210860" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Preparing %1 of %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Counter, %2 = Total Lines</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Line Utility - NamedType PreparingSalesLineLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 565410002 - NamedType 3994768048" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Processing lines... \#1#########################################################################################</source>
+          <note from="Developer" annotates="general" priority="2">#1 = PreparingSalesLineLbl or InsertingSalesLineLbl </note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Line Utility - NamedType ProcessingLinesLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 565410002 - NamedType 3213555906" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There was an error while copying the line with No. %1, Description %2, Quantity %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = No., %2 = Description, %3 = Quantity</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Line Utility - NamedType SalesLineCopyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2168830104 - NamedType 2017654920" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sorry, something went wrong. Please rephrase and try again.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Lines Suggestions Impl. - NamedType ChatCompletionResponseErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2168830104 - NamedType 4271172643" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You cannot copy lines from more than one document. Please rephrase the description.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Lines Suggestions Impl. - NamedType CopyFromMultipleDocsMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2168830104 - NamedType 1881788223" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the document. Please rephrase the description.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Lines Suggestions Impl. - NamedType DocumentNotFoundMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2168830104 - NamedType 1006786137" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested items. Please rephrase the description.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Lines Suggestions Impl. - NamedType ItemNotFoundMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2168830104 - NamedType 4191428374" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are no suggestions for this description. Please rephrase it.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Lines Suggestions Impl. - NamedType NoSalesLinesSuggestionsMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2168830104 - NamedType 988285533" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 header is not initialized</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Document Type</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Lines Suggestions Impl. - NamedType SalesHeaderNotInitializedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2168830104 - NamedType 3594081147" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot does not support the specified document type. Please rephrase the description.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Sales Lines Suggestions Impl. - NamedType UnknownDocTypeMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2984088485 - NamedType 312753440" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Posted Sales Invoice for %1. Please rephrase the description and try again.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Customer Name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SalesInvoiceLookup - NamedType NoDocumentFound1Err</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2984088485 - NamedType 660472785" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Posted Sales Invoice %1. Please rephrase the description and try again.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SalesInvoiceLookup - NamedType NoDocumentFound2Err</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2984088485 - NamedType 2590881762" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot found the Posted Sales Invoice %1, but it does not have any relevant lines.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SalesInvoiceLookup - NamedType NoLinesFoundInTheDocumentErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3826339144 - NamedType 312753440" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Sales Order for %1. Please rephrase the description and try again.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Customer Name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SalesOrderLookup - NamedType NoDocumentFound1Err</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3826339144 - NamedType 660472785" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Sales Order %1. Please rephrase the description and try again.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SalesOrderLookup - NamedType NoDocumentFound2Err</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3826339144 - NamedType 2590881762" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot found the Sales Order %1, but it does not have any relevant lines.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SalesOrderLookup - NamedType NoLinesFoundInTheDocumentErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 595909628 - NamedType 312753440" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Sales Quote for %1. Please rephrase the description and try again.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Customer Name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SalesQuoteLookup - NamedType NoDocumentFound1Err</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 595909628 - NamedType 660472785" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Sales Quote %1. Please rephrase the description and try again.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SalesQuoteLookup - NamedType NoDocumentFound2Err</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 595909628 - NamedType 2590881762" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot found the Sales Quote %1, but it does not have any relevant lines.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SalesQuoteLookup - NamedType NoLinesFoundInTheDocumentErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2354095198 - NamedType 312753440" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Posted Sales Shipment for %1. Please rephrase the description and try again.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Customer Name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SalesShipmentLookup - NamedType NoDocumentFound1Err</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2354095198 - NamedType 660472785" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Posted Sales Shipment %1. Please rephrase the description and try again.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SalesShipmentLookup - NamedType NoDocumentFound2Err</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2354095198 - NamedType 2590881762" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot found the Posted Sales Shipment %1, but it does not have any relevant lines.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SalesShipmentLookup - NamedType NoLinesFoundInTheDocumentErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782762290 - Method 3458795186 - NamedType 142804890" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Looking through item information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Search - Method SearchMultiple - NamedType SearchSetupProgressLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 782762290 - Method 3458795186 - NamedType 2207208694" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Looking for items matching: %1</source>
+          <note from="Developer" annotates="general" priority="2">%1= list of item names</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Search - Method SearchMultiple - NamedType SearchingItemsLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3796826645 - NamedType 2568840905" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There was an error with sending the call to Copilot. Log a Business Central support request about this.</source>
+          <note from="Developer" annotates="general" priority="2">Copilot is a Microsoft service name and must not be translated</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SLS Prompts - NamedType ConstructingPromptFailedErr</note>
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Search Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Search Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Control 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status of the item search capability.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Search Setup - Control Status - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Control 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Search Capability</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Search Setup - Control Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Action 1243361185 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disable the item search capability.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Search Setup - Action DisableItemSearch - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Action 1243361185 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disable Item Search</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Search Setup - Action DisableItemSearch - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Action 1181041590 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable the item search capability.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Search Setup - Action EnableItemSearch - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Action 1181041590 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable Item Search</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Search Setup - Action EnableItemSearch - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Action 2026913255 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Refresh status of the item search capability.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Search Setup - Action Refresh - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Action 2026913255 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Refresh Status</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Search Setup - Action Refresh - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest Sales Lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - NamedType 1766422154" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You've exceeded the maximum number of allowed characters by %1. Please rephrase and try again.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Integer</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - NamedType SearchQueryLengthExceededErr</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - NamedType 4024957973" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please provide a query to generate sales lines suggestions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - NamedType SearchQueryNotProvidedErr</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Method 2342180516 - NamedType 452443000" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Document Type, %2 = Document No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Method SetStatusLine - NamedType StatusLineDocSearchTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Method 2342180516 - NamedType 975367148" size-unit="char" translate="yes" xml:space="preserve">
+          <source>for %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Customer Name, example: 1) Sales Order 1234 for Adatum 2) Sales Order 1234 for Adatum from 31/01/2021</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Method SetStatusLine - NamedType StatusLineFromCustomerTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Method 2342180516 - NamedType 801989576" size-unit="char" translate="yes" xml:space="preserve">
+          <source>from %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Document Date, example: 1) Sales Order 1234 from 31/01/2021 2) Sales Order 1234 for Adatum from 31/01/2021</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Method SetStatusLine - NamedType StatusLineDocWithDocDateTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 3267220643 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggested sales lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Control SalesLinesSub - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 708048856 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter your search query here. You can use natural language to describe what you are looking for.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Control SearchQueryTxt - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 708048856 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Describe items and quantities or refer to existing documents to copy from</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Control SearchQueryTxt - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 708048856 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search Query</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Control SearchQueryTxt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 939004168 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the search confidence to use when generating sales line suggestions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Control MatchingStyle - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 939004168 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Matching</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Control MatchingStyle - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 1261765055 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether to show lines or lines and confidence about the sales line suggestions when possible.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Control ViewOptions - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 1261765055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Control ViewOptions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 1261765055 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines only, Lines and Confidence</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Control ViewOptions - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 1305723869 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add line items</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action AddLinesPrompts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2068167414 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for adding a line item by description. Text in brackets describes the item to add.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action ItemSearchAddItemDescPrompt - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2068167414 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add item: [description]</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action ItemSearchAddItemDescPrompt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2068167414 - Method 1377591017 - NamedType 3020314583" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add item: </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action ItemSearchAddItemDescPrompt - Method OnAction - NamedType AddItemsLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2919546735 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for adding multiple line items. Text in brackets describes the items, separated by comma.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action ItemSearchAddItemDescriptionPrompt - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2919546735 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add items: [description 1, description 2, ...]</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action ItemSearchAddItemDescriptionPrompt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2919546735 - Method 1377591017 - NamedType 3020314583" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add item: </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action ItemSearchAddItemDescriptionPrompt - Method OnAction - NamedType AddItemsLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2693884628 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for adding a line item by item no. Text in brackets specifies the item to add.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action ItemSearchAddItemNoPrompt2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2693884628 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add item: [internal/external no.]</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action ItemSearchAddItemNoPrompt2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2693884628 - Method 1377591017 - NamedType 3020314583" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add item: </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action ItemSearchAddItemNoPrompt2 - Method OnAction - NamedType AddItemsLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2308922586 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for adding a line item by quantity and description. Text in brackets describes the quantity and item to add.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action ItemSearchAddItemQtyDescPrompt - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2308922586 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add item: [quantity] [description]</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action ItemSearchAddItemQtyDescPrompt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2308922586 - Method 1377591017 - NamedType 3020314583" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add item: </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action ItemSearchAddItemQtyDescPrompt - Method OnAction - NamedType AddItemsLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 52385230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy line items</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action CopyFromOrderPrompts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2367115722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for copying specific items from another posted sales invoice. Texts in brackets specify item description and invoice number.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action CopyItemsFromDocumentPrompt - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2367115722 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy items [description] from posted invoice [No.]</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action CopyItemsFromDocumentPrompt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2367115722 - Method 1377591017 - NamedType 884482731" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy specific items from sales invoice </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action CopyItemsFromDocumentPrompt - Method OnAction - NamedType CopyFromLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 3025385953 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for copying line items from a posted sales invoice. Text in brackets refers to the invoice.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action DocumentSearchCopyFromInvoicePrompt - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 3025385953 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy from posted invoice [No.]</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action DocumentSearchCopyFromInvoicePrompt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 3025385953 - Method 1377591017 - NamedType 884482731" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy from sales invoice </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action DocumentSearchCopyFromInvoicePrompt - Method OnAction - NamedType CopyFromLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 55328991 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for copying line items from the customer's latest posted sales invoice.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action DocumentSearchCopyFromLastInvoicePrompt - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 55328991 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy from the latest posted invoice</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action DocumentSearchCopyFromLastInvoicePrompt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 55328991 - Method 1377591017 - NamedType 884482731" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy from the latest sales invoice</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action DocumentSearchCopyFromLastInvoicePrompt - Method OnAction - NamedType CopyFromLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 3383781020 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for copying line items from another sales order. Text in brackets refers to the order.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action DocumentSearchCopyFromOrderPrompt - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 3383781020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy from order [No.]</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action DocumentSearchCopyFromOrderPrompt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 3383781020 - Method 1377591017 - NamedType 884482731" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy from sales order </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action DocumentSearchCopyFromOrderPrompt - Method OnAction - NamedType CopyFromLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 745909125 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attach a file to get sales line suggestions from Copilot.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action Attach - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 745909125 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attach</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action Attach - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 788258546 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard sales line suggestions proposed by Copilot.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action Cancel - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 788258546 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action Cancel - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2626368477 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate sales line suggestions from Copilot.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action Generate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2626368477 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action Generate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2079045816 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep sales line suggestions proposed by Copilot.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action OK - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2079045816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Insert</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions - Action OK - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines proposed by Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions Sub - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 3865998304 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the confidence level of the suggested result.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions Sub - Control Confidence - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the suggested result.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions Sub - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 3320823955 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line number of the suggested result.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions Sub - Control Line No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the item number of the suggested result.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions Sub - Control No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 2704404533 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the quantity of the suggested result.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions Sub - Control Quantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 2067183205 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the search terms that were used to find the suggested results.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions Sub - Control Search Terms - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 2067183205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search Terms</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions Sub - Control Search Terms - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 2385270358 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unit of measure code of the suggested result.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions Sub - Control Unit of Measure Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 3450651614 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the variant code of the suggested result.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Line AI Suggestions Sub - Control Variant Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2835147302 - Action 1213882201 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3689007477">
+          <source>Get sales lines from file with Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Invoice Sub Form Ext - Action Attach Prompting - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2835147302 - Action 1213882201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3689007477">
+          <source>Suggest sales lines from file</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Invoice Sub Form Ext - Action Attach Prompting - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2835147302 - Action 3796035951 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3689007477">
+          <source>Get sales lines suggestions from Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Invoice Sub Form Ext - Action Suggest Sales Lines Prompting - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2835147302 - Action 3796035951 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3689007477">
+          <source>Suggest sales lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Invoice Sub Form Ext - Action Suggest Sales Lines Prompting - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2835147302 - Action 1408386902 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3689007477">
+          <source>Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Invoice Sub Form Ext - Action Copilot - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2835147302 - Action 3441561851 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3689007477">
+          <source>Get sales lines suggestions from Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Invoice Sub Form Ext - Action Suggest Sales Lines - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2835147302 - Action 3441561851 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3689007477">
+          <source>Suggest sales lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Invoice Sub Form Ext - Action Suggest Sales Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1651887775 - Action 1213882201 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
+          <source>Get sales lines from file with Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Sub Form Ext - Action Attach Prompting - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1651887775 - Action 1213882201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
+          <source>Suggest sales lines from file</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Sub Form Ext - Action Attach Prompting - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1651887775 - Action 3796035951 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
+          <source>Get sales lines suggestions from Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Sub Form Ext - Action Suggest Sales Lines Prompting - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1651887775 - Action 3796035951 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
+          <source>Suggest sales lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Sub Form Ext - Action Suggest Sales Lines Prompting - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1651887775 - Action 1408386902 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
+          <source>Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Sub Form Ext - Action Copilot - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1651887775 - Action 3441561851 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
+          <source>Get sales lines suggestions from Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Sub Form Ext - Action Suggest Sales Lines - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1651887775 - Action 3441561851 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
+          <source>Suggest sales lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Sub Form Ext - Action Suggest Sales Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 869280819 - Action 1213882201 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 416138076">
+          <source>Get sales lines from file with Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Sub Form Ext - Action Attach Prompting - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 869280819 - Action 1213882201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 416138076">
+          <source>Suggest sales lines from file</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Sub Form Ext - Action Attach Prompting - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 869280819 - Action 3796035951 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 416138076">
+          <source>Get sales lines suggestions from Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Sub Form Ext - Action Suggest Sales Lines Prompting - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 869280819 - Action 3796035951 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 416138076">
+          <source>Suggest sales lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Sub Form Ext - Action Suggest Sales Lines Prompting - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 869280819 - Action 1408386902 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 416138076">
+          <source>Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Sub Form Ext - Action Copilot - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 869280819 - Action 3441561851 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 416138076">
+          <source>Get sales lines suggestions from Copilot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Sub Form Ext - Action Suggest Sales Lines - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 869280819 - Action 3441561851 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 416138076">
+          <source>Suggest sales lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Sub Form Ext - Action Suggest Sales Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2867768878 - EnumValue 3116416530 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>High</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Search Confidence - EnumValue High - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2867768878 - EnumValue 3592530208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Low</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Search Confidence - EnumValue Low - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2867768878 - EnumValue 432767615 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Medium</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Search Confidence - EnumValue Medium - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2867768878 - EnumValue 3371220206 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Search Confidence - EnumValue None - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3689863035 - EnumValue 1000799854 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balanced</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Search Style - EnumValue Balanced - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3689863035 - EnumValue 195412019 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Permissive</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Search Style - EnumValue Permissive - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3689863035 - EnumValue 4014513261 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Precise</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Search Style - EnumValue Precise - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 2561585553 - EnumValue 1768486982 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 3058546390">
+          <source>Sales lines suggestions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Sales Lines Copilot Capability - EnumValue Sales Lines Suggestions - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

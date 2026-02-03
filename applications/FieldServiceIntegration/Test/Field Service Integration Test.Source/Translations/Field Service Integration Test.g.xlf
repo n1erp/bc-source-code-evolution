@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Field Service Integration Test">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 1514372871 - NamedType 2389531293" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The connection setup cannot be validated. Verify the settings and try again.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit FS Integration Test - NamedType ConnectionErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1514372871 - NamedType 2865083016" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The connection test was successful</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit FS Integration Test - NamedType ConnectionSuccessMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1514372871 - NamedType 2065562846" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field Service uses a fixed unit of measure for bookable resources - hour. You must pick a corresponding resource unit of measure.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit FS Integration Test - NamedType HourUnitOfMeasureMustBePickedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1514372871 - NamedType 547878607" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Job Queue Entry status should be On Hold.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit FS Integration Test - NamedType JobQueueEntryStatusOnHoldErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1514372871 - NamedType 3226400684" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Job Queue Entry status should be Ready.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit FS Integration Test - NamedType JobQueueEntryStatusReadyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1514372871 - NamedType 370030606" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The default setup for %1 synchronization has completed successfully.</source>
+          <note from="Developer" annotates="general" priority="2">%1 - Dynamics 365 Field Service</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit FS Integration Test - NamedType SetupSuccessfulMsg</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

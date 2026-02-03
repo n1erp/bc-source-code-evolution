@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="_Exclude_Master_Data_Management_Test_Library">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 1183563631 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MDM Test Table A</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table MDM Test Table A - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1183563631 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table MDM Test Table A - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1183563631 - Field 453867700 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Self-Reference Field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table MDM Test Table A - Field Self-Reference Field - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1183563631 - Field 1829082977 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TableB Reference</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table MDM Test Table A - Field TableB Reference - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3096653482 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MDM Test Table B</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table MDM Test Table B - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3096653482 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table MDM Test Table B - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3096653482 - Field 2816706024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TableA Reference</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table MDM Test Table B - Field TableA Reference - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

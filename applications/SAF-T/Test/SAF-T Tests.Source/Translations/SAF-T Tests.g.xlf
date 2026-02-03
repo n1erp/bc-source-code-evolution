@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="SAF-T Tests">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 718785194 - NamedType 3352988643" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DEFAULT SAF-T</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SAF-T Tests Helper - NamedType DefaultSAFTLbl</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1604491967 - EnumValue 3732224266 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2721429565">
+          <source>SAF-T Test</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension SAF-T Modification Test - EnumValue Test - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1979366921 - EnumValue 4146626745 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2341503086">
+          <source>Standard Account SAF-T</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Standard Account Type SAF-T - EnumValue Standard Account SAF-T - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

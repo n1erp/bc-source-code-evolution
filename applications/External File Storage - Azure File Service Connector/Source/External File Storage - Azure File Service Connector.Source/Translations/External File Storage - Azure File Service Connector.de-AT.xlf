@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="de-AT" original="External File Storage - Azure File Service Connector">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 1617682519 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Azure File Share Account</source>
+          <target state="translated">Azure-Dateifreigabe-Konto</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1617682519 - NamedType 2133274181" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to get File Share Account secret.</source>
+          <target state="translated">Der geheime Dateifreigabekontoschlüssel konnte nicht abgerufen werden.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - NamedType UnableToGetSecretMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1617682519 - NamedType 530185521" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to set File Share Account secret.</source>
+          <target state="translated">Der geheime Dateifreigabekontoschlüssel konnte nicht eingerichtet werden.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - NamedType UnableToSetSecretMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1617682519 - Field 3207683269 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The way of authorizing used to access the Blob Storage.</source>
+          <target state="translated">Die Art der Autorisierung, die für den Zugriff auf den Blobspeicher verwendet wird.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - Field Authorization Type - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1617682519 - Field 3207683269 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authorization Type</source>
+          <target state="translated">Genehmigungstyp</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - Field Authorization Type - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1617682519 - Field 1864907812 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the account is disabled. This happens automatically when a sandbox is created.</source>
+          <target state="translated">Gibt an, ob das Konto deaktiviert ist. Dies geschieht automatisch, wenn eine Sandbox erstellt wird.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - Field Disabled - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1617682519 - Field 1864907812 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disabled</source>
+          <target state="translated">Deaktiviert</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - Field Disabled - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1617682519 - Field 2205086048 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Azure File Share name.</source>
+          <target state="translated">Gibt den Azure-Dateifreigabe-Namen an.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - Field File Share Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1617682519 - Field 2205086048 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Share Name</source>
+          <target state="translated">Name der Dateifreigabe</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - Field File Share Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1617682519 - Field 415504711 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <target state="translated">Primärschlüssel</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - Field Id - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1617682519 - Field 2961552353 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the storage account connection.</source>
+          <target state="translated">Gibt den Namen der Speicherkontoverbindung an.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - Field Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1617682519 - Field 2961552353 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <target state="translated">Firmenname</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - Field Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1617682519 - Field 1750116091 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Secret Key</source>
+          <target state="translated">Geheimschlüssel</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - Field Secret Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1617682519 - Field 2184249729 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Azure Storage name.</source>
+          <target state="translated">Gibt den Azure Storage-Namen an.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - Field Storage Account Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1617682519 - Field 2184249729 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Storage Account Name</source>
+          <target state="translated">Speicherkontoname</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. File Share Account - Field Storage Account Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3362763953 - NamedType 1293915263" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use Azure File Share to store and retrieve files.</source>
+          <target state="translated">Verwenden Sie Azure-Dateifreigabe zum Speichern und Abrufen von Dateien.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. File Share Connector Impl - NamedType ConnectorDescriptionTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3362763953 - NamedType 1482857067" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>We could not find the account. Typically, this is because the account has been deleted.</source>
+          <target state="translated">Das Konto wurde nicht gefunden. Dies liegt möglicherweise daran, dass das Konto gelöscht wurde.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. File Share Connector Impl - NamedType NotRegisteredAccountErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3362763953 - Method 2621021221 - NamedType 3284960891" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The path is too long. The maximum length is 2048 characters.</source>
+          <target state="translated">Der Pfad ist zu lang. Die maximale Länge beträgt 2.048 Zeichen.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. File Share Connector Impl - Method CheckPath - NamedType PathToLongErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3362763953 - Method 1126182535 - NamedType 383888718" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Directory already exists.</source>
+          <target state="translated">Das Verzeichnis ist bereits vorhanden.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. File Share Connector Impl - Method CreateDirectory - NamedType DirectoryAlreadyExistsErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3362763953 - Method 1678403271 - NamedType 1957616760" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The account "%1" is disabled.</source>
+          <target state="translated">Das Konto „%1“ ist deaktiviert.</target>
+          <note from="Developer" annotates="general" priority="2">%1 - Account Name(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. File Share Connector Impl - Method InitFileClient - NamedType AccountDisabledErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1617682519 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Azure File Share Account</source>
+          <target state="translated">Azure-Dateifreigabe-Konto</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1617682519 - Control 1697509288 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Shared access signature Token or SharedKey.</source>
+          <target state="translated">Gibt das Shared Access Signature-Token oder den SharedKey an.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account - Control SecretField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1617682519 - Control 1697509288 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <target state="translated">Kennwort</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account - Control SecretField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 245621770 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Setup Azure File Share Account</source>
+          <target state="translated">Azure-Dateifreigabe-Konto einrichten</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account Wizard - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 245621770 - Control 2372234090 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the file share to use of the storage account.</source>
+          <target state="translated">Gibt die zu verwendende Dateifreigabe des Speicherkontos an.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account Wizard - Control FileShareNameField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 245621770 - Control 2372234090 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Share Name</source>
+          <target state="translated">Name der Dateifreigabe</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account Wizard - Control FileShareNameField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 245621770 - Control 1459871223 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the Azure File Share account.</source>
+          <target state="translated">Gibt den Namen des Azure-Dateifreigabe-Kontos an.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account Wizard - Control NameField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 245621770 - Control 1459871223 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <target state="translated">Firmenname</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account Wizard - Control NameField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 245621770 - Control 1697509288 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Shared access signature Token or SharedKey.</source>
+          <target state="translated">Gibt das Shared Access Signature-Token oder den SharedKey an.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account Wizard - Control SecretField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 245621770 - Control 1697509288 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Secret</source>
+          <target state="translated">Geheimnis</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account Wizard - Control SecretField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 245621770 - Control 3002446575 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Storage Account Name</source>
+          <target state="translated">Speicherkontoname</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account Wizard - Control StorageAccountNameField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 245621770 - Action 742034285 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Move to the previous step.</source>
+          <target state="translated">Zurück zum vorherigen Schritt.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account Wizard - Action Back - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 245621770 - Action 742034285 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <target state="translated">Zurück</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account Wizard - Action Back - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 245621770 - Action 1235620153 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Move to the next step.</source>
+          <target state="translated">Weiter zum nächsten Schritt.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account Wizard - Action Next - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 245621770 - Action 1235620153 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <target state="translated">Weiter</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. File Share Account Wizard - Action Next - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 1723536350 - EnumValue 3398022750 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shared Access Signature</source>
+          <target state="translated">Shared Access Signature</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Enum Ext. File Share Auth. Type - EnumValue SasToken - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 1723536350 - EnumValue 1421066154 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shared Key</source>
+          <target state="translated">Freigegebener Schlüssel</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Enum Ext. File Share Auth. Type - EnumValue SharedKey - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="EnumExtension 2305793313 - EnumValue 363218485 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Share</source>
+          <target state="translated">Dateifreigabe</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Enum 534202269</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 1718969287 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Share - Edit</source>
+          <target state="translated">Dateifreigabe – Bearbeiten</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. File Share - Edit - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 3405044969 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Share - Objects</source>
+          <target state="translated">Dateifreigabe – Objekte</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. File Share - Objects - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 949187901 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Share - Read</source>
+          <target state="translated">Dateifreigabe – Lesen</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. File Share - Read - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

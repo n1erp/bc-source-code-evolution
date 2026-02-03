@@ -1,0 +1,1076 @@
+[
+  {
+    "codeunitId": 135080,
+    "codeunitName": "AMC Bank Stmt E2E Web Serv",
+    "method": "SendBankStmtToWebService",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 132558,
+    "codeunitName": "AMC Banking Credential UT",
+    "method": "AssistedSetupWithDemoUser",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 132558,
+    "codeunitName": "AMC Banking Credential UT",
+    "method": "AssistedSetupWithLicensedUserNoModule",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 132558,
+    "codeunitName": "AMC Banking Credential UT",
+    "method": "AssistedSetupWithLicensedUserWithModule",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 132558,
+    "codeunitName": "AMC Banking Credential UT",
+    "method": "TestMissingCredentialsUpdatedBankStmt",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 132558,
+    "codeunitName": "AMC Banking Credential UT",
+    "method": "TestMissingCredentialsUpdatedPmtExport",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 132558,
+    "codeunitName": "AMC Banking Credential UT",
+    "method": "TestMissingSetupUpdatedPmtExport",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135087,
+    "codeunitName": "AMC CT E2E Web Service Test",
+    "method": "MyTestSaveFileConvResponseErrors",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135087,
+    "codeunitName": "AMC CT E2E Web Service Test",
+    "method": "SendMissingFinstaBankStmtToWebService",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135087,
+    "codeunitName": "AMC CT E2E Web Service Test",
+    "method": "TestPaymentRequestWithBlankEncoding",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135087,
+    "codeunitName": "AMC CT E2E Web Service Test",
+    "method": "TestPaymentRequestWithEncoding",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135087,
+    "codeunitName": "AMC CT E2E Web Service Test",
+    "method": "TestPaymentRequestWithMissingEncoding",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135087,
+    "codeunitName": "AMC CT E2E Web Service Test",
+    "method": "TestSaveFileConvResponseErrors",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135087,
+    "codeunitName": "AMC CT E2E Web Service Test",
+    "method": "TestSyslogResponseErrors",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135085,
+    "codeunitName": "Bank Name Conv Serv Lookup",
+    "method": "FilterBankNameList",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135085,
+    "codeunitName": "Bank Name Conv Serv Lookup",
+    "method": "FilterThenClearFilterBankNameList",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135085,
+    "codeunitName": "Bank Name Conv Serv Lookup",
+    "method": "GetBankNameList",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135085,
+    "codeunitName": "Bank Name Conv Serv Lookup",
+    "method": "OpenBankListPageAndRefreshListBecauseDataIsOld",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135085,
+    "codeunitName": "Bank Name Conv Serv Lookup",
+    "method": "SelectBankNameFilteredByBankAccountCountryRegionCode",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135085,
+    "codeunitName": "Bank Name Conv Serv Lookup",
+    "method": "SelectBankNameFilteredByBankAccountCountryRegionCodeTwice",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135085,
+    "codeunitName": "Bank Name Conv Serv Lookup",
+    "method": "SelectBankNameFilteredByCompanyCountryRegionCode",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135084,
+    "codeunitName": "Bank Name Lookup E2E",
+    "method": "RequestBankListFromWebService",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135084,
+    "codeunitName": "Bank Name Lookup E2E",
+    "method": "RequestBankListFromWebServiceWithCountryFilter",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135084,
+    "codeunitName": "Bank Name Lookup E2E",
+    "method": "RequestBankListFromWebServiceWithWrongCountryFilter",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135081,
+    "codeunitName": "Base64 Decoding / Encoding",
+    "method": "DecodePaymentExportFileUsingBase64",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 135081,
+    "codeunitName": "Base64 Decoding / Encoding",
+    "method": "EncodeNordeaCorpBankStatementFileUsingBase64",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingCreateWithNoNewAccounts",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingServiceData",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingServiceRefreshAutomatic",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingServiceRefreshData",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingServiceRefreshMFA",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdateAutoLink",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdateCreateNewAndAutoLink",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdateFindsExistingAccounts",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdateFindsExistingDuplicateAccount",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdateGetDetailedLinkedAccountsFail",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdateGetLinkedAccountsFail",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdateLaunchFromNonLinkedBankAccount",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdateMissLinksCreateNew",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdateMissLinksReselect",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdatePromptsMissingLinkings",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdatePromptsMissingLinkingsWithAction",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdateRemovesUnlinkedAccounts",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdateUnLinkAction",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdateUnLinkActionFromLinkedAccount",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestBankLinkingUpdateUnLinkActionFromNewLinkedAccount",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestCreateConsumerOnAuthenticate",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestCreateConsumerSuccessWithNoTenantId",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestDefaultTransactionImportTimespan",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestGetTransactions",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestGetTransactionsCurrencyMissmatch",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestGetTransactionsIntoNewPmtReconJnl",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestGetTransactionsViaJobQueue",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestGetTransactionsViaJobQueueTwice",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestGetTransactionsWithActivityLogging",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestGetTransactionsWrongBankAccountID",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestJobQueueRemovedOnAccountDeletion",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestLogErrorOnConnectionFailure",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestRegisterConsumerShouldGenerateUserNameIfNotExist",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestRemoveConsumerOnDisable",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestRemoveConsumerOnNoLinkedBankAccounts",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestResetSessionTokens",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestServiceHandles200",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestServiceHandles403",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestServiceHandles404",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestServiceHandles500",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestServiceInvalidCobrandResponse",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestServiceSetupFromIsolatedStorage",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139501,
+    "codeunitName": "MS - Yodlee Bank Service Tests",
+    "method": "TestSessionTokens",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_Negative_BlankedJsonResponse",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_Negative_DisabledOutput",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_Negative_Reason",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_Negative_WrongJsonResponse",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_OneModifiedLbl_DueDate",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_OneModifiedLbl_OrgAmt",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_OneModifiedLbl_OutstAmt",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_OneNew_ExpiredToken",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_OneNewLbl_DisabledOutput",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_OneNewLbl_UI",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_OneUpToDateLbl",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_TwoLblInclOneModified",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_TwoLblInclOneNew",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_TwoLblInclOneNewAndOneModified",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_TwoModifiedLbl",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_TwoNewLbl",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148083,
+    "codeunitName": "MTDTestLiabilitiesWebService",
+    "method": "GetVATLiabilitiesAndShowResult_TwoUpToDateLbl",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148081,
+    "codeunitName": "MTDTestOAuthWebService",
+    "method": "CheckOAuthConfigured_GetPayments_AcceptOpenSetup_SetEnabled",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148081,
+    "codeunitName": "MTDTestOAuthWebService",
+    "method": "FraudPreventionHeaders_WebClient",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148081,
+    "codeunitName": "MTDTestOAuthWebService",
+    "method": "MTDConnection_InvokeRequest_RefreshAccessToken_Negative",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148081,
+    "codeunitName": "MTDTestOAuthWebService",
+    "method": "MTDConnection_InvokeRequest_RefreshAccessToken_Positive",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148081,
+    "codeunitName": "MTDTestOAuthWebService",
+    "method": "MTDConnection_InvokeRequest_RefreshAccessToken_Positive_ExpireInSec",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148081,
+    "codeunitName": "MTDTestOAuthWebService",
+    "method": "ParseErrors_Advanced",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148081,
+    "codeunitName": "MTDTestOAuthWebService",
+    "method": "ParseErrors_Basic",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148081,
+    "codeunitName": "MTDTestOAuthWebService",
+    "method": "ParseErrors_Error429_TooManyReq",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_Negative_BlankedJsonResponse",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_Negative_DisabledOutput",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_Negative_Reason",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_Negative_WrongJsonResponse",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_OneModifiedPmtWithDate",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_OneModifiedPmtWithoutDate",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_OneNew_DisabledOutput",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_OneNew_ExpiredToken",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_OneNewPmtWithDate_UI",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_OneNewPmtWithoutDate",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_OneUpToDatePmtWithDate",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_OneUpToDatePmtWithoutDate",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_TwoModifiedPmt",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_TwoNewPmtWithDates",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_TwoNewPmtWithOnlyFirstDate",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_TwoNewPmtWithOnlySecondDate",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_TwoNewPmtWithoutDates",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_TwoPmtInclOneModified",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_TwoPmtInclOneNew",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_TwoPmtInclOneNewAndOneModified",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148082,
+    "codeunitName": "MTDTestPaymentsWebService",
+    "method": "GetVATPaymentsAndShowResult_TwoUpToDatePmt",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_AutoReceiveJob_Negative",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_AutoReceiveJob_Positive",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_Negative_BlankedJsonResponse",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_Negative_DisabledOutput",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_Negative_Reason",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_Negative_WrongJsonResponse",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_OneModifiedPeriod_OrgAmt",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_OneModifiedPeriod_PeriodKey",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_OneModifiedPeriod_ReceivedDate",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_OneModifiedPeriod_Status",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_OneNewPeriod_DisabledOutput",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_OneNewPeriod_ExpiredToken",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_OneNewPeriod_UI",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_OneUpToDatePeriod",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_TwoModifiedPeriods",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_TwoNewPeriods",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_TwoPeriodsInclOneModified",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_TwoPeriodsInclOneNew",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_TwoPeriodsInclOneNewAndOneModified",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "GetVATPeriods_TwoUpToDatePeriods",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148084,
+    "codeunitName": "MTDTestPeriodsWebService",
+    "method": "MarkAcceptedVATReturnAsClosed",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Error404NotFound",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Modified_NetVATDue",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Modified_PeriodKey",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Modified_TotalAcquisitionsExclVAT",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Modified_TotalValueGoodsSupplExVAT",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Modified_TotalValuePurchasesExclVAT",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Modified_TotalValueSalesExclVAT",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Modified_TotalVATDue",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Modified_VATDueAcquisitions",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Modified_VATDueSales",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Modified_VATReclaimedCurrPeriod",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Negative_BlankedJsonResponse",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Negative_DisabledOutput",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Negative_Reason",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_Negative_WrongJsonResponse",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_New_DisabledOutput",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_New_ExpiredToken",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_New_UI",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "GetVATReturns_UpToDate",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "MarkSubmittedVATReturnAsAccepted",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "SubmitVATReturns_ExpiredToken",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "SubmitVATReturns_Negative_Reason",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "SubmitVATReturns_Positive_BlankedJsonResponse",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "SubmitVATReturns_Positive_JsonResponse",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "SubmitVATReturns_Positive_WrongJsonResponse",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "SubmitVATReturns_Timeout",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "VATReturn_SubmitReturnContent_SubmittedAndAcceptedLater",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148085,
+    "codeunitName": "MTDTestReturnsWebService",
+    "method": "VATReturn_SubmitReturnContent_SubmittedNotAccepted",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148018,
+    "codeunitName": "Test UK Postcode GetAddress.io",
+    "method": "TestGetAddressIOListFromInvalidPostcode",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148018,
+    "codeunitName": "Test UK Postcode GetAddress.io",
+    "method": "TestGetAddressIOListFromPostcode",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148018,
+    "codeunitName": "Test UK Postcode GetAddress.io",
+    "method": "TestGetAddressIOListFromPostcodeAndDeliveryPoint",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148018,
+    "codeunitName": "Test UK Postcode GetAddress.io",
+    "method": "TestGetAddressIOListFromPostcodeAuthProblem",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148018,
+    "codeunitName": "Test UK Postcode GetAddress.io",
+    "method": "TestGetAddressIOListFromPostcodeNotExists",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 148018,
+    "codeunitName": "Test UK Postcode GetAddress.io",
+    "method": "TestGetAddressIOListFromPostcodeServiceNotAvailable",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139526,
+    "codeunitName": "VAT Group Mock Service Test",
+    "method": "BatchStatus_2017",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139526,
+    "codeunitName": "VAT Group Mock Service Test",
+    "method": "BatchStatus_2018",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139526,
+    "codeunitName": "VAT Group Mock Service Test",
+    "method": "BatchStatus_BC",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139526,
+    "codeunitName": "VAT Group Mock Service Test",
+    "method": "SingleStatus_2017",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139526,
+    "codeunitName": "VAT Group Mock Service Test",
+    "method": "SingleStatus_2018",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139526,
+    "codeunitName": "VAT Group Mock Service Test",
+    "method": "SingleStatus_BC",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139526,
+    "codeunitName": "VAT Group Mock Service Test",
+    "method": "Submit_2017",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139526,
+    "codeunitName": "VAT Group Mock Service Test",
+    "method": "Submit_2018",
+    "reason": "Requires mock service"
+  },
+  {
+    "codeunitId": 139526,
+    "codeunitName": "VAT Group Mock Service Test",
+    "method": "Submit_BC",
+    "reason": "Requires mock service"
+  }
+]

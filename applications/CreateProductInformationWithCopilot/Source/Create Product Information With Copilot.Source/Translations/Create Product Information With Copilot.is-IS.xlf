@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="is-IS" original="Create Product Information With Copilot">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 3287893359 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search API Response</source>
+          <target state="translated">Svörun forritaskila leitar</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Table Search API Response - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3287893359 - Field 2219487564 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Score</source>
+          <target state="translated">Stig</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Table Search API Response - Field Score - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3287893359 - Field 230895448 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SysId</source>
+          <target state="translated">Kerfisauðkenni</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Table Search API Response - Field SysId - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3277638532 - NamedType 2568840905" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There was an error with sending the call to Copilot. Log a Business Central support request about this.</source>
+          <target state="translated">Villa kom upp við að senda símtal til Copilot. Sendið inn þjónustubeiðni fyrir Business Central varðandi þetta.</target>
+          <note from="Developer" annotates="general" priority="2">Copilot is a Microsoft service name and must not be translated(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Codeunit Create Product Info. Prompts - NamedType ConstructingPromptFailedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 293298769 - NamedType 2017654920" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sorry, something went wrong. Please rephrase and try again.</source>
+          <target state="translated">Því miður fór eitthvað úrskeiðis. Umorðið og reynið aftur.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Codeunit Create Product Info. Utility - NamedType ChatCompletionResponseErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 293298769 - NamedType 809412037" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inserting %1 of %2</source>
+          <target state="translated">Setur inn %1 af %2</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Counter, %2 = Total Lines(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Codeunit Create Product Info. Utility - NamedType InsertingLineLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 293298769 - NamedType 3994768048" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Processing lines... \#1#########################################################################################</source>
+          <target state="translated">Vinnur úr línum... \#1#########################################################################################</target>
+          <note from="Developer" annotates="general" priority="2">#1 = PreparingSalesLineLbl or InsertingSalesLineLbl (Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Codeunit Create Product Info. Utility - NamedType ProcessingLinesLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1813259294 - NamedType 2184892397" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item not found</source>
+          <target state="translated">Eintak fannst ekki</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Codeunit Item Subst. Suggestion Impl. - NamedType ItemNotFoundErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1813259294 - NamedType 1035103961" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are no items matching the description or keywords in the prompt.</source>
+          <target state="translated">Engar vörur samsvara lýsingunni eða leitarorðunum í kvaðningunni.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Codeunit Item Subst. Suggestion Impl. - NamedType NoSuggestionsMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 782762290 - Method 3458795186 - NamedType 142804890" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Looking through item information</source>
+          <target state="translated">Leitar í upplýsingum um vöru</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Codeunit Search - Method SearchMultiple - NamedType SearchSetupProgressLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 782762290 - Method 3458795186 - NamedType 2207208694" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Looking for items matching: %1</source>
+          <target state="translated">Leitar að vörum sem samsvara: %1</target>
+          <note from="Developer" annotates="general" priority="2">%1= list of item names(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Codeunit Search - Method SearchMultiple - NamedType SearchingItemsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Substitution Suggestion</source>
+          <target state="translated">Tillaga um staðgengilsvöru</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Control 3850772625 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggested item substitutions</source>
+          <target state="translated">Tillaga að staðgengilsvöru</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Control ItemSubstLinesSub - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Control 708048856 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter your search query here. You can use natural language to describe what you are looking for.</source>
+          <target state="translated">Sláið inn leitarfyrirspurnina hér. Hægt er að nota hversdagslegt orðalag til að lýsa því sem verið er að leita að.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Control SearchQueryTxt - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Control 708048856 - Property 1968111052" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type a description or keywords for suggesting item substitutions</source>
+          <target state="translated">Sláið inn lýsingu eða lykilorð til að leggja til staðgengilsvöru</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Control SearchQueryTxt - Property InstructionalText)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Control 708048856 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Description</source>
+          <target state="translated">Vörulýsing</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Control SearchQueryTxt - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Control 939004168 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the search confidence to use when suggesting item substitutions.</source>
+          <target state="translated">Tilgreinir öryggisstig leitar sem skal notast við þegar gerð er tillaga um staðgengilsvörur.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Control MatchingStyle - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Control 939004168 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Matching</source>
+          <target state="translated">Samsvörun</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Control MatchingStyle - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Control 1261765055 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether to show lines or lines and confidence about the item substitution suggestions when possible.</source>
+          <target state="translated">Tilgreinir hvort birta skuli línur eða línur ásamt tillögum að staðgengilsvöru þegar það er í boði.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Control ViewOptions - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Control 1261765055 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View</source>
+          <target state="translated">Skoða</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Control ViewOptions - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Control 1261765055 - Property 62802879" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines only, Lines and Confidence</source>
+          <target state="translated">Aðeins línur, línur og öryggisstig</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Control ViewOptions - Property OptionCaption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Action 788258546 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard item substitution suggestions proposed by Copilot.</source>
+          <target state="translated">Henda tillögum um staðgengilsvöru frá Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Action Cancel - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Action 788258546 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard</source>
+          <target state="translated">Fleygja</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Action Cancel - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Action 2626368477 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate item substitution suggestions from Copilot.</source>
+          <target state="translated">Búa til tillögur um staðgengilsvöru frá Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Action Generate - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Action 2626368477 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate</source>
+          <target state="translated">Mynda</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Action Generate - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Action 2626368477 - Method 1377591017 - NamedType 1766422154" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You've exceeded the maximum number of allowed characters by %1. Please rephrase and try again.</source>
+          <target state="translated">Farið var %1 staf yfir hámarksfjölda leyfilegra stafa. Umorðið og reynið aftur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Integer(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Action Generate - Method OnAction - NamedType SearchQueryLengthExceededErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Action 2626368477 - Method 1377591017 - NamedType 4024957973" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please provide a query to generate item substitution suggestions.</source>
+          <target state="translated">Leggðu fram fyrirspurn um tillögur að staðgengilsvöru.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Action Generate - Method OnAction - NamedType SearchQueryNotProvidedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Action 2079045816 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep item substitution suggestions proposed by Copilot.</source>
+          <target state="translated">Halda tillögum Copilot um staðgengilsvöru.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Action OK - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 517687200 - Action 2079045816 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Insert all</source>
+          <target state="translated">Setja allt inn</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion - Action OK - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2091554876 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines proposed by Copilot</source>
+          <target state="translated">Línur sem Copilot leggur til</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion Sub - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2091554876 - Control 3865998304 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the confidence level of the suggested result.</source>
+          <target state="translated">Tilgreinir öryggisstig niðurstöðu sem lögð var til.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion Sub - Control Confidence - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2091554876 - Control 3461834954 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the suggested result.</source>
+          <target state="translated">Tilgreinir lýsingu niðurstöðu sem lögð var til.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion Sub - Control Description - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2091554876 - Control 2219487564 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the score of the suggested result.</source>
+          <target state="translated">Tilgreinir stig niðurstöðu sem lögð er til.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion Sub - Control Score - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2091554876 - Control 2067183205 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the search terms that were used to find the suggested results.</source>
+          <target state="translated">Tilgreinir hvaða leitarorð voru notuð til að finna niðurstöðurnar sem lagðar voru til.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion Sub - Control Search Terms - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2091554876 - Control 2067183205 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search Terms</source>
+          <target state="translated">Leitarorð</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion Sub - Control Search Terms - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2091554876 - Control 8036733 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Substitute No.</source>
+          <target state="translated">Tilgreinir staðgengilsnr.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion Sub - Control SubstituteNo - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2091554876 - Control 4087741006 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Substitute Type</source>
+          <target state="translated">Tilgreinir staðgengilsgerð</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion Sub - Control SubstituteType - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 2091554876 - Control 1308202892 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the variant code of the suggested result.</source>
+          <target state="translated">Tilgreinir afbrigðiskóða niðurstöðu sem lögð var til.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Page Item Subst. Suggestion Sub - Control SubstituteVariantCode - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PageExtension 3887616043 - Action 2156163193 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Get item substitution suggestion from Copilot</source>
+          <target state="translated">Fá tillögu um staðgengilsvöru frá Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3977596226</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3887616043 - Action 2156163193 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest with Copilot</source>
+          <target state="translated">Tillaga frá Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3977596226</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 517687200 - Field 2865515310 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Secondary Search Terms</source>
+          <target state="translated">Aukaleitarorð</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 3217357734</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 517687200 - Field 3865998304 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confidence</source>
+          <target state="translated">Öryggisstig</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 3217357734</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 517687200 - Field 3413278817 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Search Terms</source>
+          <target state="translated">Aðalleitarorð</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 3217357734</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 517687200 - Field 2219487564 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Score</source>
+          <target state="translated">Stig</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Table 3217357734</note>
+        </trans-unit>
+        <trans-unit id="Enum 3689863035 - EnumValue 1000799854 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balanced</source>
+          <target state="translated">Jöfnuð</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Enum Search Style - EnumValue Balanced - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 3689863035 - EnumValue 195412019 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Permissive</source>
+          <target state="translated">Víðtæk</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Enum Search Style - EnumValue Permissive - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 3689863035 - EnumValue 4014513261 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Precise</source>
+          <target state="translated">Nákvæm</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Inventory.Item.Substitution)(LookupHint=Enum Search Style - EnumValue Precise - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="EnumExtension 4122788707 - EnumValue 3481308013 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create product information</source>
+          <target state="translated">Stofna vöruupplýsingar</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Enum 3058546390</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Statistical Accounts Test">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 1711171192 - NamedType 3827292281" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balance must be equal to %1.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Field Value</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Statistical Account Test - NamedType BalanceMustBeEqualErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1711171192 - NamedType 852235100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This action will delete all setup data.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Statistical Account Test - NamedType DeleteSetupDataQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1711171192 - NamedType 1421536496" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The setup was completed successfully.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Statistical Account Test - NamedType DemoDataSetupCompleteMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1711171192 - NamedType 161275938" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DEPARTMENT</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Statistical Account Test - NamedType DEPARTMENTLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1711171192 - NamedType 1670801981" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EMPLOYEES</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Statistical Account Test - NamedType EMPLOYEESLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1711171192 - NamedType 2432911610" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OFFICESPACE</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Statistical Account Test - NamedType OFFICESPACELbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1711171192 - NamedType 2391185921" size-unit="char" translate="yes" xml:space="preserve">
+          <source>REV_EMPL</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Statistical Account Test - NamedType REVEMPLLbl</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

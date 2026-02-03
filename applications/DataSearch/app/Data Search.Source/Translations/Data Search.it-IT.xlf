@@ -1,0 +1,997 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="it-IT" original="Data Search">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 3305910297 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Data Search Result</source>
+          <target state="translated">Risultato ricerca dati</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Result - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3305910297 - NamedType 4241124041" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>lines</source>
+          <target state="translated">righe</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Result - NamedType linesLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3305910297 - Field 3461834954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Descrizione</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Result - Field Description - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3305910297 - Field 883711285 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <target state="translated">Nr. movimento</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Result - Field Entry No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3305910297 - Field 158172202 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line Type</source>
+          <target state="translated">Tipo di riga</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Result - Field Line Type - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3305910297 - Field 158172202 - Property 62802879" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Header,Data,MoreHeader,MoreData</source>
+          <target state="translated">Testata,Dati,Altra intestazione,Altri dati</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Result - Field Line Type - Property OptionCaption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3305910297 - Field 495416724 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Hits</source>
+          <target state="translated">Nr. di occorrenze</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Result - Field No. of Hits - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3305910297 - Field 2674482667 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Parent ID</source>
+          <target state="translated">ID padre</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Result - Field Parent ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3305910297 - Field 1393533604 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table Caption</source>
+          <target state="translated">Didascalia tabella</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Result - Field Table Caption - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3305910297 - Field 3017471043 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table No.</source>
+          <target state="translated">Nr. tabella</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Result - Field Table No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3305910297 - Field 3371953150 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table Subtype</source>
+          <target state="translated">Sottotipo tabella</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Result - Field Table Subtype - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3305910297 - Field 3501343248 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table/Type ID</source>
+          <target state="translated">ID tabella/tipo</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Result - Field Table/Type ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4025139878 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search Setup (Field)</source>
+          <target state="translated">Setup ricerca (campo)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Setup (Field) - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4025139878 - Field 470122249 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable Search</source>
+          <target state="translated">Abilita ricerca</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Setup (Field) - Field Enable Search - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4025139878 - Field 823559016 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field Caption</source>
+          <target state="translated">Didascalia campo</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Setup (Field) - Field Field Caption - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4025139878 - Field 3531868071 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field No.</source>
+          <target state="translated">Nr. campo</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Setup (Field) - Field Field No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4025139878 - Field 1393533604 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table Caption</source>
+          <target state="translated">Didascalia tabella</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Setup (Field) - Field Table Caption - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 4025139878 - Field 3017471043 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table No.</source>
+          <target state="translated">Nr. tabella</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Setup (Field) - Field Table No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2849192698 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search Setup (Table)</source>
+          <target state="translated">Setup ricerca (tabella)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Setup (Table) - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2849192698 - Field 495416724 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Hits</source>
+          <target state="translated">Nr. di occorrenze</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Setup (Table) - Field No. of Hits - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2849192698 - Field 655387622 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Role Center ID</source>
+          <target state="translated">ID gestione ruolo utente</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Setup (Table) - Field Role Center ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2849192698 - Field 1393533604 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table Caption</source>
+          <target state="translated">Didascalia tabella</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Setup (Table) - Field Table Caption - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2849192698 - Field 3017471043 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table No.</source>
+          <target state="translated">Nr. tabella</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Setup (Table) - Field Table No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2849192698 - Field 3371953150 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table Subtype</source>
+          <target state="translated">Sottotipo tabella</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Setup (Table) - Field Table Subtype - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2849192698 - Field 3501343248 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table/Type ID</source>
+          <target state="translated">ID tabella/tipo</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Setup (Table) - Field Table/Type ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2248772457 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Data Search Source Temp</source>
+          <target state="translated">Modello origine ricerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Source Temp - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 2248772457 - Field 3461834954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Descrizione</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Table Data Search Source Temp - Field Description - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 4165554626 - NamedType 3390914320" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Navigation menu only.</source>
+          <target state="translated">Solo menu di navigazione.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Codeunit Data Search Defaults - NamedType AllProfileDescriptionFilterTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 4165554626 - NamedType 2955544161" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>(default)</source>
+          <target state="translated">(impostazione predefinita)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Codeunit Data Search Defaults - NamedType BaseLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3130159978 - Property 1064389655" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>About Search in company data</source>
+          <target state="translated">Informazioni sulla ricerca nei dati della società</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search - Property AboutTitle)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3130159978 - Property 247559172" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter one or more search words in the search field. To see what data is being searched, select Set up where to search.</source>
+          <target state="translated">Immettere una o più parole di ricerca nel campo di ricerca. Per vedere in quali dati viene eseguita la ricerca, selezionare Impostare dove cercare.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search - Property AboutText)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3130159978 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in company data</source>
+          <target state="translated">Ricerca nei dati della società</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3130159978 - NamedType 2842628478" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The search term %1 cannot be used as a filter.</source>
+          <target state="translated">Il termine di ricerca %1 non può essere utilizzato come filtro.</target>
+          <note from="Developer" annotates="general" priority="2">%1 is the first word the user entered(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search - NamedType FilterExprErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3130159978 - NamedType 570321828" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No tables defined for search.</source>
+          <target state="translated">Nessuna tabella definita per la ricerca.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search - NamedType NoTablesDefinedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3130159978 - NamedType 1979840324" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Searching for "%1"</source>
+          <target state="translated">Ricerca di "%1"</target>
+          <note from="Developer" annotates="general" priority="2">%1 can be any text(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search - NamedType StatusSearchLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3130159978 - Control 2400258197 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specify at least three characters to search for. You can enter multiple search words, and we will only find data that contains all words.</source>
+          <target state="translated">Specificare almeno tre caratteri da cercare. È possibile inserire più parole di ricerca e verranno individuati solo i dati che contengono tutte le parole.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search - Control SearchString - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3130159978 - Control 2400258197 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search for (min. 3 characters)</source>
+          <target state="translated">Cerca (min. 3 caratteri)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search - Control SearchString - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3130159978 - Action 782762290 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starts the search.</source>
+          <target state="translated">Avvia la ricerca.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search - Action Search - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3130159978 - Action 782762290 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start search</source>
+          <target state="translated">Avvia ricerca</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search - Action Search - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3130159978 - Action 3383493608 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search</source>
+          <target state="translated">Cerca</target>
+          <note from="Developer" annotates="general" priority="2">Generated from the PromotedActionCategories property index 1.(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search - Action Category_Process - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3789408733 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Results</source>
+          <target state="translated">Risultati</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search lines - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3789408733 - NamedType 3932260845" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1: Show all results</source>
+          <target state="translated">%1: visualizzare tutti i risultati</target>
+          <note from="Developer" annotates="general" priority="2">%1 is a table name, e.g. Customer(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search lines - NamedType MoreRecLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3789408733 - Method 2571635885 - NamedType 486583733" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>NB! Search failed. Drill down to see the error.</source>
+          <target state="translated">NB! Ricerca non riuscita. Eseguire il drill-down per visualizzare l'errore.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search lines - Method AddResults - NamedType SearchErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3789408733 - Method 1852034151 - NamedType 3118294464" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You have made changes to the setup. Please select the Start search action for the new settings to take effect.</source>
+          <target state="translated">Sono state apportate modifiche all'impostazione. Selezionare l'azione Avvia ricerca per rendere effettive le nuove impostazioni.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search lines - Method RunSetupPage - NamedType SetupChangedMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3789408733 - Control 3461834954 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the found entry.</source>
+          <target state="translated">Specifica il movimento trovato.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search lines - Control Description - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3789408733 - Control 3461834954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Descrizione</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search lines - Control Description - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3789408733 - Action 1514883969 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens a page that lists which tables are enabled for search for your role center. If you have permissions, you can change which tables and fields are searched.</source>
+          <target state="translated">Apre una pagina che elenca le tabelle abilitate per la ricerca per la gestione ruolo utente. Se si dispone delle autorizzazioni, è possibile modificare le tabelle e i campi di ricerca.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search lines - Action Setup - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3789408733 - Action 1514883969 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set up which tables to search</source>
+          <target state="translated">Impostare le tabelle in cui eseguire la ricerca</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search lines - Action Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3789408733 - Action 1509359154 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens a page that shows which lists are enabled for search for your role center. If you have permissions, you can change which lists, tables and fields are searched.</source>
+          <target state="translated">Apre una pagina che mostra le liste abilitate per la ricerca per la gestione ruolo utente. Se si dispone delle autorizzazioni, è possibile modificare le liste, le tabelle e i campi per la ricerca.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search lines - Action SetupLists - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3789408733 - Action 1509359154 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set up where to search</source>
+          <target state="translated">Impostare dove cercare</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search lines - Action SetupLists - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Property 2019332006" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New,Process,Report,Column,Record</source>
+          <target state="translated">Nuovo,Processo,Report,Colonna,Record</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Property PromotedActionCategories)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search Result Records</source>
+          <target state="translated">Record dei risultati di ricerca</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Control 736664577 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a field in the table.</source>
+          <target state="translated">Specifica un campo nella tabella.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Control ColumnValues1 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Control 2168185985 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a field in the table.</source>
+          <target state="translated">Specifica un campo nella tabella.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Control ColumnValues10 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Control 2805882602 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a field in the table.</source>
+          <target state="translated">Specifica un campo nella tabella.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Control ColumnValues11 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Control 892792751 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a field in the table.</source>
+          <target state="translated">Specifica un campo nella tabella.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Control ColumnValues12 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Control 98967960 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a field in the table.</source>
+          <target state="translated">Specifica un campo nella tabella.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Control ColumnValues2 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Control 3756238639 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a field in the table.</source>
+          <target state="translated">Specifica un campo nella tabella.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Control ColumnValues3 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Control 3925147662 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a field in the table.</source>
+          <target state="translated">Specifica un campo nella tabella.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Control ColumnValues4 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Control 3287451045 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a field in the table.</source>
+          <target state="translated">Specifica un campo nella tabella.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Control ColumnValues5 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Control 2649754428 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a field in the table.</source>
+          <target state="translated">Specifica un campo nella tabella.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Control ColumnValues6 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Control 2012057811 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a field in the table.</source>
+          <target state="translated">Specifica un campo nella tabella.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Control ColumnValues7 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Control 2180966834 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a field in the table.</source>
+          <target state="translated">Specifica un campo nella tabella.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Control ColumnValues8 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Control 1543270217 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a field in the table.</source>
+          <target state="translated">Specifica un campo nella tabella.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Control ColumnValues9 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Action 3277981215 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Columns</source>
+          <target state="translated">Colonne</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Action Columns - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Action 3760561947 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Go to the next column.</source>
+          <target state="translated">Andare alla colonna successiva.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Action NextColumn - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Action 3760561947 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Next Column</source>
+          <target state="translated">Colonna successiva</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Action NextColumn - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Action 2393674465 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Go to the previous column.</source>
+          <target state="translated">Andare alla colonna precedente.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Action PreviousColumn - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Action 2393674465 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Previous Column</source>
+          <target state="translated">Colonna precedente</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Action PreviousColumn - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Action 3875867463 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Record</source>
+          <target state="translated">Record</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Action Record - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Action 1794018898 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the record in its list or card page.</source>
+          <target state="translated">Aprire il record nella relativa pagina elenco o scheda.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Action ShowRecord - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 218848851 - Action 1794018898 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Record</source>
+          <target state="translated">Mostra record</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Result Records - Action ShowRecord - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable fields for searching</source>
+          <target state="translated">Abilita campi per la ricerca</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - NamedType 4257084014" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field %1 is not optimized for text search. The search will be slower.</source>
+          <target state="translated">Il campo %1 non è ottimizzato per la ricerca di testo. La ricerca sarà più lenta.</target>
+          <note from="Developer" annotates="general" priority="2">%1 is a field name(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - NamedType NotFullTextMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - NamedType 1516037821" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to remove the current setup and insert the default?</source>
+          <target state="translated">Rimuovere il setup corrente e inserire l'impostazione predefinita?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - NamedType ResetQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Control 470122249 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether search is enabled for this field.</source>
+          <target state="translated">Specifica se la ricerca è abilitata per questo campo.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Control Enable Search - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Control 470122249 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable search</source>
+          <target state="translated">Abilita ricerca</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Control Enable Search - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Control 823559016 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the caption of the field, that is, the name that will be shown in the user interface.</source>
+          <target state="translated">Specifica la didascalia del campo, ossia il nome che verrà visualizzato nell'interfaccia utente.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Control Field Caption - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Control 823559016 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field Name</source>
+          <target state="translated">Nome campo</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Control Field Caption - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Control 3526251870 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of the field.</source>
+          <target state="translated">Specifica il tipo del campo.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Control FieldType - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Control 3526251870 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field Type</source>
+          <target state="translated">Tipo di campo</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Control FieldType - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Control 4200184881 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the field.</source>
+          <target state="translated">Specifica il numero del campo.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Control No. - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Control 4200184881 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field No.</source>
+          <target state="translated">Nr. campo</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Control No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Control 2633970091 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether this field is optimized for text search. If this field is optimized for text search, the search can be faster.</source>
+          <target state="translated">Specifica se il campo è ottimizzato per la ricerca di testo. In caso affermativo, la ricerca può essere più rapida.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Control OptimizeForTextSearch - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Control 2633970091 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Optimized for text search</source>
+          <target state="translated">Ottimizzato per la ricerca di testo</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Control OptimizeForTextSearch - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Control 1595823452 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the caption of the field, that is, the name that will be shown in the user interface.</source>
+          <target state="translated">Specifica la didascalia del campo, ossia il nome che verrà visualizzato nell'interfaccia utente.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Control TableCaption - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Control 1595823452 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table Name</source>
+          <target state="translated">Nome tabella</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Control TableCaption - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Action 807937578 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Removes the field selection for this table and inserts the default.</source>
+          <target state="translated">Rimuove la selezione del campo per la tabella e inserisce il valore predefinito.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Action ClearSetup - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3477219812 - Action 807937578 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reset to default</source>
+          <target state="translated">Ripristina i valori predefiniti</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) List - Action ClearSetup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3888767375 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search Enabled Fields</source>
+          <target state="translated">Campi abilitati per la ricerca</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) Part - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3888767375 - Control 2780874720 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the caption of the field, that is, the name that will be shown in the user interface.</source>
+          <target state="translated">Specifica la didascalia del campo, ossia il nome che verrà visualizzato nell'interfaccia utente.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) Part - Control FieldCaption - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3888767375 - Control 2780874720 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field Name</source>
+          <target state="translated">Nome campo</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) Part - Control FieldCaption - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3888767375 - Control 4200184881 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the field.</source>
+          <target state="translated">Specifica il numero del campo.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) Part - Control No. - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3888767375 - Control 4200184881 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="translated">Nr.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Field) Part - Control No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable lists for searching</source>
+          <target state="translated">Abilita liste per la ricerca</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - NamedType 1516037821" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to remove the current setup and insert the default?</source>
+          <target state="translated">Rimuovere il setup corrente e inserire l'impostazione predefinita?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - NamedType ResetQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Control 3224703576 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether this list is included in search.</source>
+          <target state="translated">Specifica se la lista è inclusa nella ricerca.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Control ListIsEnabledCtrl - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Control 3224703576 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable Search</source>
+          <target state="translated">Abilita ricerca</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Control ListIsEnabledCtrl - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Control 1599953061 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the list.</source>
+          <target state="translated">Specifica il nome della lista.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Control ObjectCaption - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Control 1599953061 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>List Name</source>
+          <target state="translated">Nome lista</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Control ObjectCaption - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Control 568116884 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the ID of the page. </source>
+          <target state="translated">Specifica l'ID della pagina. </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Control ObjectID - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Control 568116884 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>List No.</source>
+          <target state="translated">Nr. lista</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Control ObjectID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Control 1595823452 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the base table name of the list.</source>
+          <target state="translated">Specifica il nome della tabella di base della lista.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Control TableCaption - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Control 1595823452 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Main Source Table</source>
+          <target state="translated">Tabella di origine principale</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Control TableCaption - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Control 3669144757 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies which role the search setup is valid for.</source>
+          <target state="translated">Specifica il ruolo per cui è valida l'impostazione di ricerca.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Control RoleName - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Control 3669144757 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Choose among lists for role</source>
+          <target state="translated">Scegli tra liste per ruolo</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Control RoleName - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Control 580853590 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether only the enabled lists are shown or all lists are shown.</source>
+          <target state="translated">Specifica se vengono visualizzate solo le liste abilitate o tutte le liste.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Control ShowAll - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Control 580853590 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show only search enabled lists</source>
+          <target state="translated">Mostra solo le liste abilitate per la ricerca</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Control ShowAll - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Action 2402477966 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Removes the current selection for this rolecenter and inserts the default list selection.</source>
+          <target state="translated">Rimuove la selezione corrente per questa gestione ruolo utente e inserisce la selezione della lista predefinita.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Action ResetSetup - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Action 2402477966 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reset to default</source>
+          <target state="translated">Ripristina i valori predefiniti</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Action ResetSetup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Action 2574700765 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select this action if you want to see all lists and/or select more lists to be included in the search.</source>
+          <target state="translated">Selezionare questa azione se si desidera visualizzare tutte le tabelle e/o selezionare più tabelle da includere nella ricerca.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Action ShowAllLists - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Action 2574700765 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>All lists</source>
+          <target state="translated">Tutte le liste</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Action ShowAllLists - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Action 478093921 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Compacts the view, so you only see the lists that have been enabled for search.</source>
+          <target state="translated">Comprimere la visualizzazione in modo da visualizzare solo le liste abilitate per la ricerca.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Action ShowEnabledLists - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 344073747 - Action 478093921 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Only enabled lists</source>
+          <target state="translated">Solo liste abilitate</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Lists) - Action ShowEnabledLists - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable tables for searching</source>
+          <target state="translated">Abilita tabelle per la ricerca</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - NamedType 1516037821" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to remove the current setup and insert the default?</source>
+          <target state="translated">Rimuovere il setup corrente e inserire l'impostazione predefinita?</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - NamedType ResetQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Control 1599953061 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the table.</source>
+          <target state="translated">Specifica il nome della tabella.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Control ObjectCaption - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Control 1599953061 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table Name</source>
+          <target state="translated">Nome tabella</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Control ObjectCaption - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Control 568116884 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the ID of the table. </source>
+          <target state="translated">Specifica l'ID della tabella. </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Control ObjectID - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Control 568116884 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table No.</source>
+          <target state="translated">Nr. tabella</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Control ObjectID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Control 3986492796 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether this table is included in search.</source>
+          <target state="translated">Specifica se la tabella è inclusa nella ricerca.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Control TableIsEnabledCtrl - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Control 3986492796 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable Search</source>
+          <target state="translated">Abilita ricerca</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Control TableIsEnabledCtrl - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Control 3669144757 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies which role the search setup is valid for.</source>
+          <target state="translated">Specifica il ruolo per cui è valida l'impostazione di ricerca.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Control RoleName - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Control 3669144757 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Choose among tables for role</source>
+          <target state="translated">Scegli tra tabelle per ruolo</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Control RoleName - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Control 580853590 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether only the enabled tables are shown or all tables are shown.</source>
+          <target state="translated">Specifica se vengono visualizzate solo le tabelle abilitate o tutte le tabelle.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Control ShowAll - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Control 580853590 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show only search enabled tables</source>
+          <target state="translated">Mostra solo le tabelle abilitate alla ricerca</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Control ShowAll - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Action 2402477966 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Removes the current selection for this rolecenter and inserts the default table selection.</source>
+          <target state="translated">Rimuove la selezione corrente per questo RoleCenter e inserisce la selezione di tabella predefinita.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Action ResetSetup - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Action 2402477966 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reset to default</source>
+          <target state="translated">Ripristina i valori predefiniti</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Action ResetSetup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Action 4207440265 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select this action if you want to see all tables and/or select more tables to be included in the search.</source>
+          <target state="translated">Selezionare questa azione se si desidera visualizzare tutte le tabelle e/o selezionare più tabelle da includere nella ricerca.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Action ShowAllTables - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Action 4207440265 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>All tables</source>
+          <target state="translated">Tutte le tabelle</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Action ShowAllTables - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Action 2618468921 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Compacts the view, so you only see the tables that have been selected for search.</source>
+          <target state="translated">Compatta la vista in modo da visualizzare solo le tabelle selezionate per la ricerca.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Action ShowFilteredTables - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1032144280 - Action 2618468921 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Only enabled tables</source>
+          <target state="translated">Solo tabelle abilitate</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Foundation.DataSearch)(LookupHint=Page Data Search Setup (Table) List - Action ShowFilteredTables - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PageExtension 3918992016 - Action 1846755250 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search across a predefined set of tables for this role.</source>
+          <target state="translated">Eseguire la ricerca di questo ruolo in un set predefinito di tabelle.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3470244815</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3918992016 - Action 1846755250 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in data</source>
+          <target state="translated">Cerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3470244815</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2304533500 - Action 1846755250 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search across a predefined set of tables for this role.</source>
+          <target state="translated">Eseguire la ricerca di questo ruolo in un set predefinito di tabelle.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2458191494</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2304533500 - Action 1846755250 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in data</source>
+          <target state="translated">Cerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2458191494</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3920336408 - Action 1846755250 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search across a predefined set of tables for this role.</source>
+          <target state="translated">Eseguire la ricerca di questo ruolo in un set predefinito di tabelle.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 4109301636</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3920336408 - Action 1846755250 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in data</source>
+          <target state="translated">Cerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 4109301636</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1882099586 - Action 1846755250 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search across a predefined set of tables for this role.</source>
+          <target state="translated">Eseguire la ricerca di questo ruolo in un set predefinito di tabelle.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2747922353</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1882099586 - Action 1846755250 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in data</source>
+          <target state="translated">Cerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2747922353</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2592606864 - Action 1846755250 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search across a predefined set of tables for this role.</source>
+          <target state="translated">Eseguire la ricerca di questo ruolo in un set predefinito di tabelle.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3365016562</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2592606864 - Action 1846755250 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in data</source>
+          <target state="translated">Cerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3365016562</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1798731205 - Action 1846755250 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search across a predefined set of tables for this role.</source>
+          <target state="translated">Eseguire la ricerca di questo ruolo in un set predefinito di tabelle.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3353361819</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1798731205 - Action 1846755250 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in data</source>
+          <target state="translated">Cerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3353361819</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2433752065 - Action 1846755250 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search across a predefined set of tables for this role.</source>
+          <target state="translated">Eseguire la ricerca di questo ruolo in un set predefinito di tabelle.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 1843660047</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2433752065 - Action 1846755250 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in data</source>
+          <target state="translated">Cerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 1843660047</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4257341140 - Action 1846755250 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search across a predefined set of tables for this role.</source>
+          <target state="translated">Eseguire la ricerca di questo ruolo in un set predefinito di tabelle.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 1267036282</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4257341140 - Action 1846755250 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in data</source>
+          <target state="translated">Cerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 1267036282</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 24589904 - Action 1846755250 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search across a predefined set of tables for this role.</source>
+          <target state="translated">Eseguire la ricerca di questo ruolo in un set predefinito di tabelle.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3703463247</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 24589904 - Action 1846755250 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in data</source>
+          <target state="translated">Cerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3703463247</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 146764562 - Action 1846755250 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search across a predefined set of tables for this role.</source>
+          <target state="translated">Eseguire la ricerca di questo ruolo in un set predefinito di tabelle.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 1696917291</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 146764562 - Action 1846755250 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in data</source>
+          <target state="translated">Cerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 1696917291</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1193268780 - Action 1846755250 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search across a predefined set of tables for this role.</source>
+          <target state="translated">Eseguire la ricerca di questo ruolo in un set predefinito di tabelle.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2035704742</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1193268780 - Action 1846755250 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in data</source>
+          <target state="translated">Cerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2035704742</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2630671652 - Action 1846755250 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search across a predefined set of tables for this role.</source>
+          <target state="translated">Eseguire la ricerca di questo ruolo in un set predefinito di tabelle.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 1007119265</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2630671652 - Action 1846755250 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in data</source>
+          <target state="translated">Cerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 1007119265</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3300909889 - Action 1846755250 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search across a predefined set of tables for this role.</source>
+          <target state="translated">Eseguire la ricerca di questo ruolo in un set predefinito di tabelle.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3738778758</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3300909889 - Action 1846755250 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in data</source>
+          <target state="translated">Cerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3738778758</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4082266850 - Action 1846755250 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search across a predefined set of tables for this role.</source>
+          <target state="translated">Eseguire la ricerca di questo ruolo in un set predefinito di tabelle.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3782393827</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4082266850 - Action 1846755250 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search in data</source>
+          <target state="translated">Cerca nei dati</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3782393827</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

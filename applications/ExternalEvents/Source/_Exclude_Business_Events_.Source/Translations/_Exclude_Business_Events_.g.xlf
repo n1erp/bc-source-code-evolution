@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="_Exclude_Business_Events_">
+    <body>
+      <group id="body">
+        <trans-unit id="EnumExtension 1073648014 - EnumValue 2780231548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1178123344">
+          <source>Accounts Payable</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension External Events Category - EnumValue Accounts Payable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1073648014 - EnumValue 2503257466 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1178123344">
+          <source>Accounts Receivable</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension External Events Category - EnumValue Accounts Receivable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1073648014 - EnumValue 4219020610 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1178123344">
+          <source>Job Queue</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension External Events Category - EnumValue Job Queue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1073648014 - EnumValue 516772649 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1178123344">
+          <source>Opportunities</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension External Events Category - EnumValue Opportunities - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1073648014 - EnumValue 1554716946 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1178123344">
+          <source>Purchasing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension External Events Category - EnumValue Purchasing - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1073648014 - EnumValue 1406942772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1178123344">
+          <source>Sales</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension External Events Category - EnumValue Sales - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,1405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="is-IS" original="Sales Lines Suggestions">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 350817751 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attachment Mapping</source>
+          <target state="translated">Viðhengisvörpun</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Table Attachment Mapping - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 350817751 - NamedType 70390104" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The %1 is not of type numeric. Do you want to continue?</source>
+          <target state="translated">%1 er ekki tölustafir. Á að halda áfram?</target>
+          <note from="Developer" annotates="general" priority="2">%1 = column type field caption(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Table Attachment Mapping - NamedType MismatchColumnTypeQst)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 350817751 - Field 3695619268 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Action</source>
+          <target state="translated">Dálkaaðgerð</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Table Attachment Mapping - Field Column Action - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 350817751 - Field 1881355371 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Name</source>
+          <target state="translated">Heiti dálks</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Table Attachment Mapping - Field Column Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 350817751 - Field 2012224114 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Type</source>
+          <target state="translated">Gerð dálks</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Table Attachment Mapping - Field Column Type - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 350817751 - Field 883711285 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <target state="translated">Færslunr.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Table Attachment Mapping - Field Entry No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1570782828 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapping Cache</source>
+          <target state="translated">Skyndiminni vörpunar</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Table Mapping Cache - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1570782828 - Field 692111310 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Identity Hash</source>
+          <target state="translated">Tætigildi skráarauðkennis</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Table Mapping Cache - Field File Identity Hash - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 1570782828 - Field 668720920 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapping</source>
+          <target state="translated">Vörpun</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Table Mapping Cache - Field Mapping - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 4142375258 - NamedType 796759889" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1\n%2</source>
+          <target state="translated">%1\n%2</target>
+          <note from="Developer" annotates="general" priority="2">%1 = first line, %2 = second line.(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Codeunit Csv Handler - NamedType ConcatTwoLinesLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 4142375258 - NamedType 1582423408" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Handler not initialized</source>
+          <target state="translated">Hald ekki frumstillt</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Codeunit Csv Handler - NamedType HandlerNotInitializedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 4142375258 - NamedType 3843836454" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cannot process input data. Either the data is not in a valid CSV format or data exceeds the maximum length supported.</source>
+          <target state="translated">Ekki er hægt að vinna úr inntaksgögnum. Annaðhvort eru gögnin ekki á gildu CSV sniði eða gögnin eru yfir studdri hámarkslengd.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Codeunit Csv Handler - NamedType InvalidCsvDataErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 4142375258 - NamedType 1979603942" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invalid File Configuration</source>
+          <target state="translated">Ógild grunnstillingarskrá</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Codeunit Csv Handler - NamedType InvalidFileConfigurationErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3913013427 - NamedType 1949278419" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select a file to upload</source>
+          <target state="translated">Veljið skrá til að hlaða upp</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Codeunit Sales Line From Attachment - NamedType FileUploadCaptionLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attachment Mapping</source>
+          <target state="translated">Viðhengisvörpun</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - NamedType 3157076884" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>See all</source>
+          <target state="translated">Sjá allt</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - NamedType ColumnValuesCaptionTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 1532031853 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the character that separates each column in the attached file.</source>
+          <target state="translated">Tilgreinir stafinn sem aðskilur hvern dálk í viðhengdu skránni.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control ColumnSeparator - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 1532031853 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Separator</source>
+          <target state="translated">Dálkaskiltákn</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control ColumnSeparator - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 4195610322 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the character that separates integer and fractional part of number.</source>
+          <target state="translated">Tilgreinir stafinn sem aðgreinir heiltölu og aukastafi tölu.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control DecimalSeparator - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 4195610322 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Decimal Separator</source>
+          <target state="translated">Tugabrotsskiltákn</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control DecimalSeparator - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 4111650780 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the sample row data for each column from the attached file.</source>
+          <target state="translated">Tilgreinir gögn línudæmis fyrir hvern dálk úr viðhengdu skránni.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control ColumnAction - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 4111650780 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column action</source>
+          <target state="translated">Dálkaaðgerð</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control ColumnAction - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 3031911786 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the data type of the column from the attached file.</source>
+          <target state="translated">Tilgreinir gagnagerð dálksins úr viðhengdu skránni.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control ColumnType - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 3031911786 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Type</source>
+          <target state="translated">Gerð dálks</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control ColumnType - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 2165155714 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the column contains product information.</source>
+          <target state="translated">Tilgreinir hvort dálkurinn inniheldur afurðarupplýsingar.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control ColumnValues - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 2165155714 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column values</source>
+          <target state="translated">Dálkagildi</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control ColumnValues - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 329134311 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line number from the attached file.</source>
+          <target state="translated">Tilgreinir línunúmerið úr viðhengdu skránni.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control Entry No - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 2090125581 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the column name from the attached file.</source>
+          <target state="translated">Tilgreinir heiti dálksins úr viðhengdu skránni.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control PreviewColumnName - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 2090125581 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Name</source>
+          <target state="translated">Heiti dálks</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control PreviewColumnName - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 2583943351 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the column contains the quantity.</source>
+          <target state="translated">Tilgreinir hvort dálkurinn inniheldur magnið.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control SampleValue - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1432604134 - Control 2583943351 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample Value</source>
+          <target state="translated">Dæmi um gildi</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Attachment Mapping Part - Control SampleValue - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapped &amp; Selected column values in the file</source>
+          <target state="translated">Vörpuð og valin dálkagildi í skránni</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 3000577141 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <target state="translated">Þetta er myndaður dálkur og er ekki með ábendingu.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Control Colum3 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 3053981594 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <target state="translated">Þetta er myndaður dálkur og er ekki með ábendingu.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Control Column0 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 2416284977 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <target state="translated">Þetta er myndaður dálkur og er ekki með ábendingu.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Control Column1 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 1778588360 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <target state="translated">Þetta er myndaður dálkur og er ekki með ábendingu.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Control Column2 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 1309800766 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <target state="translated">Þetta er myndaður dálkur og er ekki með ábendingu.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Control Column4 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 672104149 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <target state="translated">Þetta er myndaður dálkur og er ekki með ábendingu.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Control Column5 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 34407532 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <target state="translated">Þetta er myndaður dálkur og er ekki með ábendingu.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Control Column6 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 3691678211 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <target state="translated">Þetta er myndaður dálkur og er ekki með ábendingu.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Control Column7 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 3860587234 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <target state="translated">Þetta er myndaður dálkur og er ekki með ábendingu.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Control Column8 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 3222890617 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This is a generated column and does not have a tooltip.</source>
+          <target state="translated">Þetta er myndaður dálkur og er ekki með ábendingu.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Control Column9 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 415504711 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line number.</source>
+          <target state="translated">Tilgreinir línunúmer.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Control Id - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Control 415504711 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <target state="translated"> </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Control Id - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Action 3206779141 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Scroll to the left to view more columns.</source>
+          <target state="translated">Flettið til vinstri til að sjá fleiri dálka.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Action Left - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Action 3206779141 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Scroll Left</source>
+          <target state="translated">Fletta til vinstri</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Action Left - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Action 1644645076 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Scroll to the right to view more columns.</source>
+          <target state="translated">Flettið til hægri til að sjá fleiri dálka.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Action Right - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1845246599 - Action 1644645076 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Scroll Right</source>
+          <target state="translated">Fletta til hægri</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Item Info. From  File - Action Right - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest sales lines from file</source>
+          <target state="translated">Fá tillögur að sölulínum úr skrá</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 3195760569" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapped columns %1.</source>
+          <target state="translated">Varpaðir dálkar %1.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = all mapped column captions.(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - NamedType AttachmentMappingLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 119650544" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Data is too large to process. Please reduce the number of rows in the file.</source>
+          <target state="translated">Gögnin eru of stór til að vinna úr þeim. Fækkaðu línufjöldanum í skránni.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - NamedType DataTooLargeErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 3686282364" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fetching search terms from file...</source>
+          <target state="translated">Sækir leitarorð úr skrá...</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - NamedType FetchingSearchTermsProgressLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 976545376" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generating sales line suggestions from the search terms...</source>
+          <target state="translated">Mynda tillögur að sölulínum úr leitarorðum...</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - NamedType GeneratingSalesLinesProgressLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 106193139" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1: %2</source>
+          <target state="translated">%1: %2</target>
+          <note from="Developer" annotates="general" priority="2">%1 = column caption, %2 = column value.(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - NamedType MappedInfoLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 2535605401" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column with Product information not found in the input data.</source>
+          <target state="translated">Dálkur með afurðarupplýsingum finnst ekki í inntaksgögnunum.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - NamedType ProdInfoColumnNotFoundErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 2004178311" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product Information</source>
+          <target state="translated">Vöruupplýsingar</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - NamedType ProductInfoTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 3956808132" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest sales lines from data in %1. </source>
+          <target state="translated">Fá tillögur að sölulínum úr gögnum í %1. </target>
+          <note from="Developer" annotates="general" priority="2">%1 = file name.(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - NamedType PromptPart1Lbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 762415205" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use %1 as the column separator.</source>
+          <target state="translated">Notið %1 sem dálkaskil.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = column separator.(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - NamedType PromptPart2Lbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 3470757885" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target state="translated">Magn</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - NamedType QuantityTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 3291173508" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 suggestions were generated from %2 lines in the file.</source>
+          <target state="translated">%1 tillögur voru búnar til úr %2 línum í skránni.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = number of suggestions, %2 = number of lines in the file.(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - NamedType SuggestionStatusTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - NamedType 2632184401" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <target state="translated">Mælieining</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - NamedType UoMTok)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Control 3267220643 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggested sales lines</source>
+          <target state="translated">Tillögur að sölulínum</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - Control SalesLinesSub - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Control 3513094726 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Mapping</source>
+          <target state="translated">Dálkavörpun</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - Control AttachmentMappingPart - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Control 939004168 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the search confidence to use when generating sales line suggestions.</source>
+          <target state="translated">Tilgreinir öryggisstig leitar sem skal notast við þegar óskað er eftir tillögum að sölulínum.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - Control MatchingStyle - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Control 939004168 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Matching</source>
+          <target state="translated">Samsvörun</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - Control MatchingStyle - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Control 1261765055 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether to show lines or lines and confidence about the sales line suggestions when possible.</source>
+          <target state="translated">Tilgreinir hvort eingöngu skuli birta línur eða línur ásamt öryggisstigi tillaga að sölulínum þegar það er í boði.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - Control ViewOptions - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Control 1261765055 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View</source>
+          <target state="translated">Skoða</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - Control ViewOptions - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Control 1261765055 - Property 62802879" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines only, Lines and Confidence</source>
+          <target state="translated">Aðeins línur, línur og öryggisstig</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - Control ViewOptions - Property OptionCaption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Action 788258546 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard sales line suggestions proposed by Copilot.</source>
+          <target state="translated">Hunsa tillögur að sölulínum frá Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - Action Cancel - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Action 788258546 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard</source>
+          <target state="translated">Fleygja</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - Action Cancel - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Action 2626368477 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate sales line suggestions from Copilot.</source>
+          <target state="translated">Fá tillögur að sölulínum frá Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - Action Generate - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Action 2626368477 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate</source>
+          <target state="translated">Fá tillögur</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - Action Generate - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Action 2079045816 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep sales line suggestions proposed by Copilot.</source>
+          <target state="translated">Halda áfram að fá tillögur að sölulínum frá Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - Action OK - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3913013427 - Action 2079045816 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Insert</source>
+          <target state="translated">Setja inn</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Page Sales Line From Attachment - Action OK - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 3695619268 - EnumValue 785863684 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ignore</source>
+          <target state="translated">Hunsa</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Enum Column Action - EnumValue Ignore - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 3695619268 - EnumValue 293613853 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use (Product)</source>
+          <target state="translated">Nota (afurð)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Enum Column Action - EnumValue Product Info. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 3695619268 - EnumValue 2998532381 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use (Quantity)</source>
+          <target state="translated">Nota (magn)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Enum Column Action - EnumValue Quantity Info. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 3695619268 - EnumValue 478309233 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use (Unit of Measure)</source>
+          <target state="translated">Notkun (mælieining)</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Enum Column Action - EnumValue UoM Info. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2012224114 - EnumValue 617522584 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Boolean</source>
+          <target state="translated">Boole-gildi</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Enum Column Type - EnumValue Boolean - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2012224114 - EnumValue 3192175264 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target state="translated">Dagsetning</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Enum Column Type - EnumValue Date - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2012224114 - EnumValue 2272340397 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number</source>
+          <target state="translated">Númer</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Enum Column Type - EnumValue Number - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2012224114 - EnumValue 1821279055 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Text</source>
+          <target state="translated">Texti</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Enum Column Type - EnumValue Text - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2012224114 - EnumValue 4294440508 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unknown</source>
+          <target state="translated">Ekki vitað</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document.Attachment)(LookupHint=Enum Column Type - EnumValue Unknown - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Line AI Suggestion</source>
+          <target state="translated">Tillaga að sölulínu frá gervigreind</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 2865515310 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Secondary Search Terms</source>
+          <target state="translated">Aukaleitarorð</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field Additional Search Terms - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 3865998304 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confidence</source>
+          <target state="translated">Öryggisstig</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field Confidence - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 3461834954 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">Lýsing</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field Description - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 3320823955 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target state="translated">Línunr.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field Line No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 1740238019 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line Style</source>
+          <target state="translated">Línustíll</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field Line Style - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 4200184881 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="translated">Nr.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field No. - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 3413278817 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Search Terms</source>
+          <target state="translated">Aðalleitarorð</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field Primary Search Terms - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 2704404533 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Quantity in the Sales Unit of Measure defined on the Item card.</source>
+          <target state="translated">Tilgreinir magn í þeirri sölumælieiningu sem skilgreind er á birgðaspjaldi.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field Quantity - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 2704404533 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target state="translated">Magn</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field Quantity - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 1178925085 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Line Record ID</source>
+          <target state="translated">Færslukenni upprunalínu</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field Source Line Record ID - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 1878130204 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target state="translated">Gerð</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field Type - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 2385270358 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unit of measure code of the item on the line.</source>
+          <target state="translated">Tilgreinir mælieiningarkóða vörunnar í línunni.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field Unit of Measure Code - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 2385270358 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure Code</source>
+          <target state="translated">Mælieiningarkóði</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field Unit of Measure Code - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 3450651614 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the variant of the item on the line.</source>
+          <target state="translated">Tilgreinir afbrigði vöru í línu.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field Variant Code - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3823360411 - Field 3450651614 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variant Code</source>
+          <target state="translated">Afbrigðiskóði</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Sales Line AI Suggestions - Field Variant Code - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3287893359 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search API Response</source>
+          <target state="translated">Svörun forritaskila leitar</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Search API Response - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3287893359 - Field 2219487564 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Score</source>
+          <target state="translated">Stig</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Search API Response - Field Score - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3287893359 - Field 230895448 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SysId</source>
+          <target state="translated">Kerfisauðkenni</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Table Search API Response - Field SysId - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1025617641 - NamedType 312753440" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Blanket Sales Order for %1. Please rephrase the description and try again.</source>
+          <target state="translated">Copilot fann ekki standandi sölupöntun fyrir „%1“ sem óskað var eftir. Umorða skal lýsinguna og reyna aftur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Customer Name(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit BlanketSalesOrderLookup - NamedType NoDocumentFound1Err)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1025617641 - NamedType 660472785" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Blanket Sales Order %1. Please rephrase the description and try again.</source>
+          <target state="translated">Copilot fann ekki standandi sölupöntunina „%1“ sem óskað var eftir. Umorða skal lýsinguna og reyna aftur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit BlanketSalesOrderLookup - NamedType NoDocumentFound2Err)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1025617641 - NamedType 2590881762" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot found the Blanket Sales Order %1, but it does not have any relevant lines.</source>
+          <target state="translated">Copilot fann standandi sölupöntun „%1“ en hún inniheldur engar viðeigandi línur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit BlanketSalesOrderLookup - NamedType NoLinesFoundInTheDocumentErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 565410002 - NamedType 3044723600" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copying from Blanket Order...</source>
+          <target state="translated">Afritar úr standandi pöntun ...</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit Sales Line Utility - NamedType CopyingFromBlanketOrderLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 565410002 - NamedType 2074848957" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inserting %1 of %2</source>
+          <target state="translated">Setur inn %1 af %2</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Counter, %2 = Total Lines(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit Sales Line Utility - NamedType InsertingSalesLineLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 565410002 - NamedType 4072210860" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Preparing %1 of %2</source>
+          <target state="translated">Undirbýr %1 af %2</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Counter, %2 = Total Lines(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit Sales Line Utility - NamedType PreparingSalesLineLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 565410002 - NamedType 3994768048" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Processing lines... \#1#########################################################################################</source>
+          <target state="translated">Vinnur úr línum... \#1#########################################################################################</target>
+          <note from="Developer" annotates="general" priority="2">#1 = PreparingSalesLineLbl or InsertingSalesLineLbl (Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit Sales Line Utility - NamedType ProcessingLinesLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 565410002 - NamedType 3213555906" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There was an error while copying the line with No. %1, Description %2, Quantity %3.</source>
+          <target state="translated">Villa kom upp við afritun línu með nr.: %1, lýsingu: %2 og magni: %3.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = No., %2 = Description, %3 = Quantity(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit Sales Line Utility - NamedType SalesLineCopyErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2168830104 - NamedType 2017654920" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sorry, something went wrong. Please rephrase and try again.</source>
+          <target state="translated">Því miður fór eitthvað úrskeiðis. Umorðið og reynið aftur.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit Sales Lines Suggestions Impl. - NamedType ChatCompletionResponseErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2168830104 - NamedType 4271172643" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You cannot copy lines from more than one document. Please rephrase the description.</source>
+          <target state="translated">Ekki er hægt að afrita línur af fleiri en einu fylgiskjal. Umorðaðu lýsinguna.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit Sales Lines Suggestions Impl. - NamedType CopyFromMultipleDocsMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2168830104 - NamedType 1881788223" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the document. Please rephrase the description.</source>
+          <target state="translated">Copilot fann ekki skjalið. Umorða skal lýsinguna.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit Sales Lines Suggestions Impl. - NamedType DocumentNotFoundMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2168830104 - NamedType 1006786137" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested items. Please rephrase the description.</source>
+          <target state="translated">Copilot fann ekki umbeðnar vörur. Vinsamlegast umorðið lýsinguna.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit Sales Lines Suggestions Impl. - NamedType ItemNotFoundMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2168830104 - NamedType 4191428374" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are no suggestions for this description. Please rephrase it.</source>
+          <target state="translated">Engar tillögur fundust fyrir þessa lýsingu. Umorða skal lýsinguna.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit Sales Lines Suggestions Impl. - NamedType NoSalesLinesSuggestionsMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2168830104 - NamedType 988285533" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 header is not initialized</source>
+          <target state="translated">%1 haus er ekki frumstilltur</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Document Type(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit Sales Lines Suggestions Impl. - NamedType SalesHeaderNotInitializedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2168830104 - NamedType 3594081147" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot does not support the specified document type. Please rephrase the description.</source>
+          <target state="translated">Copilot styður ekki tilgreinda tegund skjals. Umorða skal lýsinguna.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit Sales Lines Suggestions Impl. - NamedType UnknownDocTypeMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2984088485 - NamedType 312753440" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Posted Sales Invoice for %1. Please rephrase the description and try again.</source>
+          <target state="translated">Copilot fann ekki bókaðan sölureikning fyrir „%1“ sem óskað var eftir. Umorða skal lýsinguna og reyna aftur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Customer Name(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit SalesInvoiceLookup - NamedType NoDocumentFound1Err)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2984088485 - NamedType 660472785" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Posted Sales Invoice %1. Please rephrase the description and try again.</source>
+          <target state="translated">Copilot fann ekki bókaða sölureikninginn „%1“ sem óskað var eftir. Umorða skal lýsinguna og reyna aftur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit SalesInvoiceLookup - NamedType NoDocumentFound2Err)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2984088485 - NamedType 2590881762" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot found the Posted Sales Invoice %1, but it does not have any relevant lines.</source>
+          <target state="translated">Copilot fann bókaða sölureikninginn „%1“ en hann inniheldur engar viðeigandi línur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit SalesInvoiceLookup - NamedType NoLinesFoundInTheDocumentErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3826339144 - NamedType 312753440" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Sales Order for %1. Please rephrase the description and try again.</source>
+          <target state="translated">Copilot fann ekki sölupöntun fyrir „%1“ sem óskað var eftir. Umorða skal lýsinguna og reyna aftur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Customer Name(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit SalesOrderLookup - NamedType NoDocumentFound1Err)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3826339144 - NamedType 660472785" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Sales Order %1. Please rephrase the description and try again.</source>
+          <target state="translated">Copilot fann ekki sölupöntunina „%1“ sem óskað var eftir. Umorða skal lýsinguna og reyna aftur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit SalesOrderLookup - NamedType NoDocumentFound2Err)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3826339144 - NamedType 2590881762" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot found the Sales Order %1, but it does not have any relevant lines.</source>
+          <target state="translated">Copilot fann sölupöntunina „%1“ en hún inniheldur engar viðeigandi línur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit SalesOrderLookup - NamedType NoLinesFoundInTheDocumentErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 595909628 - NamedType 312753440" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Sales Quote for %1. Please rephrase the description and try again.</source>
+          <target state="translated">Copilot fann ekki sölutilboð fyrir „%1“ sem óskað var eftir. Umorða skal lýsinguna og reyna aftur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Customer Name(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit SalesQuoteLookup - NamedType NoDocumentFound1Err)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 595909628 - NamedType 660472785" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Sales Quote %1. Please rephrase the description and try again.</source>
+          <target state="translated">Copilot fann ekki sölutilboðið „%1“ sem óskað var eftir. Umorða skal lýsinguna og reyna aftur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit SalesQuoteLookup - NamedType NoDocumentFound2Err)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 595909628 - NamedType 2590881762" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot found the Sales Quote %1, but it does not have any relevant lines.</source>
+          <target state="translated">Copilot fann sölutilboðið „%1“ en það inniheldur engar viðeigandi línur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit SalesQuoteLookup - NamedType NoLinesFoundInTheDocumentErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2354095198 - NamedType 312753440" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Posted Sales Shipment for %1. Please rephrase the description and try again.</source>
+          <target state="translated">Copilot fann ekki bókaða söluafhendingu fyrir „%1“ sem óskað var eftir. Umorða skal lýsinguna og reyna aftur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Customer Name(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit SalesShipmentLookup - NamedType NoDocumentFound1Err)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2354095198 - NamedType 660472785" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot could not find the requested Posted Sales Shipment %1. Please rephrase the description and try again.</source>
+          <target state="translated">Copilot fann ekki bókuðu söluafhendinguna „%1“ sem óskað var eftir. Umorða skal lýsinguna og reyna aftur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit SalesShipmentLookup - NamedType NoDocumentFound2Err)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 2354095198 - NamedType 2590881762" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot found the Posted Sales Shipment %1, but it does not have any relevant lines.</source>
+          <target state="translated">Copilot fann bókuðu söluafhendinguna „%1“ en hún inniheldur engar viðeigandi línur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Document No.(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit SalesShipmentLookup - NamedType NoLinesFoundInTheDocumentErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 782762290 - Method 3458795186 - NamedType 142804890" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Looking through item information</source>
+          <target state="translated">Leitar í upplýsingum um vöru</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit Search - Method SearchMultiple - NamedType SearchSetupProgressLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 782762290 - Method 3458795186 - NamedType 2207208694" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Looking for items matching: %1</source>
+          <target state="translated">Leitar að vörum sem samsvara: %1</target>
+          <note from="Developer" annotates="general" priority="2">%1= list of item names(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit Search - Method SearchMultiple - NamedType SearchingItemsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 3796826645 - NamedType 2568840905" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There was an error with sending the call to Copilot. Log a Business Central support request about this.</source>
+          <target state="translated">Villa kom upp við að senda símtal til Copilot. Sendið inn þjónustubeiðni fyrir Business Central varðandi þetta.</target>
+          <note from="Developer" annotates="general" priority="2">Copilot is a Microsoft service name and must not be translated(Namespace=Microsoft.Sales.Document)(LookupHint=Codeunit SLS Prompts - NamedType ConstructingPromptFailedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Search Setup</source>
+          <target state="translated">Uppsetning vöruleitar</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Item Search Setup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Control 513339096 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status of the item search capability.</source>
+          <target state="translated">Staða leitareiginleika vöru.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Item Search Setup - Control Status - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Control 513339096 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Search Capability</source>
+          <target state="translated">Leitareiginleiki vöru</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Item Search Setup - Control Status - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Action 1243361185 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disable the item search capability.</source>
+          <target state="translated">Slökkva skal á leitareiginleika vörunnar.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Item Search Setup - Action DisableItemSearch - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Action 1243361185 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disable Item Search</source>
+          <target state="translated">Slökkva á leit að vöru</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Item Search Setup - Action DisableItemSearch - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Action 1181041590 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable the item search capability.</source>
+          <target state="translated">Kveikja skal á leitareiginleika vörunnar.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Item Search Setup - Action EnableItemSearch - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Action 1181041590 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable Item Search</source>
+          <target state="translated">Kveikja á leit að vöru</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Item Search Setup - Action EnableItemSearch - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Action 2026913255 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Refresh status of the item search capability.</source>
+          <target state="translated">Uppfærið stöðu leitareiginleika vörunnar.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Item Search Setup - Action Refresh - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 1992245632 - Action 2026913255 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Refresh Status</source>
+          <target state="translated">Uppfæra stöðu</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Item Search Setup - Action Refresh - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest Sales Lines</source>
+          <target state="translated">Fá tillögur að sölulínum</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - NamedType 1766422154" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You've exceeded the maximum number of allowed characters by %1. Please rephrase and try again.</source>
+          <target state="translated">Farið var %1 staf yfir hámarksfjölda leyfilegra stafa. Umorðið og reynið aftur.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Integer(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - NamedType SearchQueryLengthExceededErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - NamedType 4024957973" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please provide a query to generate sales lines suggestions.</source>
+          <target state="translated">Slá skal inn leitarfyrirspurn til að fá tillögur að sölulínum.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - NamedType SearchQueryNotProvidedErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Method 2342180516 - NamedType 452443000" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2</source>
+          <target state="translated">%1 %2</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Document Type, %2 = Document No.(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Method SetStatusLine - NamedType StatusLineDocSearchTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Method 2342180516 - NamedType 975367148" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>for %1</source>
+          <target state="translated">fyrir %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Customer Name, example: 1) Sales Order 1234 for Adatum 2) Sales Order 1234 for Adatum from 31/01/2021(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Method SetStatusLine - NamedType StatusLineFromCustomerTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Method 2342180516 - NamedType 801989576" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>from %1</source>
+          <target state="translated">úr %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Document Date, example: 1) Sales Order 1234 from 31/01/2021 2) Sales Order 1234 for Adatum from 31/01/2021(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Method SetStatusLine - NamedType StatusLineDocWithDocDateTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 3267220643 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggested sales lines</source>
+          <target state="translated">Tillögur að sölulínum</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Control SalesLinesSub - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 708048856 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter your search query here. You can use natural language to describe what you are looking for.</source>
+          <target state="translated">Sláið inn leitarfyrirspurnina hér. Hægt er að nota hversdagslegt orðalag til að lýsa því sem verið er að leita að.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Control SearchQueryTxt - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 708048856 - Property 1968111052" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Describe items and quantities or refer to existing documents to copy from</source>
+          <target state="translated">Lýsið vörunum og magni eða vísið í fyrirliggjandi skjöl til að afrita úr</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Control SearchQueryTxt - Property InstructionalText)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 708048856 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search Query</source>
+          <target state="translated">Leitarfyrirspurn</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Control SearchQueryTxt - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 939004168 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the search confidence to use when generating sales line suggestions.</source>
+          <target state="translated">Tilgreinir öryggisstig leitar sem skal notast við þegar óskað er eftir tillögum að sölulínum.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Control MatchingStyle - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 939004168 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Matching</source>
+          <target state="translated">Samsvörun</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Control MatchingStyle - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 1261765055 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether to show lines or lines and confidence about the sales line suggestions when possible.</source>
+          <target state="translated">Tilgreinir hvort eingöngu skuli birta línur eða línur ásamt öryggisstigi tillaga að sölulínum þegar það er í boði.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Control ViewOptions - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 1261765055 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View</source>
+          <target state="translated">Sjá</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Control ViewOptions - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Control 1261765055 - Property 62802879" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines only, Lines and Confidence</source>
+          <target state="translated">Aðeins línur, línur og öryggisstig</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Control ViewOptions - Property OptionCaption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 1305723869 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add line items</source>
+          <target state="translated">Bæta vörum við línu</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action AddLinesPrompts - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2068167414 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for adding a line item by description. Text in brackets describes the item to add.</source>
+          <target state="translated">Dæmi um kvaðningu um að bæta vörum við línu eftir lýsingu. Texti innan sviga lýsir vörunni sem skal bæta við.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action ItemSearchAddItemDescPrompt - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2068167414 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add item: [description]</source>
+          <target state="translated">Bæta vöru við: [lýsing]</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action ItemSearchAddItemDescPrompt - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2068167414 - Method 1377591017 - NamedType 3020314583" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add item: </source>
+          <target state="translated">Bæta vöru við: </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action ItemSearchAddItemDescPrompt - Method OnAction - NamedType AddItemsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2919546735 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for adding multiple line items. Text in brackets describes the items, separated by comma.</source>
+          <target state="translated">Dæmi um kvaðningu um að bæta nokkrum vörum við línu. Texti innan sviga lýsir vörunum sem eru aðskildar með kommu.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action ItemSearchAddItemDescriptionPrompt - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2919546735 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add items: [description 1, description 2, ...]</source>
+          <target state="translated">Bæta vörum við: [lýsing 1, lýsing 2 ...]</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action ItemSearchAddItemDescriptionPrompt - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2919546735 - Method 1377591017 - NamedType 3020314583" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add item: </source>
+          <target state="translated">Bæta vöru við: </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action ItemSearchAddItemDescriptionPrompt - Method OnAction - NamedType AddItemsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2693884628 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for adding a line item by item no. Text in brackets specifies the item to add.</source>
+          <target state="translated">Dæmi um kvaðningu um að bæta vöru við línu eftir vörunúmeri. Texti innan sviga tilgreinir vöruna sem skal bæta við.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action ItemSearchAddItemNoPrompt2 - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2693884628 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add item: [internal/external no.]</source>
+          <target state="translated">Bæta vöru við: [innra/ytra númer]</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action ItemSearchAddItemNoPrompt2 - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2693884628 - Method 1377591017 - NamedType 3020314583" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add item: </source>
+          <target state="translated">Bæta vöru við: </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action ItemSearchAddItemNoPrompt2 - Method OnAction - NamedType AddItemsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2308922586 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for adding a line item by quantity and description. Text in brackets describes the quantity and item to add.</source>
+          <target state="translated">Dæmi um kvaðningu um að bæta vörum við línu eftir magni og lýsingu. Texti innan sviga lýsir vörunni sem skal bæta við og tilgreinir magn.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action ItemSearchAddItemQtyDescPrompt - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2308922586 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add item: [quantity] [description]</source>
+          <target state="translated">Bæta vöru við: [magn] [lýsing]</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action ItemSearchAddItemQtyDescPrompt - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2308922586 - Method 1377591017 - NamedType 3020314583" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add item: </source>
+          <target state="translated">Bæta vöru við: </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action ItemSearchAddItemQtyDescPrompt - Method OnAction - NamedType AddItemsLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 52385230 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy line items</source>
+          <target state="translated">Afrita vörur í línu</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action CopyFromOrderPrompts - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2367115722 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for copying specific items from another posted sales invoice. Texts in brackets specify item description and invoice number.</source>
+          <target state="translated">Dæmi um kvaðningu fyrir afritun tiltekinna vara af öðrum bókuðum sölureikningi. Textar innan sviga tilgreina vörulýsingu og númer reiknings.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action CopyItemsFromDocumentPrompt - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2367115722 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy items [description] from posted invoice [No.]</source>
+          <target state="translated">Afrita vörur [lýsing] af bókuðum reikningi [nr.]</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action CopyItemsFromDocumentPrompt - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2367115722 - Method 1377591017 - NamedType 884482731" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy specific items from sales invoice </source>
+          <target state="translated">Afrita tilgreindar vörur úr sölureikningi </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action CopyItemsFromDocumentPrompt - Method OnAction - NamedType CopyFromLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 3025385953 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for copying line items from a posted sales invoice. Text in brackets refers to the invoice.</source>
+          <target state="translated">Dæmi um kvaðningu um að afrita vörur í línu úr bókuðum sölureikningi. Texti innan sviga vísar til reikningsins.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action DocumentSearchCopyFromInvoicePrompt - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 3025385953 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy from posted invoice [No.]</source>
+          <target state="translated">Afrita úr bókuðum reikningi [nr.]</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action DocumentSearchCopyFromInvoicePrompt - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 3025385953 - Method 1377591017 - NamedType 884482731" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy from sales invoice </source>
+          <target state="translated">Afrita úr sölureikningi </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action DocumentSearchCopyFromInvoicePrompt - Method OnAction - NamedType CopyFromLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 55328991 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for copying line items from the customer's latest posted sales invoice.</source>
+          <target state="translated">Dæmi um kvaðningu um að afrita vörur í línu úr nýjasta bókaða sölureikningi viðskiptamanns.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action DocumentSearchCopyFromLastInvoicePrompt - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 55328991 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy from the latest posted invoice</source>
+          <target state="translated">Afrita úr síðasta bókaða reikningi</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action DocumentSearchCopyFromLastInvoicePrompt - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 55328991 - Method 1377591017 - NamedType 884482731" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy from the latest sales invoice</source>
+          <target state="translated">Afrita úr síðasta sölureikningi</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action DocumentSearchCopyFromLastInvoicePrompt - Method OnAction - NamedType CopyFromLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 3383781020 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample prompt for copying line items from another sales order. Text in brackets refers to the order.</source>
+          <target state="translated">Dæmi um kvaðningu um að afrita vörur í línu úr annarri sölupöntun. Texti innan sviga vísar til pöntunarinnar.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action DocumentSearchCopyFromOrderPrompt - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 3383781020 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy from order [No.]</source>
+          <target state="translated">Afrita af pöntun [nr.]</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action DocumentSearchCopyFromOrderPrompt - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 3383781020 - Method 1377591017 - NamedType 884482731" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy from sales order </source>
+          <target state="translated">Afrita úr sölupöntun </target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action DocumentSearchCopyFromOrderPrompt - Method OnAction - NamedType CopyFromLbl)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 745909125 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attach a file to get sales line suggestions from Copilot.</source>
+          <target state="translated">Hengja við skrá til að fá tillögur að sölulínum frá Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action Attach - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 745909125 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attach</source>
+          <target state="translated">Hengja við</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action Attach - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 788258546 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard sales line suggestions proposed by Copilot.</source>
+          <target state="translated">Hunsa tillögur að sölulínum frá Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action Cancel - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 788258546 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discard</source>
+          <target state="translated">Hunsa</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action Cancel - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2626368477 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate sales line suggestions from Copilot.</source>
+          <target state="translated">Fá tillögur að sölulínum frá Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action Generate - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2626368477 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate</source>
+          <target state="translated">Fá tillögur</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action Generate - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2079045816 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep sales line suggestions proposed by Copilot.</source>
+          <target state="translated">Halda áfram að fá tillögur að sölulínum frá Copilot.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action OK - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3823360411 - Action 2079045816 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Insert</source>
+          <target state="translated">Setja inn</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions - Action OK - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines proposed by Copilot</source>
+          <target state="translated">Línur sem Copilot leggur til</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions Sub - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 3865998304 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the confidence level of the suggested result.</source>
+          <target state="translated">Tilgreinir öryggisstig niðurstöðu sem lögð var til.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions Sub - Control Confidence - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 3461834954 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the suggested result.</source>
+          <target state="translated">Tilgreinir lýsingu niðurstöðu sem lögð var til.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions Sub - Control Description - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 3320823955 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line number of the suggested result.</source>
+          <target state="translated">Tilgreinir línunúmer niðurstöðu sem lögð var til.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions Sub - Control Line No. - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 4200184881 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the item number of the suggested result.</source>
+          <target state="translated">Tilgreinir vörunúmer niðurstöðu sem lögð var til.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions Sub - Control No. - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 2704404533 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the quantity of the suggested result.</source>
+          <target state="translated">Tilgreinir magn niðurstöðu sem lögð var til.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions Sub - Control Quantity - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 2067183205 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the search terms that were used to find the suggested results.</source>
+          <target state="translated">Tilgreinir hvaða leitarorð voru notuð til að finna niðurstöðurnar sem lagðar voru til.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions Sub - Control Search Terms - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 2067183205 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Search Terms</source>
+          <target state="translated">Leitarorð</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions Sub - Control Search Terms - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 2385270358 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unit of measure code of the suggested result.</source>
+          <target state="translated">Tilgreinir mælieiningarkóða niðurstöðunnar sem lögð var til.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions Sub - Control Unit of Measure Code - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3554963199 - Control 3450651614 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the variant code of the suggested result.</source>
+          <target state="translated">Tilgreinir afbrigðiskóða niðurstöðu sem lögð var til.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Page Sales Line AI Suggestions Sub - Control Variant Code - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PageExtension 2835147302 - Action 1213882201 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Get sales lines from file with Copilot</source>
+          <target state="translated">Fáið sölulínur úr skrá með Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3689007477</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2835147302 - Action 1213882201 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest sales lines from file</source>
+          <target state="translated">Fá tillögur að sölulínum úr skrá</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3689007477</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2835147302 - Action 3796035951 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Get sales lines suggestions from Copilot</source>
+          <target state="translated">Fá tillögur að sölulínum frá Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3689007477</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2835147302 - Action 3796035951 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest sales lines</source>
+          <target state="translated">Fá tillögur að sölulínum</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3689007477</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2835147302 - Action 1408386902 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot</source>
+          <target state="translated">Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3689007477</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2835147302 - Action 3441561851 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Get sales lines suggestions from Copilot</source>
+          <target state="translated">Fá tillögur að sölulínum frá Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3689007477</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2835147302 - Action 3441561851 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest sales lines</source>
+          <target state="translated">Fá tillögur að sölulínum</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 3689007477</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1651887775 - Action 1213882201 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Get sales lines from file with Copilot</source>
+          <target state="translated">Fáið sölulínur úr skrá með Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2026081320</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1651887775 - Action 1213882201 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest sales lines from file</source>
+          <target state="translated">Fá tillögur að sölulínum úr skrá</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2026081320</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1651887775 - Action 3796035951 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Get sales lines suggestions from Copilot</source>
+          <target state="translated">Fá tillögur að sölulínum frá Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2026081320</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1651887775 - Action 3796035951 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest sales lines</source>
+          <target state="translated">Fá tillögur að sölulínum</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2026081320</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1651887775 - Action 1408386902 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot</source>
+          <target state="translated">Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2026081320</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1651887775 - Action 3441561851 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Get sales lines suggestions from Copilot</source>
+          <target state="translated">Fá tillögur að sölulínum frá Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2026081320</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1651887775 - Action 3441561851 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest sales lines</source>
+          <target state="translated">Fá tillögur að sölulínum</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 2026081320</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 869280819 - Action 1213882201 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Get sales lines from file with Copilot</source>
+          <target state="translated">Fáið sölulínur úr skrá með Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 416138076</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 869280819 - Action 1213882201 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest sales lines from file</source>
+          <target state="translated">Fá tillögur að sölulínum úr skrá</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 416138076</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 869280819 - Action 3796035951 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Get sales lines suggestions from Copilot</source>
+          <target state="translated">Fá tillögur að sölulínum frá Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 416138076</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 869280819 - Action 3796035951 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest sales lines</source>
+          <target state="translated">Fá tillögur að sölulínum</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 416138076</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 869280819 - Action 1408386902 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot</source>
+          <target state="translated">Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 416138076</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 869280819 - Action 3441561851 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Get sales lines suggestions from Copilot</source>
+          <target state="translated">Fá tillögur að sölulínum frá Copilot</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 416138076</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 869280819 - Action 3441561851 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest sales lines</source>
+          <target state="translated">Fá tillögur að sölulínum</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Page 416138076</note>
+        </trans-unit>
+        <trans-unit id="Enum 2867768878 - EnumValue 3116416530 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>High</source>
+          <target state="translated">Hátt</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Enum Search Confidence - EnumValue High - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2867768878 - EnumValue 3592530208 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Low</source>
+          <target state="translated">Lágt</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Enum Search Confidence - EnumValue Low - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2867768878 - EnumValue 432767615 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Medium</source>
+          <target state="translated">Miðlungs</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Enum Search Confidence - EnumValue Medium - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 2867768878 - EnumValue 3371220206 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <target state="translated">Ekkert</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Enum Search Confidence - EnumValue None - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 3689863035 - EnumValue 1000799854 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balanced</source>
+          <target state="translated">Jöfnuð</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Enum Search Style - EnumValue Balanced - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 3689863035 - EnumValue 195412019 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Permissive</source>
+          <target state="translated">Víðtæk</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Enum Search Style - EnumValue Permissive - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 3689863035 - EnumValue 4014513261 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Precise</source>
+          <target state="translated">Nákvæm</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=Microsoft.Sales.Document)(LookupHint=Enum Search Style - EnumValue Precise - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="EnumExtension 2561585553 - EnumValue 1768486982 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales lines suggestions</source>
+          <target state="translated">Tillögur að sölulínum</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Enum 3058546390</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

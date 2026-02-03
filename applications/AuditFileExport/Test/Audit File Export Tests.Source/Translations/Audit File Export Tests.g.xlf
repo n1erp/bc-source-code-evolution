@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Audit File Export Tests">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 743631377 - NamedType 1484253947" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DEFAULT</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Audit File Export Test Helper - NamedType DefaultLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 743631377 - NamedType 458071301" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1%1%1%1</source>
+          <note from="Developer" annotates="general" priority="2">%1 - 1 or 2 or 3</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Audit File Export Test Helper - NamedType StandardAccNoTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 76686307 - NamedType 841626667" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Data Handling Test - NamedType GLEntriesTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 76686307 - NamedType 895813024" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Master Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Data Handling Test - NamedType MasterDataTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 76686307 - NamedType 1359106642" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Documents</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Data Handling Test - NamedType SourceDocsTxt</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3573492998 - EnumValue 1139653482 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1217862704">
+          <source>TEST</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Audit File Export Format Test - EnumValue TEST - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 428469576 - EnumValue 1715497560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2341503086">
+          <source>Standard Account Test</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Standard Account Type Test - EnumValue Standard Account Test - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Intrastat Core Tests">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 2018421470 - NamedType 296630764" size-unit="char" translate="yes" xml:space="preserve">
+          <source>http://</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Intrastat Report Test - NamedType HttpTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2018421470 - NamedType 606779940" size-unit="char" translate="yes" xml:space="preserve">
+          <source>www.microsoft.com</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Intrastat Report Test - NamedType InternetURLTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2018421470 - NamedType 2720663670" size-unit="char" translate="yes" xml:space="preserve">
+          <source>URL must be prefix with http.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Intrastat Report Test - NamedType InvalidURLTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2018421470 - NamedType 2078580476" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The number of %1 entries is incorrect.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Intrastat Report Line table</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Intrastat Report Test - NamedType LineCountErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2018421470 - NamedType 2059736959" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Intrastat Report Lines incorrectly created.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Intrastat Report Test - NamedType LineNotExistErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2018421470 - NamedType 2347920941" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You cannot delete contact number %1 because it is set up as an Intrastat contact in the Intrastat Setup window.</source>
+          <note from="Developer" annotates="general" priority="2">%1 - Contact No</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Intrastat Report Test - NamedType OnDelIntrastatContactErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2018421470 - NamedType 2695872657" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You cannot delete vendor number %1 because it is set up as an Intrastat contact in the Intrastat Setup window.</source>
+          <note from="Developer" annotates="general" priority="2">%1 - Vendor No</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Intrastat Report Test - NamedType OnDelVendorIntrastatContactErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2018421470 - NamedType 44845539" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Package Tracking No does not exist.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Intrastat Report Test - NamedType PackageTrackingNoErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2018421470 - NamedType 1853107356" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wrong Shipment Method Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Intrastat Report Test - NamedType ShptMethodCodeErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2018421470 - NamedType 308412515" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 must be 4 characters, for example, 9410 for October, 1994.</source>
+          <note from="Developer" annotates="general" priority="2">%1 - field caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Intrastat Report Test - NamedType StatPeriodFormatErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2018421470 - NamedType 913875334" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please check the month number.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Intrastat Report Test - NamedType StatPeriodMonthErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2018421470 - NamedType 3800651618" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 must be %2 in %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = FieldCaption(Quantity),%2 = SalesLine.Quantity,%3 = TableCaption(SalesShipmentLine).</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Intrastat Report Test - NamedType ValidationErr</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

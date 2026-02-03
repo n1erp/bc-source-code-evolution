@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="_Exclude_Bank Deposits Tests">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 2437925581 - NamedType 3158836378" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Batch Name must be %1 on %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 - Batch Name , %2 - Field Name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Bank Deposit Posting Tests - NamedType BatchNameErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2437925581 - NamedType 2230233351" size-unit="char" translate="yes" xml:space="preserve">
+          <source>A dimension used in Gen. Journal Line</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Bank Deposit Posting Tests - NamedType DimensionErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2437925581 - NamedType 2448139062" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unexpected G/L entries amount.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Bank Deposit Posting Tests - NamedType GLEntryErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2437925581 - Method 710346161 - NamedType 403291627" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reversed field is not calculated correctly.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Bank Deposit Posting Tests - Method VerifyReversedOnPostedBankDepositList - NamedType ReversedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1661462096 - NamedType 2932411483" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Validation error for Field: Posting Date,  Message = </source>
+          <note from="Developer" annotates="general" priority="2">Label contains error message for invalid posting date'Posting Date must have a value in Bank Deposit Header: No.=%1. It cannot be zero or empty. (Select Refresh to discard errors)'</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Page Bank Deposit - NamedType PostingDateErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1661462096 - NamedType 1026655711" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Code are not equal.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Page Bank Deposit - NamedType SourceCodeErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1661462096 - NamedType 3887901338" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Value must exist.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Page Bank Deposit - NamedType ValueMustExistMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3617257267 - NamedType 2813348554" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Report Bank Deposit - NamedType AmountCapTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3617257267 - NamedType 391211566" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AmountDue</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Report Bank Deposit - NamedType AmountDueCapTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3617257267 - NamedType 3755173550" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dim1Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Report Bank Deposit - NamedType DimensionCapTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3617257267 - NamedType 2189384443" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DimensionSetEntry__Dimension_Code_</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Report Bank Deposit - NamedType DimSetEntryDimensionCodeCapTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3617257267 - NamedType 122433925" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DimensionSetEntry2__Dimension_Code_</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Report Bank Deposit - NamedType DimSetEntryDimensionCodeTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3617257267 - NamedType 2811188244" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DimensionSetEntry2__Dimension_Value_Code_</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Report Bank Deposit - NamedType DimSetEntryDimensionValueCodeTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3617257267 - NamedType 169332164" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gen__Journal_Line__Account_Type_</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Report Bank Deposit - NamedType GenJournalLineAccountTypeCapTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3617257267 - NamedType 3279727263" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gen__Journal_Line_Applies_to_ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Report Bank Deposit - NamedType GenJournalLineAppliesToIDCapTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3617257267 - NamedType 786809466" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gen__Journal_Line__Document_Type_</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Report Bank Deposit - NamedType GenJournalLineDocumentTypeCapTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3617257267 - NamedType 1637247205" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted_Bank_Deposit_Line__Account_No__</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Report Bank Deposit - NamedType PostedBankDepositLineAccountNoCapTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3617257267 - NamedType 2496591366" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted_Bank_Deposit_Line__Account_Type_</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Report Bank Deposit - NamedType PostedBankDepositLineAccountTypeCapTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3617257267 - NamedType 1157132815" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted_Bank_Deposit_Line_Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UT Report Bank Deposit - NamedType PostedBankDepositLineAmountTxt</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

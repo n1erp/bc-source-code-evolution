@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Shopify Connector Test">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 228920709 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shpfy Test Fields</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 228920709 - Field 1669447124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BigInteger Field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field BigIntegerField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 228920709 - Field 2359708523 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blob Field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field BlobField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 228920709 - Field 710103738 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Boolean Field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field BooleanField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 228920709 - Field 616395089 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code Field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field CodeField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 228920709 - Field 335166434 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date Field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field DateField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 228920709 - Field 1158369997 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DateTime Field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field DateTimeField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 228920709 - Field 3467455547 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Decimal Field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field DecimalField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 228920709 - Field 2024373920 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Duration Field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field DurationField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 228920709 - Field 2240423559 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Guid Field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field GuidField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 228920709 - Field 2404345096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Integer Field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field IntegerField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 228920709 - Field 404504563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Option Field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field OptionField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 228920709 - Field 404504563 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>0,1,2,3,4,5,6,7,8,9</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field OptionField - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 228920709 - Field 4263934329 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Text Field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field TextField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 228920709 - Field 2900592393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Time Field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Test Fields - Field TimeField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 81801014 - NamedType 661492798" size-unit="char" translate="yes" xml:space="preserve">
+          <source>dummy@customer.com</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Initialize Test - NamedType DummyCustomerEmailLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 81801014 - NamedType 2187740059" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dummy Item Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Initialize Test - NamedType DummyItemDescriptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3559041724 - Method 1674925645 - NamedType 743633719" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Invoice Sync is not enabled for this shop.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Invoices Test - Method UnitTestExportWithoutSettingEnabled - NamedType PostedInvoiceSyncNotSetErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2648072336 - Method 2260759780 - NamedType 612099540" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Json data: %1 is not converted to: %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = the Json string, %2 = The expected results</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Json Helper Test - Method UnitTestGetArrayAsText - NamedType JConvertErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2648072336 - Method 2129983689 - NamedType 1704675670" size-unit="char" translate="yes" xml:space="preserve">
+          <source>JsonArray found at %1 in: %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Path, %2 = JsonToken</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Json Helper Test - Method UnitTestGetJsonArray - NamedType JsonArrayFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2648072336 - Method 2129983689 - NamedType 3658786421" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No JsonArray found at %1 in: %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Path, %2 = JsonToken</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Json Helper Test - Method UnitTestGetJsonArray - NamedType NoJsonArrayFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2648072336 - Method 2129983689 - NamedType 3352190234" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 does not match %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = the result, %21 = the expected result</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Json Helper Test - Method UnitTestGetJsonArray - NamedType NoMatchingResultErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2648072336 - Method 675384437 - NamedType 848416890" size-unit="char" translate="yes" xml:space="preserve">
+          <source>JsonObject found at %1, in %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Path, %2 = JsonToken</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Json Helper Test - Method UnitTestGetJsonObject - NamedType ObjectFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2648072336 - Method 675384437 - NamedType 1018933345" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No JsonObject found at %1, in %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Path, %2 = JsonToken</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Json Helper Test - Method UnitTestGetJsonObject - NamedType NoObjectFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2648072336 - Method 1312454351 - NamedType 1018933345" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No JsonObject found at %1, in %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Path, %2 = JsonToken</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Json Helper Test - Method UnitTestGetJsonToken - NamedType NoObjectFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2648072336 - Method 1312454351 - NamedType 1757480587" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No JsonValue found at %1, in %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Path, %2 = JsonToken</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Json Helper Test - Method UnitTestGetJsonToken - NamedType NoValueFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2648072336 - Method 1312454351 - NamedType 3651045205" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to convert from Microsoft.Dynamics.Nav.Runtime.NavJsonToken to Microsoft.Dynamics.Nav.Runtime.NavJsonObject.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Json Helper Test - Method UnitTestGetJsonToken - NamedType ExpectedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2648072336 - Method 3783303391 - NamedType 1757480587" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No JsonValue found at %1, in %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Path, %2 = JsonToken</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Json Helper Test - Method UnitTestGetJsonValue - NamedType NoValueFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2648072336 - Method 3783303391 - NamedType 1672210156" size-unit="char" translate="yes" xml:space="preserve">
+          <source>JsonValue found at %1, in %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Path, %2 = JsonToken</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Json Helper Test - Method UnitTestGetJsonValue - NamedType ValueFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1173827803 - NamedType 1981706351" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product create</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Mock Bulk ProductCreate - NamedType NameLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2109467660 - Method 430562072 - NamedType 1603380026" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Shop is missing the Shopify URL.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Shpfy Test Shopify - Method UnitTestConfigureShop - NamedType ShopMissingUrlErr</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 912748123 - EnumValue 922120222 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 912748123">
+          <source>Add Product</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Shpfy Bulk Operation Type - EnumValue AddProduct - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1473117272 - EnumValue 1282326373 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1420853479">
+          <source>Return Const</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension ShpfyStockCalculationExt - EnumValue Shpfy Return Const - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 45869160 - Property 2879900210" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shopify Test</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet Shopify Test - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

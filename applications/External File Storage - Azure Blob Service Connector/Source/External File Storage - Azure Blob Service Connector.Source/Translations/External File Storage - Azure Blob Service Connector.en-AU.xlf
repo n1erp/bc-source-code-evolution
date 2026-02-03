@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-AU" original="External File Storage - Azure Blob Service Connector">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 3608942576 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Azure Blob Storage Account</source>
+          <target state="translated">Azure Blob Storage Account</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3608942576 - NamedType 2133274181" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to get Blob Storage secret.</source>
+          <target state="translated">Unable to get Blob Storage secret.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - NamedType UnableToGetSecretMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3608942576 - NamedType 530185521" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to set Blob Storage secret.</source>
+          <target state="translated">Unable to set Blob Storage secret.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - NamedType UnableToSetSecretMsg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3608942576 - Field 3207683269 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The way of authorizing used to access the Blob Storage.</source>
+          <target state="translated">The way of authorising used to access the Blob Storage.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - Field Authorization Type - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3608942576 - Field 3207683269 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authorization Type</source>
+          <target state="translated">Authorisation Type</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - Field Authorization Type - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3608942576 - Field 2505711900 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Azure Storage Container name.</source>
+          <target state="translated">Specifies the Azure Storage Container name.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - Field Container Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3608942576 - Field 2505711900 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Container Name</source>
+          <target state="translated">Container Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - Field Container Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3608942576 - Field 1864907812 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the account is disabled. This happens automatically when a sandbox is created.</source>
+          <target state="translated">Specifies if the account is disabled. This happens automatically when a sandbox is created.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - Field Disabled - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3608942576 - Field 1864907812 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disabled</source>
+          <target state="translated">Disabled</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - Field Disabled - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3608942576 - Field 415504711 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <target state="translated">Primary Key</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - Field Id - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3608942576 - Field 2961552353 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the Storage account connection.</source>
+          <target state="translated">Specifies the name of the Storage account connection.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - Field Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3608942576 - Field 2961552353 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <target state="translated">Account Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - Field Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3608942576 - Field 1750116091 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Secret Key</source>
+          <target state="translated">Secret Key</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - Field Secret Key - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3608942576 - Field 2184249729 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Azure Storage name.</source>
+          <target state="translated">Specifies the Azure Storage name.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - Field Storage Account Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Table 3608942576 - Field 2184249729 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Storage Account Name</source>
+          <target state="translated">Storage Account Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Table Ext. Blob Storage Account - Field Storage Account Name - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1501637009 - NamedType 1293915263" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use Azure Blob Storage to store and retrieve files.</source>
+          <target state="translated">Use Azure Blob Storage to store and retrieve files.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. Blob Sto. Connector Impl. - NamedType ConnectorDescriptionTxt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1501637009 - NamedType 1482857067" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>We could not find the account. Typically, this is because the account has been deleted.</source>
+          <target state="translated">We could not find the account. Typically, this is because the account has been deleted.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. Blob Sto. Connector Impl. - NamedType NotRegisteredAccountErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1501637009 - Method 1126182535 - NamedType 383888718" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Directory already exists.</source>
+          <target state="translated">Directory already exists.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. Blob Sto. Connector Impl. - Method CreateDirectory - NamedType DirectoryAlreadyExistsErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1501637009 - Method 1029762372 - NamedType 2524900931" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Directory is not empty.</source>
+          <target state="translated">Directory is not empty.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. Blob Sto. Connector Impl. - Method DeleteDirectory - NamedType DirectoryMustBeEmptyErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Codeunit 1501637009 - Method 3617796988 - NamedType 1957616760" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The account "%1" is disabled.</source>
+          <target state="translated">The account "%1" is disabled.</target>
+          <note from="Developer" annotates="general" priority="2">%1 - Account Name(Namespace=System.ExternalFileStorage)(LookupHint=Codeunit Ext. Blob Sto. Connector Impl. - Method InitBlobClient - NamedType AccountDisabledErr)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 960857787 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Container Lookup</source>
+          <target state="translated">Container Lookup</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Sto Container Lookup - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 960857787 - Control 2961552353 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Name of the container.</source>
+          <target state="translated">Specifies the Name of the container.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Sto Container Lookup - Control Name - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 518451598 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Setup Azure Blob Storage Account</source>
+          <target state="translated">Setup Azure Blob Storage Account</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Stor. Account Wizard - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 518451598 - Control 725940270 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the container to use of the Storage Blob.</source>
+          <target state="translated">Specifies the container to use of the Storage Blob.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Stor. Account Wizard - Control ContainerNameField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 518451598 - Control 725940270 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Container Name</source>
+          <target state="translated">Container Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Stor. Account Wizard - Control ContainerNameField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 518451598 - Control 1459871223 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the Azure Blob Storage account.</source>
+          <target state="translated">Specifies the name of the Azure Blob Storage account.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Stor. Account Wizard - Control NameField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 518451598 - Control 1459871223 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <target state="translated">Account Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Stor. Account Wizard - Control NameField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 518451598 - Control 1697509288 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Shared access signature Token or SharedKey.</source>
+          <target state="translated">Specifies the Shared access signature Token or SharedKey.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Stor. Account Wizard - Control SecretField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 518451598 - Control 1697509288 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Secret</source>
+          <target state="translated">Secret</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Stor. Account Wizard - Control SecretField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 518451598 - Control 3002446575 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Storage Account Name</source>
+          <target state="translated">Storage Account Name</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Stor. Account Wizard - Control StorageAccountNameField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 518451598 - Action 742034285 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Move to the previous step.</source>
+          <target state="translated">Move to the previous step.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Stor. Account Wizard - Action Back - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 518451598 - Action 742034285 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <target state="translated">Back</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Stor. Account Wizard - Action Back - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 518451598 - Action 1235620153 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Move to the next step.</source>
+          <target state="translated">Move to the next step.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Stor. Account Wizard - Action Next - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 518451598 - Action 1235620153 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <target state="translated">Next</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Stor. Account Wizard - Action Next - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3608942576 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Azure Blob Storage Account</source>
+          <target state="translated">Azure Blob Storage Account</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Storage Account - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3608942576 - Control 1697509288 - Property 1295455071" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Shared access signature Token or SharedKey.</source>
+          <target state="translated">Specifies the Shared access signature Token or SharedKey.</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Storage Account - Control SecretField - Property ToolTip)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Page 3608942576 - Control 1697509288 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <target state="translated">Password</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Page Ext. Blob Storage Account - Control SecretField - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 1362104893 - EnumValue 3398022750 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shared Access Signature</source>
+          <target state="translated">Shared Access Signature</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Enum Ext. Blob Storage Auth. Type - EnumValue SasToken - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="Enum 1362104893 - EnumValue 1421066154 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shared Key</source>
+          <target state="translated">Shared Key</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=Enum Ext. Blob Storage Auth. Type - EnumValue SharedKey - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="EnumExtension 3194795466 - EnumValue 2813512974 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blob Storage</source>
+          <target state="translated">Blob Storage</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+          <note from="ObjectTarget" annotates="general" priority="5">Enum 534202269</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 2074431499 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blob Storage - Edit</source>
+          <target state="translated">Blob Storage - Edit</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. Blob Stor. - Edit - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 2608636749 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blob Storage - Objects</source>
+          <target state="translated">Blob Storage - Objects</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. Blob Stor. - Objects - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+        <trans-unit id="PermissionSet 4096356985 - Property 2879900210" maxwidth="0" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blob Storage - Read</source>
+          <target state="translated">Blob Storage - Read</target>
+          <note from="Developer" annotates="general" priority="2">(Namespace=System.ExternalFileStorage)(LookupHint=PermissionSet Ext. Blob Stor. - Read - Property Caption)</note>
+          <note from="Xliff Generator" annotates="general" priority="3" />
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
